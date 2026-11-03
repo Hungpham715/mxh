@@ -1,0 +1,117 @@
+{
+  "plan": {
+    "scope_id": "nlpgraph-v1",
+    "build_version": "1.0.0",
+    "nodes": {
+      "Paper": 1091,
+      "Author": 5430,
+      "Institution": 600,
+      "Venue": 7,
+      "Topic": 6
+    },
+    "relationships": {
+      "FIRST_AUTHOR_OF": 1091,
+      "OTHER_AUTHOR_OF": 5007,
+      "COAUTHORED_WITH": 16754,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "HAS_TOPIC": 451,
+      "CITES": 26,
+      "ORG_COAUTHORED_WITH": 2001,
+      "RESEARCHES": 105,
+      "ACTIVE_IN": 139
+    },
+    "rejected_edges": 0,
+    "batch_size": 300,
+    "total_nodes": 7134,
+    "total_relationships": 30971,
+    "storage_estimate": {
+      "abstract_bytes": 1302055,
+      "evidence_id_items": 32464,
+      "approx_mb": 7.0
+    }
+  },
+  "before": {
+    "labels": [
+      "Author",
+      "Paper",
+      "Institution",
+      "Venue",
+      "Topic"
+    ],
+    "relationship_types": [
+      "FIRST_AUTHOR_OF",
+      "OTHER_AUTHOR_OF",
+      "COAUTHORED_WITH",
+      "AFFILIATED_WITH",
+      "APPEARS_IN",
+      "HAS_TOPIC",
+      "CITES",
+      "ORG_COAUTHORED_WITH",
+      "RESEARCHES",
+      "ACTIVE_IN"
+    ],
+    "total_nodes": 7134,
+    "total_relationships": 30971,
+    "project_nodes": 7134,
+    "project_relationships": 30971,
+    "foreign_nodes": 0,
+    "foreign_relationships": 0
+  },
+  "after": {
+    "labels": [
+      "Author",
+      "Paper",
+      "Institution",
+      "Venue",
+      "Topic"
+    ],
+    "relationship_types": [
+      "FIRST_AUTHOR_OF",
+      "OTHER_AUTHOR_OF",
+      "COAUTHORED_WITH",
+      "AFFILIATED_WITH",
+      "APPEARS_IN",
+      "HAS_TOPIC",
+      "CITES",
+      "ORG_COAUTHORED_WITH",
+      "RESEARCHES",
+      "ACTIVE_IN"
+    ],
+    "total_nodes": 7134,
+    "total_relationships": 30971,
+    "project_nodes": 7134,
+    "project_relationships": 30971,
+    "foreign_nodes": 0,
+    "foreign_relationships": 0
+  },
+  "verified": {
+    "nodes_by_label": {
+      "Author": 5430,
+      "Paper": 1091,
+      "Institution": 600,
+      "Venue": 7,
+      "Topic": 6
+    },
+    "relationships_by_type": {
+      "FIRST_AUTHOR_OF": 1091,
+      "OTHER_AUTHOR_OF": 5007,
+      "COAUTHORED_WITH": 16754,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "HAS_TOPIC": 451,
+      "CITES": 26,
+      "ORG_COAUTHORED_WITH": 2001,
+      "RESEARCHES": 105,
+      "ACTIVE_IN": 139
+    },
+    "project_nodes": 7134,
+    "project_relationships": 30971,
+    "populated_types": 10,
+    "parallel_duplicate_pairs": 0,
+    "orphans_by_label": {},
+    "relationships_without_evidence": 0
+  },
+  "seconds": 72.5,
+  "finished_at_utc": "2026-11-03T08:50:17Z"
+}

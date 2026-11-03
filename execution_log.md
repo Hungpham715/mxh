@@ -13,7 +13,7 @@ No secrets are recorded here.
 | Normalize + topics + export | PASSED | 8 JSONL + manifest, `validate` PASSED |
 | Topic pilot (50 papers) | PASSED | evaluation/topic_pilot.json, rules frozen at topics-v1.1 |
 | Dry-run import plan | PASSED | output/neo4j/import_plan_dry_run.json: 7,134 nodes, 30,971 rels, 0 rejected |
-| AuraDB preflight / import / idempotency | BLOCKED | no `.env` present (NEEDS_CREDENTIALS.md) |
+| AuraDB preflight / import / idempotency | PASSED | output/neo4j/preflight.json, import_report_latest.json, idempotency_check.json |
 | Author network analysis | PASSED (local source) | output/analysis/* |
 | QA sampling + automated verification | PARTIAL | automated_preliminary only; no human labels |
 | Source audits | PASSED | evaluation/source_audits.json |
@@ -45,6 +45,13 @@ No secrets are recorded here.
 11. `report` -> 11-page PDF; page renders checked (Vietnamese diacritics OK; fixed floor-bracket glyph).
 
 ## Blockers
-- AuraDB: `.env` not present in the repo at run time. All cloud steps are implemented and unit-tested against an
-  in-memory MERGE emulation, but the real import, idempotency check and example queries have NOT been executed.
-- Human QA labels do not exist; all precision numbers are `automated_preliminary`.
+- (resolved 15:47) `.env` created at the user's explicit request from values the user supplied in chat; recommend
+  rotating NEO4J_PASSWORD and OPENALEX_API_KEY since they appeared in a conversation.
+12. `preflight` -> Neo4j/5.27-aura, RETURN 1 OK, instance empty (0 nodes / 0 rels, no foreign data).
+13. `import` -> VERIFIED in ~87 s: 7,134 nodes, 30,971 relationships, 10/10 types, 0 parallel duplicates,
+    0 relationships without evidence, 0 orphans; counts equal the plan.
+14. `idempotency` -> IDEMPOTENT (7,134 / 30,971 -> 7,134 / 30,971).
+15. `queries` -> 5 example Cypher queries with real rows (output/neo4j/example_queries.json).
+16. `analyze --source neo4j` -> identical stats to the local projection (LCC 970, 16,754 edges).
+17. `report` -> 13-page PDF including the AuraDB section.
+- Remaining: human QA labels do not exist; all precision numbers are `automated_preliminary`.

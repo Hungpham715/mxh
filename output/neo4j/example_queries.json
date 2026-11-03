@@ -1,0 +1,246 @@
+[
+  {
+    "title": "Đếm quan hệ theo loại (chỉ dữ liệu của dự án)",
+    "cypher": "MATCH ()-[r]->() WHERE r.scope_id = 'nlpgraph-v1' RETURN type(r) AS relation, count(r) AS total ORDER BY total DESC",
+    "rows": [
+      {
+        "relation": "COAUTHORED_WITH",
+        "total": 16754
+      },
+      {
+        "relation": "OTHER_AUTHOR_OF",
+        "total": 5007
+      },
+      {
+        "relation": "AFFILIATED_WITH",
+        "total": 4306
+      },
+      {
+        "relation": "ORG_COAUTHORED_WITH",
+        "total": 2001
+      },
+      {
+        "relation": "FIRST_AUTHOR_OF",
+        "total": 1091
+      },
+      {
+        "relation": "APPEARS_IN",
+        "total": 1091
+      },
+      {
+        "relation": "HAS_TOPIC",
+        "total": 451
+      },
+      {
+        "relation": "ACTIVE_IN",
+        "total": 139
+      },
+      {
+        "relation": "RESEARCHES",
+        "total": 105
+      },
+      {
+        "relation": "CITES",
+        "total": 26
+      }
+    ]
+  },
+  {
+    "title": "Cặp đồng tác giả viết chung nhiều bài nhất, kèm paper chứng cứ",
+    "cypher": "MATCH (a:Author)-[c:COAUTHORED_WITH]->(b:Author) WHERE c.scope_id = 'nlpgraph-v1' RETURN a.name AS author_a, b.name AS author_b, c.shared_count AS shared, c.evidence_paper_ids AS papers ORDER BY shared DESC, author_a LIMIT 5",
+    "rows": [
+      {
+        "author_a": "Tao Gui",
+        "author_b": "Xuanjing Huang",
+        "shared": 4,
+        "papers": [
+          "oa:W4322832290",
+          "oa:W4390529340",
+          "oa:W4401042887",
+          "oa:W4404782606"
+        ]
+      },
+      {
+        "author_a": "Tao Gui",
+        "author_b": "Junjie Ye",
+        "shared": 4,
+        "papers": [
+          "oa:W4322832290",
+          "oa:W4390529340",
+          "oa:W4404782606",
+          "oa:W4404782948"
+        ]
+      },
+      {
+        "author_a": "Beyza Ermis",
+        "author_b": "Sara Hooker",
+        "shared": 3,
+        "papers": [
+          "oa:W4389520710",
+          "oa:W4404782984",
+          "oa:W4412944979"
+        ]
+      },
+      {
+        "author_a": "Bo Du",
+        "author_b": "Dacheng Tao",
+        "shared": 3,
+        "papers": [
+          "oa:W4389520354",
+          "oa:W4402671533",
+          "oa:W4412945401"
+        ]
+      },
+      {
+        "author_a": "Caishuang Huang",
+        "author_b": "Junjie Ye",
+        "shared": 3,
+        "papers": [
+          "oa:W4390529340",
+          "oa:W4404782606",
+          "oa:W4404782948"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Truy ngược: hai tác giả viết chung bài nào, mỗi người khai báo tổ chức nào trên bài đó, bài thuộc topic gì",
+    "cypher": "MATCH (a:Author)-[c:COAUTHORED_WITH]->(b:Author) WHERE c.scope_id = 'nlpgraph-v1' AND c.shared_count >= 2 WITH a, b, c ORDER BY c.shared_count DESC, a.id LIMIT 1 UNWIND c.evidence_paper_ids AS pid MATCH (p:Paper {id: pid}) OPTIONAL MATCH (a)-[fa:AFFILIATED_WITH]->(ia:Institution) WHERE pid IN fa.evidence_paper_ids OPTIONAL MATCH (b)-[fb:AFFILIATED_WITH]->(ib:Institution) WHERE pid IN fb.evidence_paper_ids OPTIONAL MATCH (p)-[:HAS_TOPIC]->(t:Topic) RETURN a.name AS a, b.name AS b, p.title AS paper, p.source_url AS url, collect(DISTINCT ia.name) AS inst_a, collect(DISTINCT ib.name) AS inst_b, collect(DISTINCT t.topic_key) AS topics",
+    "rows": [
+      {
+        "a": "Tao Gui",
+        "b": "Xuanjing Huang",
+        "paper": "How Robust is GPT-3.5 to Predecessors? A Comprehensive Study on Language Understanding Tasks",
+        "url": "https://arxiv.org/abs/2303.00293",
+        "inst_a": [
+          "Fudan University"
+        ],
+        "inst_b": [
+          "Fudan University"
+        ],
+        "topics": []
+      },
+      {
+        "a": "Tao Gui",
+        "b": "Xuanjing Huang",
+        "paper": "ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios",
+        "url": "https://arxiv.org/abs/2401.00741",
+        "inst_a": [
+          "Fudan University",
+          "Peng Cheng Laboratory"
+        ],
+        "inst_b": [
+          "Fudan University"
+        ],
+        "topics": [
+          "llm"
+        ]
+      },
+      {
+        "a": "Tao Gui",
+        "b": "Xuanjing Huang",
+        "paper": "Self-Demos: Eliciting Out-of-Demonstration Generalizability in Large Language Models",
+        "url": "https://arxiv.org/abs/2404.00884",
+        "inst_a": [
+          "Fudan University"
+        ],
+        "inst_b": [
+          "Fudan University"
+        ],
+        "topics": [
+          "llm"
+        ]
+      },
+      {
+        "a": "Tao Gui",
+        "b": "Xuanjing Huang",
+        "paper": "Improving Discriminative Capability of Reward Models in RLHF Using Contrastive Learning",
+        "url": "https://aclanthology.org/2024.emnlp-main.852/",
+        "inst_a": [
+          "Fudan University"
+        ],
+        "inst_b": [
+          "Fudan University"
+        ],
+        "topics": []
+      }
+    ]
+  },
+  {
+    "title": "Trích dẫn nội bộ corpus (X CITES Y)",
+    "cypher": "MATCH (p:Paper)-[c:CITES]->(q:Paper) WHERE c.scope_id = 'nlpgraph-v1' RETURN p.title AS citing, q.title AS cited, c.source_url AS evidence ORDER BY citing LIMIT 5",
+    "rows": [
+      {
+        "citing": "Adapt and Decompose: Efficient Generalization of Text-to-SQL via Domain Adapted Least-To-Most Prompting",
+        "cited": "Skill-Based Few-Shot Selection for In-Context Learning",
+        "evidence": "https://openalex.org/W4389519605"
+      },
+      {
+        "citing": "Adapt and Decompose: Efficient Generalization of Text-to-SQL via Domain Adapted Least-To-Most Prompting",
+        "cited": "CodeT5+: Open Code Large Language Models for Code Understanding and Generation",
+        "evidence": "https://openalex.org/W4389519605"
+      },
+      {
+        "citing": "Adapting Offline Speech Translation Models for Streaming with Future-Aware Distillation and Inference",
+        "cited": "Better Simultaneous Translation with Monotonic Knowledge Distillation",
+        "evidence": "https://openalex.org/W4389519477"
+      },
+      {
+        "citing": "An Empirical Study of Translation Hypothesis Ensembling with Large Language Models",
+        "cited": "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback",
+        "evidence": "https://openalex.org/W4389520398"
+      },
+      {
+        "citing": "An Empirical Study of Translation Hypothesis Ensembling with Large Language Models",
+        "cited": "Bridging the Gap: A Survey on Integrating (Human) Feedback for Natural Language Generation",
+        "evidence": "https://openalex.org/W4389520398"
+      }
+    ]
+  },
+  {
+    "title": "Tổ chức hoạt động nhiều nhất theo topic (ACTIVE_IN)",
+    "cypher": "MATCH (i:Institution)-[r:ACTIVE_IN]->(t:Topic) WHERE r.scope_id = 'nlpgraph-v1' RETURN i.name AS institution, t.topic_key AS topic, r.evidence_count AS papers ORDER BY papers DESC, institution LIMIT 8",
+    "rows": [
+      {
+        "institution": "Renmin University of China",
+        "topic": "llm",
+        "papers": 13
+      },
+      {
+        "institution": "Microsoft (United States)",
+        "topic": "llm",
+        "papers": 12
+      },
+      {
+        "institution": "Shanghai Jiao Tong University",
+        "topic": "llm",
+        "papers": 12
+      },
+      {
+        "institution": "Chinese Academy of Sciences",
+        "topic": "llm",
+        "papers": 11
+      },
+      {
+        "institution": "Tsinghua University",
+        "topic": "llm",
+        "papers": 11
+      },
+      {
+        "institution": "University of Science and Technology of China",
+        "topic": "llm",
+        "papers": 11
+      },
+      {
+        "institution": "Fudan University",
+        "topic": "llm",
+        "papers": 10
+      },
+      {
+        "institution": "Alibaba Group (China)",
+        "topic": "llm",
+        "papers": 7
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "projection": "Author-COAUTHORED_WITH-Author only (undirected, simple, weight = shared papers)",
-  "source": "local",
+  "source": "neo4j",
   "stats": {
     "authors_total": 5430,
     "edges": 16754,
@@ -589,11 +589,11 @@
           5
         ],
         [
-          "safety_eval",
+          "mt",
           1
         ],
         [
-          "mt",
+          "safety_eval",
           1
         ]
       ],
@@ -894,37 +894,37 @@
       {
         "seed": 20261108,
         "nodes": 970,
-        "C": 0.0186,
-        "L": 3.3154
+        "C": 0.0141,
+        "L": 3.3122
       },
       {
         "seed": 20261109,
         "nodes": 970,
-        "C": 0.015,
-        "L": 3.3103
+        "C": 0.0153,
+        "L": 3.3137
       },
       {
         "seed": 20261110,
         "nodes": 970,
-        "C": 0.0137,
-        "L": 3.306
+        "C": 0.013,
+        "L": 3.3113
       },
       {
         "seed": 20261111,
         "nodes": 970,
-        "C": 0.0127,
-        "L": 3.311
+        "C": 0.0158,
+        "L": 3.2993
       },
       {
         "seed": 20261112,
         "nodes": 970,
-        "C": 0.0168,
-        "L": 3.309
+        "C": 0.0151,
+        "L": 3.3129
       }
     ],
-    "C_rand": 0.0154,
-    "L_rand": 3.3104,
-    "sigma": 17.902,
+    "C_rand": 0.0147,
+    "L_rand": 3.3099,
+    "sigma": 18.73,
     "verdict": "no clear small-world indication",
     "limitations": [
       "Multi-author papers create cliques that mechanically raise clustering.",

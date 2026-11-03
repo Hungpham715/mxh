@@ -1,0 +1,18 @@
+2026-11-03 15:47:23,626 INFO nlpgraph: derived edges: {'FIRST_AUTHOR_OF': 1091, 'OTHER_AUTHOR_OF': 5007, 'COAUTHORED_WITH': 16754, 'AFFILIATED_WITH': 4306, 'APPEARS_IN': 1091, 'HAS_TOPIC': 451, 'CITES': 26, 'ORG_COAUTHORED_WITH': 2001, 'RESEARCHES': 105, 'ACTIVE_IN': 139} (total 30971)
+2026-11-03 15:47:51,894 INFO nlpgraph: nodes Author       merged 5430
+2026-11-03 15:47:55,216 INFO nlpgraph: nodes Paper        merged 1091
+2026-11-03 15:47:56,087 INFO nlpgraph: nodes Institution  merged 600
+2026-11-03 15:47:56,431 INFO nlpgraph: nodes Venue        merged 7
+2026-11-03 15:47:56,778 INFO nlpgraph: nodes Topic        merged 6
+2026-11-03 15:47:58,958 INFO nlpgraph: rels  FIRST_AUTHOR_OF      merged 1091
+2026-11-03 15:48:06,574 INFO nlpgraph: rels  OTHER_AUTHOR_OF      merged 5007
+2026-11-03 15:48:33,905 INFO nlpgraph: rels  COAUTHORED_WITH      merged 16754
+2026-11-03 15:48:39,394 INFO nlpgraph: rels  AFFILIATED_WITH      merged 4306
+2026-11-03 15:48:40,928 INFO nlpgraph: rels  APPEARS_IN           merged 1091
+2026-11-03 15:48:41,850 INFO nlpgraph: rels  HAS_TOPIC            merged 451
+2026-11-03 15:48:42,226 INFO nlpgraph: rels  CITES                merged 26
+2026-11-03 15:48:45,161 INFO nlpgraph: rels  ORG_COAUTHORED_WITH  merged 2001
+2026-11-03 15:48:45,549 INFO nlpgraph: rels  RESEARCHES           merged 105
+2026-11-03 15:48:45,946 INFO nlpgraph: rels  ACTIVE_IN            merged 139
+2026-11-03 15:48:50,784 INFO nlpgraph: import VERIFIED; project nodes=7134 rels=30971
+{'scope_id': 'nlpgraph-v1', 'build_version': '1.0.0', 'nodes': {'Paper': 1091, 'Author': 5430, 'Institution': 600, 'Venue': 7, 'Topic': 6}, 'relationships': {'FIRST_AUTHOR_OF': 1091, 'OTHER_AUTHOR_OF': 5007, 'COAUTHORED_WITH': 16754, 'AFFILIATED_WITH': 4306, 'APPEARS_IN': 1091, 'HAS_TOPIC': 451, 'CITES': 26, 'ORG_COAUTHORED_WITH': 2001, 'RESEARCHES': 105, 'ACTIVE_IN': 139}, 'rejected_edges': 0, 'batch_size': 300, 'total_nodes': 7134, 'total_relationships': 30971, 'storage_estimate': {'abstract_bytes': 1302055, 'evidence_id_items': 32464, 'approx_mb': 7.0}}

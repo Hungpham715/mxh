@@ -1,0 +1,58 @@
+{
+  "identical": true,
+  "first": {
+    "nodes_by_label": {
+      "Author": 5430,
+      "Paper": 1091,
+      "Institution": 600,
+      "Venue": 7,
+      "Topic": 6
+    },
+    "relationships_by_type": {
+      "FIRST_AUTHOR_OF": 1091,
+      "OTHER_AUTHOR_OF": 5007,
+      "COAUTHORED_WITH": 16754,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "HAS_TOPIC": 451,
+      "CITES": 26,
+      "ORG_COAUTHORED_WITH": 2001,
+      "RESEARCHES": 105,
+      "ACTIVE_IN": 139
+    },
+    "project_nodes": 7134,
+    "project_relationships": 30971,
+    "populated_types": 10,
+    "parallel_duplicate_pairs": 0,
+    "orphans_by_label": {},
+    "relationships_without_evidence": 0
+  },
+  "second": {
+    "nodes_by_label": {
+      "Author": 5430,
+      "Paper": 1091,
+      "Institution": 600,
+      "Venue": 7,
+      "Topic": 6
+    },
+    "relationships_by_type": {
+      "FIRST_AUTHOR_OF": 1091,
+      "OTHER_AUTHOR_OF": 5007,
+      "COAUTHORED_WITH": 16754,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "HAS_TOPIC": 451,
+      "CITES": 26,
+      "ORG_COAUTHORED_WITH": 2001,
+      "RESEARCHES": 105,
+      "ACTIVE_IN": 139
+    },
+    "project_nodes": 7134,
+    "project_relationships": 30971,
+    "populated_types": 10,
+    "parallel_duplicate_pairs": 0,
+    "orphans_by_label": {},
+    "relationships_without_evidence": 0
+  },
+  "reimport_exit_code": 0
+}

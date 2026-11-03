@@ -1,4 +1,4 @@
-# NEEDS_CREDENTIALS
+# NEEDS_CREDENTIALS (RESOLVED 2026-11-03: .env present, AuraDB import done)
 
 Status: Neo4j AuraDB steps are BLOCKED until a local `.env` exists. Everything else ran on real data.
 

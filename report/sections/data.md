@@ -125,7 +125,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 | 9 | RESEARCHES | Author→Topic | Tác giả có ≥ 2 bài khác nhau mang nhãn topic đó trong corpus. | 105 | 112 |
 | 10 | ACTIVE_IN | Institution→Topic | Tổ chức có ≥ 2 bài khác nhau (có tác giả khai báo tổ chức) mang topic đó. | 139 | 252 |
 
-Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (0 bài).
+Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
 
 ![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](D:/nlp-collab-graph/output/analysis/relationship_types.png)
 

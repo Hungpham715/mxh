@@ -1,0 +1,34 @@
+{
+  "return_1": 1,
+  "server_agent": "Neo4j/5.27-aura",
+  "protocol": [
+    6,
+    1
+  ],
+  "components": [
+    {
+      "name": "Neo4j Kernel",
+      "versions": [
+        "5.27-aura"
+      ],
+      "edition": "enterprise"
+    },
+    {
+      "name": "Cypher",
+      "versions": [
+        "5",
+        "25"
+      ],
+      "edition": ""
+    }
+  ],
+  "labels": [],
+  "relationship_types": [],
+  "total_nodes": 0,
+  "total_relationships": 0,
+  "project_nodes": 0,
+  "project_relationships": 0,
+  "foreign_nodes": 0,
+  "foreign_relationships": 0,
+  "constraints": []
+}

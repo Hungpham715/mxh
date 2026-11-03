@@ -17,7 +17,7 @@ Văn bản đề gốc ghi ngưỡng “2000 nghìn nút”, cách viết này m
 | ≥ 5.000 cạnh duy nhất | 30.971 | Đạt |
 | 10/10 loại quan hệ có dữ liệu | 10/10 | Đạt |
 | ≥ 1.000 Author (đo riêng) | 5.430 | Đạt |
-| Graph trên Neo4j AuraDB | Chưa import | Chưa đạt |
+| Graph trên Neo4j AuraDB | Có | Đạt |
 | Precision cạnh ≥ 90% (mỗi type & micro) | Chưa có nhãn người; tự động sơ bộ micro 0.8786 | Xem mục 7 |
 
 ## 2. Nguồn dữ liệu học thuật và quy tắc chọn mẫu cố định
@@ -147,7 +147,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 | 9 | RESEARCHES | Author→Topic | Tác giả có ≥ 2 bài khác nhau mang nhãn topic đó trong corpus. | 105 | 112 |
 | 10 | ACTIVE_IN | Institution→Topic | Tổ chức có ≥ 2 bài khác nhau (có tác giả khai báo tổ chức) mang topic đó. | 139 | 252 |
 
-Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (0 bài).
+Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
 
 ![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](D:/nlp-collab-graph/output/analysis/relationship_types.png)
 
@@ -161,11 +161,97 @@ Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count
 - Kiểu quan hệ lấy từ whitelist 10 tên cố định, Cypher tham số hóa UNWIND $rows theo lô 300 dòng, có retry cho lỗi tạm thời.
 - Các cạnh suy diễn được tính một lần trong Python từ snapshot đã kiểm (src/graph/derive.py) rồi nạp lên Neo4j; nhờ vậy phân tích cục bộ và graph trên cloud dùng đúng một tập cạnh.
 
-**Preflight AuraDB chưa chạy được** (thiếu thông tin đăng nhập trong .env tại thời điểm tạo báo cáo).
+Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.27-aura; trước import instance có 0 nút và 0 quan hệ (0 nút không thuộc dự án).
 
 ## 6. Graph trên AuraDB và phân tích mạng đồng tác giả
 
-**Chưa import lên AuraDB**; các số dưới đây tính từ snapshot cục bộ, cùng tập cạnh sẽ được nạp.
+Import hoàn tất lúc 2026-11-03T08:50:17Z trong 72.5 giây. Đếm lại trên AuraDB (lọc scope_id): **7.134 nút**, **30.971 quan hệ**, 10/10 loại có dữ liệu, 0 cặp cạnh song song trùng lặp, 0 quan hệ thiếu evidence.
+
+| Quan hệ | Kế hoạch | Đếm trên AuraDB |
+|---|---|---|
+| FIRST_AUTHOR_OF | 1.091 | 1.091 |
+| OTHER_AUTHOR_OF | 5.007 | 5.007 |
+| COAUTHORED_WITH | 16.754 | 16.754 |
+| AFFILIATED_WITH | 4.306 | 4.306 |
+| APPEARS_IN | 1.091 | 1.091 |
+| HAS_TOPIC | 451 | 451 |
+| CITES | 26 | 26 |
+| ORG_COAUTHORED_WITH | 2.001 | 2.001 |
+| RESEARCHES | 105 | 105 |
+| ACTIVE_IN | 139 | 139 |
+
+Kiểm tra idempotency: nạp lại cùng snapshot lần hai cho số nút/cạnh **giống hệt** (7.134/30.971 → 7.134/30.971).
+
+### Truy vấn Cypher minh họa (chạy thật trên AuraDB)
+
+**Đếm quan hệ theo loại (chỉ dữ liệu của dự án)**
+
+```
+MATCH ()-[r]->() WHERE r.scope_id = 'nlpgraph-v1' RETURN type(r) AS relation, count(r) AS total ORDER BY total DESC
+```
+
+```
+{"relation": "COAUTHORED_WITH", "total": 16754}
+{"relation": "OTHER_AUTHOR_OF", "total": 5007}
+{"relation": "AFFILIATED_WITH", "total": 4306}
+{"relation": "ORG_COAUTHORED_WITH", "total": 2001}
+{"relation": "FIRST_AUTHOR_OF", "total": 1091}
+```
+
+**Cặp đồng tác giả viết chung nhiều bài nhất, kèm paper chứng cứ**
+
+```
+MATCH (a:Author)-[c:COAUTHORED_WITH]->(b:Author) WHERE c.scope_id = 'nlpgraph-v1' RETURN a.name AS author_a, b.name AS author_b, c.shared_count AS shared, c.evidence_paper_ids AS papers ORDER BY shared DESC, author_a LIMIT 5
+```
+
+```
+{"author_a": "Tao Gui", "author_b": "Xuanjing Huang", "shared": 4, "papers": ["oa:W4322832290", "oa:W4390529340", "oa:W4401042887", "oa:W4404782606"]}
+{"author_a": "Tao Gui", "author_b": "Junjie Ye", "shared": 4, "papers": ["oa:W4322832290", "oa:W4390529340", "oa:W4404782606", "oa:W4404782948"]}
+{"author_a": "Beyza Ermis", "author_b": "Sara Hooker", "shared": 3, "papers": ["oa:W4389520710", "oa:W4404782984", "oa:W4412944979"]}
+{"author_a": "Bo Du", "author_b": "Dacheng Tao", "shared": 3, "papers": ["oa:W4389520354", "oa:W4402671533", "oa:W4412945401"]}
+{"author_a": "Caishuang Huang", "author_b": "Junjie Ye", "shared": 3, "papers": ["oa:W4390529340", "oa:W4404782606", "oa:W4404782948"]}
+```
+
+**Truy ngược: hai tác giả viết chung bài nào, mỗi người khai báo tổ chức nào trên bài đó, bài thuộc topic gì**
+
+```
+MATCH (a:Author)-[c:COAUTHORED_WITH]->(b:Author) WHERE c.scope_id = 'nlpgraph-v1' AND c.shared_count >= 2 WITH a, b, c ORDER BY c.shared_count DESC, a.id LIMIT 1 UNWIND c.evidence_paper_ids AS pid MATCH (p:Paper {id: pid}) OPTIONAL MATCH (a)-[fa:AFFILIATED_WITH]->(ia:Institution) WHERE pid IN fa.evidence_paper_ids OPTIONAL MATCH (b)-[fb:AFFILIATED_WITH]->(ib:Institution) WHERE pid IN fb.evidence_paper_ids OPTIONAL MATCH (p)-[:HAS_TOPIC]->(t:Topic) RETURN a.name AS a, b.name AS b, p.title AS paper, p.source_url AS url, collect(DISTINCT ia.name) AS inst_a, collect(DISTINCT ib.name) AS inst_b, collect(DISTINCT t.topic_key) AS topics
+```
+
+```
+{"a": "Tao Gui", "b": "Xuanjing Huang", "paper": "How Robust is GPT-3.5 to Predecessors? A Comprehensive Study on Language Understanding Tasks", "url": "https://arxiv.org/abs/2303.00293", "inst_a": ["
+{"a": "Tao Gui", "b": "Xuanjing Huang", "paper": "ToolEyes: Fine-Grained Evaluation for Tool Learning Capabilities of Large Language Models in Real-world Scenarios", "url": "https://arxiv.org/abs/2401
+{"a": "Tao Gui", "b": "Xuanjing Huang", "paper": "Self-Demos: Eliciting Out-of-Demonstration Generalizability in Large Language Models", "url": "https://arxiv.org/abs/2404.00884", "inst_a": ["Fudan Un
+{"a": "Tao Gui", "b": "Xuanjing Huang", "paper": "Improving Discriminative Capability of Reward Models in RLHF Using Contrastive Learning", "url": "https://aclanthology.org/2024.emnlp-main.852/", "ins
+```
+
+**Trích dẫn nội bộ corpus (X CITES Y)**
+
+```
+MATCH (p:Paper)-[c:CITES]->(q:Paper) WHERE c.scope_id = 'nlpgraph-v1' RETURN p.title AS citing, q.title AS cited, c.source_url AS evidence ORDER BY citing LIMIT 5
+```
+
+```
+{"citing": "Adapt and Decompose: Efficient Generalization of Text-to-SQL via Domain Adapted Least-To-Most Prompting", "cited": "Skill-Based Few-Shot Selection for In-Context Learning", "evidence": "ht
+{"citing": "Adapt and Decompose: Efficient Generalization of Text-to-SQL via Domain Adapted Least-To-Most Prompting", "cited": "CodeT5+: Open Code Large Language Models for Code Understanding and Gene
+{"citing": "Adapting Offline Speech Translation Models for Streaming with Future-Aware Distillation and Inference", "cited": "Better Simultaneous Translation with Monotonic Knowledge Distillation", "e
+{"citing": "An Empirical Study of Translation Hypothesis Ensembling with Large Language Models", "cited": "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language
+{"citing": "An Empirical Study of Translation Hypothesis Ensembling with Large Language Models", "cited": "Bridging the Gap: A Survey on Integrating (Human) Feedback for Natural Language Generation", 
+```
+
+**Tổ chức hoạt động nhiều nhất theo topic (ACTIVE_IN)**
+
+```
+MATCH (i:Institution)-[r:ACTIVE_IN]->(t:Topic) WHERE r.scope_id = 'nlpgraph-v1' RETURN i.name AS institution, t.topic_key AS topic, r.evidence_count AS papers ORDER BY papers DESC, institution LIMIT 8
+```
+
+```
+{"institution": "Renmin University of China", "topic": "llm", "papers": 13}
+{"institution": "Microsoft (United States)", "topic": "llm", "papers": 12}
+{"institution": "Shanghai Jiao Tong University", "topic": "llm", "papers": 12}
+{"institution": "Chinese Academy of Sciences", "topic": "llm", "papers": 11}
+{"institution": "Tsinghua University", "topic": "llm", "papers": 11}
+```
 
 ### Phép chiếu Author–Author
 
@@ -214,7 +300,7 @@ Phương pháp: louvain (networkx.community.louvain_communities, weight=shared p
 | 0 | 125 | 24 | llm(12), summarization(2) | Furu Wei, Ji-Rong Wen, Xiangliang Zhang, Jian Luan |
 | 1 | 113 | 19 | llm(6), mt(1), qa(1) | Maosong Sun, Baobao Chang, Damai Dai, Zhifang Sui |
 | 2 | 104 | 18 | llm(4) | Xipeng Qiu, Qipeng Guo, Libo Qin, Hang Yan |
-| 3 | 87 | 16 | llm(5), safety_eval(1), mt(1) | Mohit Bansal, Huaxiu Yao, Yuancheng Xu, Furong Huang |
+| 3 | 87 | 16 | llm(5), mt(1), safety_eval(1) | Mohit Bansal, Huaxiu Yao, Yuancheng Xu, Furong Huang |
 | 4 | 82 | 15 | llm(4), retrieval(1) | Graham Neubig, Tongshuang Wu, Yulia Tsvetkov, Pengfei Liu |
 | 5 | 81 | 19 | llm(4), qa(2) | Maarten Sap, Alice Oh, Yejin Choi, Yeon Seonwoo |
 
@@ -239,9 +325,9 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 | LCC (nút / cạnh) | 970 / 4.288 |
 | C_obs (average clustering) | 0.9127 |
 | L_obs (average shortest path) | 10.9876 (exact) |
-| C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0154 |
-| L_rand | 3.3104 |
-| σ = (C_obs/C_rand)/(L_obs/L_rand) | 17.902 |
+| C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0147 |
+| L_rand | 3.3099 |
+| σ = (C_obs/C_rand)/(L_obs/L_rand) | 18.73 |
 | Kết luận | no clear small-world indication |
 
 Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
