@@ -1,0 +1,158 @@
+{
+  "created_at_utc": "2026-11-03T09:21:18Z",
+  "seed": 20261107,
+  "overlap_seed": 20261108,
+  "per_round_per_type": 50,
+  "overlap_per_type": 10,
+  "git": {
+    "head": "c13539305e2e6ac0e851fca6236d7233c1f57206",
+    "head_short": "c135393"
+  },
+  "git_dirty_files": [
+    "?? evaluation/labeling_guideline.md",
+    "?? src/evaluation/manual_sample.py"
+  ],
+  "aura_counts": {
+    "nodes_by_label": {
+      "Author": 5430,
+      "Paper": 1091,
+      "Institution": 600,
+      "Venue": 7,
+      "Topic": 6
+    },
+    "relationships_by_type": {
+      "FIRST_AUTHOR_OF": 1091,
+      "OTHER_AUTHOR_OF": 5007,
+      "COAUTHORED_WITH": 16754,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "HAS_TOPIC": 451,
+      "CITES": 26,
+      "ORG_COAUTHORED_WITH": 2001,
+      "RESEARCHES": 105,
+      "ACTIVE_IN": 139
+    },
+    "server": "Neo4j/5.27-aura",
+    "access_mode": "READ (default_access_mode=READ_ACCESS, execute_read)",
+    "total_nodes": 7134,
+    "total_relationships": 30971
+  },
+  "aura_matches_local_snapshot": true,
+  "manifest_created_at_utc": "2026-11-03T08:33:17Z",
+  "manifest_checksums": {
+    "papers.jsonl": "d214b99a48813f97c51f5ecbd13ca614d58fae2c48148be0445bf0ad0364605d",
+    "authors.jsonl": "e915056c0e153db5e1bfcd4db42b954711884427acf636138965954b78947565",
+    "institutions.jsonl": "f9778808d4ce0d54717efeb782557b850f0aaf98620f6c76b7e3c6b8edec31ab",
+    "venues.jsonl": "98f669281a74d49c28f8fe147e336691bcd38036e0571bff1b69681303924195",
+    "paper_authors.jsonl": "c7e052ca2513979dcf528f3b5394f28bd2d772bab80f0a8d3dcdedb157f34b4a",
+    "affiliations.jsonl": "5230f6a6708f2098e435c8ce1371c977707c424caa8b0cf5298ec2a3834d7056",
+    "citations.jsonl": "a26adef5693b3a12f0d2272e0e68ee0363db657e2a06ca87a79173044f1c2664",
+    "paper_topics.jsonl": "5bb54286df21fcc8891910e36af5b5b6b6a7fe1023541d739277ef331bbffc80"
+  },
+  "manifest_sha256": "c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1",
+  "strata": {
+    "AFFILIATED_WITH": {
+      "frequency_key": "papers of target institution",
+      "tier_thresholds(low<=a, mid<=b, high>b)": [
+        4,
+        14
+      ],
+      "confidence_definition": "acl_backed if any evidence authorship has an ACL-printed affiliation agreeing",
+      "population_by_stratum": {
+        "high|acl_backed": 617,
+        "high|openalex_only": 739,
+        "low|acl_backed": 589,
+        "low|openalex_only": 860,
+        "mid|acl_backed": 655,
+        "mid|openalex_only": 846
+      },
+      "round1_by_stratum": {
+        "high|acl_backed": 7,
+        "high|openalex_only": 8,
+        "low|acl_backed": 7,
+        "low|openalex_only": 10,
+        "mid|acl_backed": 8,
+        "mid|openalex_only": 10
+      },
+      "round2_by_stratum": {
+        "high|acl_backed": 7,
+        "high|openalex_only": 8,
+        "low|acl_backed": 7,
+        "low|openalex_only": 10,
+        "mid|acl_backed": 8,
+        "mid|openalex_only": 10
+      },
+      "population": 4306
+    },
+    "ORG_COAUTHORED_WITH": {
+      "frequency_key": "min(papers of the two institutions)",
+      "tier_thresholds(low<=a, mid<=b, high>b)": [
+        1,
+        3
+      ],
+      "confidence_definition": "acl_backed if on some paper two different authors have ACL-agreeing rows",
+      "population_by_stratum": {
+        "high|acl_backed": 312,
+        "high|openalex_only": 326,
+        "low|acl_backed": 248,
+        "low|openalex_only": 713,
+        "mid|acl_backed": 173,
+        "mid|openalex_only": 229
+      },
+      "round1_by_stratum": {
+        "high|acl_backed": 8,
+        "high|openalex_only": 8,
+        "low|acl_backed": 6,
+        "low|openalex_only": 18,
+        "mid|acl_backed": 4,
+        "mid|openalex_only": 6
+      },
+      "round2_by_stratum": {
+        "high|acl_backed": 8,
+        "high|openalex_only": 8,
+        "low|acl_backed": 6,
+        "low|openalex_only": 18,
+        "mid|acl_backed": 4,
+        "mid|openalex_only": 6
+      },
+      "population": 2001
+    },
+    "ACTIVE_IN": {
+      "frequency_key": "papers of source institution",
+      "tier_thresholds(low<=a, mid<=b, high>b)": [
+        6,
+        13
+      ],
+      "confidence_definition": "acl_backed if >=2 evidence papers carry the institution via an ACL-agreeing row",
+      "population_by_stratum": {
+        "high|acl_backed": 33,
+        "high|openalex_only": 12,
+        "low|acl_backed": 21,
+        "low|openalex_only": 30,
+        "mid|acl_backed": 18,
+        "mid|openalex_only": 25
+      },
+      "round1_by_stratum": {
+        "high|acl_backed": 12,
+        "high|openalex_only": 4,
+        "low|acl_backed": 8,
+        "low|openalex_only": 11,
+        "mid|acl_backed": 6,
+        "mid|openalex_only": 9
+      },
+      "round2_by_stratum": {
+        "high|acl_backed": 12,
+        "high|openalex_only": 4,
+        "low|acl_backed": 7,
+        "low|openalex_only": 11,
+        "mid|acl_backed": 7,
+        "mid|openalex_only": 9
+      },
+      "population": 139
+    }
+  },
+  "round1_rows": 150,
+  "round1_distinct_anchor_papers": 103,
+  "round2_reserved_rows": 150,
+  "round1_supporting_papers_total": 284
+}

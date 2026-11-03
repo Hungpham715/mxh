@@ -1,0 +1,526 @@
+﻿"review_id","round","is_overlap","edge_type","source_id","source_name","target_id","target_name","paper_id","paper_title","paper_url","pdf_url","year","n_supporting_papers","supporting_papers","evidence_text","label","error_type","reviewer","note","adjudicated_label"
+"R1-001-ORG","1","1","ORG_COAUTHORED_WITH","oa:I1292974536","Ford Motor Company (United States)","oa:I130701444","Georgia Institute of Technology","oa:W4379255829","AfriNames: Most ASR models ""butcher"" African Names","https://arxiv.org/abs/2306.00253","https://arxiv.org/pdf/2306.00253","2023","1","P1: AfriNames: Most ASR models ""butcher"" African Names (2023) | https://arxiv.org/abs/2306.00253","[P1] AfriNames: Most ASR models ""butcher"" African Names (2023) – https://arxiv.org/abs/2306.00253 – PDF: https://arxiv.org/pdf/2306.00253
+  tác giả được gán 'Ford Motor Company (United States)':
+  - vị trí 6: 'Amina Mardiyyah Rufai'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'Ford Motor Company; Technical University of Munich'
+  tác giả được gán 'Georgia Institute of Technology':
+  - vị trí 2: 'Tejumade Afonja'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'Georgia Institute of Technology AI Saturdays Lagos; Georgia Institute of Technology AI Saturdays Lagos CISPA Helmholtz Center for Information Security'","","","","",""
+"R1-002-AFF","1","1","AFFILIATED_WITH","oa:A5101745213","Longbiao Wang","oa:I162868743","Tianjin University","oa:W4385569851","Tackling Modality Heterogeneity with Multi-View Calibration Network for Multimodal Sentiment Detection","https://aclanthology.org/2023.acl-long.287/","https://aclanthology.org/2023.acl-long.287.pdf","2023","1","P1: Tackling Modality Heterogeneity with Multi-View Calibration Network for Multimodal Sentiment Detection (2023) | https://aclanthology.org/2023.acl-long.287/","[P1] Tackling Modality Heterogeneity with Multi-View Calibration Network for Multimodal Sentiment Detection (2023) – https://aclanthology.org/2023.acl-long.287/ – PDF: https://aclanthology.org/2023.acl-long.287.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 6: 'Longbiao Wang'
+      affiliation in trong ACL Anthology: 'Tianjin University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Huiyan Technology (Tianjin) Co., Ltd, Tianjin, China; Tianjin Key Laboratory of Cognitive Computing and Application, College of Intelligence and Computing, Tianjin University, Tianjin, China'","","","","",""
+"R1-007-ACT","1","1","ACTIVE_IN","oa:I4210113369","Microsoft Research Asia (China)","topic:llm","llm (Large language models)","oa:W4385570262","Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark","https://aclanthology.org/2023.acl-long.423/","https://aclanthology.org/2023.acl-long.423.pdf","2023","6","P1: Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark (2023) | https://aclanthology.org/2023.acl-long.423/
+P2: Query Rewriting in Retrieval-Augmented Large Language Models (2023) | https://aclanthology.org/2023.emnlp-main.322/
+P3: BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation (2024) | https://aclanthology.org/2024.acl-long.7/
+P4: Language-Specific Neurons: The Key to Multilingual Capabilities in Large Language Models (2024) | https://aclanthology.org/2024.acl-long.309/
+P5: Respond in my Language: Mitigating Language Inconsistency in Response Generation based on Large Language Models (2024) | https://aclanthology.org/2024.acl-long.229/
+P6: Towards Better Value Principles for Large Language Model Alignment: A Systematic Evaluation and Enhancement (2025) | https://aclanthology.org/2025.acl-long.1408/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark (2023) – https://aclanthology.org/2023.acl-long.423/ – PDF: https://aclanthology.org/2023.acl-long.423.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Fangzhao Wu'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+  - vị trí 10: 'Xing Xie'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+[P2] Query Rewriting in Retrieval-Augmented Large Language Models (2023) – https://aclanthology.org/2023.emnlp-main.322/ – PDF: https://aclanthology.org/2023.emnlp-main.322.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Yeyun Gong'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+  - vị trí 5: 'Nan Duan'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+[P3] BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation (2024) – https://aclanthology.org/2024.acl-long.7/ – PDF: https://aclanthology.org/2024.acl-long.7.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Shijie Cao'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+  - vị trí 4: 'Jiaqi Guo'
+      affiliation in trong ACL Anthology: 'Microsoft'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+  - vị trí 5: 'Ting Cao'
+      affiliation in trong ACL Anthology: 'Microsoft Research'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia'
+[P4] Language-Specific Neurons: The Key to Multilingual Capabilities in Large Language Models (2024) – https://aclanthology.org/2024.acl-long.309/ – PDF: https://aclanthology.org/2024.acl-long.309.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Haoyang Huang'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , China'
+  - vị trí 4: 'Dongdong Zhang'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , China'
+  - vị trí 7: 'Furu Wei'
+      affiliation in trong ACL Anthology: 'Microsoft Research'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , China'
+[P5] Respond in my Language: Mitigating Language Inconsistency in Response Generation based on Large Language Models (2024) – https://aclanthology.org/2024.acl-long.229/ – PDF: https://aclanthology.org/2024.acl-long.229.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Haoyang Huang'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , China'
+  - vị trí 5: 'Furu Wei'
+      affiliation in trong ACL Anthology: 'Microsoft Research'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , China'
+[P6] Towards Better Value Principles for Large Language Model Alignment: A Systematic Evaluation and Enhancement (2025) – https://aclanthology.org/2025.acl-long.1408/ – PDF: https://aclanthology.org/2025.acl-long.1408.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Model'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Jing Yao'
+      affiliation in trong ACL Anthology: 'Microsoft'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , Beijing , China'
+  - vị trí 3: 'Xiaoyuan Yi'
+      affiliation in trong ACL Anthology: 'Research, Microsoft'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , Beijing , China'
+  - vị trí 5: 'Xing Xie'
+      affiliation in trong ACL Anthology: 'Microsoft Research Asia'
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Research Asia , Beijing , China'","","","","",""
+"R1-012-AFF","1","1","AFFILIATED_WITH","oa:A5015785439","Chengqing Zong","oa:I4210112150","Institute of Automation","oa:W4385571533","CFSum Coarse-to-Fine Contribution Network for Multimodal Summarization","https://aclanthology.org/2023.acl-long.476/","https://aclanthology.org/2023.acl-long.476.pdf","2023","2","P1: CFSum Coarse-to-Fine Contribution Network for Multimodal Summarization (2023) | https://aclanthology.org/2023.acl-long.476/
+P2: Multilingual Knowledge Graph Completion with Language-Sensitive Multi-Graph Attention (2023) | https://aclanthology.org/2023.acl-long.586/","[P1] CFSum Coarse-to-Fine Contribution Network for Multimodal Summarization (2023) – https://aclanthology.org/2023.acl-long.476/ – PDF: https://aclanthology.org/2023.acl-long.476.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 5: 'Chengqing Zong'
+      affiliation in trong ACL Anthology: 'Institute of Automation, Chinese Academy of Sciences'
+      affiliation theo OpenAlex (chuỗi gốc): 'School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China; State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, CAS, Beijing, China'
+[P2] Multilingual Knowledge Graph Completion with Language-Sensitive Multi-Graph Attention (2023) – https://aclanthology.org/2023.acl-long.586/ – PDF: https://aclanthology.org/2023.acl-long.586.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 3: 'Chengqing Zong'
+      affiliation in trong ACL Anthology: 'Institute of Automation, Chinese Academy of Sciences'
+      affiliation theo OpenAlex (chuỗi gốc): 'School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China; State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, CAS, Beijing, China'","","","","",""
+"R1-014-ORG","1","1","ORG_COAUTHORED_WITH","oa:I154570441","University of California, Santa Barbara","oa:I157485424","Korea Advanced Institute of Science and Technology","oa:W4385572461","Towards standardizing Korean Grammatical Error Correction: Datasets and Annotation","https://aclanthology.org/2023.acl-long.371/","https://aclanthology.org/2023.acl-long.371.pdf","2023","1","P1: Towards standardizing Korean Grammatical Error Correction: Datasets and Annotation (2023) | https://aclanthology.org/2023.acl-long.371/","[P1] Towards standardizing Korean Grammatical Error Correction: Datasets and Annotation (2023) – https://aclanthology.org/2023.acl-long.371/ – PDF: https://aclanthology.org/2023.acl-long.371.pdf
+  tác giả được gán 'University of California, Santa Barbara':
+  - vị trí 3: 'Gyuwan Kim'
+      affiliation in trong ACL Anthology: 'University of California, Santa Barbara'
+      affiliation theo OpenAlex (chuỗi gốc): 'KAIST AI; School of Computing, KAIST; University of California, Santa Barbara; KAIST SC; Kihyo Park Cornell University; SoftlyAI Research, SoftlyAI'
+  tác giả được gán 'Korea Advanced Institute of Science and Technology':
+  - vị trí 1: 'Soyoung Yoon'
+      affiliation in trong ACL Anthology: 'Korea Advanced Institute of Science and Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'KAIST AI; School of Computing, KAIST; University of California, Santa Barbara; KAIST SC; Kihyo Park Cornell University; SoftlyAI Research, SoftlyAI'
+  - vị trí 7: 'Minjoon Seo'
+      affiliation in trong ACL Anthology: 'KAIST'
+      affiliation theo OpenAlex (chuỗi gốc): 'KAIST AI; School of Computing, KAIST; University of California, Santa Barbara; KAIST SC; Kihyo Park Cornell University; SoftlyAI Research, SoftlyAI'
+  - vị trí 8: 'Alice Oh'
+      affiliation in trong ACL Anthology: 'KAIST'
+      affiliation theo OpenAlex (chuỗi gốc): 'KAIST SC; School of Computing, KAIST; University of California, Santa Barbara; KAIST AI; Kihyo Park Cornell University; SoftlyAI Research, SoftlyAI'","","","","",""
+"R1-021-ORG","1","1","ORG_COAUTHORED_WITH","oa:I115212828","Beijing Language and Culture University","oa:I4210090176","Institute of Computing Technology","oa:W4389523842","Bridging the Gap between Synthetic and Authentic Images for Multimodal Machine Translation","https://aclanthology.org/2023.emnlp-main.173/","https://aclanthology.org/2023.emnlp-main.173.pdf","2023","1","P1: Bridging the Gap between Synthetic and Authentic Images for Multimodal Machine Translation (2023) | https://aclanthology.org/2023.emnlp-main.173/","[P1] Bridging the Gap between Synthetic and Authentic Images for Multimodal Machine Translation (2023) – https://aclanthology.org/2023.emnlp-main.173/ – PDF: https://aclanthology.org/2023.emnlp-main.173.pdf
+  tác giả được gán 'Beijing Language and Culture University':
+  - vị trí 1: 'Wenyu Guo'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Beijing Language and Culture University, China; Key Laboratory of Intelligent Information Processing Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS); University of Chinese Academy of Sciences, Beijing, China'
+  - vị trí 3: 'Dong Yu'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Beijing Language and Culture University, China'
+  tác giả được gán 'Institute of Computing Technology':
+  - vị trí 1: 'Wenyu Guo'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Beijing Language and Culture University, China; Key Laboratory of Intelligent Information Processing Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS); University of Chinese Academy of Sciences, Beijing, China'
+  - vị trí 2: 'Qingkai Fang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Key Laboratory of Intelligent Information Processing Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS); University of Chinese Academy of Sciences, Beijing, China'
+  - vị trí 4: 'Yang Feng'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Key Laboratory of Intelligent Information Processing Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS); University of Chinese Academy of Sciences, Beijing, China'","","","","",""
+"R1-026-AFF","1","1","AFFILIATED_WITH","oa:A5064394288","Areej Alhothali","oa:I185163786","King Abdulaziz University","oa:W4392462069","Detecting Suicidality in Arabic Tweets Using Machine Learning and Deep Learning Techniques","https://arxiv.org/abs/2309.00246","https://arxiv.org/pdf/2309.00246","2023","1","P1: Detecting Suicidality in Arabic Tweets Using Machine Learning and Deep Learning Techniques (2023) | https://arxiv.org/abs/2309.00246","[P1] Detecting Suicidality in Arabic Tweets Using Machine Learning and Deep Learning Techniques (2023) – https://arxiv.org/abs/2309.00246 – PDF: https://arxiv.org/pdf/2309.00246
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 2: 'Areej Alhothali'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Computer Science, Faculty of Computing and Information Technology, King AbdulAziz University, 21589, Jeddah, Saudi Arabia'","","","","",""
+"R1-034-AFF","1","1","AFFILIATED_WITH","oa:A5005195235","Huaibo Huang","oa:I19820366","Chinese Academy of Sciences","oa:W4402671160","DeVAn: Dense Video Annotation for Video-Language Models","https://aclanthology.org/2024.acl-long.772/","https://aclanthology.org/2024.acl-long.772.pdf","2024","1","P1: DeVAn: Dense Video Annotation for Video-Language Models (2024) | https://aclanthology.org/2024.acl-long.772/","[P1] DeVAn: Dense Video Annotation for Video-Language Models (2024) – https://aclanthology.org/2024.acl-long.772/ – PDF: https://aclanthology.org/2024.acl-long.772.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 6: 'Huaibo Huang'
+      affiliation in trong ACL Anthology: 'Institute of automation, Chinese academy of science, Chinese Academy of Sciences'
+      affiliation theo OpenAlex (chuỗi gốc): 'MAIS & CRIPAC , Institute of Automation , Chinese Academy of Sciences , China'","","","","",""
+"R1-036-AFF","1","1","AFFILIATED_WITH","oa:A5062238168","Jingjing Li","oa:I177725633","Chinese University of Hong Kong","oa:W4402671579","An Entropy-based Text Watermarking Detection Method","https://aclanthology.org/2024.acl-long.630/","https://aclanthology.org/2024.acl-long.630.pdf","2024","1","P1: An Entropy-based Text Watermarking Detection Method (2024) | https://aclanthology.org/2024.acl-long.630/","[P1] An Entropy-based Text Watermarking Detection Method (2024) – https://aclanthology.org/2024.acl-long.630/ – PDF: https://aclanthology.org/2024.acl-long.630.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 4: 'Jingjing Li'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'The Chinese University of Hong Kong'","","","","",""
+"R1-045-AFF","1","1","AFFILIATED_WITH","oa:A5102816371","Bing Qin","oa:I204983213","Harbin Institute of Technology","oa:W4402671825","Self-Evolving GPT: A Lifelong Autonomous Experiential Learner","https://aclanthology.org/2024.acl-long.346/","https://aclanthology.org/2024.acl-long.346.pdf","2024","1","P1: Self-Evolving GPT: A Lifelong Autonomous Experiential Learner (2024) | https://aclanthology.org/2024.acl-long.346/","[P1] Self-Evolving GPT: A Lifelong Autonomous Experiential Learner (2024) – https://aclanthology.org/2024.acl-long.346/ – PDF: https://aclanthology.org/2024.acl-long.346.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 7: 'Bing Qin'
+      affiliation in trong ACL Anthology: 'Harbin Institute of Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'Research Center for Social Computing and Information Retrieval Harbin Institute of Technology , China'","","","","",""
+"R1-053-AFF","1","1","AFFILIATED_WITH","oa:A5090383211","Rangan Majumder","oa:I1290206253","Microsoft (United States)","oa:W4402672004","Improving Text Embeddings with Large Language Models","https://aclanthology.org/2024.acl-long.642/","https://aclanthology.org/2024.acl-long.642.pdf","2024","1","P1: Improving Text Embeddings with Large Language Models (2024) | https://aclanthology.org/2024.acl-long.642/","[P1] Improving Text Embeddings with Large Language Models (2024) – https://aclanthology.org/2024.acl-long.642/ – PDF: https://aclanthology.org/2024.acl-long.642.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 5: 'Rangan Majumder'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Microsoft Corporation'","","","","",""
+"R1-054-ACT","1","1","ACTIVE_IN","oa:I162827531","Indian Institute of Technology Bombay","topic:llm","llm (Large language models)","oa:W4402672021","One Prompt To Rule Them All: LLMs for Opinion Summary Evaluation","https://aclanthology.org/2024.acl-long.655/","https://aclanthology.org/2024.acl-long.655.pdf","2024","2","P1: One Prompt To Rule Them All: LLMs for Opinion Summary Evaluation (2024) | https://aclanthology.org/2024.acl-long.655/
+P2: MemeGuard: An LLM and VLM-based Framework for Advancing Content Moderation via Meme Intervention (2024) | https://aclanthology.org/2024.acl-long.439/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] One Prompt To Rule Them All: LLMs for Opinion Summary Evaluation (2024) – https://aclanthology.org/2024.acl-long.655/ – PDF: https://aclanthology.org/2024.acl-long.655.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Tejpalsingh Siledar'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 2: 'Swaroop Nath'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 4: 'Rupasai Rangaraju'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 5: 'Swaprava Nath'
+      affiliation in trong ACL Anthology: 'Computer Science and Engineering, Indian Institute of Technology Bombay'
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 6: 'Pushpak Bhattacharyya'
+      affiliation in trong ACL Anthology: 'Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 8: 'Amey Patil'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+  - vị trí 11: 'Nikesh Garera'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , IIT Bombay , India , ♠ Flipkart , India'
+[P2] MemeGuard: An LLM and VLM-based Framework for Advancing Content Moderation via Meme Intervention (2024) – https://aclanthology.org/2024.acl-long.439/ – PDF: https://aclanthology.org/2024.acl-long.439.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 6: 'Pushpak Bhattacharyya'
+      affiliation in trong ACL Anthology: 'Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Computer Science and Engineering , Indian Institute of Technology Bombay'","","","","",""
+"R1-055-AFF","1","1","AFFILIATED_WITH","oa:A5099082760","Xiaojie Wang","oa:I20231570","Peking University","oa:W4402684283","Phased Instruction Fine-Tuning for Large Language Models","https://arxiv.org/abs/2406.04371","https://arxiv.org/pdf/2406.04371","2024","1","P1: Phased Instruction Fine-Tuning for Large Language Models (2024) | https://arxiv.org/abs/2406.04371","[P1] Phased Instruction Fine-Tuning for Large Language Models (2024) – https://arxiv.org/abs/2406.04371 – PDF: https://arxiv.org/pdf/2406.04371
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 4: 'Xiaojie Wang'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'Beijing University of Posts and Telecommunications; Peking University'","","","","",""
+"R1-068-ACT","1","1","ACTIVE_IN","oa:I59553526","Stony Brook University","topic:llm","llm (Large language models)","oa:W4404782347","FAC^2E: Better Understanding Large Language Model Capabilities by Dissociating Language and Cognition","https://aclanthology.org/2024.emnlp-main.734/","https://aclanthology.org/2024.emnlp-main.734.pdf","2024","2","P1: FAC^2E: Better Understanding Large Language Model Capabilities by Dissociating Language and Cognition (2024) | https://aclanthology.org/2024.emnlp-main.734/
+P2: Data to Defense: The Role of Curation in Aligning Large Language Models Against Safety Compromise (2025) | https://aclanthology.org/2025.emnlp-main.647/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] FAC^2E: Better Understanding Large Language Model Capabilities by Dissociating Language and Cognition (2024) – https://aclanthology.org/2024.emnlp-main.734/ – PDF: https://aclanthology.org/2024.emnlp-main.734.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Model'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Tengfei Ma'
+      affiliation in trong ACL Anthology: 'State University of New York at Stony Brook'
+      affiliation theo OpenAlex (chuỗi gốc): 'Stony Brook University'
+[P2] Data to Defense: The Role of Curation in Aligning Large Language Models Against Safety Compromise (2025) – https://aclanthology.org/2025.emnlp-main.647/ – PDF: https://aclanthology.org/2025.emnlp-main.647.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Jiacheng Liang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Stony Brook University'","","","","",""
+"R1-072-AFF","1","1","AFFILIATED_WITH","oa:A5104265253","Seunguk Yu","oa:I67900169","Chung-Ang University","oa:W4404782920","UniGen: Universal Domain Generalization for Sentiment Classification via Zero-shot Dataset Generation","https://aclanthology.org/2024.emnlp-main.1/","https://aclanthology.org/2024.emnlp-main.1.pdf","2024","1","P1: UniGen: Universal Domain Generalization for Sentiment Classification via Zero-shot Dataset Generation (2024) | https://aclanthology.org/2024.emnlp-main.1/","[P1] UniGen: Universal Domain Generalization for Sentiment Classification via Zero-shot Dataset Generation (2024) – https://aclanthology.org/2024.emnlp-main.1/ – PDF: https://aclanthology.org/2024.emnlp-main.1.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 3: 'Seunguk Yu'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Artificial Intelligence , Chung-Ang University'","","","","",""
+"R1-075-ORG","1","1","ORG_COAUTHORED_WITH","oa:I4210114105","Tsinghua–Berkeley Shenzhen Institute","oa:I9224756","Northeastern University","oa:W4404783666","Reusing Transferable Weight Increments for Low-resource Style Generation","https://aclanthology.org/2024.emnlp-main.145/","https://aclanthology.org/2024.emnlp-main.145.pdf","2024","1","P1: Reusing Transferable Weight Increments for Low-resource Style Generation (2024) | https://aclanthology.org/2024.emnlp-main.145/","[P1] Reusing Transferable Weight Increments for Low-resource Style Generation (2024) – https://aclanthology.org/2024.emnlp-main.145/ – PDF: https://aclanthology.org/2024.emnlp-main.145.pdf
+  tác giả được gán 'Tsinghua–Berkeley Shenzhen Institute':
+  - vị trí 3: 'Heng Chang'
+      affiliation in trong ACL Anthology: 'Tsinghua University, Tsinghua University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Tsinghua-Berkeley Shenzhen Institute , Tsinghua University , China'
+  tác giả được gán 'Northeastern University':
+  - vị trí 4: 'Yaqi Wang'
+      affiliation in trong ACL Anthology: 'Northeastern University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science and Engineering , Northeastern University , Shenyang , China'","","","","",""
+"R1-083-ORG","1","1","ORG_COAUTHORED_WITH","oa:I168719708","City University of Hong Kong","oa:I5023651","McGill University","oa:W4412886639","Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge","https://aclanthology.org/2025.acl-long.252/","https://aclanthology.org/2025.acl-long.252.pdf","2025","1","P1: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) | https://aclanthology.org/2025.acl-long.252/","[P1] Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) – https://aclanthology.org/2025.acl-long.252/ – PDF: https://aclanthology.org/2025.acl-long.252.pdf
+  tác giả được gán 'City University of Hong Kong':
+  - vị trí 1: 'Qiyuan Zhang'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong ,'
+  - vị trí 11: 'Chen Ma'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong ,'
+  tác giả được gán 'McGill University':
+  - vị trí 10: 'Fuyuan Lyu'
+      affiliation in trong ACL Anthology: 'McGill University, McGill University and Mila - Quebec Artificial Intelligence Institute'
+      affiliation theo OpenAlex (chuỗi gốc): 'McGill University & Mila -Quebec AI Institute'","","","","",""
+"R1-084-ACT","1","1","ACTIVE_IN","oa:I168719708","City University of Hong Kong","topic:llm","llm (Large language models)","oa:W4412886639","Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge","https://aclanthology.org/2025.acl-long.252/","https://aclanthology.org/2025.acl-long.252.pdf","2025","3","P1: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) | https://aclanthology.org/2025.acl-long.252/
+P2: CLOMO: Counterfactual Logical Modification with Large Language Models (2024) | https://aclanthology.org/2024.acl-long.593/
+P3: Mitigating the Language Mismatch and Repetition Issues in LLM-based Machine Translation via Model Editing (2024) | https://aclanthology.org/2024.emnlp-main.879/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) – https://aclanthology.org/2025.acl-long.252/ – PDF: https://aclanthology.org/2025.acl-long.252.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Qiyuan Zhang'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong ,'
+  - vị trí 11: 'Chen Ma'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong ,'
+[P2] CLOMO: Counterfactual Logical Modification with Large Language Models (2024) – https://aclanthology.org/2024.acl-long.593/ – PDF: https://aclanthology.org/2024.acl-long.593.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Yinya Huang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong; City University of Hong Kong Shenzhen Research Institute'
+  - vị trí 4: 'Wei Shao'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong'
+  - vị trí 9: 'Linqi Song'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong; City University of Hong Kong Shenzhen Research Institute'
+[P3] Mitigating the Language Mismatch and Repetition Issues in LLM-based Machine Translation via Model Editing (2024) – https://aclanthology.org/2024.emnlp-main.879/ – PDF: https://aclanthology.org/2024.emnlp-main.879.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 4: 'Chen Ma'
+      affiliation in trong ACL Anthology: 'City University of Hong Kong'
+      affiliation theo OpenAlex (chuỗi gốc): 'City University of Hong Kong , ♠ University of Science and Technology of China ♣'","","","","",""
+"R1-086-ACT","1","1","ACTIVE_IN","oa:I4405261251","The Hong Kong University of Science and Technology (Guangzhou)","topic:llm","llm (Large language models)","oa:W4412886639","Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge","https://aclanthology.org/2025.acl-long.252/","https://aclanthology.org/2025.acl-long.252.pdf","2025","6","P1: Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) | https://aclanthology.org/2025.acl-long.252/
+P2: BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation (2024) | https://aclanthology.org/2024.acl-long.7/
+P3: CLOMO: Counterfactual Logical Modification with Large Language Models (2024) | https://aclanthology.org/2024.acl-long.593/
+P4: ChunkKV: Semantic-Preserving KV Cache Compression for Efficient Long-Context LLM Inference (2025) | https://arxiv.org/abs/2502.00299
+P5: LlamaDuo: LLMOps Pipeline for Seamless Migration from Service LLMs to Small-Scale Local LLMs (2025) | https://aclanthology.org/2025.acl-long.1592/
+P6: Detoxifying Large Language Models via the Diversity of Toxic Samples (2025) | https://aclanthology.org/2025.emnlp-main.298/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge (2025) – https://aclanthology.org/2025.acl-long.252/ – PDF: https://aclanthology.org/2025.acl-long.252.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Yuxin Jiang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou) ,'
+[P2] BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation (2024) – https://aclanthology.org/2024.acl-long.7/ – PDF: https://aclanthology.org/2024.acl-long.7.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'DaYou Du'
+      affiliation in trong ACL Anthology: 'HKUST(GZ)'
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou )'
+  - vị trí 6: 'Xiaowen Chu'
+      affiliation in trong ACL Anthology: 'Hong Kong University of Science and Technology (Guangzhou)'
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou )'
+[P3] CLOMO: Counterfactual Logical Modification with Large Language Models (2024) – https://aclanthology.org/2024.acl-long.593/ – PDF: https://aclanthology.org/2024.acl-long.593.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 5: 'Zhicheng Yang'
+      affiliation in trong ACL Anthology: 'Hong Kong University of Science and Technology (Guangzhou)'
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou )'
+[P4] ChunkKV: Semantic-Preserving KV Cache Compression for Efficient Long-Context LLM Inference (2025) – https://arxiv.org/abs/2502.00299 – PDF: https://arxiv.org/pdf/2502.00299
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 7: 'Xuming Hu'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou)'
+  - vị trí 8: 'Xiaowen Chu'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou)'
+[P5] LlamaDuo: LLMOps Pipeline for Seamless Migration from Service LLMs to Small-Scale Local LLMs (2025) – https://aclanthology.org/2025.acl-long.1592/ – PDF: https://aclanthology.org/2025.acl-long.1592.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Juyong Jiang'
+      affiliation in trong ACL Anthology: 'Hong Kong University of Science and Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'Electronics and Telecommunications Research Institute ♡ The Hong Kong University of Science and Technology (Guangzhou ) ♣'
+  - vị trí 3: 'Fan Wang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Electronics and Telecommunications Research Institute ♡ The Hong Kong University of Science and Technology (Guangzhou ) ♣'
+[P6] Detoxifying Large Language Models via the Diversity of Toxic Samples (2025) – https://aclanthology.org/2025.emnlp-main.298/ – PDF: https://aclanthology.org/2025.emnlp-main.298.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 5: 'Wei Wang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'The Hong Kong University of Science and Technology (Guangzhou) , Guangzhou , China; The Hong Kong University of Science and Technology , Hong Kong SAR , China'","","","","",""
+"R1-093-ORG","1","1","ORG_COAUTHORED_WITH","oa:I102669525","Pelita Harapan University","oa:I152815399","Singapore University of Technology and Design","oa:W4412944832","Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia","https://aclanthology.org/2025.acl-long.916/","https://aclanthology.org/2025.acl-long.916.pdf","2025","1","P1: Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) | https://aclanthology.org/2025.acl-long.916/","[P1] Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) – https://aclanthology.org/2025.acl-long.916/ – PDF: https://aclanthology.org/2025.acl-long.916.pdf
+  tác giả được gán 'Pelita Harapan University':
+  - vị trí 73: 'Tim Santos'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Universitas Pelita Harapan'
+  tác giả được gán 'Singapore University of Technology and Design':
+  - vị trí 77: 'Ming Shan Hee'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Singapore University of Technology and Design'","","","","",""
+"R1-095-ORG","1","1","ORG_COAUTHORED_WITH","oa:I118373667","Seoul National University of Science and Technology","oa:I76920116","Srinakharinwirot University","oa:W4412944832","Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia","https://aclanthology.org/2025.acl-long.916/","https://aclanthology.org/2025.acl-long.916.pdf","2025","1","P1: Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) | https://aclanthology.org/2025.acl-long.916/","[P1] Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) – https://aclanthology.org/2025.acl-long.916/ – PDF: https://aclanthology.org/2025.acl-long.916.pdf
+  tác giả được gán 'Seoul National University of Science and Technology':
+  - vị trí 86: 'Jostin Jerico Rosal'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Seoul National University of Science and Technology 54'
+  tác giả được gán 'Srinakharinwirot University':
+  - vị trí 89: 'Onno P. Kampman'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'MOH Office for Healthcare Transformation; Srinakharinwirot University'","","","","",""
+"R1-097-ORG","1","1","ORG_COAUTHORED_WITH","oa:I1332387789","Siriraj Hospital","oa:I60837268","King Mongkut's University of Technology Thonburi","oa:W4412944832","Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia","https://aclanthology.org/2025.acl-long.916/","https://aclanthology.org/2025.acl-long.916.pdf","2025","1","P1: Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) | https://aclanthology.org/2025.acl-long.916/","[P1] Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia (2025) – https://aclanthology.org/2025.acl-long.916/ – PDF: https://aclanthology.org/2025.acl-long.916.pdf
+  tác giả được gán 'Siriraj Hospital':
+  - vị trí 34: 'Kanyakorn Veerakanjana'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Faculty of Medicine Siriraj Hospital , Mahidol University'
+  - vị trí 35: 'Piyalitt Ittichaiwong'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Faculty of Medicine Siriraj Hospital , Mahidol University'
+  tác giả được gán 'King Mongkut's University of Technology Thonburi':
+  - vị trí 46: 'Aye Hninn Khine'
+      affiliation in trong ACL Anthology: 'King Mongkut’s University of Technology Thonburi'
+      affiliation theo OpenAlex (chuỗi gốc): ""King Mongkut's University of Technology Thonburi""","","","","",""
+"R1-108-ACT","1","1","ACTIVE_IN","oa:I12912129","Northeastern University","topic:llm","llm (Large language models)","oa:W4412945287","Lost in Literalism: How Supervised Training Shapes Translationese in LLMs","https://aclanthology.org/2025.acl-long.630/","https://aclanthology.org/2025.acl-long.630.pdf","2025","2","P1: Lost in Literalism: How Supervised Training Shapes Translationese in LLMs (2025) | https://aclanthology.org/2025.acl-long.630/
+P2: Accuracy and Political Bias of News Source Credibility Ratings by Large Language Models (2023) | https://arxiv.org/abs/2304.00228","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Lost in Literalism: How Supervised Training Shapes Translationese in LLMs (2025) – https://aclanthology.org/2025.acl-long.630/ – PDF: https://aclanthology.org/2025.acl-long.630.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Zhilin Wang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Shanghai AI Laboratory ♣ Westlake University ♦ Zhejiang University ♢ Northeastern University'
+  - vị trí 4: 'Huajian Zhang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Shanghai AI Laboratory ♣ Westlake University ♦ Zhejiang University ♢ Northeastern University'
+  - vị trí 6: 'Yongjing Yin'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Shanghai AI Laboratory ♣ Westlake University ♦ Zhejiang University ♢ Northeastern University'
+  - vị trí 7: 'Tong Xiao'
+      affiliation in trong ACL Anthology: 'Northeastern University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Shanghai AI Laboratory ♣ Westlake University ♦ Zhejiang University ♢ Northeastern University'
+[P2] Accuracy and Political Bias of News Source Credibility Ratings by Large Language Models (2023) – https://arxiv.org/abs/2304.00228 – PDF: https://arxiv.org/pdf/2304.00228
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Kai-Cheng Yang'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'Northeastern University, Boston, Massachusetts, USA'","","","","",""
+"R1-113-ORG","1","1","ORG_COAUTHORED_WITH","oa:I151746483","University of Waterloo","oa:I4210127509","Vector Institute","oa:W4412945526","TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding","https://aclanthology.org/2025.acl-long.332/","https://aclanthology.org/2025.acl-long.332.pdf","2025","1","P1: TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding (2025) | https://aclanthology.org/2025.acl-long.332/","[P1] TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding (2025) – https://aclanthology.org/2025.acl-long.332/ – PDF: https://aclanthology.org/2025.acl-long.332.pdf
+  tác giả được gán 'University of Waterloo':
+  - vị trí 1: 'Max Ku'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): '♠ University of Waterloo ♡ Votee AI Vector Institute'
+  - vị trí 3: 'Jonathan Leung'
+      affiliation in trong ACL Anthology: 'University of Waterloo'
+      affiliation theo OpenAlex (chuỗi gốc): '♠ University of Waterloo ♡ Votee AI Vector Institute'
+  - vị trí 6: 'Wenhu Chen'
+      affiliation in trong ACL Anthology: 'University of Waterloo'
+      affiliation theo OpenAlex (chuỗi gốc): '♠ University of Waterloo ♡ Votee AI Vector Institute'
+  tác giả được gán 'Vector Institute':
+  - vị trí 1: 'Max Ku'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): '♠ University of Waterloo ♡ Votee AI Vector Institute'","","","","",""
+"R1-119-ORG","1","1","ORG_COAUTHORED_WITH","oa:I201448701","University of Washington","oa:I52357470","The Ohio State University","oa:W4412945629","Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback","https://aclanthology.org/2025.acl-long.355/","https://aclanthology.org/2025.acl-long.355.pdf","2025","1","P1: Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback (2025) | https://aclanthology.org/2025.acl-long.355/","[P1] Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback (2025) – https://aclanthology.org/2025.acl-long.355/ – PDF: https://aclanthology.org/2025.acl-long.355.pdf
+  tác giả được gán 'University of Washington':
+  - vị trí 2: 'Yizhong Wang'
+      affiliation in trong ACL Anthology: 'Department of Computer Science, University of Washington'
+      affiliation theo OpenAlex (chuỗi gốc): 'Allen Institute for AI; University of Washington'
+  - vị trí 7: 'Noah A. Smith'
+      affiliation in trong ACL Anthology: 'University of Washington and Allen Institute for Artificial Intelligence'
+      affiliation theo OpenAlex (chuỗi gốc): 'Allen Institute for AI; University of Washington'
+  - vị trí 8: 'Hannaneh Hajishirzi'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Allen Institute for AI; University of Washington'
+  tác giả được gán 'The Ohio State University':
+  - vị trí 4: 'Sachin Kumar'
+      affiliation in trong ACL Anthology: 'Ohio State University, Columbus'
+      affiliation theo OpenAlex (chuỗi gốc): 'Allen Institute for AI; The Ohio State University Dataset hf '","","","","",""
+"R1-125-ACT","1","1","ACTIVE_IN","oa:I74801974","The University of Tokyo","topic:llm","llm (Large language models)","oa:W4415164160","LLM-Based Human-Agent Collaboration and Interaction Systems: A Survey","https://arxiv.org/abs/2505.00753","https://arxiv.org/pdf/2505.00753","2025","2","P1: LLM-Based Human-Agent Collaboration and Interaction Systems: A Survey (2025) | https://arxiv.org/abs/2505.00753
+P2: Massive Supervised Fine-tuning Experiments Reveal How Data, Layer, and Training Factors Shape LLM Alignment Quality (2025) | https://aclanthology.org/2025.emnlp-main.1138/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] LLM-Based Human-Agent Collaboration and Interaction Systems: A Survey (2025) – https://arxiv.org/abs/2505.00753 – PDF: https://arxiv.org/pdf/2505.00753
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Yaozu Wu'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Tokyo ,'
+  - vị trí 17: 'Dongyuan Li'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Tokyo ,'
+  - vị trí 18: 'Renhe Jiang'
+      affiliation in trong ACL Anthology: (bài arXiv: metadata không có affiliation – xem PDF)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Tokyo ,'
+[P2] Massive Supervised Fine-tuning Experiments Reveal How Data, Layer, and Training Factors Shape LLM Alignment Quality (2025) – https://aclanthology.org/2025.emnlp-main.1138/ – PDF: https://aclanthology.org/2025.emnlp-main.1138.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Yuto Harada'
+      affiliation in trong ACL Anthology: 'Tokyo University, Tokyo Institute of Technology'
+      affiliation theo OpenAlex (chuỗi gốc): 'NII LLMC ,; The University of Tokyo ,'
+  - vị trí 4: 'Yohei Oseki'
+      affiliation in trong ACL Anthology: 'University of Tokyo'
+      affiliation theo OpenAlex (chuỗi gốc): 'NII LLMC ,; The University of Tokyo ,'
+  - vị trí 5: 'Yusuke Miyao'
+      affiliation in trong ACL Anthology: 'The University of Tokyo'
+      affiliation theo OpenAlex (chuỗi gốc): 'NII LLMC ,; The University of Tokyo ,'","","","","",""
+"R1-128-AFF","1","1","AFFILIATED_WITH","oa:A5002149616","Qi Long","oa:I79576946","University of Pennsylvania","oa:W4416035255","The Impact of Language Mixing on Bilingual LLM Reasoning","https://aclanthology.org/2025.emnlp-main.1654/","https://aclanthology.org/2025.emnlp-main.1654.pdf","2025","1","P1: The Impact of Language Mixing on Bilingual LLM Reasoning (2025) | https://aclanthology.org/2025.emnlp-main.1654/","[P1] The Impact of Language Mixing on Bilingual LLM Reasoning (2025) – https://aclanthology.org/2025.emnlp-main.1654/ – PDF: https://aclanthology.org/2025.emnlp-main.1654.pdf
+  tác giả cần kiểm (theo vị trí):
+  - vị trí 4: 'Qi Long'
+      affiliation in trong ACL Anthology: 'University of Pennsylvania'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Pennsylvania'","","","","",""
+"R1-139-ACT","1","1","ACTIVE_IN","oa:I157725225","University of Illinois Urbana-Champaign","topic:retrieval","retrieval (Retrieval / RAG)","oa:W4416036563","LogiCoL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval","https://aclanthology.org/2025.emnlp-main.608/","https://aclanthology.org/2025.emnlp-main.608.pdf","2025","2","P1: LogiCoL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval (2025) | https://aclanthology.org/2025.emnlp-main.608/
+P2: Retrieval Augmented Fact Verification by Synthesizing Contrastive Arguments (2024) | https://aclanthology.org/2024.acl-long.556/","Chủ đề: retrieval (Retrieval / RAG). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] LogiCoL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval (2025) – https://aclanthology.org/2025.emnlp-main.608/ – PDF: https://aclanthology.org/2025.emnlp-main.608.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Dense Retrieval'
+  tác giả được gán tổ chức này:
+  - vị trí 3: 'Xueqiang Xu'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign ,'
+[P2] Retrieval Augmented Fact Verification by Synthesizing Contrastive Arguments (2024) – https://aclanthology.org/2024.acl-long.556/ – PDF: https://aclanthology.org/2024.acl-long.556.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Retrieval Augmented'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Zhenrui Yue'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'
+  - vị trí 2: 'Huimin Zeng'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'
+  - vị trí 3: 'Lanyu Shang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'
+  - vị trí 4: 'Yifan Liu'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'
+  - vị trí 5: 'Yang Zhang'
+      affiliation in trong ACL Anthology: 'University of Illinois at Urbana-Champaign'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'
+  - vị trí 6: 'Dong Wang'
+      affiliation in trong ACL Anthology: 'University of Illinois at Urbana-Champaign'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Illinois Urbana-Champaign'","","","","",""
+"R1-141-ACT","1","1","ACTIVE_IN","oa:I145311948","Johns Hopkins University","topic:llm","llm (Large language models)","oa:W4416036708","Polysemantic Dropout: Conformal OOD Detection for Specialized LLMs","https://aclanthology.org/2025.emnlp-main.595/","https://aclanthology.org/2025.emnlp-main.595.pdf","2025","2","P1: Polysemantic Dropout: Conformal OOD Detection for Specialized LLMs (2025) | https://aclanthology.org/2025.emnlp-main.595/
+P2: Certified Mitigation of Worst-Case LLM Copyright Infringement (2025) | https://aclanthology.org/2025.emnlp-main.1784/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Polysemantic Dropout: Conformal OOD Detection for Specialized LLMs (2025) – https://aclanthology.org/2025.emnlp-main.595/ – PDF: https://aclanthology.org/2025.emnlp-main.595.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLMs'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Ayush Gupta'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Computer Science Lab , SRI ,; Johns Hopkins University'
+  - vị trí 5: 'Rama Chellappa'
+      affiliation in trong ACL Anthology: 'Johns Hopkins University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Johns Hopkins University'
+[P2] Certified Mitigation of Worst-Case LLM Copyright Infringement (2025) – https://aclanthology.org/2025.emnlp-main.1784/ – PDF: https://aclanthology.org/2025.emnlp-main.1784.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Jingyu Zhang'
+      affiliation in trong ACL Anthology: 'Johns Hopkins University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Johns Hopkins University'
+  - vị trí 3: 'Marc Marone'
+      affiliation in trong ACL Anthology: 'Johns Hopkins University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Johns Hopkins University'
+  - vị trí 4: 'Benjamin Van Durme'
+      affiliation in trong ACL Anthology: 'Microsoft and Johns Hopkins University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Johns Hopkins University'
+  - vị trí 5: 'Daniel Khashabi'
+      affiliation in trong ACL Anthology: 'Johns Hopkins University'
+      affiliation theo OpenAlex (chuỗi gốc): 'Johns Hopkins University'","","","","",""
+"R1-144-ACT","1","1","ACTIVE_IN","oa:I1174212","University of Southern California","topic:llm","llm (Large language models)","oa:W4416036903","Why Do Some Inputs Break Low-Bit LLM Quantization?","https://aclanthology.org/2025.emnlp-main.168/","https://aclanthology.org/2025.emnlp-main.168.pdf","2025","4","P1: Why Do Some Inputs Break Low-Bit LLM Quantization? (2025) | https://aclanthology.org/2025.emnlp-main.168/
+P2: Contrastive Novelty-Augmented Learning: Anticipating Outliers with Large Language Models (2023) | https://aclanthology.org/2023.acl-long.658/
+P3: Evaluating Very Long-Term Conversational Memory of LLM Agents (2024) | https://aclanthology.org/2024.acl-long.747/
+P4: How Susceptible are Large Language Models to Ideological Manipulation? (2024) | https://aclanthology.org/2024.emnlp-main.952/","Chủ đề: llm (Large language models). Cần >= 2 bài thỏa: có tác giả khai báo tổ chức VÀ bài thuộc chủ đề.
+[P1] Why Do Some Inputs Break Low-Bit LLM Quantization? (2025) – https://aclanthology.org/2025.emnlp-main.168/ – PDF: https://aclanthology.org/2025.emnlp-main.168.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Ting-Yun Chang'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California , Los Angeles , CA , USA'
+  - vị trí 3: 'Jesse Thomason'
+      affiliation in trong ACL Anthology: 'University of Southern California and Amazon'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California , Los Angeles , CA , USA'
+  - vị trí 4: 'Robin Jia'
+      affiliation in trong ACL Anthology: 'University of Southern California'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California , Los Angeles , CA , USA'
+[P2] Contrastive Novelty-Augmented Learning: Anticipating Outliers with Large Language Models (2023) – https://aclanthology.org/2023.acl-long.658/ – PDF: https://aclanthology.org/2023.acl-long.658.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Xiang Ren'
+      affiliation in trong ACL Anthology: 'University of Southern California'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California'
+  - vị trí 3: 'Robin Jia'
+      affiliation in trong ACL Anthology: 'University of Southern California'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California'
+[P3] Evaluating Very Long-Term Conversational Memory of LLM Agents (2024) – https://aclanthology.org/2024.acl-long.747/ – PDF: https://aclanthology.org/2024.acl-long.747.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'LLM'
+  tác giả được gán tổ chức này:
+  - vị trí 2: 'Dong-Ho Lee'
+      affiliation in trong ACL Anthology: 'University of Southern California'
+      affiliation theo OpenAlex (chuỗi gốc): 'University of Southern California'
+[P4] How Susceptible are Large Language Models to Ideological Manipulation? (2024) – https://aclanthology.org/2024.emnlp-main.952/ – PDF: https://aclanthology.org/2024.emnlp-main.952.pdf
+  cụm từ trong title/abstract liên quan chủ đề: 'Large Language Models'
+  tác giả được gán tổ chức này:
+  - vị trí 1: 'Kai Chen'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Computer Science , University of Southern California; Information Sciences Institute , University of Southern California {kchen035 , zihaoh ,'
+  - vị trí 2: 'Zihao He'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Computer Science , University of Southern California; Information Sciences Institute , University of Southern California {kchen035 , zihaoh ,'
+  - vị trí 4: 'Taiwei Shi'
+      affiliation in trong ACL Anthology: (không có trong metadata ACL)
+      affiliation theo OpenAlex (chuỗi gốc): 'Department of Computer Science , University of Southern California'
+  - vị trí 5: 'Kristina Lerman'
+      affiliation in trong ACL Anthology: 'University of Southern California and USC Information Sciences Institute'
+      affiliation theo OpenAlex (chuỗi gốc): 'Information Sciences Institute , University of Southern California {kchen035 , zihaoh ,'","","","","",""
