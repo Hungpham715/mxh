@@ -1,0 +1,52 @@
+{
+  "status": "computed",
+  "graph": "LCC of author-only co-authorship projection (unweighted)",
+  "lcc_nodes": 970,
+  "lcc_edges": 4288,
+  "C_obs": 0.9127,
+  "L_obs": 10.9876,
+  "L_method": "exact",
+  "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+  "n_random": 5,
+  "random_graphs": [
+    {
+      "seed": 20261108,
+      "nodes": 970,
+      "C": 0.0186,
+      "L": 3.3154
+    },
+    {
+      "seed": 20261109,
+      "nodes": 970,
+      "C": 0.015,
+      "L": 3.3103
+    },
+    {
+      "seed": 20261110,
+      "nodes": 970,
+      "C": 0.0137,
+      "L": 3.306
+    },
+    {
+      "seed": 20261111,
+      "nodes": 970,
+      "C": 0.0127,
+      "L": 3.311
+    },
+    {
+      "seed": 20261112,
+      "nodes": 970,
+      "C": 0.0168,
+      "L": 3.309
+    }
+  ],
+  "C_rand": 0.0154,
+  "L_rand": 3.3104,
+  "sigma": 17.902,
+  "verdict": "no clear small-world indication",
+  "limitations": [
+    "Multi-author papers create cliques that mechanically raise clustering.",
+    "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+    "No significance test performed; sigma is descriptive only."
+  ]
+}

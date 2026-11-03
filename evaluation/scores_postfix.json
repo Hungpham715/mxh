@@ -1,0 +1,167 @@
+{
+  "automated_preliminary": {
+    "label_origin": "automated_preliminary",
+    "disclaimer": "Automated re-verification against cached raw source records; NOT independent human annotation.",
+    "per_type": {
+      "FIRST_AUTHOR_OF": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "OTHER_AUTHOR_OF": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 5007,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "COAUTHORED_WITH": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 16754,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "AFFILIATED_WITH": {
+        "n": 20,
+        "correct": 11,
+        "incorrect": 0,
+        "unverifiable": 9,
+        "graph_count": 4306,
+        "precision": 0.55,
+        "wilson95": [
+          0.3421,
+          0.7418
+        ],
+        "errors": {
+          "missing source": 9
+        },
+        "precision_excluding_unverifiable": 1.0
+      },
+      "APPEARS_IN": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "HAS_TOPIC": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 451,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "CITES": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 26,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ORG_COAUTHORED_WITH": {
+        "n": 20,
+        "correct": 6,
+        "incorrect": 0,
+        "unverifiable": 14,
+        "graph_count": 2001,
+        "precision": 0.3,
+        "wilson95": [
+          0.1455,
+          0.519
+        ],
+        "errors": {
+          "missing source": 14
+        },
+        "precision_excluding_unverifiable": 1.0
+      },
+      "RESEARCHES": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 105,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ACTIVE_IN": {
+        "n": 20,
+        "correct": 8,
+        "incorrect": 0,
+        "unverifiable": 12,
+        "graph_count": 139,
+        "precision": 0.4,
+        "wilson95": [
+          0.2188,
+          0.6134
+        ],
+        "errors": {
+          "only 1 independently verified, 1 without ACL affiliation": 8,
+          "only 0 independently verified, 2 without ACL affiliation": 2,
+          "only 1 independently verified, 3 without ACL affiliation": 1,
+          "only 1 independently verified, 2 without ACL affiliation": 1
+        },
+        "precision_excluding_unverifiable": 1.0
+      }
+    },
+    "macro_precision": 0.825,
+    "micro_precision_weighted": 0.8895,
+    "micro_ci95_stratified_normal": [
+      0.8566,
+      0.9224
+    ],
+    "types_meeting_0.90_point_estimate": 7,
+    "types_with_wilson_lower_ge_0.90": 0,
+    "n_total": 200
+  },
+  "status": "PENDING_HUMAN_REVIEW (automated preliminary only)"
+}

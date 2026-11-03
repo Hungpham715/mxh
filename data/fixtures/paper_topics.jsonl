@@ -1,0 +1,8 @@
+{"paper_id": "oa:WFIX1", "topic_id": "mt", "rule_id": "fixture", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX1", "topic_id": "llm", "rule_id": "fixture", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX2", "topic_id": "llm", "rule_id": "fixture", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX2", "topic_id": "qa", "rule_id": "fixture", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX3", "topic_id": "retrieval", "rule_id": "fixture", "evidence_span": "Dense Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX3", "topic_id": "qa", "rule_id": "fixture", "evidence_span": "question answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX5", "topic_id": "safety_eval", "rule_id": "fixture", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:WFIX5", "topic_id": "llm", "rule_id": "fixture", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}

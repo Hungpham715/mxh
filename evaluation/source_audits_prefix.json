@@ -1,0 +1,18 @@
+{
+  "affiliation_rows_comparable_with_acl_xml": 2813,
+  "affiliation_row_agreement_with_acl_xml": "2040/2813 = 0.725 (Wilson95 0.708-0.741)",
+  "AFFILIATED_WITH_edges_agreeing_with_acl_xml": "1837/2584 = 0.711 (Wilson95 0.693-0.728)",
+  "affiliation_agreement_note": "string agreement is a LOWER bound: OpenAlex often adds a second institution (e.g. parent company, joint lab) that ACL authors did not print; see disagreement CSV",
+  "identity_multi_paper_authors_with_acl_ids": 256,
+  "identity_acl_id_conflicts": 9,
+  "same_name_multiple_openalex_ids (kept separate, not merged)": 194,
+  "verified_authorships_missing_institution": "972/5359",
+  "papers_missing_abstract": 0,
+  "papers_with_openalex_references": 334,
+  "openalex_unmatched_papers": 2,
+  "duplicate_doi": 0,
+  "orphan_nodes": 0,
+  "topic_UNKNOWN_rate": "0.613",
+  "citation_endpoint_coverage": "26 in-corpus citations out of 13701 referenced works",
+  "paper_source_audit_40": "40/40 papers: title, ordered author list and year identical to raw source"
+}

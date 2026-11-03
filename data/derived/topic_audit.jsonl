@@ -1,0 +1,1091 @@
+{"paper_id": "acl:2023.emnlp-main.771", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "arxiv:2507.02982", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4313483670", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4313483698", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4313483868", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4313483959", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4313483977", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4319049805", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4320513433", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4322832067", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4322832215", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4322832290", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4322832397", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4323076364", "status": "assigned", "scores": {"llm": 1, "qa": 1, "retrieval": 2, "summarization": 1}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4353111756", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4362598121", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4362598191", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4362598378", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4362643488", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4367701241", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4372269222", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4375868922", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4379255829", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4379256062", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4383175808", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4383175986", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4383468644", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4383468645", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385564926", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4385565099", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565260", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565267", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565400", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565413", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565419", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385565471", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385565522", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385567133", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569624", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569686", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569706", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569721", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385569726", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385569744", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569751", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569785", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569851", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569873", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569885", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385569933", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570015", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4385570049", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570079", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570090", "status": "assigned", "scores": {"llm": 3, "qa": 1, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385570095", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570119", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570131", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570147", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570154", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385570184", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570201", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570202", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570218", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570234", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4385570262", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385570306", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570311", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570319", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570356", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570360", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570421", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570422", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570458", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570480", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570486", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385570494", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570498", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570499", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570513", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570534", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570550", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385570557", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570675", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570687", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570713", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570780", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570814", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570844", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385570848", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570866", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570881", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385570910", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570940", "status": "UNKNOWN", "scores": {"mt": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570942", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570956", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570970", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385570987", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4385570995", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571007", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571046", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571075", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571076", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571080", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571140", "status": "assigned", "scores": {"llm": 1, "summarization": 3, "safety_eval": 1}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385571159", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571183", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571184", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571197", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571205", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571224", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571228", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571266", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571299", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571339", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571347", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571370", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571374", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385571433", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571439", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571477", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571533", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385571551", "status": "assigned", "scores": {"retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4385571568", "status": "assigned", "scores": {"mt": 2}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385571647", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571669", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571679", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571735", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571740", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571757", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385571770", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571792", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571809", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385571861", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571873", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571898", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571900", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4385571944", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571946", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385571993", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572020", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572024", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572034", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572057", "status": "assigned", "scores": {"qa": 1, "summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385572068", "status": "assigned", "scores": {"llm": 3, "summarization": 3, "safety_eval": 1}, "assigned": ["llm", "summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385572077", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572098", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572136", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572155", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385572164", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572167", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572194", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572221", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572225", "status": "UNKNOWN", "scores": {"llm": 1, "mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572232", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572257", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572293", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572294", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572302", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572331", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385572370", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4385572393", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572429", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572438", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572453", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572455", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572461", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572507", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572560", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572593", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385572602", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385822823", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385893857", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385893928", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385946786", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385947708", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4385958853", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4385968125", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4386200967", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4386437445", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4386437460", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4386437463", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4386437604", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4386566655", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4386752353", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4387144848", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4387185403", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4387323597", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4387323685", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4387323687", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4387323696", "status": "UNKNOWN", "scores": {"qa": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4387427037", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4387430425", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4388275234", "status": "assigned", "scores": {"llm": 1, "qa": 2}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4388275295", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4388691689", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4388820628", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389325702", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389325826", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389325871", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389339545", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389500603", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389518414", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518608", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389518617", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518671", "status": "assigned", "scores": {"llm": 3, "retrieval": 3}, "assigned": ["llm", "retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4389518686", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518695", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518718", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518720", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518744", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518746", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518757", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518764", "status": "assigned", "scores": {"llm": 3, "qa": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389518778", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518784", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4389518793", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518794", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389518807", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4389518814", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389518819", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519034", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519053", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519054", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519066", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519077", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389519098", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519102", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519104", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519110", "status": "assigned", "scores": {"retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4389519112", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519114", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4389519137", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519190", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519191", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519195", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519247", "status": "assigned", "scores": {"summarization": 2}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389519258", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519261", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519282", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519295", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519325", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519326", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519352", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389519370", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389519395", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519477", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4389519479", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519486", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519494", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519556", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519598", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519605", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519607", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519614", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389519852", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520127", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389520155", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520204", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520319", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520333", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520334", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389520335", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520352", "status": "UNKNOWN", "scores": {"qa": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520354", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520356", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520366", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520382", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520383", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520385", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520390", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520398", "status": "assigned", "scores": {"llm": 3, "mt": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389520668", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520671", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520680", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520684", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520691", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520710", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520713", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520728", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4389520742", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520755", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520756", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520757", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520759", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389520773", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389520798", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389520812", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389521031", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523617", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523744", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523749", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523773", "status": "UNKNOWN", "scores": {"qa": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523808", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389523822", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523826", "status": "UNKNOWN", "scores": {"llm": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523840", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389523842", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4389523843", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523874", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523885", "status": "assigned", "scores": {"llm": 1, "summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389523887", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523895", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523905", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523906", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523932", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523939", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389523946", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389523947", "status": "assigned", "scores": {"llm": 3, "qa": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389523967", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524005", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524009", "status": "assigned", "scores": {"mt": 3, "retrieval": 1}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4389524026", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389524029", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4389524033", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524052", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389524056", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524074", "status": "assigned", "scores": {"llm": 1, "retrieval": 1, "safety_eval": 3}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4389524075", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524110", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524112", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524115", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524150", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524164", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524170", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524189", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524198", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524213", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524306", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524314", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524318", "status": "assigned", "scores": {"llm": 1, "summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4389524320", "status": "UNKNOWN", "scores": {"safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524345", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524373", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524418", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524421", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524430", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524458", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4389524473", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524504", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524527", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524529", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524532", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524541", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389524558", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4389532453", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4390035079", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4390529238", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4390529277", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4390529318", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4390529340", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4390722253", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4390722655", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4390750480", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4390984793", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4391505342", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4391505392", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4391505424", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4391505486", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4391591669", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4391591673", "status": "assigned", "scores": {"qa": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4391937063", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392083945", "status": "assigned", "scores": {"mt": 3, "safety_eval": 3}, "assigned": ["mt", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4392425883", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392426064", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392426139", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392426167", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392426207", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392462069", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4392943313", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4393156672", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4393160280", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4393726285", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4393727451", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4396601223", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4396601321", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4396649285", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4396649286", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4396833279", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4399354964", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4399355039", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1, "summarization": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4399355313", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4399395095", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4399510385", "status": "assigned", "scores": {"llm": 3, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4400025140", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4400341417", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4400341499", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4400341528", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4401042788", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4401042837", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4401042887", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4401043195", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4401307116", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4401307145", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4401307157", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4401307238", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402112354", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4402667003", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402667011", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402667024", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402667037", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4402667049", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402667058", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402667059", "status": "assigned", "scores": {"llm": 3, "summarization": 3, "safety_eval": 1}, "assigned": ["llm", "summarization"], "has_abstract": true}
+{"paper_id": "oa:W4402667063", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402667090", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402667118", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402667138", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402667144", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402670137", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402670740", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402670978", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402670982", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671005", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671027", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671103", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671120", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671143", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671154", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671155", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4402671159", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671160", "status": "UNKNOWN", "scores": {"llm": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671187", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671196", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4402671217", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671240", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671255", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671286", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671291", "status": "assigned", "scores": {"llm": 1, "summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4402671293", "status": "UNKNOWN", "scores": {"qa": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671297", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671303", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671514", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671522", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671533", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671544", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671546", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671548", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671549", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671554", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671559", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671562", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4402671566", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671572", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671579", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671583", "status": "UNKNOWN", "scores": {"llm": 1, "mt": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671602", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671611", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671614", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671619", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671624", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671628", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671629", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671637", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671663", "status": "assigned", "scores": {"llm": 3, "qa": 1, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671664", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671665", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671670", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671676", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671686", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671694", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671698", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671705", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671709", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671712", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671715", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671717", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671718", "status": "assigned", "scores": {"llm": 1, "safety_eval": 3}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4402671719", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671730", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671733", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671734", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671739", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671740", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671755", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671762", "status": "assigned", "scores": {"llm": 3, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671771", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671773", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671775", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671787", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671798", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671812", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671825", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671833", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671842", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671845", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671848", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671850", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671871", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671874", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671889", "status": "assigned", "scores": {"llm": 3, "mt": 3}, "assigned": ["llm", "mt"], "has_abstract": true}
+{"paper_id": "oa:W4402671893", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671897", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671904", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671910", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671915", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671920", "status": "assigned", "scores": {"llm": 3, "qa": 1, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671922", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671923", "status": "assigned", "scores": {"llm": 3, "retrieval": 3, "safety_eval": 1}, "assigned": ["llm", "retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4402671926", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671927", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671933", "status": "assigned", "scores": {"llm": 3, "qa": 1, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671940", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671941", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671944", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4402671951", "status": "assigned", "scores": {"qa": 3, "retrieval": 1}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4402671960", "status": "assigned", "scores": {"qa": 3, "retrieval": 1}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4402671969", "status": "assigned", "scores": {"llm": 3, "qa": 2}, "assigned": ["llm", "qa"], "has_abstract": true}
+{"paper_id": "oa:W4402671972", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402671982", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402671994", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672000", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672004", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672017", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4402672020", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672021", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672026", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672044", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672052", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672054", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672076", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672077", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672084", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402672086", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672089", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672093", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672094", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672100", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402672111", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402683976", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402683983", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402683986", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684012", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684023", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684025", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684026", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684033", "status": "assigned", "scores": {"llm": 1, "mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4402684131", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402684150", "status": "assigned", "scores": {"llm": 3, "qa": 1, "retrieval": 1, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402684264", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4402684283", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402684346", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4402953801", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402953809", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402953810", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4402953934", "status": "assigned", "scores": {"llm": 3, "safety_eval": 2}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4403046516", "status": "UNKNOWN", "scores": {"mt": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4403071756", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4403160901", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4403322118", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4403322150", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4403577349", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4403582589", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4403747725", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4403819004", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404125029", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404344855", "status": "assigned", "scores": {"llm": 1, "qa": 3, "retrieval": 3, "safety_eval": 1}, "assigned": ["qa", "retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4404350137", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404350876", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404356149", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404388929", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4404781695", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404781754", "status": "assigned", "scores": {"llm": 1, "qa": 3, "retrieval": 3}, "assigned": ["qa", "retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4404781917", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4404781926", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404781952", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404781982", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404781999", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782045", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782046", "status": "assigned", "scores": {"llm": 3, "qa": 1, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782047", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782072", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782083", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782094", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782104", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782105", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782171", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782172", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782191", "status": "assigned", "scores": {"mt": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4404782207", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782216", "status": "assigned", "scores": {"llm": 3, "qa": 1, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782221", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782251", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782278", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782296", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782297", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782309", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782321", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782325", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782347", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782356", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782357", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782365", "status": "assigned", "scores": {"llm": 3, "mt": 3}, "assigned": ["llm", "mt"], "has_abstract": true}
+{"paper_id": "oa:W4404782385", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782400", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782410", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782426", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782432", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782441", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782459", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782474", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782475", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782565", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782572", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782586", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782588", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782591", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782600", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782606", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782611", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782614", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782621", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782628", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782634", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782639", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782642", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782665", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782672", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782680", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782683", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782684", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782700", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782708", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782712", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782725", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782733", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782745", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782771", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782774", "status": "assigned", "scores": {"llm": 3, "retrieval": 1, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782789", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782792", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782797", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782801", "status": "assigned", "scores": {"llm": 3, "safety_eval": 2}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4404782802", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782803", "status": "UNKNOWN", "scores": {"llm": 1, "summarization": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782811", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782854", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782855", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782860", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782875", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782891", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782905", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782915", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782920", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782924", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782927", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782947", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782948", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782959", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782964", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782967", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782973", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782977", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782983", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404782984", "status": "UNKNOWN", "scores": {"safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404782991", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783026", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783028", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783044", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783051", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783064", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783093", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783107", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783125", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783131", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783134", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4404783136", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4404783144", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783147", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783161", "status": "assigned", "scores": {"llm": 1, "qa": 2}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4404783191", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783218", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783234", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783245", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783260", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783284", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783290", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783359", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783368", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783373", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4404783463", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783470", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783518", "status": "assigned", "scores": {"llm": 3, "qa": 3}, "assigned": ["llm", "qa"], "has_abstract": true}
+{"paper_id": "oa:W4404783530", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783563", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783577", "status": "assigned", "scores": {"llm": 3, "mt": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404783643", "status": "assigned", "scores": {"llm": 1, "safety_eval": 3}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4404783666", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404783875", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4404783988", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404784107", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404784221", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404784305", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404784331", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404784419", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404792925", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404792926", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404792930", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404792931", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4404792932", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404792949", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4404792950", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404792957", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404792971", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404792982", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404792993", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4404793006", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4404864975", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4405033436", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4405033489", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4405033522", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4405033527", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4405173114", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4405252256", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4405710899", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4406032239", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4406032250", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4406032307", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4406032323", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4406032330", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4406032331", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4407039581", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4407123355", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4407123368", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4407123425", "status": "assigned", "scores": {"llm": 2}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4407123430", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4407123447", "status": "UNKNOWN", "scores": {"llm": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4407123482", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4407392849", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4407749357", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4408146515", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4409157490", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4409362712", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4410486519", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4410985640", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4411120759", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4411301046", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4411630238", "status": "assigned", "scores": {"summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4412886633", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886639", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886652", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886664", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886665", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886671", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886691", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886713", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886732", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886736", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886763", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886774", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886786", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4412886800", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886801", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412886815", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886852", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886862", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886865", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886872", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886889", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886929", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412886951", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412888560", "status": "assigned", "scores": {"llm": 1, "safety_eval": 3}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412889429", "status": "assigned", "scores": {"llm": 1, "qa": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4412889547", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4412889579", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889601", "status": "UNKNOWN", "scores": {"llm": 1, "mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889603", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889608", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889615", "status": "assigned", "scores": {"llm": 3, "qa": 3}, "assigned": ["llm", "qa"], "has_abstract": true}
+{"paper_id": "oa:W4412889619", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889621", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889658", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889675", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889694", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889701", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889704", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889709", "status": "assigned", "scores": {"llm": 3, "safety_eval": 2}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412889738", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889747", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889753", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889756", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889771", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889773", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889777", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889804", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889813", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889826", "status": "assigned", "scores": {"llm": 1, "summarization": 3}, "assigned": ["summarization"], "has_abstract": true}
+{"paper_id": "oa:W4412889858", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889866", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889872", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889877", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889882", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889889", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889893", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889913", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889917", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412889939", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412889949", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412889976", "status": "assigned", "scores": {"llm": 3, "summarization": 3, "safety_eval": 1}, "assigned": ["llm", "summarization"], "has_abstract": true}
+{"paper_id": "oa:W4412889980", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944736", "status": "UNKNOWN", "scores": {"safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944744", "status": "assigned", "scores": {"qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4412944746", "status": "assigned", "scores": {"llm": 3, "qa": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944756", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944781", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944784", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944799", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944809", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944827", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944830", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944832", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944834", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944852", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944857", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412944876", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944879", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944899", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944962", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944967", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944971", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944979", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412944997", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945012", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945014", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945021", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945050", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945051", "status": "assigned", "scores": {"llm": 1, "safety_eval": 3}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412945062", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945065", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945071", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945079", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945083", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945101", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945133", "status": "assigned", "scores": {"llm": 3, "retrieval": 3}, "assigned": ["llm", "retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4412945155", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945165", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945178", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945182", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945184", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945190", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945195", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945197", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945205", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945221", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945243", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945268", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945280", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412945287", "status": "assigned", "scores": {"llm": 3, "mt": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945292", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945300", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945328", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945335", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945342", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945384", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945393", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945401", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945414", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945424", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4412945438", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945447", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945465", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4412945472", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945473", "status": "assigned", "scores": {"llm": 3, "retrieval": 1, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945481", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945483", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945512", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945513", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945526", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945533", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945549", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945551", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945553", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945559", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4412945613", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945616", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945629", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945644", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945661", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945684", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945692", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4412945719", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4412945730", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4414892789", "status": "assigned", "scores": {"llm": 3, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4414892830", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4414968658", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4414973481", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4414973482", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4415026042", "status": "assigned", "scores": {"llm": 3, "qa": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4415081407", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415081426", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415081546", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4415164160", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4415230726", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415936660", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415937520", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415975961", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4415975965", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416034073", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035106", "status": "assigned", "scores": {"llm": 3, "summarization": 3}, "assigned": ["llm", "summarization"], "has_abstract": true}
+{"paper_id": "oa:W4416035138", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035167", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035195", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035200", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035222", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035230", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035255", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035278", "status": "assigned", "scores": {"llm": 1, "qa": 3}, "assigned": ["qa"], "has_abstract": true}
+{"paper_id": "oa:W4416035295", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035307", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035308", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035314", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035316", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035333", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035363", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035378", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035379", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035380", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035389", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035421", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035422", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035435", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035449", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035486", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035501", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035509", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035516", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035542", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035574", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035575", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035582", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035605", "status": "UNKNOWN", "scores": {"llm": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035606", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035607", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035609", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035633", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1, "safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035636", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416035668", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035690", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035693", "status": "assigned", "scores": {"llm": 3, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035701", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035704", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416035706", "status": "UNKNOWN", "scores": {"retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035714", "status": "UNKNOWN", "scores": {"safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035754", "status": "assigned", "scores": {"llm": 1, "qa": 1, "retrieval": 3, "summarization": 1, "safety_eval": 1}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416035807", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035808", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416035811", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035814", "status": "assigned", "scores": {"retrieval": 2}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416035826", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035837", "status": "assigned", "scores": {"mt": 3}, "assigned": ["mt"], "has_abstract": true}
+{"paper_id": "oa:W4416035841", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416035940", "status": "assigned", "scores": {"retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416035990", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036000", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036058", "status": "assigned", "scores": {"llm": 3, "mt": 1, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036074", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036102", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036106", "status": "UNKNOWN", "scores": {"safety_eval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036169", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036173", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036238", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036242", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036244", "status": "assigned", "scores": {"retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416036262", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036266", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036283", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036285", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036324", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036326", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036335", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036350", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036351", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036381", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036402", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036408", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036422", "status": "UNKNOWN", "scores": {"mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036432", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036444", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036454", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036460", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036467", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036474", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036484", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036487", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036488", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036489", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036491", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036518", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036524", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036528", "status": "assigned", "scores": {"llm": 3, "qa": 1, "summarization": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036544", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036553", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036563", "status": "assigned", "scores": {"retrieval": 2}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416036569", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036585", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036599", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036606", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036614", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036625", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036630", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036640", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036647", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036697", "status": "assigned", "scores": {"qa": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416036708", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036718", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036721", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036727", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036736", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036746", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036787", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036789", "status": "UNKNOWN", "scores": {"qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036796", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036820", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036824", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036850", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036854", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036862", "status": "assigned", "scores": {"llm": 3, "summarization": 1, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036903", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416036955", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036956", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036964", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036989", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416036992", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037001", "status": "assigned", "scores": {"llm": 3, "safety_eval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037012", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037019", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037030", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037066", "status": "assigned", "scores": {"llm": 3, "qa": 1, "safety_eval": 3}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4416037082", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037087", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037097", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037100", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037104", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037105", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037126", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037128", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037142", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037144", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037146", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037221", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416037267", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037308", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416037665", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416339372", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416368271", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416548607", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416548701", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416548741", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416548812", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416686892", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416686893", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416875783", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416878731", "status": "assigned", "scores": {"llm": 1, "safety_eval": 2}, "assigned": ["safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W4416958849", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416959352", "status": "assigned", "scores": {"llm": 3, "mt": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416959395", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4416959427", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4416959446", "status": "assigned", "scores": {"llm": 1, "retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W4416959630", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4417114147", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4417137540", "status": "UNKNOWN", "scores": {"llm": 1, "mt": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4417224968", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4417225278", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W4417226603", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W4417504446", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W6885087958", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W6891979741", "status": "UNKNOWN", "scores": {"qa": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6910401918", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6910438939", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6911785304", "status": "assigned", "scores": {"llm": 3, "safety_eval": 2}, "assigned": ["llm", "safety_eval"], "has_abstract": true}
+{"paper_id": "oa:W6929505769", "status": "assigned", "scores": {"retrieval": 3}, "assigned": ["retrieval"], "has_abstract": true}
+{"paper_id": "oa:W6929867799", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6948170943", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W6948221416", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6948291165", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6948507715", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6948690374", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6966750942", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W6967165415", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7084387338", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W7084411487", "status": "assigned", "scores": {"llm": 3, "retrieval": 1}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W7103380445", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W7117152659", "status": "UNKNOWN", "scores": {"llm": 1, "retrieval": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7125916535", "status": "UNKNOWN", "scores": {"llm": 1, "qa": 1, "summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7125966513", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7131623740", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W7131893699", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}
+{"paper_id": "oa:W7133206970", "status": "UNKNOWN", "scores": {}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7133207755", "status": "UNKNOWN", "scores": {"summarization": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7133217386", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7134191312", "status": "UNKNOWN", "scores": {"llm": 1}, "assigned": [], "has_abstract": true}
+{"paper_id": "oa:W7148616372", "status": "assigned", "scores": {"llm": 3}, "assigned": ["llm"], "has_abstract": true}

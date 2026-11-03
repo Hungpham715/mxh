@@ -1,0 +1,1 @@
+{"type": "ORG_COAUTHORED_WITH", "from": "oa:IFIX1", "to": "oa:IFIX2", "source_kind": "derived", "source_url": "https://example.org/fixture/W1", "evidence_paper_ids": ["oa:WFIX1", "oa:WFIX2", "oa:WFIX3"], "evidence_count": 3, "first_year": 2023, "last_year": 2024, "years": [2023, 2024], "build_version": "1.0.0", "shared_count": 3}

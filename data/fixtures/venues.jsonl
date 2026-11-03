@@ -1,0 +1,2 @@
+{"id": "venue:acl:fix-main", "name": "Fixture Conference", "kind": "conference", "year": null, "source_url": "https://example.org/fixture/venue"}
+{"id": "venue:arxiv:cs.CL", "name": "arXiv cs.CL (preprint)", "kind": "preprint_server", "year": null, "source_url": "https://arxiv.org/list/cs.CL/"}

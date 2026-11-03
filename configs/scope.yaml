@@ -1,0 +1,41 @@
+# Fixed, deterministic corpus definition (decided BEFORE looking at graph metrics).
+scope_id: nlpgraph-v1
+schema_version: 1
+snapshot_date: "2026-11-03"     # metadata snapshot / access date
+seed: 20261107
+years: [2023, 2024, 2025]
+
+acl:
+  # Official ACL Anthology XML from the acl-org/acl-anthology GitHub repository (master branch at snapshot date).
+  xml_url: "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/{collection}.xml"
+  # Main-conference long-paper volumes only. Findings is the documented fallback,
+  # used only if the main volumes cannot supply the quota.
+  volumes:
+    - {collection: 2023.acl,   volume: long, quota: 140}
+    - {collection: 2023.emnlp, volume: main, quota: 140}
+    - {collection: 2024.acl,   volume: long, quota: 140}
+    - {collection: 2024.emnlp, volume: main, quota: 140}
+    - {collection: 2025.acl,   volume: long, quota: 140}
+    - {collection: 2025.emnlp, volume: main, quota: 140}
+  findings_fallback:
+    - {collection: 2023.findings, volume: acl}
+    - {collection: 2024.findings, volume: acl}
+    - {collection: 2025.findings, volume: acl}
+  # Selection rule: papers sorted by numeric Anthology paper id ascending (frontmatter excluded);
+  # systematic sample index_i = floor(i * N / quota) for i in 0..quota-1.
+  selection: systematic_by_paper_id
+
+arxiv:
+  api_url: "https://export.arxiv.org/api/query"
+  category: cs.CL
+  # Per (year, month): first `per_month` submissions in that month by submittedDate ascending,
+  # restricted to papers whose PRIMARY category is cs.CL.
+  per_month: 7
+  page_size: 50
+  delay_seconds: 3.5
+
+openalex:
+  base_url: "https://api.openalex.org"
+  # exact DOI lookups only: ACL DOI, or 10.48550/arxiv.<id> for arXiv preprints
+  select: "id,doi,display_name,publication_year,authorships,referenced_works,abstract_inverted_index,primary_location,locations,ids,primary_topic"
+  min_interval_seconds: 0.12

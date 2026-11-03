@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "scope_id": "nlpgraph-v1",
+  "build_version": "1.0.0",
+  "created_at_utc": "2026-11-03T08:27:55Z",
+  "source_versions": {
+    "acl_anthology": "acl-org/acl-anthology master XML, accessed 2026-11-03",
+    "arxiv": "export.arxiv.org Atom API, accessed 2026-11-03",
+    "openalex": "api.openalex.org single-work DOI lookup, accessed 2026-11-03",
+    "scope_config": "nlpgraph-v1"
+  },
+  "input_counts": {
+    "acl_selected": 840,
+    "arxiv_selected": 252,
+    "openalex_lookups": 1092,
+    "openalex_matched": 1090
+  },
+  "output_counts": {
+    "papers.jsonl": 1091,
+    "authors.jsonl": 5430,
+    "institutions.jsonl": 637,
+    "venues.jsonl": 7,
+    "paper_authors.jsonl": 6098,
+    "affiliations.jsonl": 5633,
+    "citations.jsonl": 26,
+    "paper_topics.jsonl": 451
+  },
+  "unmatched_openalex_count": 2,
+  "topic_rule_version": "topics-v1.1",
+  "topic_status_counts": {
+    "UNKNOWN": 669,
+    "assigned": 422
+  },
+  "normalize_stats": {
+    "arxiv_merged_into_acl": 1,
+    "authorship_source_only": 712,
+    "authorship_verified": 5359,
+    "verified_authorship_without_institution": 972,
+    "authorship_unresolved": 27,
+    "authorship_count_mismatch": 4,
+    "papers_with_references": 333,
+    "papers": 1091,
+    "unmatched_openalex": 2,
+    "missing_abstract": 0
+  },
+  "checksums": {
+    "papers.jsonl": "d214b99a48813f97c51f5ecbd13ca614d58fae2c48148be0445bf0ad0364605d",
+    "authors.jsonl": "e915056c0e153db5e1bfcd4db42b954711884427acf636138965954b78947565",
+    "institutions.jsonl": "5bb09fa030b747eb475bd2f26fa7138b7de9acca11a7fe6073cb158552a1cf9f",
+    "venues.jsonl": "98f669281a74d49c28f8fe147e336691bcd38036e0571bff1b69681303924195",
+    "paper_authors.jsonl": "c7e052ca2513979dcf528f3b5394f28bd2d772bab80f0a8d3dcdedb157f34b4a",
+    "affiliations.jsonl": "8aa7ee2f50bf6eb6b8cb6d6ffce8dbd28fb70818b10f9808d62108ec0d741989",
+    "citations.jsonl": "a26adef5693b3a12f0d2272e0e68ee0363db657e2a06ca87a79173044f1c2664",
+    "paper_topics.jsonl": "5bb54286df21fcc8891910e36af5b5b6b6a7fe1023541d739277ef331bbffc80"
+  }
+}

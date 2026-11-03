@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope_id": "fixture",
+  "created_at_utc": "2026-11-03T08:42:13Z",
+  "source_versions": {
+    "fixture": "synthetic, not real publications"
+  },
+  "input_counts": {},
+  "output_counts": {
+    "papers.jsonl": 5,
+    "authors.jsonl": 5,
+    "institutions.jsonl": 2,
+    "venues.jsonl": 2,
+    "paper_authors.jsonl": 10,
+    "affiliations.jsonl": 6,
+    "citations.jsonl": 2,
+    "paper_topics.jsonl": 8
+  },
+  "unmatched_openalex_count": 0,
+  "checksums": {
+    "papers.jsonl": "aad6f4cec9e7fabe88f0e6fb1a79a04373b6b73528f773d3f5718c7a62462674",
+    "authors.jsonl": "4f333109c0aec9320306838bd08663779a208d67e2d353e7c9a409eb014df627",
+    "institutions.jsonl": "074f4da5c12799352c8749d824fac13c12f7520843267e23172276d01d48ed91",
+    "venues.jsonl": "d37e466b19e282426e1163b5f4e969bc0af835c9b4e1e471058af24ba3a35794",
+    "paper_authors.jsonl": "a537ccbcfe76ed2d44cfd5c0c8ce3e6a2f7fd21b4533ded8d678c8b2c11242f3",
+    "affiliations.jsonl": "c336649b9d828aeebd77e10954e1681201047821f7bdad87c642b7a9850ad57a",
+    "citations.jsonl": "dee91d59b5604c3b07904975eb4d3f7f010471beb6042155105a25baee4384d0",
+    "paper_topics.jsonl": "6307b3489c052f34398666c9ef4498b8c12560b01db1b2d7b85b0a1472efeb29"
+  }
+}

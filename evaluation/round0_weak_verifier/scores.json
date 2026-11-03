@@ -1,0 +1,158 @@
+{
+  "automated_preliminary": {
+    "label_origin": "automated_preliminary",
+    "disclaimer": "Automated re-verification against cached raw source records; NOT independent human annotation.",
+    "per_type": {
+      "FIRST_AUTHOR_OF": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "OTHER_AUTHOR_OF": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 5007,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "COAUTHORED_WITH": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 16754,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "AFFILIATED_WITH": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 5115,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "APPEARS_IN": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "HAS_TOPIC": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 451,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "CITES": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 26,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ORG_COAUTHORED_WITH": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 2385,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "RESEARCHES": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 105,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ACTIVE_IN": {
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 151,
+        "precision": 1.0,
+        "wilson95": [
+          0.8389,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      }
+    },
+    "macro_precision": 1.0,
+    "micro_precision_weighted": 1.0,
+    "micro_ci95_stratified_normal": [
+      1.0,
+      1
+    ],
+    "types_meeting_0.90_point_estimate": 10,
+    "types_with_wilson_lower_ge_0.90": 0,
+    "n_total": 200
+  },
+  "status": "PENDING_HUMAN_REVIEW (automated preliminary only)"
+}

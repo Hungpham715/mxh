@@ -1,0 +1,17 @@
+{
+  "seed": 20261108,
+  "per_type": 20,
+  "n_samples": 200,
+  "per_type_counts": {
+    "FIRST_AUTHOR_OF": 20,
+    "OTHER_AUTHOR_OF": 20,
+    "COAUTHORED_WITH": 20,
+    "AFFILIATED_WITH": 20,
+    "APPEARS_IN": 20,
+    "HAS_TOPIC": 20,
+    "CITES": 20,
+    "ORG_COAUTHORED_WITH": 20,
+    "RESEARCHES": 20,
+    "ACTIVE_IN": 20
+  }
+}

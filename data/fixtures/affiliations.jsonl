@@ -1,0 +1,6 @@
+{"paper_id": "oa:WFIX1", "author_id": "oa:AFIX1", "institution_id": "oa:IFIX1", "year": 2023, "raw_affiliation": null, "source_url": "https://example.org/fixture/W1"}
+{"paper_id": "oa:WFIX1", "author_id": "oa:AFIX2", "institution_id": "oa:IFIX2", "year": 2023, "raw_affiliation": null, "source_url": "https://example.org/fixture/W1"}
+{"paper_id": "oa:WFIX2", "author_id": "oa:AFIX1", "institution_id": "oa:IFIX1", "year": 2024, "raw_affiliation": null, "source_url": "https://example.org/fixture/W2"}
+{"paper_id": "oa:WFIX2", "author_id": "oa:AFIX3", "institution_id": "oa:IFIX2", "year": 2024, "raw_affiliation": null, "source_url": "https://example.org/fixture/W2"}
+{"paper_id": "oa:WFIX3", "author_id": "oa:AFIX3", "institution_id": "oa:IFIX2", "year": 2024, "raw_affiliation": null, "source_url": "https://example.org/fixture/W3"}
+{"paper_id": "oa:WFIX3", "author_id": "oa:AFIX1", "institution_id": "oa:IFIX1", "year": 2024, "raw_affiliation": null, "source_url": "https://example.org/fixture/W3"}

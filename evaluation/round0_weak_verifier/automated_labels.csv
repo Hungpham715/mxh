@@ -1,0 +1,201 @@
+sample_id,type,label,error_reason,note,evidence_urls,graph_count_type,label_origin
+FIRST_AUTHOR_OF-01,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.acl-long.840/,1091,automated_preliminary
+FIRST_AUTHOR_OF-02,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.emnlp-main.571/,1091,automated_preliminary
+FIRST_AUTHOR_OF-03,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.emnlp-main.696/,1091,automated_preliminary
+FIRST_AUTHOR_OF-04,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2025.acl-long.435/,1091,automated_preliminary
+FIRST_AUTHOR_OF-05,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.acl-long.284/,1091,automated_preliminary
+FIRST_AUTHOR_OF-06,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.emnlp-main.807/,1091,automated_preliminary
+FIRST_AUTHOR_OF-07,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.emnlp-main.352/,1091,automated_preliminary
+FIRST_AUTHOR_OF-08,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.acl-long.784/,1091,automated_preliminary
+FIRST_AUTHOR_OF-09,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.acl-long.560/,1091,automated_preliminary
+FIRST_AUTHOR_OF-10,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2025.emnlp-main.375/,1091,automated_preliminary
+FIRST_AUTHOR_OF-11,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2025.acl-long.882/,1091,automated_preliminary
+FIRST_AUTHOR_OF-12,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.acl-long.905/,1091,automated_preliminary
+FIRST_AUTHOR_OF-13,FIRST_AUTHOR_OF,correct,,source position 1,https://arxiv.org/abs/2510.03315,1091,automated_preliminary
+FIRST_AUTHOR_OF-14,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2025.acl-long.126/,1091,automated_preliminary
+FIRST_AUTHOR_OF-15,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.emnlp-main.426/,1091,automated_preliminary
+FIRST_AUTHOR_OF-16,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.emnlp-main.336/,1091,automated_preliminary
+FIRST_AUTHOR_OF-17,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.acl-long.62/,1091,automated_preliminary
+FIRST_AUTHOR_OF-18,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2024.acl-long.420/,1091,automated_preliminary
+FIRST_AUTHOR_OF-19,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.emnlp-main.674/,1091,automated_preliminary
+FIRST_AUTHOR_OF-20,FIRST_AUTHOR_OF,correct,,source position 1,https://aclanthology.org/2023.emnlp-main.816/,1091,automated_preliminary
+OTHER_AUTHOR_OF-01,OTHER_AUTHOR_OF,correct,,source position 4,https://arxiv.org/abs/2406.15362,5007,automated_preliminary
+OTHER_AUTHOR_OF-02,OTHER_AUTHOR_OF,correct,,source position 3,https://aclanthology.org/2024.emnlp-main.426/,5007,automated_preliminary
+OTHER_AUTHOR_OF-03,OTHER_AUTHOR_OF,correct,,source position 10,https://aclanthology.org/2025.emnlp-main.401/,5007,automated_preliminary
+OTHER_AUTHOR_OF-04,OTHER_AUTHOR_OF,correct,,source position 9,https://aclanthology.org/2024.emnlp-main.1241/,5007,automated_preliminary
+OTHER_AUTHOR_OF-05,OTHER_AUTHOR_OF,correct,,source position 3,https://aclanthology.org/2025.acl-long.641/,5007,automated_preliminary
+OTHER_AUTHOR_OF-06,OTHER_AUTHOR_OF,correct,,source position 3,https://aclanthology.org/2025.emnlp-main.388/,5007,automated_preliminary
+OTHER_AUTHOR_OF-07,OTHER_AUTHOR_OF,correct,,source position 2,https://aclanthology.org/2024.acl-long.235/,5007,automated_preliminary
+OTHER_AUTHOR_OF-08,OTHER_AUTHOR_OF,correct,,source position 8,https://aclanthology.org/2024.acl-long.463/,5007,automated_preliminary
+OTHER_AUTHOR_OF-09,OTHER_AUTHOR_OF,correct,,source position 4,https://aclanthology.org/2024.emnlp-main.625/,5007,automated_preliminary
+OTHER_AUTHOR_OF-10,OTHER_AUTHOR_OF,correct,,source position 2,https://aclanthology.org/2023.acl-long.46/,5007,automated_preliminary
+OTHER_AUTHOR_OF-11,OTHER_AUTHOR_OF,correct,,source position 5,https://aclanthology.org/2024.acl-long.62/,5007,automated_preliminary
+OTHER_AUTHOR_OF-12,OTHER_AUTHOR_OF,correct,,source position 6,https://aclanthology.org/2023.emnlp-main.756/,5007,automated_preliminary
+OTHER_AUTHOR_OF-13,OTHER_AUTHOR_OF,correct,,source position 3,https://aclanthology.org/2025.emnlp-main.1616/,5007,automated_preliminary
+OTHER_AUTHOR_OF-14,OTHER_AUTHOR_OF,correct,,source position 6,https://aclanthology.org/2024.acl-long.93/,5007,automated_preliminary
+OTHER_AUTHOR_OF-15,OTHER_AUTHOR_OF,correct,,source position 25,https://aclanthology.org/2025.acl-long.916/,5007,automated_preliminary
+OTHER_AUTHOR_OF-16,OTHER_AUTHOR_OF,correct,,source position 8,https://aclanthology.org/2023.acl-long.716/,5007,automated_preliminary
+OTHER_AUTHOR_OF-17,OTHER_AUTHOR_OF,correct,,source position 3,https://arxiv.org/abs/2510.05132,5007,automated_preliminary
+OTHER_AUTHOR_OF-18,OTHER_AUTHOR_OF,correct,,source position 5,https://aclanthology.org/2024.acl-long.19/,5007,automated_preliminary
+OTHER_AUTHOR_OF-19,OTHER_AUTHOR_OF,correct,,source position 61,https://aclanthology.org/2025.acl-long.916/,5007,automated_preliminary
+OTHER_AUTHOR_OF-20,OTHER_AUTHOR_OF,correct,,source position 6,https://aclanthology.org/2023.emnlp-main.345/,5007,automated_preliminary
+COAUTHORED_WITH-01,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.acl-long.184/,16754,automated_preliminary
+COAUTHORED_WITH-02,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.284/,16754,automated_preliminary
+COAUTHORED_WITH-03,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.emnlp-main.1732/,16754,automated_preliminary
+COAUTHORED_WITH-04,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2023.acl-long.612/,16754,automated_preliminary
+COAUTHORED_WITH-05,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.7/,16754,automated_preliminary
+COAUTHORED_WITH-06,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.emnlp-main.127/,16754,automated_preliminary
+COAUTHORED_WITH-07,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2023.emnlp-main.1040/,16754,automated_preliminary
+COAUTHORED_WITH-08,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://arxiv.org/abs/2305.00926,16754,automated_preliminary
+COAUTHORED_WITH-09,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.599/,16754,automated_preliminary
+COAUTHORED_WITH-10,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.44/,16754,automated_preliminary
+COAUTHORED_WITH-11,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.790/,16754,automated_preliminary
+COAUTHORED_WITH-12,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2023.acl-long.495/,16754,automated_preliminary
+COAUTHORED_WITH-13,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://arxiv.org/abs/2407.00934,16754,automated_preliminary
+COAUTHORED_WITH-14,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2024.acl-long.655/,16754,automated_preliminary
+COAUTHORED_WITH-15,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.acl-long.1065/,16754,automated_preliminary
+COAUTHORED_WITH-16,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://arxiv.org/abs/2512.17917,16754,automated_preliminary
+COAUTHORED_WITH-17,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.emnlp-main.1797/,16754,automated_preliminary
+COAUTHORED_WITH-18,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.emnlp-main.375/,16754,automated_preliminary
+COAUTHORED_WITH-19,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2023.emnlp-main.920/,16754,automated_preliminary
+COAUTHORED_WITH-20,COAUTHORED_WITH,correct,,both authors listed on 1 paper(s),https://aclanthology.org/2025.acl-long.1545/,16754,automated_preliminary
+AFFILIATED_WITH-01,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I100066346 https://aclanthology.org/2025.acl-long.847/,5115,automated_preliminary
+AFFILIATED_WITH-02,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I35427347 https://aclanthology.org/2025.acl-long.916/,5115,automated_preliminary
+AFFILIATED_WITH-03,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I1311688040 https://aclanthology.org/2025.acl-long.641/,5115,automated_preliminary
+AFFILIATED_WITH-04,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I4405261251 https://aclanthology.org/2024.acl-long.328/,5115,automated_preliminary
+AFFILIATED_WITH-05,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I78988378 https://aclanthology.org/2023.acl-long.619/,5115,automated_preliminary
+AFFILIATED_WITH-06,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I74973139 https://arxiv.org/abs/2510.02392,5115,automated_preliminary
+AFFILIATED_WITH-07,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I74973139 https://aclanthology.org/2024.acl-long.840/,5115,automated_preliminary
+AFFILIATED_WITH-08,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I20231570 https://arxiv.org/abs/2512.01274,5115,automated_preliminary
+AFFILIATED_WITH-09,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I45928872 https://aclanthology.org/2023.emnlp-main.359/,5115,automated_preliminary
+AFFILIATED_WITH-10,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I97018004 https://aclanthology.org/2024.acl-long.198/,5115,automated_preliminary
+AFFILIATED_WITH-11,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I4391012619 https://aclanthology.org/2025.acl-long.367/,5115,automated_preliminary
+AFFILIATED_WITH-12,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I862669128 https://aclanthology.org/2025.emnlp-main.311/,5115,automated_preliminary
+AFFILIATED_WITH-13,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I24943067 https://aclanthology.org/2023.acl-long.625/,5115,automated_preliminary
+AFFILIATED_WITH-14,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I1291425158 https://arxiv.org/abs/2303.00242,5115,automated_preliminary
+AFFILIATED_WITH-15,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I4405260597 https://arxiv.org/abs/2407.00924,5115,automated_preliminary
+AFFILIATED_WITH-16,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I107639228 https://aclanthology.org/2024.acl-long.827/,5115,automated_preliminary
+AFFILIATED_WITH-17,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I35440088 https://aclanthology.org/2024.acl-long.105/,5115,automated_preliminary
+AFFILIATED_WITH-18,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I177725633 https://aclanthology.org/2024.acl-long.630/,5115,automated_preliminary
+AFFILIATED_WITH-19,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I2802755631 https://aclanthology.org/2025.acl-long.1294/,5115,automated_preliminary
+AFFILIATED_WITH-20,AFFILIATED_WITH,correct,,institution present in per-paper OpenAlex authorship,https://openalex.org/I57664883 https://arxiv.org/abs/2301.00321,5115,automated_preliminary
+APPEARS_IN-01,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2023.acl-long.716/,1091,automated_preliminary
+APPEARS_IN-02,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2025.acl-long.458/,1091,automated_preliminary
+APPEARS_IN-03,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2025.emnlp-main.1758/,1091,automated_preliminary
+APPEARS_IN-04,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2501.00691,1091,automated_preliminary
+APPEARS_IN-05,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.acl-long.834/,1091,automated_preliminary
+APPEARS_IN-06,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2023.acl-long.183/,1091,automated_preliminary
+APPEARS_IN-07,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2304.00350,1091,automated_preliminary
+APPEARS_IN-08,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.acl-long.482/,1091,automated_preliminary
+APPEARS_IN-09,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2510.03315,1091,automated_preliminary
+APPEARS_IN-10,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.emnlp-main.245/,1091,automated_preliminary
+APPEARS_IN-11,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2023.emnlp-main.920/,1091,automated_preliminary
+APPEARS_IN-12,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2307.00279,1091,automated_preliminary
+APPEARS_IN-13,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2507.00389,1091,automated_preliminary
+APPEARS_IN-14,APPEARS_IN,correct,,venue matches source id/category,https://arxiv.org/abs/2307.01216,1091,automated_preliminary
+APPEARS_IN-15,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.emnlp-main.218/,1091,automated_preliminary
+APPEARS_IN-16,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.emnlp-main.28/,1091,automated_preliminary
+APPEARS_IN-17,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2023.acl-long.567/,1091,automated_preliminary
+APPEARS_IN-18,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2025.acl-long.538/,1091,automated_preliminary
+APPEARS_IN-19,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2025.emnlp-main.388/,1091,automated_preliminary
+APPEARS_IN-20,APPEARS_IN,correct,,venue matches source id/category,https://aclanthology.org/2024.acl-long.513/,1091,automated_preliminary
+HAS_TOPIC-01,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.emnlp-main.776/,451,automated_preliminary
+HAS_TOPIC-02,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.emnlp-main.1797/,451,automated_preliminary
+HAS_TOPIC-03,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.acl-long.996/,451,automated_preliminary
+HAS_TOPIC-04,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://arxiv.org/abs/2512.01198,451,automated_preliminary
+HAS_TOPIC-05,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.acl-long.1202/,451,automated_preliminary
+HAS_TOPIC-06,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.emnlp-main.466/,451,automated_preliminary
+HAS_TOPIC-07,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2023.acl-long.365/,451,automated_preliminary
+HAS_TOPIC-08,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://arxiv.org/abs/2305.00944,451,automated_preliminary
+HAS_TOPIC-09,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.acl-long.229/,451,automated_preliminary
+HAS_TOPIC-10,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2023.acl-long.332/,451,automated_preliminary
+HAS_TOPIC-11,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://arxiv.org/abs/2404.00914,451,automated_preliminary
+HAS_TOPIC-12,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://arxiv.org/abs/2502.00290,451,automated_preliminary
+HAS_TOPIC-13,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2023.emnlp-main.733/,451,automated_preliminary
+HAS_TOPIC-14,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.acl-long.859/,451,automated_preliminary
+HAS_TOPIC-15,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.emnlp-main.970/,451,automated_preliminary
+HAS_TOPIC-16,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2023.emnlp-main.322/,451,automated_preliminary
+HAS_TOPIC-17,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2024.emnlp-main.997/,451,automated_preliminary
+HAS_TOPIC-18,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2025.acl-long.1419/,451,automated_preliminary
+HAS_TOPIC-19,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2024.emnlp-main.933/,451,automated_preliminary
+HAS_TOPIC-20,HAS_TOPIC,correct,,rule re-applied on raw source title/abstract,https://aclanthology.org/2024.acl-long.173/,451,automated_preliminary
+CITES-01,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2501.00697,26,automated_preliminary
+CITES-02,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2308.02582,26,automated_preliminary
+CITES-03,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.741/,26,automated_preliminary
+CITES-04,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.acl-long.859/,26,automated_preliminary
+CITES-05,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2510.00446,26,automated_preliminary
+CITES-06,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.584/,26,automated_preliminary
+CITES-07,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2507.00330,26,automated_preliminary
+CITES-08,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.733/,26,automated_preliminary
+CITES-09,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2510.00446,26,automated_preliminary
+CITES-10,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.1033/,26,automated_preliminary
+CITES-11,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.427/,26,automated_preliminary
+CITES-12,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.382/,26,automated_preliminary
+CITES-13,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.1018/,26,automated_preliminary
+CITES-14,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.173/,26,automated_preliminary
+CITES-15,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.120/,26,automated_preliminary
+CITES-16,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.90/,26,automated_preliminary
+CITES-17,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.emnlp-main.898/,26,automated_preliminary
+CITES-18,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2308.02582,26,automated_preliminary
+CITES-19,CITES,correct,,target in referenced_works of citing work,https://aclanthology.org/2023.acl-long.46/,26,automated_preliminary
+CITES-20,CITES,correct,,target in referenced_works of citing work,https://arxiv.org/abs/2510.00446,26,automated_preliminary
+ORG_COAUTHORED_WITH-01,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://arxiv.org/abs/2409.00614,2385,automated_preliminary
+ORG_COAUTHORED_WITH-02,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.1294/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-03,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-04,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-05,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://arxiv.org/abs/2309.00237,2385,automated_preliminary
+ORG_COAUTHORED_WITH-06,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://arxiv.org/abs/2303.01248 https://aclanthology.org/2024.emnlp-main.1232/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-07,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-08,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2023.acl-long.79/ https://aclanthology.org/2023.emnlp-main.726/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-09,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-10,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2023.emnlp-main.674/ https://arxiv.org/abs/2512.01183,2385,automated_preliminary
+ORG_COAUTHORED_WITH-11,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-12,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.252/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-13,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.779/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-14,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2024.acl-long.840/ https://aclanthology.org/2024.acl-long.377/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-15,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.252/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-16,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-17,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2024.acl-long.105/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-18,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2023.acl-long.697/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-19,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.916/,2385,automated_preliminary
+ORG_COAUTHORED_WITH-20,ORG_COAUTHORED_WITH,correct,,both institutions declared by different authors on the same paper(s),https://aclanthology.org/2025.acl-long.1065/,2385,automated_preliminary
+RESEARCHES-01,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2025.emnlp-main.582/ https://aclanthology.org/2025.emnlp-main.130/,105,automated_preliminary
+RESEARCHES-02,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2023.acl-long.105/ https://aclanthology.org/2023.acl-long.866/,105,automated_preliminary
+RESEARCHES-03,RESEARCHES,correct,,2 source-verified papers with topic,https://arxiv.org/abs/2401.00741 https://aclanthology.org/2024.emnlp-main.19/,105,automated_preliminary
+RESEARCHES-04,RESEARCHES,correct,,2 source-verified papers with topic,https://arxiv.org/abs/2411.02523 https://aclanthology.org/2024.emnlp-main.1241/,105,automated_preliminary
+RESEARCHES-05,RESEARCHES,correct,,2 source-verified papers with topic,https://arxiv.org/abs/2401.00741 https://aclanthology.org/2024.emnlp-main.19/,105,automated_preliminary
+RESEARCHES-06,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.emnlp-main.870/ https://aclanthology.org/2025.acl-long.470/,105,automated_preliminary
+RESEARCHES-07,RESEARCHES,correct,,2 source-verified papers with topic,https://arxiv.org/abs/2401.00741 https://aclanthology.org/2024.emnlp-main.19/,105,automated_preliminary
+RESEARCHES-08,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.emnlp-main.82/ https://aclanthology.org/2025.acl-long.481/,105,automated_preliminary
+RESEARCHES-09,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.emnlp-main.308/ https://aclanthology.org/2025.acl-long.195/,105,automated_preliminary
+RESEARCHES-10,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.acl-long.809/ https://aclanthology.org/2024.acl-long.303/,105,automated_preliminary
+RESEARCHES-11,RESEARCHES,correct,,3 source-verified papers with topic,https://aclanthology.org/2023.emnlp-main.187/ https://aclanthology.org/2024.acl-long.605/ https://aclanthology.org/2024.emnlp-main.1250/,105,automated_preliminary
+RESEARCHES-12,RESEARCHES,correct,,3 source-verified papers with topic,https://aclanthology.org/2024.emnlp-main.1124/ https://aclanthology.org/2025.acl-long.252/ https://aclanthology.org/2025.emnlp-main.866/,105,automated_preliminary
+RESEARCHES-13,RESEARCHES,correct,,3 source-verified papers with topic,https://aclanthology.org/2023.emnlp-main.322/ https://aclanthology.org/2024.emnlp-main.906/ https://arxiv.org/abs/2503.00330,105,automated_preliminary
+RESEARCHES-14,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2023.emnlp-main.322/ https://aclanthology.org/2023.emnlp-main.651/,105,automated_preliminary
+RESEARCHES-15,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2023.acl-long.476/ https://aclanthology.org/2025.acl-long.1236/,105,automated_preliminary
+RESEARCHES-16,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.acl-long.537/ https://aclanthology.org/2025.emnlp-main.879/,105,automated_preliminary
+RESEARCHES-17,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.acl-long.593/ https://aclanthology.org/2025.emnlp-main.659/,105,automated_preliminary
+RESEARCHES-18,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2025.acl-long.1191/ https://arxiv.org/abs/2503.00330,105,automated_preliminary
+RESEARCHES-19,RESEARCHES,correct,,2 source-verified papers with topic,https://arxiv.org/abs/2312.00407 https://aclanthology.org/2024.acl-long.445/,105,automated_preliminary
+RESEARCHES-20,RESEARCHES,correct,,2 source-verified papers with topic,https://aclanthology.org/2024.acl-long.537/ https://aclanthology.org/2025.emnlp-main.879/,105,automated_preliminary
+ACTIVE_IN-01,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.acl-long.365/ https://aclanthology.org/2024.emnlp-main.1259/,151,automated_preliminary
+ACTIVE_IN-02,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.emnlp-main.240/ https://aclanthology.org/2023.emnlp-main.584/,151,automated_preliminary
+ACTIVE_IN-03,ACTIVE_IN,correct,,4 source-verified papers,https://aclanthology.org/2024.acl-long.408/ https://aclanthology.org/2024.emnlp-main.698/ https://aclanthology.org/2024.emnlp-main.779/,151,automated_preliminary
+ACTIVE_IN-04,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2025.acl-long.172/ https://aclanthology.org/2025.acl-long.630/,151,automated_preliminary
+ACTIVE_IN-05,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2024.acl-long.747/ https://aclanthology.org/2025.emnlp-main.143/,151,automated_preliminary
+ACTIVE_IN-06,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2024.emnlp-main.752/ https://aclanthology.org/2025.acl-long.687/,151,automated_preliminary
+ACTIVE_IN-07,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.acl-long.293/ https://aclanthology.org/2024.acl-long.284/,151,automated_preliminary
+ACTIVE_IN-08,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.acl-long.476/ https://aclanthology.org/2025.acl-long.1236/,151,automated_preliminary
+ACTIVE_IN-09,ACTIVE_IN,correct,,2 source-verified papers,https://arxiv.org/abs/2506.00773 https://aclanthology.org/2025.emnlp-main.970/,151,automated_preliminary
+ACTIVE_IN-10,ACTIVE_IN,correct,,5 source-verified papers,https://aclanthology.org/2024.emnlp-main.589/ https://aclanthology.org/2024.emnlp-main.1124/ https://aclanthology.org/2025.acl-long.252/,151,automated_preliminary
+ACTIVE_IN-11,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2025.emnlp-main.582/ https://aclanthology.org/2025.emnlp-main.130/,151,automated_preliminary
+ACTIVE_IN-12,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2025.emnlp-main.440/ https://aclanthology.org/2025.emnlp-main.52/,151,automated_preliminary
+ACTIVE_IN-13,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2024.acl-long.593/ https://aclanthology.org/2024.emnlp-main.879/,151,automated_preliminary
+ACTIVE_IN-14,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.emnlp-main.337/ https://arxiv.org/abs/2407.00908,151,automated_preliminary
+ACTIVE_IN-15,ACTIVE_IN,correct,,3 source-verified papers,https://aclanthology.org/2025.acl-long.309/ https://aclanthology.org/2025.emnlp-main.440/ https://aclanthology.org/2025.emnlp-main.52/,151,automated_preliminary
+ACTIVE_IN-16,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2025.acl-long.630/ https://aclanthology.org/2025.emnlp-main.931/,151,automated_preliminary
+ACTIVE_IN-17,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2024.acl-long.93/ https://aclanthology.org/2024.emnlp-main.191/,151,automated_preliminary
+ACTIVE_IN-18,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2024.acl-long.710/ https://aclanthology.org/2025.emnlp-main.827/,151,automated_preliminary
+ACTIVE_IN-19,ACTIVE_IN,correct,,8 source-verified papers,https://aclanthology.org/2023.emnlp-main.187/ https://aclanthology.org/2023.emnlp-main.120/ https://aclanthology.org/2024.acl-long.124/,151,automated_preliminary
+ACTIVE_IN-20,ACTIVE_IN,correct,,2 source-verified papers,https://aclanthology.org/2023.acl-long.105/ https://aclanthology.org/2023.acl-long.866/,151,automated_preliminary

@@ -1,0 +1,11 @@
+{
+  "n": 50,
+  "selection": "random.Random(1).sample of topic_audit sorted by paper_id (v1.0 rules), reviewed by the agent before any QA sampling",
+  "reviewer": "automated agent reading title/abstract (not a human annotator)",
+  "assigned": 18,
+  "assigned_judged_plausible": 18,
+  "unknown": 32,
+  "observed_false_negatives": ["'CMOT: ... for Speech Translation' -> no mt rule for speech translation"],
+  "change": "added mt.speech_translation; rule_version topics-v1.0 -> topics-v1.1; rules frozen afterwards",
+  "summary": "18/18 nhãn được gán trong pilot được tác tử đánh giá là hợp lý; 32/50 bài UNKNOWN (luật ưu tiên precision). Sửa duy nhất: thêm mẫu 'speech translation' cho mt (v1.1), sau đó đóng băng luật trước khi lấy mẫu đánh giá."
+}

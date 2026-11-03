@@ -1,0 +1,24 @@
+[project]
+name = "nlp-collab-graph"
+version = "1.0.0"
+description = "Reproducible co-authorship / institution / topic graph of NLP-LLM research (ACL Anthology + arXiv cs.CL + OpenAlex) on Neo4j AuraDB"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "neo4j>=5.20",
+    "networkx>=3.3",
+    "matplotlib>=3.8",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0",
+    "reportlab>=4.2",
+    "scipy>=1.18.1",
+    "numpy>=2.5.4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

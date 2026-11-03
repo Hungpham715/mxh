@@ -1,0 +1,1098 @@
+{
+  "projection": "Author-COAUTHORED_WITH-Author only (undirected, simple, weight = shared papers)",
+  "source": "local",
+  "stats": {
+    "authors_total": 5430,
+    "edges": 16754,
+    "isolates": 201,
+    "connected_components": 810,
+    "lcc_size": 970,
+    "lcc_ratio_of_all_authors": 0.1786,
+    "density": 0.001137,
+    "component_size_top10": [
+      970,
+      164,
+      87,
+      68,
+      64,
+      41,
+      37,
+      36,
+      34,
+      30
+    ],
+    "mean_degree": 6.171
+  },
+  "top10_degree": [
+    {
+      "author_id": "oa:A5046448314",
+      "name": "Maosong Sun",
+      "score": 56.0,
+      "degree": 56,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385570319",
+        "oa:W4385571568",
+        "oa:W4402671951",
+        "oa:W4402672026",
+        "oa:W4404783093"
+      ],
+      "n_papers_with_coauthors": 9
+    },
+    {
+      "author_id": "oa:A5044665993",
+      "name": "Xipeng Qiu",
+      "score": 52.0,
+      "degree": 52,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385569744",
+        "oa:W4385570131",
+        "oa:W4385571266",
+        "oa:W4385572293",
+        "oa:W4389325871"
+      ],
+      "n_papers_with_coauthors": 10
+    },
+    {
+      "author_id": "oa:A5088834359",
+      "name": "Xuanjing Huang",
+      "score": 43.0,
+      "degree": 43,
+      "weighted_degree": 53,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4385569744",
+        "oa:W4385571266",
+        "oa:W4390529340",
+        "oa:W4401042887"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5014662947",
+      "name": "Furu Wei",
+      "score": 42.0,
+      "degree": 42,
+      "weighted_degree": 44,
+      "evidence_paper_ids": [
+        "oa:W4385569785",
+        "oa:W4389524052",
+        "oa:W4402671717",
+        "oa:W4402671755",
+        "oa:W4402672004"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5036357902",
+      "name": "Philip S. Yu",
+      "score": 42.0,
+      "degree": 42,
+      "weighted_degree": 42,
+      "evidence_paper_ids": [
+        "oa:W4403577349",
+        "oa:W4405033527",
+        "oa:W4412889804",
+        "oa:W4415164160"
+      ],
+      "n_papers_with_coauthors": 4
+    },
+    {
+      "author_id": "oa:A5058353652",
+      "name": "Tao Gui",
+      "score": 39.0,
+      "degree": 39,
+      "weighted_degree": 55,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4389524198",
+        "oa:W4390529340",
+        "oa:W4401042887",
+        "oa:W4404782606"
+      ],
+      "n_papers_with_coauthors": 6
+    },
+    {
+      "author_id": "oa:A5101488344",
+      "name": "Fei Huang",
+      "score": 39.0,
+      "degree": 39,
+      "weighted_degree": 41,
+      "evidence_paper_ids": [
+        "oa:W4385571861",
+        "oa:W4389518608",
+        "oa:W4402672026",
+        "oa:W4404781695",
+        "oa:W4412945335"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5068811427",
+      "name": "Graham Neubig",
+      "score": 38.0,
+      "degree": 38,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4385571873",
+        "oa:W4389524529",
+        "oa:W4390035079",
+        "oa:W4402667024",
+        "oa:W4404782811"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5044042138",
+      "name": "Minlie Huang",
+      "score": 35.0,
+      "degree": 35,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4385569785",
+        "oa:W4385571046",
+        "oa:W4402671297",
+        "oa:W4402671698",
+        "oa:W4412886652"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5052284218",
+      "name": "Yuxiao Dong",
+      "score": 34.0,
+      "degree": 34,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4402671297",
+        "oa:W4402671698",
+        "oa:W4404781754",
+        "oa:W4412886774"
+      ],
+      "n_papers_with_coauthors": 4
+    }
+  ],
+  "top10_weighted_degree": [
+    {
+      "author_id": "oa:A5044665993",
+      "name": "Xipeng Qiu",
+      "score": 62.0,
+      "degree": 52,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385569744",
+        "oa:W4385570131",
+        "oa:W4385571266",
+        "oa:W4385572293",
+        "oa:W4389325871"
+      ],
+      "n_papers_with_coauthors": 10
+    },
+    {
+      "author_id": "oa:A5046448314",
+      "name": "Maosong Sun",
+      "score": 62.0,
+      "degree": 56,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385570319",
+        "oa:W4385571568",
+        "oa:W4402671951",
+        "oa:W4402672026",
+        "oa:W4404783093"
+      ],
+      "n_papers_with_coauthors": 9
+    },
+    {
+      "author_id": "oa:A5058353652",
+      "name": "Tao Gui",
+      "score": 55.0,
+      "degree": 39,
+      "weighted_degree": 55,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4389524198",
+        "oa:W4390529340",
+        "oa:W4401042887",
+        "oa:W4404782606"
+      ],
+      "n_papers_with_coauthors": 6
+    },
+    {
+      "author_id": "oa:A5088834359",
+      "name": "Xuanjing Huang",
+      "score": 53.0,
+      "degree": 43,
+      "weighted_degree": 53,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4385569744",
+        "oa:W4385571266",
+        "oa:W4390529340",
+        "oa:W4401042887"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5014662947",
+      "name": "Furu Wei",
+      "score": 44.0,
+      "degree": 42,
+      "weighted_degree": 44,
+      "evidence_paper_ids": [
+        "oa:W4385569785",
+        "oa:W4389524052",
+        "oa:W4402671717",
+        "oa:W4402671755",
+        "oa:W4402672004"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5036357902",
+      "name": "Philip S. Yu",
+      "score": 42.0,
+      "degree": 42,
+      "weighted_degree": 42,
+      "evidence_paper_ids": [
+        "oa:W4403577349",
+        "oa:W4405033527",
+        "oa:W4412889804",
+        "oa:W4415164160"
+      ],
+      "n_papers_with_coauthors": 4
+    },
+    {
+      "author_id": "oa:A5101488344",
+      "name": "Fei Huang",
+      "score": 41.0,
+      "degree": 39,
+      "weighted_degree": 41,
+      "evidence_paper_ids": [
+        "oa:W4385571861",
+        "oa:W4389518608",
+        "oa:W4402672026",
+        "oa:W4404781695",
+        "oa:W4412945335"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5044042138",
+      "name": "Minlie Huang",
+      "score": 40.0,
+      "degree": 35,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4385569785",
+        "oa:W4385571046",
+        "oa:W4402671297",
+        "oa:W4402671698",
+        "oa:W4412886652"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5052284218",
+      "name": "Yuxiao Dong",
+      "score": 40.0,
+      "degree": 34,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4402671297",
+        "oa:W4402671698",
+        "oa:W4404781754",
+        "oa:W4412886774"
+      ],
+      "n_papers_with_coauthors": 4
+    },
+    {
+      "author_id": "oa:A5068811427",
+      "name": "Graham Neubig",
+      "score": 40.0,
+      "degree": 38,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4385571873",
+        "oa:W4389524529",
+        "oa:W4390035079",
+        "oa:W4402667024",
+        "oa:W4404782811"
+      ],
+      "n_papers_with_coauthors": 5
+    }
+  ],
+  "top10_pagerank": [
+    {
+      "author_id": "oa:A5046448314",
+      "name": "Maosong Sun",
+      "score": 0.00109,
+      "degree": 56,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385570319",
+        "oa:W4385571568",
+        "oa:W4402671951",
+        "oa:W4402672026",
+        "oa:W4404783093"
+      ],
+      "n_papers_with_coauthors": 9
+    },
+    {
+      "author_id": "oa:A5044665993",
+      "name": "Xipeng Qiu",
+      "score": 0.00101,
+      "degree": 52,
+      "weighted_degree": 62,
+      "evidence_paper_ids": [
+        "oa:W4385569744",
+        "oa:W4385570131",
+        "oa:W4385571266",
+        "oa:W4385572293",
+        "oa:W4389325871"
+      ],
+      "n_papers_with_coauthors": 10
+    },
+    {
+      "author_id": "oa:A5014662947",
+      "name": "Furu Wei",
+      "score": 0.000891,
+      "degree": 42,
+      "weighted_degree": 44,
+      "evidence_paper_ids": [
+        "oa:W4385569785",
+        "oa:W4389524052",
+        "oa:W4402671717",
+        "oa:W4402671755",
+        "oa:W4402672004"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5025631695",
+      "name": "Ji-Rong Wen",
+      "score": 0.000776,
+      "degree": 32,
+      "weighted_degree": 32,
+      "evidence_paper_ids": [
+        "oa:W4385572164",
+        "oa:W4389518784",
+        "oa:W4389524458",
+        "oa:W4402671709",
+        "oa:W4402671717"
+      ],
+      "n_papers_with_coauthors": 6
+    },
+    {
+      "author_id": "oa:A5088834359",
+      "name": "Xuanjing Huang",
+      "score": 0.000742,
+      "degree": 43,
+      "weighted_degree": 53,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4385569744",
+        "oa:W4385571266",
+        "oa:W4390529340",
+        "oa:W4401042887"
+      ],
+      "n_papers_with_coauthors": 7
+    },
+    {
+      "author_id": "oa:A5030248499",
+      "name": "Nanyun Peng",
+      "score": 0.000702,
+      "degree": 26,
+      "weighted_degree": 28,
+      "evidence_paper_ids": [
+        "oa:W4385570311",
+        "oa:W4385570421",
+        "oa:W4385570866",
+        "oa:W4385572593",
+        "oa:W4404782171"
+      ],
+      "n_papers_with_coauthors": 6
+    },
+    {
+      "author_id": "oa:A5058353652",
+      "name": "Tao Gui",
+      "score": 0.000701,
+      "degree": 39,
+      "weighted_degree": 55,
+      "evidence_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4389524198",
+        "oa:W4390529340",
+        "oa:W4401042887",
+        "oa:W4404782606"
+      ],
+      "n_papers_with_coauthors": 6
+    },
+    {
+      "author_id": "oa:A5068811427",
+      "name": "Graham Neubig",
+      "score": 0.000697,
+      "degree": 38,
+      "weighted_degree": 40,
+      "evidence_paper_ids": [
+        "oa:W4385571873",
+        "oa:W4389524529",
+        "oa:W4390035079",
+        "oa:W4402667024",
+        "oa:W4404782811"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5101488344",
+      "name": "Fei Huang",
+      "score": 0.000695,
+      "degree": 39,
+      "weighted_degree": 41,
+      "evidence_paper_ids": [
+        "oa:W4385571861",
+        "oa:W4389518608",
+        "oa:W4402672026",
+        "oa:W4404781695",
+        "oa:W4412945335"
+      ],
+      "n_papers_with_coauthors": 5
+    },
+    {
+      "author_id": "oa:A5015128745",
+      "name": "Maarten Sap",
+      "score": 0.000658,
+      "degree": 24,
+      "weighted_degree": 24,
+      "evidence_paper_ids": [
+        "oa:W4389518720",
+        "oa:W4389524345",
+        "oa:W4402671303",
+        "oa:W4402671566",
+        "oa:W4402671787"
+      ],
+      "n_papers_with_coauthors": 5
+    }
+  ],
+  "communities": {
+    "method": "louvain (networkx.community.louvain_communities, weight=shared papers)",
+    "seed": 20261107,
+    "n_communities": 624,
+    "modularity": 0.9843,
+    "nodes_considered": 5229,
+    "size_top10": [
+      125,
+      113,
+      104,
+      87,
+      82,
+      81,
+      74,
+      68,
+      68,
+      64
+    ]
+  },
+  "community_summary": [
+    {
+      "community": 0,
+      "size": 125,
+      "papers": 24,
+      "top_topics": [
+        [
+          "llm",
+          12
+        ],
+        [
+          "summarization",
+          2
+        ]
+      ],
+      "members_sample": [
+        "Furu Wei",
+        "Ji-Rong Wen",
+        "Xiangliang Zhang",
+        "Jian Luan",
+        "Haoyang Huang",
+        "Rui Yan"
+      ],
+      "paper_examples": [
+        "Pre-Training to Learn in Context",
+        "UniEvent: Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
+        "Improving the Robustness of Summarization Systems with Dual Augmentation"
+      ]
+    },
+    {
+      "community": 1,
+      "size": 113,
+      "papers": 19,
+      "top_topics": [
+        [
+          "llm",
+          6
+        ],
+        [
+          "mt",
+          1
+        ],
+        [
+          "qa",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Maosong Sun",
+        "Baobao Chang",
+        "Damai Dai",
+        "Zhifang Sui",
+        "Junjie Fang",
+        "Yunshui Li"
+      ],
+      "paper_examples": [
+        "Decoder Tuning: Efficient Language Understanding as Decoding",
+        "Denoising Bottleneck with Mutual Information Maximization for Video Multimodal Fusion",
+        "Continual Knowledge Distillation for Neural Machine Translation"
+      ]
+    },
+    {
+      "community": 2,
+      "size": 104,
+      "papers": 18,
+      "top_topics": [
+        [
+          "llm",
+          4
+        ]
+      ],
+      "members_sample": [
+        "Xipeng Qiu",
+        "Qipeng Guo",
+        "Libo Qin",
+        "Hang Yan",
+        "Hai-Tao Zheng",
+        "Jingheng Ye"
+      ],
+      "paper_examples": [
+        "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
+        "A Probabilistic Framework for Discovering New Intents",
+        "Multitask Pre-training of Modular Prompt for Chinese Few-Shot Learning"
+      ]
+    },
+    {
+      "community": 3,
+      "size": 87,
+      "papers": 16,
+      "top_topics": [
+        [
+          "llm",
+          5
+        ],
+        [
+          "safety_eval",
+          1
+        ],
+        [
+          "mt",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Mohit Bansal",
+        "Huaxiu Yao",
+        "Yuancheng Xu",
+        "Furong Huang",
+        "Zhangyang Wang",
+        "Tianlong Chen"
+      ],
+      "paper_examples": [
+        "DSEE: Dually Sparsity-embedded Efficient Tuning of Pre-trained Language Models",
+        "MixCE: Training Autoregressive Language Models by Mixing Forward and Reverse Cross-Entropies",
+        "Local Byte Fusion for Neural Machine Translation"
+      ]
+    },
+    {
+      "community": 4,
+      "size": 82,
+      "papers": 15,
+      "top_topics": [
+        [
+          "llm",
+          4
+        ],
+        [
+          "retrieval",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Graham Neubig",
+        "Tongshuang Wu",
+        "Yulia Tsvetkov",
+        "Pengfei Liu",
+        "Zhaoxuan Tan",
+        "Shuyan Zhou"
+      ],
+      "paper_examples": [
+        "KALM: Knowledge-Aware Integration of Local, Document, and Global Contexts for Long Document Understanding",
+        "DataFinder: Scientific Dataset Recommendation from Natural Language Descriptions",
+        "Detecting Spoilers in Movie Reviews with External Movie Knowledge and User Networks"
+      ]
+    },
+    {
+      "community": 5,
+      "size": 81,
+      "papers": 19,
+      "top_topics": [
+        [
+          "llm",
+          4
+        ],
+        [
+          "qa",
+          2
+        ]
+      ],
+      "members_sample": [
+        "Maarten Sap",
+        "Alice Oh",
+        "Yejin Choi",
+        "Yeon Seonwoo",
+        "Hyunwoo Kim",
+        "Yonatan Bisk"
+      ],
+      "paper_examples": [
+        "To Adapt or to Annotate: Challenges and Interventions for Domain Adaptation in Open-Domain Question Answering",
+        "Ranking-Enhanced Unsupervised Sentence Representation Learning",
+        "MPCHAT: Towards Multimodal Persona-Grounded Conversation"
+      ]
+    },
+    {
+      "community": 6,
+      "size": 74,
+      "papers": 16,
+      "top_topics": [
+        [
+          "llm",
+          3
+        ],
+        [
+          "mt",
+          1
+        ],
+        [
+          "qa",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Nanyun Peng",
+        "Prem Natarajan",
+        "Hinrich Schuetze",
+        "Vishesh Kakarala",
+        "Charith Peris",
+        "Swetha Ranganath"
+      ],
+      "paper_examples": [
+        "Do Question Answering Modeling Improvements Hold Across Benchmarks?",
+        "TAGPRIME: A Unified Framework for Relational Structure Extraction",
+        "Learning Action Conditions from Instructional Manuals for Instruction Understanding"
+      ]
+    },
+    {
+      "community": 7,
+      "size": 68,
+      "papers": 9,
+      "top_topics": [
+        [
+          "llm",
+          4
+        ],
+        [
+          "safety_eval",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Philip S. Yu",
+        "Henry Peng Zou",
+        "Renhe Jiang",
+        "Dongyuan Li",
+        "Yaozu Wu",
+        "Yue Zhou"
+      ],
+      "paper_examples": [
+        "DAMe: Personalized Federated Social Event Detection with Dual Aggregation Mechanism",
+        "Does Knowledge Localization Hold True? Surprising Differences Between Entity and Relation Perspectives in Language Models",
+        "Improving Zero-shot LLM Re-Ranker with Risk Minimization"
+      ]
+    },
+    {
+      "community": 8,
+      "size": 68,
+      "papers": 14,
+      "top_topics": [
+        [
+          "llm",
+          2
+        ],
+        [
+          "mt",
+          2
+        ],
+        [
+          "summarization",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Tong Xiao",
+        "JingBo Zhu",
+        "Boxing Chen",
+        "Bei Li",
+        "Yafu Li",
+        "Yongjing Yin"
+      ],
+      "paper_examples": [
+        "Inflected Forms Are Redundant in Question Generation Models",
+        "Target-Side Augmentation for Document-Level Machine Translation",
+        "Better Simultaneous Translation with Monotonic Knowledge Distillation"
+      ]
+    },
+    {
+      "community": 9,
+      "size": 64,
+      "papers": 16,
+      "top_topics": [
+        [
+          "llm",
+          4
+        ],
+        [
+          "qa",
+          1
+        ],
+        [
+          "summarization",
+          1
+        ]
+      ],
+      "members_sample": [
+        "Roee Aharoni",
+        "Mor Geva",
+        "Diyi Yang",
+        "Alon Jacovi",
+        "Jonathan Herzig",
+        "Shruti Rijhwani"
+      ],
+      "paper_examples": [
+        "Conjunct Resolution in the Face of Verbal Omissions",
+        "A Novel Computational and Modeling Foundation for Automatic Coherence Assessment",
+        "Task-Agnostic Low-Rank Adapters for Unseen English Dialects"
+      ]
+    }
+  ],
+  "shortest_path_example": {
+    "source": "oa:A5044665993",
+    "target": "oa:A5014662947",
+    "length": 5,
+    "hops": [
+      {
+        "from": "oa:A5044665993",
+        "from_name": "Xipeng Qiu",
+        "to": "oa:A5074103823",
+        "to_name": "Dacheng Tao",
+        "evidence_paper_ids": [
+          "oa:W4412945021"
+        ],
+        "evidence_titles": [
+          "VisuoThink: Empowering LVLM Reasoning with Multimodal Tree Search"
+        ],
+        "evidence_urls": [
+          "https://aclanthology.org/2025.acl-long.1053/"
+        ]
+      },
+      {
+        "from": "oa:A5074103823",
+        "from_name": "Dacheng Tao",
+        "to": "oa:A5100456723",
+        "to_name": "Liang Ding",
+        "evidence_paper_ids": [
+          "oa:W4385893928",
+          "oa:W4389520354",
+          "oa:W4402671533"
+        ],
+        "evidence_titles": [
+          "CASN:Class-Aware Score Network for Textual Adversarial Detection",
+          "Zero-shot Sharpness-Aware Quantization for Pre-trained Language Models",
+          "Revisiting Knowledge Distillation for Autoregressive Language Models"
+        ],
+        "evidence_urls": [
+          "https://aclanthology.org/2023.acl-long.40/",
+          "https://aclanthology.org/2023.emnlp-main.696/",
+          "https://aclanthology.org/2024.acl-long.587/"
+        ]
+      },
+      {
+        "from": "oa:A5100456723",
+        "from_name": "Liang Ding",
+        "to": "oa:A5062005460",
+        "to_name": "Zhiliang Tian",
+        "evidence_paper_ids": [
+          "oa:W4402671889"
+        ],
+        "evidence_titles": [
+          "POMP: Probability-driven Meta-graph Prompter for LLMs in Low-resource Unsupervised Neural Machine Translation"
+        ],
+        "evidence_urls": [
+          "https://aclanthology.org/2024.acl-long.537/"
+        ]
+      },
+      {
+        "from": "oa:A5062005460",
+        "from_name": "Zhiliang Tian",
+        "to": "oa:A5044042138",
+        "to_name": "Minlie Huang",
+        "evidence_paper_ids": [
+          "oa:W4412886652"
+        ],
+        "evidence_titles": [
+          "Battling against Tough Resister: Strategy Planning with Adversarial Game for Non-collaborative Dialogues"
+        ],
+        "evidence_urls": [
+          "https://aclanthology.org/2025.acl-long.184/"
+        ]
+      },
+      {
+        "from": "oa:A5044042138",
+        "from_name": "Minlie Huang",
+        "to": "oa:A5014662947",
+        "to_name": "Furu Wei",
+        "evidence_paper_ids": [
+          "oa:W4385569785"
+        ],
+        "evidence_titles": [
+          "Pre-Training to Learn in Context"
+        ],
+        "evidence_urls": [
+          "https://aclanthology.org/2023.acl-long.267/"
+        ]
+      }
+    ]
+  },
+  "small_world": {
+    "status": "computed",
+    "graph": "LCC of author-only co-authorship projection (unweighted)",
+    "lcc_nodes": 970,
+    "lcc_edges": 4288,
+    "C_obs": 0.9127,
+    "L_obs": 10.9876,
+    "L_method": "exact",
+    "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+    "n_random": 5,
+    "random_graphs": [
+      {
+        "seed": 20261108,
+        "nodes": 970,
+        "C": 0.0186,
+        "L": 3.3154
+      },
+      {
+        "seed": 20261109,
+        "nodes": 970,
+        "C": 0.015,
+        "L": 3.3103
+      },
+      {
+        "seed": 20261110,
+        "nodes": 970,
+        "C": 0.0137,
+        "L": 3.306
+      },
+      {
+        "seed": 20261111,
+        "nodes": 970,
+        "C": 0.0127,
+        "L": 3.311
+      },
+      {
+        "seed": 20261112,
+        "nodes": 970,
+        "C": 0.0168,
+        "L": 3.309
+      }
+    ],
+    "C_rand": 0.0154,
+    "L_rand": 3.3104,
+    "sigma": 17.902,
+    "verdict": "no clear small-world indication",
+    "limitations": [
+      "Multi-author papers create cliques that mechanically raise clustering.",
+      "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+      "No significance test performed; sigma is descriptive only."
+    ]
+  },
+  "degree_distribution": [
+    [
+      0,
+      201
+    ],
+    [
+      1,
+      171
+    ],
+    [
+      2,
+      338
+    ],
+    [
+      3,
+      593
+    ],
+    [
+      4,
+      736
+    ],
+    [
+      5,
+      798
+    ],
+    [
+      6,
+      606
+    ],
+    [
+      7,
+      567
+    ],
+    [
+      8,
+      315
+    ],
+    [
+      9,
+      312
+    ],
+    [
+      10,
+      174
+    ],
+    [
+      11,
+      150
+    ],
+    [
+      12,
+      68
+    ],
+    [
+      13,
+      104
+    ],
+    [
+      14,
+      53
+    ],
+    [
+      15,
+      61
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      17,
+      21
+    ],
+    [
+      18,
+      31
+    ],
+    [
+      19,
+      33
+    ],
+    [
+      20,
+      13
+    ],
+    [
+      21,
+      10
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      23,
+      8
+    ],
+    [
+      24,
+      7
+    ],
+    [
+      25,
+      5
+    ],
+    [
+      26,
+      5
+    ],
+    [
+      27,
+      3
+    ],
+    [
+      29,
+      1
+    ],
+    [
+      32,
+      1
+    ],
+    [
+      33,
+      1
+    ],
+    [
+      34,
+      1
+    ],
+    [
+      35,
+      1
+    ],
+    [
+      38,
+      1
+    ],
+    [
+      39,
+      2
+    ],
+    [
+      42,
+      2
+    ],
+    [
+      43,
+      1
+    ],
+    [
+      52,
+      1
+    ],
+    [
+      56,
+      1
+    ]
+  ],
+  "caveats": [
+    "co-authorship != friendship",
+    "PageRank is a structural centrality, not scientific quality",
+    "source_only authors are scoped to one paper and cannot connect across papers"
+  ]
+}

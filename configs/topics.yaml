@@ -1,0 +1,58 @@
+# Rule-based topic classifier v1 (architecture.md section 5).
+# Matching is on NFKC-normalised, lower-cased text with whitespace collapsed; every pattern is a
+# whole-word/phrase regex (\b...\b). Title match = 2 points, abstract match = 1 point.
+# A topic is assigned when score >= threshold; at most `max_topics` topics, highest score first.
+# A tie that would decide the last slot -> the paper goes to review and the tied topics are not assigned.
+rule_version: "topics-v1.1"   # v1.1 = v1.0 + mt.speech_translation after the 50-paper pilot (frozen before QA sampling)
+threshold: 2
+max_topics: 2
+title_points: 2
+abstract_points: 1
+
+topics:
+  llm:
+    name: Large language models
+    description: Large language models, instruction tuning, alignment of LMs
+    patterns:
+      - {id: llm.large_language_model, regex: '\blarge language models?\b'}
+      - {id: llm.llms, regex: '\bllms?\b'}
+      - {id: llm.instruction_tuning, regex: '\binstruction[- ]tun(?:ing|ed)\b'}
+      - {id: llm.lm_alignment, regex: '\b(?:language model|llm) alignment\b'}
+  mt:
+    name: Machine translation
+    description: Machine / neural translation and translation quality
+    patterns:
+      - {id: mt.machine_translation, regex: '\bmachine translation\b'}
+      - {id: mt.neural_translation, regex: '\bneural (?:machine )?translation\b'}
+      - {id: mt.translation_quality, regex: '\btranslation quality\b'}
+      - {id: mt.nmt, regex: '\bnmt\b'}
+      - {id: mt.speech_translation, regex: '\bspeech(?:-to-text)? translation\b'}
+  qa:
+    name: Question answering
+    description: Question answering and machine reading comprehension
+    patterns:
+      - {id: qa.question_answering, regex: '\bquestion[- ]answering\b'}
+      - {id: qa.reading_comprehension, regex: '\breading comprehension\b'}
+  retrieval:
+    name: Retrieval and RAG
+    description: Information retrieval, dense retrieval, retrieval-augmented generation
+    patterns:
+      - {id: retrieval.rag_full, regex: '\bretrieval[- ]augmented\b'}
+      - {id: retrieval.information_retrieval, regex: '\binformation retrieval\b'}
+      - {id: retrieval.dense_retrieval, regex: '\bdense (?:passage )?retrieval\b'}
+      - {id: retrieval.rag, regex: '\brag\b'}
+  summarization:
+    name: Summarization
+    description: Text / document / abstractive / extractive summarization
+    patterns:
+      - {id: summarization.text, regex: '\b(?:text|document|abstractive|extractive|dialogue|multi-document|news|opinion) summari[sz]ation\b'}
+      - {id: summarization.summarization, regex: '\bsummari[sz]ation\b'}
+  safety_eval:
+    name: Safety and LLM evaluation
+    description: LM safety, LLM evaluation, hallucination detection, red teaming, jailbreaks
+    patterns:
+      - {id: safety_eval.lm_safety, regex: '\b(?:language model|llm|ai) safety\b'}
+      - {id: safety_eval.llm_evaluation, regex: '\b(?:llm|language model) evaluation\b|\bevaluat(?:e|ing|ion of) (?:large )?language models\b|\bevaluat(?:e|ing|ion of) llms\b'}
+      - {id: safety_eval.hallucination, regex: '\bhallucinations?\b'}
+      - {id: safety_eval.red_teaming, regex: '\bred[- ]teaming\b'}
+      - {id: safety_eval.jailbreak, regex: '\bjailbreak(?:s|ing)?\b'}

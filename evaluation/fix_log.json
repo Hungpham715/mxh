@@ -1,0 +1,17 @@
+[
+  {
+    "round": "0 -> 1",
+    "issue": "Bộ kiểm chứng tự động vòng 0 (evaluation/round0_weak_verifier/) chỉ đối chiếu AFFILIATED_WITH, ORG_COAUTHORED_WITH và ACTIVE_IN với chính bản ghi OpenAlex dùng để tạo cạnh, nên 200/200 'đúng' là kết quả vòng lặp, không có giá trị kiểm chứng.",
+    "fix": "Viết lại bộ kiểm chứng: ba loại cạnh tổ chức được đối chiếu với chuỗi affiliation in trong XML của ACL Anthology (nguồn độc lập với OpenAlex); không có chuỗi ACL thì nhãn là 'unverifiable' (tính là không đúng). Kết quả vòng 0 được giữ nguyên nhưng không dùng để báo cáo precision."
+  },
+  {
+    "round": "1 (pre-fix, seed 20261107)",
+    "issue": "Precision sơ bộ: AFFILIATED_WITH 0,50, ORG_COAUTHORED_WITH 0,45, ACTIVE_IN 0,75. Kiểm toàn bộ: chỉ 72,5% dòng affiliation có chuỗi ACL khớp với tổ chức OpenAlex. Nguyên nhân: (a) OpenAlex gán cho tác giả cả những tổ chức mà tác giả không in trên bài (ví dụ thêm cơ quan mẹ, cơ quan cũ); (b) 23 bài OpenAlex chép toàn bộ affiliation cấp bài cho mọi tác giả.",
+    "fix": "normalize.py: với bài ACL có chuỗi affiliation in cho tác giả, chỉ giữ tổ chức OpenAlex khớp với chuỗi đó (754 dòng bị loại, ghi vào data/rejected/unresolved.csv); với bài bị 'chép affiliation' mà không có chuỗi ACL thì loại hết (115 dòng). Mỗi dòng affiliation ghi affiliation_check = acl_agrees | openalex_only."
+  },
+  {
+    "round": "2 (post-fix, fresh seed 20261108)",
+    "issue": "Kết quả: không còn cạnh nào bị bộ kiểm chứng đánh 'incorrect' (0/200); 35/200 là 'unverifiable' và đều thuộc ba loại cạnh tổ chức (AFFILIATED_WITH 9, ORG_COAUTHORED_WITH 14, ACTIVE_IN 12), vì bằng chứng chỉ có OpenAlex (bài arXiv hoặc tác giả ACL không in affiliation). CẢNH BÁO TÍNH ĐỘC LẬP: cạnh affiliation trên bài ACL đã được lọc bằng cùng phép so khớp chuỗi mà bộ kiểm chứng dùng, nên phần 'correct' của ba loại này đúng theo cách xây dựng, không phải kiểm chứng độc lập. Ngoài ra, bộ kiểm chứng ORG_COAUTHORED_WITH/ACTIVE_IN được chỉnh trong vòng 2 để kiểm theo từng authorship (vòng 1 kiểm theo mọi tác giả trên bài) – vì vậy số trước/sau sửa của hai loại này không hoàn toàn cùng thước đo.",
+    "fix": "Không sửa thêm dữ liệu để tránh 'chỉnh theo đáp án'. Cạnh openalex_only được giữ trong graph nhưng gắn affiliation_check trên dòng affiliation; cần người kiểm tra độc lập bằng evaluation/manual_review_template.csv."
+  }
+]

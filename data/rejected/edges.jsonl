@@ -1,0 +1,1 @@
+{"type": "CITES", "from": "oa:WFIX1", "to": "oa:WGHOST", "source_kind": "openalex", "source_url": "x", "evidence_paper_ids": ["oa:WFIX1"], "evidence_count": 1, "first_year": 2023, "last_year": 2023, "years": [2023], "build_version": "1.0.0", "reject_reason": "dangling endpoint"}

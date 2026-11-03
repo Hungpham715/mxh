@@ -1,0 +1,41 @@
+{
+  "nodes": {
+    "Paper": 1091,
+    "Author": 5430,
+    "Institution": 600,
+    "Venue": 7,
+    "Topic": 6
+  },
+  "relationships": {
+    "FIRST_AUTHOR_OF": 1091,
+    "OTHER_AUTHOR_OF": 5007,
+    "COAUTHORED_WITH": 16754,
+    "AFFILIATED_WITH": 4306,
+    "APPEARS_IN": 1091,
+    "HAS_TOPIC": 451,
+    "CITES": 26,
+    "ORG_COAUTHORED_WITH": 2001,
+    "RESEARCHES": 105,
+    "ACTIVE_IN": 139
+  },
+  "total_nodes": 7134,
+  "total_relationships": 30971,
+  "populated_types": 10,
+  "evidence_papers_by_type": {
+    "FIRST_AUTHOR_OF": 1091,
+    "OTHER_AUTHOR_OF": 1068,
+    "COAUTHORED_WITH": 1064,
+    "AFFILIATED_WITH": 936,
+    "APPEARS_IN": 1091,
+    "HAS_TOPIC": 422,
+    "CITES": 22,
+    "ORG_COAUTHORED_WITH": 554,
+    "RESEARCHES": 112,
+    "ACTIVE_IN": 252
+  },
+  "authors_by_identity_status": {
+    "verified": 4691,
+    "source_only": 712,
+    "unresolved": 27
+  }
+}

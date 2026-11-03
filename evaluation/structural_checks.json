@@ -1,0 +1,32 @@
+{
+  "FIRST_AUTHOR_OF": {
+    "checked": 1091
+  },
+  "OTHER_AUTHOR_OF": {
+    "checked": 5007
+  },
+  "COAUTHORED_WITH": {
+    "checked": 16754
+  },
+  "AFFILIATED_WITH": {
+    "checked": 4306
+  },
+  "APPEARS_IN": {
+    "checked": 1091
+  },
+  "HAS_TOPIC": {
+    "checked": 451
+  },
+  "CITES": {
+    "checked": 26
+  },
+  "ORG_COAUTHORED_WITH": {
+    "checked": 2001
+  },
+  "RESEARCHES": {
+    "checked": 105
+  },
+  "ACTIVE_IN": {
+    "checked": 139
+  }
+}

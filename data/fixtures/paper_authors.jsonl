@@ -1,0 +1,10 @@
+{"paper_id": "oa:WFIX1", "author_id": "oa:AFIX1", "position": 1, "author_position": "first", "source_url": "https://example.org/fixture/W1"}
+{"paper_id": "oa:WFIX1", "author_id": "oa:AFIX2", "position": 2, "author_position": "last", "source_url": "https://example.org/fixture/W1"}
+{"paper_id": "oa:WFIX2", "author_id": "oa:AFIX1", "position": 1, "author_position": "first", "source_url": "https://example.org/fixture/W2"}
+{"paper_id": "oa:WFIX2", "author_id": "oa:AFIX2", "position": 2, "author_position": "middle", "source_url": "https://example.org/fixture/W2"}
+{"paper_id": "oa:WFIX2", "author_id": "oa:AFIX3", "position": 3, "author_position": "last", "source_url": "https://example.org/fixture/W2"}
+{"paper_id": "oa:WFIX3", "author_id": "oa:AFIX3", "position": 1, "author_position": "first", "source_url": "https://example.org/fixture/W3"}
+{"paper_id": "oa:WFIX3", "author_id": "oa:AFIX1", "position": 2, "author_position": "last", "source_url": "https://example.org/fixture/W3"}
+{"paper_id": "oa:WFIX4", "author_id": "src:oa:WFIX4#1", "position": 1, "author_position": "first", "source_url": "https://example.org/fixture/W4"}
+{"paper_id": "oa:WFIX5", "author_id": "oa:AFIX4", "position": 1, "author_position": "first", "source_url": "https://example.org/fixture/W5"}
+{"paper_id": "oa:WFIX5", "author_id": "oa:AFIX1", "position": 2, "author_position": "last", "source_url": "https://example.org/fixture/W5"}

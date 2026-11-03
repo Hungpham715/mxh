@@ -1,0 +1,451 @@
+{"paper_id": "oa:W4319049805", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4320513433", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4322832215", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4323076364", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4362598378", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4362598378", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "Evaluation of Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4367701241", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385564926", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385565471", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385569721", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Abstractive Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385569726", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570015", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570090", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570154", "topic_id": "mt", "rule_id": "topics-v1.1:mt.speech_translation:title", "evidence_span": "Speech Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570234", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570262", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570486", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570550", "topic_id": "mt", "rule_id": "topics-v1.1:mt.speech_translation:title", "evidence_span": "speech Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570844", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570881", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385570987", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571140", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571374", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571533", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571551", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.dense_retrieval:title", "evidence_span": "Dense Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571568", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571757", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571809", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385571900", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572057", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572068", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572068", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572155", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572331", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385572370", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Dialogue Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385946786", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4385947708", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4386200967", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4386437445", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4386437463", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4386752353", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4387144848", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4387323685", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4388275234", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4388275295", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389325826", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389325871", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389500603", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518608", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518671", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518671", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518764", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518784", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518784", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518794", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389518807", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519077", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519110", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.dense_retrieval:title", "evidence_span": "Dense Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519114", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519247", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Text Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519352", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519370", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389519477", "topic_id": "mt", "rule_id": "topics-v1.1:mt.speech_translation:title", "evidence_span": "Speech Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520127", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520334", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520398", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520728", "topic_id": "mt", "rule_id": "topics-v1.1:mt.speech_translation:title", "evidence_span": "Speech Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520773", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520798", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389520812", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523808", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523840", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523842", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523885", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523939", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389523947", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524009", "topic_id": "mt", "rule_id": "topics-v1.1:mt.nmt:title", "evidence_span": "NMT", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524026", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524029", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524052", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524074", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524318", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4389524458", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390529238", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390529277", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large language model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390529318", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390529340", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390722253", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4390722655", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4391505424", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4391505486", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4391591669", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4391591669", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4391591673", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4392083945", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4392083945", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4393160280", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4393727451", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4396649286", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4399354964", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4399395095", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4399510385", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4401042837", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4401042887", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4401043195", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4401307238", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402112354", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667003", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667011", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667037", "topic_id": "qa", "rule_id": "topics-v1.1:qa.reading_comprehension:title", "evidence_span": "Reading Comprehension", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667059", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667059", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667063", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667118", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402667144", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402670978", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671120", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671143", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671155", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671155", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.jailbreak:title", "evidence_span": "Jailbreak", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671159", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671196", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671291", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671297", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671514", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671559", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671562", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671611", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671614", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671637", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671663", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671665", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671676", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671686", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671698", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671709", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671712", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671715", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671717", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671718", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.jailbreak:title", "evidence_span": "Jailbreak", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671740", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671755", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671762", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671833", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671842", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671874", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671889", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671889", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671897", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671920", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671923", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671923", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.dense_retrieval:title", "evidence_span": "Dense Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671926", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671927", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671933", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671944", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Text Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671951", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671960", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671969", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671969", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question-Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671982", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402671994", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672000", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672004", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672017", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.information_retrieval:title", "evidence_span": "Information Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672021", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672026", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672076", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402672084", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402683976", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402684033", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402684150", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402684264", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402684283", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402684346", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402953934", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4402953934", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "LLM Evaluation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4403071756", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4403160901", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4403322118", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4403322150", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404344855", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404344855", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404350137", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404350876", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404356149", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404388929", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781695", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781754", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781754", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781917", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781926", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404781999", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782046", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782072", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782094", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782191", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782207", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782216", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782251", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782321", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782347", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782356", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782365", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782365", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782385", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782432", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782441", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782565", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782572", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782586", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782588", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782591", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782665", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782672", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782683", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782725", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782733", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782774", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782801", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782801", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucinations", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782802", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782855", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782875", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782891", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782927", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782947", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782948", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782967", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404782983", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783044", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783051", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783125", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783131", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783134", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.dense_retrieval:title", "evidence_span": "Dense Passage Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783136", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question-Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783144", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783161", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783368", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783373", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783518", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783518", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783577", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783643", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.jailbreak:title", "evidence_span": "Jailbreaks", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404783875", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404784107", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404784221", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404784305", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404784419", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792925", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792931", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792949", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792949", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.jailbreak:title", "evidence_span": "Jailbreak", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792950", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792957", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4404792993", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4405033436", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4405033522", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4405173114", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4405252256", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4406032239", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4406032250", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4407123368", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4407123425", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4407123430", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4407123482", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4407749357", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4409157490", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4410486519", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4410985640", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4411120759", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4411630238", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Opinion Summarisation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886633", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886639", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886664", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886691", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886713", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886763", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886786", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886800", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886801", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412886951", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412888560", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "Evaluating Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889429", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889547", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889579", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889603", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889608", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889615", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889615", "topic_id": "qa", "rule_id": "topics-v1.1:qa.reading_comprehension:title", "evidence_span": "Reading Comprehension", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889619", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889701", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889709", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889709", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "LLM Evaluation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889738", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889753", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889777", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889826", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "summarisation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889866", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889877", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889882", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889917", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889939", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889939", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.red_teaming:title", "evidence_span": "Red-teaming", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889976", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889976", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.text:title", "evidence_span": "Abstractive Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412889980", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944744", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944746", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944784", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944827", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944830", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412944857", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945051", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.jailbreak:title", "evidence_span": "Jailbreak", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945133", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945133", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945165", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945178", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945182", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945190", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945221", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945280", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945280", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.lm_safety:title", "evidence_span": "Language Model Safety", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945287", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945292", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945300", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945342", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945384", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945393", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945401", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945414", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945424", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945465", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945473", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945481", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945483", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945513", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945526", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945533", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945551", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945559", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945559", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucination", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945613", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945616", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945661", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4412945719", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4414892789", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4414892789", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "Evaluation of Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4414892830", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4414973481", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4414973482", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4415026042", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4415081546", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4415164160", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416034073", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035106", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035106", "topic_id": "summarization", "rule_id": "topics-v1.1:summarization.summarization:title", "evidence_span": "Summarization", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035138", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035167", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035255", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035278", "topic_id": "qa", "rule_id": "topics-v1.1:qa.question_answering:title", "evidence_span": "Question Answering", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035295", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035308", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035333", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035422", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035486", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035542", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035574", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035606", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035636", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035668", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035693", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035704", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035754", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035811", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035814", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035826", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035837", "topic_id": "mt", "rule_id": "topics-v1.1:mt.machine_translation:title", "evidence_span": "Machine Translation", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035841", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416035940", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036058", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036173", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036242", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036244", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.information_retrieval:title", "evidence_span": "Information Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036262", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036285", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036324", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036335", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036350", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036351", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036381", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036402", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036408", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036432", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036460", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036467", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036474", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036487", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036518", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036528", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036563", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.dense_retrieval:title", "evidence_span": "Dense Retrieval", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036585", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036599", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036614", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036625", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036640", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036647", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036697", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036708", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036727", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036736", "topic_id": "llm", "rule_id": "topics-v1.1:llm.instruction_tuning:title", "evidence_span": "Instruction Tuning", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036746", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036796", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036850", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036862", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036903", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416036992", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037001", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037019", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037030", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037066", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037066", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.hallucination:title", "evidence_span": "Hallucinations", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037082", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037097", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037105", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037126", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037142", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037221", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416037665", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416368271", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416548607", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416686892", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416878731", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "Evaluating Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416958849", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416959352", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416959427", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4416959446", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag:title", "evidence_span": "RAG", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4417224968", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4417226603", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLM", "confidence_band": "rule_high"}
+{"paper_id": "oa:W4417504446", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W6885087958", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W6911785304", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W6911785304", "topic_id": "safety_eval", "rule_id": "topics-v1.1:safety_eval.llm_evaluation:title", "evidence_span": "Evaluating Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W6929505769", "topic_id": "retrieval", "rule_id": "topics-v1.1:retrieval.rag_full:title", "evidence_span": "Retrieval-Augmented", "confidence_band": "rule_high"}
+{"paper_id": "oa:W6948170943", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7084387338", "topic_id": "llm", "rule_id": "topics-v1.1:llm.llms:title", "evidence_span": "LLMs", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7084411487", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7103380445", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7131623740", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7131893699", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Models", "confidence_band": "rule_high"}
+{"paper_id": "oa:W7148616372", "topic_id": "llm", "rule_id": "topics-v1.1:llm.large_language_model:title", "evidence_span": "Large Language Model", "confidence_band": "rule_high"}

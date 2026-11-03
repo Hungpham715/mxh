@@ -1,0 +1,1040 @@
+paper_id,author,openalex_institution,acl_affiliation
+oa:W4385564926,Saneem Chemmengath,IBM (United States),IBM Research AI
+oa:W4385564926,Saneem Chemmengath,Indian Institute of Technology Bombay,IBM Research AI
+oa:W4385564926,Vishwajeet Kumar,IBM (United States),IBM Research AI
+oa:W4385564926,Vishwajeet Kumar,Indian Institute of Technology Bombay,IBM Research AI
+oa:W4385564926,Soumen Chakrabarti,IBM (United States),IIT Bombay
+oa:W4385564926,Soumen Chakrabarti,IBM Research - India,IIT Bombay
+oa:W4385564926,Soumen Chakrabarti,IBM (India),IIT Bombay
+oa:W4385564926,Samarth Bharadwaj,IBM (United States),Senior Research Scientist
+oa:W4385564926,Samarth Bharadwaj,Indian Institute of Technology Bombay,Senior Research Scientist
+oa:W4385564926,Samarth Bharadwaj,IBM Research - India,Senior Research Scientist
+oa:W4385564926,Samarth Bharadwaj,IBM (India),Senior Research Scientist
+oa:W4385564926,Jaydeep Sen,IBM (United States),IBM Research AI
+oa:W4385564926,Jaydeep Sen,Indian Institute of Technology Bombay,IBM Research AI
+oa:W4385565267,Hal Daumé III,Microsoft (United States),UMD
+oa:W4385565267,Hal Daumé III,"University of Maryland, College Park",UMD
+oa:W4385565267,Ani Nenkova,Adobe Systems (United States),Adobe Research
+oa:W4385565400,Xiaodan Zhu,Queens University,Queen’s University
+oa:W4385565400,Zi’ou Zheng,Queens University,Queen’s University
+oa:W4385565413,Ahmed Hassan Awadallah,Microsoft (United States),Microsoft Research
+oa:W4385565413,Xuxi Chen,The University of Texas at Austin,UT Austin
+oa:W4385565413,Zhangyang Wang,The University of Texas at Austin,UT Austin
+oa:W4385565413,Weizhu Chen,Microsoft (United States),Microsoft
+oa:W4385565413,Weizhu Chen,The University of Texas at Austin,Microsoft
+oa:W4385565413,Yu Cheng,Microsoft (United States),Microsoft Research
+oa:W4385565419,Mihai Surdeanu,Stony Brook University,University of Arizona
+oa:W4385565419,Mohaddeseh Bastan,University of Arizona,Stony Brook University
+oa:W4385565419,Niranjan Balasubramanian,University of Arizona,Stony Brook University
+oa:W4385565471,Andre Greiner-Petter,University of Göttingen,University of Wuppertal
+oa:W4385565471,Andre Greiner-Petter,Stanford University,University of Wuppertal
+oa:W4385565471,Moritz Schubotz,University of Göttingen,University of Wuppertal
+oa:W4385565471,Moritz Schubotz,Stanford University,University of Wuppertal
+oa:W4385565471,Felix Petersen,University of Göttingen,Stanford University
+oa:W4385565471,Bela Gipp,University of Göttingen,University of Goettingen
+oa:W4385565471,Bela Gipp,Stanford University,University of Goettingen
+oa:W4385565522,Fei Mi,Huawei Technologies (China),Huawei
+oa:W4385565522,Yichun Yin,Huawei Technologies (China),Noah’s Ark Lab of Huawei
+oa:W4385565522,Benyou Wang,Shenzhen Research Institute of Big Data,"The Chinese University of Hong Kong, Shenzhen"
+oa:W4385565522,Yajiao Liu,Shenzhen Research Institute of Big Data,"The Chinese University of Hong Kong, Shenzhen"
+oa:W4385565522,Xin Jiang,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4385565522,Yasheng Wang,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4385569624,Krzysztof Surdyk,Wrocław University of Science and Technology,Avaya
+oa:W4385569624,Krzysztof Surdyk,Poznań University of Technology,Avaya
+oa:W4385569624,Piotr Żelasko,Wrocław University of Science and Technology,Meaning
+oa:W4385569624,Piotr Żelasko,Poznań University of Technology,Meaning
+oa:W4385569624,Piotr Szymański,Poznań University of Technology,Avaya Inc. / Wrocław University of Science and Technology
+oa:W4385569624,Lukasz Augustyniak,Poznań University of Technology,Wroclaw University of Science and Technology
+oa:W4385569624,Adrian Szymczak,Wrocław University of Science and Technology,Yohana
+oa:W4385569624,Adrian Szymczak,Poznań University of Technology,Yohana
+oa:W4385569624,Mikolaj Morzy,Wrocław University of Science and Technology,Poznan University of Technology
+oa:W4385569706,Moin Nabi,"Systems, Applications & Products in Data Processing (United Kingdom)",SAP AI Research
+oa:W4385569706,Tassilo Klein,"Systems, Applications & Products in Data Processing (United Kingdom)",SAP SE
+oa:W4385569726,Qiang Wang,Zhejiang University,"Hithink RoyalFlush AI Research Institute, China"
+oa:W4385569751,Tianyang Xu,Shanghai Jiao Tong University,Wuhan University
+oa:W4385569751,Tianyang Xu,Hong Kong University of Science and Technology,Wuhan University
+oa:W4385569751,Shizhe Diao,Shanghai Jiao Tong University,The Hong Kong University of Science and Technology
+oa:W4385569751,Shizhe Diao,Wuhan University,The Hong Kong University of Science and Technology
+oa:W4385569751,Tong Zhang,Shanghai Jiao Tong University,HKUST
+oa:W4385569751,Tong Zhang,Wuhan University,HKUST
+oa:W4385569751,Jiawei Wang,Hong Kong University of Science and Technology,Shanghai Jiao Tong University
+oa:W4385569751,Jiawei Wang,Wuhan University,Shanghai Jiao Tong University
+oa:W4385569751,Ruijia Xu,Shanghai Jiao Tong University,Hong Kong University of Science and Technology
+oa:W4385569751,Ruijia Xu,Wuhan University,Hong Kong University of Science and Technology
+oa:W4385569785,Yuxian Gu,Microsoft (United States),Tsinghua University
+oa:W4385569785,Yuxian Gu,State Key Laboratory of Intelligent Technology and Systems,Tsinghua University
+oa:W4385569785,Yuxian Gu,Beijing National Research Center for Information Science and Technology,Tsinghua University
+oa:W4385569785,Furu Wei,Microsoft (United States),Microsoft Research
+oa:W4385569785,Minlie Huang,State Key Laboratory of Intelligent Technology and Systems,Tsinghua University
+oa:W4385569785,Minlie Huang,Beijing National Research Center for Information Science and Technology,Tsinghua University
+oa:W4385569785,Li Dong,Microsoft (United States),Microsoft Research
+oa:W4385569851,Lei Shen,Jingdong (China),JD AI
+oa:W4385569851,Yiwei Wei,"China University of Petroleum, Beijing",tianjin university
+oa:W4385569851,Meng Chen,Jingdong (China),JD AI
+oa:W4385569851,Shaozu Yuan,Jingdong (China),JD AI
+oa:W4385569933,Greg Durrett,The University of Texas at Austin,UT Austin
+oa:W4385569933,Michael Zhang,The University of Texas at Austin,UT Austin
+oa:W4385570049,Marvin Solberg,University of Illinois Chicago,Wayne State University
+oa:W4385570049,Naincy Kumari,Wayne State University,Central University of Rajasthan
+oa:W4385570079,Lidong Bing,Alibaba Group (Cayman Islands),Alibaba DAMO Academy
+oa:W4385570079,Xin Li,Alibaba Group (Cayman Islands),Alibaba Group
+oa:W4385570079,Xin Li,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4385570079,Ran Zhou,Alibaba Group (Cayman Islands),Nanyang Technological University
+oa:W4385570079,Ran Zhou,Alibaba DAMO Academy (China),Nanyang Technological University
+oa:W4385570079,Ran Zhou,Alibaba Group (China),Nanyang Technological University
+oa:W4385570095,Rico Sennrich,University of Edinburgh,University of Zurich
+oa:W4385570095,Thierry Declerck,German Research Centre for Artificial Intelligence,DFKI GmbH
+oa:W4385570095,Eduard Hovy,Carnegie Mellon University,University of Melbourne
+oa:W4385570095,Simon Krek,University of Ljubljana,Jožef Stefan Institute
+oa:W4385570095,Simone Tedeschi,Sapienza University of Rome,Babelscape
+oa:W4385570154,Yan Zhou,Chinese Academy of Sciences,Tsinghua University
+oa:W4385570154,Yan Zhou,Institute of Computing Technology,Tsinghua University
+oa:W4385570218,Mario Giulianelli,University of Oslo,University of Amsterdam
+oa:W4385570218,Andrey Kutuzov,University of Amsterdam,University of Oslo
+oa:W4385570218,Iris Luden,University of Oslo,University of Amsterdam
+oa:W4385570218,Raquel Fernandez,University of Oslo,"ILLC, University of Amsterdam"
+oa:W4385570234,Pat Verga,Google DeepMind (United Kingdom),Google
+oa:W4385570306,Yeon Seonwoo,Zhejiang University,"KAIST, Korea Advanced Institute of Science and Technology"
+oa:W4385570306,Guoyin Wang,Amazon (United States),Amazon Search Science and AI
+oa:W4385570306,Guoyin Wang,Zhejiang University,Amazon Search Science and AI
+oa:W4385570306,Sajal Choudhary,Amazon (United States),University of Pennsylvania
+oa:W4385570306,Sajal Choudhary,Zhejiang University,University of Pennsylvania
+oa:W4385570306,Sunghyun Park,Amazon (United States),Amazon Alexa AI
+oa:W4385570306,Sunghyun Park,Zhejiang University,Amazon Alexa AI
+oa:W4385570306,Alice Oh,Zhejiang University,KAIST
+oa:W4385570306,Changmin Seo,Amazon (United States),Amazon
+oa:W4385570306,Changmin Seo,Zhejiang University,Amazon
+oa:W4385570306,Xiang Li,Amazon (United States),Amazon
+oa:W4385570306,Xiang Li,Zhejiang University,Amazon
+oa:W4385570306,Jiwei Li,Zhejiang University,Shannon.AI
+oa:W4385570306,Puyang Xu,Amazon (United States),Mobvoi
+oa:W4385570306,Puyang Xu,Zhejiang University,Mobvoi
+oa:W4385570311,Nanyun Peng,Tsinghua University,"University of California, Los Angeles"
+oa:W4385570311,Kuan-Hao Huang,Tsinghua University,"University of California, Los Angeles"
+oa:W4385570311,Wenxin Cheng,Tsinghua University,"University of California, Los Angeles"
+oa:W4385570311,Prem Natarajan,University of Southern California,Amazon / Alexa
+oa:W4385570311,Kai-Wei Chang,Tsinghua University,UCLA
+oa:W4385570356,Yekyung Kim,University of Minnesota,42dot
+oa:W4385570356,Jinwoo Shin,University of Minnesota,KAIST
+oa:W4385570360,Jie Cai,Baidu (China),Peking University
+oa:W4385570480,Fei Wu,Shanghai Advanced Research Institute,Zhejiang University
+oa:W4385570480,Fei Wu,Shanghai Artificial Intelligence Laboratory,Zhejiang University
+oa:W4385570480,Shiliang Pu,Zhejiang University,Hikvision Research Institute
+oa:W4385570486,Min Zhang,University of Macau,Harbin Institute of Technology (Shenzhen)
+oa:W4385570486,Xuebo Liu,University of Macau,"Harbin Institute of Technology, Shenzhen"
+oa:W4385570494,Qing Liao,Peng Cheng Laboratory,Harbin Institute of Technology(Shenzhen)
+oa:W4385570494,Binxing Fang,Peng Cheng Laboratory,"Harbin Institute of Technology, Shenzhen"
+oa:W4385570513,Sangdoo Yun,Seoul National University,Naver AI Lab
+oa:W4385570513,Sangdoo Yun,NAVER Cloud (South Korea),Naver AI Lab
+oa:W4385570513,Sangdoo Yun,Naver (South Korea),Naver AI Lab
+oa:W4385570550,Yu-An Chung,Carnegie Mellon University,Massachusetts Institute of Technology
+oa:W4385570550,Hirofumi Inaguma,Carnegie Mellon University,Meta AI
+oa:W4385570550,Yun Tang,Carnegie Mellon University,Facebook
+oa:W4385570550,Juan Pino,Carnegie Mellon University,Facebook
+oa:W4385570550,Sravya Popuri,Carnegie Mellon University,Meta
+oa:W4385570550,Peng-Jen Chen,Carnegie Mellon University,Meta Inc.
+oa:W4385570550,Ann Lee,Carnegie Mellon University,Meta AI
+oa:W4385570550,Changhan Wang,Carnegie Mellon University,Meta - Fundamental AI Research (FAIR)
+oa:W4385570550,Ilia Kulikov,Carnegie Mellon University,Meta AI
+oa:W4385570557,Yu Zhou,Chinese Academy of Sciences,CASIA
+oa:W4385570557,Yu Zhou,Institute of Automation,CASIA
+oa:W4385570713,Tianyu Liu,Tencent (China),Peking University
+oa:W4385570814,Yingjie Li,University of Illinois Chicago,Westlake University
+oa:W4385570844,Guangsheng Bao,Zhejiang University,Westlake University
+oa:W4385570866,Rujun Han,Amazon (United States),Amazon
+oa:W4385570910,Danqi Chen,New York University,Princeton University
+oa:W4385570940,Wei Luo,Alibaba DAMO Academy (China),Alibaba
+oa:W4385570940,Jing Wu,Alibaba DAMO Academy (China),Alibaba
+oa:W4385570940,Kai Fan,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4385570940,Zhongqiang Huang,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4385570942,Chongyang Tao,Microsoft (United States),Microsoft Corporation
+oa:W4385570942,Tao Shen,Peking University,University of Technology Sydney
+oa:W4385570970,Lingwei Wei,Institute of Information Engineering,University of Chinese Academy of Sciences
+oa:W4385570995,Ariel Gera,IBM (United States),IBM Research AI
+oa:W4385570995,Roni Friedman,IBM (United States),IBM Research
+oa:W4385570995,Noam Slonim,IBM (United States),IBM Research
+oa:W4385570995,Chulaka Gunasekara,IBM (United States),IBM Research
+oa:W4385570995,Eyal Shnarch,IBM (United States),IBM Research
+oa:W4385570995,Ofir Arviv,IBM (United States),The Hebrew University of Jerusalem
+oa:W4385570995,Benjamin Sznajder,IBM (United States),IBM Research
+oa:W4385571046,Minlie Huang,State Key Laboratory of Intelligent Technology and Systems,Tsinghua University
+oa:W4385571046,Minlie Huang,Beijing National Research Center for Information Science and Technology,Tsinghua University
+oa:W4385571075,Christian Bauckhage,Fraunhofer Institute for Intelligent Analysis and Information Systems,University of Bonn / Fraunhofer IAIS
+oa:W4385571075,Pascal Welke,TU Wien,University of Bonn
+oa:W4385571076,Lingpeng Kong,Shanghai Artificial Intelligence Laboratory,The University of Hong Kong
+oa:W4385571076,Yaoxiang Wang,Shanghai Artificial Intelligence Laboratory,Xiamen University
+oa:W4385571076,Yaoxiang Wang,University of Hong Kong,Xiamen University
+oa:W4385571076,Jiacheng Ye,Shanghai Artificial Intelligence Laboratory,Fudan University
+oa:W4385571076,Jiacheng Ye,University of Hong Kong,Fudan University
+oa:W4385571076,Zhiyong Wu,University of Hong Kong,Shanghai AI Lab
+oa:W4385571080,Jieming Wang,Fields Institute for Research in Mathematical Sciences,Nanjing University of Science and Technology
+oa:W4385571080,Jianfei Yu,Fields Institute for Research in Mathematical Sciences,Nanjing University of Science and Technology
+oa:W4385571080,Ziyan Li,Fields Institute for Research in Mathematical Sciences,Nanjing University of Science and Technology
+oa:W4385571080,Rui Xia,Fields Institute for Research in Mathematical Sciences,Nanjing University of Science and Technology
+oa:W4385571140,Shafiq Joty,Yale University,Nanyang Technological University; Salesforce AI Research
+oa:W4385571140,Shafiq Joty,Salesforce (United States),Nanyang Technological University; Salesforce AI Research
+oa:W4385571140,Alex Fabbri,Salesforce (United States),Salesforce AI Research
+oa:W4385571140,Caiming Xiong,Salesforce (United States),Salesforce
+oa:W4385571140,Chien-Sheng Wu,Salesforce (United States),Salesforce
+oa:W4385571159,Kaitao Song,Microsoft Research Asia (China),Microsoft Research
+oa:W4385571159,Kaitao Song,Zhejiang University,Microsoft Research
+oa:W4385571159,Xu Tan,The University of Sydney,Microsoft Research Asia
+oa:W4385571159,Xu Tan,Zhejiang University,Microsoft Research Asia
+oa:W4385571159,Dongsheng Li,Microsoft Research Asia (China),MSRA
+oa:W4385571159,Dongsheng Li,Zhejiang University,MSRA
+oa:W4385571183,Raghav Jain,Indian Institute of Technology Patna,NLP Researcher
+oa:W4385571205,Yafu Li,Zhejiang University,Westlake University
+oa:W4385571205,Shuming Shi,Westlake University,Tencent AI Lab
+oa:W4385571205,Shuming Shi,Zhejiang University,Tencent AI Lab
+oa:W4385571205,Leyang Cui,Westlake University,Tencent AI LAB
+oa:W4385571205,Leyang Cui,Zhejiang University,Tencent AI LAB
+oa:W4385571205,Yue Zhang,Zhejiang University,Westlake University
+oa:W4385571205,Jianhao Yan,Zhejiang University,Westlake University
+oa:W4385571205,Wei Bi,Westlake University,Tencent AI Lab
+oa:W4385571205,Wei Bi,Zhejiang University,Tencent AI Lab
+oa:W4385571205,Yongjing Yin,Zhejiang University,Westlake University
+oa:W4385571224,Congcong Jiang,East China Normal University,Huatai Securities Co. Ltd
+oa:W4385571339,Qifan Wang,Meta (United States),Meta AI
+oa:W4385571374,Xiangliang Zhang,King Abdullah University of Science and Technology,University of Notre Dame
+oa:W4385571374,Chongyang Tao,Microsoft (United States),Microsoft Corporation
+oa:W4385571374,Mingzhe Li,Ant Group (China),Peking University
+oa:W4385571374,Xiuying Chen,King Abdullah University of Science and Technology,KAUST
+oa:W4385571433,Ishan Jindal,IBM (United States),IBM Research
+oa:W4385571433,Yunyao Li,Apple (United States),Apple
+oa:W4385571533,Yu Zhou,Chinese Academy of Sciences,CASIA
+oa:W4385571533,Yu Zhou,Institute of Automation,CASIA
+oa:W4385571568,Yuanchi Zhang,Beijing National Research Center for Information Science and Technology,Tsinghua University
+oa:W4385571568,Maosong Sun,Beijing National Research Center for Information Science and Technology,Tsinghua University
+oa:W4385571568,Peng Li,Shanghai Artificial Intelligence Laboratory,"Institute for AI Industry Research (AIR), Tsinghua University, China"
+oa:W4385571647,Vikas Chandra,Meta (United States),Meta
+oa:W4385571647,Ernie Chang,Meta (United States),Meta AI
+oa:W4385571647,Pierce Chuang,Meta (United States),Facebook
+oa:W4385571647,Yangyang Shi,Meta (United States),Meta AI
+oa:W4385571647,Changsheng Zhao,Meta (United States),Meta
+oa:W4385571647,Biing Juang,Meta (United States),Georgia Institute of Technology
+oa:W4385571679,Yexing Du,Tsinghua University,Beijing University of Chemical Technology
+oa:W4385571735,Dongyan Zhao,Peking University,pku.edu.cn
+oa:W4385571740,Mohit Bansal,Johns Hopkins University,University of North Carolina at Chapel Hill
+oa:W4385571740,Shijie Wu,University of North Carolina at Chapel Hill,Bloomberg L.P.
+oa:W4385571740,Shijie Wu,Johns Hopkins University,Bloomberg L.P.
+oa:W4385571740,David Rosenberg,University of North Carolina at Chapel Hill,Bloomberg LP
+oa:W4385571740,David Rosenberg,Johns Hopkins University,Bloomberg LP
+oa:W4385571740,Mark Dredze,University of North Carolina at Chapel Hill,Johns Hopkins University
+oa:W4385571740,Ozan Irsoy,University of North Carolina at Chapel Hill,Bloomberg
+oa:W4385571740,Ozan Irsoy,Johns Hopkins University,Bloomberg
+oa:W4385571740,Shiyue Zhang,Johns Hopkins University,The University of North Carolina at Chapel Hill
+oa:W4385571740,Steven Lu,University of North Carolina at Chapel Hill,Bloomberg
+oa:W4385571740,Steven Lu,Johns Hopkins University,Bloomberg
+oa:W4385571757,Yu Cheng,Microsoft (United States),Microsoft Research
+oa:W4385571792,Liang Ma,Dataminr (United States),Dataminr
+oa:W4385571792,Joel Tetreault,Dataminr (United States),Dataminr
+oa:W4385571792,Alejandro Jaimes,Dataminr (United States),Dataminr
+oa:W4385571792,Shihao Ran,Dataminr (United States),Dataminr
+oa:W4385571792,Ke Zhang,Dataminr (United States),"Dataminr, inc"
+oa:W4385571792,Di Lu,Dataminr (United States),Dataminr
+oa:W4385571792,Robert L Logan IV,Dataminr (United States),Dataminr
+oa:W4385571861,Min Yang,Shenzhen Institutes of Advanced Technology,Chinese Academy of Sciences
+oa:W4385571861,Binyuan Hui,Alibaba Group (Cayman Islands),Alibaba Group
+oa:W4385571861,Binyuan Hui,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4385571861,Yongbin Li,Chinese Academy of Sciences,Alibaba Group
+oa:W4385571861,Yongbin Li,Alibaba Group (Cayman Islands),Alibaba Group
+oa:W4385571861,Yongbin Li,Shenzhen Institutes of Advanced Technology,Alibaba Group
+oa:W4385571861,Yongbin Li,University of Chinese Academy of Sciences,Alibaba Group
+oa:W4385571861,Yongbin Li,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4385571861,Fei Huang,Alibaba Group (Cayman Islands),Alibaba DAMO Academy
+oa:W4385571861,ZhiChao Yin,Chinese Academy of Sciences,The University of Science and Technology of China
+oa:W4385571861,ZhiChao Yin,Shenzhen Institutes of Advanced Technology,The University of Science and Technology of China
+oa:W4385571861,Yunshui Li,Alibaba Group (Cayman Islands),Chinese Academy of Sciences
+oa:W4385571861,Yunshui Li,Shenzhen Institutes of Advanced Technology,Chinese Academy of Sciences
+oa:W4385571861,Yunshui Li,Alibaba DAMO Academy (China),Chinese Academy of Sciences
+oa:W4385571861,Yunshui Li,Alibaba Group (China),Chinese Academy of Sciences
+oa:W4385571873,Pengfei Liu,Shanghai Jiao Tong University,Carnegie Mellon University
+oa:W4385571898,Lajanugen Logeswaran,University of Michigan,LG AI Research
+oa:W4385571898,Lajanugen Logeswaran,University of Illinois Chicago,LG AI Research
+oa:W4385571898,Moontae Lee,University of Michigan,University of Illinois at Chicago
+oa:W4385571898,Honglak Lee,University of Illinois Chicago,LG AI Research/ University of Michigan
+oa:W4385571944,Liunian Harold Li,Allen Institute for Artificial Intelligence,UCLA
+oa:W4385571944,Xiang Ren,"University of California, Los Angeles",University of Southern California
+oa:W4385571944,Xiang Ren,Allen Institute for Artificial Intelligence,University of Southern California
+oa:W4385571944,Jack Hessel,"University of California, Los Angeles",Allen AI
+oa:W4385571944,Jack Hessel,Yonsei University,Allen AI
+oa:W4385571944,Jack Hessel,University of Washington,Allen AI
+oa:W4385571944,Kai-Wei Chang,University of Southern California,UCLA
+oa:W4385571944,Kai-Wei Chang,Yonsei University,UCLA
+oa:W4385571944,Kai-Wei Chang,University of Washington,UCLA
+oa:W4385571944,Kai-Wei Chang,Allen Institute for Artificial Intelligence,UCLA
+oa:W4385571944,Youngjae Yu,Yonsei University,Allen Institute for AI
+oa:W4385571944,Youngjae Yu,University of Washington,Allen Institute for AI
+oa:W4385571944,Yejin Choi,"University of California, Los Angeles",University of Washington
+oa:W4385571944,Yejin Choi,Allen Institute for Artificial Intelligence,University of Washington
+oa:W4385571993,Seolhwa Lee,Technische Universität Darmstadt,University of Copenhagen
+oa:W4385572024,Yafu Li,Zhejiang University,Westlake University
+oa:W4385572024,Yongjing Yin,Zhejiang University,Westlake University
+oa:W4385572057,Abhilash Potluri,The University of Texas at Austin,University of Illinois Urbana-Champaign
+oa:W4385572077,Wenge Rong,State Key Laboratory of Software Development Environment,Beihang University
+oa:W4385572098,Yoav Goldberg,Allen Institute for Artificial Intelligence,Bar Ilan University
+oa:W4385572155,Sameer Singh,Google (United States),"University of California, Irvine"
+oa:W4385572155,Tamanna Hossain,Google (United States),"University of California, Irvine (UCI)"
+oa:W4385572155,Sunipa Dev,Google (United States),Google Research
+oa:W4385572155,Sunipa Dev,"University of California, Irvine",Google Research
+oa:W4385572164,Wayne Xin Zhao,Renmin University of China,RUC
+oa:W4385572257,Jaeyoung Do,Amazon (United States),Amazon Alexa AI
+oa:W4385572257,Tara Taghavi,Amazon (United States),Amazon
+oa:W4385572294,Yang Zhou,Institute of High Performance Computing,"IHPC, A*STAR"
+oa:W4385572302,Yang Liu,Beijing Institute for General Artificial Intelligence,Peking University
+oa:W4385572302,Hailin Jin,Adobe Systems (United States),Adobe Research
+oa:W4385572331,Taesung Lee,IBM (United States),IBM T. J. Watson Research Center
+oa:W4385572331,Ambrish Rawat,IBM (United States),Research Scientist
+oa:W4385572331,Yufang Hou,IBM (United States),IBM Research
+oa:W4385572331,Giulio Zizzo,IBM (United States),IBM Research
+oa:W4385572370,Dongyan Zhao,Peking University,pku.edu.cn
+oa:W4385572370,Dongyan Zhao,Beijing Institute for General Artificial Intelligence,pku.edu.cn
+oa:W4385572370,Mingzhe Li,Ant Group (China),Peking University
+oa:W4385572370,Xiuying Chen,King Abdullah University of Science and Technology,KAUST
+oa:W4385572429,Carter Blum,Bloomberg (United States),Bloomberg LP
+oa:W4385572429,Carter Blum,University of Utah,Bloomberg LP
+oa:W4385572429,Temma Choji,Bloomberg (United States),Bloomberg
+oa:W4385572429,Temma Choji,University of Utah,Bloomberg
+oa:W4385572429,Alakananda Vempala,Bloomberg (United States),Bloomberg
+oa:W4385572429,Alakananda Vempala,University of Utah,Bloomberg
+oa:W4385572429,Shalin Shah,Bloomberg (United States),Bloomberg LP
+oa:W4385572429,Shalin Shah,University of Utah,Bloomberg LP
+oa:W4385572429,Yingjie Fei,Bloomberg (United States),Bloomberg
+oa:W4385572429,Yingjie Fei,University of Utah,Bloomberg
+oa:W4385572438,Vishesh Kakarala,Amazon (United States),Amazon
+oa:W4385572438,Charith Peris,Amazon (United States),Amazon
+oa:W4385572438,Swetha Ranganath,Microsoft (United States),Microsoft
+oa:W4385572438,Liam Urbach,Amazon (United States),Amazon
+oa:W4385572438,Christopher Hench,Amazon (United States),Amazon
+oa:W4385572438,Misha Britan,Amazon (United States),Amazon
+oa:W4385572438,Kay Rottmann,Amazon (United States),Amazon
+oa:W4385572438,Scott Mackie,Amazon (United States),Amazon
+oa:W4385572438,Wouter Leeuwis,Amazon (United States),Amazon
+oa:W4385572438,Jack FitzGerald,Amazon (United States),Amazon.com
+oa:W4385572438,Gokhan Tur,Amazon (United States),Amazon
+oa:W4385572438,Richa Singh,Amazon (United States),Amazon
+oa:W4385572453,Shreya Pathak,Google DeepMind (United Kingdom),"Indian Institute of Technology, Bombay"
+oa:W4385572461,Gyuwan Kim,Korea Advanced Institute of Science and Technology,"University of California, Santa Barbara"
+oa:W4385572461,Gyuwan Kim,Cornell University,"University of California, Santa Barbara"
+oa:W4385572461,Kihyo Park,"University of California, Santa Barbara",Cornell University
+oa:W4385572461,Kihyo Park,Korea Advanced Institute of Science and Technology,Cornell University
+oa:W4385572461,Alice Oh,"University of California, Santa Barbara",KAIST
+oa:W4385572461,Alice Oh,Cornell University,KAIST
+oa:W4385572461,Junhee Cho,Google (United States),Google
+oa:W4385572461,Junhee Cho,"University of California, Santa Barbara",Google
+oa:W4385572461,Junhee Cho,Korea Advanced Institute of Science and Technology,Google
+oa:W4385572461,Junhee Cho,Cornell University,Google
+oa:W4385572461,Minjoon Seo,"University of California, Santa Barbara",KAIST
+oa:W4385572461,Minjoon Seo,Cornell University,KAIST
+oa:W4385572461,Sungjoon Park,"University of California, Santa Barbara",SoftlyAI
+oa:W4385572461,Sungjoon Park,Korea Advanced Institute of Science and Technology,SoftlyAI
+oa:W4385572461,Sungjoon Park,Cornell University,SoftlyAI
+oa:W4385572461,Soyoung Yoon,"University of California, Santa Barbara",Korea Advanced Institute of Science and Technology
+oa:W4385572461,Soyoung Yoon,Cornell University,Korea Advanced Institute of Science and Technology
+oa:W4385572507,Zaiqing Nie,Peking University,Tsinghua University
+oa:W4385572507,Yuanjian Xu,Beijing Academy of Artificial Intelligence,Peking University
+oa:W4385572507,Yuanjian Xu,Tsinghua University,Peking University
+oa:W4385572507,Jiahuan Zhang,Peking University,Tsinghua university
+oa:W4385572507,Jiahuan Zhang,Beijing Academy of Artificial Intelligence,Tsinghua university
+oa:W4385572507,Peng Li,Peking University,"Institute for AI Industry Research (AIR), Tsinghua University, China"
+oa:W4385572560,Cong Liu,University of Science and Technology of China,iFLYTEK Research
+oa:W4385572602,Elad Venezian,IBM (United States),IBM Research
+oa:W4385572602,Noam Slonim,IBM (United States),IBM Research
+oa:W4385572602,Leshem Choshen,IBM (United States),"IBM, Hebrew University Jerusalem Israel"
+oa:W4385572602,Colin Raffel,University of North Carolina at Chapel Hill,University of North Carolina/Hugging Face
+oa:W4385893928,Rong Bao,Shanghai Artificial Intelligence Laboratory,Fudan University
+oa:W4392083945,Pierre Colombo,Université Paris-Saclay,CentraleSupelec
+oa:W4392083945,Pierre Colombo,Mathématiques et Informatique pour la Complexité et les Systèmes,CentraleSupelec
+oa:W4402667003,Ting Cao,Microsoft Research Asia (China),Microsoft Research
+oa:W4402667003,Jiaqi Guo,Microsoft Research Asia (China),Microsoft
+oa:W4402667003,Ningyi Xu,Shanghai Jiao Tong University,Shanghai Jiaotong University
+oa:W4402667037,Mikel Artetxe,"University of California, Los Angeles",Reka AI
+oa:W4402667037,Madian Khabsa,"University of California, Los Angeles",Facebook
+oa:W4402667037,Luke Zettlemoyer,"University of California, Los Angeles","University of Washington, Facebook and Meta"
+oa:W4402667037,Davis Liang,"University of California, Los Angeles",Abridge
+oa:W4402667037,Benjamin Muller,"University of California, Los Angeles",Meta
+oa:W4402667058,Matthias Grabmair,Technical University of Munich,Technische Universität München
+oa:W4402667058,Oana Ichim,Graduate Institute of International and Development Studies,University of Massachusetts at Amherst
+oa:W4402667058,Barbara Plank,Munich Center for Machine Learning,Ludwig-Maximilians-Universität München and IT University of Copenhagen
+oa:W4402667063,Wenpeng Yin,Chinese University of Hong Kong,Pennsylvania State University
+oa:W4402667063,Lifu Huang,Pennsylvania State University,Virginia Tech
+oa:W4402667063,Lifu Huang,Chinese University of Hong Kong,Virginia Tech
+oa:W4402667063,Qifan Wang,Pennsylvania State University,Meta AI
+oa:W4402667063,Qifan Wang,Chinese University of Hong Kong,Meta AI
+oa:W4402667063,Yu Cheng,Pennsylvania State University,The Chinese University of Hong Kong
+oa:W4402667090,Yiren Jian,Dartmouth College,ByteDance Inc.
+oa:W4402667090,Tingkai Liu,ByteDance (China),Cold Spring Harbor Laboratory
+oa:W4402667118,Xupeng Miao,Tsinghua University,Purdue University
+oa:W4402667118,Zhihao Jia,Tsinghua University,"School of Computer Science, Carnegie Mellon University"
+oa:W4402667118,Dan Zhao,Tsinghua Shenzhen International Graduate School,Peng Cheng Laborotary
+oa:W4402667144,Prince Jha,Indian Institute of Technology Patna,Singapore University of Technology and Design
+oa:W4402667144,Aman Chadha,Amazon (United States),Amazon
+oa:W4402670978,Lyuhao Chen,Carnegie Mellon University,Zhejiang University
+oa:W4402670978,Arman Cohan,Allen Institute for Artificial Intelligence,Yale University
+oa:W4402670978,Hongjun Liu,New York University,"College of Computer Science and Technology, Zhejiang University"
+oa:W4402671103,Sauvik Das,Georgia Institute of Technology,Carnegie Mellon University
+oa:W4402671103,Anubha Kabra,Georgia Institute of Technology,Bloomberg
+oa:W4402671103,Anubha Kabra,Carnegie Mellon University,Bloomberg
+oa:W4402671103,Alan Ritter,Carnegie Mellon University,Georgia Institute of Technology
+oa:W4402671103,Wei Xu,Carnegie Mellon University,Georgia Institute of Technology
+oa:W4402671103,Isadora Krsek,Georgia Institute of Technology,"CMU, Carnegie Mellon University"
+oa:W4402671103,Yao Dou,Carnegie Mellon University,Georgia Institute of Technology
+oa:W4402671120,Maria Bielikova,Brno University of Technology,Kempelen Institute of Intelligent Technologies
+oa:W4402671120,Jakub Simko,Brno University of Technology,Kempelen Institute of Intelligent Technologies
+oa:W4402671120,Ivan Srba,Brno University of Technology,Kempelen Institute of Intelligent Technologies
+oa:W4402671143,Li Du,Beijing Academy of Artificial Intelligence,Harbin Institute of Technology
+oa:W4402671154,Clara Meister,University of Cambridge,Swiss Federal Institute of Technology
+oa:W4402671154,Thomas Hofmann,University of Cambridge,Swiss Federal Institute of Technology
+oa:W4402671154,Andreas Vlachos,ETH Zurich,University of Cambridge
+oa:W4402671154,Tiago Pimentel,University of Cambridge,"Department of Computer Science, ETHZ - ETH Zurich"
+oa:W4402671155,Fengqing Jiang,University of Chicago,University of Washington
+oa:W4402671155,Bo Li,University of Washington,"University of Illinois, Urbana Champaign"
+oa:W4402671155,Bo Li,University of Chicago,"University of Illinois, Urbana Champaign"
+oa:W4402671155,Bo Li,Western Washington University,"University of Illinois, Urbana Champaign"
+oa:W4402671159,Tianqi Zhang,Nanyang Technological University,"Tsinghua University, Tsinghua University"
+oa:W4402671159,Tianwei Zhang,Tsinghua University,Nanyang Technological University
+oa:W4402671159,Shujian Yang,Shanghai Jiao Tong University,Shanghai Jiaotong University
+oa:W4402671159,Zhixuan Fang,Shanghai Qi Zhi Institute,"Tsinghua University, Tsinghua University"
+oa:W4402671160,Haogeng Liu,Institute of Automation,University of the Chinese Academy of Sciences
+oa:W4402671160,Tingkai Liu,ByteDance (China),Cold Spring Harbor Laboratory
+oa:W4402671217,Ian Pratt-Hartmann,University of Manchester,University of Opole
+oa:W4402671286,Niklas Muennighoff,University of Washington,Contextual AI
+oa:W4402671286,Jennifer Dumas,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Jennifer Dumas,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Khyathi Chandu,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Khyathi Chandu,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Jesse Dodge,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Jesse Dodge,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Xinxi Lyu,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4402671286,Valentin Hofmann,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Valentin Hofmann,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Abhilasha Ravichander,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Abhilasha Ravichander,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Sachin Kumar,Allen Institute for Artificial Intelligence,"Ohio State University, Columbus"
+oa:W4402671286,Sachin Kumar,Carnegie Mellon University,"Ohio State University, Columbus"
+oa:W4402671286,Sachin Kumar,"University of California, Berkeley","Ohio State University, Columbus"
+oa:W4402671286,Kyle Richardson,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Kyle Richardson,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Ben Bogin,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Ben Bogin,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Emma Strubell,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4402671286,Ananya Jha,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Ananya Jha,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Dirk Groeneveld,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Dirk Groeneveld,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Luca Soldaini,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4402671286,Kyle Lo,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Kyle Lo,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Li Lucy,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4402671286,Ian Magnusson,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Ian Magnusson,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Yanai Elazar,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Yanai Elazar,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Russell Authur,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Russell Authur,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Nathan Lambert,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Nathan Lambert,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Aakanksha Naik,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Aakanksha Naik,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Jacob Morrison,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Jacob Morrison,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Crystal Nam,Carnegie Mellon University,Allen Institute for Artificial Intelligence
+oa:W4402671286,Crystal Nam,"University of California, Berkeley",Allen Institute for Artificial Intelligence
+oa:W4402671286,Matthew Peters,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4402671286,Noah Smith,Allen Institute for Artificial Intelligence,University of Washington
+oa:W4402671286,Noah Smith,Carnegie Mellon University,University of Washington
+oa:W4402671286,Noah Smith,"University of California, Berkeley",University of Washington
+oa:W4402671291,Roshan Sharma,Carnegie Mellon University,Google
+oa:W4402671291,Bhiksha Raj,Mohamed bin Zayed University of Artificial Intelligence,Carnegie Mellon University
+oa:W4402671297,Aohan Zeng,Zhipu AI (China),"Tsinghua University, Tsinghua University"
+oa:W4402671297,Shengyuan Wang,Zhipu AI (China),"Tsinghua University, Tsinghua University"
+oa:W4402671533,Dacheng Tao,Nanyang Technological University,University of Sydney
+oa:W4402671546,Parag Jain,Google DeepMind (United Kingdom),University of Edinburgh
+oa:W4402671546,Andreea Marzoca,University of Edinburgh,Google
+oa:W4402671554,Jared Moore,University of California San Diego,"Computer Science Department, Stanford University"
+oa:W4402671554,Douwe Kiela,University of California San Diego,Stanford University
+oa:W4402671554,Tristan Thrush,University of California San Diego,Stanford University
+oa:W4402671554,Christopher Potts,University of California San Diego,Stanford University
+oa:W4402671562,Roee Aharoni,Google (United States),Google
+oa:W4402671562,Gal Yona,Google (United States),"Research, Google"
+oa:W4402671562,Mor Geva,Google (United States),Tel Aviv University and Google Research
+oa:W4402671566,Elliott Ash,ETH Zurich,Swiss Federal Institute of Technology
+oa:W4402671566,Elliott Ash,McGill University,Swiss Federal Institute of Technology
+oa:W4402671566,Elliott Ash,Carnegie Mellon University,Swiss Federal Institute of Technology
+oa:W4402671566,Andrew Piper,ETH Zurich,McGill University
+oa:W4402671566,Andrew Piper,Carnegie Mellon University,McGill University
+oa:W4402671572,Wenqiang Lei,Ministry of Education of the People's Republic of China,Sichuan University
+oa:W4402671572,Chen Huang,Ministry of Education of the People's Republic of China,Sichuan University
+oa:W4402671602,Xishan Zhang,Institute of Computing Technology,", Chinese Academy of Sciences and , Cambricon Techonologies"
+oa:W4402671602,Shaohui Peng,Institute of Software,", Chinese Academy of Sciences"
+oa:W4402671611,Xinyao Niu,The University of Melbourne,Inspir.ai
+oa:W4402671614,Paul Pu Liang,Carnegie Mellon University,Massachusetts Institute of Technology
+oa:W4402671628,Wenqiang Lei,Ministry of Education of the People's Republic of China,Sichuan University
+oa:W4402671628,Hongru Liang,Ministry of Education of the People's Republic of China,Sichuan University
+oa:W4402671637,Qi Liu,Shanghai Jiao Tong University,Shanghai Jiaotong University
+oa:W4402671637,Hongsheng Li,Centre for Perceptual and Interactive Intelligence,The Chinese University of Hong Kong
+oa:W4402671637,Yuhui Xu,Salesforce (United States),SalesForce.com
+oa:W4402671663,Weize Kong,Google (United States),Google
+oa:W4402671663,Michael Bendersky,Google (United States),Google
+oa:W4402671663,Zixuan Ke,University of Illinois Chicago,Salesforce AI Research
+oa:W4402671663,Mingyang Zhang,Google (United States),Google
+oa:W4402671665,Hongguang Zhang,PLA Academy of Military Science,"Systems Engineering Institute, AMS"
+oa:W4402671665,Kainan Zhao,PLA Academy of Military Science,AMS
+oa:W4402671694,Vera Demberg,Max Planck Institute for Informatics,Universität des Saarlandes
+oa:W4402671694,Vera Demberg,Saarland University,Universität des Saarlandes
+oa:W4402671698,Xiaohan Zhang,Zhipu AI (China),"Beijing Knowledge Atlas Technology Co., Ltd."
+oa:W4402671698,Yifan Xu,Zhipu AI (China),"Tsinghua University, Tsinghua University"
+oa:W4402671698,Shengyuan Wang,Zhipu AI (China),"Tsinghua University, Tsinghua University"
+oa:W4402671705,Karim Lasri,École Normale Supérieure - PSL,The World Bank
+oa:W4402671717,Furu Wei,Microsoft Research Asia (China),Microsoft Research
+oa:W4402671718,Fengqing Jiang,Pennsylvania State University,University of Washington
+oa:W4402671718,Fengqing Jiang,Allen Institute for Artificial Intelligence,University of Washington
+oa:W4402671718,Zhangchen Xu,Pennsylvania State University,University of Washington
+oa:W4402671718,Zhangchen Xu,Allen Institute for Artificial Intelligence,University of Washington
+oa:W4402671718,Radha Poovendran,Pennsylvania State University,"University of Washington, Seattle"
+oa:W4402671718,Radha Poovendran,Allen Institute for Artificial Intelligence,"University of Washington, Seattle"
+oa:W4402671730,Jiangjie Chen,Fudan University,ByteDance Inc.
+oa:W4402671733,Roee Aharoni,Google (United States),Google
+oa:W4402671733,Alon Jacovi,Google (United States),Google
+oa:W4402671733,Alon Jacovi,Bar-Ilan University,Google
+oa:W4402671733,Mor Geva,Google (United States),Tel Aviv University and Google Research
+oa:W4402671733,Yonatan Bitton,Google (United States),Google
+oa:W4402671733,Jonathan Herzig,Google (United States),"Research, Google"
+oa:W4402671733,Michael Collins,Google DeepMind (United Kingdom),Google and Columbia University
+oa:W4402671755,Furu Wei,Microsoft Research Asia (China),Microsoft Research
+oa:W4402671762,Xuan-Phi Nguyen,Alibaba Group (Cayman Islands),Alibaba Group
+oa:W4402671762,Xuan-Phi Nguyen,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4402671762,Lidong Bing,Alibaba Group (Cayman Islands),Alibaba Group
+oa:W4402671762,Lidong Bing,Alibaba DAMO Academy (China),Alibaba Group
+oa:W4402671771,Jian Yang,Beihang University,Alibaba Group
+oa:W4402671771,Tongliang Li,Beihang University,Beijing Information Science and Technology University
+oa:W4402671771,Jiaqi Bai,Beihang University,Guangzhou University
+oa:W4402671775,Petr Babkin,JPMorgan Chase & Co (United States),J.P. Morgan Chase
+oa:W4402671775,Yulong Pei,JPMorgan Chase & Co (United States),J.P. Morgan Chase
+oa:W4402671775,Xiaomo Liu,JPMorgan Chase & Co (United States),JP Morgan AI Research
+oa:W4402671775,Dongsheng Wang,JPMorgan Chase & Co (United States),JPMorgan AI Research
+oa:W4402671775,Zhiqiang Ma,JPMorgan Chase & Co (United States),J.P. Morgan Chase
+oa:W4402671775,Armineh Nourbakhsh,JPMorgan Chase & Co (United States),"School of Computer Science, Carnegie Mellon University and J.P. Morgan Chase"
+oa:W4402671775,Natraj Raman,JPMorgan Chase & Co (United States),J.P. Morgan Chase
+oa:W4402671775,Mathieu Sibue,JPMorgan Chase & Co (United States),J.P. Morgan Chase
+oa:W4402671787,Maarten Sap,Allen Institute for Artificial Intelligence,Carnegie Mellon University
+oa:W4402671787,Kaitlyn Zhou,Allen Institute for Artificial Intelligence,Stanford University
+oa:W4402671825,Jinglong Gao,Harbin Institute of Technology,Research Center for Social Computing and Information Retrieval
+oa:W4402671850,Tong He,Chinese University of Hong Kong,Amazon
+oa:W4402671850,Shuai Zhang,University of Chicago,Amazon
+oa:W4402671871,Jiangjie Chen,East China Normal University,ByteDance Inc.
+oa:W4402671871,Deqing Yang,East China Normal University,Fudan University
+oa:W4402671871,Yanghua Xiao,East China Normal University,Fudan University
+oa:W4402671874,Deepak Gupta,Indian Institute of Technology Dhanbad,University of Tromsø and Transmute AI Research
+oa:W4402671889,Zhihua Wen,National University of Defense Technology,National University of Defence Technology
+oa:W4402671915,Dahua Lin,Shanghai Artificial Intelligence Laboratory,The Chinese University of Hong Kong
+oa:W4402671915,Hang Yan,Chinese University of Hong Kong,AI lab
+oa:W4402671915,Hang Yan,Shanghai Artificial Intelligence Laboratory,AI lab
+oa:W4402671951,Yufei Huang,Beijing National Research Center for Information Science and Technology,"Tsinghua University, Tsinghua University"
+oa:W4402671951,Xu Han,Beijing National Research Center for Information Science and Technology,"Tsinghua University, Tsinghua University"
+oa:W4402671960,Jian Chen,The Hong Kong University of Science and Technology (Guangzhou),HSBC GPS LAB
+oa:W4402671969,Elliott Ash,ETH Zurich,Swiss Federal Institute of Technology
+oa:W4402671969,Markus Leippold,Swiss Finance Institute,University of Zurich
+oa:W4402671982,Mor Geva,Google (United States),Tel Aviv University and Google Research
+oa:W4402671994,Libo Qin,Central South University,Harbin Institute of Technology
+oa:W4402672004,Furu Wei,Microsoft (United States),Microsoft Research
+oa:W4402672004,Xiaolong Huang,Microsoft (United States),Microsoft
+oa:W4402672004,Nan Yang,Microsoft (United States),Microsoft Research Asia
+oa:W4402672004,Liang Wang,Microsoft (United States),Microsoft Research
+oa:W4402672020,Shang-Wen Li,The University of Texas at Austin,Facebook
+oa:W4402672020,Po-Yao Huang,The University of Texas at Austin,Meta
+oa:W4402672020,Abdelrahman Mohamed,The University of Texas at Austin,Rembrand Inc
+oa:W4402672021,Suman Banerjee,Indian Institute of Technology Bombay,Flipkart
+oa:W4402672026,Fei Huang,Tsinghua University,Alibaba Group
+oa:W4402672026,Peng Li,Shanghai Artificial Intelligence Laboratory,Tsinghua University
+oa:W4402672054,Yiming Qian,"Agency for Science, Technology and Research",IHPC
+oa:W4402672076,Yuanzhuo Wang,Institute of Computing Technology,Chinese Academy of Sciences
+oa:W4402672086,Soonwoo Kwon,Korea Advanced Institute of Science and Technology,Twelvelabs
+oa:W4402672093,Kaiyan Zhang,University of Colorado System,"Electronic Engineering, Tsinghua University"
+oa:W4402672094,David Schlangen,German Research Centre for Artificial Intelligence,University of Potsdam
+oa:W4402672094,Patrick Kahardipraja,"Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute",Fraunhofer HHI
+oa:W4402672100,Chaoya Jiang,Peking University,"Shanghai Jiaotong University, Wuhan University, Tsinghua University, Tsinghua University, Microsoft, University of the Chinese Academy of Sciences, Chinese Academy of Sciences, Beijing University of Aeronautics and Astronautics, South China University of Technology, SUN YAT-SEN UNIVERSITY, University of Electronic Science and Technology of China, Huazhong University of Science and Technology, Harbin Institute of Technology, Shandong University, nanjing university, Beijing University of Posts and Telecommunications, Shanghai Artificial Intelligence Laboratory, Shanghai University of Science and Technology, Tianjin University, Northeastern University, Southeast University, Xi’an Jiaotong University, Xiamen University, Fudan University, Renmin University of China, Nankai University, Meituan, Kuaishou- 快手科技, East China Normal University, Xi’an University of Electronic Science and Technology, Nanjing University of Aeronautics and Astronautics, Nanjing University of Science and Technology, Southern University of Science and Technology, Northwest Polytechnical University Xi’an, Chongqing University, Jilin University, Beijing Normal University, University of Science and Technology Beijing and Zhejiang University"
+oa:W4402684023,Heda Wang,Xiaohongshu (Little Red Book) (China),xiaohongshu
+oa:W4402684023,Boyuan Pan,Xiaohongshu (Little Red Book) (China),Xiaohongshu
+oa:W4402684023,Yao Hu,Xiaohongshu (Little Red Book) (China),"Zhejiang University, Tsinghua University"
+oa:W4402684023,Shaoxiong Feng,Xiaohongshu (Little Red Book) (China),Beijing Institute of Technology
+oa:W4402684025,Diya Li,Freenome (United States),Freenome
+oa:W4402684026,Xu Yang,Xidian University,Xi’an University of Electronic Science and Technology
+oa:W4402684033,Zhicheng Liu,ByteDance (China),Shanghai Jiaotong University
+oa:W4402684033,Liyan Kang,ByteDance (China),Xiamen University
+oa:W4402684033,Xingyuan Pan,ByteDance (China),University of Illinois at Urbana-Champaign
+oa:W4402684150,Yuwei Fang,Snap (United States),Snap Inc.
+oa:W4402684150,Francesco Barbieri,Snap (United States),Snap Inc.
+oa:W4402684150,Sergey Tulyakov,Snap (United States),Snap Inc.
+oa:W4402684346,Andrew Drozdov,University of Massachusetts Amherst,Databricks
+oa:W4403747725,Benjamin Piwowarski,Centre National de la Recherche Scientifique,"CNRS / ISIR, Sorbonne Université and CNRS"
+oa:W4403747725,Benjamin Piwowarski,Institut Systèmes Intelligents et de Robotique,"CNRS / ISIR, Sorbonne Université and CNRS"
+oa:W4403747725,Patrick Gallinari,Centre National de la Recherche Scientifique,Criteo AI Lab and Sorbonne Universite
+oa:W4403747725,Patrick Gallinari,Institut Systèmes Intelligents et de Robotique,Criteo AI Lab and Sorbonne Universite
+oa:W4404781695,Chaoya Jiang,Peking University,"Shanghai Jiaotong University, Wuhan University, Tsinghua University, Tsinghua University, Microsoft, University of the Chinese Academy of Sciences, Chinese Academy of Sciences, Beijing University of Aeronautics and Astronautics, South China University of Technology, SUN YAT-SEN UNIVERSITY, University of Electronic Science and Technology of China, Huazhong University of Science and Technology, Harbin Institute of Technology, Shandong University, nanjing university, Beijing University of Posts and Telecommunications, Shanghai Artificial Intelligence Laboratory, Shanghai University of Science and Technology, Tianjin University, Northeastern University, Southeast University, Xi’an Jiaotong University, Xiamen University, Fudan University, Renmin University of China, Nankai University, Meituan, Kuaishou- 快手科技, East China Normal University, Xi’an University of Electronic Science and Technology, Nanjing University of Aeronautics and Astronautics, Nanjing University of Science and Technology, Southern University of Science and Technology, Northwest Polytechnical University Xi’an, Chongqing University, Jilin University, Beijing Normal University, University of Science and Technology Beijing and Zhejiang University"
+oa:W4404781917,Camille Guinaudeau,Centre National de la Recherche Scientifique,Paris Saclay University
+oa:W4404781917,Camille Guinaudeau,Japanese-French Laboratory for Informatics,Paris Saclay University
+oa:W4404781917,Frederic Dufaux,Centre National de la Recherche Scientifique,CentraleSupelec
+oa:W4404781917,Frederic Dufaux,Université Paris-Saclay,CentraleSupelec
+oa:W4404781917,Frederic Dufaux,Laboratoire des signaux et systèmes,CentraleSupelec
+oa:W4404781917,Théo Gigant,Centre National de la Recherche Scientifique,CentraleSupelec
+oa:W4404781917,Théo Gigant,Université Paris-Saclay,CentraleSupelec
+oa:W4404781917,Théo Gigant,Laboratoire des signaux et systèmes,CentraleSupelec
+oa:W4404781926,Runzhe Zhan,Harbin Institute of Technology,University of Macau
+oa:W4404781952,Alon Jacovi,Bar-Ilan University,Google
+oa:W4404782083,Alexander Panchenko,AIRI - Artificial Intelligence Research Institute,Skoltech
+oa:W4404782083,Steffen Eger,University of Mannheim,University of Technology Nuremberg
+oa:W4404782083,Mikhail Seleznyov,AIRI - Artificial Intelligence Research Institute,Artificial Intelligence Research Institute and Skolkovo Institute of Science and Technology
+oa:W4404782216,Jiaxin Zhang,Intuit (United States),Intuit AI Research
+oa:W4404782216,Kamalika Das,Intuit (United States),Intuit
+oa:W4404782221,Ying Xu,Harvard University,University of Michigan - Ann Arbor
+oa:W4404782221,Yunyao Li,Northeastern University,Adobe Systems
+oa:W4404782251,Wenqi Shi,Georgia Institute of Technology,University of Texas Southwestern Medical Center
+oa:W4404782278,Jeesoo Bang,LG AI Research (South Korea),LG AI Research
+oa:W4404782278,Hyunkyung Bae,LG AI Research (South Korea),LG AI Research
+oa:W4404782278,Yongil Kim,LG AI Research (South Korea),Seoul National University
+oa:W4404782297,Joey Tianyi Zhou,"Agency for Science, Technology and Research",A*STAR Centre for Frontier AI Research
+oa:W4404782297,Joey Tianyi Zhou,Institute of High Performance Computing,A*STAR Centre for Frontier AI Research
+oa:W4404782309,Olga Zamaraeva,Universidade da Coruña,Universidad de La Coruña
+oa:W4404782325,Tong Liu,Munich Center for Machine Learning,Ludwig-Maximilians-Universität München
+oa:W4404782347,Bang Liu,Mila - Quebec Artificial Intelligence Institute,University of Montreal
+oa:W4404782356,Jun Yan,University of Southern California,Google
+oa:W4404782357,Zhihong Zhu,Peking University,Tencent
+oa:W4404782365,Ying Wei,Zhejiang University,Nanyang Technological University
+oa:W4404782365,Linqi Song,Zhejiang University,City University of Hong Kong
+oa:W4404782365,Defu Lian,City University of Hong Kong,University of Science and Technology of China
+oa:W4404782365,Chen Ma,University of Science and Technology of China,City University of Hong Kong
+oa:W4404782400,Wenzhi Wang,RIKEN,"Tohoku University, Tokyo Institute of Technology"
+oa:W4404782410,Harsh Jhamtani,The University of Texas at Austin,Microsoft
+oa:W4404782410,Patrick Xia,The University of Texas at Austin,Microsoft
+oa:W4404782410,Sam Thomson,Microsoft (United States),Microsoft
+oa:W4404782410,Jason Eisner,Microsoft (United States),Microsoft and Johns Hopkins University
+oa:W4404782410,Jacob Andreas,Microsoft (United States),Massachusetts Institute of Technology and Microsoft
+oa:W4404782410,Benjamin Van Durme,The University of Texas at Austin,Microsoft and Johns Hopkins University
+oa:W4404782410,Hao Fang,The University of Texas at Austin,Microsoft
+oa:W4404782410,Richard Shin,Microsoft (United States),Google
+oa:W4404782432,Xinyue Huo,University of Science and Technology of China,Huawei Technologies Ltd.
+oa:W4404782441,Furkan Şahinuç,Hessian Center for Artificial Intelligence,Technische Universität Darmstadt
+oa:W4404782441,Iryna Gurevych,Hessian Center for Artificial Intelligence,"Institute for Computer Science, Artificial Intelligence and Technology, Mohamed bin Zayed University of Artificial Intelligence and Technische Universität Darmstadt"
+oa:W4404782441,Yufang Hou,Hessian Center for Artificial Intelligence,Technische Universität Darmstadt and IBM Research Ireland
+oa:W4404782459,Enmao Diao,Duke University,ColAI
+oa:W4404782474,Yulan He,The Alan Turing Institute,"King’s College London, University of London"
+oa:W4404782572,Lili Qiu,Microsoft (United States),Microsoft
+oa:W4404782572,Huiqiang Jiang,Microsoft (United States),Microsoft
+oa:W4404782572,Zhiyuan He,Microsoft (United States),Microsoft
+oa:W4404782572,Zilong Wang,Microsoft (United States),Microsoft Research
+oa:W4404782572,Yuqing Yang,Microsoft (United States),"Research, Microsoft"
+oa:W4404782588,Liangyou Li,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4404782591,Kyuhong Shim,LG AI Research (South Korea),"Qualcomm Inc, QualComm"
+oa:W4404782591,Simyung Chang,LG AI Research (South Korea),QualComm AI Research
+oa:W4404782600,Libo Qin,Central South University,Harbin Institute of Technology
+oa:W4404782611,Yuxin He,The Hong Kong University of Science and Technology (Guangzhou),Harbin Institute of Technology
+oa:W4404782611,Buzhou Tang,Peng Cheng Laboratory,Harbin Institute of Technology
+oa:W4404782665,Gong Zhi,Tencent (China),WeChat
+oa:W4404782708,Michael Färber,Center for Scalable Data Analytics and Artificial Intelligence,Technische Universität Dresden
+oa:W4404782708,Nicholas Popovic,Karlsruhe Institute of Technology,"Karlsruher Institut für Technologie, Karlsruher Institut für Technologie and Karlsruher Institut für Technologie"
+oa:W4404782733,Zhiwei Zeng,Joint NTU-UBC Research Centre of Excellence in Active Living for the Elderly,National Technological University
+oa:W4404782733,Yige Xu,Joint NTU-UBC Research Centre of Excellence in Active Living for the Elderly,Nanyang Technological University
+oa:W4404782733,Chunyan Miao,Joint NTU-UBC Research Centre of Excellence in Active Living for the Elderly,"School of Computer Science and Engineering, Nanyang Technological University"
+oa:W4404782745,Orestis Papakyriakopoulos,Technical University of Munich,Technische Universität München
+oa:W4404782771,Zhengyuan Liu,Institute for Infocomm Research,I2R
+oa:W4404782771,Geyu Lin,Nanyang Technological University,"Institute of Infocomm Research, A*STAR"
+oa:W4404782797,Lifu Huang,"University of California, Davis",Virginia Tech
+oa:W4404782801,Gal Yona,Google (United States),"Research, Google"
+oa:W4404782801,Gal Yona,Technion – Israel Institute of Technology,"Research, Google"
+oa:W4404782801,Jonathan Herzig,Google (United States),"Research, Google"
+oa:W4404782801,Jonathan Herzig,Technion – Israel Institute of Technology,"Research, Google"
+oa:W4404782801,Zorik Gekhman,Google (United States),"Technion, Technion"
+oa:W4404782811,Aliaksandr Siarohin,Snap (United States),Snap Inc. and Snap Inc.
+oa:W4404782811,Ivan Skorokhodov,Snap (United States),Snap Inc.
+oa:W4404782811,Kuan-Chieh Wang,Snap (United States),Snap Inc.
+oa:W4404782811,Willi Menapace,Snap (United States),Snap Inc.
+oa:W4404782811,Sergey Tulyakov,Snap (United States),Snap Inc.
+oa:W4404782811,Yuwei Fang,Snap (United States),Snap Inc.
+oa:W4404782855,Yeon Seonwoo,University of Washington,Amazon
+oa:W4404782855,Yeon Seonwoo,Allen Institute for Artificial Intelligence,Amazon
+oa:W4404782855,Alice Oh,University of Washington,Korea Advanced Institute of Science and Technology
+oa:W4404782855,Alice Oh,Allen Institute for Artificial Intelligence,Korea Advanced Institute of Science and Technology
+oa:W4404782855,Hyunwoo Kim,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4404782855,Yejin Choi,Allen Institute for Artificial Intelligence,"Department of Computer Science, University of Washington"
+oa:W4404782860,Qun Liu,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4404782905,Aaran Arulraj,University of Toronto,Microsoft and University of Waterloo
+oa:W4404782905,Ziyan Jiang,University of Waterloo,Amazon
+oa:W4404782927,Bharat Runwal,IBM (United States),Michigan State University
+oa:W4404782927,Bhavya Kailkhura,Michigan State University,Lawrence Livermore National Laboratory
+oa:W4404782927,James Diffenderfer,Michigan State University,Lawrence Livermore National Labs
+oa:W4404782927,Sijia Liu,Lawrence Livermore National Laboratory,Michigan State University
+oa:W4404782927,Sijia Liu,IBM (United States),Michigan State University
+oa:W4404782927,Sijia Liu,MIT-IBM Computing Research Lab,Michigan State University
+oa:W4404782927,Sijia Liu,Massachusetts Institute of Technology,Michigan State University
+oa:W4404782927,Yimeng Zhang,IBM (United States),Michigan State University
+oa:W4404782927,Jiancheng Liu,IBM (United States),Michigan State University
+oa:W4404782948,Songyang Gao,Fudan University,Shanghai Artificial Intelligence Laboratory
+oa:W4404782964,Lei Li,Peking University,University of Hong Kong
+oa:W4404782964,Lei Li,Carnegie Mellon University,University of Hong Kong
+oa:W4404782983,Dumitru-Clementin Cercel,Université Paris 1 Panthéon-Sorbonne,National University of Science and Technology POLITEHNICA Bucharest
+oa:W4404782983,Dumitru-Clementin Cercel,Universitatea Națională de Știință și Tehnologie Politehnica București,National University of Science and Technology POLITEHNICA Bucharest
+oa:W4404782983,Răzvan-Alexandru Smădu,Université Paris 1 Panthéon-Sorbonne,", University Politehnica of Bucharest"
+oa:W4404782983,Răzvan-Alexandru Smădu,Universitatea Națională de Știință și Tehnologie Politehnica București,", University Politehnica of Bucharest"
+oa:W4404782984,Julia Kreutzer,University of Cambridge,Cohere for AI
+oa:W4404782984,Beyza Ermis,University of Cambridge,Cohere AI
+oa:W4404782984,Marzieh Fadaee,University of Cambridge,Cohere For AI
+oa:W4404782984,Sara Hooker,University of Cambridge,Cohere For AI
+oa:W4404782991,David Robert Reich,University of Zurich,Universität Potsdam
+oa:W4404782991,Ryan Cotterell,ETH Zurich,Swiss Federal Institute of Technology
+oa:W4404783026,Mohammad Reza Modarres,Khatam University,Tehran Institute for Advanced Studies
+oa:W4404783026,Mohammad Taher Pilehvar,Cardiff University,Tehran Institute for Advanced Studies
+oa:W4404783028,Yekun Chai,Sun Yat-sen University,Baidu
+oa:W4404783028,Yekun Chai,Peking University,Baidu
+oa:W4404783064,Yangyang Zhao,Utrecht University,Changsha University of Science and Technology
+oa:W4404783093,Zhiyuan Liu,Quan Cheng Laboratory,Tsinghua University
+oa:W4404783125,Michael S. Davinroy,Aptima (United States),"Aptima, Inc."
+oa:W4404783125,Anthony Hoogs,Kitware (United States),"Kitware, Inc."
+oa:W4404783125,Laura Cassani,Aptima (United States),Aptima
+oa:W4404783125,Arslan Basharat,Kitware (United States),"Kitware, Inc."
+oa:W4404783125,Matthias Kirchner,Kitware (United States),Kitware
+oa:W4404783131,Xueqi Cheng,Institute of Computing Technology,", Chinese Academy of Sciences"
+oa:W4404783131,Yiwei Wang,"University of California, Los Angeles","University of California, Merced"
+oa:W4404783134,Qixi Lu,Beijing Advanced Innovation Center for Language Resources,Beijing Language and Culture University
+oa:W4404783134,Endong Xun,Beijing Advanced Innovation Center for Language Resources,Beijing Language and Culture University
+oa:W4404783144,Lemao Liu,Chinese Academy of Sciences,Tencent
+oa:W4404783144,Lemao Liu,Institute of Computing Technology,Tencent
+oa:W4404783144,Yue Yu,Chinese Academy of Sciences,National University of Defense Technology and PengCheng Lab
+oa:W4404783144,Yue Yu,Institute of Computing Technology,National University of Defense Technology and PengCheng Lab
+oa:W4404783147,Xiao Ye,Johns Hopkins University,Arizona State University
+oa:W4404783147,Yining Lu,Johns Hopkins University,University of Notre Dame
+oa:W4404783147,Lingfeng Shen,Johns Hopkins University,ByteDance Inc.
+oa:W4404783284,Özge Alacam,Ludwig-Maximilians-Universität München,Bielefeld University
+oa:W4404783368,Deli Chen,Northwestern University,DeepSeek AI
+oa:W4404783368,Deli Chen,Northwestern University,DeepSeek AI
+oa:W4404783368,Zhuoshu Li,Northwestern University,DeepSeek
+oa:W4404783368,Zhuoshu Li,Northwestern University,DeepSeek
+oa:W4404783518,Zheng Wang,Nanyang Technological University,Huawei Singapore
+oa:W4404783530,Deb Roy,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783530,Jad Kabbara,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783530,William Brannon,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783530,Shrestha Mohanty,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783530,Suyash Fulay,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783530,Elinor Poole-Dayan,MIT Media Lab,Massachusetts Institute of Technology
+oa:W4404783577,Wai Lam,Microsoft (United States),The Chinese University of Hong Kong
+oa:W4404783577,Haoyang Huang,Microsoft (United States),Microsoft Research Asia
+oa:W4404783577,Haoyang Huang,Chinese University of Hong Kong,Microsoft Research Asia
+oa:W4404783577,Hongyuan Lu,Microsoft (United States),The Chinese University of Hong Kong
+oa:W4404783666,Heng Chang,Tsinghua–Berkeley Shenzhen Institute,"Tsinghua University, Tsinghua University"
+oa:W4404783875,Zheng Wang,Huawei Technologies (China),Huawei Singapore
+oa:W4404784221,Weijie J Su,Argonne National Laboratory,"The Wharton School, University of Pennsylvania"
+oa:W4404784221,Camillo Jose Taylor,Argonne National Laboratory,"University of Pennsylvania, University of Pennsylvania, University of Pennsylvania and University of Pennsylvania"
+oa:W4404784419,Fangyu Liu,University of Cambridge,Google DeepMind
+oa:W4404784419,Marco Basaldella,Amazon (United States),Amazon
+oa:W4404792982,Xiaoyu Shen,"Eastern Institute of Technology, Ningbo",Amazon
+oa:W4412886639,Chuhan Wu,Huawei Technologies (China),"WeChat AI, Tencent"
+oa:W4412886639,Liangyou Li,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4412886664,Tianheng Wang,Westlake University,Hangzhou Institute of Medicine Chinese Academy of Science
+oa:W4412886665,Shuaiyi Li,Tencent (China),"Chinese University of Hong Kong, The Chinese University of Hong Kong"
+oa:W4412886713,Nigel Collier,University of Sheffield,University of Cambridge
+oa:W4412886713,Tom Stafford,University of Cambridge,University of Sheffield
+oa:W4412886732,Claire Bonial,United States Army,Georgetown University and Army Research Lab
+oa:W4412886763,Anningzhe Gao,Shenzhen Research Institute of Big Data,ByteDance Inc.
+oa:W4412886800,Yangyang Yu,Stevens Institute of Technology,Accenture
+oa:W4412886815,Samuel Fraiberger,New York University,World Bank
+oa:W4412886852,Qizhi Zhang,Nanjing University,ByteDance Inc.
+oa:W4412886852,Quanwei Cai,Nanjing University,ByteDance Inc.
+oa:W4412886852,Jue Hong,Nanjing University,ByteDance Inc.
+oa:W4412886865,Jiaxin Bai,Amazon (United States),The Hong Kong University of Science and Technology
+oa:W4412886865,Hui Liu,Hong Kong University of Science and Technology,Amazon
+oa:W4412886865,Wenju Xu,Hong Kong University of Science and Technology,Amazon
+oa:W4412886865,Haiyang Zhang,Amazon (United States),Amazon
+oa:W4412886865,Limeng Cui,Amazon (United States),Amazon
+oa:W4412886865,Xin Liu,Amazon (United States),Amazon
+oa:W4412886865,Chen Luo,Hong Kong University of Science and Technology,Amazon
+oa:W4412886865,Sreyashi Nag,Hong Kong University of Science and Technology,Amazon
+oa:W4412886865,Hansu Gu,Hong Kong University of Science and Technology,Amazon
+oa:W4412886865,Yifan Gao,Amazon (United States),Amazon
+oa:W4412886865,Weiqi Wang,Amazon (United States),The Hong Kong University of Science and Technology
+oa:W4412889601,Dimitrios Zaikis,Duke University,Aristotle University of Thessaloniki
+oa:W4412889601,Roger Wechsler,Duke University,Welocalize
+oa:W4412889601,Konstantinos Karageorgos,Duke University,Welocalize
+oa:W4412889601,Aaron Schliem,Duke University,Welocalize
+oa:W4412889608,Cheston Tan,"Agency for Science, Technology and Research",A*STAR
+oa:W4412889608,Cheston Tan,Institute of High Performance Computing,A*STAR
+oa:W4412889608,Chengwei Qin,The Hong Kong University of Science and Technology (Guangzhou),Nanyang Technological University
+oa:W4412889619,Chansung Park,The Hong Kong University of Science and Technology (Guangzhou),Electronics and Telecommunications Research Institute
+oa:W4412889658,Xinlei Chen,Tsinghua Shenzhen International Graduate School,Tsinghua University
+oa:W4412889658,Weichen Zhang,Peng Cheng Laboratory,"Tsinghua University, Tsinghua University"
+oa:W4412889658,Weichen Zhang,Tsinghua Shenzhen International Graduate School,"Tsinghua University, Tsinghua University"
+oa:W4412889658,Jinqiang Cui,Peng Cheng Laboratory,Pengcheng Laboratory
+oa:W4412889658,Jirong Zha,Tsinghua Shenzhen International Graduate School,"TBSI, Tsinghua University"
+oa:W4412889701,Priyanka Kargupta,Pennsylvania State University,Department of Computer Science
+oa:W4412889701,Priyanka Kargupta,University of Illinois Urbana-Champaign,Department of Computer Science
+oa:W4412889701,Yunyi Zhang,Pennsylvania State University,Amazon
+oa:W4412889701,Yunyi Zhang,University of Illinois Urbana-Champaign,Amazon
+oa:W4412889701,Rui Zhang,University of Illinois Urbana-Champaign,Pennsylvania State University
+oa:W4412889747,Jiaxin Zhang,Intuit (United States),Intuit AI Research
+oa:W4412889747,Kamalika Das,Intuit (United States),Intuit
+oa:W4412889753,Sahar Abdelnabi,Microsoft (United States),Microsoft
+oa:W4412889756,Weichen Zhang,Peng Cheng Laboratory,"Tsinghua University, Tsinghua University"
+oa:W4412889756,Weichen Zhang,Tsinghua Shenzhen International Graduate School,"Tsinghua University, Tsinghua University"
+oa:W4412889756,Jinqiang Cui,Peng Cheng Laboratory,Pengcheng Laboratory
+oa:W4412889756,Xinlei Chen,Tsinghua Shenzhen International Graduate School,Tsinghua University
+oa:W4412889773,Alexander H. Liu,MIT Computer Science and Artificial Intelligence Laboratory,Massachusetts Institute of Technology
+oa:W4412889777,Xiaoyuan Yi,Microsoft Research Asia (China),"Research, Microsoft"
+oa:W4412889777,Jing Yao,Microsoft Research Asia (China),Microsoft
+oa:W4412889804,Zexin Lu,Hong Kong Polytechnic University,Huawei Technologies Ltd.
+oa:W4412889813,Clara Meister,University of Cambridge,ETHZ - ETH Zurich
+oa:W4412889813,Andreas Vlachos,ETH Zurich,University of Cambridge
+oa:W4412889813,Pietro Lesci,ETH Zurich,University of Cambridge
+oa:W4412889813,Tiago Pimentel,University of Cambridge,"Department of Computer Science, ETHZ - ETH Zurich"
+oa:W4412889813,Thomas Hofmann,University of Cambridge,Swiss Federal Institute of Technology
+oa:W4412889813,Thomas Hofmann,ETH Zurich,Swiss Federal Institute of Technology
+oa:W4412889826,Maria Liakata,The Alan Turing Institute,Queen Mary University London
+oa:W4412889893,Dahua Lin,Central South University,The Chinese University of Hong Kong
+oa:W4412889893,Yicheng Zou,Harbin Institute of Technology,Shanghai Artificial Intelligence Laboratory
+oa:W4412889893,Libo Qin,Harbin Institute of Technology,Central South University
+oa:W4412889893,Libo Qin,Shanghai Artificial Intelligence Laboratory,Central South University
+oa:W4412889913,Irina Rish,Mila - Quebec Artificial Intelligence Institute,University of Montreal
+oa:W4412889949,Su Lin Blodgett,Microsoft (United States),Microsoft
+oa:W4412889949,Alexandra Olteanu,Microsoft (United States),"Research, Microsoft"
+oa:W4412889980,Furu Wei,Microsoft (United States),Microsoft Research
+oa:W4412889980,Hany Hassan Awadalla,Microsoft (United States),Microsoft
+oa:W4412889980,Mahmoud Khademi,Microsoft (United States),Microsoft
+oa:W4412889980,Xingxing Zhang,Microsoft (United States),Microsoft Research Asia
+oa:W4412889980,Dongdong Zhang,Microsoft (United States),Microsoft Research Asia
+oa:W4412944781,Qiongkai Xu,The University of Melbourne,Macquarie University
+oa:W4412944784,Marco Baroni,Institució Catalana de Recerca i Estudis Avançats,Universitat Pompeu Fabra
+oa:W4412944799,Futing Wang,Zhejiang University,Westlake University
+oa:W4412944799,Jianhao Yan,Zhejiang University,Westlake University
+oa:W4412944799,Yun Luo,Zhejiang University,westlake university
+oa:W4412944809,Arjun Bhagoji,University of Chicago,"Indian Institute of Technology, Bombay"
+oa:W4412944827,Paul Vozila,Microsoft (United States),Nuance Communications
+oa:W4412944827,Asma Ben Abacha,Microsoft (United States),"Microsoft, USA"
+oa:W4412944827,Lucas Caccia,Microsoft Research Montréal (Canada),Microsoft
+oa:W4412944827,Jean-Philippe Corbeil,Microsoft (United States),Microsoft
+oa:W4412944827,Thomas Lin,Microsoft (United States),Microsoft
+oa:W4412944827,Jean-Michel Attendu,Microsoft (United States),Microsoft
+oa:W4412944827,Alessandro Sordoni,Microsoft Research Montréal (Canada),Microsoft
+oa:W4412944827,Alessandro Sordoni,Université de Montréal,Microsoft
+oa:W4412944827,Francois Beaulieu,Microsoft (United States),Microsoft
+oa:W4412944830,Leonard Lausen,Amazon (United States),Amazon Web Services
+oa:W4412944830,George Karypis,Amazon (United States),"University of Minnesota, Minneapolis"
+oa:W4412944832,Rifo Ahmad Genadi,Islamic University of Indonesia,Mohamed bin Zayed University of Artificial Intelligence
+oa:W4412944832,Kevin Pratama,University of Manchester,Meta
+oa:W4412944832,Tirana Noor Fatyanosa,Islamic University of Indonesia,Universitas Brawijaya
+oa:W4412944832,Meisyarah Dwiastuti,Islamic University of Indonesia,Dataxet:Sonar
+oa:W4412944832,Holy Lovenia,Islamic University of Indonesia,SEACrowd
+oa:W4412944832,Peerat Limkonchotiwat,Chulalongkorn University,AI Singapore
+oa:W4412944832,Dan John Velasco,Samsung (South Korea),Samsung
+oa:W4412944832,Fajri Koto,Islamic University of Indonesia,Mohamed bin Zayed University of Artificial Intelligence
+oa:W4412944832,Samuel Cahyawijaya,Pelita Harapan University,Cohere
+oa:W4412944832,Genta Winata,Islamic University of Indonesia,Capital One
+oa:W4412944832,David Anugraha,University of Toronto,Stanford University
+oa:W4412944832,Jun Kevin,Islamic University of Indonesia,Pelita Harapan University
+oa:W4412944832,Alham Fikri Aji,University of Manchester,Mohamed bin Zayed University of Artificial Intelligence
+oa:W4412944832,Manuel Antonio Rufino,Samsung (South Korea),Samsung
+oa:W4412944832,Hitesh Laxmichand Patel,Islamic University of Indonesia,Oracle
+oa:W4412944832,Matthew Theodore Roque,Samsung (South Korea),Samsung
+oa:W4412944832,Patricia Nicole Monderin,Samsung (South Korea),Samsung
+oa:W4412944832,Supryadi,Pelita Harapan University,Tianjin University
+oa:W4412944832,Carlos Rafael Catalan,Samsung (South Korea),Samsung Research
+oa:W4412944852,Yuan Yao,Shanghai Qi Zhi Institute,National University of Singapore
+oa:W4412944876,Ruihang Chu,Chinese University of Hong Kong,"Wan, Alibaba Group and Tsinghua Shenzhen International Graduate School, Tsinghua University"
+oa:W4412944967,Ziyin Zhang,Shanghai Jiao Tong University,Shanghai Jiaotong University
+oa:W4412944967,Guixian Xu,Minzu University of China,Key Laboratory of Ethnic Language Intelligence
+oa:W4412944997,Zhijing Jin,Max Planck Institute for Intelligent Systems,"Department of Computer Science, University of Toronto"
+oa:W4412945021,Siyin Wang,Shanghai Innovation Institute,Fudan University
+oa:W4412945021,Xipeng Qiu,Shanghai Innovation Institute,Fudan University
+oa:W4412945071,Peng Cheng,University of Manchester,Microsoft Research
+oa:W4412945071,Xin Zhang,University of Manchester,Microsoft
+oa:W4412945071,Xiao Liu,University of Manchester,Microsoft Research Asia
+oa:W4412945079,Freda Shi,Canadian Institute for Advanced Research,University of Waterloo and Vector Institute
+oa:W4412945101,Dominique Brunato,Institute for Computational Linguistics “A. Zampolli”,"istituto di linguistica computazionale “A. Zampolli”, ILC-CNR, Pisa"
+oa:W4412945101,Luca Dini,Institute for Computational Linguistics “A. Zampolli”,University of Pisa
+oa:W4412945101,Lucia Domenichelli,University of Pisa,Consiglio Nazionale delle Ricerche
+oa:W4412945101,Lucia Domenichelli,Institute for Computational Linguistics “A. Zampolli”,Consiglio Nazionale delle Ricerche
+oa:W4412945178,Tom Gunter,Apple (United States),Apple
+oa:W4412945178,Floris Weers,Apple (United States),Apple
+oa:W4412945178,Guoli Yin,Apple (United States),Apple
+oa:W4412945178,Ruoming Pang,Apple (United States),Apple
+oa:W4412945221,Junqi Yang,Ant Group (China),Alibaba Group
+oa:W4412945243,Jiuxin Cao,Purple Mountain Laboratories,Southeast University
+oa:W4412945268,Besnik Fetahu,Amazon (United States),Amazon
+oa:W4412945268,Jason Ingyu Choi,Amazon (United States),Amazon
+oa:W4412945268,Xiangci Li,Amazon (United States),Amazon Web Services
+oa:W4412945268,Shervin Malmasi,Amazon (United States),Amazon
+oa:W4412945268,Nikhita Vedula,Amazon (United States),Amazon
+oa:W4412945268,Zhiyu Chen,Amazon (United States),Amazon
+oa:W4412945280,Xiaofeng Mao,Ant Group (China),Alibaba Group
+oa:W4412945287,Yafu Li,Northeastern University,Shanghai Artificial Intelligence Laboratory
+oa:W4412945287,Yafu Li,Westlake University,Shanghai Artificial Intelligence Laboratory
+oa:W4412945287,Yafu Li,Zhejiang University,Shanghai Artificial Intelligence Laboratory
+oa:W4412945287,Yafu Li,Northeastern University,Shanghai Artificial Intelligence Laboratory
+oa:W4412945287,Tong Xiao,Westlake University,Northeastern University
+oa:W4412945287,Tong Xiao,Shanghai Artificial Intelligence Laboratory,Northeastern University
+oa:W4412945287,Tong Xiao,Zhejiang University,Northeastern University
+oa:W4412945328,Hyunwoo Ko,Korea Advanced Institute of Science and Technology,haerae.com and OnelineAI
+oa:W4412945328,Hyunwoo Ko,Yonsei University,haerae.com and OnelineAI
+oa:W4412945401,Jinyang Guo,Beihang University,Beijing University of Aeronautics and Astronautics
+oa:W4412945438,Abhilasha Sancheti,"University of Maryland, College Park",Amazon
+oa:W4412945447,Sirui Chen,Shanghai Artificial Intelligence Laboratory,Tongji University
+oa:W4412945472,Ali Modarressi,Munich Center for Machine Learning,"Center for Information and Language Processing, LMU Munich"
+oa:W4412945472,Ali Modarressi,Ludwig-Maximilians-Universität München,"Center for Information and Language Processing, LMU Munich"
+oa:W4412945526,Wenhu Chen,Vector Institute,University of Waterloo
+oa:W4412945526,Jonathan Leung,Vector Institute,University of Waterloo
+oa:W4412945551,Lingrui Mei,Chinese Academy of Sciences,Skywork AI
+oa:W4412945551,Lingrui Mei,Institute of Computing Technology,Skywork AI
+oa:W4412945551,Lingrui Mei,University of Chinese Academy of Sciences,Skywork AI
+oa:W4412945559,Chenyang Lyu,Alibaba Group (China),Mohamed bin Zayed University of Artificial Intelligence
+oa:W4412945559,Zongxiong Chen,Fraunhofer Institute for Open Communication Systems,Fraunhofer FOKUS
+oa:W4412945559,Derui Zhu,Technical University of Munich,Technische Universität Darmstadt
+oa:W4412945629,Valentina Pyatkin,University of Washington,Allen Institute for Artificial Intelligence and Department of Computer Science
+oa:W4412945629,Faeze Brahman,University of Washington,Allen Institute for Artificial Intelligence
+oa:W4412945629,Yanai Elazar,University of Washington,Allen Institute for Artificial Intelligence and Department of Computer Science
+oa:W4412945629,Sachin Kumar,Allen Institute for Artificial Intelligence,"Ohio State University, Columbus"
+oa:W4412945629,Yizhong Wang,Allen Institute for Artificial Intelligence,"Department of Computer Science, University of Washington"
+oa:W4412945661,Xin Liu,Amazon (United States),Amazon
+oa:W4412945661,Xian Li,Amazon (United States),Amazon
+oa:W4412945661,Yifan Gao,Amazon (United States),Amazon
+oa:W4412945661,Bing Yin,Amazon (United States),Amazon
+oa:W4412945661,Zhengyang Wang,Amazon (United States),Amazon
+oa:W4412945661,Zheng Li,Amazon (United States),Amazon
+oa:W4412945661,Zhuofeng Wu,Amazon (United States),Amazon
+oa:W4412945661,Pei Chen,Amazon (United States),Texas A&M University - College Station
+oa:W4412945692,Yusheng Su,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Ximeng Sun,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Emad Barsoum,University of California San Diego,AMD
+oa:W4412945692,Jiang Liu,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Zicheng Liu,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Ze Wang,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Jialian Wu,University of California San Diego,Advanced Micro Devices
+oa:W4412945692,Xiaodong Yu,University of California San Diego,Advanced Micro Devices
+oa:W4412945730,Afrah Shafquat,Medidata (United States),Medidata Solutions
+oa:W4412945730,Trisha Das,University of Illinois Urbana-Champaign,"Department of Computer Science, UIUC"
+oa:W4416035167,Ahmed Salem,Microsoft (United States),Microsoft
+oa:W4416035222,Qi Wang,Ministry of Education of the People's Republic of China,Jilin University
+oa:W4416035316,Mario Giulianelli,University of Zurich,"University College London, University of London"
+oa:W4416035316,Mario Giulianelli,University of Amsterdam,"University College London, University of London"
+oa:W4416035316,Bryan Eikema,University of Zurich,University of Amsterdam
+oa:W4416035435,Hamidreza Saffari,Politecnico di Milano,Polytechnic Institute of Milan
+oa:W4416035509,Yuxiong He,Snowflake Inc. (United States),Microsoft
+oa:W4416035509,Samyam Rajbhandari,Snowflake Inc. (United States),"AI Research, Snowflake and Microsoft"
+oa:W4416035509,Aurick Qiao,Snowflake Inc. (United States),Snowflake
+oa:W4416035509,Zhewei Yao,Snowflake Inc. (United States),Snowflake
+oa:W4416035542,Haotian Dong,Tsinghua Shenzhen International Graduate School,Tsinghua University
+oa:W4416035542,Zhi Wang,Tsinghua Shenzhen International Graduate School,"SIGS, Tsinghua University"
+oa:W4416035542,Bowen Li,Tsinghua Shenzhen International Graduate School,Tsinghua University
+oa:W4416035574,Ikhyun Cho,University of Illinois Urbana-Champaign,Department of Computer Science
+oa:W4416035606,Yongwei Wang,Shanghai Artificial Intelligence Laboratory,Zhejiang University
+oa:W4416035636,Florin Cuconasu,Technology Innovation Institute,University of Roma “La Sapienza”
+oa:W4416035690,Keping Bi,Institute of Computing Technology,Chinese Academy of Sciences
+oa:W4416035701,Giovanni Servedio,Sapienza University of Rome,Polytechnic Institute of Bari
+oa:W4416035714,Emmanouil Seferis,National Technical University of Athens,Fraunhofer IKS
+oa:W4416035714,Chih-Hong Cheng,Carl von Ossietzky Universität Oldenburg,Chalmers University of Technology
+oa:W4416035807,Andrea Burns,Boston University,Google DeepMind
+oa:W4416036074,Linfeng Zhang,Shanghai Jiao Tong University,Shanghai Jiaotong University
+oa:W4416036102,Harshith Goka,Samsung (South Korea),Samsung Research
+oa:W4416036102,Seoha Song,Samsung (South Korea),Samsung
+oa:W4416036102,Dhananjaya Gowda,Samsung (South Korea),Samsung
+oa:W4416036106,Baobao Chang,University of Illinois Urbana-Champaign,Peking University
+oa:W4416036106,Baobao Chang,Tsinghua University,Peking University
+oa:W4416036106,Shuzheng Si,University of Illinois Urbana-Champaign,Tsinghua University
+oa:W4416036106,Shuzheng Si,Peking University,Tsinghua University
+oa:W4416036106,Maosong Sun,University of Illinois Urbana-Champaign,Tsinghua University
+oa:W4416036106,Maosong Sun,Peking University,Tsinghua University
+oa:W4416036106,Minjia Zhang,Peking University,University of Illinois at Urbana-Champaign
+oa:W4416036106,Minjia Zhang,Tsinghua University,University of Illinois at Urbana-Champaign
+oa:W4416036169,Xin Xu,University of California San Diego,Adobe Research
+oa:W4416036283,Lei Duan,National University of Singapore,Sichuan University
+oa:W4416036335,Zhaowei Li,ByteDance (China),Fudan University
+oa:W4416036350,Mazda Moayeri,"University of Maryland, College Park",Meta
+oa:W4416036351,Boualem Benatallah,Insight SFI Research Centre for Data Analytics,Dublin City University
+oa:W4416036351,Lynda Djennane,Ecole supérieure en science et technologies de l'informatique et du numérique,"ESTIN, Higher School of Computer Science and Technology, Amizour, Bejaia."
+oa:W4416036432,Liangyou Li,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4416036432,Qun Liu,Huawei Technologies (China),Huawei Noah’s Ark Lab
+oa:W4416036484,Haoping Bai,Apple (United States),Apple
+oa:W4416036484,Xiaojiang Liu,Apple (United States),Apple
+oa:W4416036484,Jiulong Shan,Apple (United States),Apple
+oa:W4416036484,Xiaoming Simon Wang,Apple (United States),Didi Research US
+oa:W4416036484,Qibin Chen,Apple (United States),Apple
+oa:W4416036489,Cedegao E. Zhang,MIT Computer Science and Artificial Intelligence Laboratory,Massachusetts Institute of Technology
+oa:W4416036489,Joshua B. Tenenbaum,MIT Computer Science and Artificial Intelligence Laboratory,Massachusetts Institute of Technology
+oa:W4416036489,Yoon Kim,MIT Computer Science and Artificial Intelligence Laboratory,Massachusetts Institute of Technology
+oa:W4416036518,Daniel Cremers,Munich Center for Machine Learning,Technical University Munich
+oa:W4416036524,Pu Jian,Institute of Automation,University of the Chinese Academy of Sciences
+oa:W4416036528,Wei Zhang,Shanghai Innovation Institute,East China Normal University
+oa:W4416036544,Marzena Karpinska,"University of Maryland, College Park",Microsoft
+oa:W4416036553,Dongmei Zhang,Peking University,Microsoft
+oa:W4416036553,Xiaojun Ma,Peking University,Microsoft
+oa:W4416036563,Chaitanya Malaviya,University of Pennsylvania,Google DeepMind
+oa:W4416036563,Yunyi Zhang,University of Illinois Urbana-Champaign,Amazon
+oa:W4416036569,Baobao Chang,Tsinghua University,Peking University
+oa:W4416036569,Maosong Sun,Peking University,Tsinghua University
+oa:W4416036569,Kangyang Luo,Peking University,"Tsinghua University, Tsinghua University"
+oa:W4416036599,Weicheng Ma,Georgia Institute of Technology,Oakland University
+oa:W4416036625,Nicholas Monath,University of Oxford,Meta
+oa:W4416036625,James Bradley Wendt,University of Oxford,"Research, Google"
+oa:W4416036625,Beliz Gunel,University of Oxford,Google DeepMind
+oa:W4416036625,Sandeep Tata,University of Oxford,Google
+oa:W4416036647,Yu Kang,Microsoft (United States),Microsoft
+oa:W4416036647,Saravan Rajmohan,Microsoft (United States),Microsoft
+oa:W4416036647,Qingwei Lin,Microsoft (United States),Microsoft Research
+oa:W4416036647,Dongmei Zhang,Microsoft (United States),Microsoft
+oa:W4416036697,Adrià de Gispert,École Polytechnique Fédérale de Lausanne,Amazon
+oa:W4416036697,Adrià de Gispert,Idiap Research Institute,Amazon
+oa:W4416036697,Leonardo F. R. Ribeiro,École Polytechnique Fédérale de Lausanne,Amazon
+oa:W4416036697,Leonardo F. R. Ribeiro,Idiap Research Institute,Amazon
+oa:W4416036697,Ionut-Teodor Sorodoc,École Polytechnique Fédérale de Lausanne,Amazon
+oa:W4416036697,Ionut-Teodor Sorodoc,Idiap Research Institute,Amazon
+oa:W4416036708,Susmit Jha,SRI International,DARPA
+oa:W4416036708,Susmit Jha,SRI,DARPA
+oa:W4416036718,Jingyu Sun,"University of Maryland, College Park",Fudan University
+oa:W4416036718,Deqing Yang,"University of Maryland, College Park",Fudan University
+oa:W4416036736,Lina Yao,Commonwealth Scientific and Industrial Research Organisation,University of New South Wales and CSIRO’s Data61
+oa:W4416036736,Lina Yao,UNSW Sydney,University of New South Wales and CSIRO’s Data61
+oa:W4416036789,Martin Tutek,Technion – Israel Institute of Technology,University of Zagreb
+oa:W4416036796,Shady Shehata,University of British Columbia,University of Waterloo
+oa:W4416036796,Houdaifa Atou,Tuwaiq Academy,University Mohammed VI Polytechnic
+oa:W4416036820,Nathalie Baracaldo,Michigan State University,"University of Pittsburgh and IBM, International Business Machines"
+oa:W4416036820,Parikshit Ram,Michigan State University,International Business Machines
+oa:W4416036820,Dennis Wei,Michigan State University,International Business Machines
+oa:W4416036956,David W Eyre,Oxford University Hospitals NHS Trust,University of Oxford
+oa:W4416036964,Zhepei Wei,Georgia Institute of Technology,University of Virginia
+oa:W4416036964,Wenlin Yao,University of Virginia,Amazon
+oa:W4416036964,Weizhi Zhang,University of Virginia,Meta and University of Illinois at Chicago
+oa:W4416036964,Hyokun Yun,University of Virginia,Amazon
+oa:W4416036964,Chao Zhang,University of Virginia,Georgia Institute of Technology
+oa:W4416036964,Yao Liu,University of Virginia,Databricks
+oa:W4416036964,Changlong Yu,University of Virginia,"Department of Computer Science and Engineering, The Hong Kong University of Science and Technology"
+oa:W4416036964,Lihong Li,Georgia Institute of Technology,Amazon
+oa:W4416036964,Puyang Xu,University of Virginia,Amazon
+oa:W4416037012,Gaopeng Gou,Institute of Information Engineering,University of the Chinese Academy of Sciences
+oa:W4416037012,Li Qian,Xiaomi (China),The University of Warwick
+oa:W4416037066,Jiawei Xu,University of North Carolina at Chapel Hill,Amazon and University of Texas at Austin
+oa:W4416037066,Shrey Pandit,University of North Carolina at Chapel Hill,SalesForce.com
+oa:W4416037066,Shrey Pandit,The University of Texas at Austin,SalesForce.com
+oa:W4416037066,Ying Ding,University of North Carolina at Chapel Hill,"University of Texas, Austin"
+oa:W4416037066,Zhangyang Wang,University of North Carolina at Chapel Hill,University of Texas at Austin
+oa:W4416037066,Kaidi Xu,Drexel University,City University of Hong Kong
+oa:W4416037097,Sascha Rothe,Google DeepMind (United Kingdom),Google
+oa:W4416037097,François Yvon,Centre National de la Recherche Scientifique,"ISIR, Sorbonne Université & CNRS"
+oa:W4416037097,François Yvon,Institut Systèmes Intelligents et de Robotique,"ISIR, Sorbonne Université & CNRS"
+oa:W4416037097,Ahmad Dawar Hakimi,Munich Center for Machine Learning,Ludwig-Maximilians-Universität München
+oa:W4416037097,Lea Hirlimann,Munich Center for Machine Learning,"University of Munich, Ludwig-Maximilians-Universität München"
+oa:W4416037097,Yihong Liu,Munich Center for Machine Learning,Ludwig-Maximilians-Universität München
+oa:W4416037100,Adrian Benton,Google (United States),Google
+oa:W4416037100,Christo Kirov,Google (United States),Google
+oa:W4416037104,Amir Goldberg,Georgia Institute of Technology,Stanford University
+oa:W4416037104,Jane Yu,Georgia Institute of Technology,Meta AI
+oa:W4416037104,Jane Yu,Stanford University,Meta AI
+oa:W4416037104,David Grusky,Georgia Institute of Technology,Stanford University
+oa:W4416037104,Diyi Yang,Georgia Institute of Technology,Stanford University
+oa:W4416037126,Yuwei Cao,University of California San Diego,Google
+oa:W4416037126,Antoine Simoulin,University of California San Diego,Meta AI
+oa:W4416037126,Julian McAuley,University of Rochester,"University of California, San Diego, University of California, San Diego"
+oa:W4416037126,Jiebo Luo,University of California San Diego,University of Rochester
+oa:W4416037126,Xiaoyi Liu,University of California San Diego,Northwestern University
+oa:W4416037126,Xiaoyi Liu,University of Rochester,Northwestern University
+oa:W4416037142,Joey Tianyi Zhou,"Agency for Science, Technology and Research",A*STAR Centre for Frontier AI Research
+oa:W4416037142,Joey Tianyi Zhou,Institute of High Performance Computing,A*STAR Centre for Frontier AI Research
+oa:W4416037267,Iryna Gurevych,Hessian Center for Artificial Intelligence,"Institute for Computer Science, Artificial Intelligence and Technology, Mohamed bin Zayed University of Artificial Intelligence and Technische Universität Darmstadt"
+oa:W4416037267,Dominic Petrak,Technische Universität Darmstadt,TU Darmstadt
+oa:W4416037267,Dominic Petrak,Hessian Center for Artificial Intelligence,TU Darmstadt
+oa:W4416037308,Ruixiang Tang,"Rutgers, The State University of New Jersey",Rutgers University

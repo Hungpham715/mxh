@@ -1,0 +1,55 @@
+2026-11-03 15:15:24,046 INFO nlpgraph: ACL 2023.acl-long: 911 available, 140 selected
+2026-11-03 15:15:24,119 INFO nlpgraph: ACL 2023.emnlp-main: 1047 available, 140 selected
+2026-11-03 15:15:24,190 INFO nlpgraph: ACL 2024.acl-long: 864 available, 140 selected
+2026-11-03 15:15:24,304 INFO nlpgraph: ACL 2024.emnlp-main: 1268 available, 140 selected
+2026-11-03 15:15:24,470 INFO nlpgraph: ACL 2025.acl-long: 1602 available, 140 selected
+2026-11-03 15:15:24,647 INFO nlpgraph: ACL 2025.emnlp-main: 1809 available, 140 selected
+2026-11-03 15:15:25,075 INFO nlpgraph: arXiv 2023-01: 7 selected
+2026-11-03 15:15:25,079 INFO nlpgraph: arXiv 2023-02: 7 selected
+2026-11-03 15:15:25,083 INFO nlpgraph: arXiv 2023-03: 7 selected
+2026-11-03 15:15:25,087 INFO nlpgraph: arXiv 2023-04: 7 selected
+2026-11-03 15:15:25,091 INFO nlpgraph: arXiv 2023-05: 7 selected
+2026-11-03 15:15:25,095 INFO nlpgraph: arXiv 2023-06: 7 selected
+2026-11-03 15:15:25,099 INFO nlpgraph: arXiv 2023-07: 7 selected
+2026-11-03 15:15:25,103 INFO nlpgraph: arXiv 2023-08: 7 selected
+2026-11-03 15:15:25,106 INFO nlpgraph: arXiv 2023-09: 7 selected
+2026-11-03 15:15:25,110 INFO nlpgraph: arXiv 2023-10: 7 selected
+2026-11-03 15:15:25,114 INFO nlpgraph: arXiv 2023-11: 7 selected
+2026-11-03 15:15:25,118 INFO nlpgraph: arXiv 2023-12: 7 selected
+2026-11-03 15:15:25,122 INFO nlpgraph: arXiv 2024-01: 7 selected
+2026-11-03 15:15:25,126 INFO nlpgraph: arXiv 2024-02: 7 selected
+2026-11-03 15:15:25,130 INFO nlpgraph: arXiv 2024-03: 7 selected
+2026-11-03 15:15:25,135 INFO nlpgraph: arXiv 2024-04: 7 selected
+2026-11-03 15:15:25,138 INFO nlpgraph: arXiv 2024-05: 7 selected
+2026-11-03 15:15:25,142 INFO nlpgraph: arXiv 2024-06: 7 selected
+2026-11-03 15:15:25,146 INFO nlpgraph: arXiv 2024-07: 7 selected
+2026-11-03 15:15:25,150 INFO nlpgraph: arXiv 2024-08: 7 selected
+2026-11-03 15:15:25,155 INFO nlpgraph: arXiv 2024-09: 7 selected
+2026-11-03 15:15:25,159 INFO nlpgraph: arXiv 2024-10: 7 selected
+2026-11-03 15:15:25,163 INFO nlpgraph: arXiv 2024-11: 7 selected
+2026-11-03 15:15:25,168 INFO nlpgraph: arXiv 2024-12: 7 selected
+2026-11-03 15:15:25,171 INFO nlpgraph: arXiv 2025-01: 7 selected
+2026-11-03 15:15:25,175 INFO nlpgraph: arXiv 2025-02: 7 selected
+2026-11-03 15:15:25,179 INFO nlpgraph: arXiv 2025-03: 7 selected
+2026-11-03 15:15:25,185 INFO nlpgraph: arXiv 2025-04: 7 selected
+2026-11-03 15:15:25,189 INFO nlpgraph: arXiv 2025-05: 7 selected
+2026-11-03 15:15:25,193 INFO nlpgraph: arXiv 2025-06: 7 selected
+2026-11-03 15:15:25,197 INFO nlpgraph: arXiv 2025-07: 7 selected
+2026-11-03 15:15:25,202 INFO nlpgraph: arXiv 2025-08: 7 selected
+2026-11-03 15:15:25,206 INFO nlpgraph: arXiv 2025-09: 7 selected
+2026-11-03 15:15:25,211 INFO nlpgraph: arXiv 2025-10: 7 selected
+2026-11-03 15:15:25,214 INFO nlpgraph: arXiv 2025-11: 7 selected
+2026-11-03 15:15:25,219 INFO nlpgraph: arXiv 2025-12: 7 selected
+2026-11-03 15:15:25,223 WARNING nlpgraph: OPENALEX_API_KEY not set: using unauthenticated OpenAlex access (lower limits)
+2026-11-03 15:16:12,063 INFO nlpgraph: OpenAlex enrich 100/1092 (unmatched so far 0)
+2026-11-03 15:17:01,159 INFO nlpgraph: OpenAlex enrich 200/1092 (unmatched so far 0)
+2026-11-03 15:17:50,819 INFO nlpgraph: OpenAlex enrich 300/1092 (unmatched so far 1)
+2026-11-03 15:18:56,885 INFO nlpgraph: OpenAlex enrich 400/1092 (unmatched so far 1)
+2026-11-03 15:19:42,393 INFO nlpgraph: OpenAlex enrich 500/1092 (unmatched so far 1)
+2026-11-03 15:20:27,918 INFO nlpgraph: OpenAlex enrich 600/1092 (unmatched so far 1)
+2026-11-03 15:21:15,093 INFO nlpgraph: OpenAlex enrich 700/1092 (unmatched so far 1)
+2026-11-03 15:22:58,827 INFO nlpgraph: OpenAlex enrich 800/1092 (unmatched so far 1)
+2026-11-03 15:23:54,370 INFO nlpgraph: OpenAlex enrich 900/1092 (unmatched so far 1)
+2026-11-03 15:24:45,481 INFO nlpgraph: OpenAlex enrich 1000/1092 (unmatched so far 1)
+2026-11-03 15:25:30,560 INFO nlpgraph: OpenAlex: 1090 matched, 2 unmatched
+2026-11-03 15:25:30,573 INFO nlpgraph: fetch complete: 840 ACL + 252 arXiv records
