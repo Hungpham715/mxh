@@ -1,0 +1,24 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secrets*
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# large / regenerable data
+data/raw/
+data/cache/
+data/checkpoints/
+debug_*/
+*.dump
+
+# neo4j local volumes
+neo4j_data/
