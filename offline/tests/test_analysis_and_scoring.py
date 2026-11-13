@@ -51,7 +51,8 @@ def test_small_world_undetermined_on_tiny():
 
 def test_wilson():
     lo, hi = wilson(19, 20)
-    assert round(lo, 3) == 0.764 and round(hi, 3) == 0.991   # reference: Wilson 19/20 = [0.764, 0.991]
+    # reliable-kg-estimation Wilson: near-ceiling counts use an exact chi-square upper bound.
+    assert round(lo, 3) == 0.764 and round(hi, 3) == 0.997
     assert wilson(0, 0) == (0.0, 0.0)
 
 

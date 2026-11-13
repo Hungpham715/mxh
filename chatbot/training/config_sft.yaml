@@ -1,0 +1,25 @@
+model_id: Qwen/Qwen3-0.6B
+output_dir: data/models/qwen3-06b-graphrag-lora
+seed: 42
+max_length: 2048
+learning_rate: 0.0001
+num_train_epochs: 3
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 16
+eval_strategy: epoch
+save_strategy: epoch
+logging_steps: 10
+gradient_checkpointing: true
+bf16: true
+fp16: false
+# Chat-format messages dataset: mask everything but the assistant turn.
+# (warmup_ratio was removed in transformers v5; only warmup_steps remains, so it is omitted.)
+assistant_only_loss: true
+completion_only_loss: false
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+

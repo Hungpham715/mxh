@@ -376,8 +376,9 @@ def _score_table(d: Doc, a: dict[str, Any]) -> None:
                      _fmt(v["precision"]), f"[{v['wilson95'][0]:.3f}; {v['wilson95'][1]:.3f}]"])
     d.table(["Loại", "Số cạnh graph", "Mẫu", "Đúng", "Sai", "Không kiểm được", "Precision", "Wilson 95%"], rows,
             [0.22, 0.12, 0.07, 0.07, 0.07, 0.13, 0.11, 0.21])
+    ci = a.get("micro_ci95_stratified_wilson", a.get("micro_ci95_stratified_normal"))
     d.p(f"Precision macro = <b>{a['macro_precision']}</b>; precision micro có trọng số theo số cạnh mỗi loại trong graph = "
-        f"<b>{a['micro_precision_weighted']}</b> (KTC 95% xấp xỉ phân tầng {a['micro_ci95_stratified_normal']}). "
+        f"<b>{a['micro_precision_weighted']}</b> (KTC 95% Wilson phân tầng {ci}). "
         f"Số loại có ước lượng điểm ≥ 0,90: {a['types_meeting_0.90_point_estimate']}/10; số loại có cận dưới Wilson ≥ 0,90: "
         f"{a['types_with_wilson_lower_ge_0.90']}/10. “Không kiểm được” được tính là không đúng.")
 

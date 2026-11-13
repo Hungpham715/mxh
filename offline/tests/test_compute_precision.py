@@ -59,7 +59,8 @@ def run1(tmp_path, rows, overlap=None):
 
 def test_wilson_reference_values():
     lo, hi = cp.wilson(19, 20)
-    assert round(lo, 3) == 0.764 and round(hi, 3) == 0.991
+    # reliable-kg-estimation Wilson: exact chi-square upper bound near the ceiling (was 0.991 pre-replacement).
+    assert round(lo, 3) == 0.764 and round(hi, 3) == 0.997
     lo, hi = cp.wilson(50, 50)
     assert round(lo, 3) == 0.929
 

@@ -1,24 +1,31 @@
-"""Precision per type, macro, graph-count-weighted micro, Wilson 95% CI."""
+"""Precision per type, macro, graph-count-weighted micro, and stratified Wilson-family CIs.
+
+The confidence-interval method is the vendored ``reliable-kg-estimation`` framework
+(``kg_accuracy``): per-type Wilson intervals with exact small-count bounds, and a population-weighted
+stratified estimate whose interval is a Wilson / Agresti-Coull interval evaluated at the design's
+effective sample size. This replaces the previous normal-approximation (Wald) stratified interval.
+"""
 from __future__ import annotations
 
 import csv
-import math
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 from src.common import EVAL, log, write_json
+from src.evaluation.kg_accuracy import (
+    AGRESTI_COULL,
+    WILSON,
+    Stratum,
+    proportion_ci,
+    stratified_estimate,
+)
 from src.graph.derive import REL_TYPES
 
 
-def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
-    if n == 0:
-        return (0.0, 0.0)
-    p = k / n
-    den = 1 + z * z / n
-    centre = (p + z * z / (2 * n)) / den
-    half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
-    return (max(0.0, centre - half), min(1.0, centre + half))
+def wilson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
+    """Per-stratum Wilson 95% CI (reference framework; exact chi-square bounds near 0/n)."""
+    return proportion_ci(k, n, alpha=alpha, method=WILSON)
 
 
 def score_rows(rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -51,20 +58,25 @@ def score_rows(rows: list[dict[str, Any]]) -> dict[str, Any]:
                        if d["n"] > d["unverifiable"] else None}
     scored = {t: v for t, v in per_type.items() if v["n"]}
     macro = sum(v["precision"] for v in scored.values()) / len(scored) if scored else None
-    W = sum(v["graph_count"] for v in scored.values())
-    micro = sum(v["graph_count"] * v["precision"] for v in scored.values()) / W if W else None
-    # CI for the stratified (weighted) estimator: normal approx using per-stratum variance with FPC
-    var = 0.0
-    for v in scored.values():
-        w = v["graph_count"] / W
-        n, N, p = v["n"], v["graph_count"], v["precision"]
-        fpc = (N - n) / (N - 1) if N > 1 else 0.0
-        var += (w ** 2) * (p * (1 - p) / n) * fpc
-    se = math.sqrt(var)
+    # Stratified accuracy estimate (strata = relationship types) with Wilson-family CIs at the
+    # design effective sample size. Replaces the former normal-approximation (Wald) interval.
+    strata = [
+        Stratum(correct=v["correct"], n=v["n"], population=v["graph_count"])
+        for v in scored.values()
+    ]
+    strat_wilson = stratified_estimate(strata, alpha=0.05, method=WILSON)
+    strat_ac = stratified_estimate(strata, alpha=0.05, method=AGRESTI_COULL)
+    micro = strat_wilson["estimate"]
+    ci_wilson = strat_wilson["ci"]
+    ci_ac = strat_ac["ci"]
     return {"per_type": per_type, "macro_precision": round(macro, 4) if macro is not None else None,
             "micro_precision_weighted": round(micro, 4) if micro is not None else None,
-            "micro_ci95_stratified_normal": [round(max(0, micro - 1.96 * se), 4), round(min(1, micro + 1.96 * se), 4)]
-            if micro is not None else None,
+            "micro_ci95_stratified_wilson": [round(ci_wilson[0], 4), round(ci_wilson[1], 4)] if ci_wilson else None,
+            "micro_ci95_stratified_agresti_coull": [round(ci_ac[0], 4), round(ci_ac[1], 4)] if ci_ac else None,
+            "micro_effective_sample_size": round(strat_wilson["ess"], 1) if strat_wilson["ess"] is not None else None,
+            "micro_design_effect": (round(strat_wilson["design_effect"], 4)
+                                    if strat_wilson["design_effect"] is not None else None),
+            "micro_ci_method": "reliable-kg-estimation: stratified Wilson / Agresti-Coull at the design ESS",
             "types_meeting_0.90_point_estimate": sum(1 for v in scored.values() if v["precision"] >= 0.9),
             "types_with_wilson_lower_ge_0.90": sum(1 for v in scored.values() if v["wilson95"][0] >= 0.9),
             "n_total": sum(v["n"] for v in scored.values())}
@@ -92,7 +104,8 @@ def run_score(labels: Path, auto_path: Path | None = None, tag: str = "") -> int
     a = out.get("automated_preliminary", {})
     print(f"status: {out['status']}")
     if a:
-        print(f"automated micro (weighted) = {a['micro_precision_weighted']}  CI {a['micro_ci95_stratified_normal']}  "
+        print(f"automated micro (weighted) = {a['micro_precision_weighted']}  "
+              f"CI(wilson) {a['micro_ci95_stratified_wilson']}  "
               f"macro = {a['macro_precision']}  n = {a['n_total']}")
         for t, v in a["per_type"].items():
             print(f"  {t:22s} n={v['n']:3d} p={v.get('precision')} wilson={v.get('wilson95')} unverif={v.get('unverifiable', 0)}")

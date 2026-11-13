@@ -1,0 +1,11 @@
+scope_id: nlpgraph-v1
+corpus_years: [2023, 2024, 2025]
+limits:
+  max_iterations: 5
+  max_records_per_query: 20
+  max_graph_hops: 4
+entity_linking:
+  fuzzy_score_threshold: 90
+  fuzzy_score_margin: 8
+  cache_ttl_seconds: 900
+

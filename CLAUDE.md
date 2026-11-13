@@ -4,7 +4,9 @@ Hướng dẫn dành cho Claude Code / Codex / Cline / Cursor / OpenCode khi là
 
 ## Tổng quan project
 
-GraphRAG — project đang ở giai đoạn khởi đầu, chưa có code. Khi code đã hình thành, cập nhật lại file này (cấu trúc thư mục, lệnh build/test/run, convention thực tế).
+GraphRAG gồm pipeline dữ liệu `offline/` đã ổn định và sản phẩm `chatbot/` (FastAPI + React/Vite) dùng graph-only RAG.
+Không sửa/mutate pipeline hoặc graph từ chatbot. Lệnh chính nằm trong `chatbot/README.md`; fake smoke phải chạy được
+không cần dịch vụ ngoài. Mọi truy vấn live đi qua catalog Cypher read-only, tham số hóa và lọc `scope_id`.
 
 ## Nguyên tắc viết code — luôn áp dụng `coding-simple`
 

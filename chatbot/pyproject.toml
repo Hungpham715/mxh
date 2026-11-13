@@ -1,0 +1,55 @@
+[project]
+name = "mxh-graphrag-chatbot"
+version = "0.1.0"
+description = "Graph-only RAG chatbot for the nlpgraph-v1 Neo4j corpus"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "fastapi>=0.120,<1",
+    "httpx>=0.28,<1",
+    "neo4j>=6.0,<7",
+    "pydantic>=2.12,<3",
+    "python-dotenv>=1.1,<2",
+    "PyYAML>=6.0,<7",
+    "rapidfuzz>=3.14,<4",
+    "uvicorn[standard]>=0.38,<1",
+]
+
+[project.optional-dependencies]
+hf = [
+    "accelerate>=1.11,<2",
+    "datasets>=4.4,<5",
+    "peft>=0.18,<1",
+    "torch>=2.8,<3",
+    "transformers>=4.57,<6",
+    "trl>=0.26,<2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0,<10",
+    "pytest-asyncio>=1.3,<2",
+    "ruff>=0.14,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/graphrag"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+exclude = ["training/notebooks", "datasets/notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+

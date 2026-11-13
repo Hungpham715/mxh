@@ -1,2 +1,23 @@
 # Local assistant tools; not part of the coursework project.
 .claude/
+
+# External coursework repositories are read-only research inputs. Keep their
+# nested Git metadata, checkpoints, datasets, and possible credentials out of
+# this repository.
+references/external/
+
+# Chatbot secrets, generated datasets/reports, caches, and model artifacts.
+**/__pycache__/
+chatbot/.env
+chatbot/.venv/
+chatbot/.pytest_cache/
+chatbot/.ruff_cache/
+chatbot/.mypy_cache/
+chatbot/ui/node_modules/
+chatbot/ui/dist/
+chatbot/ui/*.tsbuildinfo
+chatbot/data/generated/
+chatbot/data/reviewed/
+chatbot/data/splits/
+chatbot/data/models/
+chatbot/reports/

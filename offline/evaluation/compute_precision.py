@@ -18,6 +18,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+# Allow this standalone script (run as `python evaluation/compute_precision.py`) to import the
+# shared, vendored KG-accuracy estimators from the `src` package at the repository root.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from src.evaluation.kg_accuracy import WILSON, proportion_ci  # noqa: E402
+
 EVAL = Path(__file__).resolve().parent
 TYPES = ("AFFILIATED_WITH", "ORG_COAUTHORED_WITH", "ACTIVE_IN")
 LABELS = ("correct", "incorrect", "unverifiable")
@@ -94,14 +100,9 @@ def validate(rows: list[dict[str, str]], name: str, require_adjudication: bool =
 
 
 # ------------------------------------------------------------------------------------------------ statistics
-def wilson(k: int, n: int, z: float = 1.959963984540054) -> tuple[float, float]:
-    if n == 0:
-        return (float("nan"), float("nan"))
-    p = k / n
-    den = 1 + z * z / n
-    c = (p + z * z / (2 * n)) / den
-    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
-    return (max(0.0, c - h), min(1.0, c + h))
+def wilson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
+    """Wilson 95% CI from the shared reliable-kg-estimation estimators (exact bounds near 0/n)."""
+    return proportion_ci(k, n, alpha=alpha, method=WILSON)
 
 
 def cohen_kappa(a: list[str], b: list[str]) -> float | None:
