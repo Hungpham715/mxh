@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import random
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -48,6 +49,60 @@ QUESTION_TEMPLATES = {
     QueryAction.ORG_COLLABORATIONS: "{i} hợp tác với tổ chức nào trong corpus?",
     QueryAction.AUTHOR_PATH: "Đường đồng tác giả giữa {a} và {b} là gì?",
     QueryAction.NETWORK_TOP: "Top tác giả theo số đồng tác giả riêng biệt là ai?",
+}
+
+# Two independently worded surface forms per graph action. Sampling applies both forms across
+# hundreds of distinct entities; this adds linguistic diversity without multiplying database
+# queries or cloning a handful of facts thousands of times.
+QUESTION_VARIANTS = {
+    QueryAction.AUTHOR_PAPERS: (
+        "{a} có những bài báo nào trong corpus?",
+        "Hãy liệt kê các công trình của {a} trong tập dữ liệu.",
+    ),
+    QueryAction.COAUTHORS: (
+        "Đồng tác giả của {a} là ai?",
+        "Trong corpus, {a} đã viết bài cùng những ai?",
+    ),
+    QueryAction.SHARED_PAPERS: (
+        "{a} và {b} có bài báo chung nào?",
+        "Công trình nào trong corpus có cả {a} và {b}?",
+    ),
+    QueryAction.AUTHOR_AFFILIATIONS: (
+        "{a} gắn với tổ chức nào theo từng bài báo?",
+        "Theo bằng chứng trên bài, {a} khai báo các cơ quan nào?",
+    ),
+    QueryAction.COAUTHOR_AFFILIATIONS: (
+        "Tổ chức của đồng tác giả {a} trên bài chung là gì?",
+        "Các đồng tác giả của {a} thuộc cơ quan nào trên đúng bài viết chung?",
+    ),
+    QueryAction.PAPER_AUTHORS: (
+        "Ai là tác giả của {p}?",
+        "Bài {p} có danh sách tác giả nào?",
+    ),
+    QueryAction.TOPIC_PAPERS: (
+        "Các bài đã gắn nhãn chủ đề {t} là gì?",
+        "Corpus có những công trình nào thuộc chủ đề {t}?",
+    ),
+    QueryAction.PAPER_VENUE: (
+        "Bài {p} xuất hiện ở venue nào?",
+        "Venue của công trình {p} là gì?",
+    ),
+    QueryAction.PAPER_CITATIONS: (
+        "Bài {p} được trích dẫn bởi bài nào trong corpus?",
+        "Những citation nội bộ corpus liên quan đến {p} là gì?",
+    ),
+    QueryAction.ORG_COLLABORATIONS: (
+        "{i} hợp tác với tổ chức nào trong corpus?",
+        "Các cơ quan đồng xuất hiện trên bài với {i} gồm những nơi nào?",
+    ),
+    QueryAction.AUTHOR_PATH: (
+        "Đường đồng tác giả giữa {a} và {b} là gì?",
+        "Hãy tìm đường nối {a} với {b} qua tối đa bốn cạnh đồng tác giả.",
+    ),
+    QueryAction.NETWORK_TOP: (
+        "Top tác giả theo số đồng tác giả riêng biệt là ai?",
+        "Xếp hạng tác giả có nhiều cộng tác viên khác nhau nhất trong graph.",
+    ),
 }
 
 # Default filters mirror graphrag.models.QueryFilters; citation_direction is the only one a
@@ -130,6 +185,18 @@ def _pick(items: list, count: int, rng: random.Random) -> list:
     shuffled = list(items)
     rng.shuffle(shuffled)
     return shuffled[:count]
+
+
+def _unique_name_entities(items: list) -> list:
+    """Keep only entities whose normalized display name maps to one graph ID.
+
+    Generated questions mention display names, not hidden IDs. A duplicated name would therefore
+    produce an ambiguous runtime question while the generated label silently chose one ID.
+    Excluding those entities keeps the candidate contract honest; ambiguity cases are generated
+    separately and carry an explicit ``ambiguous`` expected status.
+    """
+    name_counts = Counter(item.name.casefold().strip() for item in items)
+    return [item for item in items if name_counts[item.name.casefold().strip()] == 1]
 
 
 def _sampled_specs(authors, papers, topics, institutions, per_action: int, rng: random.Random) -> list[Spec]:
@@ -221,10 +288,11 @@ async def generate(
     limit: int,
     execute: bool,
     per_action: int = 0,
+    snapshot_version: str | None = None,
 ) -> list[QuestionCase]:
     if provider == "neo4j" and not execute:
         raise ValueError("Neo4j generation is read-only but still requires explicit --execute")
-    repository = await _repository(provider)
+    repository = await build_repository(provider)
     rng = random.Random(seed)
     normalizer = EvidenceNormalizer()
     try:
@@ -239,60 +307,87 @@ async def generate(
         institutions = by_label.get("Institution", [])
 
         if per_action > 0:
+            authors = _unique_name_entities(authors)
+            papers = _unique_name_entities(papers)
+            topics = _unique_name_entities(topics)
+            institutions = _unique_name_entities(institutions)
             specs = _sampled_specs(authors, papers, topics, institutions, per_action, rng)
         else:
             specs = _legacy_specs(authors, papers, topics, institutions)
 
         cases: list[QuestionCase] = []
-        for index, spec in enumerate(specs[:limit], start=1):
-            result = await repository.execute(
-                QueryStep(action=spec.action, params=spec.params, expected_fields=[], limit=20)
-            )
+        for spec in specs:
+            if len(cases) >= limit:
+                break
+            step = QueryStep(action=spec.action, params=spec.params, expected_fields=[], limit=100)
+            result = await repository.execute(step)
             facts = normalizer.normalize(result.records)
             fact_dicts = [fact.model_dump(mode="json") for fact in facts]
             citations = build_citations(facts)
             answer = _answer_from_facts(facts)
-            status = "answered" if facts else "not_found"
-            question = QUESTION_TEMPLATES[spec.action].format(**spec.values)
+            if result.truncated:
+                status = "partial"
+            elif facts:
+                status = "answered"
+            else:
+                status = "not_found"
             entity_ids = [str(value) for key, value in spec.params.items() if key.endswith("_id")]
-
-            cases.append(
-                QuestionCase(
-                    case_id=f"generated-{seed}-{index:05d}",
-                    question=question,
-                    expected_status=status,
-                    expected_query=ExpectedQuery(
-                        intent=spec.action.value,
-                        entity_ids=entity_ids,
-                        params=spec.params,
-                    ),
-                    expected_facts=ExpectedFacts(
-                        predicates=[fact.predicate for fact in facts],
-                        object_ids=[fact.object_id for fact in facts if fact.object_id is not None],
-                        answer=answer,
-                    ),
-                    expected_citations=ExpectedCitations(
-                        paper_ids=[citation.paper_id for citation in citations],
-                        source_urls=[citation.url for citation in citations],
-                    ),
-                    entity_mentions=spec.mentions,
-                    filters=spec.filters,
-                    verified_facts=fact_dicts,
-                    scope_id="nlpgraph-v1",
-                    snapshot_version="synthetic-v1" if provider == "fake" else "live-readonly",
-                    template_id=spec.action.value,
-                    group_id="|".join(sorted(entity_ids)) or spec.action.value,
-                    seed=seed,
-                    review_status=ReviewStatus.NEEDS_REVIEW,
-                    provenance={"provider": provider, "records": len(result.records)},
-                )
+            templates = (
+                QUESTION_VARIANTS[spec.action] if per_action > 0 else (QUESTION_TEMPLATES[spec.action],)
             )
+
+            for variant_index, template in enumerate(templates, start=1):
+                if len(cases) >= limit:
+                    break
+                case_index = len(cases) + 1
+                question = template.format(**spec.values)
+                cases.append(
+                    QuestionCase(
+                        case_id=f"generated-{seed}-{case_index:05d}",
+                        question=question,
+                        expected_route="graph_qa",
+                        expected_status=status,
+                        expected_query=ExpectedQuery(
+                            intent=spec.action.value,
+                            entity_ids=entity_ids,
+                            params=spec.params,
+                        ),
+                        expected_facts=ExpectedFacts(
+                            predicates=[fact.predicate for fact in facts],
+                            object_ids=[fact.object_id for fact in facts if fact.object_id is not None],
+                            answer=answer,
+                        ),
+                        expected_citations=ExpectedCitations(
+                            paper_ids=[citation.paper_id for citation in citations],
+                            source_urls=[citation.url for citation in citations],
+                        ),
+                        entity_mentions=spec.mentions,
+                        filters=spec.filters,
+                        verified_facts=fact_dicts,
+                        scope_id="nlpgraph-v1",
+                        snapshot_version=(
+                            snapshot_version
+                            or ("synthetic-v1" if provider == "fake" else "live-readonly-unversioned")
+                        ),
+                        template_id=f"{spec.action.value}.v{variant_index}",
+                        group_id="|".join(sorted(entity_ids)) or spec.action.value,
+                        seed=seed,
+                        review_status=ReviewStatus.NEEDS_REVIEW,
+                        provenance={
+                            "provider": provider,
+                            "records": len(result.records),
+                            "truncated": result.truncated,
+                            "query_fingerprint": step.fingerprint,
+                            "validation_level": "candidate_generation_query",
+                        },
+                    )
+                )
         return cases
     finally:
         await repository.close()
 
 
-async def _repository(provider: str):
+async def build_repository(provider: str):
     if provider == "fake":
         return FakeGraphRepository()
     settings = Settings.from_env()
@@ -322,9 +417,22 @@ def main() -> None:
         default=0,
         help="entities to sample per template (0 = the twelve canonical templates only)",
     )
+    parser.add_argument(
+        "--snapshot-version",
+        help="immutable graph snapshot identifier (for example processed manifest sha256)",
+    )
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    cases = asyncio.run(generate(args.provider, args.seed, args.limit, args.execute, args.per_action))
+    cases = asyncio.run(
+        generate(
+            args.provider,
+            args.seed,
+            args.limit,
+            args.execute,
+            args.per_action,
+            args.snapshot_version,
+        )
+    )
     count = write_models(args.out, cases)
     print(f"wrote {count} candidate cases to {args.out} (not gold; human review required)")
 

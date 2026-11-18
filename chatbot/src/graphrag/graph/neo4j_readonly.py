@@ -73,16 +73,20 @@ class Neo4jReadOnlyRepository:
         missing = template.required_params - step.params.keys()
         if missing:
             raise ValueError(f"missing parameters for {step.action}: {sorted(missing)}")
+        # Fetch limit+1 rows so truncation is detected exactly (a full page does not
+        # necessarily mean more rows exist).
+        page = min(step.limit, 100)
         params = {
             **step.params,
             "scope": self.scope_id,
-            "limit": min(step.limit, 100),
+            "limit": page + 1,
             "year_from": step.params.get("year_from"),
             "year_to": step.params.get("year_to"),
             "direction": step.params.get("direction", "both"),
         }
         records = await self._read(template.cypher, params)
-        return GraphQueryResult(records=records, truncated=len(records) >= step.limit)
+        truncated = len(records) > page
+        return GraphQueryResult(records=records[:page], truncated=truncated)
 
     async def _read(self, query: str, params: dict[str, Any]) -> list[dict[str, Any]]:
         @self._neo4j.unit_of_work(timeout=self.timeout_seconds, metadata={"app": "mxh-graphrag"})

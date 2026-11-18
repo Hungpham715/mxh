@@ -1,4 +1,4 @@
-import type { ChatResponse, HealthStatus, PublicConfig } from "./types";
+import type { ChatResponse, HealthStatus, HistoryMessage, PublicConfig } from "./types";
 
 const JSON_HEADERS = { "Content-Type": "application/json" };
 
@@ -21,12 +21,13 @@ export async function getHealth(): Promise<HealthStatus> {
 export async function sendChat(
   question: string,
   debug: boolean,
+  history: HistoryMessage[] = [],
   signal?: AbortSignal,
 ): Promise<ChatResponse> {
   const response = await fetch("/api/chat", {
     method: "POST",
     headers: JSON_HEADERS,
-    body: JSON.stringify({ question, debug }),
+    body: JSON.stringify({ question, debug, history }),
     signal,
   });
   return parseJson<ChatResponse>(response);
@@ -58,12 +59,13 @@ export async function streamChat(
   question: string,
   debug: boolean,
   onEvent: (event: StreamEvent) => void,
+  history: HistoryMessage[] = [],
   signal?: AbortSignal,
 ): Promise<ChatResponse> {
   const response = await fetch("/api/chat/stream", {
     method: "POST",
     headers: JSON_HEADERS,
-    body: JSON.stringify({ question, debug }),
+    body: JSON.stringify({ question, debug, history }),
     signal,
   });
   if (!response.ok || !response.body) {

@@ -14,7 +14,16 @@ from datasets.schema import ExpectedCitations, ExpectedFacts, QuestionCase, Revi
 def import_review(
     source_cases: list[QuestionCase],
     csv_path: Path,
+    status_on_yes: ReviewStatus = ReviewStatus.APPROVED,
 ) -> tuple[list[QuestionCase], list[dict[str, str]]]:
+    """Apply review decisions.
+
+    `status_on_yes` distinguishes review provenance: human review CSVs import as APPROVED
+    (human gold); machine/auto review CSVs must import as SILVER_APPROVED so silver labels
+    can never masquerade as human gold downstream (eval gating, SFT reporting).
+    """
+    if status_on_yes not in {ReviewStatus.APPROVED, ReviewStatus.SILVER_APPROVED}:
+        raise ValueError("status_on_yes must be approved or silver_approved")
     by_id = {case.case_id: case for case in source_cases}
     accepted: list[QuestionCase] = []
     rejected: list[dict[str, str]] = []
@@ -49,7 +58,7 @@ def import_review(
                             "expected_query": query,
                             "expected_facts": facts,
                             "expected_citations": citations,
-                            "review_status": ReviewStatus.APPROVED,
+                            "review_status": status_on_yes,
                             "reviewer_note": row["reviewer_note"].strip(),
                         }
                     )
@@ -65,12 +74,18 @@ def main() -> None:
     parser.add_argument("--csv", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--rejected", type=Path, required=True)
+    parser.add_argument(
+        "--status-on-yes",
+        choices=["approved", "silver_approved"],
+        default="approved",
+        help="use silver_approved for machine-generated (auto_review) CSVs; approved only for human review",
+    )
     args = parser.parse_args()
     source_cases = read_models(args.source, QuestionCase)
-    accepted, rejected = import_review(source_cases, args.csv)
+    accepted, rejected = import_review(source_cases, args.csv, ReviewStatus(args.status_on_yes))
     write_models(args.out, accepted)
     write_dicts(args.rejected, rejected)
-    print(f"approved={len(accepted)} rejected_rows={len(rejected)}")
+    print(f"approved={len(accepted)} (status={args.status_on_yes}) rejected_rows={len(rejected)}")
 
 
 if __name__ == "__main__":

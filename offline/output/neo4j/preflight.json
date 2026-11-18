@@ -1,34 +1,94 @@
 {
   "return_1": 1,
-  "server_agent": "Neo4j/5.27-aura",
+  "server_agent": "Neo4j/5.26.2",
   "protocol": [
-    6,
-    1
+    5,
+    8
   ],
   "components": [
     {
       "name": "Neo4j Kernel",
       "versions": [
-        "5.27-aura"
+        "5.26.2"
       ],
-      "edition": "enterprise"
-    },
-    {
-      "name": "Cypher",
-      "versions": [
-        "5",
-        "25"
-      ],
-      "edition": ""
+      "edition": "community"
     }
   ],
-  "labels": [],
-  "relationship_types": [],
-  "total_nodes": 0,
-  "total_relationships": 0,
-  "project_nodes": 0,
-  "project_relationships": 0,
+  "labels": [
+    "Author",
+    "Paper",
+    "Institution",
+    "Venue",
+    "Topic"
+  ],
+  "relationship_types": [
+    "FIRST_AUTHOR_OF",
+    "OTHER_AUTHOR_OF",
+    "COAUTHORED_WITH",
+    "AFFILIATED_WITH",
+    "APPEARS_IN",
+    "HAS_TOPIC",
+    "CITES",
+    "ORG_COAUTHORED_WITH",
+    "RESEARCHES",
+    "ACTIVE_IN"
+  ],
+  "total_nodes": 7134,
+  "total_relationships": 30971,
+  "project_nodes": 7134,
+  "project_relationships": 30971,
   "foreign_nodes": 0,
   "foreign_relationships": 0,
-  "constraints": []
+  "constraints": [
+    {
+      "name": "nlpgraph_author_id_unique",
+      "labelsOrTypes": [
+        "Author"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_institution_id_unique",
+      "labelsOrTypes": [
+        "Institution"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_paper_id_unique",
+      "labelsOrTypes": [
+        "Paper"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_topic_id_unique",
+      "labelsOrTypes": [
+        "Topic"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_venue_id_unique",
+      "labelsOrTypes": [
+        "Venue"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "UNIQUENESS"
+    }
+  ]
 }

@@ -1,0 +1,42 @@
+{
+  "run_id": "20261117T1631-9e78757",
+  "phase": "H_acceptance_pending_push",
+  "task_id": "full-real-cpu-validation",
+  "status": "INCOMPLETE",
+  "input_hash": "9e78757086fc281ba5d9f5f1ab28cc1f31ab5d8a",
+  "graph_snapshot_hash": "c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1",
+  "output_paths": [
+    "agent_runs/20261117T1631-9e78757/FINAL_ACCEPTANCE.md",
+    "agent_runs/20261117T1631-9e78757/e2e_real_results.json",
+    "agent_runs/20261117T1631-9e78757/api_real_smoke.json",
+    "offline/reports/graph_audit/quality_report.md",
+    "offline/report/submission_addendum_20261118.md",
+    "undone.md"
+  ],
+  "attempts": 5,
+  "last_progress_at": "2026-11-18T00:39:30Z",
+  "next_retry_at": null,
+  "block_reason": "Aura unavailable and independent graph/QA reviewers absent",
+  "verified_evidence": {
+    "graph_integrity": "7134/7134 nodes and 30971/30971 relationships; zero structural errors",
+    "graph_truth": "NOT VERIFIED; automated diagnostic only 0.8802, stratified Wilson 95% [0.8548,0.9017], n=386; human n=0",
+    "dataset": "11998 unique silver cases; 12 actions; leakage pass; human gold n=0",
+    "real_e2e": "local Neo4j + Ollama qwen3:0.6b; status 25/31, oracle 15/21, p50 5911 ms, p95 17392 ms",
+    "api_smoke": "REST/SSE semantic match true",
+    "offline_pytest": "89 passed",
+    "chatbot_pytest": "78 passed; Ruff lint and format checks pass",
+    "ui": "2 tests passed; production build passed",
+    "aura": "BLOCKED: Unable to retrieve routing information"
+  },
+  "gates": {
+    "G0": "PASS",
+    "G1": "BLOCKED_AURA_COUNTS",
+    "G2": "PASS",
+    "G3": "BLOCKED_NO_INDEPENDENT_HUMAN_TRUTH",
+    "G4": "BLOCKED_AURA_UNAVAILABLE",
+    "G5": "BLOCKED_AURA_AND_LOCAL_DIAGNOSTIC_BELOW_ACCEPTANCE",
+    "G6": "BLOCKED_HUMAN_GOLD_0_OF_500",
+    "G7": "BLOCKED_NO_GOLD_OR_AURA_AND_QUALITY_BELOW_TARGET",
+    "G8": "PENDING_SAFE_PUSH"
+  }
+}

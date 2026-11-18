@@ -13,15 +13,21 @@ class Planner:
     def __init__(self, max_records: int) -> None:
         self.max_records = max_records
 
-    def plan(self, intent: QueryIntent, linked: list[LinkedEntity]) -> list[QueryStep]:
+    def plan(
+        self,
+        intent: QueryIntent,
+        linked: list[LinkedEntity],
+        page_size: int | None = None,
+    ) -> list[QueryStep]:
         by_label: dict[str, list[LinkedEntity]] = {}
         for entity in linked:
             by_label.setdefault(entity.label, []).append(entity)
+        page_size = min(page_size or self.max_records, 100)
 
         if intent.intent == IntentName.UNKNOWN:
             return []
         if intent.intent == IntentName.NETWORK_TOP:
-            return [self._step(QueryAction.NETWORK_TOP, {})]
+            return [self._step(QueryAction.NETWORK_TOP, {}, page_size)]
 
         action = QueryAction(intent.intent.value)
         params: dict[str, object] = {}
@@ -48,17 +54,19 @@ class Planner:
         if action == QueryAction.PAPER_CITATIONS:
             params["direction"] = intent.filters.citation_direction
 
-        steps = [self._step(action, params)]
+        steps = [self._step(action, params, page_size)]
         if intent.intent == IntentName.AUTHOR_PAPERS and "affiliations" in intent.requested_fields:
-            steps.append(self._step(QueryAction.AUTHOR_AFFILIATIONS, {"author_id": params["author_id"]}))
+            steps.append(
+                self._step(QueryAction.AUTHOR_AFFILIATIONS, {"author_id": params["author_id"]}, page_size)
+            )
         return steps
 
-    def _step(self, action: QueryAction, params: dict[str, object]) -> QueryStep:
+    def _step(self, action: QueryAction, params: dict[str, object], limit: int) -> QueryStep:
         return QueryStep(
             action=action,
             params=params,
             expected_fields=EXPECTED_FIELDS[action],
-            limit=self.max_records,
+            limit=limit,
         )
 
     @staticmethod

@@ -1,6 +1,7 @@
-# Hướng dẫn gán nhãn thủ công: AFFILIATED_WITH, ORG_COAUTHORED_WITH, ACTIVE_IN
+# Hướng dẫn gán nhãn thủ công cho 10 loại quan hệ
 
-Phiên bản: guideline-v1 (2026-11-03). Áp dụng cho `review_sheet_round1.csv`, `review_sheet_round2.csv` và
+Phiên bản: guideline-v2 (2026-11-18). Áp dụng cho hàng đợi review 10 loại quan hệ và các tệp
+`review_sheet_round1.csv`, `review_sheet_round2.csv` và
 `review_sheet_round1_overlap_reviewer2.csv`. Đọc hết tài liệu trước khi chấm dòng đầu tiên. Khi gặp trường hợp mà
 tài liệu chưa nói rõ, ghi lại trong cột `note`, chọn nhãn theo nguyên tắc chung ở mục 1 và báo lại để bổ sung
 guideline (không tự đổi quy tắc giữa chừng).
@@ -15,7 +16,7 @@ guideline (không tự đổi quy tắc giữa chừng).
    kiểm tra tự động hoặc thông tin phân tầng có thể làm bạn bị ảnh hưởng.
 3. Người chấm thứ hai (nếu có) chấm tệp `review_sheet_round1_overlap_reviewer2.csv` **độc lập**, không xem nhãn của
    người thứ nhất.
-4. Chấm theo **định nghĩa của dự án** (mục 2–4), không theo hiểu biết chung về tổ chức. Ví dụ: một người nổi tiếng làm ở
+4. Chấm theo **định nghĩa của dự án** (mục 2–5), không theo hiểu biết chung về tổ chức. Ví dụ: một người nổi tiếng làm ở
    Google nhưng trên bài này chỉ ghi "Stanford University" thì cạnh tới Google là sai **đối với bài này**.
 5. Mỗi dòng mất khoảng 1–5 phút. Nếu một dòng mất quá 10 phút, chọn `unverifiable` và ghi lý do.
 
@@ -23,7 +24,7 @@ guideline (không tự đổi quy tắc giữa chừng).
 
 | Nhãn | Khi nào dùng |
 |---|---|
-| `correct` | Đọc bài (các bài) được liệt kê, khẳng định của cạnh (định nghĩa ở mục 2–4) là **đúng**. |
+| `correct` | Đọc bài (các bài) được liệt kê, khẳng định của cạnh (định nghĩa ở mục 2–5) là **đúng**. |
 | `incorrect` | Đọc được bài, và khẳng định của cạnh **sai** (sai tổ chức, sai người, sai ngưỡng, bằng chứng không ủng hộ). Bắt buộc điền `error_type`. |
 | `unverifiable` | **Không thể** kiểm chứng: không mở được bài/PDF, bài không in affiliation ở đâu cả, tên trên bài quá mơ hồ để quyết định. Bắt buộc ghi lý do ở `note`. **Không** dùng `unverifiable` cho trường hợp "khó" mà bạn vẫn có thể quyết định được. |
 
@@ -32,15 +33,15 @@ thừa và chữ hoa, nhưng từ chối mọi giá trị khác.
 
 Quy tắc điền cột:
 - `label=correct` → để trống `error_type`.
-- `label=incorrect` → `error_type` bắt buộc, chọn **một** giá trị trong danh sách ở mục 5.
+- `label=incorrect` → `error_type` bắt buộc, chọn **một** giá trị trong danh sách ở mục 6.
 - `label=unverifiable` → để trống `error_type`; `note` bắt buộc.
 - `reviewer` bắt buộc ở mọi dòng (viết tắt tên, ví dụ `HL`). Giữ nguyên một cách viết suốt quá trình.
-- `adjudicated_label`: chỉ điền sau khi hai người chấm bất đồng ở một dòng `is_overlap=1` (xem mục 7).
+- `adjudicated_label`: chỉ điền sau khi hai người chấm bất đồng ở một dòng `is_overlap=1` (xem mục 8).
 
 ## 2. AFFILIATED_WITH (Author → Institution)
 
 **Khẳng định của cạnh:** "Trên ít nhất một bài được liệt kê, tác giả `source_name` khai báo tổ chức `target_name`
-(hoặc một đơn vị trực thuộc tổ chức đó, xem 6.2)". Cạnh **không** nói người đó *hiện đang* làm ở đó.
+(hoặc một đơn vị trực thuộc tổ chức đó, xem 7.2)". Cạnh **không** nói người đó *hiện đang* làm ở đó.
 
 `correct` khi: mở bài, tìm đúng tác giả (theo tên và vị trí trong danh sách tác giả), và affiliation in cạnh tên người đó
 (chỉ số trên, chú thích chân trang, khối địa chỉ) là `target_name` hoặc đơn vị trực thuộc.
@@ -58,7 +59,7 @@ Ví dụ (minh họa, không phải dòng trong mẫu):
   University, Shanghai". → `correct`.
 - Sai: cạnh "B → IBM (United States)"; trên bài, B chỉ ghi "IIT Bombay". → `incorrect`, `wrong_org`.
 - Sai: cạnh "Wei Zhang → Tsinghua University"; trên bài có hai người tên Wei Zhang, người ở vị trí được trích dẫn ghi
-  "Peking University", người kia ghi Tsinghua. → `incorrect`, `wrong_author` (xem 6.4).
+  "Peking University", người kia ghi Tsinghua. → `incorrect`, `wrong_author` (xem 7.4).
 - Không kiểm được: PDF không mở được và trang bài không có affiliation. → `unverifiable`, note "PDF 404".
 
 ## 3. ORG_COAUTHORED_WITH (Institution — Institution, vô hướng)
@@ -107,7 +108,52 @@ Cách kiểm: đi lần lượt các bài trong `evidence_text`; dừng khi đã
 - vì gộp nhầm tổ chức → `entity_merge_error`.
 `unverifiable` khi có < 2 bài thỏa mà phần còn lại không mở được.
 
-## 5. Danh sách error_type (chỉ điền khi `incorrect`)
+## 5. Bảy loại quan hệ còn lại
+
+Các quy tắc dưới đây dùng cùng ba nhãn ở mục 1. Với mọi loại, ID hai đầu, hướng cạnh và bài bằng chứng đều phải
+khớp. Không dùng hồ sơ tác giả hoặc tri thức bên ngoài để thay bằng chứng của paper trong corpus.
+
+### 5.1 FIRST_AUTHOR_OF (Author → Paper)
+
+`correct` khi tác giả `source_name` đứng vị trí đầu tiên trong danh sách tác giả của đúng paper `target_name`.
+Vị trí đầu không đồng nghĩa người đóng góp nhiều nhất hoặc corresponding author. `incorrect` nếu sai paper, sai người
+hoặc người đó không đứng đầu.
+
+### 5.2 OTHER_AUTHOR_OF (Author → Paper)
+
+`correct` khi tác giả có trong danh sách tác giả của đúng paper và vị trí lớn hơn 1. Bài một tác giả không được tạo
+quan hệ này. `incorrect` nếu người đó không có trong bài hoặc thực tế đứng đầu.
+
+### 5.3 COAUTHORED_WITH (Author — Author, vô hướng)
+
+`correct` khi hai ID tác giả khác nhau cùng xuất hiện trên ít nhất một paper được liệt kê. Hướng lưu canonical không
+có ý nghĩa. Không chấp nhận chỉ vì hai tên giống nhau hoặc cùng tổ chức; phải có paper chung. Nếu một ID gộp nhầm hai
+người, dùng `entity_merge_error`.
+
+### 5.4 APPEARS_IN (Paper → Venue)
+
+`correct` khi metadata nguồn của paper xác nhận đúng venue đích. Paper ACL/EMNLP dùng volume hội nghị đã chọn;
+paper arXiv-only dùng `arXiv cs.CL (preprint)` và không được gọi là hội nghị peer-reviewed. Một paper trong snapshot
+chỉ có tối đa một cạnh `APPEARS_IN`.
+
+### 5.5 HAS_TOPIC (Paper → Topic)
+
+`correct` khi title hoặc abstract chứa evidence span thật và nội dung paper có chủ đề theo định nghĩa ở mục 4. Chỉ
+nhắc một thuật ngữ thoáng qua không đủ. `incorrect` nếu span không tồn tại, bị cắt sai ngữ cảnh hoặc paper không thật
+sự thuộc topic. Không suy ra rằng paper không có cạnh là paper không thuộc bất kỳ chủ đề nào.
+
+### 5.6 CITES (Paper → Paper)
+
+`correct` khi paper nguồn trích dẫn paper đích và cả hai đều nằm trong corpus. Kiểm hướng cẩn thận: nguồn là bài
+đang trích dẫn, đích là bài được trích dẫn. Self-citation paper→chính nó là sai. Đây không phải số citation toàn cầu.
+
+### 5.7 RESEARCHES (Author → Topic)
+
+`correct` khi tác giả có ít nhất 2 paper khác nhau trong corpus đã được xác nhận `HAS_TOPIC` cho topic đích. Cả
+authorship lẫn topic của từng paper đều phải đúng. Nếu chỉ có một paper hợp lệ, dùng `incorrect` với
+`evidence_mismatch`; nếu paper còn lại không truy cập được, dùng `unverifiable`.
+
+## 6. Danh sách error_type (chỉ điền khi `incorrect`)
 
 | error_type | Nghĩa |
 |---|---|
@@ -115,11 +161,13 @@ Cách kiểm: đi lần lượt các bài trong `evidence_text`; dừng khi đã
 | `wrong_author` | Người trên bài không phải tác giả trong cạnh (nhầm vị trí, trùng tên, gán sai danh tính). |
 | `entity_merge_error` | Hai thực thể khác nhau bị gộp thành một, hoặc một thực thể bị tách thành hai bản ghi (tổ chức hoặc tác giả). |
 | `evidence_mismatch` | Thực thể đúng nhưng bài liệt kê không ủng hộ khẳng định (cùng một người mang cả hai tổ chức; bài không thuộc topic; không đủ 2 bài). |
+| `wrong_direction` | Hướng cạnh bị đảo, đặc biệt với `CITES` hoặc quan hệ tác giả→paper. |
+| `wrong_position` | Tác giả có trong paper nhưng bị phân loại sai FIRST/OTHER. |
 | `other` | Lỗi khác; mô tả trong `note`. |
 
-## 6. Trường hợp khó
+## 7. Trường hợp khó
 
-### 6.1 Biến thể tên tổ chức
+### 7.1 Biến thể tên tổ chức
 Coi là **cùng tổ chức** khi rõ ràng chỉ cùng một cơ quan: viết tắt (CMU = Carnegie Mellon University, KAIST, NTU =
 Nanyang Technological University *khi ở Singapore*), tên tiếng địa phương (Technische Universität München = Technical
 University of Munich; 清华大学 = Tsinghua University), tên cũ/mới (Facebook AI = Meta), có/không có quốc gia trong ngoặc
@@ -127,7 +175,7 @@ University of Munich; 清华大学 = Tsinghua University), tên cũ/mới (Faceb
 thể là Washington hoặc Waterloo), dùng thành phố/quốc gia/email trên bài để quyết định; nếu bài không cho đủ thông tin →
 `unverifiable`, note "viết tắt mơ hồ".
 
-### 6.2 Lab/khoa so với trường
+### 7.2 Lab/khoa so với trường
 Đơn vị **trực thuộc** được tính là tổ chức mẹ: "Fudan NLP Lab", "School of Computer Science, Fudan University" →
 **tính** là Fudan University. Ngược lại: nếu cạnh trỏ tới **đơn vị con** (ví dụ "MIT Media Lab") mà bài chỉ ghi tổ chức
 mẹ ("Massachusetts Institute of Technology") → `incorrect`, `wrong_org` (cạnh khẳng định cụ thể hơn bằng chứng).
@@ -137,12 +185,12 @@ tổ chức, trừ khi bài ghi cả hai.
 Công ty mẹ/con: "Google DeepMind" được tính là Google; "Microsoft Research Asia" được tính là Microsoft; "Ant Group" và
 "Alibaba Group" là **hai** tổ chức khác nhau.
 
-### 6.3 Tác giả có nhiều affiliation
+### 7.3 Tác giả có nhiều affiliation
 Một tác giả có thể khai báo nhiều tổ chức trên cùng một bài. AFFILIATED_WITH tới **bất kỳ** tổ chức nào trong số đó đều
 `correct`. Với ORG_COAUTHORED_WITH, hai tổ chức chỉ do **một** người mang (và không ai khác mang tổ chức kia) →
 `incorrect`, `evidence_mismatch` (xem mục 3).
 
-### 6.4 Trùng tên tác giả
+### 7.4 Trùng tên tác giả
 Xác định người bằng **vị trí trong danh sách tác giả** (ghi trong `evidence_text`, ví dụ "vị trí 3") cùng với tên. Nếu
 trên bài có hai người trùng tên, dùng vị trí. Nếu `source_name` không xuất hiện trên bài ở vị trí đó (tên khác hẳn) →
 `incorrect`, `wrong_author`. Khác biệt chính tả/dấu/thứ tự họ tên ("Arık" vs "Arik", "Liu Yang" vs "Yang Liu") không tính
@@ -150,15 +198,15 @@ là sai. Với AFFILIATED_WITH nhiều bài: nếu trên các bài khác nhau t�
 tổ chức, email khác hẳn), ghi `entity_merge_error` nếu vì thế khẳng định của cạnh sai; nếu cạnh vẫn đúng trên một bài thì
 `correct` + note.
 
-### 6.5 Bài không in affiliation
+### 7.5 Bài không in affiliation
 Một số bài arXiv không ghi affiliation trên trang abstract nhưng PDF có. Luôn mở PDF. Nếu PDF cũng không có (hiếm) →
 `unverifiable`, note "no affiliation in PDF". **Không** dùng hồ sơ cá nhân, LinkedIn hay trang Google Scholar để kiểm.
 
-### 6.6 Bài bị rút/đổi phiên bản
+### 7.6 Bài bị rút/đổi phiên bản
 Dùng phiên bản ở `pdf_url`. Nếu arXiv có nhiều phiên bản và affiliation khác nhau giữa các phiên bản, chấp nhận nếu
 **bất kỳ** phiên bản nào ủng hộ, ghi note.
 
-## 7. Hai người chấm và dòng is_overlap
+## 8. Hai người chấm và dòng is_overlap
 
 - Có 30 dòng `is_overlap=1` (10 mỗi loại cạnh) trong `review_sheet_round1.csv`.
 - **Một người chấm:** chấm toàn bộ tệp chính; bỏ qua tệp `..._overlap_reviewer2.csv`. Script sẽ báo không tính được
@@ -169,7 +217,7 @@ Dùng phiên bản ở `pdf_url`. Nếu arXiv có nhiều phiên bản và affil
   và điền `adjudicated_label` (và `error_type` tương ứng nếu `incorrect`) trong **tệp chính**. Kappa được tính trên nhãn
   **trước** khi thống nhất.
 
-## 8. Lưu tệp
+## 9. Lưu tệp
 
 Mở bằng Excel được (tệp có BOM UTF-8). Khi lưu, chọn **"CSV UTF-8 (Comma delimited)"**. Không đổi tên cột, không xóa
 hoặc thêm dòng, không đổi thứ tự cột. Script chấp nhận dấu phân cách `,` hoặc `;` (Excel một số vùng dùng `;`).

@@ -26,6 +26,13 @@ class IntentName(StrEnum):
     UNKNOWN = "unknown"
 
 
+class RouteName(StrEnum):
+    GRAPH_QA = "graph_qa"
+    CHAT_HISTORY = "chat_history"
+    CLARIFY = "clarify"
+    OUT_OF_SCOPE = "out_of_scope"
+
+
 class QueryAction(StrEnum):
     AUTHOR_PAPERS = "author_papers"
     COAUTHORS = "coauthors"
@@ -46,6 +53,16 @@ class EntityMention(BaseModel):
     text: str = Field(min_length=1, max_length=300)
     type: Literal["Author", "Paper", "Institution", "Venue", "Topic", "Unknown"] = "Unknown"
 
+    @field_validator("type", mode="before")
+    @classmethod
+    def normalize_type_case(cls, value: Any) -> Any:
+        # Small models often emit "author"/"unknown"; accept any casing of a valid label.
+        if isinstance(value, str):
+            for allowed in ("Author", "Paper", "Institution", "Venue", "Topic", "Unknown"):
+                if value.casefold() == allowed.casefold():
+                    return allowed
+        return value
+
 
 class QueryFilters(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -63,12 +80,27 @@ class QueryFilters(BaseModel):
 
 class QueryIntent(BaseModel):
     model_config = ConfigDict(extra="forbid")
+    route: RouteName = RouteName.GRAPH_QA
     intent: IntentName
     entities: list[EntityMention] = Field(default_factory=list, max_length=5)
     filters: QueryFilters = Field(default_factory=QueryFilters)
     requested_fields: list[str] = Field(default_factory=list, max_length=20)
+    missing_fields: list[str] = Field(default_factory=list, max_length=10)
+    history_refs: list[str] = Field(default_factory=list, max_length=10)
     unsupported: bool = False
     parse_source: Literal["llm", "rules_fallback", "direct_fixture"] = "llm"
+
+    @field_validator("route", "intent", mode="before")
+    @classmethod
+    def normalize_enum_case(cls, value: Any) -> Any:
+        # Accept any casing from small models; Pydantic still rejects unknown values.
+        if isinstance(value, str):
+            lowered = value.casefold()
+            for enum_cls in (RouteName, IntentName):
+                for member in enum_cls:
+                    if lowered == member.value.casefold():
+                        return member.value
+        return value
 
 
 class CandidateEntity(BaseModel):
@@ -163,10 +195,12 @@ class QueryState(BaseModel):
     goals_remaining: list[str] = Field(default_factory=list)
     iteration: int = Field(default=0, ge=0, le=5)
     max_iterations: int = Field(default=5, ge=1, le=5)
+    truncated: bool = False
     stop_reason: str | None = None
-    status: Literal["running", "answered", "partial", "not_found", "ambiguous", "out_of_scope", "error"] = (
-        "running"
-    )
+    entity_rescue: str | None = None
+    status: Literal[
+        "running", "answered", "partial", "not_found", "ambiguous", "clarify", "out_of_scope", "error"
+    ] = "running"
     sources: list[Citation] = Field(default_factory=list)
     answer: str = ""
     trace: list[TraceStep] = Field(default_factory=list)
@@ -179,25 +213,45 @@ class NextDecision(BaseModel):
     missing_goals: list[str] = Field(default_factory=list)
     next_action: QueryAction | None = None
     params: dict[str, Any] | None = None
-    reason_code: Literal["enough", "continue", "no_progress", "missing_entity", "limit_reached"]
+    reason_code: Literal[
+        "enough", "continue", "no_progress", "missing_entity", "limit_reached", "invalid_decision"
+    ]
+
+
+class HistoryMessage(BaseModel):
+    """One validated conversation turn; `system` role is rejected to block spoofing."""
+
+    model_config = ConfigDict(extra="forbid")
+    role: Literal["user", "assistant"]
+    content: str = Field(min_length=1, max_length=2000)
 
 
 class ChatRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     question: str = Field(min_length=1, max_length=2000)
     session_id: str | None = Field(default=None, max_length=100)
-    history: list[dict[str, str]] = Field(default_factory=list, max_length=12)
+    history: list[HistoryMessage] = Field(default_factory=list, max_length=12)
+    page_size: int = Field(default=20, ge=1, le=100)
     debug: bool = False
 
 
 class ChatResponse(BaseModel):
     answer: str
-    status: Literal["answered", "partial", "not_found", "ambiguous", "out_of_scope", "error"]
+    status: Literal["answered", "partial", "not_found", "ambiguous", "clarify", "out_of_scope", "error"]
     complete: bool
     iterations_used: int = Field(ge=0, le=5)
     stop_reason: str
     sources: list[Citation] = Field(default_factory=list)
     facts_count: int = Field(ge=0)
+    truncated: bool = False
+    route: RouteName | None = None
+    parsed_intent: str | None = None
+    parse_source: str | None = None
+    parsed_entities: list[EntityMention] = Field(default_factory=list)
+    linked_entities: list[LinkedEntity] = Field(default_factory=list)
+    entity_rescue: str | None = None
+    llm_calls: int = Field(default=0, ge=0)
+    model: str | None = None
     trace: list[TraceStep] | None = None
     provider_info: dict[str, str] | None = None
     ambiguous_candidates: list[CandidateEntity] = Field(default_factory=list)

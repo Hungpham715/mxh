@@ -11,8 +11,19 @@ from pydantic import BaseModel, ConfigDict, Field
 class ReviewStatus(StrEnum):
     UNKNOWN = "unknown"
     NEEDS_REVIEW = "needs_review"
+    # Source-validated by the pipeline (Cypher oracle + provenance checks). NOT human gold.
+    SILVER_APPROVED = "silver_approved"
+    # Independently reviewed and approved by a human reviewer.
     APPROVED = "approved"
     REJECTED = "rejected"
+
+
+class DatasetHistoryMessage(BaseModel):
+    """One conversation turn stored with a case; mirrors the runtime contract."""
+
+    model_config = ConfigDict(extra="forbid")
+    role: Literal["user", "assistant"]
+    content: str = Field(min_length=1, max_length=2000)
 
 
 class EntityMention(BaseModel):
@@ -52,9 +63,12 @@ class QuestionCase(BaseModel):
     case_id: str
     question: str
     language: Literal["vi", "en"] = "vi"
-    expected_status: Literal["answered", "partial", "not_found", "ambiguous", "out_of_scope", "error"] = (
-        "answered"
-    )
+    # Conversation turns preceding the question (for follow-up / chat-history cases).
+    history: list[DatasetHistoryMessage] = Field(default_factory=list, max_length=12)
+    expected_route: Literal["graph_qa", "chat_history", "clarify", "out_of_scope"] | None = None
+    expected_status: Literal[
+        "answered", "partial", "not_found", "ambiguous", "clarify", "out_of_scope", "error"
+    ] = "answered"
     expected_query: ExpectedQuery
     expected_facts: ExpectedFacts = Field(default_factory=ExpectedFacts)
     expected_citations: ExpectedCitations = Field(default_factory=ExpectedCitations)

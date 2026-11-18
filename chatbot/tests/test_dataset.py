@@ -3,11 +3,14 @@ import json
 
 import pytest
 
+from datasets.audit_dataset import build_manifest
+from datasets.auto_review import validate_cases_against_graph
 from datasets.build_sft import build_samples, parse_completion
-from datasets.export_review import export_review
-from datasets.generate_from_graph import generate
+from datasets.export_review import export_review, select_review_cases
+from datasets.generate_from_graph import _unique_name_entities, generate
 from datasets.generate_negative import build_negative_cases
 from datasets.import_review import import_review
+from datasets.io import write_models
 from datasets.schema import QuestionCase, ReviewStatus
 from datasets.split import assert_no_entity_leakage, assign_splits
 
@@ -18,6 +21,26 @@ async def test_fake_generation_covers_twelve_query_templates() -> None:
     assert len(cases) == 12
     assert len({case.expected_query.intent for case in cases}) == 12
     assert all(case.review_status == ReviewStatus.NEEDS_REVIEW for case in cases)
+
+
+@pytest.mark.asyncio
+async def test_silver_validation_requeries_graph_and_matches_generated_facts() -> None:
+    cases = await generate(provider="fake", seed=42, limit=12, execute=False)
+    rows, stats = await validate_cases_against_graph(cases, provider="fake", execute=False)
+    assert stats == {"yes": 12, "no": 0}
+    assert all(row["reviewer_note"] == "silver_auto:graph_requery_exact_match" for row in rows)
+
+
+def test_sampled_generation_excludes_duplicate_display_names() -> None:
+    class Item:
+        def __init__(self, item_id: str, name: str) -> None:
+            self.id = item_id
+            self.name = name
+
+    unique = _unique_name_entities(
+        [Item("a1", "Linh Nguyen"), Item("a2", "Linh Nguyen"), Item("a3", "An Nguyen")]
+    )
+    assert [item.id for item in unique] == ["a3"]
 
 
 def test_negative_generation_is_explicitly_synthetic_and_verified() -> None:
@@ -64,9 +87,20 @@ async def test_review_csv_round_trip_approves_only_yes_rows(tmp_path) -> None:
     assert accepted[0].expected_facts.answer == "Reviewed answer"
 
 
+@pytest.mark.asyncio
+async def test_review_selection_is_reproducible_and_held_out() -> None:
+    cases = await generate(provider="fake", seed=42, limit=20, execute=False)
+    split_cases = [case.model_copy(update={"split": "test"}) for case in cases]
+    first = select_review_cases(split_cases, split="test", limit=6, seed=7)
+    second = select_review_cases(split_cases, split="test", limit=6, seed=7)
+    assert [case.case_id for case in first] == [case.case_id for case in second]
+    assert len(first) == 6
+    assert all(case.split == "test" for case in first)
+
+
 def test_build_sft_emits_parse_and_answer_messages() -> None:
     candidates = build_negative_cases(42)
-    with pytest.raises(ValueError, match="no approved"):
+    with pytest.raises(ValueError, match="no reviewed"):
         build_samples(candidates)
     fact = {
         "subject_id": "author:missing",
@@ -107,3 +141,15 @@ def test_question_case_json_schema_is_serializable() -> None:
     schema = QuestionCase.model_json_schema()
     json.dumps(schema)
     assert schema["title"] == "QuestionCase"
+
+
+@pytest.mark.asyncio
+async def test_dataset_audit_reports_action_coverage_without_inventing_gold(tmp_path) -> None:
+    cases = await generate(provider="fake", seed=42, limit=20, execute=False)
+    input_path = tmp_path / "cases.jsonl"
+    write_models(input_path, cases)
+    manifest = build_manifest(cases, input_path)
+    assert manifest["quality_status"] == "pass"
+    assert len(manifest["actions_present"]) == 12
+    assert manifest["silver_cases"] == 0
+    assert manifest["human_gold_cases"] == 0

@@ -1,0 +1,282 @@
+{
+ "top_author": [
+  {
+   "name": "Xipeng Qiu",
+   "id": "oa:A5044665993",
+   "n": 10
+  },
+  {
+   "name": "Maosong Sun",
+   "id": "oa:A5046448314",
+   "n": 9
+  },
+  {
+   "name": "Furu Wei",
+   "id": "oa:A5014662947",
+   "n": 7
+  },
+  {
+   "name": "Xuanjing Huang",
+   "id": "oa:A5088834359",
+   "n": 7
+  },
+  {
+   "name": "Ji-Rong Wen",
+   "id": "oa:A5025631695",
+   "n": 6
+  }
+ ],
+ "coauthor_pair": [
+  {
+   "a": "Junjie Ye",
+   "aid": "oa:A5100777718",
+   "b": "Tao Gui",
+   "bid": "oa:A5058353652",
+   "n": 4
+  },
+  {
+   "a": "Tao Gui",
+   "aid": "oa:A5058353652",
+   "b": "Junjie Ye",
+   "bid": "oa:A5100777718",
+   "n": 4
+  },
+  {
+   "a": "Tao Gui",
+   "aid": "oa:A5058353652",
+   "b": "Xuanjing Huang",
+   "bid": "oa:A5088834359",
+   "n": 4
+  },
+  {
+   "a": "Xuanjing Huang",
+   "aid": "oa:A5088834359",
+   "b": "Tao Gui",
+   "bid": "oa:A5058353652",
+   "n": 4
+  },
+  {
+   "a": "Beyza Ermis",
+   "aid": "oa:A5057377890",
+   "b": "Sara Hooker",
+   "bid": "oa:A5078850040",
+   "n": 3
+  }
+ ],
+ "cited_paper": [
+  {
+   "cited": "Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation",
+   "id": "oa:W4385571140",
+   "n": 4
+  },
+  {
+   "cited": "CodeT5+: Open Code Large Language Models for Code Understanding and Generation",
+   "id": "oa:W4389519352",
+   "n": 2
+  },
+  {
+   "cited": "ANALOGYKB: Unlocking Analogical Reasoning of Language Models with A Million-scale Knowledge Base",
+   "id": "oa:W4402671871",
+   "n": 1
+  },
+  {
+   "cited": "Being Right for Whose Right Reasons?",
+   "id": "oa:W4385572232",
+   "n": 1
+  },
+  {
+   "cited": "Better Simultaneous Translation with Monotonic Knowledge Distillation",
+   "id": "oa:W4385570940",
+   "n": 1
+  }
+ ],
+ "top_org": [
+  {
+   "name": "Carnegie Mellon University",
+   "id": "oa:I74973139",
+   "n": 68
+  },
+  {
+   "name": "National University of Singapore",
+   "id": "oa:I165932596",
+   "n": 61
+  },
+  {
+   "name": "Tsinghua University",
+   "id": "oa:I99065089",
+   "n": 60
+  },
+  {
+   "name": "Chinese Academy of Sciences",
+   "id": "oa:I19820366",
+   "n": 51
+  },
+  {
+   "name": "University of Illinois Urbana-Champaign",
+   "id": "oa:I157725225",
+   "n": 42
+  }
+ ],
+ "topics": [
+  {
+   "id": "topic:llm",
+   "name": "Large language models"
+  },
+  {
+   "id": "topic:mt",
+   "name": "Machine translation"
+  },
+  {
+   "id": "topic:qa",
+   "name": "Question answering"
+  },
+  {
+   "id": "topic:retrieval",
+   "name": "Retrieval and RAG"
+  },
+  {
+   "id": "topic:summarization",
+   "name": "Summarization"
+  },
+  {
+   "id": "topic:safety_eval",
+   "name": "Safety and LLM evaluation"
+  }
+ ],
+ "affil_author": [
+  {
+   "author": "Caio Corro",
+   "id": "oa:A5045551176",
+   "orgs": [
+    "Centre National de la Recherche Scientifique",
+    "Institut national de recherche en sciences et technologies du numérique"
+   ],
+   "n": 6
+  },
+  {
+   "author": "Florian Boudin",
+   "id": "oa:A5025206208",
+   "orgs": [
+    "École Centrale de Nantes",
+    "Centre National de la Recherche Scientifique"
+   ],
+   "n": 6
+  },
+  {
+   "author": "Huajian Zhang",
+   "id": "oa:A5031895128",
+   "orgs": [
+    "Northeastern University",
+    "Westlake University"
+   ],
+   "n": 5
+  },
+  {
+   "author": "Lisa Raithel",
+   "id": "oa:A5072117104",
+   "orgs": [
+    "Centre National de la Recherche Scientifique",
+    "Université Paris-Saclay"
+   ],
+   "n": 5
+  },
+  {
+   "author": "Martin Josifoski",
+   "id": "oa:A5057031908",
+   "orgs": [
+    "Institut polytechnique de Grenoble",
+    "Centre National de la Recherche Scientifique"
+   ],
+   "n": 5
+  }
+ ],
+ "venue_paper": [
+  {
+   "title": "(RSA)²: A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding",
+   "id": "oa:W4412944834",
+   "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  },
+  {
+   "title": "3DS: Medical Domain Adaptation of LLMs via Decomposed Difficulty-based Data Selection",
+   "id": "oa:W4416036487",
+   "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing"
+  },
+  {
+   "title": "A Dynamic Fusion Model for Consistent Crisis Response",
+   "id": "oa:W4416036000",
+   "venue": "arXiv cs.CL (preprint)"
+  },
+  {
+   "title": "A Modular Approach for Clinical SLMs Driven by Synthetic Data with Pre-Instruction Tuning, Model Merging, and Clinical-Tasks Alignment",
+   "id": "oa:W4412944827",
+   "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  },
+  {
+   "title": "A New Formulation of Zipf’s Meaning-Frequency Law through Contextual Diversity",
+   "id": "oa:W4412945184",
+   "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  }
+ ],
+ "big_coauthor_author": [
+  {
+   "name": "Maosong Sun",
+   "id": "oa:A5046448314",
+   "n": 56
+  },
+  {
+   "name": "Xipeng Qiu",
+   "id": "oa:A5044665993",
+   "n": 52
+  },
+  {
+   "name": "Xuanjing Huang",
+   "id": "oa:A5088834359",
+   "n": 43
+  }
+ ],
+ "path_pair": [
+  {
+   "a": "Anirudh Ajith",
+   "aid": "oa:A5000037569",
+   "b": "Howard Chen",
+   "bid": "oa:A5101444574",
+   "via": "Ameet Deshpande"
+  },
+  {
+   "a": "Anirudh Ajith",
+   "aid": "oa:A5000037569",
+   "b": "Carlos Jimenez",
+   "bid": "src:oa:W4389523773#2",
+   "via": "Ameet Deshpande"
+  },
+  {
+   "a": "Anirudh Ajith",
+   "aid": "oa:A5000037569",
+   "b": "Vishvak Murahari",
+   "bid": "oa:A5049841785",
+   "via": "Ameet Deshpande"
+  }
+ ],
+ "ambiguous_names": [
+  {
+   "name": "Qi Zhang",
+   "n": 8
+  },
+  {
+   "name": "Min Zhang",
+   "n": 7
+  },
+  {
+   "name": "Jun Zhao",
+   "n": 6
+  },
+  {
+   "name": "Qun Liu",
+   "n": 6
+  },
+  {
+   "name": "Wayne Xin Zhao",
+   "n": 6
+  }
+ ]
+}

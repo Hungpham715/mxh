@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "name": "python",
+      "status": "configured",
+      "detail": "3.13.12"
+    },
+    {
+      "name": "uv",
+      "status": "configured"
+    },
+    {
+      "name": "node",
+      "status": "configured"
+    },
+    {
+      "name": "npm",
+      "status": "configured"
+    },
+    {
+      "name": "profile",
+      "status": "configured",
+      "detail": "real/neo4j/ollama"
+    },
+    {
+      "name": "NEO4J_URI",
+      "status": "configured"
+    },
+    {
+      "name": "NEO4J_USERNAME",
+      "status": "configured"
+    },
+    {
+      "name": "NEO4J_PASSWORD",
+      "status": "configured"
+    },
+    {
+      "name": "MODEL_ADAPTER_PATH",
+      "status": "optional"
+    },
+    {
+      "name": "HUGGING_FACE_TOKEN",
+      "status": "configured"
+    },
+    {
+      "name": "LANGSMITH_API_KEY",
+      "status": "configured"
+    },
+    {
+      "name": "ollama_service",
+      "status": "configured"
+    }
+  ]
+}

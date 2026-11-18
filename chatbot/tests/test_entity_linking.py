@@ -44,3 +44,34 @@ async def test_id_lookup_resolves_ambiguity(linker: EntityLinker) -> None:
 async def test_missing_name_returns_none(linker: EntityLinker) -> None:
     linked = await linker.link(EntityMention(text="Nobody In Corpus", type="Author"))
     assert linked is None
+
+
+@pytest.mark.asyncio
+async def test_rescue_recovers_single_author_from_question(linker: EntityLinker) -> None:
+    mentions = await linker.rescue_mentions("author_papers", "Các bài báo của An Nguyen?", [])
+    assert [m.text for m in mentions] == ["An Nguyen"]
+    assert mentions[0].type == "Author"
+
+
+@pytest.mark.asyncio
+async def test_rescue_recovers_two_authors_longest_first(linker: EntityLinker) -> None:
+    mentions = await linker.rescue_mentions("shared_papers", "Bài chung của An Nguyen và Binh Tran?", [])
+    assert {m.text for m in mentions} == {"An Nguyen", "Binh Tran"}
+
+
+@pytest.mark.asyncio
+async def test_rescue_uses_history_for_pronoun(linker: EntityLinker) -> None:
+    history = [{"role": "user", "content": "Liệt kê bài báo của Binh Tran"}]
+    mentions = await linker.rescue_mentions("coauthors", "Đồng tác giả của người đó?", history)
+    assert [m.text for m in mentions] == ["Binh Tran"]
+
+
+@pytest.mark.asyncio
+async def test_rescue_returns_empty_for_entity_free_intent(linker: EntityLinker) -> None:
+    assert await linker.rescue_mentions("network_top", "Top tác giả?", []) == []
+
+
+@pytest.mark.asyncio
+async def test_rescue_returns_empty_when_name_absent(linker: EntityLinker) -> None:
+    mentions = await linker.rescue_mentions("author_papers", "Bài báo của ai đó lạ?", [])
+    assert mentions == []

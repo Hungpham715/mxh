@@ -3,8 +3,16 @@ export type ChatStatus =
   | "partial"
   | "not_found"
   | "ambiguous"
+  | "clarify"
   | "out_of_scope"
   | "error";
+
+export type RouteName = "graph_qa" | "chat_history" | "clarify" | "out_of_scope";
+
+export interface HistoryMessage {
+  role: "user" | "assistant";
+  content: string;
+}
 
 export interface Citation {
   paper_id: string;
@@ -38,6 +46,12 @@ export interface ChatResponse {
   stop_reason: string;
   sources: Citation[];
   facts_count: number;
+  truncated?: boolean;
+  route?: RouteName | null;
+  parsed_intent?: string | null;
+  parse_source?: string | null;
+  llm_calls?: number;
+  model?: string | null;
   trace?: TraceStep[] | null;
   provider_info?: Record<string, string> | null;
   ambiguous_candidates: CandidateEntity[];
