@@ -9,13 +9,14 @@ gold.
 - Graph scope: `nlpgraph-v1`
 - Processed snapshot manifest SHA-256:
   `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
-- Local real graph: Neo4j Community, 7,134 nodes and 30,971 relationships
+- Verified local snapshot and live Aura scope: 7,134 nodes and 30,971 relationships
 - Real CPU model: Ollama `qwen3:0.6b`
-- AuraDB: unavailable during the run (`Unable to retrieve routing information`)
+- AuraDB: `neo4j+s`, `Neo4j/5.27-aura`, database `neo4j`; connectivity and
+  read-only queries verified at 2026-11-18T12:43Z
 
-The local Neo4j results below are real database results, but they are not AuraDB
-results. Fake mode was retained only for deterministic regression tests and was not
-used as acceptance evidence.
+Aura live counts match the immutable local snapshot. All 12 parameterized catalog
+actions returned records from Aura. Fake mode was retained only for deterministic
+regression tests and was not used as acceptance evidence.
 
 ## Graph construction and integrity
 
@@ -67,24 +68,26 @@ independent labels. G6 therefore remains **BLOCKED**.
 
 ## Real chatbot validation
 
-The REST endpoint and SSE endpoint were exercised against local Neo4j and real
-Ollama. They returned the same route, status, facts, and source paper IDs for the
-smoke question. The 31-case real-provider E2E run obtained:
+The REST endpoint and SSE endpoint were exercised against Aura and real Ollama. They
+returned the same route, status, facts, and source paper IDs for the smoke question.
+An eight-route API matrix covering affiliation, paper authors, organization,
+unknown/missing entities, out-of-scope, history and ambiguity passed 8/8. The
+31-case real-provider Aura E2E run obtained:
 
-- expected status: 25/31
-- checked factual oracle: 15/21
-- latency p50: 5,911 ms
-- latency p95: 17,392 ms
+- expected status: 31/31
+- checked factual oracle: 21/21
+- latency p50: 10,087 ms
+- latency p95: 25,760 ms
 - maximum database iterations: 5 by workflow contract
 
-This is useful failure-analysis evidence, not an official benchmark: it is below the
-acceptance target, has only 31 cases, and has no independent human-gold benchmark.
-G5 and G7 remain **BLOCKED** because Aura was unavailable and the official gold
-requirements were unmet.
+This clears the Aura and real-chatbot engineering gates G4/G5. It is still a bounded
+engineering diagnostic, not the official benchmark: it has only 31 cases and no
+independent human-gold labels. G7 therefore remains **BLOCKED** until the 500-row
+review queue yields at least 300 unseen independent-gold cases.
 
 ## Reproducibility and limitations
 
-The final run passed 78 chatbot tests, 89 offline tests, 2 UI tests, Ruff lint and
+The final run passed 81 chatbot tests, 89 offline tests, 2 UI tests, Ruff lint and
 format checks, and the production UI build. The detailed acceptance record is in
 `agent_runs/20261117T1631-9e78757/FINAL_ACCEPTANCE.md`; ordered blockers and exact
 resume actions are in root `undone.md`.

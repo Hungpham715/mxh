@@ -2,7 +2,7 @@ import pytest
 
 from graphrag.intent_parser import IntentParser
 from graphrag.llm.base import LLMResponse
-from graphrag.models import IntentName
+from graphrag.models import EntityMention, IntentName
 
 
 class MalformedProvider:
@@ -131,3 +131,40 @@ async def test_history_meta_question_rescued_by_rules_fallback() -> None:
     intent, _ = await parser.parse("Câu hỏi đầu tiên tôi hỏi bạn là gì?")
     assert intent.route.value == "chat_history"
     assert intent.parse_source == "rules_fallback"
+
+
+@pytest.mark.asyncio
+async def test_catalog_context_repair_keeps_llm_semantics_but_enforces_trusted_entity_type() -> None:
+    wrong = (
+        '{"route":"graph_qa","intent":"org_collaborations",'
+        '"entities":[{"text":"An Nguyen","type":"Institution"}],'
+        f'"missing_fields":[],{_CONTRACT}}}'
+    )
+    corrected = '{"intent":"author_affiliations"}'
+    parser = IntentParser(SequenceProvider([wrong, corrected]))
+    intent, _ = await parser.parse("Tổ chức của An Nguyen theo từng bài báo?")
+    repaired, calls = await parser.repair_with_catalog_context(
+        "Tổ chức của An Nguyen theo từng bài báo?",
+        [],
+        intent,
+        [EntityMention(text="An Nguyen", type="Author")],
+    )
+    assert calls == 1
+    assert repaired is not None
+    assert repaired.intent == IntentName.AUTHOR_AFFILIATIONS
+    assert repaired.entities == [EntityMention(text="An Nguyen", type="Author")]
+
+
+@pytest.mark.asyncio
+async def test_catalog_context_repair_can_preserve_out_of_scope_decision() -> None:
+    prior = f'{{"route":"out_of_scope","intent":"unknown","entities":[],"missing_fields":[],{_CONTRACT}}}'
+    parser = IntentParser(SequenceProvider([prior, '{"intent":"unknown"}']))
+    intent, _ = await parser.parse("Thời tiết ở nơi An Nguyen làm việc?")
+    repaired, calls = await parser.repair_with_catalog_context(
+        "Thời tiết ở nơi An Nguyen làm việc?",
+        [],
+        intent,
+        [EntityMention(text="An Nguyen", type="Author")],
+    )
+    assert calls == 1
+    assert repaired is None

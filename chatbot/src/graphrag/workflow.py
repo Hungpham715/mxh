@@ -84,6 +84,31 @@ class GraphRAGWorkflow:
             yield "done", response.model_dump(mode="json")
             return
 
+        # A 0.6B router can emit a valid but semantically inconsistent object. When the live
+        # catalog contains exact names in the question, use their trusted labels to detect that
+        # conflict and give the LLM one bounded correction turn. Intent selection remains with
+        # the model; code validates that the repaired entity contract uses catalog spans only.
+        catalog_mentions = await self.linker.catalog_mentions(request.question)
+        required = INTENT_REQUIRED_MENTIONS.get(intent.intent.value)
+        catalog_conflict = (
+            required is not None
+            and sum(mention.type == required[0] for mention in catalog_mentions) < required[1]
+        )
+        weak_parse = bool(catalog_mentions) and (
+            intent.route == RouteName.OUT_OF_SCOPE or intent.intent.value == "unknown" or catalog_conflict
+        )
+        if weak_parse:
+            repaired, repair_calls = await self.parser.repair_with_catalog_context(
+                request.question,
+                history,
+                intent,
+                catalog_mentions,
+            )
+            state.llm_calls += repair_calls
+            if repaired is not None:
+                intent = repaired
+                state.entity_rescue = "catalog_guided_llm"
+
         yield (
             "parse",
             {
@@ -107,7 +132,7 @@ class GraphRAGWorkflow:
                 intent = intent.model_copy(
                     update={"entities": rescued, "route": RouteName.GRAPH_QA, "missing_fields": []}
                 )
-                state.entity_rescue = "catalog"
+                state.entity_rescue = state.entity_rescue or "catalog"
 
         # --- Route dispatch -------------------------------------------------
         if intent.route == RouteName.OUT_OF_SCOPE or intent.unsupported:

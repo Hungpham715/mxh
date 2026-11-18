@@ -64,6 +64,22 @@ INTENT_ENTITY_REQUIREMENTS: dict[IntentName, tuple[str, int]] = {
     IntentName.AUTHOR_PATH: ("Author", 2),
 }
 
+INTENT_DESCRIPTIONS: dict[IntentName, str] = {
+    IntentName.AUTHOR_PAPERS: "các bài báo/công bố do một tác giả viết",
+    IntentName.COAUTHORS: "những người đồng tác giả của một tác giả",
+    IntentName.SHARED_PAPERS: "bài báo chung của hai tác giả",
+    IntentName.AUTHOR_AFFILIATIONS: "cơ quan/tổ chức/affiliation của một tác giả theo bài báo",
+    IntentName.COAUTHOR_AFFILIATIONS: "cơ quan của các đồng tác giả của một tác giả",
+    IntentName.PAPER_AUTHORS: "danh sách tác giả đã viết một bài báo",
+    IntentName.TOPIC_PAPERS: "các bài báo thuộc một chủ đề",
+    IntentName.PAPER_VENUE: "venue nơi một bài báo xuất hiện",
+    IntentName.PAPER_CITATIONS: "trích dẫn đi/đến của một bài báo",
+    IntentName.ORG_COLLABORATIONS: "các tổ chức khác hợp tác với một tổ chức",
+    IntentName.AUTHOR_PATH: "đường đồng tác giả giữa hai tác giả",
+    IntentName.NETWORK_TOP: "network-wide author ranking without a named entity",
+    IntentName.UNKNOWN: "unsupported or unclear graph request",
+}
+
 
 class IntentParser:
     def __init__(self, provider: LLMProvider) -> None:
@@ -115,6 +131,93 @@ class IntentParser:
         if fallback is not None:
             return fallback, 2
         raise ValueError(f"model returned invalid intent JSON after one retry: {type(last_error).__name__}")
+
+    async def repair_with_catalog_context(
+        self,
+        question: str,
+        history: list[dict[str, str]],
+        previous: QueryIntent,
+        catalog_mentions: list[EntityMention],
+    ) -> tuple[QueryIntent | None, int]:
+        """Ask the LLM once to repair a parse that conflicts with exact catalog entities.
+
+        The model still decides semantics. Code only supplies server-derived entity names/types
+        and accepts a graph intent when its required entity contract can be satisfied entirely
+        from those exact catalog mentions.
+        """
+        candidates = [mention.model_dump(mode="json") for mention in catalog_mentions]
+        allowed: list[IntentName] = []
+        for intent_name, (label, count) in INTENT_ENTITY_REQUIREMENTS.items():
+            if sum(mention.type == label for mention in catalog_mentions) >= count:
+                allowed.append(intent_name)
+        if not allowed:
+            return None, 0
+        # The model may keep the original refusal when a catalog name is only incidental
+        # (for example, a weather question mentioning a university).
+        allowed.append(IntentName.UNKNOWN)
+        options = {intent_name.value: INTENT_DESCRIPTIONS[intent_name] for intent_name in allowed}
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "TASK=CATALOG_INTENT_REPAIR. Select the single intent that matches the "
+                    "question's requested relationship. Catalog entity names and types are "
+                    "authoritative. Phân loại theo thứ người dùng muốn nhận về, không chỉ theo "
+                    "loại entity. Ví dụ: 'Bài báo của Alice?' -> author_papers; 'Alice viết với "
+                    "ai?' -> coauthors; 'Alice gắn với tổ chức/cơ quan nào?' -> "
+                    "author_affiliations; 'Cơ quan của đồng tác giả Alice?' -> "
+                    "coauthor_affiliations; 'Ai viết bài Paper X?' -> paper_authors. Return only "
+                    'JSON: {"intent":"one allowed key"}.'
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"QUESTION={json.dumps(question, ensure_ascii=False)}\n"
+                    f"HISTORY={json.dumps(history, ensure_ascii=False)}\n"
+                    f"CATALOG_ENTITIES={json.dumps(candidates, ensure_ascii=False)}\n"
+                    f"ALLOWED_INTENTS={json.dumps(options, ensure_ascii=False)}\n"
+                    f"REJECTED_PRIOR_INTENT={previous.intent.value}\n"
+                    "Choose by relationship direction: an author's institutions are "
+                    "author_affiliations; an institution's partner institutions are "
+                    "org_collaborations; authors of a paper are paper_authors; papers of an "
+                    "author are author_papers. Return only the one-key JSON object."
+                ),
+            },
+        ]
+        try:
+            response = await self.provider.generate(
+                messages,
+                temperature=0,
+                max_tokens=80,
+                json_mode=True,
+            )
+            payload = json.loads(response.content)
+            chosen = IntentName(str(payload["intent"]).casefold())
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+            return None, 1
+
+        if chosen not in allowed:
+            return None, 1
+        required = INTENT_ENTITY_REQUIREMENTS.get(chosen)
+        if required is None:
+            return None, 1
+        label, count = required
+        trusted = [mention for mention in catalog_mentions if mention.type == label]
+        if len(trusted) < count:
+            return None, 1
+        return (
+            previous.model_copy(
+                update={
+                    "intent": chosen,
+                    "entities": trusted[:count],
+                    "route": RouteName.GRAPH_QA,
+                    "missing_fields": [],
+                    "unsupported": False,
+                }
+            ),
+            1,
+        )
 
     @staticmethod
     def _entity_contract_error(intent: QueryIntent) -> str | None:

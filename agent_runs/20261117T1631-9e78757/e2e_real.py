@@ -12,9 +12,11 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import time
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 from neo4j import AsyncGraphDatabase
 
@@ -364,11 +366,21 @@ async def run_oracles(cases: list[dict], settings: Settings) -> dict[str, dict]:
 
 async def main() -> None:
     settings = Settings.from_env()
+    parsed_uri = urlparse(settings.neo4j_uri or "")
+    target_host = parsed_uri.hostname or "unknown"
+    target_suffix = ".".join(target_host.split(".")[-3:])
+    target_driver = AsyncGraphDatabase.driver(
+        settings.neo4j_uri, auth=(settings.neo4j_username, settings.neo4j_password)
+    )
+    try:
+        server_info = await target_driver.get_server_info()
+    finally:
+        await target_driver.close()
     entities = load_entities()
     cases = build_cases(entities)
     print(
         f"profile: mode={settings.app_mode} graph={settings.graph_provider} llm={settings.llm_provider} "
-        f"model={settings.ollama_model}"
+        f"model={settings.ollama_model} server={server_info.agent} host_suffix={target_suffix}"
     )
     oracles = await run_oracles(cases, settings)
 
@@ -478,6 +490,9 @@ async def main() -> None:
             "llm": settings.llm_provider,
             "model": settings.ollama_model,
             "scope_id": settings.neo4j_scope_id,
+            "neo4j_scheme": parsed_uri.scheme,
+            "neo4j_host_suffix": target_suffix,
+            "server_agent": server_info.agent,
         },
         "cases": n,
         "status_ok": status_ok,
@@ -486,7 +501,10 @@ async def main() -> None:
         "latency_p50_ms": p50,
         "latency_p95_ms": p95,
     }
-    (RUN_DIR / "e2e_real_results.json").write_text(
+    output_name = os.environ.get("E2E_OUTPUT", "e2e_real_results.json")
+    if Path(output_name).name != output_name:
+        raise ValueError("E2E_OUTPUT must be a plain filename")
+    (RUN_DIR / output_name).write_text(
         json.dumps({"summary": summary, "results": results}, ensure_ascii=False, indent=1), encoding="utf-8"
     )
     print("\nSUMMARY:", json.dumps(summary, ensure_ascii=False))

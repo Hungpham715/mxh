@@ -1,6 +1,6 @@
 STATUS: INCOMPLETE
-GATES: G0 PASS; G1 BLOCKED; G2 PASS; G3 BLOCKED; G4 BLOCKED; G5 BLOCKED; G6 BLOCKED; G7 BLOCKED; G8 PASS
-NEXT ACTION: Resume AuraDB, then obtain independent graph-truth and 500-row QA review before rerunning the official real benchmark.
+GATES: G0 PASS; G1 PASS; G2 PASS; G3 BLOCKED; G4 PASS; G5 PASS; G6 BLOCKED; G7 BLOCKED; G8 PASS
+NEXT ACTION: Independent reviewers must complete the 386-edge truth queue and 500-case held-out QA queue; then rerun the official >=300-case gold benchmark.
 
 # Final acceptance record
 
@@ -8,42 +8,47 @@ Run: `20261117T1631-9e78757`
 
 Branch: `agent/mxh-real-20261117-9e78757`
 
-Base: `9e78757086fc281ba5d9f5f1ab28cc1f31ab5d8a`
-
 Snapshot: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
-
-Implementation commit: `36df0784de28d23c7916135f3f1cca0185d88517`
-
-Push: `origin/agent/mxh-real-20261117-9e78757`
 
 ## Verdict
 
-The implementation, local real-provider validation, full structural graph census,
-production-scale silver dataset, tests, and report addendum are complete. The
-submission is still **INCOMPLETE** because Aura was unavailable, graph truth has no
-independent reviewer, the held-out QA queue has no human gold, and the bounded local
-diagnostic is below the official benchmark requirements.
+All environment, corpus, structural-integrity, Aura, real CPU chatbot, test, report,
+and publication work that the agent can execute autonomously now passes. The
+submission remains **INCOMPLETE** only because the prompt requires independent human
+labels for graph truth and the official held-out benchmark. Those queues contain
+0/386 and 0/500 labels; automated or same-pipeline labels are not promoted to gold.
 
 | Gate | Result | Fresh evidence |
 |---|---|---|
-| G0 | PASS | workspace preflight; allowlisted staging; `git diff --check`; added-content secret scan |
-| G1 | BLOCKED | immutable local snapshot meets 7,134 nodes/30,971 edges/10 types; direct Aura census unavailable |
-| G2 | PASS | 7,134/7,134 nodes and 30,971/30,971 edges scanned; zero structural errors |
-| G3 | BLOCKED | human n=0; automated diagnostic 0.8802, 95% CI [0.8548, 0.9017], n=386, not gold |
-| G4 | BLOCKED | fresh Aura probe failed with routing-unavailable error |
-| G5 | BLOCKED | local real REST/SSE smoke passed; Aura unavailable and local diagnostic misses acceptance |
-| G6 | BLOCKED | 11,998 unique graph-revalidated silver rows and 12 actions; human gold n=0 |
-| G7 | BLOCKED | local real n=31: status 25, oracle 15/21, p50 5,911 ms, p95 17,392 ms; no >=300 gold |
-| G8 | PASS | backend/offline/UI gates pass; 13-page report plus addendum; commit `36df078`; safe branch pushed to origin without force |
+| G0 | PASS | managed worktree; allowlisted staging; diff/secret scans before publication |
+| G1 | PASS | live Aura census: 7,134 nodes, 30,971 relationships, all ten types, scope `nlpgraph-v1`; snapshot hash matches the local manifest |
+| G2 | PASS | 7,134/7,134 nodes and 30,971/30,971 relationships scanned; zero structural errors |
+| G3 | BLOCKED | independent human n=0/386; automated diagnostic 0.8802, 95% CI [0.8548, 0.9017], is not gold and misses threshold |
+| G4 | PASS | `neo4j+s`, `Neo4j/5.27-aura`; live counts match; 12/12 parameterized read-only actions return records |
+| G5 | PASS | real Aura + Ollama `qwen3:0.6b`; API matrix 8/8, POST/SSE match, E2E status 31/31 and oracle 21/21 |
+| G6 | BLOCKED | 11,998 unique graph-revalidated silver rows cover 12 actions; independent human gold n=0/500 |
+| G7 | BLOCKED | real Aura diagnostic is 31/31 status and 21/21 oracle, but the required >=300-case independent gold benchmark does not exist |
+| G8 | PASS | backend/offline/UI gates pass; 13-page report plus addendum; safe feature branch pushed without force |
 
-## Real, synthetic, and not run
+## Real-provider evidence
 
-- **REAL LOCAL:** Neo4j Community imported from the immutable scoped snapshot and
-  Ollama `qwen3:0.6b`; used for candidate generation, REST/SSE smoke, and E2E.
-- **SYNTHETIC_SMOKE:** deterministic fake-provider tests remain in the regression
-  suite only and are not used as G4/G5 evidence.
-- **NOT RUN:** Aura queries, official human-gold benchmark, GPU SFT/LoRA, Colab,
-  Hugging Face login/upload, and any account-login action.
+- Aura target: `neo4j+s`, host suffix `databases.neo4j.io`, server
+  `Neo4j/5.27-aura`, database `neo4j`, scope `nlpgraph-v1`.
+- Live inventory: Author 5,430; Paper 1,091; Institution 600; Venue 7; Topic 6;
+  30,971 relationships across ten non-empty types.
+- Catalog smoke: 12/12 actions returned records, SHA-256
+  `5baef40d08e5c7f4101d9db07c1634a503c3536758e0313c61ccbc0a017d5a07`.
+- E2E: 31/31 expected statuses and 21/21 checked oracles; p50 10,087 ms,
+  p95 25,760 ms; SHA-256
+  `c9cd1229f885b88de8f480aab81aa78b380bf72e651ecdd87be232185c1a981e`.
+- FastAPI: eight-route matrix 8/8; REST/SSE semantic match; health confirms real
+  Aura and Ollama; SHA-256
+  `915889be663effa88a6f9b5da113d04a6720a221e40d9ecc054c60fa879b7af0`.
+- UI: Vite serves `NLP Graph Atlas` at `http://127.0.0.1:5173`; its `/api/health`
+  proxy reports both real providers ready.
+
+Fake mode remains a deterministic regression fixture only. It is not counted as G4
+or G5 evidence.
 
 ## Dataset evidence
 
@@ -54,37 +59,32 @@ diagnostic is below the official benchmark requirements.
   `6d2ec25136288a1657a3fe9eb37f9bc1b09bfe6c8f781ebba2d5d99978851094`
 - SFT: 16,744 messages-format samples, dry-run schema valid, SHA-256
   `75f59644a5ee5e4f8dcd17d26bc1f2b29346cb8017edddf54c8bc50505aaf21c`
-- independent human gold: 0/500 labelled
+- independent graph truth: 0/386 labelled
+- independent held-out QA gold: 0/500 labelled
 
-## Verification commands and outcomes
+## Verification outcomes
 
 ```text
-cd chatbot && uv run ruff check . && uv run ruff format --check . && uv run pytest -q
-PASS: Ruff clean, format clean, 78 tests passed
-
-cd offline && uv run python -m pytest -o addopts='' -q
-PASS: 89 tests passed
-
-cd chatbot/ui && npm run test -- --run && npm run build
-PASS: 2 tests passed; TypeScript/Vite production build passed
-
-cd chatbot && uv run python ../agent_runs/20261117T1631-9e78757/api_real_smoke.py
-PASS: real local health ready; REST/SSE semantic_match=true
+chatbot: Ruff lint PASS; Ruff format PASS; 81 pytest tests PASS
+offline: 89 pytest tests PASS
+UI: 2 Vitest tests PASS; TypeScript/Vite production build PASS
+Aura catalog: 12/12 actions PASS
+Aura E2E: 31/31 status; 21/21 oracle
+Aura API: 8/8 route matrix; POST/SSE semantic match PASS
 ```
 
 ## Evidence index
 
-- graph quality: `offline/reports/graph_audit/quality_report.md`
-- integrity machine output: `offline/reports/graph_audit/integrity_all.json`
-- review queue: `offline/evaluation/manual_review_template_truth_v2.csv`
-- dataset manifest: `chatbot/data/splits/manifest_v2.json`
-- local real API smoke: `agent_runs/20261117T1631-9e78757/api_real_smoke.json`
-- local real E2E: `agent_runs/20261117T1631-9e78757/e2e_real_results.json`
-- Aura probe: `agent_runs/20261117T1631-9e78757/aura_probe_20261118.log`
-- report: `offline/report/final.pdf` (13 pages) and
-  `offline/report/submission_addendum_20261118.md`
-- exact blockers and resume commands: `undone.md`
+- `agent_runs/20261117T1631-9e78757/aura_catalog_smoke.json`
+- `agent_runs/20261117T1631-9e78757/e2e_aura_results.json`
+- `agent_runs/20261117T1631-9e78757/api_aura_smoke.json`
+- `offline/reports/graph_audit/integrity_all.json`
+- `offline/reports/graph_audit/quality_report.md`
+- `offline/evaluation/manual_review_template_truth_v2.csv`
+- `chatbot/data/generated/human_gold_review_v2.csv`
+- `chatbot/data/splits/manifest_v2.json`
+- `offline/report/final.pdf` and `offline/report/submission_addendum_20261118.md`
+- exact remaining human work and resume commands: `undone.md`
 
-The only valid resume sequence is: resume Aura, complete the two independent review
-queues, import the reviewed gold, and run the official benchmark command recorded in
-`undone.md`. Re-running the same automated labels cannot clear G3, G6, or G7.
+Re-running automated labels cannot clear G3, G6, or G7. Those gates require a
+genuinely independent reviewer as specified by the acceptance prompt.

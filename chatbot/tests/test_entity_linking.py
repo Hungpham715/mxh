@@ -75,3 +75,9 @@ async def test_rescue_returns_empty_for_entity_free_intent(linker: EntityLinker)
 async def test_rescue_returns_empty_when_name_absent(linker: EntityLinker) -> None:
     mentions = await linker.rescue_mentions("author_papers", "Bài báo của ai đó lạ?", [])
     assert mentions == []
+
+
+@pytest.mark.asyncio
+async def test_catalog_mentions_returns_exact_server_types_without_duplicates(linker: EntityLinker) -> None:
+    mentions = await linker.catalog_mentions("Tổ chức của An Nguyen theo từng bài báo?")
+    assert [(mention.text, mention.type) for mention in mentions] == [("An Nguyen", "Author")]

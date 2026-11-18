@@ -112,6 +112,36 @@ class EntityLinker:
             linked.append(await self.link(mention))
         return linked
 
+    async def catalog_mentions(self, question: str, limit: int = 5) -> list[EntityMention]:
+        """Return exact live-catalog names present in the question, longest first.
+
+        This supplies trusted entity-type context to the LLM when a small model's first parse
+        conflicts with the graph catalog. It does not infer an intent or manufacture a span.
+        Duplicate graph records with the same display name produce one mention.
+        """
+        catalog = await self.repository.entity_catalog()
+        question_norm = normalize_name(question)
+        candidates: list[tuple[int, EntityRecord]] = []
+        for record in catalog:
+            name_norm = normalize_name(record.name)
+            if len(name_norm) >= MIN_RESCUE_NAME_LENGTH and name_norm in question_norm:
+                candidates.append((len(name_norm), record))
+        candidates.sort(key=lambda item: (-item[0], item[1].label, item[1].name))
+
+        mentions: list[EntityMention] = []
+        chosen_names: set[str] = set()
+        for _, record in candidates:
+            name_norm = normalize_name(record.name)
+            if name_norm in chosen_names:
+                continue
+            if any(name_norm in chosen_name for chosen_name in chosen_names):
+                continue
+            chosen_names.add(name_norm)
+            mentions.append(EntityMention(text=record.name, type=record.label))
+            if len(mentions) >= limit:
+                break
+        return mentions
+
     async def rescue_mentions(
         self, intent_value: str, question: str, history: list[dict[str, str]]
     ) -> list[EntityMention]:
