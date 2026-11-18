@@ -169,3 +169,10 @@ button:focus-visible, textarea:focus-visible, a:focus-visible, summary:focus-vis
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.pending-block { display: grid; gap: 6px; }
+.progress-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
+.progress-list li { margin: 2px 0; }
+.more-button { margin-top: 10px; padding: 8px 14px; min-height: 40px; border-radius: 999px; border: 1px solid var(--border, currentColor); background: var(--surface-2); color: inherit; font-size: 13px; cursor: pointer; }
+.more-button:disabled { opacity: 0.5; cursor: progress; }
+.status-pill--clarify { color: var(--warning); }

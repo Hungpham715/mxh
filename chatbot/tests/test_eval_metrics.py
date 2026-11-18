@@ -22,26 +22,77 @@ async def test_synthetic_eval_runs_real_pipeline_and_writes_banner(tmp_path) -> 
     cases = await generate(provider="fake", seed=42, limit=4, execute=False)
     dataset = tmp_path / "synthetic.jsonl"
     write_models(dataset, cases)
+    output_dir = tmp_path / "report"
     args = Namespace(
         dataset=dataset,
-        synthetic_smoke=True,
+        label_tier="synthetic",
         provider="fake",
         graph="fake",
         max_iterations=5,
         seed=42,
+        limit=0,
+        output_dir=output_dir,
+        resume=False,
+        exclude_from=None,
     )
-    summary, rows = await evaluate(args)
-    assert summary["synthetic_smoke_only"] is True
+    summary = await evaluate(args)
+    assert summary["label_tier"] == "synthetic"
     assert summary["metrics"]["cases"] == 4
-    assert len(rows) == 4
-    output_dir = tmp_path / "report"
-    write_report(output_dir, summary, rows)
-    assert "SYNTHETIC SMOKE ONLY" in (output_dir / "summary.md").read_text()
+    assert len((output_dir / "predictions.jsonl").read_text(encoding="utf-8").splitlines()) == 4
+    write_report(output_dir, summary)
+    assert "SYNTHETIC SMOKE ONLY" in (output_dir / "summary.md").read_text(encoding="utf-8")
+
+
+def test_metrics_are_measured_not_hardcoded() -> None:
+    from evaluation.metrics import summarize
+
+    rows = [
+        {
+            "latency_ms": 10,
+            "prediction": {"iterations_used": 1, "stop_reason": "sufficient", "status": "answered"},
+            "parse_valid_json": False,
+            "route_match": True,
+            "error_category": None,
+        },
+        {
+            "latency_ms": 20,
+            "prediction": {"iterations_used": 1, "stop_reason": "sufficient", "status": "answered"},
+            "parse_valid_json": True,
+            "route_match": False,
+            "error_category": "routing",
+        },
+    ]
+    summary = summarize(rows, "silver")
+    assert summary["json_parse_validity"]["value"] == 0.5
+    assert summary["json_parse_validity"]["n"] == 2
+    assert summary["intent_accuracy"] == "not_measured"
+    assert summary["error_categories"] == {"routing": 1}
+
+
+@pytest.mark.asyncio
+async def test_silver_tier_rejects_non_test_split(tmp_path) -> None:
+    cases = await generate(provider="fake", seed=42, limit=2, execute=False)
+    dataset = tmp_path / "x.jsonl"
+    write_models(dataset, cases)
+    args = Namespace(
+        dataset=dataset,
+        label_tier="gold",
+        provider="fake",
+        graph="fake",
+        max_iterations=5,
+        seed=42,
+        limit=0,
+        output_dir=tmp_path / "o",
+        resume=False,
+        exclude_from=None,
+    )
+    with pytest.raises(ValueError):
+        await evaluate(args)
 
 
 def test_compare_marks_absent_b2_not_run(tmp_path) -> None:
     base = {
-        "synthetic_smoke_only": False,
+        "label_tier": "silver",
         "dataset_sha256": "same",
         "metrics": {"query_template_accuracy": 0.5, "answer_token_f1": 0.4},
     }
@@ -56,7 +107,7 @@ def test_compare_marks_absent_b2_not_run(tmp_path) -> None:
 def test_compare_rejects_mixed_datasets(tmp_path) -> None:
     b0 = tmp_path / "b0.json"
     b1 = tmp_path / "b1.json"
-    b0.write_text(json.dumps({"synthetic_smoke_only": False, "dataset_sha256": "a", "metrics": {}}))
-    b1.write_text(json.dumps({"synthetic_smoke_only": False, "dataset_sha256": "b", "metrics": {}}))
+    b0.write_text(json.dumps({"label_tier": "silver", "dataset_sha256": "a", "metrics": {}}))
+    b1.write_text(json.dumps({"label_tier": "silver", "dataset_sha256": "b", "metrics": {}}))
     with pytest.raises(ValueError, match="same held-out dataset"):
         compare(b0, b1, None)

@@ -16,6 +16,11 @@ def normalize_name(value: str) -> str:
     return re.sub(r"\s+", " ", normalized).strip()
 
 
+QUOTED_SPAN = re.compile(r"[\"“”'‘’«](.{3,300}?)[\"“”'’»]")
+SPOT_LABELS = ("Paper", "Author", "Institution", "Topic")
+MAX_SPAN_TOKENS = 12
+
+
 class EntityLinker:
     def __init__(self, repository: GraphRepository, score_threshold: float, score_margin: float) -> None:
         self.repository = repository
@@ -66,6 +71,41 @@ class EntityLinker:
             )
         return self._linked(allowed[int(best_key)], best_score)
 
+    async def spot(self, text: str) -> list[EntityMention]:
+        """Find catalog names that literally occur in `text` (exact normalized match).
+
+        Used only to repair a parse whose entities are missing or not grounded in the question.
+        Quoted spans are tried first (paper titles); then the longest non-overlapping token
+        n-grams that equal a node name. This is entity linking, not intent classification.
+        """
+        catalog = await self.repository.entity_catalog()
+        by_name: dict[str, set[str]] = {}
+        for record in catalog:
+            if record.label in SPOT_LABELS:
+                by_name.setdefault(normalize_name(record.name), set()).add(record.label)
+
+        found: list[EntityMention] = []
+        for span in QUOTED_SPAN.findall(text):
+            labels = by_name.get(normalize_name(span))
+            if labels:
+                found.append(EntityMention(text=span.strip(), type=_preferred_label(labels)))
+        if found:
+            return found
+
+        tokens = re.findall(r"[\w][\w\-\.']*", text)
+        used = [False] * len(tokens)
+        for size in range(min(MAX_SPAN_TOKENS, len(tokens)), 1, -1):
+            for start in range(0, len(tokens) - size + 1):
+                if any(used[start : start + size]):
+                    continue
+                candidate = " ".join(tokens[start : start + size])
+                labels = by_name.get(normalize_name(candidate))
+                if labels:
+                    found.append(EntityMention(text=candidate, type=_preferred_label(labels)))
+                    for index in range(start, start + size):
+                        used[index] = True
+        return found
+
     async def link_all(self, mentions: list[EntityMention]) -> list[LinkedEntity | None]:
         linked: list[LinkedEntity | None] = []
         for mention in mentions:
@@ -85,3 +125,10 @@ class EntityLinker:
             score=score,
             identity_status=record.identity_status,
         )
+
+
+def _preferred_label(labels: set[str]) -> str:
+    for label in SPOT_LABELS:
+        if label in labels:
+            return label
+    return "Unknown"

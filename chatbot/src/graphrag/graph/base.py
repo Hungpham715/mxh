@@ -18,8 +18,12 @@ class EntityRecord:
 
 @dataclass(frozen=True)
 class GraphQueryResult:
+    """One page of rows. `truncated` means more rows exist after this page; `total` is the
+    full row count of the action (None when not computed because the page was complete)."""
+
     records: list[dict[str, Any]]
     truncated: bool = False
+    total: int | None = None
 
 
 class GraphRepository(Protocol):

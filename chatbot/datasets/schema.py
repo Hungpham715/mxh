@@ -11,6 +11,7 @@ from pydantic import BaseModel, ConfigDict, Field
 class ReviewStatus(StrEnum):
     UNKNOWN = "unknown"
     NEEDS_REVIEW = "needs_review"
+    SILVER_VALIDATED = "silver_validated"  # independent oracle agreed; NOT human reviewed
     APPROVED = "approved"
     REJECTED = "rejected"
 
@@ -52,9 +53,9 @@ class QuestionCase(BaseModel):
     case_id: str
     question: str
     language: Literal["vi", "en"] = "vi"
-    expected_status: Literal["answered", "partial", "not_found", "ambiguous", "out_of_scope", "error"] = (
-        "answered"
-    )
+    expected_status: Literal[
+        "answered", "partial", "not_found", "ambiguous", "out_of_scope", "clarify", "error"
+    ] = "answered"
     expected_query: ExpectedQuery
     expected_facts: ExpectedFacts = Field(default_factory=ExpectedFacts)
     expected_citations: ExpectedCitations = Field(default_factory=ExpectedCitations)

@@ -12,4 +12,4 @@ uv run python -m evaluation.run_eval \
   --graph fake \
   --max-iterations 5 \
   --output-dir reports/eval/synthetic \
-  --synthetic-smoke
+  --label-tier synthetic

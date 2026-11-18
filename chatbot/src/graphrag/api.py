@@ -14,7 +14,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from graphrag.factory import build_dependencies
-from graphrag.models import ChatRequest, ChatResponse
+from graphrag.models import ChatRequest, ChatResponse, MoreRequest
 from graphrag.settings import Settings
 
 
@@ -85,50 +85,53 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     async def chat(payload: ChatRequest) -> ChatResponse:
         return await asyncio.wait_for(workflow.run(payload), timeout=resolved.request_timeout_seconds)
 
+    @app.post("/api/chat/more", response_model=ChatResponse)
+    async def chat_more(payload: MoreRequest) -> ChatResponse:
+        return await asyncio.wait_for(workflow.more(payload), timeout=resolved.request_timeout_seconds)
+
     @app.post("/api/chat/stream")
-    async def chat_stream(payload: ChatRequest) -> StreamingResponse:
+    async def chat_stream(payload: ChatRequest, request: Request) -> StreamingResponse:
         if not resolved.enable_sse:
             return StreamingResponse(_single_error_event("sse_disabled"), media_type="text/event-stream")
 
-        async def events():
-            yield _event("start", {"mode": resolved.app_mode})
-            await asyncio.sleep(0)
+        queue: asyncio.Queue[tuple[str, dict[str, Any]] | None] = asyncio.Queue()
+
+        async def emit(name: str, data: dict[str, Any]) -> None:
+            await queue.put((name, data))
+
+        async def run_workflow() -> None:
             try:
                 response = await asyncio.wait_for(
-                    workflow.run(payload),
+                    workflow.run(payload, emit=emit),
                     timeout=resolved.request_timeout_seconds,
                 )
+                await queue.put(("done", response.model_dump(mode="json")))
             except TimeoutError:
-                yield _event("error", {"code": "request_timeout"})
-                return
-            yield _event("parse", {"status": response.status})
-            yield _event(
-                "linked",
-                {
-                    "status": response.status,
-                    "ambiguity": [item.model_dump(mode="json") for item in response.ambiguous_candidates],
-                },
-            )
-            for trace in response.trace or []:
-                yield _event(
-                    "query_start",
-                    {
-                        "iteration": trace.iteration,
-                        "action": trace.action,
-                    },
-                )
-                yield _event("query_result", trace.model_dump(mode="json"))
-                yield _event(
-                    "decision",
-                    {
-                        "iteration": trace.iteration,
-                        "decision": trace.status,
-                        "new_facts": trace.new_facts,
-                    },
-                )
-                await asyncio.sleep(0)
-            yield _event("answer", {"answer": response.answer})
-            yield _event("done", response.model_dump(mode="json"))
+                await queue.put(("error", {"code": "request_timeout"}))
+            except asyncio.CancelledError:
+                raise
+            except Exception as error:  # never leak internals; type name only
+                await queue.put(("error", {"code": "internal_error", "type": type(error).__name__}))
+            finally:
+                await queue.put(None)
+
+        async def events():
+            task = asyncio.create_task(run_workflow())
+            try:
+                while True:
+                    try:
+                        item = await asyncio.wait_for(queue.get(), timeout=1.0)
+                    except TimeoutError:
+                        if await request.is_disconnected():
+                            return
+                        continue
+                    if item is None:
+                        return
+                    name, data = item
+                    yield _event(name, data)
+            finally:
+                if not task.done():
+                    task.cancel()  # client went away: stop LLM/DB work
 
         return StreamingResponse(
             events(),

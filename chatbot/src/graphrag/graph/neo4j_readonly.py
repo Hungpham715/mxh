@@ -6,7 +6,7 @@ import asyncio
 import time
 from typing import Any
 
-from graphrag.cypher_templates import get_template
+from graphrag.cypher_templates import ALLOWED_PARAMS, COUNT_LIMIT, get_template
 from graphrag.graph.base import EntityRecord, GraphQueryResult
 from graphrag.models import QueryStep
 
@@ -73,16 +73,31 @@ class Neo4jReadOnlyRepository:
         missing = template.required_params - step.params.keys()
         if missing:
             raise ValueError(f"missing parameters for {step.action}: {sorted(missing)}")
+        unexpected = set(step.params) - ALLOWED_PARAMS[step.action]
+        if unexpected:
+            raise ValueError(f"unexpected parameters for {step.action}: {sorted(unexpected)}")
+        page_size = min(step.limit, 100)
         params = {
             **step.params,
             "scope": self.scope_id,
-            "limit": min(step.limit, 100),
+            "skip": step.offset,
+            "limit": page_size + 1,  # fetch N+1 to know whether another page exists
             "year_from": step.params.get("year_from"),
             "year_to": step.params.get("year_to"),
             "direction": step.params.get("direction", "both"),
         }
         records = await self._read(template.cypher, params)
-        return GraphQueryResult(records=records, truncated=len(records) >= step.limit)
+        truncated = len(records) > page_size
+        records = records[:page_size]
+
+        total: int | None = None
+        if truncated or step.offset > 0:
+            count_params = {**params, "skip": 0, "limit": COUNT_LIMIT}
+            count_rows = await self._read(template.count_cypher, count_params)
+            total = int(count_rows[0]["total"]) if count_rows else None
+        elif not truncated:
+            total = step.offset + len(records)
+        return GraphQueryResult(records=records, truncated=truncated, total=total)
 
     async def _read(self, query: str, params: dict[str, Any]) -> list[dict[str, Any]]:
         @self._neo4j.unit_of_work(timeout=self.timeout_seconds, metadata={"app": "mxh-graphrag"})

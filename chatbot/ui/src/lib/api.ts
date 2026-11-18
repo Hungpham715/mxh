@@ -1,4 +1,15 @@
-import type { ChatResponse, HealthStatus, PublicConfig } from "./types";
+import type { ChatResponse, Continuation, HealthStatus, HistoryTurn, PublicConfig } from "./types";
+
+const MAX_HISTORY_TURNS = 12;
+const MAX_TURN_CHARS = 4000;
+
+/** Keep the last turns the backend accepts; only user/assistant roles are ever sent. */
+export function trimHistory(history: HistoryTurn[]): HistoryTurn[] {
+  return history
+    .filter((turn) => turn.content.trim().length > 0)
+    .slice(-MAX_HISTORY_TURNS)
+    .map((turn) => ({ role: turn.role, content: turn.content.slice(0, MAX_TURN_CHARS) }));
+}
 
 const JSON_HEADERS = { "Content-Type": "application/json" };
 
@@ -20,16 +31,48 @@ export async function getHealth(): Promise<HealthStatus> {
 
 export async function sendChat(
   question: string,
+  history: HistoryTurn[],
   debug: boolean,
   signal?: AbortSignal,
 ): Promise<ChatResponse> {
   const response = await fetch("/api/chat", {
     method: "POST",
     headers: JSON_HEADERS,
-    body: JSON.stringify({ question, debug }),
+    body: JSON.stringify({ question, history: trimHistory(history), debug }),
     signal,
   });
   return parseJson<ChatResponse>(response);
+}
+
+export async function fetchMore(continuation: Continuation, signal?: AbortSignal): Promise<ChatResponse> {
+  const response = await fetch("/api/chat/more", {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ continuation, debug: true }),
+    signal,
+  });
+  return parseJson<ChatResponse>(response);
+}
+
+/** Short Vietnamese label for one live progress event (shown while the answer is pending). */
+export function describeEvent(event: StreamEvent): string | null {
+  const data = (event.data ?? {}) as Record<string, unknown>;
+  switch (event.event) {
+    case "parse":
+      return `Phân tích: ${String(data.route ?? "")}${data.intent && data.intent !== "unknown" ? ` · ${String(data.intent)}` : ""}`;
+    case "linked":
+      return "Đã nối thực thể với graph";
+    case "query_start":
+      return `Truy vấn #${String(data.iteration)}: ${String(data.action ?? "").replaceAll("_", " ")}`;
+    case "query_result":
+      return `→ ${String(data.records ?? 0)} bản ghi${data.truncated ? " (còn nữa)" : ""}`;
+    case "decision":
+      return `Quyết định: ${String(data.decision ?? "")}`;
+    case "answer":
+      return "Đang hoàn tất câu trả lời";
+    default:
+      return null;
+  }
 }
 
 export interface StreamEvent {
@@ -56,6 +99,7 @@ export function parseSSEBlock(block: string): StreamEvent | null {
 
 export async function streamChat(
   question: string,
+  history: HistoryTurn[],
   debug: boolean,
   onEvent: (event: StreamEvent) => void,
   signal?: AbortSignal,
@@ -63,7 +107,7 @@ export async function streamChat(
   const response = await fetch("/api/chat/stream", {
     method: "POST",
     headers: JSON_HEADERS,
-    body: JSON.stringify({ question, debug }),
+    body: JSON.stringify({ question, history: trimHistory(history), debug }),
     signal,
   });
   if (!response.ok || !response.body) {

@@ -6,6 +6,7 @@ from graphrag.answer import GroundedAnswerGenerator
 from graphrag.entity_linking import EntityLinker
 from graphrag.graph.fake_graph import FakeGraphRepository
 from graphrag.graph.neo4j_readonly import Neo4jReadOnlyRepository
+from graphrag.graph.snapshot_graph import SnapshotGraphRepository
 from graphrag.intent_parser import IntentParser
 from graphrag.llm.fake import FakeLLMProvider
 from graphrag.llm.hf_cpu import HFCPUProvider
@@ -23,12 +24,15 @@ def build_dependencies(settings: Settings):
             settings.ollama_base_url,
             settings.ollama_model,
             settings.ollama_timeout_seconds,
+            settings.ollama_num_thread,
         )
     else:
         llm = HFCPUProvider(settings.hf_model_id, settings.model_adapter_path, settings.use_adapter)
 
     if settings.graph_provider == "fake":
         repository = FakeGraphRepository()
+    elif settings.graph_provider == "snapshot":
+        repository = SnapshotGraphRepository()
     else:
         assert settings.neo4j_uri is not None
         assert settings.neo4j_username is not None

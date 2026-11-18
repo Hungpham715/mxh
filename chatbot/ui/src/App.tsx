@@ -3,8 +3,16 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ChatMessage } from "./components/ChatMessage";
 import { Composer } from "./components/Composer";
 import { Sidebar } from "./components/Sidebar";
-import { getHealth, getPublicConfig, sendChat, streamChat } from "./lib/api";
-import type { ChatResponse, Conversation, HealthStatus, Message, PublicConfig } from "./lib/types";
+import { describeEvent, fetchMore, getHealth, getPublicConfig, sendChat, streamChat } from "./lib/api";
+import type {
+  ChatResponse,
+  Continuation,
+  Conversation,
+  HealthStatus,
+  HistoryTurn,
+  Message,
+  PublicConfig,
+} from "./lib/types";
 
 const STORAGE_KEY = "mxh-graphrag-conversations-v1";
 const DEFAULT_CONFIG: PublicConfig = {
@@ -122,6 +130,53 @@ export default function App() {
     });
   }
 
+  function historyOf(conversation: Conversation): HistoryTurn[] {
+    const turns: HistoryTurn[] = [];
+    for (const message of conversation.messages) {
+      if (message.pending || !message.content.trim()) {
+        continue;
+      }
+      turns.push({ role: message.role, content: message.content });
+    }
+    return turns;
+  }
+
+  function appendProgress(conversationId: string, pendingId: string, line: string) {
+    updateConversation(conversationId, (conversation) => ({
+      ...conversation,
+      messages: conversation.messages.map((message) =>
+        message.id === pendingId ? { ...message, progress: [...(message.progress ?? []), line] } : message,
+      ),
+    }));
+  }
+
+  async function loadMore(continuation: Continuation) {
+    if (busy) {
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    const conversationId = active.id;
+    try {
+      const response = await fetchMore(continuation);
+      const message: Message = {
+        id: crypto.randomUUID(),
+        role: "assistant",
+        content: response.answer,
+        response,
+      };
+      updateConversation(conversationId, (conversation) => ({
+        ...conversation,
+        messages: [...conversation.messages, message],
+        updatedAt: Date.now(),
+      }));
+    } catch (caught: unknown) {
+      setError(caught instanceof Error ? caught.message : "Không tải thêm được kết quả.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
   async function ask(question: string) {
     if (busy) {
       return;
@@ -129,6 +184,7 @@ export default function App() {
     setBusy(true);
     setError(null);
     const requestConversationId = active.id;
+    const history = historyOf(active);
     const userMessage: Message = { id: crypto.randomUUID(), role: "user", content: question };
     const pendingId = crypto.randomUUID();
     const pendingMessage: Message = { id: pendingId, role: "assistant", content: "", pending: true };
@@ -145,21 +201,32 @@ export default function App() {
       let response: ChatResponse;
       if (config.enable_sse) {
         try {
-          response = await streamChat(question, true, () => undefined, controller.signal);
+          response = await streamChat(
+            question,
+            history,
+            true,
+            (event) => {
+              const line = describeEvent(event);
+              if (line) {
+                appendProgress(requestConversationId, pendingId, line);
+              }
+            },
+            controller.signal,
+          );
         } catch (streamError) {
           if (controller.signal.aborted) {
             throw streamError;
           }
-          response = await sendChat(question, true, controller.signal);
+          response = await sendChat(question, history, true, controller.signal);
         }
       } else {
-        response = await sendChat(question, true, controller.signal);
+        response = await sendChat(question, history, true, controller.signal);
       }
       updateConversation(requestConversationId, (conversation) => ({
         ...conversation,
         messages: conversation.messages.map((message) =>
           message.id === pendingId
-            ? { ...message, content: response.answer, response, pending: false }
+            ? { ...message, content: response.answer, response, pending: false, progress: undefined }
             : message,
         ),
         updatedAt: Date.now(),
@@ -224,6 +291,7 @@ export default function App() {
         </header>
 
         {config.mode === "fake" && <div className="simulation-banner">SIMULATED — no real LLM/DB · Dùng để kiểm thử luồng, không phải kết quả nghiên cứu thật.</div>}
+        {config.mode === "snapshot" && <div className="simulation-banner">LOCAL SNAPSHOT · LLM thật trên graph JSONL cục bộ (không phải AuraDB).</div>}
         {degraded && <div className="service-alert" role="alert"><strong>Chế độ real chưa sẵn sàng.</strong><span>{health?.llm.detail} · {health?.graph.detail}</span></div>}
         {error && <div className="error-alert" role="alert" tabIndex={-1}>{error}</div>}
 
@@ -241,7 +309,9 @@ export default function App() {
             </div>
           ) : (
             <div className="messages">
-              {active.messages.map((message) => <ChatMessage key={message.id} message={message} />)}
+              {active.messages.map((message) => (
+                <ChatMessage key={message.id} message={message} busy={busy} onLoadMore={loadMore} />
+              ))}
               <div ref={endRef} />
             </div>
           )}

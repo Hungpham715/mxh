@@ -5,13 +5,15 @@ interface SidebarProps {
   conversations: Conversation[];
   activeId: string;
   collapsed: boolean;
-  mode: "fake" | "real";
+  mode: "fake" | "real" | "snapshot";
   onToggle: () => void;
   onNew: () => void;
   onSelect: (id: string) => void;
   onRename: (id: string) => void;
   onDelete: (id: string) => void;
 }
+
+const MODE_LABELS = { fake: "Mô phỏng", real: "Dữ liệu thật · Aura", snapshot: "Snapshot cục bộ" } as const;
 
 export function Sidebar({
   conversations,
@@ -30,7 +32,7 @@ export function Sidebar({
         <button className="icon-button" onClick={onToggle} aria-label={collapsed ? "Mở thanh bên" : "Thu gọn thanh bên"}>
           {collapsed ? <Menu aria-hidden="true" /> : <PanelLeftClose aria-hidden="true" />}
         </button>
-        {!collapsed && <span className={`mode-badge mode-badge--${mode}`}>{mode === "fake" ? "Mô phỏng" : "Dữ liệu thật"}</span>}
+        {!collapsed && <span className={`mode-badge mode-badge--${mode}`}>{MODE_LABELS[mode]}</span>}
       </div>
       <button className="new-chat-button" onClick={onNew} aria-label="Tạo hội thoại mới">
         <MessageSquarePlus aria-hidden="true" />

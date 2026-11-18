@@ -3,6 +3,7 @@ import pytest
 from graphrag.factory import build_dependencies
 from graphrag.graph.fake_graph import FakeGraphRepository
 from graphrag.models import ChatRequest, QueryAction, QueryStep
+from graphrag.planner import Planner
 from graphrag.settings import Settings
 
 
@@ -24,7 +25,9 @@ async def test_one_hop_stops_after_one_query(dependencies) -> None:
 @pytest.mark.asyncio
 async def test_overview_uses_two_bounded_iterations(dependencies) -> None:
     _, _, workflow = dependencies
-    response = await workflow.run(ChatRequest(question="Tổng quan về An Nguyen", debug=True))
+    response = await workflow.run(
+        ChatRequest(question="Tổng quan về An Nguyen: bài báo và đơn vị công tác theo bài", debug=True)
+    )
     assert response.status == "answered"
     assert response.iterations_used == 2
     assert [step.action for step in response.trace] == ["author_papers", "author_affiliations"]
@@ -44,7 +47,9 @@ async def test_path_can_cover_multiple_hops_in_one_iteration(dependencies) -> No
 @pytest.mark.asyncio
 async def test_max_iterations_never_exceeds_five(dependencies) -> None:
     _, _, workflow = dependencies
-    response = await workflow.run(ChatRequest(question="Tổng quan về An Nguyen", debug=True))
+    response = await workflow.run(
+        ChatRequest(question="Tổng quan về An Nguyen: bài báo và đơn vị công tác theo bài", debug=True)
+    )
     assert response.iterations_used <= 5
 
 
@@ -112,15 +117,29 @@ async def test_coauthor_affiliation_uses_only_shared_paper_evidence() -> None:
     assert binh_rows[0]["paper_ids"] == ["paper:rag"]
 
 
-class DuplicatePlanner:
+class DuplicatePlanner(Planner):
+    """Proposes the already executed first step again; the loop must refuse it."""
+
+    def __init__(self) -> None:
+        super().__init__(max_records=20)
+        self._first: QueryStep | None = None
+
+    def goals(self, intent):
+        _ = intent
+        return ["main:author_papers", "papers"]
+
     def plan(self, intent, linked):
         _ = intent
-        step = QueryStep(
+        self._first = QueryStep(
             action=QueryAction.AUTHOR_PAPERS,
             params={"author_id": linked[0].id, "year_from": None, "year_to": None},
             expected_fields=[],
         )
-        return [step, step]
+        return [self._first]
+
+    def contract_proposal(self, goals_remaining, known, executed_fingerprints):
+        _ = goals_remaining, known, executed_fingerprints
+        return self._first
 
 
 @pytest.mark.asyncio

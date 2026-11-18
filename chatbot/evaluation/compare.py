@@ -11,8 +11,10 @@ from pathlib import Path
 def compare(b0_path: Path, b1_path: Path, b2_path: Path | None) -> dict:
     b0 = json.loads(b0_path.read_text(encoding="utf-8"))
     b1 = json.loads(b1_path.read_text(encoding="utf-8"))
-    if b0.get("synthetic_smoke_only") or b1.get("synthetic_smoke_only"):
-        raise ValueError("B0/B1 comparison requires reviewed held-out evaluation, not synthetic smoke")
+    if "synthetic" in {b0.get("label_tier"), b1.get("label_tier")}:
+        raise ValueError("B0/B1 comparison requires a held-out evaluation, not synthetic smoke")
+    if b0.get("label_tier") != b1.get("label_tier"):
+        raise ValueError("B0 and B1 must use the same label tier")
     if b0["dataset_sha256"] != b1["dataset_sha256"]:
         raise ValueError("B0 and B1 must use the exact same held-out dataset")
     result = {"B0_base_one_step": b0, "B1_base_iterative": b1, "B2_sft_iterative": "not_run"}
@@ -39,19 +41,25 @@ def main() -> None:
     )
     with (args.out / "comparison.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["baseline", "status", "query_template_accuracy", "answer_token_f1"])
+        keys = [
+            "status_accuracy",
+            "intent_accuracy",
+            "query_result_set_f1",
+            "citation_precision",
+            "out_of_scope_refusal",
+            "latency_p50_ms",
+            "latency_p95_ms",
+        ]
+        writer.writerow(["baseline", "status", "label_tier", *keys])
         for baseline, data in result.items():
             if data == "not_run":
-                writer.writerow([baseline, "not_run", "", ""])
-            else:
-                writer.writerow(
-                    [
-                        baseline,
-                        "run",
-                        data["metrics"]["query_template_accuracy"],
-                        data["metrics"]["answer_token_f1"],
-                    ]
-                )
+                writer.writerow([baseline, "not_run", "", *["" for _ in keys]])
+                continue
+            values = []
+            for key in keys:
+                metric = data["metrics"].get(key, "")
+                values.append(metric["value"] if isinstance(metric, dict) else metric)
+            writer.writerow([baseline, "run", data.get("label_tier", ""), *values])
     print(f"wrote comparison to {args.out}; B2={result['B2_sft_iterative'] != 'not_run'}")
 
 

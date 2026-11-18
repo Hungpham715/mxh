@@ -103,7 +103,9 @@ class FakeGraphRepository:
         }
         records = handlers[step.action](step.params)
         limit = min(step.limit, 100)
-        return GraphQueryResult(records=records[:limit], truncated=len(records) > limit)
+        page = records[step.offset : step.offset + limit]
+        truncated = len(records) > step.offset + limit
+        return GraphQueryResult(records=page, truncated=truncated, total=len(records))
 
     async def health(self) -> tuple[bool, str]:
         return True, "synthetic graph ready"

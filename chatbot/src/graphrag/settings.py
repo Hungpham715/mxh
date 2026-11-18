@@ -11,8 +11,11 @@ from pydantic import BaseModel, Field, model_validator
 
 
 class Settings(BaseModel):
-    app_mode: Literal["fake", "real"] = "fake"
-    graph_provider: Literal["fake", "neo4j"] = "fake"
+    # fake: deterministic fixtures. real: Aura/Neo4j + real LLM (the only mode valid for G4/G5).
+    # snapshot: real LLM over the verified local JSONL snapshot, for evaluation when Aura is
+    # unreachable; always labelled and never counted as Aura evidence.
+    app_mode: Literal["fake", "real", "snapshot"] = "fake"
+    graph_provider: Literal["fake", "neo4j", "snapshot"] = "fake"
     llm_provider: Literal["fake", "ollama", "hf_cpu"] = "fake"
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8000, ge=1, le=65535)
@@ -36,6 +39,8 @@ class Settings(BaseModel):
     neo4j_scope_id: str = "nlpgraph-v1"
     ollama_base_url: str = "http://127.0.0.1:11434"
     ollama_model: str = "qwen3:0.6b"
+    # Cap CPU threads used by the model (None = Ollama default). Keep <= ~50% of cores on shared laptops.
+    ollama_num_thread: int | None = Field(default=None, ge=1, le=256)
     hf_model_id: str = "Qwen/Qwen3-0.6B"
     model_adapter_path: str | None = None
     device: Literal["cpu"] = "cpu"
@@ -48,6 +53,12 @@ class Settings(BaseModel):
         if self.app_mode == "fake":
             if self.graph_provider != "fake" or self.llm_provider != "fake":
                 raise ValueError("APP_MODE=fake requires GRAPH_PROVIDER=fake and LLM_PROVIDER=fake")
+            return self
+        if self.app_mode == "snapshot":
+            if self.graph_provider != "snapshot":
+                raise ValueError("APP_MODE=snapshot requires GRAPH_PROVIDER=snapshot")
+            if self.llm_provider == "fake":
+                raise ValueError("APP_MODE=snapshot evaluates a real LLM; LLM_PROVIDER=fake is not allowed")
             return self
 
         if self.graph_provider != "neo4j":

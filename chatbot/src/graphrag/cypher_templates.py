@@ -14,6 +14,11 @@ class CypherTemplate:
     cypher: str
     required_params: frozenset[str]
 
+    @property
+    def count_cypher(self) -> str:
+        """Total row count of the same template (run with skip=0 and a very large limit)."""
+        return "CALL () {\n" + self.cypher + "\n}\nRETURN count(*) AS total"
+
 
 WRITE_KEYWORDS = re.compile(
     r"\b(CREATE|MERGE|SET|DELETE|DETACH|DROP|REMOVE|FOREACH|LOAD\s+CSV|CALL\s+db\.index)\b",
@@ -40,7 +45,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {title: p.title, name: p.title, position: r.position,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY p.year DESC, p.title LIMIT $limit
+        ORDER BY p.year DESC, p.title SKIP $skip LIMIT $limit
         """,
         "author_id",
     ),
@@ -54,7 +59,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
         RETURN a.id AS subject_id, 'COAUTHORED_WITH' AS predicate, b.id AS object_id,
           {name: b.name, shared_count: r.shared_count, sources: sources} AS value,
           r.evidence_paper_ids AS paper_ids, null AS source_url, r.last_year AS year, null AS title
-        ORDER BY r.shared_count DESC, b.name LIMIT $limit
+        ORDER BY r.shared_count DESC, b.name SKIP $skip LIMIT $limit
         """,
         "author_id",
     ),
@@ -69,7 +74,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: p.title, title: p.title,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY p.year DESC, p.title LIMIT $limit
+        ORDER BY p.year DESC, p.title SKIP $skip LIMIT $limit
         """,
         "author_id",
         "other_author_id",
@@ -85,7 +90,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: i.name, paper_title: p.title,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY p.year DESC, i.name LIMIT $limit
+        ORDER BY p.year DESC, i.name SKIP $skip LIMIT $limit
         """,
         "author_id",
     ),
@@ -103,7 +108,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: i.name, coauthor_id: b.id, coauthor_name: b.name, paper_title: p.title,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY p.year DESC, b.name, i.name LIMIT $limit
+        ORDER BY p.year DESC, b.name, i.name SKIP $skip LIMIT $limit
         """,
         "author_id",
     ),
@@ -116,7 +121,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: a.name, position: r.position,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY r.position ASC LIMIT $limit
+        ORDER BY r.position ASC SKIP $skip LIMIT $limit
         """,
         "paper_id",
     ),
@@ -131,7 +136,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: p.title, title: p.title, rule_id: r.rule_id,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        ORDER BY p.year DESC, p.title LIMIT $limit
+        ORDER BY p.year DESC, p.title SKIP $skip LIMIT $limit
         """,
         "topic_id",
     ),
@@ -144,7 +149,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: v.name, kind: v.kind,
            sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
           [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
-        LIMIT $limit
+        SKIP $skip LIMIT $limit
         """,
         "paper_id",
     ),
@@ -166,7 +171,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: other.title, title: other.title,
            sources: [{paper_id: other.id, title: other.title, url: other.source_url}]} AS value,
           [other.id] AS paper_ids, other.source_url AS source_url, other.year AS year, other.title AS title
-        ORDER BY other.year DESC, other.title LIMIT $limit
+        ORDER BY other.year DESC, other.title SKIP $skip LIMIT $limit
         """,
         "paper_id",
         "direction",
@@ -181,7 +186,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
         RETURN i.id AS subject_id, 'ORG_COAUTHORED_WITH' AS predicate, j.id AS object_id,
           {name: j.name, shared_count: r.shared_count, sources: sources} AS value,
           r.evidence_paper_ids AS paper_ids, null AS source_url, r.last_year AS year, null AS title
-        ORDER BY r.shared_count DESC, j.name LIMIT $limit
+        ORDER BY r.shared_count DESC, j.name SKIP $skip LIMIT $limit
         """,
         "institution_id",
     ),
@@ -204,7 +209,7 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: b.name, author_ids: [n IN nodes(path) | n.id],
            author_names: [n IN nodes(path) | n.name], hop_count: length(path), sources: sources} AS value,
           evidence_ids AS paper_ids, null AS source_url, null AS year, null AS title
-        LIMIT $limit
+        SKIP $skip LIMIT $limit
         """,
         "author_id",
         "other_author_id",
@@ -219,10 +224,18 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
           {name: a.name, metric: 'distinct_coauthor_count', metric_value: coauthor_count,
            shared_paper_edge_sum: shared_paper_edge_sum, sources: []} AS value,
           [] AS paper_ids, null AS source_url, null AS year, null AS title
-        ORDER BY coauthor_count DESC, a.name LIMIT $limit
+        ORDER BY coauthor_count DESC, a.name SKIP $skip LIMIT $limit
         """,
     ),
 }
+
+
+# Every parameter a template may read. Anything else in a step is rejected.
+ALLOWED_PARAMS: dict[QueryAction, frozenset[str]] = {
+    action: template.required_params | frozenset({"year_from", "year_to", "direction"})
+    for action, template in TEMPLATES.items()
+}
+COUNT_LIMIT = 1_000_000
 
 
 def get_template(action: QueryAction) -> CypherTemplate:

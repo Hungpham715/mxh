@@ -10,9 +10,12 @@ from graphrag.llm.base import LLMResponse
 class OllamaProvider:
     name = "ollama"
 
-    def __init__(self, base_url: str, model: str, timeout_seconds: float) -> None:
+    def __init__(
+        self, base_url: str, model: str, timeout_seconds: float, num_thread: int | None = None
+    ) -> None:
         self.base_url = base_url.rstrip("/")
         self.model = model
+        self.num_thread = num_thread
         self.client = httpx.AsyncClient(timeout=timeout_seconds)
 
     async def generate(
@@ -30,6 +33,8 @@ class OllamaProvider:
             "think": False,
             "options": {"temperature": temperature, "num_predict": max_tokens},
         }
+        if self.num_thread:
+            payload["options"]["num_thread"] = self.num_thread  # type: ignore[index]
         if json_mode:
             payload["format"] = "json"
 

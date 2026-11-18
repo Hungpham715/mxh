@@ -1,11 +1,17 @@
 import { Bot, Copy, UserRound } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
-import type { Message } from "../lib/types";
+import type { Continuation, Message } from "../lib/types";
 import { EvidencePanel } from "./EvidencePanel";
 import { TracePanel } from "./TracePanel";
 
-export function ChatMessage({ message }: { message: Message }) {
+interface ChatMessageProps {
+  message: Message;
+  busy: boolean;
+  onLoadMore: (continuation: Continuation) => void;
+}
+
+export function ChatMessage({ message, busy, onLoadMore }: ChatMessageProps) {
   const isAssistant = message.role === "assistant";
   const response = message.response;
 
@@ -25,7 +31,14 @@ export function ChatMessage({ message }: { message: Message }) {
           {response?.watermark && <span className="simulation-label">{response.watermark}</span>}
         </div>
         {message.pending ? (
-          <div className="typing" aria-label="Đang xử lý"><span /><span /><span /></div>
+          <div className="pending-block">
+            <div className="typing" aria-label="Đang xử lý"><span /><span /><span /></div>
+            {message.progress && message.progress.length > 0 && (
+              <ol className="progress-list" aria-live="polite">
+                {message.progress.map((line, index) => <li key={`${index}-${line}`}>{line}</li>)}
+              </ol>
+            )}
+          </div>
         ) : (
           <div className="markdown"><ReactMarkdown rehypePlugins={[rehypeSanitize]}>{message.content}</ReactMarkdown></div>
         )}
@@ -39,6 +52,18 @@ export function ChatMessage({ message }: { message: Message }) {
               </button>
             ))}
           </div>
+        )}
+        {response?.continuation && (
+          <button
+            className="more-button"
+            disabled={busy}
+            onClick={() => onLoadMore(response.continuation as Continuation)}
+          >
+            Xem thêm
+            {typeof response.total_results === "number" && response.continuation
+              ? ` (${response.continuation.offset}/${response.total_results})`
+              : ""}
+          </button>
         )}
         {response && <EvidencePanel sources={response.sources} />}
         {response?.trace && <TracePanel steps={response.trace} stopReason={response.stop_reason} />}

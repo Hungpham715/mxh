@@ -1,8 +1,19 @@
 # MXH NLP Graph Atlas
 
-Graph-only chatbot for the existing `nlpgraph-v1` author/paper/institution/topic graph. Qwen parses an allowed
-action and writes from verified graph facts; Python owns entity linking, Cypher selection, limits, evidence, and
-citations. Fake mode runs the whole product deterministically and is visibly labelled simulated.
+Graph-only chatbot for the existing `nlpgraph-v1` author/paper/institution/topic graph. Qwen routes each turn
+(`GRAPH_QA`, `CHAT_HISTORY`, `CLARIFY`, `OUT_OF_SCOPE`) using the conversation history, picks a catalog action,
+proposes follow-up steps, and writes from verified graph facts. Python owns contract validation, entity linking,
+the 12 read-only Cypher templates, pagination (N+1 + total count), the ≤5-step loop, evidence and citations.
+Fake mode runs the whole product deterministically and is visibly labelled simulated.
+
+Modes (`APP_MODE`): `fake` (fixtures), `real` (Aura/Neo4j + Ollama — the only mode valid for the Aura gate) and
+`snapshot` (real Ollama over the verified local JSONL snapshot, watermarked `LOCAL SNAPSHOT`, for evaluation when
+Aura is unreachable).
+
+API: `POST /api/chat` and `POST /api/chat/stream` take `{question, history?, session_id?, debug?}`; history holds
+only `user`/`assistant` turns (max 20). The stream emits `start, parse, linked, query_start, query_result,
+decision, answer, done | error` *while* the workflow runs and cancels work when the client disconnects.
+`POST /api/chat/more` returns the next page of a truncated result (`continuation` from the previous answer).
 
 ## See the UI now
 
@@ -15,7 +26,7 @@ bash scripts/smoke_fake.sh
 bash scripts/dev.sh
 ```
 
-Open `http://127.0.0.1:5173`. The UI includes local conversation history, cancel, evidence, query trace, dark
+Open `http://127.0.0.1:5173`. The UI sends the conversation history to the backend and shows live progress, cancel, “Xem thêm” paging, evidence, query trace, dark
 mode, mobile layout, ambiguity candidates, and POST SSE with non-stream fallback.
 
 ## Quality gates
@@ -35,7 +46,21 @@ Install/pull Ollama, create a real read-only Aura user, and fill Profile B in `.
 `bash scripts/smoke_neo4j.sh` and `bash scripts/smoke_ollama.sh`. Real failures are returned explicitly; no fake
 answer is substituted. See `docs/EXTERNAL_DEPENDENCIES.md` and `docs/OPERATIONS.md`.
 
-## Dataset → review → SFT → evaluation
+## Large silver dataset + real evaluation (CPU)
+
+```bash
+uv run python -m datasets.build_large --out-dir data            # ~10.6k candidates, oracle-validated silver, splits
+uv run python -m datasets.build_sft --reviewed data/reviewed/silver_validated.jsonl --include-silver   --out data/splits/sft_silver.jsonl --manifest data/splits/sft_silver.manifest.json
+uv run python training/train_sft.py --dry-run --dataset data/splits/sft_silver.jsonl   # schema check only, no GPU
+# real Qwen over the local snapshot; --dev = validation split for tuning, default = held-out test
+APP_MODE=snapshot GRAPH_PROVIDER=snapshot LLM_PROVIDER=ollama OLLAMA_NUM_THREAD=10   uv run python -m evaluation.run_eval --provider ollama --graph snapshot --dataset data/splits/test.jsonl   --label-tier silver --max-iterations 5 --limit 300 --seed 20261118 --output-dir reports/eval/B1_silver_snapshot --resume
+APP_MODE=snapshot GRAPH_PROVIDER=snapshot LLM_PROVIDER=ollama uv run python scripts/e2e_api.py --out reports/e2e/e2e_api.jsonl
+```
+
+`silver_validated` means the expected answer was recomputed by an independent oracle that reads only the raw
+processed tables; it is **not** human gold. Official G7 numbers need `--label-tier gold` on human-approved test cases.
+
+## Dataset → review → SFT → evaluation (human-reviewed path)
 
 ```bash
 uv run python -m datasets.generate_from_graph --provider neo4j --execute --out data/generated/candidates.jsonl
@@ -44,7 +69,7 @@ uv run python -m datasets.import_review --source data/generated/candidates.jsonl
 uv run python -m datasets.split --input data/reviewed/approved.jsonl --out data/splits/reviewed.jsonl
 uv run python -m datasets.build_sft --reviewed data/splits/reviewed.jsonl --out data/splits/sft.jsonl --manifest data/splits/sft.manifest.json
 uv run python training/train_sft.py --dry-run --dataset data/splits/sft.jsonl --config training/config_sft.yaml
-uv run python -m evaluation.run_eval --dataset data/splits/reviewed.jsonl --provider ollama --graph neo4j --max-iterations 5 --output-dir reports/eval/B1
+uv run python -m evaluation.run_eval --dataset data/splits/reviewed.jsonl --label-tier gold --provider ollama --graph neo4j --max-iterations 5 --output-dir reports/eval/B1
 ```
 
 Training is optional, GPU-gated, and uses only reviewed train/validation data. The Colab notebook calls the same

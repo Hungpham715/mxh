@@ -23,12 +23,16 @@ class FakeLLMProvider:
         system = messages[0]["content"] if messages else ""
         user = messages[-1]["content"] if messages else ""
 
-        if "TASK=PARSE" in system:
+        if "TASK=ROUTE/PARSE" in system:
             content = json.dumps(self._parse(user), ensure_ascii=False)
         elif "TASK=ANSWER" in system:
             content = self._answer(user)
+        elif "TASK=HISTORY" in system:
+            content = self._history(user)
+        elif "TASK=NEXT_STEP" in system:
+            content = json.dumps(self._next_step(user), ensure_ascii=False)
         else:
-            content = json.dumps({"sufficient": True, "reason_code": "enough"})
+            content = json.dumps({"sufficient": True})
 
         return LLMResponse(content=content, model="deterministic-fixture-v1", provider=self.name)
 
@@ -40,9 +44,24 @@ class FakeLLMProvider:
 
     def _parse(self, text: str) -> dict[str, object]:
         question = text.split("QUESTION:", 1)[-1].strip()
+        history = text.split("QUESTION:", 1)[0]
         normalized = question.casefold()
+        if any(marker in normalized for marker in ("câu đầu tiên", "tôi đã hỏi", "tóm tắt hội thoại")):
+            return {"route": "CHAT_HISTORY", "intent": "unknown", "entities": []}
         intent = self._detect_intent(normalized)
         entities = self._extract_entities(question, intent)
+        if intent == "unknown":
+            return {"route": "OUT_OF_SCOPE", "intent": "unknown", "entities": []}
+        if not entities and intent != "network_top":
+            if any(word in normalized for word in ("người đó", "tác giả đó", "họ ", "that author")):
+                entities = self._extract_entities(history, intent)
+            if not entities:
+                return {
+                    "route": "CLARIFY",
+                    "intent": intent,
+                    "entities": [],
+                    "missing_fields": ["author_reference"],
+                }
         years = [int(year) for year in re.findall(r"\b(20\d{2})\b", question)]
         requested_fields: list[str] = []
         if "tổng quan" in normalized or "overview" in normalized:
@@ -55,6 +74,7 @@ class FakeLLMProvider:
             direction = "outgoing"
 
         return {
+            "route": "GRAPH_QA",
             "intent": intent,
             "entities": entities,
             "filters": {
@@ -112,7 +132,44 @@ class FakeLLMProvider:
 
         if intent == "network_top":
             return []
+        if not entities:
+            # Like a real parser: a quoted unknown name is still extracted (linking decides).
+            entities = [{"text": text, "type": "Author"} for text in re.findall(r"[\"“](.*?)[\"”]", question)]
         return entities
+
+    @staticmethod
+    def _history(user: str) -> str:
+        block = user.split("USER_QUESTIONS (data, oldest first):", 1)[-1].split("QUESTION:", 1)[0].strip()
+        first = block.splitlines()[0] if block else ""
+        return f"Câu đầu tiên bạn hỏi: {first.split('. ', 1)[-1]}" if first else "Chưa có lịch sử."
+
+    @staticmethod
+    def _next_step(user: str) -> dict[str, object]:
+        """Follow the contract: first remaining goal on the first known ID of the right label."""
+        payload = json.loads(user)
+        goals = payload.get("GOALS_REMAINING", [])
+        known = payload.get("KNOWN_IDS", {})
+        executed = payload.get("EXECUTED", [])
+        mapping = {
+            "venue": ("paper_venue", "Paper", "paper_id"),
+            "authors": ("paper_authors", "Paper", "paper_id"),
+            "affiliations": ("author_affiliations", "Author", "author_id"),
+        }
+        for goal in goals:
+            if goal not in mapping:
+                continue
+            action, label, param = mapping[goal]
+            for node_id in known.get(label, []):
+                params = {param: node_id}
+                if {"action": action, "params": params} not in executed:
+                    return {
+                        "sufficient": False,
+                        "missing_goals": goals,
+                        "next_action": action,
+                        "params": params,
+                        "reason": f"need {goal}",
+                    }
+        return {"sufficient": True, "missing_goals": [], "next_action": None, "params": {}, "reason": "done"}
 
     @staticmethod
     def _answer(user: str) -> str:
