@@ -1,2 +1,786 @@
 kind,ref,detail
-author_name_mismatch,oa:W2#2,source 'Cy Diaz' vs OpenAlex 'Wrong Person' (A9)
+affiliation_conflict_acl,oa:W4385564926#1,OpenAlex 'Indian Institute of Technology Bombay' vs ACL 'IBM Research AI'
+affiliation_conflict_acl,oa:W4385564926#3,OpenAlex 'Indian Institute of Technology Bombay' vs ACL 'IBM Research AI'
+affiliation_conflict_acl,oa:W4385564926#4,OpenAlex 'Indian Institute of Technology Bombay' vs ACL 'IBM Research AI'
+affiliation_conflict_acl,oa:W4385564926#5,OpenAlex 'IBM (United States)' vs ACL 'IIT Bombay'
+affiliation_conflict_acl,oa:W4385564926#5,OpenAlex 'IBM Research - India' vs ACL 'IIT Bombay'
+affiliation_conflict_acl,oa:W4385564926#5,OpenAlex 'IBM (India)' vs ACL 'IIT Bombay'
+affiliation_conflict_acl,oa:W4385564926#6,OpenAlex 'IBM (United States)' vs ACL 'Senior Research Scientist'
+affiliation_conflict_acl,oa:W4385564926#6,OpenAlex 'Indian Institute of Technology Bombay' vs ACL 'Senior Research Scientist'
+affiliation_conflict_acl,oa:W4385564926#6,OpenAlex 'IBM Research - India' vs ACL 'Senior Research Scientist'
+affiliation_conflict_acl,oa:W4385564926#6,OpenAlex 'IBM (India)' vs ACL 'Senior Research Scientist'
+affiliation_conflict_acl,oa:W4385565267#3,OpenAlex 'Microsoft (United States)' vs ACL 'UMD'
+affiliation_conflict_acl,oa:W4385565400#1,OpenAlex 'Queens University' vs ACL 'Queen’s University'
+affiliation_conflict_acl,oa:W4385565400#2,OpenAlex 'Queens University' vs ACL 'Queen’s University'
+affiliation_conflict_acl,oa:W4385565413#3,OpenAlex 'The University of Texas at Austin' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4385565419#1,OpenAlex 'University of Arizona' vs ACL 'Stony Brook University'
+affiliation_conflict_acl,oa:W4385565419#2,OpenAlex 'Stony Brook University' vs ACL 'University of Arizona'
+affiliation_conflict_acl,oa:W4385565419#3,OpenAlex 'University of Arizona' vs ACL 'Stony Brook University'
+affiliation_conflict_acl,oa:W4385565471#1,OpenAlex 'University of Göttingen' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4385565471#2,OpenAlex 'University of Göttingen' vs ACL 'University of Wuppertal'
+affiliation_conflict_acl,oa:W4385565471#2,OpenAlex 'Stanford University' vs ACL 'University of Wuppertal'
+affiliation_conflict_acl,oa:W4385565471#3,OpenAlex 'University of Göttingen' vs ACL 'University of Wuppertal'
+affiliation_conflict_acl,oa:W4385565471#3,OpenAlex 'Stanford University' vs ACL 'University of Wuppertal'
+affiliation_conflict_acl,oa:W4385565471#4,OpenAlex 'University of Göttingen' vs ACL 'University of Goettingen'
+affiliation_conflict_acl,oa:W4385565471#4,OpenAlex 'Stanford University' vs ACL 'University of Goettingen'
+affiliation_conflict_acl,oa:W4385565522#1,"OpenAlex 'Shenzhen Research Institute of Big Data' vs ACL 'The Chinese University of Hong Kong, Shenzhen'"
+affiliation_conflict_acl,oa:W4385565522#8,"OpenAlex 'Shenzhen Research Institute of Big Data' vs ACL 'The Chinese University of Hong Kong, Shenzhen'"
+affiliation_conflict_acl,oa:W4385569624#1,OpenAlex 'Poznań University of Technology' vs ACL 'Avaya Inc. / Wrocław University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569624#2,OpenAlex 'Poznań University of Technology' vs ACL 'Wroclaw University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569624#3,OpenAlex 'Wrocław University of Science and Technology' vs ACL 'Poznan University of Technology'
+affiliation_conflict_acl,oa:W4385569624#4,OpenAlex 'Wrocław University of Science and Technology' vs ACL 'Yohana'
+affiliation_conflict_acl,oa:W4385569624#4,OpenAlex 'Poznań University of Technology' vs ACL 'Yohana'
+affiliation_conflict_acl,oa:W4385569624#5,OpenAlex 'Wrocław University of Science and Technology' vs ACL 'Avaya'
+affiliation_conflict_acl,oa:W4385569624#5,OpenAlex 'Poznań University of Technology' vs ACL 'Avaya'
+affiliation_conflict_acl,oa:W4385569624#6,OpenAlex 'Wrocław University of Science and Technology' vs ACL 'Meaning'
+affiliation_conflict_acl,oa:W4385569624#6,OpenAlex 'Poznań University of Technology' vs ACL 'Meaning'
+affiliation_conflict_acl,oa:W4385569706#1,"OpenAlex 'Systems, Applications & Products in Data Processing (United Kingdom)' vs ACL 'SAP SE'"
+affiliation_conflict_acl,oa:W4385569706#2,"OpenAlex 'Systems, Applications & Products in Data Processing (United Kingdom)' vs ACL 'SAP AI Research'"
+author_name_mismatch,oa:W4385569721#1,source 'Dongqi Liu' vs OpenAlex 'Dongqi Pu' (A5108855134)
+affiliation_conflict_acl,oa:W4385569726#2,"OpenAlex 'Zhejiang University' vs ACL 'Hithink RoyalFlush AI Research Institute, China'"
+affiliation_conflict_acl,oa:W4385569751#1,OpenAlex 'Shanghai Jiao Tong University' vs ACL 'The Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569751#1,OpenAlex 'Wuhan University' vs ACL 'The Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569751#2,OpenAlex 'Shanghai Jiao Tong University' vs ACL 'Wuhan University'
+affiliation_conflict_acl,oa:W4385569751#2,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Wuhan University'
+affiliation_conflict_acl,oa:W4385569751#3,OpenAlex 'Shanghai Jiao Tong University' vs ACL 'Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569751#3,OpenAlex 'Wuhan University' vs ACL 'Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4385569751#4,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Shanghai Jiao Tong University'
+affiliation_conflict_acl,oa:W4385569751#4,OpenAlex 'Wuhan University' vs ACL 'Shanghai Jiao Tong University'
+affiliation_conflict_acl,oa:W4385569751#5,OpenAlex 'Shanghai Jiao Tong University' vs ACL 'HKUST'
+affiliation_conflict_acl,oa:W4385569751#5,OpenAlex 'Wuhan University' vs ACL 'HKUST'
+affiliation_conflict_acl,oa:W4385569785#1,OpenAlex 'Microsoft (United States)' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385569785#1,OpenAlex 'State Key Laboratory of Intelligent Technology and Systems' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385569785#1,OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385569785#4,OpenAlex 'State Key Laboratory of Intelligent Technology and Systems' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385569785#4,OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385569851#1,"OpenAlex 'China University of Petroleum, Beijing' vs ACL 'tianjin university'"
+affiliation_conflict_acl,oa:W4385570049#4,OpenAlex 'Wayne State University' vs ACL 'Central University of Rajasthan'
+affiliation_conflict_acl,oa:W4385570049#5,OpenAlex 'University of Illinois Chicago' vs ACL 'Wayne State University'
+affiliation_conflict_acl,oa:W4385570079#1,OpenAlex 'Alibaba Group (Cayman Islands)' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4385570079#1,OpenAlex 'Alibaba DAMO Academy (China)' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4385570079#1,OpenAlex 'Alibaba Group (China)' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4385570095#1,OpenAlex 'Sapienza University of Rome' vs ACL 'Babelscape'
+affiliation_conflict_acl,oa:W4385570095#3,OpenAlex 'German Research Centre for Artificial Intelligence' vs ACL 'DFKI GmbH'
+affiliation_conflict_acl,oa:W4385570095#6,OpenAlex 'Carnegie Mellon University' vs ACL 'University of Melbourne'
+affiliation_conflict_acl,oa:W4385570095#8,OpenAlex 'University of Ljubljana' vs ACL 'Jožef Stefan Institute'
+affiliation_conflict_acl,oa:W4385570095#10,OpenAlex 'University of Edinburgh' vs ACL 'University of Zurich'
+affiliation_conflict_acl,oa:W4385570154#1,OpenAlex 'Chinese Academy of Sciences' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385570154#1,OpenAlex 'Institute of Computing Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385570218#1,OpenAlex 'University of Oslo' vs ACL 'University of Amsterdam'
+affiliation_conflict_acl,oa:W4385570218#2,OpenAlex 'University of Oslo' vs ACL 'University of Amsterdam'
+affiliation_conflict_acl,oa:W4385570218#3,"OpenAlex 'University of Oslo' vs ACL 'ILLC, University of Amsterdam'"
+affiliation_conflict_acl,oa:W4385570218#4,OpenAlex 'University of Amsterdam' vs ACL 'University of Oslo'
+affiliation_conflict_acl,oa:W4385570306#1,"OpenAlex 'Zhejiang University' vs ACL 'KAIST, Korea Advanced Institute of Science and Technology'"
+affiliation_conflict_acl,oa:W4385570306#2,OpenAlex 'Zhejiang University' vs ACL 'Amazon Search Science and AI'
+affiliation_conflict_acl,oa:W4385570306#3,OpenAlex 'Zhejiang University' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4385570306#4,OpenAlex 'Amazon (United States)' vs ACL 'University of Pennsylvania'
+affiliation_conflict_acl,oa:W4385570306#4,OpenAlex 'Zhejiang University' vs ACL 'University of Pennsylvania'
+affiliation_conflict_acl,oa:W4385570306#5,OpenAlex 'Zhejiang University' vs ACL 'Shannon.AI'
+affiliation_conflict_acl,oa:W4385570306#6,OpenAlex 'Zhejiang University' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4385570306#7,OpenAlex 'Amazon (United States)' vs ACL 'Mobvoi'
+affiliation_conflict_acl,oa:W4385570306#7,OpenAlex 'Zhejiang University' vs ACL 'Mobvoi'
+affiliation_conflict_acl,oa:W4385570306#8,OpenAlex 'Zhejiang University' vs ACL 'Amazon Alexa AI'
+affiliation_conflict_acl,oa:W4385570306#9,OpenAlex 'Zhejiang University' vs ACL 'KAIST'
+affiliation_conflict_acl,oa:W4385570311#2,"OpenAlex 'Tsinghua University' vs ACL 'University of California, Los Angeles'"
+affiliation_conflict_acl,oa:W4385570311#4,"OpenAlex 'Tsinghua University' vs ACL 'University of California, Los Angeles'"
+affiliation_conflict_acl,oa:W4385570311#5,OpenAlex 'University of Southern California' vs ACL 'Amazon / Alexa'
+affiliation_conflict_acl,oa:W4385570311#6,OpenAlex 'Tsinghua University' vs ACL 'UCLA'
+affiliation_conflict_acl,oa:W4385570311#7,"OpenAlex 'Tsinghua University' vs ACL 'University of California, Los Angeles'"
+affiliation_conflict_acl,oa:W4385570356#2,OpenAlex 'University of Minnesota' vs ACL '42dot'
+affiliation_conflict_acl,oa:W4385570356#4,OpenAlex 'University of Minnesota' vs ACL 'KAIST'
+affiliation_conflict_acl,oa:W4385570360#3,OpenAlex 'Baidu (China)' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385570480#9,OpenAlex 'Zhejiang University' vs ACL 'Hikvision Research Institute'
+affiliation_conflict_acl,oa:W4385570480#10,OpenAlex 'Shanghai Advanced Research Institute' vs ACL 'Zhejiang University'
+affiliation_conflict_acl,oa:W4385570480#10,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Zhejiang University'
+affiliation_conflict_acl,oa:W4385570486#2,"OpenAlex 'University of Macau' vs ACL 'Harbin Institute of Technology, Shenzhen'"
+affiliation_conflict_acl,oa:W4385570486#7,OpenAlex 'University of Macau' vs ACL 'Harbin Institute of Technology (Shenzhen)'
+affiliation_conflict_acl,oa:W4385570494#5,"OpenAlex 'Peng Cheng Laboratory' vs ACL 'Harbin Institute of Technology, Shenzhen'"
+affiliation_conflict_acl,oa:W4385570494#6,OpenAlex 'Peng Cheng Laboratory' vs ACL 'Harbin Institute of Technology(Shenzhen)'
+affiliation_conflict_acl,oa:W4385570513#3,OpenAlex 'Seoul National University' vs ACL 'Naver AI Lab'
+affiliation_conflict_acl,oa:W4385570550#1,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4385570550#2,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta'
+affiliation_conflict_acl,oa:W4385570550#3,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4385570550#4,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta Inc.'
+affiliation_conflict_acl,oa:W4385570550#5,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta - Fundamental AI Research (FAIR)'
+affiliation_conflict_acl,oa:W4385570550#6,OpenAlex 'Carnegie Mellon University' vs ACL 'Massachusetts Institute of Technology'
+affiliation_conflict_acl,oa:W4385570550#7,OpenAlex 'Carnegie Mellon University' vs ACL 'Facebook'
+affiliation_conflict_acl,oa:W4385570550#8,OpenAlex 'Carnegie Mellon University' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4385570550#10,OpenAlex 'Carnegie Mellon University' vs ACL 'Facebook'
+affiliation_conflict_acl,oa:W4385570557#4,OpenAlex 'Chinese Academy of Sciences' vs ACL 'CASIA'
+affiliation_conflict_acl,oa:W4385570557#4,OpenAlex 'Institute of Automation' vs ACL 'CASIA'
+affiliation_conflict_acl,oa:W4385570713#4,OpenAlex 'Tencent (China)' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385570814#1,OpenAlex 'University of Illinois Chicago' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385570844#1,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385570910#5,OpenAlex 'New York University' vs ACL 'Princeton University'
+affiliation_conflict_acl,oa:W4385570942#6,OpenAlex 'Peking University' vs ACL 'University of Technology Sydney'
+affiliation_conflict_acl,oa:W4385570970#3,OpenAlex 'Institute of Information Engineering' vs ACL 'University of Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385570995#3,OpenAlex 'IBM (United States)' vs ACL 'The Hebrew University of Jerusalem'
+affiliation_conflict_acl,oa:W4385571046#3,OpenAlex 'State Key Laboratory of Intelligent Technology and Systems' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385571046#3,OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385571075#4,OpenAlex 'Fraunhofer Institute for Intelligent Analysis and Information Systems' vs ACL 'University of Bonn / Fraunhofer IAIS'
+affiliation_conflict_acl,oa:W4385571075#5,OpenAlex 'TU Wien' vs ACL 'University of Bonn'
+affiliation_conflict_acl,oa:W4385571076#1,OpenAlex 'University of Hong Kong' vs ACL 'Shanghai AI Lab'
+affiliation_conflict_acl,oa:W4385571076#2,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Xiamen University'
+affiliation_conflict_acl,oa:W4385571076#2,OpenAlex 'University of Hong Kong' vs ACL 'Xiamen University'
+affiliation_conflict_acl,oa:W4385571076#3,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4385571076#3,OpenAlex 'University of Hong Kong' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4385571076#4,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'The University of Hong Kong'
+affiliation_conflict_acl,oa:W4385571080#1,OpenAlex 'Fields Institute for Research in Mathematical Sciences' vs ACL 'Nanjing University of Science and Technology'
+affiliation_conflict_acl,oa:W4385571080#2,OpenAlex 'Fields Institute for Research in Mathematical Sciences' vs ACL 'Nanjing University of Science and Technology'
+affiliation_conflict_acl,oa:W4385571080#3,OpenAlex 'Fields Institute for Research in Mathematical Sciences' vs ACL 'Nanjing University of Science and Technology'
+affiliation_conflict_acl,oa:W4385571080#4,OpenAlex 'Fields Institute for Research in Mathematical Sciences' vs ACL 'Nanjing University of Science and Technology'
+affiliation_conflict_acl,oa:W4385571140#8,OpenAlex 'Yale University' vs ACL 'Nanyang Technological University; Salesforce AI Research'
+affiliation_conflict_acl,oa:W4385571159#2,OpenAlex 'Zhejiang University' vs ACL 'Microsoft Research'
+affiliation_conflict_acl,oa:W4385571159#3,OpenAlex 'The University of Sydney' vs ACL 'Microsoft Research Asia'
+affiliation_conflict_acl,oa:W4385571159#3,OpenAlex 'Zhejiang University' vs ACL 'Microsoft Research Asia'
+affiliation_conflict_acl,oa:W4385571159#4,OpenAlex 'Microsoft Research Asia (China)' vs ACL 'MSRA'
+affiliation_conflict_acl,oa:W4385571159#4,OpenAlex 'Zhejiang University' vs ACL 'MSRA'
+affiliation_conflict_acl,oa:W4385571183#2,OpenAlex 'Indian Institute of Technology Patna' vs ACL 'NLP Researcher'
+affiliation_conflict_acl,oa:W4385571205#1,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385571205#2,OpenAlex 'Westlake University' vs ACL 'Tencent AI LAB'
+affiliation_conflict_acl,oa:W4385571205#2,OpenAlex 'Zhejiang University' vs ACL 'Tencent AI LAB'
+affiliation_conflict_acl,oa:W4385571205#3,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385571205#4,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385571205#5,OpenAlex 'Westlake University' vs ACL 'Tencent AI Lab'
+affiliation_conflict_acl,oa:W4385571205#5,OpenAlex 'Zhejiang University' vs ACL 'Tencent AI Lab'
+affiliation_conflict_acl,oa:W4385571205#6,OpenAlex 'Westlake University' vs ACL 'Tencent AI Lab'
+affiliation_conflict_acl,oa:W4385571205#6,OpenAlex 'Zhejiang University' vs ACL 'Tencent AI Lab'
+affiliation_conflict_acl,oa:W4385571205#7,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385571224#6,OpenAlex 'East China Normal University' vs ACL 'Huatai Securities Co. Ltd'
+affiliation_conflict_acl,oa:W4385571374#1,OpenAlex 'King Abdullah University of Science and Technology' vs ACL 'KAUST'
+affiliation_conflict_acl,oa:W4385571374#4,OpenAlex 'Ant Group (China)' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385571374#7,OpenAlex 'King Abdullah University of Science and Technology' vs ACL 'University of Notre Dame'
+affiliation_conflict_acl,oa:W4385571533#4,OpenAlex 'Chinese Academy of Sciences' vs ACL 'CASIA'
+affiliation_conflict_acl,oa:W4385571533#4,OpenAlex 'Institute of Automation' vs ACL 'CASIA'
+affiliation_conflict_acl,oa:W4385571568#1,OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385571568#2,"OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Institute for AI Industry Research (AIR), Tsinghua University, China'"
+affiliation_conflict_acl,oa:W4385571568#3,OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385571647#7,OpenAlex 'Meta (United States)' vs ACL 'Georgia Institute of Technology'
+affiliation_conflict_acl,oa:W4385571679#4,OpenAlex 'Tsinghua University' vs ACL 'Beijing University of Chemical Technology'
+affiliation_conflict_acl,oa:W4385571735#3,OpenAlex 'Peking University' vs ACL 'pku.edu.cn'
+affiliation_conflict_acl,oa:W4385571740#1,OpenAlex 'Johns Hopkins University' vs ACL 'The University of North Carolina at Chapel Hill'
+affiliation_conflict_acl,oa:W4385571740#2,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Bloomberg L.P.'
+affiliation_conflict_acl,oa:W4385571740#2,OpenAlex 'Johns Hopkins University' vs ACL 'Bloomberg L.P.'
+affiliation_conflict_acl,oa:W4385571740#3,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385571740#3,OpenAlex 'Johns Hopkins University' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385571740#4,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385571740#4,OpenAlex 'Johns Hopkins University' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385571740#5,OpenAlex 'Johns Hopkins University' vs ACL 'University of North Carolina at Chapel Hill'
+affiliation_conflict_acl,oa:W4385571740#6,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Johns Hopkins University'
+affiliation_conflict_acl,oa:W4385571740#7,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Bloomberg LP'
+affiliation_conflict_acl,oa:W4385571740#7,OpenAlex 'Johns Hopkins University' vs ACL 'Bloomberg LP'
+affiliation_conflict_acl,oa:W4385571861#1,OpenAlex 'Alibaba Group (Cayman Islands)' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385571861#1,OpenAlex 'Shenzhen Institutes of Advanced Technology' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385571861#1,OpenAlex 'Alibaba DAMO Academy (China)' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385571861#1,OpenAlex 'Alibaba Group (China)' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385571861#3,OpenAlex 'Chinese Academy of Sciences' vs ACL 'The University of Science and Technology of China'
+affiliation_conflict_acl,oa:W4385571861#3,OpenAlex 'Shenzhen Institutes of Advanced Technology' vs ACL 'The University of Science and Technology of China'
+affiliation_conflict_acl,oa:W4385571861#4,OpenAlex 'Shenzhen Institutes of Advanced Technology' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4385571861#6,OpenAlex 'Chinese Academy of Sciences' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4385571861#6,OpenAlex 'Shenzhen Institutes of Advanced Technology' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4385571861#6,OpenAlex 'University of Chinese Academy of Sciences' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4385571873#4,OpenAlex 'Shanghai Jiao Tong University' vs ACL 'Carnegie Mellon University'
+affiliation_conflict_acl,oa:W4385571898#2,OpenAlex 'University of Michigan' vs ACL 'LG AI Research'
+affiliation_conflict_acl,oa:W4385571898#2,OpenAlex 'University of Illinois Chicago' vs ACL 'LG AI Research'
+affiliation_conflict_acl,oa:W4385571898#3,OpenAlex 'University of Michigan' vs ACL 'University of Illinois at Chicago'
+affiliation_conflict_acl,oa:W4385571898#4,OpenAlex 'University of Illinois Chicago' vs ACL 'LG AI Research/ University of Michigan'
+affiliation_conflict_acl,oa:W4385571944#1,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'UCLA'
+affiliation_conflict_acl,oa:W4385571944#2,"OpenAlex 'University of California, Los Angeles' vs ACL 'Allen AI'"
+affiliation_conflict_acl,oa:W4385571944#2,OpenAlex 'Yonsei University' vs ACL 'Allen AI'
+affiliation_conflict_acl,oa:W4385571944#2,OpenAlex 'University of Washington' vs ACL 'Allen AI'
+affiliation_conflict_acl,oa:W4385571944#3,OpenAlex 'Yonsei University' vs ACL 'Allen Institute for AI'
+affiliation_conflict_acl,oa:W4385571944#3,OpenAlex 'University of Washington' vs ACL 'Allen Institute for AI'
+affiliation_conflict_acl,oa:W4385571944#4,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Southern California'
+affiliation_conflict_acl,oa:W4385571944#5,OpenAlex 'Yonsei University' vs ACL 'UCLA'
+affiliation_conflict_acl,oa:W4385571944#5,OpenAlex 'University of Washington' vs ACL 'UCLA'
+affiliation_conflict_acl,oa:W4385571944#5,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'UCLA'
+affiliation_conflict_acl,oa:W4385571944#6,"OpenAlex 'University of California, Los Angeles' vs ACL 'University of Washington'"
+affiliation_conflict_acl,oa:W4385571944#6,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4385571993#2,OpenAlex 'Technische Universität Darmstadt' vs ACL 'University of Copenhagen'
+affiliation_conflict_acl,oa:W4385572024#1,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4385572024#3,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+author_name_mismatch,oa:W4385572034#2,source 'Nikolaos Aletras' vs OpenAlex 'Νικόλαος Αλέτρας' (A5010341007)
+affiliation_conflict_acl,oa:W4385572057#1,OpenAlex 'The University of Texas at Austin' vs ACL 'University of Illinois Urbana-Champaign'
+affiliation_conflict_acl,oa:W4385572077#4,OpenAlex 'State Key Laboratory of Software Development Environment' vs ACL 'Beihang University'
+affiliation_conflict_acl,oa:W4385572098#2,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Bar Ilan University'
+affiliation_conflict_acl,oa:W4385572155#1,"OpenAlex 'Google (United States)' vs ACL 'University of California, Irvine (UCI)'"
+affiliation_conflict_acl,oa:W4385572155#2,"OpenAlex 'University of California, Irvine' vs ACL 'Google Research'"
+affiliation_conflict_acl,oa:W4385572155#3,"OpenAlex 'Google (United States)' vs ACL 'University of California, Irvine'"
+affiliation_conflict_acl,oa:W4385572164#3,OpenAlex 'Renmin University of China' vs ACL 'RUC'
+affiliation_conflict_acl,oa:W4385572294#2,"OpenAlex 'Institute of High Performance Computing' vs ACL 'IHPC, A*STAR'"
+affiliation_conflict_acl,oa:W4385572302#5,OpenAlex 'Beijing Institute for General Artificial Intelligence' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385572331#2,OpenAlex 'IBM (United States)' vs ACL 'Research Scientist'
+affiliation_conflict_acl,oa:W4385572370#3,OpenAlex 'Ant Group (China)' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385572370#4,OpenAlex 'King Abdullah University of Science and Technology' vs ACL 'KAUST'
+affiliation_conflict_acl,oa:W4385572370#6,OpenAlex 'Peking University' vs ACL 'pku.edu.cn'
+affiliation_conflict_acl,oa:W4385572370#6,OpenAlex 'Beijing Institute for General Artificial Intelligence' vs ACL 'pku.edu.cn'
+affiliation_conflict_acl,oa:W4385572429#2,OpenAlex 'University of Utah' vs ACL 'Bloomberg LP'
+affiliation_conflict_acl,oa:W4385572429#3,OpenAlex 'University of Utah' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385572429#4,OpenAlex 'University of Utah' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385572429#5,OpenAlex 'University of Utah' vs ACL 'Bloomberg LP'
+affiliation_conflict_acl,oa:W4385572429#6,OpenAlex 'University of Utah' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4385572453#3,"OpenAlex 'Google DeepMind (United Kingdom)' vs ACL 'Indian Institute of Technology, Bombay'"
+affiliation_conflict_acl,oa:W4385572461#1,"OpenAlex 'University of California, Santa Barbara' vs ACL 'Korea Advanced Institute of Science and Technology'"
+affiliation_conflict_acl,oa:W4385572461#1,OpenAlex 'Cornell University' vs ACL 'Korea Advanced Institute of Science and Technology'
+affiliation_conflict_acl,oa:W4385572461#2,"OpenAlex 'University of California, Santa Barbara' vs ACL 'SoftlyAI'"
+affiliation_conflict_acl,oa:W4385572461#2,OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'SoftlyAI'
+affiliation_conflict_acl,oa:W4385572461#2,OpenAlex 'Cornell University' vs ACL 'SoftlyAI'
+affiliation_conflict_acl,oa:W4385572461#3,"OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'University of California, Santa Barbara'"
+affiliation_conflict_acl,oa:W4385572461#3,"OpenAlex 'Cornell University' vs ACL 'University of California, Santa Barbara'"
+affiliation_conflict_acl,oa:W4385572461#4,"OpenAlex 'University of California, Santa Barbara' vs ACL 'Google'"
+affiliation_conflict_acl,oa:W4385572461#4,OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4385572461#4,OpenAlex 'Cornell University' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4385572461#5,"OpenAlex 'University of California, Santa Barbara' vs ACL 'Cornell University'"
+affiliation_conflict_acl,oa:W4385572461#5,OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'Cornell University'
+affiliation_conflict_acl,oa:W4385572461#7,"OpenAlex 'University of California, Santa Barbara' vs ACL 'KAIST'"
+affiliation_conflict_acl,oa:W4385572461#7,OpenAlex 'Cornell University' vs ACL 'KAIST'
+affiliation_conflict_acl,oa:W4385572461#8,"OpenAlex 'University of California, Santa Barbara' vs ACL 'KAIST'"
+affiliation_conflict_acl,oa:W4385572461#8,OpenAlex 'Cornell University' vs ACL 'KAIST'
+affiliation_conflict_acl,oa:W4385572507#1,OpenAlex 'Beijing Academy of Artificial Intelligence' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385572507#1,OpenAlex 'Tsinghua University' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4385572507#3,OpenAlex 'Peking University' vs ACL 'Tsinghua university'
+affiliation_conflict_acl,oa:W4385572507#3,OpenAlex 'Beijing Academy of Artificial Intelligence' vs ACL 'Tsinghua university'
+affiliation_conflict_acl,oa:W4385572507#4,"OpenAlex 'Peking University' vs ACL 'Institute for AI Industry Research (AIR), Tsinghua University, China'"
+affiliation_conflict_acl,oa:W4385572507#5,OpenAlex 'Peking University' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4385572560#3,"OpenAlex 'IFlyTek (China)' vs ACL 'State Key Laboratory of Cognitive Intelligence, China'"
+affiliation_conflict_acl,oa:W4385572560#4,OpenAlex 'University of Science and Technology of China' vs ACL 'iFLYTEK Research'
+affiliation_conflict_acl,oa:W4385572560#5,"OpenAlex 'IFlyTek (China)' vs ACL 'State Key Laboratory of Cognitive Intelligence, China'"
+affiliation_conflict_acl,oa:W4385893928#1,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Fudan University'
+authorship_count_mismatch,oa:W4386200967,source 9 authors vs OpenAlex 8
+author_name_mismatch,oa:W4389520798#2,source 'Nikolaos Aletras' vs OpenAlex 'Νικόλαος Αλέτρας' (A5010341007)
+affiliation_conflict_acl,oa:W4392083945#4,OpenAlex 'Université Paris-Saclay' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4392083945#4,OpenAlex 'Mathématiques et Informatique pour la Complexité et les Systèmes' vs ACL 'CentraleSupelec'
+authorship_count_mismatch,oa:W4393156672,source 4 authors vs OpenAlex 5
+author_name_mismatch,oa:W4401307238#5,source 'Qixuan Zhao' vs OpenAlex 'Feiteng Fang' (A5011518170)
+author_name_mismatch,oa:W4401307238#6,source 'Zhijian Li' vs OpenAlex 'Qixuan Zhao' (A5114202948)
+affiliation_conflict_acl,oa:W4402667037#2,"OpenAlex 'University of California, Los Angeles' vs ACL 'Abridge'"
+affiliation_conflict_acl,oa:W4402667037#3,"OpenAlex 'University of California, Los Angeles' vs ACL 'Meta'"
+affiliation_conflict_acl,oa:W4402667037#4,"OpenAlex 'University of California, Los Angeles' vs ACL 'Reka AI'"
+affiliation_conflict_acl,oa:W4402667037#9,"OpenAlex 'University of California, Los Angeles' vs ACL 'University of Washington, Facebook and Meta'"
+affiliation_conflict_acl,oa:W4402667037#10,"OpenAlex 'University of California, Los Angeles' vs ACL 'Facebook'"
+affiliation_conflict_acl,oa:W4402667058#3,OpenAlex 'Graduate Institute of International and Development Studies' vs ACL 'University of Massachusetts at Amherst'
+affiliation_conflict_acl,oa:W4402667058#4,OpenAlex 'Munich Center for Machine Learning' vs ACL 'Ludwig-Maximilians-Universität München and IT University of Copenhagen'
+affiliation_conflict_acl,oa:W4402667063#3,OpenAlex 'Pennsylvania State University' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4402667063#3,OpenAlex 'Chinese University of Hong Kong' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4402667063#4,OpenAlex 'Pennsylvania State University' vs ACL 'The Chinese University of Hong Kong'
+affiliation_conflict_acl,oa:W4402667063#5,OpenAlex 'Chinese University of Hong Kong' vs ACL 'Pennsylvania State University'
+affiliation_conflict_acl,oa:W4402667063#6,OpenAlex 'Pennsylvania State University' vs ACL 'Virginia Tech'
+affiliation_conflict_acl,oa:W4402667063#6,OpenAlex 'Chinese University of Hong Kong' vs ACL 'Virginia Tech'
+affiliation_conflict_acl,oa:W4402667090#1,OpenAlex 'Dartmouth College' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4402667090#2,OpenAlex 'ByteDance (China)' vs ACL 'Cold Spring Harbor Laboratory'
+affiliation_conflict_acl,oa:W4402667118#2,OpenAlex 'Tsinghua Shenzhen International Graduate School' vs ACL 'Peng Cheng Laborotary'
+affiliation_conflict_acl,oa:W4402667118#3,OpenAlex 'Tsinghua University' vs ACL 'Purdue University'
+affiliation_conflict_acl,oa:W4402667118#8,"OpenAlex 'Tsinghua University' vs ACL 'School of Computer Science, Carnegie Mellon University'"
+affiliation_conflict_acl,oa:W4402667144#1,OpenAlex 'Indian Institute of Technology Patna' vs ACL 'Singapore University of Technology and Design'
+affiliation_conflict_acl,oa:W4402670978#3,"OpenAlex 'New York University' vs ACL 'College of Computer Science and Technology, Zhejiang University'"
+affiliation_conflict_acl,oa:W4402670978#6,OpenAlex 'Carnegie Mellon University' vs ACL 'Zhejiang University'
+affiliation_conflict_acl,oa:W4402670978#10,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Yale University'
+affiliation_conflict_acl,oa:W4402671103#1,OpenAlex 'Carnegie Mellon University' vs ACL 'Georgia Institute of Technology'
+affiliation_conflict_acl,oa:W4402671103#2,"OpenAlex 'Georgia Institute of Technology' vs ACL 'CMU, Carnegie Mellon University'"
+affiliation_conflict_acl,oa:W4402671103#4,OpenAlex 'Georgia Institute of Technology' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4402671103#4,OpenAlex 'Carnegie Mellon University' vs ACL 'Bloomberg'
+affiliation_conflict_acl,oa:W4402671103#5,OpenAlex 'Georgia Institute of Technology' vs ACL 'Carnegie Mellon University'
+affiliation_conflict_acl,oa:W4402671103#6,OpenAlex 'Carnegie Mellon University' vs ACL 'Georgia Institute of Technology'
+affiliation_conflict_acl,oa:W4402671103#7,OpenAlex 'Carnegie Mellon University' vs ACL 'Georgia Institute of Technology'
+affiliation_conflict_acl,oa:W4402671120#3,OpenAlex 'Brno University of Technology' vs ACL 'Kempelen Institute of Intelligent Technologies'
+affiliation_conflict_acl,oa:W4402671120#4,OpenAlex 'Brno University of Technology' vs ACL 'Kempelen Institute of Intelligent Technologies'
+affiliation_conflict_acl,oa:W4402671120#5,OpenAlex 'Brno University of Technology' vs ACL 'Kempelen Institute of Intelligent Technologies'
+affiliation_conflict_acl,oa:W4402671143#2,OpenAlex 'Beijing Academy of Artificial Intelligence' vs ACL 'Harbin Institute of Technology'
+affiliation_conflict_acl,oa:W4402671154#2,OpenAlex 'University of Cambridge' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671154#3,OpenAlex 'University of Cambridge' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671154#4,OpenAlex 'ETH Zurich' vs ACL 'University of Cambridge'
+affiliation_conflict_acl,oa:W4402671154#5,"OpenAlex 'University of Cambridge' vs ACL 'Department of Computer Science, ETHZ - ETH Zurich'"
+affiliation_conflict_acl,oa:W4402671155#1,OpenAlex 'University of Chicago' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671155#6,"OpenAlex 'University of Washington' vs ACL 'University of Illinois, Urbana Champaign'"
+affiliation_conflict_acl,oa:W4402671155#6,"OpenAlex 'University of Chicago' vs ACL 'University of Illinois, Urbana Champaign'"
+affiliation_conflict_acl,oa:W4402671155#6,"OpenAlex 'Western Washington University' vs ACL 'University of Illinois, Urbana Champaign'"
+affiliation_conflict_acl,oa:W4402671159#4,"OpenAlex 'Nanyang Technological University' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671159#6,OpenAlex 'Tsinghua University' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4402671159#7,"OpenAlex 'Shanghai Qi Zhi Institute' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671160#1,OpenAlex 'ByteDance (China)' vs ACL 'Cold Spring Harbor Laboratory'
+affiliation_conflict_acl,oa:W4402671160#3,OpenAlex 'Institute of Automation' vs ACL 'University of the Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4402671217#2,OpenAlex 'University of Manchester' vs ACL 'University of Opole'
+affiliation_conflict_acl,oa:W4402671286#1,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#6,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#6,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#7,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#7,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#8,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#8,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#9,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#9,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#10,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#10,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#11,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#11,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#12,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#12,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#13,"OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Ohio State University, Columbus'"
+affiliation_conflict_acl,oa:W4402671286#13,"OpenAlex 'Carnegie Mellon University' vs ACL 'Ohio State University, Columbus'"
+affiliation_conflict_acl,oa:W4402671286#13,"OpenAlex 'University of California, Berkeley' vs ACL 'Ohio State University, Columbus'"
+affiliation_conflict_acl,oa:W4402671286#14,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#15,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#16,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#16,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#17,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#17,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#18,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#18,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#19,OpenAlex 'University of Washington' vs ACL 'Contextual AI'
+affiliation_conflict_acl,oa:W4402671286#20,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#20,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#21,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#21,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#22,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#23,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#23,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#24,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#24,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#26,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#31,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671286#31,OpenAlex 'Carnegie Mellon University' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671286#31,"OpenAlex 'University of California, Berkeley' vs ACL 'University of Washington'"
+affiliation_conflict_acl,oa:W4402671286#34,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#34,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#35,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#35,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671286#36,OpenAlex 'Carnegie Mellon University' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4402671286#36,"OpenAlex 'University of California, Berkeley' vs ACL 'Allen Institute for Artificial Intelligence'"
+affiliation_conflict_acl,oa:W4402671291#1,OpenAlex 'Carnegie Mellon University' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4402671291#5,OpenAlex 'Mohamed bin Zayed University of Artificial Intelligence' vs ACL 'Carnegie Mellon University'
+affiliation_conflict_acl,oa:W4402671297#7,"OpenAlex 'Zhipu AI (China)' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671297#8,"OpenAlex 'Zhipu AI (China)' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671533#6,OpenAlex 'Nanyang Technological University' vs ACL 'University of Sydney'
+affiliation_conflict_acl,oa:W4402671546#1,OpenAlex 'Google DeepMind (United Kingdom)' vs ACL 'University of Edinburgh'
+affiliation_conflict_acl,oa:W4402671546#2,OpenAlex 'University of Edinburgh' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4402671554#1,OpenAlex 'University of California San Diego' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4402671554#2,"OpenAlex 'University of California San Diego' vs ACL 'Computer Science Department, Stanford University'"
+affiliation_conflict_acl,oa:W4402671554#4,OpenAlex 'University of California San Diego' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4402671554#5,OpenAlex 'University of California San Diego' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4402671566#4,OpenAlex 'ETH Zurich' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671566#4,OpenAlex 'McGill University' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671566#4,OpenAlex 'Carnegie Mellon University' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671566#5,OpenAlex 'ETH Zurich' vs ACL 'McGill University'
+affiliation_conflict_acl,oa:W4402671566#5,OpenAlex 'Carnegie Mellon University' vs ACL 'McGill University'
+affiliation_conflict_acl,oa:W4402671572#1,OpenAlex 'Ministry of Education of the People's Republic of China' vs ACL 'Sichuan University'
+affiliation_conflict_acl,oa:W4402671572#4,OpenAlex 'Ministry of Education of the People's Republic of China' vs ACL 'Sichuan University'
+affiliation_conflict_acl,oa:W4402671602#4,"OpenAlex 'Institute of Computing Technology' vs ACL ', Chinese Academy of Sciences and , Cambricon Techonologies'"
+affiliation_conflict_acl,oa:W4402671602#6,"OpenAlex 'Institute of Software' vs ACL ', Chinese Academy of Sciences'"
+affiliation_conflict_acl,oa:W4402671611#4,OpenAlex 'The University of Melbourne' vs ACL 'Inspir.ai'
+affiliation_conflict_acl,oa:W4402671614#3,OpenAlex 'Carnegie Mellon University' vs ACL 'Massachusetts Institute of Technology'
+affiliation_conflict_acl,oa:W4402671628#5,OpenAlex 'Ministry of Education of the People's Republic of China' vs ACL 'Sichuan University'
+affiliation_conflict_acl,oa:W4402671628#6,OpenAlex 'Ministry of Education of the People's Republic of China' vs ACL 'Sichuan University'
+affiliation_conflict_acl,oa:W4402671637#8,OpenAlex 'Centre for Perceptual and Interactive Intelligence' vs ACL 'The Chinese University of Hong Kong'
+affiliation_conflict_acl,oa:W4402671663#1,OpenAlex 'University of Illinois Chicago' vs ACL 'Salesforce AI Research'
+affiliation_conflict_acl,oa:W4402671665#2,"OpenAlex 'PLA Academy of Military Science' vs ACL 'Systems Engineering Institute, AMS'"
+affiliation_conflict_acl,oa:W4402671665#3,OpenAlex 'PLA Academy of Military Science' vs ACL 'AMS'
+affiliation_conflict_acl,oa:W4402671694#3,OpenAlex 'Max Planck Institute for Informatics' vs ACL 'Universität des Saarlandes'
+affiliation_conflict_acl,oa:W4402671694#3,OpenAlex 'Saarland University' vs ACL 'Universität des Saarlandes'
+affiliation_conflict_acl,oa:W4402671698#3,"OpenAlex 'Zhipu AI (China)' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671698#9,"OpenAlex 'Zhipu AI (China)' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671698#11,"OpenAlex 'Zhipu AI (China)' vs ACL 'Beijing Knowledge Atlas Technology Co., Ltd.'"
+affiliation_conflict_acl,oa:W4402671705#3,OpenAlex 'École Normale Supérieure - PSL' vs ACL 'The World Bank'
+author_name_mismatch,oa:W4402671712#11,source 'Yiguan Lin' vs OpenAlex '林一冠 林一冠' (A5107525638)
+affiliation_conflict_acl,oa:W4402671718#1,OpenAlex 'Pennsylvania State University' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671718#1,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671718#2,OpenAlex 'Pennsylvania State University' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671718#2,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Washington'
+affiliation_conflict_acl,oa:W4402671718#6,"OpenAlex 'Pennsylvania State University' vs ACL 'University of Washington, Seattle'"
+affiliation_conflict_acl,oa:W4402671718#6,"OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'University of Washington, Seattle'"
+affiliation_conflict_acl,oa:W4402671730#5,OpenAlex 'Fudan University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4402671733#1,OpenAlex 'Bar-Ilan University' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4402671771#3,OpenAlex 'Beihang University' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4402671771#6,OpenAlex 'Beihang University' vs ACL 'Guangzhou University'
+affiliation_conflict_acl,oa:W4402671771#7,OpenAlex 'Beihang University' vs ACL 'Beijing Information Science and Technology University'
+affiliation_conflict_acl,oa:W4402671787#1,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4402671787#4,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Carnegie Mellon University'
+affiliation_conflict_acl,oa:W4402671825#1,OpenAlex 'Harbin Institute of Technology' vs ACL 'Research Center for Social Computing and Information Retrieval'
+affiliation_conflict_acl,oa:W4402671850#2,OpenAlex 'University of Chicago' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4402671850#4,OpenAlex 'Chinese University of Hong Kong' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4402671871#2,OpenAlex 'East China Normal University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4402671871#5,OpenAlex 'East China Normal University' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4402671871#6,OpenAlex 'East China Normal University' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4402671874#3,OpenAlex 'Indian Institute of Technology Dhanbad' vs ACL 'University of Tromsø and Transmute AI Research'
+affiliation_conflict_acl,oa:W4402671889#6,OpenAlex 'National University of Defense Technology' vs ACL 'National University of Defence Technology'
+author_name_mismatch,oa:W4402671893#2,source 'Nikolaos Aletras' vs OpenAlex 'Νικόλαος Αλέτρας' (A5010341007)
+author_name_mismatch,oa:W4402671915#2,source 'Keyu Chen' vs OpenAlex 'Keyuchen Keyuchen' (A5107472265)
+affiliation_conflict_acl,oa:W4402671915#6,OpenAlex 'Chinese University of Hong Kong' vs ACL 'AI lab'
+affiliation_conflict_acl,oa:W4402671915#6,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'AI lab'
+affiliation_conflict_acl,oa:W4402671915#9,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'The Chinese University of Hong Kong'
+affiliation_conflict_acl,oa:W4402671951#1,"OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671951#2,"OpenAlex 'Beijing National Research Center for Information Science and Technology' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402671960#1,OpenAlex 'The Hong Kong University of Science and Technology (Guangzhou)' vs ACL 'HSBC GPS LAB'
+affiliation_conflict_acl,oa:W4402671969#4,OpenAlex 'ETH Zurich' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4402671969#5,OpenAlex 'Swiss Finance Institute' vs ACL 'University of Zurich'
+affiliation_conflict_acl,oa:W4402671994#4,OpenAlex 'Central South University' vs ACL 'Harbin Institute of Technology'
+affiliation_conflict_acl,oa:W4402672020#2,OpenAlex 'The University of Texas at Austin' vs ACL 'Meta'
+affiliation_conflict_acl,oa:W4402672020#3,OpenAlex 'The University of Texas at Austin' vs ACL 'Facebook'
+affiliation_conflict_acl,oa:W4402672020#4,OpenAlex 'The University of Texas at Austin' vs ACL 'Rembrand Inc'
+affiliation_conflict_acl,oa:W4402672021#7,OpenAlex 'Indian Institute of Technology Bombay' vs ACL 'Flipkart'
+affiliation_conflict_acl,oa:W4402672026#5,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4402672026#8,OpenAlex 'Tsinghua University' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4402672054#6,"OpenAlex 'Agency for Science, Technology and Research' vs ACL 'IHPC'"
+affiliation_conflict_acl,oa:W4402672076#9,OpenAlex 'Institute of Computing Technology' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4402672086#1,OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'Twelvelabs'
+affiliation_conflict_acl,oa:W4402672093#1,"OpenAlex 'University of Colorado System' vs ACL 'Electronic Engineering, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402672094#3,OpenAlex 'German Research Centre for Artificial Intelligence' vs ACL 'University of Potsdam'
+affiliation_conflict_acl,oa:W4402672100#4,"OpenAlex 'Peking University' vs ACL 'Shanghai Jiaotong University, Wuhan University, Tsinghua University, Tsinghua University, Microsoft, University of the Chinese Academy of Sciences, Chinese Academy of Sciences, Beijing University of Aeronautics and Astronautics, South China University of Technology, SUN YAT-SEN UNIVERSITY, University of Electronic Science and Technology of China, Huazhong University of Science and Technology, Harbin Institute of Technology, Shandong University, nanjing university, Beijing University of Posts and Telecommunications, Shanghai Artificial Intelligence Laboratory, Shanghai University of Science and Technology, Tianjin University, Northeastern University, Southeast University, Xi’an Jiaotong University, Xiamen University, Fudan University, Renmin University of China, Nankai University, Meituan, Kuaishou- 快手科技, East China Normal University, Xi’an University of Electronic Science and Technology, Nanjing University of Aeronautics and Astronautics, Nanjing University of Science and Technology, Southern University of Science and Technology, Northwest Polytechnical University Xi’an, Chongqing University, Jilin University, Beijing Normal University, University of Science and Technology Beijing and Zhejiang University'"
+affiliation_conflict_acl,oa:W4402684023#2,OpenAlex 'Xiaohongshu (Little Red Book) (China)' vs ACL 'Beijing Institute of Technology'
+affiliation_conflict_acl,oa:W4402684023#7,"OpenAlex 'Xiaohongshu (Little Red Book) (China)' vs ACL 'Zhejiang University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4402684026#3,OpenAlex 'Xidian University' vs ACL 'Xi’an University of Electronic Science and Technology'
+affiliation_conflict_acl,oa:W4402684033#1,OpenAlex 'ByteDance (China)' vs ACL 'University of Illinois at Urbana-Champaign'
+affiliation_conflict_acl,oa:W4402684033#3,OpenAlex 'ByteDance (China)' vs ACL 'Xiamen University'
+affiliation_conflict_acl,oa:W4402684033#4,OpenAlex 'ByteDance (China)' vs ACL 'Shanghai Jiaotong University'
+affiliation_conflict_acl,oa:W4402684346#3,OpenAlex 'University of Massachusetts Amherst' vs ACL 'Databricks'
+affiliation_conflict_acl,oa:W4403747725#2,"OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'CNRS / ISIR, Sorbonne Université and CNRS'"
+affiliation_conflict_acl,oa:W4403747725#2,"OpenAlex 'Institut Systèmes Intelligents et de Robotique' vs ACL 'CNRS / ISIR, Sorbonne Université and CNRS'"
+affiliation_conflict_acl,oa:W4403747725#3,OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'Criteo AI Lab and Sorbonne Universite'
+affiliation_conflict_acl,oa:W4403747725#3,OpenAlex 'Institut Systèmes Intelligents et de Robotique' vs ACL 'Criteo AI Lab and Sorbonne Universite'
+affiliation_conflict_acl,oa:W4404781695#5,"OpenAlex 'Peking University' vs ACL 'Shanghai Jiaotong University, Wuhan University, Tsinghua University, Tsinghua University, Microsoft, University of the Chinese Academy of Sciences, Chinese Academy of Sciences, Beijing University of Aeronautics and Astronautics, South China University of Technology, SUN YAT-SEN UNIVERSITY, University of Electronic Science and Technology of China, Huazhong University of Science and Technology, Harbin Institute of Technology, Shandong University, nanjing university, Beijing University of Posts and Telecommunications, Shanghai Artificial Intelligence Laboratory, Shanghai University of Science and Technology, Tianjin University, Northeastern University, Southeast University, Xi’an Jiaotong University, Xiamen University, Fudan University, Renmin University of China, Nankai University, Meituan, Kuaishou- 快手科技, East China Normal University, Xi’an University of Electronic Science and Technology, Nanjing University of Aeronautics and Astronautics, Nanjing University of Science and Technology, Southern University of Science and Technology, Northwest Polytechnical University Xi’an, Chongqing University, Jilin University, Beijing Normal University, University of Science and Technology Beijing and Zhejiang University'"
+affiliation_conflict_acl,oa:W4404781917#1,OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781917#1,OpenAlex 'Université Paris-Saclay' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781917#1,OpenAlex 'Laboratoire des signaux et systèmes' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781917#2,OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'Paris Saclay University'
+affiliation_conflict_acl,oa:W4404781917#2,OpenAlex 'Japanese-French Laboratory for Informatics' vs ACL 'Paris Saclay University'
+affiliation_conflict_acl,oa:W4404781917#4,OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781917#4,OpenAlex 'Université Paris-Saclay' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781917#4,OpenAlex 'Laboratoire des signaux et systèmes' vs ACL 'CentraleSupelec'
+affiliation_conflict_acl,oa:W4404781926#4,OpenAlex 'Harbin Institute of Technology' vs ACL 'University of Macau'
+affiliation_conflict_acl,oa:W4404781952#2,OpenAlex 'Bar-Ilan University' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4404782083#2,OpenAlex 'AIRI - Artificial Intelligence Research Institute' vs ACL 'Artificial Intelligence Research Institute and Skolkovo Institute of Science and Technology'
+affiliation_conflict_acl,oa:W4404782083#4,OpenAlex 'AIRI - Artificial Intelligence Research Institute' vs ACL 'Skoltech'
+affiliation_conflict_acl,oa:W4404782083#5,OpenAlex 'University of Mannheim' vs ACL 'University of Technology Nuremberg'
+affiliation_conflict_acl,oa:W4404782221#6,OpenAlex 'Harvard University' vs ACL 'University of Michigan - Ann Arbor'
+affiliation_conflict_acl,oa:W4404782221#7,OpenAlex 'Northeastern University' vs ACL 'Adobe Systems'
+affiliation_conflict_acl,oa:W4404782251#2,OpenAlex 'Georgia Institute of Technology' vs ACL 'University of Texas Southwestern Medical Center'
+affiliation_conflict_acl,oa:W4404782278#2,OpenAlex 'LG AI Research (South Korea)' vs ACL 'Seoul National University'
+affiliation_conflict_acl,oa:W4404782297#7,OpenAlex 'Institute of High Performance Computing' vs ACL 'A*STAR Centre for Frontier AI Research'
+affiliation_conflict_acl,oa:W4404782325#4,OpenAlex 'Munich Center for Machine Learning' vs ACL 'Ludwig-Maximilians-Universität München'
+affiliation_conflict_acl,oa:W4404782347#4,OpenAlex 'Mila - Quebec Artificial Intelligence Institute' vs ACL 'University of Montreal'
+affiliation_conflict_acl,oa:W4404782356#3,OpenAlex 'University of Southern California' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4404782357#4,OpenAlex 'Peking University' vs ACL 'Tencent'
+affiliation_conflict_acl,oa:W4404782365#3,OpenAlex 'City University of Hong Kong' vs ACL 'University of Science and Technology of China'
+affiliation_conflict_acl,oa:W4404782365#4,OpenAlex 'University of Science and Technology of China' vs ACL 'City University of Hong Kong'
+affiliation_conflict_acl,oa:W4404782365#5,OpenAlex 'Zhejiang University' vs ACL 'City University of Hong Kong'
+affiliation_conflict_acl,oa:W4404782365#6,OpenAlex 'Zhejiang University' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4404782400#6,"OpenAlex 'RIKEN' vs ACL 'Tohoku University, Tokyo Institute of Technology'"
+affiliation_conflict_acl,oa:W4404782410#2,OpenAlex 'The University of Texas at Austin' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4404782410#3,OpenAlex 'The University of Texas at Austin' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4404782410#5,OpenAlex 'Microsoft (United States)' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4404782410#6,OpenAlex 'The University of Texas at Austin' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4404782410#7,OpenAlex 'The University of Texas at Austin' vs ACL 'Microsoft and Johns Hopkins University'
+affiliation_conflict_acl,oa:W4404782432#4,OpenAlex 'University of Science and Technology of China' vs ACL 'Huawei Technologies Ltd.'
+affiliation_conflict_acl,oa:W4404782441#1,OpenAlex 'Hessian Center for Artificial Intelligence' vs ACL 'Technische Universität Darmstadt'
+affiliation_conflict_acl,oa:W4404782441#4,OpenAlex 'Hessian Center for Artificial Intelligence' vs ACL 'Technische Universität Darmstadt and IBM Research Ireland'
+affiliation_conflict_acl,oa:W4404782441#6,"OpenAlex 'Hessian Center for Artificial Intelligence' vs ACL 'Institute for Computer Science, Artificial Intelligence and Technology, Mohamed bin Zayed University of Artificial Intelligence and Technische Universität Darmstadt'"
+affiliation_conflict_acl,oa:W4404782459#2,OpenAlex 'Duke University' vs ACL 'ColAI'
+affiliation_conflict_acl,oa:W4404782474#4,"OpenAlex 'The Alan Turing Institute' vs ACL 'King’s College London, University of London'"
+affiliation_conflict_acl,oa:W4404782591#2,"OpenAlex 'LG AI Research (South Korea)' vs ACL 'Qualcomm Inc, QualComm'"
+affiliation_conflict_acl,oa:W4404782591#4,OpenAlex 'LG AI Research (South Korea)' vs ACL 'QualComm AI Research'
+affiliation_conflict_acl,oa:W4404782600#4,OpenAlex 'Central South University' vs ACL 'Harbin Institute of Technology'
+affiliation_conflict_acl,oa:W4404782611#1,OpenAlex 'The Hong Kong University of Science and Technology (Guangzhou)' vs ACL 'Harbin Institute of Technology'
+affiliation_conflict_acl,oa:W4404782611#2,OpenAlex 'Peng Cheng Laboratory' vs ACL 'Harbin Institute of Technology'
+affiliation_conflict_acl,oa:W4404782665#4,OpenAlex 'Tencent (China)' vs ACL 'WeChat'
+affiliation_conflict_acl,oa:W4404782708#1,"OpenAlex 'Karlsruhe Institute of Technology' vs ACL 'Karlsruher Institut für Technologie, Karlsruher Institut für Technologie and Karlsruher Institut für Technologie'"
+affiliation_conflict_acl,oa:W4404782708#2,OpenAlex 'Center for Scalable Data Analytics and Artificial Intelligence' vs ACL 'Technische Universität Dresden'
+affiliation_conflict_acl,oa:W4404782733#3,OpenAlex 'Joint NTU-UBC Research Centre of Excellence in Active Living for the Elderly' vs ACL 'National Technological University'
+affiliation_conflict_acl,oa:W4404782771#1,OpenAlex 'Institute for Infocomm Research' vs ACL 'I2R'
+affiliation_conflict_acl,oa:W4404782771#3,"OpenAlex 'Nanyang Technological University' vs ACL 'Institute of Infocomm Research, A*STAR'"
+author_name_mismatch,oa:W4404782789#6,source 'Feng Hu' vs OpenAlex 'Hufeng Hufeng' (A5114847679)
+affiliation_conflict_acl,oa:W4404782797#12,"OpenAlex 'University of California, Davis' vs ACL 'Virginia Tech'"
+affiliation_conflict_acl,oa:W4404782801#1,"OpenAlex 'Google (United States)' vs ACL 'Technion, Technion'"
+affiliation_conflict_acl,oa:W4404782801#2,"OpenAlex 'Technion – Israel Institute of Technology' vs ACL 'Research, Google'"
+affiliation_conflict_acl,oa:W4404782801#7,"OpenAlex 'Technion – Israel Institute of Technology' vs ACL 'Research, Google'"
+affiliation_conflict_acl,oa:W4404782855#5,OpenAlex 'University of Washington' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4404782855#5,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4404782855#6,"OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Department of Computer Science, University of Washington'"
+affiliation_conflict_acl,oa:W4404782855#7,OpenAlex 'University of Washington' vs ACL 'Korea Advanced Institute of Science and Technology'
+affiliation_conflict_acl,oa:W4404782855#7,OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Korea Advanced Institute of Science and Technology'
+affiliation_conflict_acl,oa:W4404782855#8,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4404782905#9,OpenAlex 'University of Waterloo' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4404782905#10,OpenAlex 'University of Toronto' vs ACL 'Microsoft and University of Waterloo'
+affiliation_conflict_acl,oa:W4404782927#3,OpenAlex 'IBM (United States)' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#4,OpenAlex 'IBM (United States)' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#5,OpenAlex 'IBM (United States)' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#6,OpenAlex 'Michigan State University' vs ACL 'Lawrence Livermore National Labs'
+affiliation_conflict_acl,oa:W4404782927#7,OpenAlex 'Michigan State University' vs ACL 'Lawrence Livermore National Laboratory'
+affiliation_conflict_acl,oa:W4404782927#8,OpenAlex 'Lawrence Livermore National Laboratory' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#8,OpenAlex 'IBM (United States)' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#8,OpenAlex 'MIT-IBM Computing Research Lab' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782927#8,OpenAlex 'Massachusetts Institute of Technology' vs ACL 'Michigan State University'
+affiliation_conflict_acl,oa:W4404782948#3,OpenAlex 'Fudan University' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4404782964#2,OpenAlex 'Peking University' vs ACL 'University of Hong Kong'
+affiliation_conflict_acl,oa:W4404782964#2,OpenAlex 'Carnegie Mellon University' vs ACL 'University of Hong Kong'
+author_duplicate_in_paper,oa:W4404782964#12,A5100440241 appears twice
+affiliation_conflict_acl,oa:W4404782983#1,"OpenAlex 'Université Paris 1 Panthéon-Sorbonne' vs ACL ', University Politehnica of Bucharest'"
+affiliation_conflict_acl,oa:W4404782983#3,OpenAlex 'Université Paris 1 Panthéon-Sorbonne' vs ACL 'National University of Science and Technology POLITEHNICA Bucharest'
+affiliation_conflict_acl,oa:W4404782984#3,OpenAlex 'University of Cambridge' vs ACL 'Cohere AI'
+affiliation_conflict_acl,oa:W4404782984#5,OpenAlex 'University of Cambridge' vs ACL 'Cohere for AI'
+affiliation_conflict_acl,oa:W4404782984#6,OpenAlex 'University of Cambridge' vs ACL 'Cohere For AI'
+affiliation_conflict_acl,oa:W4404782984#7,OpenAlex 'University of Cambridge' vs ACL 'Cohere For AI'
+affiliation_conflict_acl,oa:W4404782991#4,OpenAlex 'University of Zurich' vs ACL 'Universität Potsdam'
+affiliation_conflict_acl,oa:W4404782991#5,OpenAlex 'ETH Zurich' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4404783026#1,OpenAlex 'Khatam University' vs ACL 'Tehran Institute for Advanced Studies'
+affiliation_conflict_acl,oa:W4404783026#3,OpenAlex 'Cardiff University' vs ACL 'Tehran Institute for Advanced Studies'
+affiliation_conflict_acl,oa:W4404783028#1,OpenAlex 'Sun Yat-sen University' vs ACL 'Baidu'
+affiliation_conflict_acl,oa:W4404783028#1,OpenAlex 'Peking University' vs ACL 'Baidu'
+affiliation_conflict_acl,oa:W4404783064#1,OpenAlex 'Utrecht University' vs ACL 'Changsha University of Science and Technology'
+affiliation_conflict_acl,oa:W4404783093#9,OpenAlex 'Quan Cheng Laboratory' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4404783131#5,"OpenAlex 'Institute of Computing Technology' vs ACL ', Chinese Academy of Sciences'"
+affiliation_conflict_acl,oa:W4404783144#2,OpenAlex 'Chinese Academy of Sciences' vs ACL 'Tencent'
+affiliation_conflict_acl,oa:W4404783144#2,OpenAlex 'Institute of Computing Technology' vs ACL 'Tencent'
+affiliation_conflict_acl,oa:W4404783144#4,OpenAlex 'Chinese Academy of Sciences' vs ACL 'National University of Defense Technology and PengCheng Lab'
+affiliation_conflict_acl,oa:W4404783144#4,OpenAlex 'Institute of Computing Technology' vs ACL 'National University of Defense Technology and PengCheng Lab'
+affiliation_conflict_acl,oa:W4404783147#1,OpenAlex 'Johns Hopkins University' vs ACL 'Arizona State University'
+affiliation_conflict_acl,oa:W4404783147#4,OpenAlex 'Johns Hopkins University' vs ACL 'University of Notre Dame'
+affiliation_conflict_acl,oa:W4404783147#6,OpenAlex 'Johns Hopkins University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4404783284#3,OpenAlex 'Ludwig-Maximilians-Universität München' vs ACL 'Bielefeld University'
+affiliation_conflict_acl,oa:W4404783368#2,OpenAlex 'Northwestern University' vs ACL 'DeepSeek AI'
+affiliation_conflict_acl,oa:W4404783368#2,OpenAlex 'Northwestern University' vs ACL 'DeepSeek AI'
+affiliation_conflict_acl,oa:W4404783368#5,OpenAlex 'Northwestern University' vs ACL 'DeepSeek'
+affiliation_conflict_acl,oa:W4404783368#5,OpenAlex 'Northwestern University' vs ACL 'DeepSeek'
+affiliation_conflict_acl,oa:W4404783518#2,OpenAlex 'Nanyang Technological University' vs ACL 'Huawei Singapore'
+affiliation_conflict_acl,oa:W4404783577#1,OpenAlex 'Microsoft (United States)' vs ACL 'The Chinese University of Hong Kong'
+affiliation_conflict_acl,oa:W4404783577#3,OpenAlex 'Chinese University of Hong Kong' vs ACL 'Microsoft Research Asia'
+affiliation_conflict_acl,oa:W4404783577#5,OpenAlex 'Microsoft (United States)' vs ACL 'The Chinese University of Hong Kong'
+author_name_mismatch,oa:W4404783666#6,source 'Osmar Zaiane' vs OpenAlex 'Osmar R. Zai͏̈ane' (A5053745515)
+affiliation_conflict_acl,oa:W4404784221#6,"OpenAlex 'Argonne National Laboratory' vs ACL 'The Wharton School, University of Pennsylvania'"
+affiliation_conflict_acl,oa:W4404784221#7,"OpenAlex 'Argonne National Laboratory' vs ACL 'University of Pennsylvania, University of Pennsylvania, University of Pennsylvania and University of Pennsylvania'"
+affiliation_conflict_acl,oa:W4404784419#2,OpenAlex 'University of Cambridge' vs ACL 'Google DeepMind'
+author_duplicate_in_paper,oa:W4404792926#4,A5051219382 appears twice
+affiliation_conflict_acl,oa:W4404792982#4,"OpenAlex 'Eastern Institute of Technology, Ningbo' vs ACL 'Amazon'"
+authorship_count_mismatch,oa:W4407749357,source 7 authors vs OpenAlex 6
+affiliation_conflict_acl,oa:W4412886639#5,"OpenAlex 'Huawei Technologies (China)' vs ACL 'WeChat AI, Tencent'"
+affiliation_conflict_acl,oa:W4412886664#2,OpenAlex 'Westlake University' vs ACL 'Hangzhou Institute of Medicine Chinese Academy of Science'
+author_name_mismatch,oa:W4412886664#3,source 'Hanqing Wu' vs OpenAlex 'Ziyi Huang' (A5103184354)
+author_name_mismatch,oa:W4412886664#4,source 'Ziyi Huang' vs OpenAlex 'Yulong Wu' (A5101204861)
+author_name_mismatch,oa:W4412886664#6,source 'Dongbai Chen' vs OpenAlex 'DongbaiChen DongbaiChen' (A5119180881)
+affiliation_conflict_acl,oa:W4412886665#4,"OpenAlex 'Tencent (China)' vs ACL 'Chinese University of Hong Kong, The Chinese University of Hong Kong'"
+affiliation_conflict_acl,oa:W4412886713#3,OpenAlex 'University of Cambridge' vs ACL 'University of Sheffield'
+affiliation_conflict_acl,oa:W4412886713#4,OpenAlex 'University of Sheffield' vs ACL 'University of Cambridge'
+affiliation_conflict_acl,oa:W4412886763#5,OpenAlex 'Shenzhen Research Institute of Big Data' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4412886800#3,OpenAlex 'Stevens Institute of Technology' vs ACL 'Accenture'
+author_name_mismatch,oa:W4412886801#6,source 'Gangyang Li' vs OpenAlex 'LiGangyang LiGangyang' (A5119180895)
+affiliation_conflict_acl,oa:W4412886815#5,OpenAlex 'New York University' vs ACL 'World Bank'
+affiliation_conflict_acl,oa:W4412886852#4,OpenAlex 'Nanjing University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4412886852#5,OpenAlex 'Nanjing University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4412886852#6,OpenAlex 'Nanjing University' vs ACL 'ByteDance Inc.'
+affiliation_conflict_acl,oa:W4412886865#1,OpenAlex 'Amazon (United States)' vs ACL 'The Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4412886865#4,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412886865#5,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412886865#6,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412886865#9,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412886865#10,OpenAlex 'Hong Kong University of Science and Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412886865#12,OpenAlex 'Amazon (United States)' vs ACL 'The Hong Kong University of Science and Technology'
+affiliation_conflict_acl,oa:W4412889601#3,OpenAlex 'Duke University' vs ACL 'Welocalize'
+affiliation_conflict_acl,oa:W4412889601#5,OpenAlex 'Duke University' vs ACL 'Welocalize'
+affiliation_conflict_acl,oa:W4412889601#6,OpenAlex 'Duke University' vs ACL 'Aristotle University of Thessaloniki'
+affiliation_conflict_acl,oa:W4412889601#7,OpenAlex 'Duke University' vs ACL 'Welocalize'
+author_duplicate_in_paper,oa:W4412889603#7,A5100375722 appears twice
+affiliation_conflict_acl,oa:W4412889608#3,OpenAlex 'The Hong Kong University of Science and Technology (Guangzhou)' vs ACL 'Nanyang Technological University'
+affiliation_conflict_acl,oa:W4412889608#4,OpenAlex 'Institute of High Performance Computing' vs ACL 'A*STAR'
+affiliation_conflict_acl,oa:W4412889619#1,OpenAlex 'The Hong Kong University of Science and Technology (Guangzhou)' vs ACL 'Electronics and Telecommunications Research Institute'
+affiliation_conflict_acl,oa:W4412889658#6,"OpenAlex 'Peng Cheng Laboratory' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4412889658#9,OpenAlex 'Peng Cheng Laboratory' vs ACL 'Pengcheng Laboratory'
+affiliation_conflict_acl,oa:W4412889701#1,OpenAlex 'Pennsylvania State University' vs ACL 'Department of Computer Science'
+affiliation_conflict_acl,oa:W4412889701#1,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Department of Computer Science'
+affiliation_conflict_acl,oa:W4412889701#3,OpenAlex 'Pennsylvania State University' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412889701#3,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4412889701#4,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Pennsylvania State University'
+affiliation_conflict_acl,oa:W4412889756#1,"OpenAlex 'Peng Cheng Laboratory' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4412889756#7,OpenAlex 'Peng Cheng Laboratory' vs ACL 'Pengcheng Laboratory'
+affiliation_conflict_acl,oa:W4412889804#3,OpenAlex 'Hong Kong Polytechnic University' vs ACL 'Huawei Technologies Ltd.'
+affiliation_conflict_acl,oa:W4412889813#1,OpenAlex 'ETH Zurich' vs ACL 'University of Cambridge'
+affiliation_conflict_acl,oa:W4412889813#2,OpenAlex 'University of Cambridge' vs ACL 'ETHZ - ETH Zurich'
+affiliation_conflict_acl,oa:W4412889813#3,OpenAlex 'University of Cambridge' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4412889813#3,OpenAlex 'ETH Zurich' vs ACL 'Swiss Federal Institute of Technology'
+affiliation_conflict_acl,oa:W4412889813#4,OpenAlex 'ETH Zurich' vs ACL 'University of Cambridge'
+affiliation_conflict_acl,oa:W4412889813#5,"OpenAlex 'University of Cambridge' vs ACL 'Department of Computer Science, ETHZ - ETH Zurich'"
+affiliation_conflict_acl,oa:W4412889826#4,OpenAlex 'The Alan Turing Institute' vs ACL 'Queen Mary University London'
+affiliation_conflict_acl,oa:W4412889893#3,OpenAlex 'Harbin Institute of Technology' vs ACL 'Central South University'
+affiliation_conflict_acl,oa:W4412889893#3,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Central South University'
+affiliation_conflict_acl,oa:W4412889893#6,OpenAlex 'Harbin Institute of Technology' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4412889893#9,OpenAlex 'Central South University' vs ACL 'The Chinese University of Hong Kong'
+affiliation_conflict_acl,oa:W4412889913#8,OpenAlex 'Mila - Quebec Artificial Intelligence Institute' vs ACL 'University of Montreal'
+author_name_mismatch,oa:W4412944736#6,source 'Hao Wang' vs OpenAlex 'Huaiyu.wh Huaiyu.wh' (A5119204333)
+affiliation_conflict_acl,oa:W4412944781#2,OpenAlex 'The University of Melbourne' vs ACL 'Macquarie University'
+affiliation_conflict_acl,oa:W4412944784#3,OpenAlex 'Institució Catalana de Recerca i Estudis Avançats' vs ACL 'Universitat Pompeu Fabra'
+affiliation_conflict_acl,oa:W4412944799#1,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4412944799#2,OpenAlex 'Zhejiang University' vs ACL 'Westlake University'
+affiliation_conflict_acl,oa:W4412944799#3,OpenAlex 'Zhejiang University' vs ACL 'westlake university'
+affiliation_conflict_acl,oa:W4412944809#6,"OpenAlex 'University of Chicago' vs ACL 'Indian Institute of Technology, Bombay'"
+affiliation_conflict_acl,oa:W4412944827#5,OpenAlex 'Université de Montréal' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4412944827#10,OpenAlex 'Microsoft (United States)' vs ACL 'Nuance Communications'
+affiliation_conflict_acl,oa:W4412944830#4,"OpenAlex 'Amazon (United States)' vs ACL 'University of Minnesota, Minneapolis'"
+affiliation_conflict_acl,oa:W4412944832#1,OpenAlex 'Pelita Harapan University' vs ACL 'Cohere'
+affiliation_conflict_acl,oa:W4412944832#2,OpenAlex 'Islamic University of Indonesia' vs ACL 'SEACrowd'
+affiliation_conflict_acl,oa:W4412944832#8,OpenAlex 'University of Toronto' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4412944832#13,OpenAlex 'Islamic University of Indonesia' vs ACL 'Oracle'
+affiliation_conflict_acl,oa:W4412944832#17,OpenAlex 'Islamic University of Indonesia' vs ACL 'Capital One'
+affiliation_conflict_acl,oa:W4412944832#23,OpenAlex 'University of Manchester' vs ACL 'Meta'
+affiliation_conflict_acl,oa:W4412944832#33,OpenAlex 'Pelita Harapan University' vs ACL 'Tianjin University'
+affiliation_conflict_acl,oa:W4412944832#65,OpenAlex 'Islamic University of Indonesia' vs ACL 'Mohamed bin Zayed University of Artificial Intelligence'
+affiliation_conflict_acl,oa:W4412944832#74,OpenAlex 'Islamic University of Indonesia' vs ACL 'Dataxet:Sonar'
+affiliation_conflict_acl,oa:W4412944832#83,OpenAlex 'Islamic University of Indonesia' vs ACL 'Mohamed bin Zayed University of Artificial Intelligence'
+affiliation_conflict_acl,oa:W4412944832#84,OpenAlex 'Islamic University of Indonesia' vs ACL 'Universitas Brawijaya'
+affiliation_conflict_acl,oa:W4412944832#85,OpenAlex 'University of Manchester' vs ACL 'Mohamed bin Zayed University of Artificial Intelligence'
+affiliation_conflict_acl,oa:W4412944832#87,OpenAlex 'Islamic University of Indonesia' vs ACL 'Pelita Harapan University'
+affiliation_conflict_acl,oa:W4412944832#92,OpenAlex 'Chulalongkorn University' vs ACL 'AI Singapore'
+affiliation_conflict_acl,oa:W4412944852#11,OpenAlex 'Shanghai Qi Zhi Institute' vs ACL 'National University of Singapore'
+affiliation_conflict_acl,oa:W4412944876#3,"OpenAlex 'Chinese University of Hong Kong' vs ACL 'Wan, Alibaba Group and Tsinghua Shenzhen International Graduate School, Tsinghua University'"
+affiliation_conflict_acl,oa:W4412944967#3,OpenAlex 'Minzu University of China' vs ACL 'Key Laboratory of Ethnic Language Intelligence'
+affiliation_conflict_acl,oa:W4412944997#4,"OpenAlex 'Max Planck Institute for Intelligent Systems' vs ACL 'Department of Computer Science, University of Toronto'"
+author_name_mismatch,oa:W4412945012#6,source 'Bin Chen' vs OpenAlex 'Chenbin Chenbin' (A5119181359)
+affiliation_conflict_acl,oa:W4412945021#2,OpenAlex 'Shanghai Innovation Institute' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4412945021#8,OpenAlex 'Shanghai Innovation Institute' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4412945071#2,OpenAlex 'University of Manchester' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4412945071#3,OpenAlex 'University of Manchester' vs ACL 'Microsoft Research Asia'
+affiliation_conflict_acl,oa:W4412945071#7,OpenAlex 'University of Manchester' vs ACL 'Microsoft Research'
+affiliation_conflict_acl,oa:W4412945079#2,OpenAlex 'Canadian Institute for Advanced Research' vs ACL 'University of Waterloo and Vector Institute'
+affiliation_conflict_acl,oa:W4412945101#1,OpenAlex 'Institute for Computational Linguistics “A. Zampolli”' vs ACL 'University of Pisa'
+affiliation_conflict_acl,oa:W4412945101#2,OpenAlex 'University of Pisa' vs ACL 'Consiglio Nazionale delle Ricerche'
+affiliation_conflict_acl,oa:W4412945101#2,OpenAlex 'Institute for Computational Linguistics “A. Zampolli”' vs ACL 'Consiglio Nazionale delle Ricerche'
+affiliation_conflict_acl,oa:W4412945101#3,"OpenAlex 'Institute for Computational Linguistics “A. Zampolli”' vs ACL 'istituto di linguistica computazionale “A. Zampolli”, ILC-CNR, Pisa'"
+affiliation_conflict_acl,oa:W4412945221#2,OpenAlex 'Ant Group (China)' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4412945243#5,OpenAlex 'Purple Mountain Laboratories' vs ACL 'Southeast University'
+affiliation_conflict_acl,oa:W4412945280#2,OpenAlex 'Ant Group (China)' vs ACL 'Alibaba Group'
+affiliation_conflict_acl,oa:W4412945287#1,OpenAlex 'Northeastern University' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4412945287#1,OpenAlex 'Westlake University' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4412945287#1,OpenAlex 'Zhejiang University' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4412945287#1,OpenAlex 'Northeastern University' vs ACL 'Shanghai Artificial Intelligence Laboratory'
+affiliation_conflict_acl,oa:W4412945287#7,OpenAlex 'Westlake University' vs ACL 'Northeastern University'
+affiliation_conflict_acl,oa:W4412945287#7,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Northeastern University'
+affiliation_conflict_acl,oa:W4412945287#7,OpenAlex 'Zhejiang University' vs ACL 'Northeastern University'
+affiliation_conflict_acl,oa:W4412945328#3,OpenAlex 'Korea Advanced Institute of Science and Technology' vs ACL 'haerae.com and OnelineAI'
+affiliation_conflict_acl,oa:W4412945328#3,OpenAlex 'Yonsei University' vs ACL 'haerae.com and OnelineAI'
+affiliation_conflict_acl,oa:W4412945401#5,OpenAlex 'Beihang University' vs ACL 'Beijing University of Aeronautics and Astronautics'
+affiliation_conflict_acl,oa:W4412945438#1,"OpenAlex 'University of Maryland, College Park' vs ACL 'Amazon'"
+affiliation_conflict_acl,oa:W4412945447#3,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Tongji University'
+affiliation_conflict_acl,oa:W4412945472#2,"OpenAlex 'Munich Center for Machine Learning' vs ACL 'Center for Information and Language Processing, LMU Munich'"
+affiliation_conflict_acl,oa:W4412945526#3,OpenAlex 'Vector Institute' vs ACL 'University of Waterloo'
+affiliation_conflict_acl,oa:W4412945526#6,OpenAlex 'Vector Institute' vs ACL 'University of Waterloo'
+affiliation_conflict_acl,oa:W4412945551#5,OpenAlex 'Chinese Academy of Sciences' vs ACL 'Skywork AI'
+affiliation_conflict_acl,oa:W4412945551#5,OpenAlex 'Institute of Computing Technology' vs ACL 'Skywork AI'
+affiliation_conflict_acl,oa:W4412945551#5,OpenAlex 'University of Chinese Academy of Sciences' vs ACL 'Skywork AI'
+affiliation_conflict_acl,oa:W4412945559#7,OpenAlex 'Alibaba Group (China)' vs ACL 'Mohamed bin Zayed University of Artificial Intelligence'
+affiliation_conflict_acl,oa:W4412945629#2,"OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Department of Computer Science, University of Washington'"
+affiliation_conflict_acl,oa:W4412945629#3,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence and Department of Computer Science'
+affiliation_conflict_acl,oa:W4412945629#4,"OpenAlex 'Allen Institute for Artificial Intelligence' vs ACL 'Ohio State University, Columbus'"
+affiliation_conflict_acl,oa:W4412945629#5,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence and Department of Computer Science'
+affiliation_conflict_acl,oa:W4412945629#6,OpenAlex 'University of Washington' vs ACL 'Allen Institute for Artificial Intelligence'
+affiliation_conflict_acl,oa:W4412945661#8,OpenAlex 'Amazon (United States)' vs ACL 'Texas A&M University - College Station'
+affiliation_conflict_acl,oa:W4412945692#2,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#3,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#4,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#5,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#6,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#7,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#9,OpenAlex 'University of California San Diego' vs ACL 'Advanced Micro Devices'
+affiliation_conflict_acl,oa:W4412945692#10,OpenAlex 'University of California San Diego' vs ACL 'AMD'
+affiliation_conflict_acl,oa:W4416035222#2,OpenAlex 'Ministry of Education of the People's Republic of China' vs ACL 'Jilin University'
+affiliation_conflict_acl,oa:W4416035316#1,OpenAlex 'University of Zurich' vs ACL 'University of Amsterdam'
+affiliation_conflict_acl,oa:W4416035316#3,"OpenAlex 'University of Zurich' vs ACL 'University College London, University of London'"
+affiliation_conflict_acl,oa:W4416035316#3,"OpenAlex 'University of Amsterdam' vs ACL 'University College London, University of London'"
+affiliation_conflict_acl,oa:W4416035435#1,OpenAlex 'Politecnico di Milano' vs ACL 'Polytechnic Institute of Milan'
+affiliation_conflict_acl,oa:W4416035509#4,OpenAlex 'Snowflake Inc. (United States)' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4416035574#1,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Department of Computer Science'
+affiliation_conflict_acl,oa:W4416035606#6,OpenAlex 'Shanghai Artificial Intelligence Laboratory' vs ACL 'Zhejiang University'
+author_name_mismatch,oa:W4416035607#1,source 'Aloka Fernando' vs OpenAlex 'Surangika Ranathunga' (A5002889503)
+author_name_mismatch,oa:W4416035607#2,source 'Nisansa de Silva' vs OpenAlex 'Aloka Fernando' (A5078381087)
+author_name_mismatch,oa:W4416035607#5,source 'Surangika Ranathunga' vs OpenAlex 'Nisansa de Silva' (A5060065532)
+affiliation_conflict_acl,oa:W4416035636#1,OpenAlex 'Technology Innovation Institute' vs ACL 'University of Roma “La Sapienza”'
+affiliation_conflict_acl,oa:W4416035690#2,OpenAlex 'Institute of Computing Technology' vs ACL 'Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4416035701#3,OpenAlex 'Sapienza University of Rome' vs ACL 'Polytechnic Institute of Bari'
+affiliation_conflict_acl,oa:W4416035714#1,OpenAlex 'National Technical University of Athens' vs ACL 'Fraunhofer IKS'
+affiliation_conflict_acl,oa:W4416035714#5,OpenAlex 'Carl von Ossietzky Universität Oldenburg' vs ACL 'Chalmers University of Technology'
+affiliation_conflict_acl,oa:W4416035807#2,OpenAlex 'Boston University' vs ACL 'Google DeepMind'
+affiliation_conflict_acl,oa:W4416036106#2,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4416036106#2,OpenAlex 'Peking University' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4416036106#5,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4416036106#5,OpenAlex 'Peking University' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4416036106#6,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4416036106#6,OpenAlex 'Tsinghua University' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4416036106#7,OpenAlex 'Peking University' vs ACL 'University of Illinois at Urbana-Champaign'
+affiliation_conflict_acl,oa:W4416036106#7,OpenAlex 'Tsinghua University' vs ACL 'University of Illinois at Urbana-Champaign'
+affiliation_conflict_acl,oa:W4416036169#4,OpenAlex 'University of California San Diego' vs ACL 'Adobe Research'
+affiliation_conflict_acl,oa:W4416036283#4,OpenAlex 'National University of Singapore' vs ACL 'Sichuan University'
+affiliation_conflict_acl,oa:W4416036335#2,OpenAlex 'ByteDance (China)' vs ACL 'Fudan University'
+affiliation_conflict_acl,oa:W4416036350#3,"OpenAlex 'University of Maryland, College Park' vs ACL 'Meta'"
+affiliation_conflict_acl,oa:W4416036351#2,"OpenAlex 'Ecole supérieure en science et technologies de l'informatique et du numérique' vs ACL 'ESTIN, Higher School of Computer Science and Technology, Amizour, Bejaia.'"
+affiliation_conflict_acl,oa:W4416036351#4,OpenAlex 'Insight SFI Research Centre for Data Analytics' vs ACL 'Dublin City University'
+affiliation_conflict_acl,oa:W4416036484#4,OpenAlex 'Apple (United States)' vs ACL 'Didi Research US'
+affiliation_conflict_acl,oa:W4416036524#3,OpenAlex 'Institute of Automation' vs ACL 'University of the Chinese Academy of Sciences'
+author_duplicate_in_paper,oa:W4416036528#6,A5114860145 appears twice
+affiliation_conflict_acl,oa:W4416036528#7,OpenAlex 'Shanghai Innovation Institute' vs ACL 'East China Normal University'
+affiliation_conflict_acl,oa:W4416036544#4,"OpenAlex 'University of Maryland, College Park' vs ACL 'Microsoft'"
+affiliation_conflict_acl,oa:W4416036553#3,OpenAlex 'Peking University' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4416036553#6,OpenAlex 'Peking University' vs ACL 'Microsoft'
+affiliation_conflict_acl,oa:W4416036563#4,OpenAlex 'University of Illinois Urbana-Champaign' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036563#5,OpenAlex 'University of Pennsylvania' vs ACL 'Google DeepMind'
+affiliation_conflict_acl,oa:W4416036569#5,"OpenAlex 'Peking University' vs ACL 'Tsinghua University, Tsinghua University'"
+affiliation_conflict_acl,oa:W4416036569#9,OpenAlex 'Tsinghua University' vs ACL 'Peking University'
+affiliation_conflict_acl,oa:W4416036569#10,OpenAlex 'Peking University' vs ACL 'Tsinghua University'
+affiliation_conflict_acl,oa:W4416036599#5,OpenAlex 'Georgia Institute of Technology' vs ACL 'Oakland University'
+affiliation_conflict_acl,oa:W4416036625#2,"OpenAlex 'University of Oxford' vs ACL 'Research, Google'"
+affiliation_conflict_acl,oa:W4416036625#3,OpenAlex 'University of Oxford' vs ACL 'Meta'
+affiliation_conflict_acl,oa:W4416036625#4,OpenAlex 'University of Oxford' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4416036625#5,OpenAlex 'University of Oxford' vs ACL 'Google DeepMind'
+affiliation_conflict_acl,oa:W4416036697#2,OpenAlex 'École Polytechnique Fédérale de Lausanne' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036697#2,OpenAlex 'Idiap Research Institute' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036697#3,OpenAlex 'École Polytechnique Fédérale de Lausanne' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036697#3,OpenAlex 'Idiap Research Institute' vs ACL 'Amazon'
+author_name_mismatch,oa:W4416036697#4,source 'James Henderson' vs OpenAlex 'Bill Byrne' (A5070594684)
+author_name_mismatch,oa:W4416036697#5,source 'Bill Byrne' vs OpenAlex 'James Henderson' (A5084321238)
+affiliation_conflict_acl,oa:W4416036697#6,OpenAlex 'École Polytechnique Fédérale de Lausanne' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036697#6,OpenAlex 'Idiap Research Institute' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036708#6,OpenAlex 'SRI International' vs ACL 'DARPA'
+affiliation_conflict_acl,oa:W4416036708#6,OpenAlex 'SRI' vs ACL 'DARPA'
+affiliation_conflict_acl,oa:W4416036718#4,"OpenAlex 'University of Maryland, College Park' vs ACL 'Fudan University'"
+affiliation_conflict_acl,oa:W4416036718#6,"OpenAlex 'University of Maryland, College Park' vs ACL 'Fudan University'"
+affiliation_conflict_acl,oa:W4416036736#8,OpenAlex 'Commonwealth Scientific and Industrial Research Organisation' vs ACL 'University of New South Wales and CSIRO’s Data61'
+affiliation_conflict_acl,oa:W4416036736#8,OpenAlex 'UNSW Sydney' vs ACL 'University of New South Wales and CSIRO’s Data61'
+affiliation_conflict_acl,oa:W4416036789#1,OpenAlex 'Technion – Israel Institute of Technology' vs ACL 'University of Zagreb'
+affiliation_conflict_acl,oa:W4416036796#2,OpenAlex 'Tuwaiq Academy' vs ACL 'University Mohammed VI Polytechnic'
+affiliation_conflict_acl,oa:W4416036796#4,OpenAlex 'University of British Columbia' vs ACL 'University of Waterloo'
+affiliation_conflict_acl,oa:W4416036820#5,OpenAlex 'Michigan State University' vs ACL 'International Business Machines'
+affiliation_conflict_acl,oa:W4416036820#6,OpenAlex 'Michigan State University' vs ACL 'International Business Machines'
+affiliation_conflict_acl,oa:W4416036820#7,"OpenAlex 'Michigan State University' vs ACL 'University of Pittsburgh and IBM, International Business Machines'"
+affiliation_conflict_acl,oa:W4416036964#1,OpenAlex 'Georgia Institute of Technology' vs ACL 'University of Virginia'
+affiliation_conflict_acl,oa:W4416036964#2,OpenAlex 'University of Virginia' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036964#3,OpenAlex 'University of Virginia' vs ACL 'Databricks'
+affiliation_conflict_acl,oa:W4416036964#4,OpenAlex 'University of Virginia' vs ACL 'Meta and University of Illinois at Chicago'
+affiliation_conflict_acl,oa:W4416036964#7,"OpenAlex 'University of Virginia' vs ACL 'Department of Computer Science and Engineering, The Hong Kong University of Science and Technology'"
+affiliation_conflict_acl,oa:W4416036964#8,OpenAlex 'University of Virginia' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036964#9,OpenAlex 'University of Virginia' vs ACL 'Georgia Institute of Technology'
+affiliation_conflict_acl,oa:W4416036964#11,OpenAlex 'University of Virginia' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416036964#12,OpenAlex 'Georgia Institute of Technology' vs ACL 'Amazon'
+affiliation_conflict_acl,oa:W4416037012#7,OpenAlex 'Institute of Information Engineering' vs ACL 'University of the Chinese Academy of Sciences'
+affiliation_conflict_acl,oa:W4416037012#8,OpenAlex 'Xiaomi (China)' vs ACL 'The University of Warwick'
+affiliation_conflict_acl,oa:W4416037066#1,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'SalesForce.com'
+affiliation_conflict_acl,oa:W4416037066#1,OpenAlex 'The University of Texas at Austin' vs ACL 'SalesForce.com'
+affiliation_conflict_acl,oa:W4416037066#2,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'Amazon and University of Texas at Austin'
+affiliation_conflict_acl,oa:W4416037066#4,OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'University of Texas at Austin'
+affiliation_conflict_acl,oa:W4416037066#6,OpenAlex 'Drexel University' vs ACL 'City University of Hong Kong'
+affiliation_conflict_acl,oa:W4416037066#7,"OpenAlex 'University of North Carolina at Chapel Hill' vs ACL 'University of Texas, Austin'"
+affiliation_conflict_acl,oa:W4416037097#1,OpenAlex 'Munich Center for Machine Learning' vs ACL 'Ludwig-Maximilians-Universität München'
+affiliation_conflict_acl,oa:W4416037097#3,"OpenAlex 'Munich Center for Machine Learning' vs ACL 'University of Munich, Ludwig-Maximilians-Universität München'"
+affiliation_conflict_acl,oa:W4416037097#4,OpenAlex 'Munich Center for Machine Learning' vs ACL 'Ludwig-Maximilians-Universität München'
+affiliation_conflict_acl,oa:W4416037097#8,"OpenAlex 'Centre National de la Recherche Scientifique' vs ACL 'ISIR, Sorbonne Université & CNRS'"
+affiliation_conflict_acl,oa:W4416037097#8,"OpenAlex 'Institut Systèmes Intelligents et de Robotique' vs ACL 'ISIR, Sorbonne Université & CNRS'"
+affiliation_conflict_acl,oa:W4416037104#3,OpenAlex 'Georgia Institute of Technology' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4416037104#3,OpenAlex 'Stanford University' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4416037104#4,OpenAlex 'Georgia Institute of Technology' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4416037104#5,OpenAlex 'Georgia Institute of Technology' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4416037104#6,OpenAlex 'Georgia Institute of Technology' vs ACL 'Stanford University'
+affiliation_conflict_acl,oa:W4416037126#4,OpenAlex 'University of California San Diego' vs ACL 'Meta AI'
+affiliation_conflict_acl,oa:W4416037126#5,OpenAlex 'University of California San Diego' vs ACL 'Northwestern University'
+affiliation_conflict_acl,oa:W4416037126#5,OpenAlex 'University of Rochester' vs ACL 'Northwestern University'
+affiliation_conflict_acl,oa:W4416037126#6,OpenAlex 'University of California San Diego' vs ACL 'Google'
+affiliation_conflict_acl,oa:W4416037126#10,OpenAlex 'University of California San Diego' vs ACL 'University of Rochester'
+affiliation_conflict_acl,oa:W4416037126#11,"OpenAlex 'University of Rochester' vs ACL 'University of California, San Diego, University of California, San Diego'"
+affiliation_conflict_acl,oa:W4416037142#3,OpenAlex 'Institute of High Performance Computing' vs ACL 'A*STAR Centre for Frontier AI Research'
+affiliation_conflict_acl,oa:W4416037267#1,OpenAlex 'Hessian Center for Artificial Intelligence' vs ACL 'TU Darmstadt'
+affiliation_conflict_acl,oa:W4416037267#3,"OpenAlex 'Hessian Center for Artificial Intelligence' vs ACL 'Institute for Computer Science, Artificial Intelligence and Technology, Mohamed bin Zayed University of Artificial Intelligence and Technische Universität Darmstadt'"
+authorship_count_mismatch,oa:W4416686892,source 8 authors vs OpenAlex 7
+author_name_mismatch,oa:W7125966513#1,source 'Haneen Al-Homoud' vs OpenAlex 'Haneen Alhomoud' (A5107377571)
+author_name_mismatch,oa:W7125966513#3,source 'Murtadha Al-Jubran' vs OpenAlex 'Murtadha Aljubran' (A5021555600)

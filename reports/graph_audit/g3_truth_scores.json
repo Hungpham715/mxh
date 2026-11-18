@@ -1,0 +1,153 @@
+{
+  "scored_at_utc": "2026-11-18T08:12:54.337429+00:00",
+  "sheet_sha256": "cf1e7017e00891e166c0cc1c2f398d60482322f66c1f5e7cc2c3db1eac9678b7",
+  "unverifiable_treatment": "counted as NOT correct (conservative)",
+  "reviewers": {},
+  "rows_rejected_automated_reviewer": 0,
+  "per_type": {
+    "FIRST_AUTHOR_OF": {
+      "population": 1091,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "OTHER_AUTHOR_OF": {
+      "population": 5007,
+      "sampled": 81,
+      "labelled": 0,
+      "unlabelled": 81,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "COAUTHORED_WITH": {
+      "population": 16754,
+      "sampled": 270,
+      "labelled": 0,
+      "unlabelled": 270,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "AFFILIATED_WITH": {
+      "population": 4306,
+      "sampled": 70,
+      "labelled": 0,
+      "unlabelled": 70,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "APPEARS_IN": {
+      "population": 1091,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "HAS_TOPIC": {
+      "population": 451,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "CITES": {
+      "population": 26,
+      "sampled": 26,
+      "labelled": 0,
+      "unlabelled": 26,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "ORG_COAUTHORED_WITH": {
+      "population": 2001,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "RESEARCHES": {
+      "population": 105,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    },
+    "ACTIVE_IN": {
+      "population": 139,
+      "sampled": 40,
+      "labelled": 0,
+      "unlabelled": 40,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "conservative_precision": null,
+      "wilson_95": [
+        null,
+        null
+      ]
+    }
+  },
+  "overall_weighted_estimate": null,
+  "overall_ci95": null,
+  "threshold": 0.9,
+  "verdict": "BLOCKED_NO_INDEPENDENT_LABELS"
+}

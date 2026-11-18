@@ -1,0 +1,149 @@
+{
+  "created_at_utc": "2026-11-18T07:33:39.548967+00:00",
+  "generator": "datasets.build_large",
+  "seed": 20261118,
+  "per_action": 1300,
+  "graph_source": "local_snapshot (offline/data/processed + derived), NOT live Aura",
+  "snapshot_manifest_sha256": "c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1",
+  "counts": {
+    "candidates": 10619,
+    "duplicates_removed": 388,
+    "silver_validated": 10619,
+    "rejected": 0,
+    "human_gold": 0
+  },
+  "review_status_meaning": {
+    "silver_validated": "expected answer re-derived by an independent raw-table oracle; NOT human reviewed"
+  },
+  "per_intent": {
+    "author_papers": 2124,
+    "coauthors": 1289,
+    "author_affiliations": 1283,
+    "coauthor_affiliations": 1270,
+    "shared_papers": 1300,
+    "author_path": 285,
+    "paper_authors": 1216,
+    "paper_venue": 1228,
+    "paper_citations": 42,
+    "topic_papers": 30,
+    "org_collaborations": 531,
+    "network_top": 3,
+    "unknown": 18
+  },
+  "per_status": {
+    "ambiguous": 1005,
+    "answered": 9024,
+    "partial": 103,
+    "not_found": 463,
+    "out_of_scope": 18,
+    "clarify": 6
+  },
+  "per_language": {
+    "en": 3935,
+    "vi": 6684
+  },
+  "per_template": {
+    "author_papers:t2": 443,
+    "author_papers:t0": 413,
+    "author_papers:t1": 433,
+    "coauthors:t1": 412,
+    "coauthors:t0": 457,
+    "coauthors:t2": 419,
+    "author_affiliations:t0": 643,
+    "author_affiliations:t1": 639,
+    "coauthor_affiliations:t0": 1270,
+    "author_papers:year": 433,
+    "shared_papers:t1": 656,
+    "shared_papers:t0": 644,
+    "author_path:t1": 149,
+    "author_path:t0": 136,
+    "paper_authors:t1": 547,
+    "paper_authors:t0": 544,
+    "paper_authors:lowercase_title": 124,
+    "paper_venue:t1": 552,
+    "paper_venue:t0": 539,
+    "paper_venue:lowercase_title": 136,
+    "paper_citations:t0": 42,
+    "topic_papers:base": 12,
+    "topic_papers:year": 18,
+    "org_collaborations:t0": 287,
+    "org_collaborations:t1": 244,
+    "network_top:base": 3,
+    "negative:absent_author": 400,
+    "out_of_scope": 18,
+    "clarify:pronoun_no_history": 6
+  },
+  "per_split": {
+    "train": 7887,
+    "val": 1392,
+    "test": 1340
+  },
+  "per_split_intent": {
+    "train": {
+      "author_papers": 1487,
+      "coauthors": 905,
+      "author_affiliations": 920,
+      "coauthor_affiliations": 913,
+      "shared_papers": 1195,
+      "author_path": 258,
+      "paper_authors": 877,
+      "paper_venue": 885,
+      "paper_citations": 34,
+      "topic_papers": 25,
+      "org_collaborations": 373,
+      "network_top": 2,
+      "unknown": 13
+    },
+    "val": {
+      "author_papers": 322,
+      "coauthors": 197,
+      "author_affiliations": 185,
+      "coauthor_affiliations": 182,
+      "shared_papers": 46,
+      "author_path": 15,
+      "paper_authors": 176,
+      "paper_venue": 179,
+      "paper_citations": 4,
+      "org_collaborations": 85,
+      "unknown": 1
+    },
+    "test": {
+      "author_papers": 315,
+      "coauthors": 187,
+      "author_affiliations": 178,
+      "coauthor_affiliations": 175,
+      "shared_papers": 59,
+      "author_path": 12,
+      "paper_authors": 163,
+      "paper_venue": 164,
+      "paper_citations": 4,
+      "topic_papers": 5,
+      "org_collaborations": 73,
+      "network_top": 1,
+      "unknown": 4
+    }
+  },
+  "rejection_reasons": {},
+  "leakage": {
+    "anchor_entities_in_multiple_splits": 0,
+    "questions_in_multiple_splits": 0,
+    "verdict": "PASS"
+  },
+  "files": {
+    "train": {
+      "path": "data/splits/train.jsonl",
+      "count": 7887,
+      "sha256": "1eb6d29dd27520155cfa812d1248857b579568e52e6327678a456ca69bb08b87"
+    },
+    "val": {
+      "path": "data/splits/val.jsonl",
+      "count": 1392,
+      "sha256": "2cfefb878d0d462b11e7742e3381184043bb60cfb952e7efadd80b8cf56ab0ba"
+    },
+    "test": {
+      "path": "data/splits/test.jsonl",
+      "count": 1340,
+      "sha256": "41178381d9b1c79e927b130314b648364d58b88f7c9611eebfdda0675830be40"
+    }
+  }
+}

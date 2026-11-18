@@ -33,7 +33,9 @@ SORT_KEYS = {
 def export(entities: dict[str, list[dict[str, Any]]], clf: TopicClassifier, input_counts: dict[str, Any],
            source_versions: dict[str, Any], extra_stats: dict[str, Any], out_dir: Path = PROCESSED) -> dict[str, Any]:
     topic_rows, audit = label_topics(entities["papers"], clf)
-    write_jsonl(REJECTED.parent / "derived" / "topic_audit.jsonl", audit)
+    # Only the canonical snapshot may refresh the shared topic audit; other outputs keep it local.
+    audit_dir = REJECTED.parent / "derived" if Path(out_dir).resolve() == PROCESSED.resolve() else Path(out_dir)
+    write_jsonl(audit_dir / "topic_audit.jsonl", audit)
     tables = {
         "papers.jsonl": entities["papers"], "authors.jsonl": entities["authors"],
         "institutions.jsonl": entities["institutions"], "venues.jsonl": entities["venues"],

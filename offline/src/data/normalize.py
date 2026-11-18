@@ -5,6 +5,7 @@ import csv
 import re
 import unicodedata
 from collections import Counter
+from pathlib import Path
 from typing import Any
 
 from src.common import REJECTED, log
@@ -62,8 +63,10 @@ def author_position_label(pos: int, n: int) -> str:
 
 
 class Normalizer:
-    def __init__(self, acl: list[dict[str, Any]], arxiv: list[dict[str, Any]], oa_rows: list[dict[str, Any]]):
+    def __init__(self, acl: list[dict[str, Any]], arxiv: list[dict[str, Any]], oa_rows: list[dict[str, Any]],
+                 rejected_dir: Path = REJECTED):
         self.acl, self.arxiv = acl, arxiv
+        self.rejected_dir = rejected_dir
         self.oa = {(r["source_kind"], r["source_id"]): r["openalex"] for r in oa_rows}
         self.unresolved: list[dict[str, Any]] = []
         self.stats: Counter[str] = Counter()
@@ -245,8 +248,8 @@ class Normalizer:
                 "paper_authors": paper_authors, "affiliations": affiliations, "citations": citations}
 
     def _write_unresolved(self) -> None:
-        REJECTED.mkdir(parents=True, exist_ok=True)
-        with open(REJECTED / "unresolved.csv", "w", encoding="utf-8", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=["kind", "ref", "detail"])
+        self.rejected_dir.mkdir(parents=True, exist_ok=True)
+        with open(self.rejected_dir / "unresolved.csv", "w", encoding="utf-8", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=["kind", "ref", "detail"], lineterminator="\n")
             w.writeheader()
             w.writerows(self.unresolved)

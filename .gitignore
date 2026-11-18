@@ -21,3 +21,6 @@ chatbot/data/reviewed/
 chatbot/data/splits/
 chatbot/data/models/
 chatbot/reports/
+
+# Portable local tools (Ollama, JRE, Neo4j) downloaded by the agent run; never commit.
+.tools/

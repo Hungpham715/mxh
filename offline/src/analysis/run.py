@@ -9,14 +9,15 @@ from typing import Any
 import networkx as nx
 
 from src.analysis import metrics, visualize
-from src.common import DERIVED, log, read_jsonl, write_json
+from src.common import DERIVED, artifact_dirs, log, read_jsonl, write_json
 from src.data.contracts import load_dataset
 from src.graph.derive import REL_TYPES, derive_edges, write_derived
 
 
-def _load_edges(rows: dict[str, list[dict[str, Any]]]) -> dict[str, list[dict[str, Any]]]:
-    edges = derive_edges(rows)
-    write_derived(edges)
+def _load_edges(rows: dict[str, list[dict[str, Any]]],
+                dirs: dict[str, Path]) -> dict[str, list[dict[str, Any]]]:
+    edges = derive_edges(rows, dirs["rejected"])
+    write_derived(edges, dirs["derived"])
     return edges
 
 
@@ -36,7 +37,7 @@ def _from_neo4j() -> list[dict[str, Any]]:
 def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     out.mkdir(parents=True, exist_ok=True)
     rows = load_dataset(data_dir)
-    edges = _load_edges(rows)
+    edges = _load_edges(rows, artifact_dirs(data_dir))
     co = _from_neo4j() if source == "neo4j" else edges["COAUTHORED_WITH"]
     papers = {p["id"]: p for p in rows["papers.jsonl"]}
     g = metrics.build_projection(rows["authors.jsonl"], co)

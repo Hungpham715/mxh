@@ -30,11 +30,18 @@ uv run python -m src.cli queries                                  # example Cyph
 uv run python -m src.cli analyze --out output/analysis [--source neo4j]
 uv run python -m src.cli sample --per-type 20 --seed 20261107 [--tag prefix]
 uv run python -m src.cli score --labels evaluation/labels.csv [--tag prefix]
+uv run python -m src.cli integrity            # census audit of 100% nodes/edges -> ../reports/graph_audit/
+uv run python -m src.cli coverage             # selected-subset vs eligible-universe -> ../reports/data_coverage.md
+uv run python -m src.cli truth-sample         # G3 blind review sheet, 10 edge types, fixed seed
+uv run python -m src.cli truth-score          # G3 weighted accuracy + Wilson CI from human labels only
 uv run python -m src.cli report --out report/final.pdf
 bash scripts/run_all.sh                                           # everything, with checkpoints
 ```
 Exit codes: 0 ok, 1 error, 2 invalid snapshot, 3 Neo4j ownership conflict (nothing written), 4 count mismatch,
-5 idempotency failure.
+5 idempotency failure / integrity FAIL, 6 G3 not passed (blocked or below threshold).
+
+Tests never write into `data/derived`, `data/rejected` or `output/`: any snapshot other than `data/processed`
+keeps its derived artefacts next to itself (`src.common.artifact_dirs`).
 
 ## Data contract (schema_version 1)
 `papers, authors, institutions, venues, paper_authors, affiliations, citations, paper_topics` (.jsonl) + `manifest.json`.

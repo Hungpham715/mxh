@@ -5,8 +5,9 @@ import time
 from pathlib import Path
 from typing import Any, Callable
 
-from src.common import BUILD_VERSION, OUTPUT, REJECTED, SCOPE_ID, env, log, read_json, scrub, write_json, write_jsonl
+from src.common import BUILD_VERSION, OUTPUT, REJECTED, SCOPE_ID, artifact_dirs, env, log, read_json, scrub, write_json, write_jsonl
 from src.data.contracts import ContractError, load_dataset
+from src.common import DERIVED as DERIVED_DEFAULT
 from src.graph.derive import REL_SCHEMA, REL_TYPES, derive_edges, topic_nodes, write_derived
 
 LABELS = ("Author", "Paper", "Institution", "Venue", "Topic")
@@ -117,7 +118,9 @@ def _clean(props: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in props.items() if v is not None and v != []}
 
 
-def build_payload(rows: dict[str, list[dict[str, Any]]], rule_version: str):
+def build_payload(rows: dict[str, list[dict[str, Any]]], rule_version: str,
+                  dirs: dict[str, Path] | None = None):
+    dirs = dirs or {"derived": DERIVED_DEFAULT, "rejected": REJECTED, "output": OUTPUT}
     nodes = {
         "Paper": rows["papers.jsonl"], "Author": rows["authors.jsonl"],
         "Institution": rows["institutions.jsonl"], "Venue": rows["venues.jsonl"],
@@ -126,8 +129,8 @@ def build_payload(rows: dict[str, list[dict[str, Any]]], rule_version: str):
     node_rows = {lbl: [{"id": r["id"], "props": _clean({k: r.get(k) for k in NODE_FIELDS[lbl]})} for r in rs]
                  for lbl, rs in nodes.items()}
     ids = {lbl: {r["id"] for r in rs} for lbl, rs in nodes.items()}
-    edges = derive_edges(rows)
-    write_derived(edges)
+    edges = derive_edges(rows, dirs["rejected"])
+    write_derived(edges, dirs["derived"])
     edge_rows: dict[str, list[dict[str, Any]]] = {}
     rejected = []
     for t in REL_TYPES:
@@ -139,7 +142,7 @@ def build_payload(rows: dict[str, list[dict[str, Any]]], rule_version: str):
                 continue
             good.append({"from": e["from"], "to": e["to"], "props": _clean({k: e.get(k) for k in EDGE_PROPS})})
         edge_rows[t] = good
-    write_jsonl(REJECTED / "edges.jsonl", rejected)
+    write_jsonl(dirs["rejected"] / "edges.jsonl", rejected)
     return node_rows, edge_rows, rejected
 
 
@@ -168,7 +171,8 @@ def run_import(data_dir: Path, dry_run: bool = False, batch_size: int = 300) -> 
         log.error("refusing import: snapshot failed validation (%d errors), e.g. %s", len(exc.errors), exc.errors[:3])
         return 2
     manifest = read_json(data_dir / "manifest.json")
-    node_rows, edge_rows, rejected = build_payload(rows, manifest.get("topic_rule_version", "topics-v1.0"))
+    dirs = artifact_dirs(data_dir)
+    node_rows, edge_rows, rejected = build_payload(rows, manifest.get("topic_rule_version", "topics-v1.0"), dirs)
     plan = {"scope_id": SCOPE_ID, "build_version": BUILD_VERSION,
             "nodes": {k: len(v) for k, v in node_rows.items()},
             "relationships": {k: len(v) for k, v in edge_rows.items()},
@@ -180,7 +184,7 @@ def run_import(data_dir: Path, dry_run: bool = False, batch_size: int = 300) -> 
     plan["storage_estimate"] = {"abstract_bytes": abstract_bytes, "evidence_id_items": evid_items,
                                 "approx_mb": round((abstract_bytes + evid_items * 16 + plan["total_relationships"] * 120
                                                     + plan["total_nodes"] * 200) / 1e6, 1)}
-    write_json(OUTPUT / "neo4j" / ("import_plan_dry_run.json" if dry_run else "import_plan.json"), plan)
+    write_json(dirs["output"] / "neo4j" / ("import_plan_dry_run.json" if dry_run else "import_plan.json"), plan)
     print(plan)
     if dry_run:
         log.info("dry run: nothing written to Neo4j")

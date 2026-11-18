@@ -1,0 +1,50 @@
+{
+  "generated_at_utc": "2026-11-18T08:12:38.126292+00:00",
+  "population": "census (100% of nodes and edges in the local snapshot; no sampling)",
+  "graph_source": "LOCAL_SNAPSHOT data/processed + re-derived edges (Aura live not reachable in this run)",
+  "snapshot_manifest_checksums": {
+    "papers.jsonl": "d214b99a48813f97c51f5ecbd13ca614d58fae2c48148be0445bf0ad0364605d",
+    "authors.jsonl": "e915056c0e153db5e1bfcd4db42b954711884427acf636138965954b78947565",
+    "institutions.jsonl": "f9778808d4ce0d54717efeb782557b850f0aaf98620f6c76b7e3c6b8edec31ab",
+    "venues.jsonl": "98f669281a74d49c28f8fe147e336691bcd38036e0571bff1b69681303924195",
+    "paper_authors.jsonl": "c7e052ca2513979dcf528f3b5394f28bd2d772bab80f0a8d3dcdedb157f34b4a",
+    "affiliations.jsonl": "5230f6a6708f2098e435c8ce1371c977707c424caa8b0cf5298ec2a3834d7056",
+    "citations.jsonl": "a26adef5693b3a12f0d2272e0e68ee0363db657e2a06ca87a79173044f1c2664",
+    "paper_topics.jsonl": "5bb54286df21fcc8891910e36af5b5b6b6a7fe1023541d739277ef331bbffc80"
+  },
+  "derived_edges_sha256": "4125194a4140a421ea8cf16f1a7f00ede4e351153e33d787d1ce80f41dd1020a",
+  "derivation_deterministic": true,
+  "derived_files_match_fresh_derivation": true,
+  "nodes_scanned": {
+    "Paper": 1091,
+    "Author": 5430,
+    "Institution": 600,
+    "Venue": 7,
+    "Topic": 6
+  },
+  "edges_scanned": {
+    "FIRST_AUTHOR_OF": 1091,
+    "OTHER_AUTHOR_OF": 5007,
+    "COAUTHORED_WITH": 16754,
+    "AFFILIATED_WITH": 4306,
+    "APPEARS_IN": 1091,
+    "HAS_TOPIC": 451,
+    "CITES": 26,
+    "ORG_COAUTHORED_WITH": 2001,
+    "RESEARCHES": 105,
+    "ACTIVE_IN": 139
+  },
+  "total_nodes_scanned": 7134,
+  "total_edges_scanned": 30971,
+  "scanned_equals_population": true,
+  "relation_types_populated": 10,
+  "error_counts_by_severity": {
+    "warning": 2
+  },
+  "error_counts_by_check": {
+    "CITES:cited_paper_newer_than_citing:warning": 2
+  },
+  "critical_errors": 0,
+  "url_reachability": "NOT_RUN (syntax only; no bulk HTTP probing from this laptop)",
+  "verdict": "PASS"
+}

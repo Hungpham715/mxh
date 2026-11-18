@@ -1,0 +1,11 @@
+{
+  "samples": 9279,
+  "parse_samples": 9279,
+  "answer_samples": 0,
+  "source": "data\\reviewed\\silver_validated.jsonl",
+  "output_sha256": "c8f4b5e94bd776c6ae380990239fd4c7e4fbe60d31118d6f468e4e626d5b5e45",
+  "format": "chat_messages",
+  "assistant_only_loss": true,
+  "test_cases_excluded": true,
+  "includes_silver_unreviewed": true
+}

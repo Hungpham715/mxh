@@ -326,7 +326,9 @@ def build_report(out_pdf: Path) -> int:
         "các con số trên là ước lượng điểm kèm khoảng tin cậy.")
 
     # ---------------------------------------------------------------- 8
-    d.h2("8. Kết luận, hạn chế và cách tái hiện")
+    _verification_round(d)
+
+    d.h2("10. Kết luận, hạn chế và cách tái hiện")
     d.p("Đạt được: pipeline tái hiện được từ nguồn thật tới graph, 10 loại quan hệ có dữ liệu và chứng cứ theo bài, phân tích "
         "mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.")
     d.bullets([
@@ -343,7 +345,8 @@ def build_report(out_pdf: Path) -> int:
            "uv run python -m src.cli import --data data/processed --dry-run\nuv run python -m src.cli import --data data/processed\n"
            "uv run python -m src.cli analyze --out output/analysis\nuv run python -m src.cli sample --per-type 20 --seed 20261107\n"
            "uv run python -m src.cli score --labels evaluation/labels.csv\nuv run python -m src.cli report --out report/final.pdf")
-    d.p(f"Hash manifest: papers.jsonl SHA-256 = {manifest['checksums']['papers.jsonl']}. Link GitHub: chưa có (repo chỉ ở máy cục bộ).")
+    d.p(f"Hash manifest: papers.jsonl SHA-256 = {manifest['checksums']['papers.jsonl']}. Link GitHub: https://github.com/Hungpham715/mxh "
+        "(nhánh làm việc của đợt kiểm định được ghi trong undone.md).")
     d.p("Tài liệu tham khảo: ACL Anthology (aclanthology.org/faq/api), arXiv API User Manual (info.arxiv.org/help/api), "
         "OpenAlex Works/Authorships/Topics (help.openalex.org), Neo4j Python Driver Manual, NetworkX small-world reference.")
 
@@ -355,6 +358,99 @@ def build_report(out_pdf: Path) -> int:
     log.info("report written: %s (%d pages)", out_pdf, pages)
     print(f"report: {out_pdf} pages={pages}")
     return 0
+
+
+REPO = ROOT.parent
+AUDIT = REPO / "reports" / "graph_audit"
+CHAT = REPO / "chatbot"
+
+
+def _metric(summary: dict[str, Any] | None, key: str) -> str:
+    if not summary:
+        return "NOT RUN"
+    value = summary.get("metrics", {}).get(key)
+    if isinstance(value, dict):
+        return f"{value['value']} (n={value['n']})"
+    return str(value)
+
+
+def _verification_round(d: Doc) -> None:
+    """Sections 8-9: census integrity, G3 truth-audit design, QA dataset and chatbot evaluation.
+
+    Every number is read from an artifact file; a missing artifact is printed as NOT RUN.
+    """
+    integrity = _j(AUDIT / "integrity_all.json")
+    g3_meta = _j(AUDIT / "g3_sampling_meta.json")
+    g3_score = _j(AUDIT / "g3_truth_scores.json")
+    ds = _j(CHAT / "data" / "splits" / "manifest.json")
+    b1 = _j(CHAT / "reports" / "eval" / "B1_silver_snapshot" / "summary.json")
+    b0 = _j(CHAT / "reports" / "eval" / "B0_silver_snapshot" / "summary.json")
+
+    d.h2("8. Đợt kiểm định 18/11/2026: toàn vẹn toàn graph và thiết kế đánh giá độ đúng")
+    if integrity:
+        d.p(f"Kiểm tra toàn vẹn dạng <b>census</b> (không lấy mẫu) trên snapshot cục bộ: quét "
+            f"{_fmt(integrity['total_nodes_scanned'])} nút và {_fmt(integrity['total_edges_scanned'])} cạnh, "
+            f"{integrity['relation_types_populated']}/10 loại quan hệ có dữ liệu; lỗi nghiêm trọng = "
+            f"<b>{integrity['critical_errors']}</b>; cảnh báo = {integrity['error_counts_by_severity'].get('warning', 0)}. "
+            f"Phép dẫn xuất cạnh xác định (deterministic) = {integrity['derivation_deterministic']}; "
+            f"file cạnh trên đĩa khớp phép dẫn xuất mới = {integrity['derived_files_match_fresh_derivation']}. "
+            f"Kết luận kỹ thuật: <b>{integrity['verdict']}</b>.")
+        d.bullets([
+            "Kiểm: ID duy nhất, nhãn/loại trong whitelist, hai đầu cạnh tồn tại đúng nhãn, cặp đối xứng chuẩn hóa, "
+            "không trùng cạnh, bài bằng chứng tồn tại, năm khớp bằng chứng, URL đúng cú pháp.",
+            "Kiểm ngữ nghĩa theo định nghĩa: tác giả đầu/khác đúng vị trí; đồng tác giả cùng có tên trên mọi bài bằng chứng; "
+            "affiliation có dòng nguồn trên đúng bài; ORG_COAUTHORED_WITH có cả hai tổ chức trên bài; HAS_TOPIC có span "
+            "nằm trong tiêu đề/tóm tắt; RESEARCHES/ACTIVE_IN đủ ngưỡng ≥2 bài.",
+            "Không kiểm khả năng truy cập URL hàng loạt (chỉ cú pháp). Đây là kiểm tra kỹ thuật, KHÔNG phải xác minh "
+            "sự thật với thế giới bên ngoài.",
+            "Lỗi đã sửa trong đợt này: bộ test offline từng ghi đè data/derived bằng dữ liệu fixture (bản commit trước đó "
+            "chứa cạnh fixture); nay mọi snapshot ngoài data/processed ghi artefact cạnh bên cạnh chính nó.",
+        ])
+    else:
+        d.p("Kiểm tra toàn vẹn: NOT RUN.")
+    if g3_meta:
+        alloc = g3_meta["allocation"]
+        rows = [[t, _fmt(g3_meta["populations"][t]), str(alloc[t])] for t in alloc]
+        d.p(f"Thiết kế đánh giá độ đúng (cổng >90%): mẫu xác suất phân tầng theo 10 loại cạnh, seed {g3_meta['seed']} "
+            f"cố định trước khi xem nhãn, tổng {g3_meta['sample_size']} cạnh; tầng nhỏ (CITES) được kiểm toàn bộ. "
+            "Phiếu chấm ẩn mọi điểm tự động. 'Không kiểm được' tính là không đúng.")
+        d.table(["Loại cạnh", "Tổng thể", "Cỡ mẫu"], rows, [0.5, 0.25, 0.25])
+        power = g3_meta.get("power_check_if_all_strata_95pct", {})
+        if power.get("ci"):
+            d.p(f"Kiểm tra lực mẫu: nếu mọi tầng đúng 95% thì ước lượng trọng số ≈ {power['estimate']:.3f}, "
+                f"KTC 95% ≈ [{power['ci'][0]:.3f}; {power['ci'][1]:.3f}] — cận dưới vượt 0,90.")
+    verdict = (g3_score or {}).get("verdict", "NOT RUN")
+    d.p(f"Kết quả độ đúng theo người chấm độc lập: <b>{verdict}</b>. Chưa có người chấm độc lập nên tỷ lệ >90% "
+        "<b>chưa được chứng minh</b>; ước lượng tự động cũ (~88,95%) không được dùng làm bằng chứng.")
+
+    d.h2("9. Chatbot GraphRAG, bộ dữ liệu QA và đánh giá (tách khỏi độ đúng graph)")
+    d.p("Luồng trực tuyến: React → FastAPI → Qwen3-0.6B (Ollama, CPU) định tuyến 4 nhánh (GRAPH_QA, CHAT_HISTORY, "
+        "CLARIFY, OUT_OF_SCOPE) có lịch sử hội thoại → nối thực thể → 1 trong 12 truy vấn Cypher tham số hóa, chỉ đọc, "
+        "lọc scope → chuẩn hóa bằng chứng → quyết định bước kế (luật cứng + Qwen đề xuất, mã kiểm tra) tối đa 5 lượt → "
+        "trả lời có trích dẫn do server tạo. Phân trang N+1 kèm đếm tổng; SSE phát sự kiện trong lúc chạy.")
+    if ds:
+        c = ds["counts"]
+        d.p(f"Bộ QA sinh từ snapshot (hash manifest {ds['snapshot_manifest_sha256'][:12]}…): {_fmt(c['candidates'])} câu "
+            f"ứng viên, {_fmt(c['silver_validated'])} câu <i>silver</i> (đáp án được tính lại bởi một oracle độc lập "
+            f"đọc bảng gốc), {c['rejected']} bị loại, gold do người chấm = {c['human_gold']}. Chia train/val/test theo "
+            f"thực thể neo: {ds['per_split']}; kiểm rò rỉ: {ds['leakage']['verdict']}.")
+        rows = [[k, str(v)] for k, v in sorted(ds["per_intent"].items())]
+        d.table(["Intent", "Số câu silver"], rows, [0.6, 0.4])
+    for name, summary in (("B1 (lặp, tối đa 5 bước)", b1), ("B0 (một bước)", b0)):
+        if not summary:
+            d.p(f"{name}: NOT RUN.")
+            continue
+        m = summary["metrics"]
+        d.p(f"{name} — Qwen3-0.6B qua Ollama thật trên <b>snapshot cục bộ</b> (không phải AuraDB), nhãn silver, "
+            f"{m['cases']} câu test: trạng thái đúng {_metric(summary, 'status_accuracy')}; intent "
+            f"{_metric(summary, 'intent_accuracy')}; nối thực thể {_metric(summary, 'entity_link_accuracy')}; "
+            f"set-F1 kết quả truy vấn {_metric(summary, 'query_result_set_f1')}; độ chính xác trích dẫn "
+            f"{_metric(summary, 'citation_precision')}; từ chối ngoài phạm vi {_metric(summary, 'out_of_scope_refusal')}; "
+            f"đếm chính xác {_metric(summary, 'count_exactness')}; độ trễ p50/p95 = {m['latency_p50_ms']}/"
+            f"{m['latency_p95_ms']} ms.")
+    d.p("Giới hạn của chương này: nhãn silver không phải gold; AuraDB không truy cập được trong đợt (instance có dấu hiệu "
+        "bị tạm dừng), nên các số trên là của snapshot cục bộ có cùng số đếm với lần import Aura đã xác minh trước đó; "
+        "huấn luyện SFT/LoRA trên GPU và đăng Hugging Face được hoãn.")
 
 
 def _precision_line(scores: dict[str, Any]) -> str:

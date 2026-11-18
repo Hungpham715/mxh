@@ -1,0 +1,3 @@
+severity,type,from,to,check,detail
+warning,CITES,oa:W4385572225,oa:W4404783577,cited_paper_newer_than_citing,2023->2024
+warning,CITES,oa:W4389518819,oa:W4402671871,cited_paper_newer_than_citing,2023->2024

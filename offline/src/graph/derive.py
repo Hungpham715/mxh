@@ -6,6 +6,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 from typing import Any
 
 from src.common import BUILD_VERSION, DERIVED, REJECTED, log, write_jsonl
@@ -57,7 +58,8 @@ def _edge(rtype: str, src: str, dst: str, source_kind: str, paper_ids: list[str]
     return e
 
 
-def derive_edges(rows: dict[str, list[dict[str, Any]]]) -> dict[str, list[dict[str, Any]]]:
+def derive_edges(rows: dict[str, list[dict[str, Any]]],
+                 rejected_dir: Path = REJECTED) -> dict[str, list[dict[str, Any]]]:
     papers = {p["id"]: p for p in rows["papers.jsonl"]}
     authors = {a["id"]: a for a in rows["authors.jsonl"]}
     edges: dict[str, list[dict[str, Any]]] = {t: [] for t in REL_TYPES}
@@ -156,13 +158,13 @@ def derive_edges(rows: dict[str, list[dict[str, Any]]]) -> dict[str, list[dict[s
             if e["source_url"] is None:
                 e["source_url"] = papers[e["evidence_paper_ids"][0]]["source_url"]
     _ = authors
-    write_jsonl(REJECTED / "large_author_papers.jsonl", flagged)
+    write_jsonl(rejected_dir / "large_author_papers.jsonl", flagged)
     return edges
 
 
-def write_derived(edges: dict[str, list[dict[str, Any]]]) -> dict[str, int]:
+def write_derived(edges: dict[str, list[dict[str, Any]]], out_dir: Path = DERIVED) -> dict[str, int]:
     counts = {}
     for t, es in edges.items():
-        counts[t] = write_jsonl(DERIVED / f"edges_{t}.jsonl", es)
+        counts[t] = write_jsonl(out_dir / f"edges_{t}.jsonl", es)
     log.info("derived edges: %s (total %d)", counts, sum(counts.values()))
     return counts

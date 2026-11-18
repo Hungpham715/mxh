@@ -15,6 +15,7 @@ EXCLUDED_PARTS = {
     ".venv",
     "__pycache__",
     "dist",
+    ".tools",
     "node_modules",
 }
 

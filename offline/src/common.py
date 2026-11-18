@@ -25,6 +25,19 @@ OUTPUT = ROOT / "output"
 EVAL = ROOT / "evaluation"
 
 SCOPE_ID = "nlpgraph-v1"
+
+
+def artifact_dirs(data_dir: Path) -> dict[str, Path]:
+    """Where derived/rejected/output artifacts for a snapshot are written.
+
+    Only the canonical snapshot (data/processed) writes into the shared repo folders.
+    Any other snapshot (tests, tmp experiments) keeps its artifacts beside itself,
+    so a test run can never overwrite the real derived edges.
+    """
+    if Path(data_dir).resolve() == PROCESSED.resolve():
+        return {"derived": DERIVED, "rejected": REJECTED, "output": OUTPUT}
+    base = Path(data_dir)
+    return {"derived": base / "derived", "rejected": base / "rejected", "output": base / "output"}
 BUILD_VERSION = "1.0.0"
 
 log = logging.getLogger("nlpgraph")

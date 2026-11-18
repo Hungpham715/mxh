@@ -1,3 +1,4 @@
+from src.common import DERIVED, artifact_dirs
 from src.data.fixtures import fixture_tables, write_dataset
 from src.data.contracts import load_dataset
 from src.graph import load as loader
@@ -14,13 +15,13 @@ def edge_set(edges, t):
 
 
 def test_all_ten_types_populated_on_fixture(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     assert set(e) == set(REL_TYPES)
     assert all(e[t] for t in REL_TYPES), {t: len(e[t]) for t in REL_TYPES}
 
 
 def test_coauthor_pairs_unique_canonical_with_evidence(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     co = e["COAUTHORED_WITH"]
     keys = [(x["from"], x["to"]) for x in co]
     assert len(keys) == len(set(keys))
@@ -30,25 +31,25 @@ def test_coauthor_pairs_unique_canonical_with_evidence(tmp_path):
 
 
 def test_same_name_not_linked_across_papers(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     linked = {n for x in e["COAUTHORED_WITH"] for n in (x["from"], x["to"])}
     assert "src:oa:WFIX4#1" not in linked
 
 
 def test_first_vs_other_author(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     assert ("oa:AFIX1", "oa:WFIX1") in edge_set(e, "FIRST_AUTHOR_OF")
     assert ("oa:AFIX1", "oa:WFIX3") in edge_set(e, "OTHER_AUTHOR_OF")
     assert not edge_set(e, "FIRST_AUTHOR_OF") & edge_set(e, "OTHER_AUTHOR_OF")
 
 
 def test_citation_direction(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     assert edge_set(e, "CITES") == {("oa:WFIX2", "oa:WFIX1"), ("oa:WFIX3", "oa:WFIX2")}
 
 
 def test_researches_threshold(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     r = edge_set(e, "RESEARCHES")
     # AFIX1 has llm on W1, W2, W5 -> yes; AFIX4 only W5 -> no
     assert ("oa:AFIX1", "topic:llm") in r
@@ -57,7 +58,7 @@ def test_researches_threshold(tmp_path):
 
 
 def test_active_in_threshold_and_org_pairs(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     act = edge_set(e, "ACTIVE_IN")
     assert ("oa:IFIX1", "topic:llm") in act       # W1, W2
     assert ("oa:IFIX2", "topic:mt") not in act    # only W1
@@ -67,7 +68,7 @@ def test_active_in_threshold_and_org_pairs(tmp_path):
 
 
 def test_affiliation_merged_per_pair(tmp_path):
-    e = derive_edges(_rows(tmp_path))
+    e = derive_edges(_rows(tmp_path), tmp_path / "rejected")
     a = next(x for x in e["AFFILIATED_WITH"] if (x["from"], x["to"]) == ("oa:AFIX1", "oa:IFIX1"))
     assert a["evidence_paper_ids"] == ["oa:WFIX1", "oa:WFIX2", "oa:WFIX3"]
     assert a["years"] == [2023, 2024]
@@ -84,7 +85,7 @@ def test_large_author_paper_flagged_not_cliqued(tmp_path):
                                   "source_url": "x"} for i, a in enumerate(big, 1)]
     t["authors.jsonl"] = [a for a in t["authors.jsonl"] if a["id"] != "src:oa:WFIX4#1"]
     write_dataset(tmp_path, t)
-    e = derive_edges(load_dataset(tmp_path))
+    e = derive_edges(load_dataset(tmp_path), tmp_path / "rejected")
     assert not any(x["from"].startswith("oa:ABIG") for x in e["COAUTHORED_WITH"])
     assert len([x for x in e["OTHER_AUTHOR_OF"] if x["to"] == "oa:WFIX4"]) == 24
 
@@ -127,7 +128,7 @@ def _apply(db, node_rows, edge_rows):
 
 def test_import_idempotent_with_fake_merge(tmp_path):
     rows = _rows(tmp_path)
-    nodes, edges, rejected = loader.build_payload(rows, "topics-v1.0")
+    nodes, edges, rejected = loader.build_payload(rows, "topics-v1.0", artifact_dirs(tmp_path))
     assert rejected == []
     db = {"nodes": {}, "rels": {}}
     _apply(db, nodes, edges)
@@ -148,9 +149,22 @@ def test_dangling_edges_rejected(tmp_path):
     rows = _rows(tmp_path)
     rows["citations.jsonl"].append({"citing_paper_id": "oa:WFIX1", "cited_paper_id": "oa:WGHOST", "source_url": "x"})
     rows["papers.jsonl"].append({**rows["papers.jsonl"][0], "id": "oa:WGHOST"})
-    nodes, edges, rejected = loader.build_payload(rows, "v")
+    nodes, edges, rejected = loader.build_payload(rows, "v", artifact_dirs(tmp_path))
     nodes_ids = {r["id"] for r in nodes["Paper"]}
     assert "oa:WGHOST" in nodes_ids  # present -> not rejected
     rows["papers.jsonl"].pop()
-    nodes, edges, rejected = loader.build_payload(rows, "v")
+    nodes, edges, rejected = loader.build_payload(rows, "v", artifact_dirs(tmp_path))
     assert any(r["to"] == "oa:WGHOST" for r in rejected)
+
+
+def test_tmp_snapshot_never_overwrites_real_derived_edges(tmp_path):
+    """Regression: running the pipeline on a test snapshot must not touch data/derived."""
+    from src.graph import load as loader
+    from src.data.contracts import load_dataset as _load
+
+    before = {p.name: p.read_bytes() for p in DERIVED.glob("edges_*.jsonl")}
+    write_dataset(tmp_path, fixture_tables())
+    loader.build_payload(_load(tmp_path), "v", artifact_dirs(tmp_path))
+    after = {p.name: p.read_bytes() for p in DERIVED.glob("edges_*.jsonl")}
+    assert before == after
+    assert (tmp_path / "derived" / "edges_CITES.jsonl").exists()

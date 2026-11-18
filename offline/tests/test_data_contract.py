@@ -90,7 +90,7 @@ def _work(wid, names, aids, insts=None, refs=()):
                             for k, (n, a) in enumerate(zip(names, aids))]}
 
 
-def test_normalizer_identity_and_dedup():
+def test_normalizer_identity_and_dedup(tmp_path):
     acl = [_acl("2024.acl-long.1", "Paper One About Translation", ["Ann Lee", "Bo Chen"], "10.1/a"),
            _acl("2024.acl-long.2", "Paper Two About Retrieval", ["Ann Lee", "Cy Diaz"], "10.1/b")]
     arx = [{"arxiv_id": "2401.00001", "title": "Paper One About Translation", "abstract": "x", "year": 2024,
@@ -105,7 +105,7 @@ def test_normalizer_identity_and_dedup():
            "openalex": _work("W2", ["Ann Lee", "Wrong Person"], ["A1", "A9"], refs=["W1", "W999", "W2"])},
           {"source_kind": "arxiv", "source_id": "2401.00001", "openalex": _work("W1", ["Ann Lee", "Bo Chen"], ["A1", "A2"])},
           {"source_kind": "arxiv", "source_id": "2401.00002", "openalex": None}]
-    ents = Normalizer(acl, arx, oa).run()
+    ents = Normalizer(acl, arx, oa, rejected_dir=tmp_path / "rejected").run()
     pids = sorted(p["id"] for p in ents["papers"])
     # preprint of W1 merged into ACL record; unmatched arXiv kept with source id
     assert pids == ["arxiv:2401.00002", "oa:W1", "oa:W2"]

@@ -98,6 +98,28 @@ def cmd_score(a: argparse.Namespace) -> int:
     return run_score(Path(a.labels), tag=f"_{a.tag}" if a.tag else "")
 
 
+def cmd_integrity(a: argparse.Namespace) -> int:
+    from src.evaluation.integrity_all import run_integrity
+    return run_integrity(Path(a.data), Path(a.out))
+
+
+def cmd_coverage(a: argparse.Namespace) -> int:
+    from src.analysis.coverage import run_coverage
+    return run_coverage(Path(a.out))
+
+
+def cmd_truth_sample(a: argparse.Namespace) -> int:
+    from src.evaluation.truth_audit import build_sample, default_paths
+    paths = default_paths(ROOT.parent)
+    return build_sample(Path(a.data), paths["out"])
+
+
+def cmd_truth_score(a: argparse.Namespace) -> int:
+    from src.evaluation.truth_audit import default_paths, score
+    paths = default_paths(ROOT.parent)
+    return score(Path(a.sheet or paths["sheet"]), paths["meta"], paths["score"])
+
+
 def cmd_report(a: argparse.Namespace) -> int:
     from src.report.build import build_report
     return build_report(Path(a.out))
@@ -147,6 +169,19 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--labels", default=str(EVAL / "labels.csv"))
     s.add_argument("--tag", default=None)
     s.set_defaults(fn=cmd_score)
+    s = sub.add_parser("integrity", help="census integrity audit of every node and edge (no sampling)")
+    s.add_argument("--data", default=str(PROCESSED))
+    s.add_argument("--out", default=str(ROOT.parent / "reports" / "graph_audit"))
+    s.set_defaults(fn=cmd_integrity)
+    s = sub.add_parser("coverage", help="source inventory: selected-subset vs eligible-universe coverage")
+    s.add_argument("--out", default=str(ROOT.parent / "reports" / "data_coverage.md"))
+    s.set_defaults(fn=cmd_coverage)
+    s = sub.add_parser("truth-sample", help="G3: blind stratified review sheet over all 10 edge types")
+    s.add_argument("--data", default=str(PROCESSED))
+    s.set_defaults(fn=cmd_truth_sample)
+    s = sub.add_parser("truth-score", help="G3: conservative weighted accuracy + 95% CI from human labels")
+    s.add_argument("--sheet", default=None)
+    s.set_defaults(fn=cmd_truth_score)
     s = sub.add_parser("report", help="build the Vietnamese PDF report")
     s.add_argument("--out", default=str(ROOT / "report" / "final.pdf"))
     s.set_defaults(fn=cmd_report)
