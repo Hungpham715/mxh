@@ -149,7 +149,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 
 Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
 
-![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](D:/nlp-collab-graph/output/analysis/relationship_types.png)
+![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](../output/analysis/relationship_types.png)
 
 *Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).*
 
@@ -270,7 +270,7 @@ Phân tích mạng chỉ dùng đồ thị vô hướng, đơn Author—COAUTHOR
 
 Phần lớn tác giả cô lập là tác giả source_only/unresolved (định danh chỉ trong một bài) và tác giả của bài đơn tác giả; corpus là mẫu ~1.100 bài nên mạng bị phân mảnh mạnh – đây là đặc điểm của mẫu, không phải của cộng đồng NLP thật.
 
-![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](D:/nlp-collab-graph/output/analysis/degree_distribution.png)
+![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](../output/analysis/degree_distribution.png)
 
 *Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).*
 
@@ -304,7 +304,7 @@ Phương pháp: louvain (networkx.community.louvain_communities, weight=shared p
 | 4 | 82 | 15 | llm(4), retrieval(1) | Graham Neubig, Tongshuang Wu, Yulia Tsvetkov, Pengfei Liu |
 | 5 | 81 | 19 | llm(4), qa(2) | Maarten Sap, Alice Oh, Yejin Choi, Yeon Seonwoo |
 
-![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](D:/nlp-collab-graph/output/analysis/ego_top_pagerank.png)
+![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](../output/analysis/ego_top_pagerank.png)
 
 *Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).*
 
@@ -332,7 +332,7 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 
 Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
 
-![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](D:/nlp-collab-graph/output/analysis/small_world.png)
+![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](../output/analysis/small_world.png)
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
@@ -357,7 +357,7 @@ Kiểm tra cấu trúc: 30.971 cạnh được kiểm, **0** cạnh vi phạm.
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 151 | 20 | 15 | 2 | 3 | 0.75 | [0.531; 0.888] |
 
-Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% xấp xỉ phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% Wilson phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lại:
 
@@ -374,7 +374,7 @@ Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lạ
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 139 | 20 | 8 | 0 | 12 | 0.4 | [0.219; 0.613] |
 
-Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% xấp xỉ phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% Wilson phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 ### 7.1 Lỗi phát hiện và sửa
 
@@ -405,7 +405,63 @@ Precision macro = **0.825**; precision micro có trọng số theo số cạnh m
 
 Với 20 mẫu/loại, ngay cả 20/20 đúng thì cận dưới Wilson 95% cũng chỉ ≈ 0,84, nên **không thể khẳng định chắc chắn ≥ 90%**; các con số trên là ước lượng điểm kèm khoảng tin cậy.
 
-## 8. Kết luận, hạn chế và cách tái hiện
+## 8. Đợt kiểm định 18/11/2026: toàn vẹn toàn graph và thiết kế đánh giá độ đúng
+
+Kiểm tra toàn vẹn dạng **census** (không lấy mẫu) trên snapshot cục bộ: quét 7.134 nút và 30.971 cạnh, 10/10 loại quan hệ có dữ liệu; lỗi nghiêm trọng = **0**; cảnh báo = 2. Phép dẫn xuất cạnh xác định (deterministic) = True; file cạnh trên đĩa khớp phép dẫn xuất mới = True. Kết luận kỹ thuật: **PASS**.
+
+- Kiểm: ID duy nhất, nhãn/loại trong whitelist, hai đầu cạnh tồn tại đúng nhãn, cặp đối xứng chuẩn hóa, không trùng cạnh, bài bằng chứng tồn tại, năm khớp bằng chứng, URL đúng cú pháp.
+- Kiểm ngữ nghĩa theo định nghĩa: tác giả đầu/khác đúng vị trí; đồng tác giả cùng có tên trên mọi bài bằng chứng; affiliation có dòng nguồn trên đúng bài; ORG_COAUTHORED_WITH có cả hai tổ chức trên bài; HAS_TOPIC có span nằm trong tiêu đề/tóm tắt; RESEARCHES/ACTIVE_IN đủ ngưỡng ≥2 bài.
+- Không kiểm khả năng truy cập URL hàng loạt (chỉ cú pháp). Đây là kiểm tra kỹ thuật, KHÔNG phải xác minh sự thật với thế giới bên ngoài.
+- Lỗi đã sửa trong đợt này: bộ test offline từng ghi đè data/derived bằng dữ liệu fixture (bản commit trước đó chứa cạnh fixture); nay mọi snapshot ngoài data/processed ghi artefact cạnh bên cạnh chính nó.
+
+Thiết kế đánh giá độ đúng (cổng >90%): mẫu xác suất phân tầng theo 10 loại cạnh, seed 20261118 cố định trước khi xem nhãn, tổng 687 cạnh; tầng nhỏ (CITES) được kiểm toàn bộ. Phiếu chấm ẩn mọi điểm tự động. 'Không kiểm được' tính là không đúng.
+
+| Loại cạnh | Tổng thể | Cỡ mẫu |
+|---|---|---|
+| FIRST_AUTHOR_OF | 1.091 | 40 |
+| OTHER_AUTHOR_OF | 5.007 | 81 |
+| COAUTHORED_WITH | 16.754 | 270 |
+| AFFILIATED_WITH | 4.306 | 70 |
+| APPEARS_IN | 1.091 | 40 |
+| HAS_TOPIC | 451 | 40 |
+| CITES | 26 | 26 |
+| ORG_COAUTHORED_WITH | 2.001 | 40 |
+| RESEARCHES | 105 | 40 |
+| ACTIVE_IN | 139 | 40 |
+
+Kiểm tra lực mẫu: nếu mọi tầng đúng 95% thì ước lượng trọng số ≈ 0.948, KTC 95% ≈ [0.926; 0.964] — cận dưới vượt 0,90.
+
+Kết quả độ đúng theo người chấm độc lập: **BLOCKED_NO_INDEPENDENT_LABELS**. Chưa có người chấm độc lập nên tỷ lệ >90% **chưa được chứng minh**; ước lượng tự động cũ (~88,95%) không được dùng làm bằng chứng.
+
+## 9. Chatbot GraphRAG, bộ dữ liệu QA và đánh giá (tách khỏi độ đúng graph)
+
+Luồng trực tuyến: React → FastAPI → Qwen3-0.6B (Ollama, CPU) định tuyến 4 nhánh (GRAPH_QA, CHAT_HISTORY, CLARIFY, OUT_OF_SCOPE) có lịch sử hội thoại → nối thực thể → 1 trong 12 truy vấn Cypher tham số hóa, chỉ đọc, lọc scope → chuẩn hóa bằng chứng → quyết định bước kế (luật cứng + Qwen đề xuất, mã kiểm tra) tối đa 5 lượt → trả lời có trích dẫn do server tạo. Phân trang N+1 kèm đếm tổng; SSE phát sự kiện trong lúc chạy.
+
+Bộ QA sinh từ snapshot (hash manifest c2c3f94e7908…): 10.619 câu ứng viên, 10.619 câu *silver* (đáp án được tính lại bởi một oracle độc lập đọc bảng gốc), 0 bị loại, gold do người chấm = 0. Chia train/val/test theo thực thể neo: {'train': 7887, 'val': 1392, 'test': 1340}; kiểm rò rỉ: PASS.
+
+| Intent | Số câu silver |
+|---|---|
+| author_affiliations | 1283 |
+| author_papers | 2124 |
+| author_path | 285 |
+| coauthor_affiliations | 1270 |
+| coauthors | 1289 |
+| network_top | 3 |
+| org_collaborations | 531 |
+| paper_authors | 1216 |
+| paper_citations | 42 |
+| paper_venue | 1228 |
+| shared_papers | 1300 |
+| topic_papers | 30 |
+| unknown | 18 |
+
+B1 (lặp, tối đa 5 bước) — Qwen3-0.6B qua Ollama thật trên **snapshot cục bộ** (không phải AuraDB), nhãn silver, 300 câu test: trạng thái đúng 0.96 (n=300); intent 0.884 (n=181); nối thực thể 0.9613 (n=181); set-F1 kết quả truy vấn 0.9083 (n=181); độ chính xác trích dẫn 0.9908 (n=173); từ chối ngoài phạm vi 1.0 (n=4); đếm chính xác 0.9231 (n=13); độ trễ p50/p95 = 4711.7/10869.2 ms.
+
+B0 (một bước) — Qwen3-0.6B qua Ollama thật trên **snapshot cục bộ** (không phải AuraDB), nhãn silver, 300 câu test: trạng thái đúng 0.96 (n=300); intent 0.884 (n=181); nối thực thể 0.9613 (n=181); set-F1 kết quả truy vấn 0.9083 (n=181); độ chính xác trích dẫn 0.9951 (n=173); từ chối ngoài phạm vi 1.0 (n=4); đếm chính xác 0.9231 (n=13); độ trễ p50/p95 = 4603.4/8769.2 ms.
+
+Giới hạn của chương này: nhãn silver không phải gold; AuraDB không truy cập được trong đợt (instance có dấu hiệu bị tạm dừng), nên các số trên là của snapshot cục bộ có cùng số đếm với lần import Aura đã xác minh trước đó; huấn luyện SFT/LoRA trên GPU và đăng Hugging Face được hoãn.
+
+## 10. Kết luận, hạn chế và cách tái hiện
 
 Đạt được: pipeline tái hiện được từ nguồn thật tới graph, 10 loại quan hệ có dữ liệu và chứng cứ theo bài, phân tích mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.
 
@@ -432,6 +488,6 @@ uv run python -m src.cli score --labels evaluation/labels.csv
 uv run python -m src.cli report --out report/final.pdf
 ```
 
-Hash manifest: papers.jsonl SHA-256 = d214b99a48813f97c51f5ecbd13ca614d58fae2c48148be0445bf0ad0364605d. Link GitHub: chưa có (repo chỉ ở máy cục bộ).
+Hash manifest: papers.jsonl SHA-256 = d214b99a48813f97c51f5ecbd13ca614d58fae2c48148be0445bf0ad0364605d. Link GitHub: https://github.com/Hungpham715/mxh (nhánh làm việc của đợt kiểm định được ghi trong undone.md).
 
 Tài liệu tham khảo: ACL Anthology (aclanthology.org/faq/api), arXiv API User Manual (info.arxiv.org/help/api), OpenAlex Works/Authorships/Topics (help.openalex.org), Neo4j Python Driver Manual, NetworkX small-world reference.

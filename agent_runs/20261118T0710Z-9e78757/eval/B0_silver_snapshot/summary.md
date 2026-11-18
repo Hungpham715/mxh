@@ -1,0 +1,42 @@
+# SILVER BENCHMARK — oracle-validated labels, NOT human gold (diagnostic, not G7)
+
+- variant: `B0_one_step`
+- model: `qwen3:0.6b`
+- graph: `snapshot`
+- app_mode: `snapshot`
+- dataset_sha256: `41178381d9b1c79e927b130314b648364d58b88f7c9611eebfdda0675830be40`
+- graph_snapshot: `c2c3f94e79086dc2`
+- run_timestamp: `2026-11-18T08:51:02.150288+00:00`
+
+| Metric | Value | n | 95% CI |
+|---|---:|---:|---|
+| cases | 300 | | |
+| label_tier | silver | | |
+| json_parse_validity | 1.0 | 300 | [0.9874, 1.0] |
+| route_accuracy | 0.9733 | 300 | [0.9483, 0.9864] |
+| status_accuracy | 0.96 | 300 | [0.9314, 0.977] |
+| intent_accuracy | 0.884 | 181 | [0.8291, 0.9229] |
+| entity_link_accuracy | 0.9613 | 181 | [0.9223, 0.9811] |
+| query_params_exact | 0.8729 | 181 | [0.8165, 0.9138] |
+| query_result_set_f1 | 0.9083 | 181 |  |
+| answer_name_recall | 0.654 | 181 |  |
+| count_exactness | 0.9231 | 13 | [0.6669, 0.9863] |
+| citation_precision | 0.9951 | 173 |  |
+| citation_url_valid | 1.0 | 173 | [0.9783, 1.0] |
+| out_of_scope_refusal | 1.0 | 4 | [0.5101, 1.0] |
+| false_refusal | 0.0068 | 296 | [0.0019, 0.0243] |
+| clarify_accuracy | 0.5 | 2 | [0.0945, 0.9055] |
+| ambiguity_detection | 1.0 | 86 | [0.9572, 1.0] |
+| not_found_accuracy | 0.9259 | 27 | [0.7663, 0.9794] |
+| multi_hop_query_success | 1.0 | 6 | [0.6097, 1.0] |
+| complete_flag_honest | 1.0 | 181 | [0.9792, 1.0] |
+| iterations_avg | 0.603 | | |
+| iterations_max | 1 | | |
+| llm_calls_avg | 1.717 | | |
+| latency_p50_ms | 4603.4 | | |
+| latency_p95_ms | 8769.2 | | |
+| timeout_count | 0 | | |
+| error_count | 0 | | |
+| error_categories | {'intent': 12, 'routing': 8, 'query': 2, 'status': 1} | | |
+| factual_precision_llm_judge | not_measured | | |
+| hallucination_rate_llm_judge | not_measured | | |

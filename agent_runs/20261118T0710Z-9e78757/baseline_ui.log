@@ -1,0 +1,12 @@
+npm notice To update run: npm install -g npm@12.2.3
+npm notice
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  14:11:38
+   Duration  159ms (transform 62%, import 22%, worker 8%, tests 7%)
+
+dist/assets/index-CEC-kZn6.css   11.54 kB │ gzip:   3.46 kB
+dist/assets/index-P0BWJuG6.js   362.74 kB │ gzip: 113.03 kB │ map: 1,891.96 kB
+
+[32m✓ built in 364ms[39m

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import os
 from pathlib import Path
 from typing import Any
 from xml.sax.saxutils import escape
@@ -41,10 +42,8 @@ class Doc:
                            "\n".join("| " + " | ".join(c.replace("|", "\\|") for c in r) + " |" for r in rows) + "\n")
             elif kind == "img":
                 path, cap, _ = v
-                try:
-                    rel = path.relative_to(base)
-                except ValueError:
-                    rel = path
+                # relative link, so the markdown never embeds a machine-specific absolute path
+                rel = Path(os.path.relpath(path, base))
                 out.append(f"![{cap}]({rel.as_posix()})\n\n*{cap}*\n")
         return "\n".join(out)
 

@@ -115,7 +115,7 @@ Phân tích mạng chỉ dùng đồ thị vô hướng, đơn Author—COAUTHOR
 
 Phần lớn tác giả cô lập là tác giả source_only/unresolved (định danh chỉ trong một bài) và tác giả của bài đơn tác giả; corpus là mẫu ~1.100 bài nên mạng bị phân mảnh mạnh – đây là đặc điểm của mẫu, không phải của cộng đồng NLP thật.
 
-![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](D:/nlp-collab-graph/output/analysis/degree_distribution.png)
+![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](../output/analysis/degree_distribution.png)
 
 *Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).*
 
@@ -149,7 +149,7 @@ Phương pháp: louvain (networkx.community.louvain_communities, weight=shared p
 | 4 | 82 | 15 | llm(4), retrieval(1) | Graham Neubig, Tongshuang Wu, Yulia Tsvetkov, Pengfei Liu |
 | 5 | 81 | 19 | llm(4), qa(2) | Maarten Sap, Alice Oh, Yejin Choi, Yeon Seonwoo |
 
-![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](D:/nlp-collab-graph/output/analysis/ego_top_pagerank.png)
+![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](../output/analysis/ego_top_pagerank.png)
 
 *Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).*
 
@@ -177,7 +177,7 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 
 Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
 
-![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](D:/nlp-collab-graph/output/analysis/small_world.png)
+![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](../output/analysis/small_world.png)
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
@@ -202,7 +202,7 @@ Kiểm tra cấu trúc: 30.971 cạnh được kiểm, **0** cạnh vi phạm.
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 151 | 20 | 15 | 2 | 3 | 0.75 | [0.531; 0.888] |
 
-Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% xấp xỉ phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% Wilson phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lại:
 
@@ -219,7 +219,7 @@ Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lạ
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 139 | 20 | 8 | 0 | 12 | 0.4 | [0.219; 0.613] |
 
-Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% xấp xỉ phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% Wilson phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 ### 7.1 Lỗi phát hiện và sửa
 

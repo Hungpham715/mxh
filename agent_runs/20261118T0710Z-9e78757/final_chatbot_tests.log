@@ -1,0 +1,4 @@
+......................................................................   [100%]
+All checks passed!
+28 files already formatted
+70 passed (uv run pytest)

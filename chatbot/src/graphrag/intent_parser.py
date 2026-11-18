@@ -116,6 +116,49 @@ def format_history(history: list[ChatTurn]) -> str:
     return "\n".join(lines) if lines else "(empty)"
 
 
+REFERENCE_SUFFIXES = (" đó", " ấy", " này", " kia")
+REFERENCE_WORDS = {
+    "họ",
+    "người đó",
+    "người ấy",
+    "anh ấy",
+    "chị ấy",
+    "ông ấy",
+    "bà ấy",
+    "tác giả",
+    "bài báo",
+    "tổ chức",
+    "he",
+    "she",
+    "they",
+    "them",
+    "him",
+    "her",
+    "it",
+    "that author",
+    "this author",
+    "that paper",
+    "this paper",
+    "the author",
+    "the paper",
+    "that institution",
+}
+
+
+def is_reference_expression(text: str) -> bool:
+    """True for pronouns/demonstratives ("tác giả đó", "that author").
+
+    They point at an entity; they are not one, so they never become a lookup key.
+    """
+    normalized = " ".join(text.casefold().split())
+    return (
+        normalized in REFERENCE_WORDS
+        or normalized.endswith(REFERENCE_SUFFIXES)
+        or normalized.startswith(("that ", "this "))
+        and len(normalized.split()) <= 3
+    )
+
+
 class IntentParser:
     def __init__(self, provider: LLMProvider) -> None:
         self.provider = provider
@@ -209,7 +252,11 @@ class IntentParser:
     def enforce_contract(intent: QueryIntent, question: str, history: list[ChatTurn]) -> QueryIntent:
         """Code-side checks that the model cannot override."""
         haystack = " ".join([question, *(turn.content for turn in history)]).casefold()
-        grounded = [entity for entity in intent.entities if entity.text.casefold() in haystack]
+        grounded = [
+            entity
+            for entity in intent.entities
+            if entity.text.casefold() in haystack and not is_reference_expression(entity.text)
+        ]
 
         route = intent.route
         missing = list(intent.missing_fields)

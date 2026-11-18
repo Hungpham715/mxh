@@ -218,3 +218,13 @@ async def test_spot_finds_quoted_title_and_names() -> None:
     spotted = await workflow.linker.spot("Đồng tác giả của Binh Tran?")
     assert ("Binh Tran", "Author") in [(item.text, item.type) for item in spotted]
     _ = repository
+
+
+def test_pronoun_phrase_is_not_an_entity() -> None:
+    intent = QueryIntent(
+        intent=IntentName.AUTHOR_PAPERS,
+        entities=[EntityMention(text="tác giả đó", type="Author")],
+    )
+    enforced = IntentParser.enforce_contract(intent, "Các bài báo của tác giả đó?", [])
+    assert enforced.entities == []
+    assert enforced.route == RouteName.CLARIFY

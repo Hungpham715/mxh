@@ -1,0 +1,168 @@
+{
+  "banner": "DEV REGRESSION on the validation split — used for tuning, not a reported benchmark",
+  "label_tier": "silver",
+  "provider": "ollama",
+  "model": "qwen3:0.6b",
+  "graph": "snapshot",
+  "app_mode": "snapshot",
+  "variant": "B1_iterative",
+  "max_iterations": 5,
+  "seed": 7,
+  "dataset": "data/splits/val.jsonl",
+  "dataset_sha256": "2cfefb878d0d462b11e7742e3381184043bb60cfb952e7efadd80b8cf56ab0ba",
+  "excluded_burned_cases": 0,
+  "sampled_case_ids_sha256": "95db755e94c77e09016a815837b0cdab9ebe13c1fe11b00e622eca2fbb0a81a6",
+  "graph_snapshot": "c2c3f94e79086dc2",
+  "prompt_sha256_16": "07810d793d897e9e",
+  "run_timestamp": "2026-11-18T07:57:48.929218+00:00",
+  "metrics": {
+    "cases": 60,
+    "label_tier": "silver",
+    "json_parse_validity": {
+      "value": 1.0,
+      "n": 60,
+      "ci95": [
+        0.9398,
+        1.0
+      ]
+    },
+    "route_accuracy": {
+      "value": 1.0,
+      "n": 60,
+      "ci95": [
+        0.9398,
+        1.0
+      ]
+    },
+    "status_accuracy": {
+      "value": 0.9,
+      "n": 60,
+      "ci95": [
+        0.7985,
+        0.9534
+      ]
+    },
+    "intent_accuracy": {
+      "value": 0.9118,
+      "n": 34,
+      "ci95": [
+        0.7704,
+        0.9695
+      ]
+    },
+    "entity_link_accuracy": {
+      "value": 0.9706,
+      "n": 34,
+      "ci95": [
+        0.8508,
+        0.9948
+      ]
+    },
+    "query_params_exact": {
+      "value": 0.9118,
+      "n": 34,
+      "ci95": [
+        0.7704,
+        0.9695
+      ]
+    },
+    "query_result_set_f1": {
+      "value": 0.9216,
+      "n": 34
+    },
+    "answer_name_recall": {
+      "value": 0.7882,
+      "n": 34
+    },
+    "count_exactness": {
+      "value": 0.6667,
+      "n": 6,
+      "ci95": [
+        0.3,
+        0.9032
+      ]
+    },
+    "citation_precision": {
+      "value": 0.9646,
+      "n": 33
+    },
+    "citation_url_valid": {
+      "value": 1.0,
+      "n": 33,
+      "ci95": [
+        0.8957,
+        1.0
+      ]
+    },
+    "out_of_scope_refusal": {
+      "value": 1.0,
+      "n": 1,
+      "ci95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "false_refusal": {
+      "value": 0.0,
+      "n": 59,
+      "ci95": [
+        0.0,
+        0.0611
+      ]
+    },
+    "clarify_accuracy": {
+      "value": 1.0,
+      "n": 2,
+      "ci95": [
+        0.3424,
+        1.0
+      ]
+    },
+    "ambiguity_detection": {
+      "value": 1.0,
+      "n": 17,
+      "ci95": [
+        0.8157,
+        1.0
+      ]
+    },
+    "not_found_accuracy": {
+      "value": 1.0,
+      "n": 6,
+      "ci95": [
+        0.6097,
+        1.0
+      ]
+    },
+    "multi_hop_query_success": {
+      "value": 1.0,
+      "n": 3,
+      "ci95": [
+        0.4385,
+        1.0
+      ]
+    },
+    "complete_flag_honest": {
+      "value": 0.9706,
+      "n": 34,
+      "ci95": [
+        0.8508,
+        0.9948
+      ]
+    },
+    "iterations_avg": 0.817,
+    "iterations_max": 5,
+    "llm_calls_avg": 1.983,
+    "latency_p50_ms": 5141.3,
+    "latency_p95_ms": 24536.8,
+    "timeout_count": 0,
+    "error_count": 0,
+    "error_categories": {
+      "status": 3,
+      "intent": 3,
+      "evidence": 2
+    },
+    "factual_precision_llm_judge": "not_measured",
+    "hallucination_rate_llm_judge": "not_measured"
+  }
+}

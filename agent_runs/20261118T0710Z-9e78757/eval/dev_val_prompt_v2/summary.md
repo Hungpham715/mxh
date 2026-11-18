@@ -1,0 +1,42 @@
+# DEV REGRESSION on the validation split — used for tuning, not a reported benchmark
+
+- variant: `B1_iterative`
+- model: `qwen3:0.6b`
+- graph: `snapshot`
+- app_mode: `snapshot`
+- dataset_sha256: `2cfefb878d0d462b11e7742e3381184043bb60cfb952e7efadd80b8cf56ab0ba`
+- graph_snapshot: `c2c3f94e79086dc2`
+- run_timestamp: `2026-11-18T07:57:48.929218+00:00`
+
+| Metric | Value | n | 95% CI |
+|---|---:|---:|---|
+| cases | 60 | | |
+| label_tier | silver | | |
+| json_parse_validity | 1.0 | 60 | [0.9398, 1.0] |
+| route_accuracy | 1.0 | 60 | [0.9398, 1.0] |
+| status_accuracy | 0.9 | 60 | [0.7985, 0.9534] |
+| intent_accuracy | 0.9118 | 34 | [0.7704, 0.9695] |
+| entity_link_accuracy | 0.9706 | 34 | [0.8508, 0.9948] |
+| query_params_exact | 0.9118 | 34 | [0.7704, 0.9695] |
+| query_result_set_f1 | 0.9216 | 34 |  |
+| answer_name_recall | 0.7882 | 34 |  |
+| count_exactness | 0.6667 | 6 | [0.3, 0.9032] |
+| citation_precision | 0.9646 | 33 |  |
+| citation_url_valid | 1.0 | 33 | [0.8957, 1.0] |
+| out_of_scope_refusal | 1.0 | 1 | [0.2065, 1.0] |
+| false_refusal | 0.0 | 59 | [0.0, 0.0611] |
+| clarify_accuracy | 1.0 | 2 | [0.3424, 1.0] |
+| ambiguity_detection | 1.0 | 17 | [0.8157, 1.0] |
+| not_found_accuracy | 1.0 | 6 | [0.6097, 1.0] |
+| multi_hop_query_success | 1.0 | 3 | [0.4385, 1.0] |
+| complete_flag_honest | 0.9706 | 34 | [0.8508, 0.9948] |
+| iterations_avg | 0.817 | | |
+| iterations_max | 5 | | |
+| llm_calls_avg | 1.983 | | |
+| latency_p50_ms | 5141.3 | | |
+| latency_p95_ms | 24536.8 | | |
+| timeout_count | 0 | | |
+| error_count | 0 | | |
+| error_categories | {'status': 3, 'intent': 3, 'evidence': 2} | | |
+| factual_precision_llm_judge | not_measured | | |
+| hallucination_rate_llm_judge | not_measured | | |

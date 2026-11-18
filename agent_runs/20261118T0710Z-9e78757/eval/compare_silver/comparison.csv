@@ -1,0 +1,4 @@
+baseline,status,label_tier,status_accuracy,intent_accuracy,query_result_set_f1,citation_precision,out_of_scope_refusal,latency_p50_ms,latency_p95_ms
+B0_base_one_step,run,silver,0.96,0.884,0.9083,0.9951,1.0,4603.4,8769.2
+B1_base_iterative,run,silver,0.96,0.884,0.9083,0.9908,1.0,4711.7,10869.2
+B2_sft_iterative,not_run,,,,,,,,

@@ -1,0 +1,17 @@
+{
+  "mode": "snapshot",
+  "llm": "ollama",
+  "graph": "snapshot",
+  "model": "qwen3:0.6b",
+  "health": {
+    "status": "ok",
+    "llm_ready": true,
+    "graph_ready": true
+  },
+  "cases": 28,
+  "passed": 28,
+  "continuation_more_ok": true,
+  "stream_cancel_ok": true,
+  "latency_p50_ms": 5812,
+  "latency_p95_ms": 21097
+}

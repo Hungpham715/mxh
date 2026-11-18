@@ -1,0 +1,341 @@
+{
+  "B0_base_one_step": {
+    "banner": "SILVER BENCHMARK — oracle-validated labels, NOT human gold (diagnostic, not G7)",
+    "label_tier": "silver",
+    "provider": "ollama",
+    "model": "qwen3:0.6b",
+    "graph": "snapshot",
+    "app_mode": "snapshot",
+    "variant": "B0_one_step",
+    "max_iterations": 1,
+    "seed": 20261118,
+    "dataset": "data/splits/test.jsonl",
+    "dataset_sha256": "41178381d9b1c79e927b130314b648364d58b88f7c9611eebfdda0675830be40",
+    "excluded_burned_cases": 56,
+    "sampled_case_ids_sha256": "42b32abb795a89af1f731cfb9e99279630f7fd742f71a92cccc909f7b39dc3d1",
+    "graph_snapshot": "c2c3f94e79086dc2",
+    "prompt_sha256_16": "07810d793d897e9e",
+    "run_timestamp": "2026-11-18T08:51:02.150288+00:00",
+    "metrics": {
+      "cases": 300,
+      "label_tier": "silver",
+      "json_parse_validity": {
+        "value": 1.0,
+        "n": 300,
+        "ci95": [
+          0.9874,
+          1.0
+        ]
+      },
+      "route_accuracy": {
+        "value": 0.9733,
+        "n": 300,
+        "ci95": [
+          0.9483,
+          0.9864
+        ]
+      },
+      "status_accuracy": {
+        "value": 0.96,
+        "n": 300,
+        "ci95": [
+          0.9314,
+          0.977
+        ]
+      },
+      "intent_accuracy": {
+        "value": 0.884,
+        "n": 181,
+        "ci95": [
+          0.8291,
+          0.9229
+        ]
+      },
+      "entity_link_accuracy": {
+        "value": 0.9613,
+        "n": 181,
+        "ci95": [
+          0.9223,
+          0.9811
+        ]
+      },
+      "query_params_exact": {
+        "value": 0.8729,
+        "n": 181,
+        "ci95": [
+          0.8165,
+          0.9138
+        ]
+      },
+      "query_result_set_f1": {
+        "value": 0.9083,
+        "n": 181
+      },
+      "answer_name_recall": {
+        "value": 0.654,
+        "n": 181
+      },
+      "count_exactness": {
+        "value": 0.9231,
+        "n": 13,
+        "ci95": [
+          0.6669,
+          0.9863
+        ]
+      },
+      "citation_precision": {
+        "value": 0.9951,
+        "n": 173
+      },
+      "citation_url_valid": {
+        "value": 1.0,
+        "n": 173,
+        "ci95": [
+          0.9783,
+          1.0
+        ]
+      },
+      "out_of_scope_refusal": {
+        "value": 1.0,
+        "n": 4,
+        "ci95": [
+          0.5101,
+          1.0
+        ]
+      },
+      "false_refusal": {
+        "value": 0.0068,
+        "n": 296,
+        "ci95": [
+          0.0019,
+          0.0243
+        ]
+      },
+      "clarify_accuracy": {
+        "value": 0.5,
+        "n": 2,
+        "ci95": [
+          0.0945,
+          0.9055
+        ]
+      },
+      "ambiguity_detection": {
+        "value": 1.0,
+        "n": 86,
+        "ci95": [
+          0.9572,
+          1.0
+        ]
+      },
+      "not_found_accuracy": {
+        "value": 0.9259,
+        "n": 27,
+        "ci95": [
+          0.7663,
+          0.9794
+        ]
+      },
+      "multi_hop_query_success": {
+        "value": 1.0,
+        "n": 6,
+        "ci95": [
+          0.6097,
+          1.0
+        ]
+      },
+      "complete_flag_honest": {
+        "value": 1.0,
+        "n": 181,
+        "ci95": [
+          0.9792,
+          1.0
+        ]
+      },
+      "iterations_avg": 0.603,
+      "iterations_max": 1,
+      "llm_calls_avg": 1.717,
+      "latency_p50_ms": 4603.4,
+      "latency_p95_ms": 8769.2,
+      "timeout_count": 0,
+      "error_count": 0,
+      "error_categories": {
+        "intent": 12,
+        "routing": 8,
+        "query": 2,
+        "status": 1
+      },
+      "factual_precision_llm_judge": "not_measured",
+      "hallucination_rate_llm_judge": "not_measured"
+    }
+  },
+  "B1_base_iterative": {
+    "banner": "SILVER BENCHMARK — oracle-validated labels, NOT human gold (diagnostic, not G7)",
+    "label_tier": "silver",
+    "provider": "ollama",
+    "model": "qwen3:0.6b",
+    "graph": "snapshot",
+    "app_mode": "snapshot",
+    "variant": "B1_iterative",
+    "max_iterations": 5,
+    "seed": 20261118,
+    "dataset": "data/splits/test.jsonl",
+    "dataset_sha256": "41178381d9b1c79e927b130314b648364d58b88f7c9611eebfdda0675830be40",
+    "excluded_burned_cases": 56,
+    "sampled_case_ids_sha256": "42b32abb795a89af1f731cfb9e99279630f7fd742f71a92cccc909f7b39dc3d1",
+    "graph_snapshot": "c2c3f94e79086dc2",
+    "prompt_sha256_16": "07810d793d897e9e",
+    "run_timestamp": "2026-11-18T08:26:03.445482+00:00",
+    "metrics": {
+      "cases": 300,
+      "label_tier": "silver",
+      "json_parse_validity": {
+        "value": 1.0,
+        "n": 300,
+        "ci95": [
+          0.9874,
+          1.0
+        ]
+      },
+      "route_accuracy": {
+        "value": 0.9733,
+        "n": 300,
+        "ci95": [
+          0.9483,
+          0.9864
+        ]
+      },
+      "status_accuracy": {
+        "value": 0.96,
+        "n": 300,
+        "ci95": [
+          0.9314,
+          0.977
+        ]
+      },
+      "intent_accuracy": {
+        "value": 0.884,
+        "n": 181,
+        "ci95": [
+          0.8291,
+          0.9229
+        ]
+      },
+      "entity_link_accuracy": {
+        "value": 0.9613,
+        "n": 181,
+        "ci95": [
+          0.9223,
+          0.9811
+        ]
+      },
+      "query_params_exact": {
+        "value": 0.8729,
+        "n": 181,
+        "ci95": [
+          0.8165,
+          0.9138
+        ]
+      },
+      "query_result_set_f1": {
+        "value": 0.9083,
+        "n": 181
+      },
+      "answer_name_recall": {
+        "value": 0.6595,
+        "n": 181
+      },
+      "count_exactness": {
+        "value": 0.9231,
+        "n": 13,
+        "ci95": [
+          0.6669,
+          0.9863
+        ]
+      },
+      "citation_precision": {
+        "value": 0.9908,
+        "n": 173
+      },
+      "citation_url_valid": {
+        "value": 1.0,
+        "n": 173,
+        "ci95": [
+          0.9783,
+          1.0
+        ]
+      },
+      "out_of_scope_refusal": {
+        "value": 1.0,
+        "n": 4,
+        "ci95": [
+          0.5101,
+          1.0
+        ]
+      },
+      "false_refusal": {
+        "value": 0.0068,
+        "n": 296,
+        "ci95": [
+          0.0019,
+          0.0243
+        ]
+      },
+      "clarify_accuracy": {
+        "value": 0.5,
+        "n": 2,
+        "ci95": [
+          0.0945,
+          0.9055
+        ]
+      },
+      "ambiguity_detection": {
+        "value": 1.0,
+        "n": 86,
+        "ci95": [
+          0.9572,
+          1.0
+        ]
+      },
+      "not_found_accuracy": {
+        "value": 0.9259,
+        "n": 27,
+        "ci95": [
+          0.7663,
+          0.9794
+        ]
+      },
+      "multi_hop_query_success": {
+        "value": 1.0,
+        "n": 6,
+        "ci95": [
+          0.6097,
+          1.0
+        ]
+      },
+      "complete_flag_honest": {
+        "value": 1.0,
+        "n": 181,
+        "ci95": [
+          0.9792,
+          1.0
+        ]
+      },
+      "iterations_avg": 0.617,
+      "iterations_max": 5,
+      "llm_calls_avg": 1.73,
+      "latency_p50_ms": 4711.7,
+      "latency_p95_ms": 10869.2,
+      "timeout_count": 0,
+      "error_count": 0,
+      "error_categories": {
+        "intent": 12,
+        "routing": 8,
+        "query": 2,
+        "status": 1
+      },
+      "factual_precision_llm_judge": "not_measured",
+      "hallucination_rate_llm_judge": "not_measured"
+    }
+  },
+  "B2_sft_iterative": "not_run"
+}
