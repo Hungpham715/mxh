@@ -1,7 +1,7 @@
 # FINAL ACCEPTANCE — run 20261118T0710Z-9e78757
 
 STATUS: INCOMPLETE
-GATES: G0 PASS · G1 PASS(snapshot)/Aura NOT VERIFIED · G2 PASS(snapshot census) · G3 BLOCKED · G4 BLOCKED · G5 PARTIAL(real Qwen, snapshot graph) · G6 BLOCKED(gold=0) · G7 BLOCKED(silver only) · G8 PASS except push (see below)
+GATES: G0 PASS · G1 PASS(snapshot)/Aura NOT VERIFIED · G2 PASS(snapshot census) · G3 BLOCKED · G4 BLOCKED · G5 PARTIAL(real Qwen, snapshot graph) · G6 BLOCKED(gold=0) · G7 BLOCKED(silver only) · G8 PASS (tests/lint/build, report, pushed branch)
 NEXT ACTION: owner resumes AuraDB (and rotates its password) → `cd chatbot && uv run python scripts/aura_inventory.py`; reviewers label `reports/graph_audit/g3_review_sheet_blind.csv`.
 
 ## Graph
@@ -27,7 +27,7 @@ NEXT ACTION: owner resumes AuraDB (and rotates its password) → `cd chatbot && 
 - UI: 4 tests passed, `tsc -b && vite build` OK (`final_ui.log`)
 
 ## Files
-- Commits on `agent/mxh-real-20261118-9e78757`: offline phase, chatbot phase, docs/evidence phase (`git log main..HEAD`).
+- Commits on `agent/mxh-real-20261118-9e78757` (2223ab1 offline, 8b03eb0 chatbot, bff0519 docs/evidence, + this note), pushed to https://github.com/Hungpham715/mxh/tree/agent/mxh-real-20261118-9e78757 (no force push, `main` untouched, no PR merged).
 - Key new files: `offline/src/evaluation/integrity_all.py`, `truth_audit.py`, `offline/src/analysis/coverage.py`, `chatbot/src/graphrag/graph/snapshot_graph.py`, `chatbot/datasets/build_large.py`, `chatbot/scripts/e2e_api.py`, `chatbot/scripts/aura_inventory.py`, `scripts/agent_resume.sh`, `README.md`, `undone.md`.
 - Report: `offline/report/final.pdf` (15 pages; chapters 8–9 added from artefacts). The member work split in the report was not changed (no confirmation available in this run).
 

@@ -14,7 +14,7 @@ Overall status: INCOMPLETE
 | G5 Qwen CPU chatbot REAL | PARTIAL — real Qwen3-0.6B via Ollama verified end-to-end on the local snapshot; not on Aura | `agent_runs/.../e2e_api.jsonl` + `.summary.json` (28/28), `eval/B1_silver_snapshot` | Depends on G4 |
 | G6 Dataset quality & scale | BLOCKED (silver targets met, gold = 0) | `reports/dataset/manifest.json` (10,619 candidates, 10,619 silver, leakage PASS) | ≥300–500 human/independent gold needed |
 | G7 Real chatbot benchmark | BLOCKED (silver diagnostic only) | `agent_runs/.../eval/B1_silver_snapshot`, `B0_silver_snapshot`, `compare_silver` | Needs gold test + Aura |
-| G8 Submit & share | see FINAL_ACCEPTANCE.md (tests/lint/build PASS, report 15 pages regenerated, branch commits) | `agent_runs/.../final_*_tests.log`, `offline/report/final.pdf` | Push result recorded in FINAL_ACCEPTANCE.md |
+| G8 Submit & share | PASS | tests/lint/build logs `agent_runs/.../final_*`, `offline/report/final.pdf` (15 pages), branch pushed: https://github.com/Hungpham715/mxh/tree/agent/mxh-real-20261118-9e78757 | PR not opened/merged (owner decision) |
 
 ## Work remaining (ordered by dependency)
 
