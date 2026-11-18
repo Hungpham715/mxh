@@ -1,5 +1,5 @@
 STATUS: INCOMPLETE
-GATES: G0 PASS; G1 BLOCKED; G2 PASS; G3 BLOCKED; G4 BLOCKED; G5 BLOCKED; G6 BLOCKED; G7 BLOCKED; G8 PENDING_PUSH
+GATES: G0 PASS; G1 BLOCKED; G2 PASS; G3 BLOCKED; G4 BLOCKED; G5 BLOCKED; G6 BLOCKED; G7 BLOCKED; G8 PASS
 NEXT ACTION: Resume AuraDB, then obtain independent graph-truth and 500-row QA review before rerunning the official real benchmark.
 
 # Final acceptance record
@@ -11,6 +11,10 @@ Branch: `agent/mxh-real-20261117-9e78757`
 Base: `9e78757086fc281ba5d9f5f1ab28cc1f31ab5d8a`
 
 Snapshot: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
+
+Implementation commit: `36df0784de28d23c7916135f3f1cca0185d88517`
+
+Push: `origin/agent/mxh-real-20261117-9e78757`
 
 ## Verdict
 
@@ -30,7 +34,7 @@ diagnostic is below the official benchmark requirements.
 | G5 | BLOCKED | local real REST/SSE smoke passed; Aura unavailable and local diagnostic misses acceptance |
 | G6 | BLOCKED | 11,998 unique graph-revalidated silver rows and 12 actions; human gold n=0 |
 | G7 | BLOCKED | local real n=31: status 25, oracle 15/21, p50 5,911 ms, p95 17,392 ms; no >=300 gold |
-| G8 | PENDING_PUSH | backend/offline/UI gates and 13-page report plus addendum pass; commit/push pending |
+| G8 | PASS | backend/offline/UI gates pass; 13-page report plus addendum; commit `36df078`; safe branch pushed to origin without force |
 
 ## Real, synthetic, and not run
 

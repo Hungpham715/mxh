@@ -1,6 +1,6 @@
 # MXH — Undone / Deferred / Blocked
-Last updated: 2026-11-18T00:39:30Z
-Run ID: 20261117T1631-9e78757 | Git commit/branch: base `9e78757`, branch `agent/mxh-real-20261117-9e78757` (final commit/push pending) | Graph snapshot hash: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
+Last updated: 2026-11-18T00:44:48Z
+Run ID: 20261117T1631-9e78757 | Git commit/branch: `36df078`, pushed branch `agent/mxh-real-20261117-9e78757` | Graph snapshot hash: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
 Overall status: INCOMPLETE
 
 ## Gate status
@@ -14,7 +14,7 @@ Overall status: INCOMPLETE
 | G5 | BLOCKED | `agent_runs/20261117T1631-9e78757/api_real_smoke.json`; `e2e_real_results.json` | Real local Neo4j + Ollama worked, but Aura requirement is unmet and 31-case quality is below acceptance |
 | G6 | BLOCKED | `chatbot/data/splits/manifest_v2.json`; `chatbot/data/review/human_gold_review_v2.csv` | 11,998 silver cases cover 12 actions, but held-out human gold is 0/500 labelled |
 | G7 | BLOCKED | `agent_runs/20261117T1631-9e78757/e2e_real_results.json` | Only 31 local-real cases: status 25/31, oracle 15/21; no >=300 independent gold benchmark or Aura run |
-| G8 | PENDING_PUSH | `offline/report/final.pdf`; `offline/report/submission_addendum_20261118.md`; test logs in final acceptance | Tests/report are ready; safe branch commit and push still pending at this checkpoint |
+| G8 | PASS | `offline/report/final.pdf`; `offline/report/submission_addendum_20261118.md`; commit `36df078`; `origin/agent/mxh-real-20261117-9e78757` | — |
 
 ## Work remaining (ordered by dependency)
 
@@ -73,3 +73,4 @@ Overall status: INCOMPLETE
 - chatbot suite | current worktree | `cd chatbot && uv run ruff check . && uv run ruff format --check . && uv run pytest -q` | PASS, 78 tests
 - offline suite | current worktree | `cd offline && uv run python -m pytest -o addopts='' -q` | PASS, 89 tests
 - UI suite/build | current worktree | `cd chatbot/ui && npm run test -- --run && npm run build` | PASS, 2 tests and production build
+- safe Git publication | `36df0784de28d23c7916135f3f1cca0185d88517` | `git push -u origin agent/mxh-real-20261117-9e78757` | PASS, no force
