@@ -99,9 +99,19 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
     comps = sorted(nx.connected_components(g), key=len, reverse=True)
     if not comps or len(comps[0]) < 10:
         return {"status": "undetermined", "reason": "LCC too small"}
-    lcc = nx.Graph(g.subgraph(comps[0]))
-    for u, v in lcc.edges():
-        lcc[u][v].clear()
+    # Reproducibility: build the LCC explicitly with integer labels instead of
+    # g.subgraph(...). nx.Graph.subgraph internally iterates a *set* of the requested
+    # nodes, so its node order (and therefore the seeded double-edge-swap sequence below)
+    # would vary between processes because of Python's string-hash randomization.
+    # Sorted names -> labels 0..n-1 and edges copied in g's fixed iteration order make
+    # the random baseline byte-reproducible across runs and machines.
+    names = sorted(comps[0])
+    label = {name: i for i, name in enumerate(names)}
+    lcc = nx.Graph()
+    lcc.add_nodes_from(range(len(names)))
+    for u, v in g.edges():
+        if u in label and v in label:
+            lcc.add_edge(label[u], label[v])
     rng = random.Random(seed)
     c_obs = nx.average_clustering(lcc)
     l_obs, l_method = avg_shortest_path(lcc, max_exact, random.Random(seed), n_sources)
@@ -134,6 +144,49 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
             "limitations": ["Multi-author papers create cliques that mechanically raise clustering.",
                             "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
                             "No significance test performed; sigma is descriptive only."]}
+
+
+def core_decomposition(g: nx.Graph, top_communities: list[list[str]] | None = None) -> dict[str, Any]:
+    """k-core decomposition — the network's densest kernel ("hạt nhân").
+
+    core_number(n) is the largest k such that n sits inside a k-core: a maximal subgraph
+    where every node has at least k neighbours within the subgraph. The highest k-core is
+    the most tightly interconnected kernel of the projection. For each community passed in
+    (list of member ids, largest first), the kernel members are the nodes with the highest
+    core number, ties broken by weighted degree then id.
+    """
+    if g.number_of_edges() == 0:
+        return {"method": "none", "max_core": 0, "kernel_size": 0, "kernel_edges": 0,
+                "kernel_density": 0.0, "kernel_members": [], "core_histogram": {},
+                "community_kernels": []}
+    core = nx.core_number(g)
+    max_core = max(core.values())
+    kernel_nodes = [n for n, k in core.items() if k == max_core]
+    kernel_sub = g.subgraph(kernel_nodes)
+
+    def rank_key(n: str) -> tuple[int, int, str]:
+        return (-core[n], -g.degree(n, weight="weight"), n)
+
+    kernel_members = [
+        {"author_id": n, "name": g.nodes[n].get("name"), "core": core[n],
+         "degree": g.degree(n), "weighted_degree": g.degree(n, weight="weight")}
+        for n in sorted(kernel_nodes, key=rank_key)[:10]
+    ]
+    histogram = {str(k): v for k, v in sorted(Counter(core.values()).items())}
+    community_kernels = []
+    for i, members in enumerate(top_communities or []):
+        ranked = sorted(members, key=rank_key)
+        community_kernels.append({
+            "community": i,
+            "max_core": core[ranked[0]] if ranked else 0,
+            "kernel_members": [g.nodes[n].get("name") for n in ranked[:5]],
+        })
+    return {"method": "k-core decomposition (networkx.core_number, unweighted)",
+            "max_core": max_core, "kernel_size": len(kernel_nodes),
+            "kernel_edges": kernel_sub.number_of_edges(),
+            "kernel_density": round(nx.density(kernel_sub), 4) if len(kernel_nodes) > 1 else 0.0,
+            "kernel_members": kernel_members, "core_histogram": histogram,
+            "community_kernels": community_kernels}
 
 
 def degree_distribution(g: nx.Graph) -> list[tuple[int, int]]:

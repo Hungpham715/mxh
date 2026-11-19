@@ -517,6 +517,13 @@
         "Haoyang Huang",
         "Rui Yan"
       ],
+      "kernel_members": [
+        "Jian Luan",
+        "Hongzhang Mu",
+        "Gaopeng Gou",
+        "Li Qian",
+        "Yongxiu Xu"
+      ],
       "paper_examples": [
         "Pre-Training to Learn in Context",
         "UniEvent: Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
@@ -549,6 +556,13 @@
         "Junjie Fang",
         "Yunshui Li"
       ],
+      "kernel_members": [
+        "Maosong Sun",
+        "Junjie Fang",
+        "Zhiyuan Liu",
+        "Yankai Lin",
+        "Guirong Chen"
+      ],
       "paper_examples": [
         "Decoder Tuning: Efficient Language Understanding as Decoding",
         "Denoising Bottleneck with Mutual Information Maximization for Video Multimodal Fusion",
@@ -572,6 +586,13 @@
         "Hang Yan",
         "Hai-Tao Zheng",
         "Jingheng Ye"
+      ],
+      "kernel_members": [
+        "Xipeng Qiu",
+        "Qipeng Guo",
+        "Yuqing Yang",
+        "Hang Yan",
+        "Yu Sun"
       ],
       "paper_examples": [
         "DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models",
@@ -605,6 +626,13 @@
         "Zhangyang Wang",
         "Tianlong Chen"
       ],
+      "kernel_members": [
+        "Mohit Bansal",
+        "Huaxiu Yao",
+        "Yuancheng Xu",
+        "Furong Huang",
+        "Fuxiao Liu"
+      ],
       "paper_examples": [
         "DSEE: Dually Sparsity-embedded Efficient Tuning of Pre-trained Language Models",
         "MixCE: Training Autoregressive Language Models by Mixing Forward and Reverse Cross-Entropies",
@@ -632,6 +660,13 @@
         "Pengfei Liu",
         "Zhaoxuan Tan",
         "Shuyan Zhou"
+      ],
+      "kernel_members": [
+        "Graham Neubig",
+        "Tongshuang Wu",
+        "Yulia Tsvetkov",
+        "Pengfei Liu",
+        "André F. T. Martins"
       ],
       "paper_examples": [
         "KALM: Knowledge-Aware Integration of Local, Document, and Global Contexts for Long Document Understanding",
@@ -661,6 +696,13 @@
         "Hyunwoo Kim",
         "Yonatan Bisk"
       ],
+      "kernel_members": [
+        "Alice Oh",
+        "Yeon Seonwoo",
+        "Guoyin Wang",
+        "Sajal Choudhary",
+        "Sunghyun Park"
+      ],
       "paper_examples": [
         "To Adapt or to Annotate: Challenges and Interventions for Domain Adaptation in Open-Domain Question Answering",
         "Ranking-Enhanced Unsupervised Sentence Representation Learning",
@@ -677,11 +719,11 @@
           3
         ],
         [
-          "mt",
+          "qa",
           1
         ],
         [
-          "qa",
+          "mt",
           1
         ]
       ],
@@ -692,6 +734,13 @@
         "Vishesh Kakarala",
         "Charith Peris",
         "Swetha Ranganath"
+      ],
+      "kernel_members": [
+        "Prem Natarajan",
+        "Vishesh Kakarala",
+        "Charith Peris",
+        "Swetha Ranganath",
+        "Liam Urbach"
       ],
       "paper_examples": [
         "Do Question Answering Modeling Improvements Hold Across Benchmarks?",
@@ -721,6 +770,13 @@
         "Yaozu Wu",
         "Yue Zhou"
       ],
+      "kernel_members": [
+        "Philip S. Yu",
+        "Henry Peng Zou",
+        "Renhe Jiang",
+        "Dongyuan Li",
+        "Yaozu Wu"
+      ],
       "paper_examples": [
         "DAMe: Personalized Federated Social Event Detection with Dual Aggregation Mechanism",
         "Does Knowledge Localization Hold True? Surprising Differences Between Entity and Relation Perspectives in Language Models",
@@ -733,11 +789,11 @@
       "papers": 14,
       "top_topics": [
         [
-          "llm",
+          "mt",
           2
         ],
         [
-          "mt",
+          "llm",
           2
         ],
         [
@@ -752,6 +808,13 @@
         "Bei Li",
         "Yafu Li",
         "Yongjing Yin"
+      ],
+      "kernel_members": [
+        "Tong Xiao",
+        "JingBo Zhu",
+        "Bei Li",
+        "Boxing Chen",
+        "Shimin Tao"
       ],
       "paper_examples": [
         "Inflected Forms Are Redundant in Question Generation Models",
@@ -769,11 +832,11 @@
           4
         ],
         [
-          "qa",
+          "summarization",
           1
         ],
         [
-          "summarization",
+          "qa",
           1
         ]
       ],
@@ -785,6 +848,13 @@
         "Jonathan Herzig",
         "Shruti Rijhwani"
       ],
+      "kernel_members": [
+        "Roee Aharoni",
+        "Shruti Rijhwani",
+        "Dipanjan Das",
+        "Aditya Siddhant",
+        "Joshua Maynez"
+      ],
       "paper_examples": [
         "Conjunct Resolution in the Face of Verbal Omissions",
         "A Novel Computational and Modeling Foundation for Automatic Coherence Assessment",
@@ -792,6 +862,219 @@
       ]
     }
   ],
+  "core": {
+    "method": "k-core decomposition (networkx.core_number, unweighted)",
+    "max_core": 19,
+    "kernel_size": 20,
+    "kernel_edges": 190,
+    "kernel_density": 1.0,
+    "kernel_members": [
+      {
+        "author_id": "oa:A5036357902",
+        "name": "Philip S. Yu",
+        "core": 19,
+        "degree": 42,
+        "weighted_degree": 42
+      },
+      {
+        "author_id": "oa:A5109737659",
+        "name": "Henry Peng Zou",
+        "core": 19,
+        "degree": 22,
+        "weighted_degree": 22
+      },
+      {
+        "author_id": "oa:A5040449880",
+        "name": "Renhe Jiang",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5047165324",
+        "name": "Dongyuan Li",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5054147216",
+        "name": "Yaozu Wu",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5056671291",
+        "name": "Yue Zhou",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5061585074",
+        "name": "Yangning Li",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5100372157",
+        "name": "Xue Liu",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5101472565",
+        "name": "Wei-Chieh Huang",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      },
+      {
+        "author_id": "oa:A5113315265",
+        "name": "Liancheng Fang",
+        "core": 19,
+        "degree": 19,
+        "weighted_degree": 19
+      }
+    ],
+    "core_histogram": {
+      "0": 201,
+      "1": 172,
+      "2": 343,
+      "3": 608,
+      "4": 786,
+      "5": 836,
+      "6": 643,
+      "7": 590,
+      "8": 317,
+      "9": 308,
+      "10": 181,
+      "11": 143,
+      "12": 52,
+      "13": 98,
+      "14": 30,
+      "15": 48,
+      "16": 17,
+      "17": 18,
+      "18": 19,
+      "19": 20
+    },
+    "community_kernels": [
+      {
+        "community": 0,
+        "max_core": 11,
+        "kernel_members": [
+          "Jian Luan",
+          "Hongzhang Mu",
+          "Gaopeng Gou",
+          "Li Qian",
+          "Yongxiu Xu"
+        ]
+      },
+      {
+        "community": 1,
+        "max_core": 13,
+        "kernel_members": [
+          "Maosong Sun",
+          "Junjie Fang",
+          "Zhiyuan Liu",
+          "Yankai Lin",
+          "Guirong Chen"
+        ]
+      },
+      {
+        "community": 2,
+        "max_core": 13,
+        "kernel_members": [
+          "Xipeng Qiu",
+          "Qipeng Guo",
+          "Yuqing Yang",
+          "Hang Yan",
+          "Yu Sun"
+        ]
+      },
+      {
+        "community": 3,
+        "max_core": 12,
+        "kernel_members": [
+          "Mohit Bansal",
+          "Huaxiu Yao",
+          "Yuancheng Xu",
+          "Furong Huang",
+          "Fuxiao Liu"
+        ]
+      },
+      {
+        "community": 4,
+        "max_core": 10,
+        "kernel_members": [
+          "Graham Neubig",
+          "Tongshuang Wu",
+          "Yulia Tsvetkov",
+          "Pengfei Liu",
+          "André F. T. Martins"
+        ]
+      },
+      {
+        "community": 5,
+        "max_core": 8,
+        "kernel_members": [
+          "Alice Oh",
+          "Yeon Seonwoo",
+          "Guoyin Wang",
+          "Sajal Choudhary",
+          "Sunghyun Park"
+        ]
+      },
+      {
+        "community": 6,
+        "max_core": 15,
+        "kernel_members": [
+          "Prem Natarajan",
+          "Vishesh Kakarala",
+          "Charith Peris",
+          "Swetha Ranganath",
+          "Liam Urbach"
+        ]
+      },
+      {
+        "community": 7,
+        "max_core": 19,
+        "kernel_members": [
+          "Philip S. Yu",
+          "Henry Peng Zou",
+          "Renhe Jiang",
+          "Dongyuan Li",
+          "Yaozu Wu"
+        ]
+      },
+      {
+        "community": 8,
+        "max_core": 12,
+        "kernel_members": [
+          "Tong Xiao",
+          "JingBo Zhu",
+          "Bei Li",
+          "Boxing Chen",
+          "Shimin Tao"
+        ]
+      },
+      {
+        "community": 9,
+        "max_core": 9,
+        "kernel_members": [
+          "Roee Aharoni",
+          "Shruti Rijhwani",
+          "Dipanjan Das",
+          "Aditya Siddhant",
+          "Joshua Maynez"
+        ]
+      }
+    ]
+  },
   "shortest_path_example": {
     "source": "oa:A5044665993",
     "target": "oa:A5014662947",
@@ -894,37 +1177,37 @@
       {
         "seed": 20261108,
         "nodes": 970,
-        "C": 0.0141,
-        "L": 3.3122
+        "C": 0.0137,
+        "L": 3.3177
       },
       {
         "seed": 20261109,
         "nodes": 970,
-        "C": 0.0153,
-        "L": 3.3137
+        "C": 0.0129,
+        "L": 3.3033
       },
       {
         "seed": 20261110,
         "nodes": 970,
-        "C": 0.013,
-        "L": 3.3113
+        "C": 0.0154,
+        "L": 3.3138
       },
       {
         "seed": 20261111,
         "nodes": 970,
-        "C": 0.0158,
-        "L": 3.2993
+        "C": 0.015,
+        "L": 3.307
       },
       {
         "seed": 20261112,
         "nodes": 970,
-        "C": 0.0151,
-        "L": 3.3129
+        "C": 0.0144,
+        "L": 3.3043
       }
     ],
-    "C_rand": 0.0147,
-    "L_rand": 3.3099,
-    "sigma": 18.73,
+    "C_rand": 0.0143,
+    "L_rand": 3.3092,
+    "sigma": 19.225,
     "verdict": "no clear small-world indication",
     "limitations": [
       "Multi-author papers create cliques that mechanically raise clustering.",
