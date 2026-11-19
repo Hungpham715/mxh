@@ -1,0 +1,35 @@
+profile: mode=real graph=neo4j llm=ollama model=qwen3:0.6b
+[A1] author_papers: status=answered route=graph_qa iters=1 llm=3 20521ms status_ok=True oracle_ok=True
+[A2] author_papers: status=answered route=graph_qa iters=1 llm=3 20757ms status_ok=True oracle_ok=True
+[A3] author_papers_year: status=answered route=graph_qa iters=1 llm=3 8799ms status_ok=True oracle_ok=True
+[C1] coauthors: status=answered route=graph_qa iters=1 llm=3 20267ms status_ok=True oracle_ok=True
+[C2] coauthors: status=answered route=graph_qa iters=1 llm=4 15909ms status_ok=True oracle_ok=True
+[C3] shared_papers: status=not_found route=graph_qa iters=0 llm=1 2947ms status_ok=False oracle_ok=False
+[F1] author_affiliations: status=clarify route=clarify iters=0 llm=1 1464ms status_ok=False oracle_ok=False
+[F2] coauthor_affiliations: status=clarify route=clarify iters=0 llm=1 1426ms status_ok=False oracle_ok=None
+[F3] author_affiliations: status=error route=None iters=0 llm=0 3986ms status_ok=False oracle_ok=False
+[P1] paper_authors: status=out_of_scope route=graph_qa iters=0 llm=2 1738ms status_ok=False oracle_ok=False
+[P2] paper_venue: status=error route=None iters=0 llm=0 28414ms status_ok=False oracle_ok=False
+[P3] paper_citations: status=not_found route=graph_qa iters=0 llm=1 3080ms status_ok=False oracle_ok=False
+[P4] paper_authors: status=not_found route=graph_qa iters=0 llm=1 3059ms status_ok=False oracle_ok=False
+[T1] topic_papers: status=answered route=graph_qa iters=1 llm=3 21126ms status_ok=True oracle_ok=True
+[T2] topic_papers: status=answered route=graph_qa iters=1 llm=3 25401ms status_ok=True oracle_ok=True
+[O1] org_collaborations: status=not_found route=graph_qa iters=0 llm=1 2336ms status_ok=False oracle_ok=False
+[O2] org_collaborations: status=out_of_scope route=out_of_scope iters=0 llm=2 1366ms status_ok=False oracle_ok=False
+[R1] network_top: status=answered route=graph_qa iters=1 llm=3 18237ms status_ok=True oracle_ok=True
+[H1] author_path: status=clarify route=clarify iters=0 llm=1 1670ms status_ok=False oracle_ok=None
+[U1] unknown_entity: status=clarify route=clarify iters=0 llm=1 2040ms status_ok=True oracle_ok=None
+[U2] unknown_entity: status=clarify route=clarify iters=0 llm=1 1874ms status_ok=True oracle_ok=None
+[M1] ambiguous: status=ambiguous route=graph_qa iters=0 llm=1 1948ms status_ok=True oracle_ok=None
+[X1] out_of_scope: status=out_of_scope route=out_of_scope iters=0 llm=2 1397ms status_ok=True oracle_ok=None
+[X2] out_of_scope: status=out_of_scope route=out_of_scope iters=0 llm=2 1426ms status_ok=True oracle_ok=None
+[X3] out_of_scope: status=out_of_scope route=out_of_scope iters=0 llm=2 1391ms status_ok=True oracle_ok=None
+[L1] clarify: status=not_found route=graph_qa iters=0 llm=1 2015ms status_ok=True oracle_ok=None
+[Y1] chat_history: status=answered route=chat_history iters=0 llm=2 2032ms status_ok=True oracle_ok=None
+[Y2] followup_coref: status=clarify route=clarify iters=0 llm=1 2312ms status_ok=False oracle_ok=False
+[N1] count: status=answered route=graph_qa iters=1 llm=3 15633ms status_ok=True oracle_ok=True
+[G1] author_papers: status=answered route=graph_qa iters=1 llm=3 17361ms status_ok=True oracle_ok=True
+[G2] coauthors: status=clarify route=clarify iters=0 llm=1 1794ms status_ok=False oracle_ok=False
+
+SUMMARY: {"timestamp_utc": "2026-11-17T18:04:41.812643+00:00", "profile": {"mode": "real", "graph": "neo4j", "llm": "ollama", "model": "qwen3:0.6b", "scope_id": "nlpgraph-v1"}, "cases": 31, "status_ok": 18, "oracle_checked": 21, "oracle_ok": 10, "latency_p50_ms": 2336, "latency_p95_ms": 25401}
+EXIT=0

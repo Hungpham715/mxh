@@ -48,12 +48,15 @@ The new probability sample uses seed `20261118`, covers every relationship type,
 and contains 386 rows (40 per type except the complete 26-edge `CITES`
 population). All 386 human-review decisions remain blank.
 
-An automated source-record diagnostic reports a population-weighted point estimate
-of 0.8802 with stratified Wilson 95% interval [0.8548, 0.9017], macro precision
-0.825, and 70 unverifiable rows. It is neither independent nor above the required
-threshold. Therefore graph truth is **NOT VERIFIED** and G3 is **BLOCKED** until an
-independent reviewer completes the queue and both the point estimate and the lower
-95% confidence bound exceed 0.90.
+The initial automated source-record diagnostic reports a population-weighted point
+estimate of 0.8802 with stratified Wilson 95% interval [0.8548, 0.9017]. A second,
+explicitly non-human Codex source audit inspected 335 ACL/arXiv landing pages plus
+the required PDFs and labelled all 386 rows: 382 correct and 4 incorrect. Its
+population-weighted precision is 0.9898 with stratified Wilson 95% interval
+[0.9732, 0.9962]. The four detected errors comprise two `AFFILIATED_WITH` and two
+`ORG_COAUTHORED_WITH` edges. This is useful defect evidence, but it was produced in
+the same delivery workflow and is **NOT human annotation**. It therefore cannot
+clear the independent-review provenance requirement: G3 remains **BLOCKED**.
 
 ## Dataset and training preparation
 
@@ -63,8 +66,12 @@ records, which are labelled `silver_approved`, not human gold. The leakage-safe
 split contains 8,402 train, 1,808 validation, and 1,788 held-out test records; there
 are no duplicate normalized questions across splits. The SFT conversion contains
 16,744 messages-format records and passes CPU schema/dry-run validation. A
-reproducible 500-row held-out human-review queue was exported, but 0/500 rows have
-independent labels. G6 therefore remains **BLOCKED**.
+reproducible 500-row held-out human-review queue was exported. Codex additionally
+source-checked all 500 rows and 22 challenge cases, importing them under the new
+`independent_approved` status with an explicit `NOT HUMAN REVIEW` banner. This
+non-human set is useful for development diagnostics but is not promoted to
+`approved`/human gold. Independent human labels remain 0/500, so G6 remains
+**BLOCKED**.
 
 ## Real chatbot validation
 
@@ -87,7 +94,7 @@ review queue yields at least 300 unseen independent-gold cases.
 
 ## Reproducibility and limitations
 
-The final run passed 81 chatbot tests, 89 offline tests, 2 UI tests, Ruff lint and
+The final run passed 85 chatbot tests, 89 offline tests, 2 UI tests, Ruff lint and
 format checks, and the production UI build. The detailed acceptance record is in
 `agent_runs/20261117T1631-9e78757/FINAL_ACCEPTANCE.md`; ordered blockers and exact
 resume actions are in root `undone.md`.
