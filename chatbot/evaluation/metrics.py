@@ -3,21 +3,23 @@
 Honesty rules (per evaluation design):
 - Nothing is hardcoded. Every rate is computed from per-case rows produced by a real run.
 - Metrics that require labels the dataset does not carry return NOT_MEASURED.
-- `label_level` states what the expected values are: "human_gold" (independently reviewed),
-  "silver" (source-validated by the pipeline) or "synthetic" (fixture smoke, never a benchmark).
+- `label_level` states what the expected values are: "human_gold", "nonhuman_source_review"
+  (explicitly not official independent gold), "silver" (source-validated by the pipeline),
+  or "synthetic" (fixture smoke, never a benchmark).
 """
 
 from __future__ import annotations
 
 import math
 import re
+import unicodedata
 from collections import Counter
 from statistics import median
 from typing import Any
 
 NOT_MEASURED = "not_measured"
 
-GOLD_LEVELS = {"human_gold", "silver"}
+GOLD_LEVELS = {"human_gold", "nonhuman_source_review", "silver"}
 
 
 def safe_divide(numerator: float, denominator: float) -> float | str:
@@ -50,6 +52,22 @@ def token_f1(prediction: str, expected: str) -> float:
     return f1
 
 
+def factual_value_set(text: str) -> set[str]:
+    """Parse the evaluator's canonical semicolon/newline-separated answer-value contract."""
+    values: set[str] = set()
+    for item in re.split(r"[;\n]+", text or ""):
+        normalized = unicodedata.normalize("NFKC", item).casefold()
+        normalized = re.sub(r"\s+", " ", normalized).strip(" \t\r\n-•*._'\"“”")
+        if normalized:
+            values.add(normalized)
+    return values
+
+
+def factual_set_score(prediction: str, expected: str) -> dict[str, float]:
+    """Exact set P/R/F1 over canonical factual values, independent of word frequency."""
+    return precision_recall_f1(factual_value_set(prediction), factual_value_set(expected))
+
+
 def percentile(values: list[float], quantile: float) -> float:
     if not values:
         return 0.0
@@ -77,7 +95,7 @@ def _first_integer(text: str) -> int | None:
 
 def summarize(rows: list[dict[str, Any]], label_level: str) -> dict[str, Any]:
     """Aggregate per-case rows. `label_level` gates metrics that need reviewed expectations."""
-    if label_level not in {"human_gold", "silver", "synthetic"}:
+    if label_level not in {"human_gold", "nonhuman_source_review", "silver", "synthetic"}:
         raise ValueError(f"unknown label_level: {label_level}")
     has_labels = label_level in GOLD_LEVELS
     n = len(rows)
@@ -138,6 +156,11 @@ def summarize(rows: list[dict[str, Any]], label_level: str) -> dict[str, Any]:
     )
 
     answer_scores = [row["answer_token_f1"] for row in rows if row["answer_token_f1"] is not None]
+    factual_scores = [
+        factual_set_score(row["prediction"].get("answer") or "", row.get("expected_answer") or "")
+        for row in rows
+        if row.get("expected_answer") and not str(row.get("template_id", "")).endswith("_count")
+    ]
 
     count_rows = [row for row in rows if str(row.get("template_id", "")).endswith("_count")]
     count_exact = []
@@ -153,7 +176,11 @@ def summarize(rows: list[dict[str, Any]], label_level: str) -> dict[str, Any]:
             return NOT_MEASURED
         return sum(row["status_match"] for row in group) / len(group)
 
-    multi_hop_rows = [row for row in rows if int(row["prediction"]["iterations_used"]) >= 2]
+    multi_hop_rows = [
+        row
+        for row in rows
+        if row.get("expected_intent") == "author_path" or int(row["prediction"]["iterations_used"]) >= 2
+    ]
 
     summary: dict[str, Any] = {
         "cases": n,
@@ -201,6 +228,21 @@ def summarize(rows: list[dict[str, Any]], label_level: str) -> dict[str, Any]:
         "answer_token_f1": (
             safe_divide(sum(answer_scores), len(answer_scores))
             if has_labels and answer_scores
+            else NOT_MEASURED
+        ),
+        "answer_factual_set_precision": (
+            safe_divide(sum(score["precision"] for score in factual_scores), len(factual_scores))
+            if has_labels and factual_scores
+            else NOT_MEASURED
+        ),
+        "answer_factual_set_recall": (
+            safe_divide(sum(score["recall"] for score in factual_scores), len(factual_scores))
+            if has_labels and factual_scores
+            else NOT_MEASURED
+        ),
+        "answer_factual_set_f1": (
+            safe_divide(sum(score["f1"] for score in factual_scores), len(factual_scores))
+            if has_labels and factual_scores
             else NOT_MEASURED
         ),
         "numeric_exactness": safe_divide(sum(count_exact), len(count_exact)) if count_exact else NOT_MEASURED,

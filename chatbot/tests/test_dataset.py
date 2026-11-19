@@ -5,6 +5,7 @@ import pytest
 
 from datasets.audit_dataset import build_manifest
 from datasets.auto_review import validate_cases_against_graph
+from datasets.build_independent_holdout import build_holdout
 from datasets.build_sft import build_samples, parse_completion
 from datasets.export_review import export_review, select_review_cases
 from datasets.generate_from_graph import _unique_name_entities, generate
@@ -13,6 +14,7 @@ from datasets.import_review import import_review
 from datasets.io import write_models
 from datasets.schema import QuestionCase, ReviewStatus
 from datasets.split import assert_no_entity_leakage, assign_splits
+from evaluation.run_eval import _label_level
 
 
 @pytest.mark.asyncio
@@ -67,6 +69,50 @@ def test_split_keeps_shared_entities_together() -> None:
     assert len({case.split for case in selected}) == 1
 
 
+def test_independent_holdout_removes_transitive_entity_component() -> None:
+    cases = build_negative_cases(42)
+    gold_query = cases[0].expected_query.model_copy(update={"entity_ids": ["entity:a"]})
+    gold = cases[0].model_copy(
+        update={
+            "expected_query": gold_query,
+            "group_id": "gold",
+            "review_status": ReviewStatus.INDEPENDENT_APPROVED,
+            "reviewer_note": "independent_codex:checked",
+        }
+    )
+    first_query = cases[1].expected_query.model_copy(update={"entity_ids": ["entity:a", "entity:b"]})
+    first = cases[1].model_copy(
+        update={
+            "expected_query": first_query,
+            "group_id": "silver-1",
+            "review_status": ReviewStatus.SILVER_APPROVED,
+            "split": "train",
+        }
+    )
+    second_query = cases[2].expected_query.model_copy(update={"entity_ids": ["entity:b"]})
+    second = cases[2].model_copy(
+        update={
+            "expected_query": second_query,
+            "group_id": "silver-2",
+            "review_status": ReviewStatus.SILVER_APPROVED,
+            "split": "val",
+        }
+    )
+    safe_query = cases[3].expected_query.model_copy(update={"entity_ids": ["entity:safe"]})
+    safe = cases[3].model_copy(
+        update={
+            "expected_query": safe_query,
+            "group_id": "silver-safe",
+            "review_status": ReviewStatus.SILVER_APPROVED,
+            "split": "train",
+        }
+    )
+    trainval, held_out, manifest = build_holdout([first, second, safe], [gold])
+    assert [case.case_id for case in trainval] == [safe.case_id]
+    assert held_out[0].split == "test"
+    assert manifest["entity_and_group_leakage"] == "pass"
+
+
 @pytest.mark.asyncio
 async def test_review_csv_round_trip_approves_only_yes_rows(tmp_path) -> None:
     cases = await generate(provider="fake", seed=42, limit=2, execute=False)
@@ -85,6 +131,46 @@ async def test_review_csv_round_trip_approves_only_yes_rows(tmp_path) -> None:
     assert len(accepted) == 1
     assert accepted[0].review_status == ReviewStatus.APPROVED
     assert accepted[0].expected_facts.answer == "Reviewed answer"
+
+
+@pytest.mark.asyncio
+async def test_independent_review_stays_distinct_from_human_gold(tmp_path) -> None:
+    cases = await generate(provider="fake", seed=42, limit=1, execute=False)
+    csv_path = tmp_path / "review.csv"
+    export_review(cases, csv_path)
+    rows = list(csv.DictReader(csv_path.open(encoding="utf-8-sig")))
+    rows[0]["label_valid"] = "yes"
+    rows[0]["reviewer_note"] = "independent_codex:source_checked"
+    with csv_path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys())
+        writer.writeheader()
+        writer.writerows(rows)
+    accepted, rejected = import_review(cases, csv_path, status_on_yes=ReviewStatus.INDEPENDENT_APPROVED)
+    assert rejected == []
+    assert accepted[0].review_status == ReviewStatus.INDEPENDENT_APPROVED
+    held_out = [accepted[0].model_copy(update={"split": "test"})]
+    assert _label_level(held_out, synthetic_smoke=False) == "nonhuman_source_review"
+
+
+@pytest.mark.asyncio
+async def test_auto_provenance_cannot_masquerade_as_human_gold(tmp_path) -> None:
+    cases = await generate(provider="fake", seed=42, limit=1, execute=False)
+    mislabeled = [
+        cases[0].model_copy(
+            update={
+                "review_status": ReviewStatus.APPROVED,
+                "reviewer_note": "auto:passed",
+                "split": "test",
+            }
+        )
+    ]
+    with pytest.raises(ValueError, match="cannot be human gold"):
+        _label_level(mislabeled, synthetic_smoke=False)
+    input_path = tmp_path / "mislabeled.jsonl"
+    write_models(input_path, mislabeled)
+    manifest = build_manifest(mislabeled, input_path)
+    assert manifest["human_gold_cases"] == 0
+    assert manifest["invalid_human_provenance_cases"] == 1
 
 
 @pytest.mark.asyncio
@@ -152,4 +238,5 @@ async def test_dataset_audit_reports_action_coverage_without_inventing_gold(tmp_
     assert manifest["quality_status"] == "pass"
     assert len(manifest["actions_present"]) == 12
     assert manifest["silver_cases"] == 0
+    assert manifest["nonhuman_source_review_cases"] == 0
     assert manifest["human_gold_cases"] == 0

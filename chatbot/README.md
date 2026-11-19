@@ -53,3 +53,8 @@ For independent human gold, use `datasets.export_review` and import the complete
 training engine and never uploads automatically. The local PEFT adapter runs via `hf_cpu`, not Ollama. Synthetic
 reports carry a non-benchmark banner; official comparison requires the same held-out reviewed test set.
 
+The internal `independent_approved` status is reserved for explicitly identified non-human source review. The
+evaluator reports it as `nonhuman_source_review`, never human or official independent gold. If prompts or code
+were changed after inspecting that set, pass `--development-diagnostic`; use `--page-size 100` when the expected
+answer contains complete sets larger than the interactive API's default page.
+

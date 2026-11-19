@@ -13,6 +13,9 @@ class ReviewStatus(StrEnum):
     NEEDS_REVIEW = "needs_review"
     # Source-validated by the pipeline (Cypher oracle + provenance checks). NOT human gold.
     SILVER_APPROVED = "silver_approved"
+    # Source-reviewed by an explicitly identified non-human process.
+    # Internal legacy name only: this is neither human nor official independent gold.
+    INDEPENDENT_APPROVED = "independent_approved"
     # Independently reviewed and approved by a human reviewer.
     APPROVED = "approved"
     REJECTED = "rejected"

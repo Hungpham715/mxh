@@ -22,8 +22,12 @@ def import_review(
     (human gold); machine/auto review CSVs must import as SILVER_APPROVED so silver labels
     can never masquerade as human gold downstream (eval gating, SFT reporting).
     """
-    if status_on_yes not in {ReviewStatus.APPROVED, ReviewStatus.SILVER_APPROVED}:
-        raise ValueError("status_on_yes must be approved or silver_approved")
+    if status_on_yes not in {
+        ReviewStatus.APPROVED,
+        ReviewStatus.INDEPENDENT_APPROVED,
+        ReviewStatus.SILVER_APPROVED,
+    }:
+        raise ValueError("status_on_yes must be approved, independent_approved, or silver_approved")
     by_id = {case.case_id: case for case in source_cases}
     accepted: list[QuestionCase] = []
     rejected: list[dict[str, str]] = []
@@ -76,9 +80,12 @@ def main() -> None:
     parser.add_argument("--rejected", type=Path, required=True)
     parser.add_argument(
         "--status-on-yes",
-        choices=["approved", "silver_approved"],
+        choices=["approved", "independent_approved", "silver_approved"],
         default="approved",
-        help="use silver_approved for machine-generated (auto_review) CSVs; approved only for human review",
+        help=(
+            "approved is human-only; independent_approved is an explicitly identified non-human "
+            "source review and cannot be official gold; silver_approved is pipeline auto-review"
+        ),
     )
     args = parser.parse_args()
     source_cases = read_models(args.source, QuestionCase)

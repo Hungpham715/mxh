@@ -56,6 +56,12 @@ def build_manifest(cases: list[QuestionCase], input_path: Path) -> dict[str, Any
     actions = {action.value for action in QueryAction}
     missing_actions = sorted(actions - intents_present)
     review_counts = _counts(case.review_status.value for case in cases)
+    invalid_human_provenance = [
+        case.case_id
+        for case in cases
+        if case.review_status == ReviewStatus.APPROVED
+        and case.reviewer_note.casefold().startswith(("auto:", "silver_auto:", "independent_"))
+    ]
 
     manifest: dict[str, Any] = {
         "created_at_utc": datetime.now(UTC).isoformat(),
@@ -74,7 +80,10 @@ def build_manifest(cases: list[QuestionCase], input_path: Path) -> dict[str, Any
         "actions_present": sorted(actions & intents_present),
         "missing_actions": missing_actions,
         "silver_cases": review_counts.get(ReviewStatus.SILVER_APPROVED.value, 0),
-        "human_gold_cases": review_counts.get(ReviewStatus.APPROVED.value, 0),
+        "human_gold_cases": review_counts.get(ReviewStatus.APPROVED.value, 0) - len(invalid_human_provenance),
+        "nonhuman_source_review_cases": review_counts.get(ReviewStatus.INDEPENDENT_APPROVED.value, 0),
+        "invalid_human_provenance_cases": len(invalid_human_provenance),
+        "invalid_human_provenance_case_ids": invalid_human_provenance,
         "answered_or_partial_with_facts": sum(
             case.expected_status in {"answered", "partial"} and bool(case.verified_facts) for case in cases
         ),
@@ -83,11 +92,16 @@ def build_manifest(cases: list[QuestionCase], input_path: Path) -> dict[str, Any
         "leakage_error": leakage_error,
     }
     manifest["quality_status"] = (
-        "pass" if not duplicate_case_ids and not missing_actions and leakage_status != "fail" else "fail"
+        "pass"
+        if not duplicate_case_ids
+        and not missing_actions
+        and leakage_status != "fail"
+        and not invalid_human_provenance
+        else "fail"
     )
     manifest["label_disclaimer"] = (
-        "silver_approved means a separate graph re-query matched exactly; it is not independent "
-        "human review and does not prove graph truth"
+        "approved is human-only; independent_approved is non-human source review, not official gold; "
+        "silver_approved is pipeline graph re-query and does not prove graph truth"
     )
     return manifest
 
@@ -101,7 +115,10 @@ def write_report(manifest: dict[str, Any], json_path: Path, markdown_path: Path)
         "",
         f"Status: **{manifest['quality_status'].upper()}**",
         f"Cases: {manifest['cases']} | SHA-256: `{manifest['input_sha256']}`",
-        f"Silver: {manifest['silver_cases']} | Human gold: {manifest['human_gold_cases']}",
+        (
+            f"Silver: {manifest['silver_cases']} | Non-human source review: "
+            f"{manifest['nonhuman_source_review_cases']} | Human gold: {manifest['human_gold_cases']}"
+        ),
         f"Leakage check: {manifest['leakage_check']}",
         "",
         "## Intent distribution",

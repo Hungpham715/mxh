@@ -30,7 +30,11 @@ from graphrag.llm.prompts import (
 )
 from graphrag.models import EntityMention, QueryFilters, QueryIntent, RouteName
 
-TRAINABLE_STATUSES = {ReviewStatus.APPROVED, ReviewStatus.SILVER_APPROVED}
+TRAINABLE_STATUSES = {
+    ReviewStatus.APPROVED,
+    ReviewStatus.INDEPENDENT_APPROVED,
+    ReviewStatus.SILVER_APPROVED,
+}
 
 
 def _gold_route(case: QuestionCase) -> RouteName:
