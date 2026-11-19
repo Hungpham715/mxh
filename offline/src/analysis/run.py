@@ -38,6 +38,9 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     rows = load_dataset(data_dir)
     edges = _load_edges(rows)
     co = _from_neo4j() if source == "neo4j" else edges["COAUTHORED_WITH"]
+    # Neo4j returns rows in arbitrary order; fixing the edge order makes the adjacency insertion
+    # order (and therefore the seeded small-world random baseline) reproducible across runs/machines.
+    co = sorted(co, key=lambda e: (e["from"], e["to"]))
     papers = {p["id"]: p for p in rows["papers.jsonl"]}
     g = metrics.build_projection(rows["authors.jsonl"], co)
 
@@ -60,6 +63,8 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     pr = nx.pagerank(g, weight="weight") if g.number_of_edges() else {}
     comm = metrics.communities(g)
     node_comm = {n: i for i, c in enumerate(comm["communities"]) for n in c}
+    core = metrics.core_decomposition(g, comm["communities"][:10])
+    core_no = nx.core_number(g) if g.number_of_edges() else {}
 
     # topic profile of the largest communities
     paper_topics: dict[str, list[str]] = {}
@@ -69,10 +74,13 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     for i, c in enumerate(comm["communities"][:10]):
         cs = set(c)
         pids = {p for u in c for v in g[u] if v in cs for p in g[u][v]["paper_ids"]}
-        tc = Counter(t for p in pids for t in paper_topics.get(p, []))
+        # sorted(): set iteration order of string ids varies per process (hash randomization)
+        # and would make Counter.most_common tie order unstable between runs.
+        tc = Counter(t for p in sorted(pids) for t in paper_topics.get(p, []))
         comm_summary.append({"community": i, "size": len(c), "papers": len(pids),
                              "top_topics": tc.most_common(3),
                              "members_sample": [g.nodes[n]["name"] for n in sorted(c, key=lambda n: -deg[n])[:6]],
+                             "kernel_members": core["community_kernels"][i]["kernel_members"],
                              "paper_examples": [papers[p]["title"] for p in sorted(pids)[:3]]})
 
     # shortest-path example: between the two highest-PageRank authors in the LCC that are not adjacent
@@ -99,6 +107,7 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
         "top10_degree": metrics.top_by(g, deg), "top10_weighted_degree": metrics.top_by(g, wdeg),
         "top10_pagerank": metrics.top_by(g, pr),
         "communities": {k: v for k, v in comm.items() if k != "communities"}, "community_summary": comm_summary,
+        "core": core,
         "shortest_path_example": path_ex, "small_world": sw,
         "degree_distribution": metrics.degree_distribution(g),
         "caveats": ["co-authorship != friendship", "PageRank is a structural centrality, not scientific quality",
@@ -109,10 +118,11 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     metrics.write_pairs_csv(g, out / "author_projection_edges.csv")
     with open(out / "author_metrics.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
-        w.writerow(["author_id", "name", "identity_status", "degree", "weighted_degree", "pagerank", "community"])
+        w.writerow(["author_id", "name", "identity_status", "degree", "weighted_degree", "pagerank", "community",
+                    "core_number"])
         for n in sorted(g.nodes()):
             w.writerow([n, g.nodes[n]["name"], g.nodes[n]["status"], deg[n], wdeg[n], round(pr.get(n, 0), 8),
-                        node_comm.get(n, "")])
+                        node_comm.get(n, ""), core_no.get(n, 0)])
 
     visualize.bar(graph_counts["relationships"], "Relationships by type (unique edges)", out / "relationship_types.png")
     visualize.bar(graph_counts["nodes"], "Nodes by label", out / "node_labels.png", color="#4f8a5b")

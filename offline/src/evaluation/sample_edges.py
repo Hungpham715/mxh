@@ -292,13 +292,23 @@ def run_sample(per_type: int = 20, seed: int = 20261107, tag: str | None = None)
         w = csv.DictWriter(fh, fieldnames=list(auto_rows[0]))
         w.writeheader()
         w.writerows(auto_rows)
-    with open(EVAL / "manual_review_template.csv", "w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh)
-        w.writerow(FIELDS + ["reviewer", "label(correct|incorrect|unverifiable)", "error_reason", "note"])
-        for r in sample_rows:
-            w.writerow([r[k] for k in FIELDS] + ["", "", "", ""])
-    write_json(EVAL / "sample_meta.json", {"seed": seed, "per_type": per_type,
-                                          "n_samples": len(sample_rows),
-                                          "per_type_counts": dict(Counter(r["type"] for r in sample_rows))})
+    review_fields = FIELDS + [
+        "reviewer",
+        "reviewed_at_utc",
+        "label",
+        "error_reason",
+        "note",
+        "label_origin",
+    ]
+    review_path = EVAL / f"manual_review_template{suffix}.csv"
+    with open(review_path, "w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=review_fields)
+        writer.writeheader()
+        for row in sample_rows:
+            writer.writerow({**row, "label_origin": "human"})
+    write_json(EVAL / f"sample_meta{suffix}.json", {"seed": seed, "per_type": per_type,
+                                                   "n_samples": len(sample_rows),
+                                                   "per_type_counts": dict(Counter(r["type"] for r in sample_rows)),
+                                                   "review_template": review_path.name})
     log.info("sampled %d edges; automated labels: %s", len(sample_rows), dict(Counter(r["label"] for r in auto_rows)))
     return 0

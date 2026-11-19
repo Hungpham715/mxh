@@ -103,8 +103,14 @@ button:focus-visible, textarea:focus-visible, a:focus-visible, summary:focus-vis
 .status-pill { padding: 3px 8px; border-radius: 999px; color: var(--muted); background: var(--surface-2); font-size: 11px; }
 .status-pill--answered { color: var(--success); }
 .status-pill--partial, .status-pill--ambiguous { color: var(--warning); }
+.status-pill--clarify { color: var(--warning); }
 .status-pill--error { color: var(--danger); }
 .simulation-label { color: var(--warning); font-size: 10px; font-weight: 700; }
+.live-status { color: var(--muted); font-size: 12px; padding: 4px 10px; font-style: italic; }
+.truncation-note {
+  margin-top: 6px; padding: 6px 10px; border-radius: 8px; font-size: 12px;
+  color: var(--warning); background: var(--surface-2); border: 1px solid currentColor;
+}
 .markdown { color: var(--ink); line-height: 1.7; overflow-wrap: anywhere; }
 .markdown > :first-child { margin-top: 0; }
 .markdown > :last-child { margin-bottom: 0; }

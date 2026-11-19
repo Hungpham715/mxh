@@ -1,0 +1,1400 @@
+{
+ "summary": {
+  "timestamp_utc": "2026-11-18T00:36:48.147905+00:00",
+  "profile": {
+   "mode": "real",
+   "graph": "neo4j",
+   "llm": "ollama",
+   "model": "qwen3:0.6b",
+   "scope_id": "nlpgraph-v1"
+  },
+  "cases": 31,
+  "status_ok": 25,
+  "oracle_checked": 21,
+  "oracle_ok": 15,
+  "latency_p50_ms": 5911,
+  "latency_p95_ms": 17392
+ },
+ "results": [
+  {
+   "id": "A1",
+   "cat": "author_papers",
+   "question": "Các bài báo của tác giả Xipeng Qiu trong tập dữ liệu?",
+   "latency_ms": 8227,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Xipeng Qiu",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5044665993",
+     "name": "Xipeng Qiu",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 10,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Các bài báo của tác giả Xipeng Qiu trong tập dữ liệu là:  \nVisuoThink: Empowering LVLM Reasoning with Multimodal Tree Search.",
+   "source_paper_ids": [
+    "oa:W4385569744",
+    "oa:W4385570131",
+    "oa:W4385571266",
+    "oa:W4385572293",
+    "oa:W4389325871",
+    "oa:W4402671897",
+    "oa:W4402671915",
+    "oa:W4404782672",
+    "oa:W4404782860",
+    "oa:W4412945021"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     10
+    ]
+   ],
+   "oracle_ids_n": 10,
+   "oracle_matched": 10,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "A2",
+   "cat": "author_papers",
+   "question": "Liệt kê bài báo của Maosong Sun.",
+   "latency_ms": 17392,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Maosong Sun",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5046448314",
+     "name": "Maosong Sun",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 9,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Bài báo của Maosong Sun là:  \n1. \"Cost-Optimal Grouped-Query Attention for Long-Context Modeling\" (2025)  \n2. \"GATEAU: Selecting Influential Samples for Long Context Alignment\" (2025)  \n3. \"GUICourse: From General Vision Language Model to Versatile GUI Agent\" (2025)  \n4. \"Looking Beyond Text: Reducing Language Bias in Large Vision-Language Models via Multimodal Dual-Attention and Soft-Image Guidance\" (2025)  \n5. \"Beyond the Turn-Based Game: Enabling Real-Time Conversations with Duplex Models\" (2024)  \n6. \"Browse and Concentrate: Comprehending Multimodal Content via Prior-LLM Context Fusion\" (2",
+   "source_paper_ids": [
+    "oa:W4385570319",
+    "oa:W4385571568",
+    "oa:W4402671951",
+    "oa:W4402672026",
+    "oa:W4404783093",
+    "oa:W4412944852",
+    "oa:W4416036106",
+    "oa:W4416036569",
+    "oa:W4416036989"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     9
+    ]
+   ],
+   "oracle_ids_n": 9,
+   "oracle_matched": 9,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "A3",
+   "cat": "author_papers_year",
+   "question": "Bài báo của Xipeng Qiu từ năm 2024 đến 2025?",
+   "latency_ms": 5978,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Xipeng Qiu",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5044665993",
+     "name": "Xipeng Qiu",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 5,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Bài báo của Xipeng Qiu từ năm 2024 đến 2025.",
+   "source_paper_ids": [
+    "oa:W4402671897",
+    "oa:W4402671915",
+    "oa:W4404782672",
+    "oa:W4404782860",
+    "oa:W4412945021"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     5
+    ]
+   ],
+   "oracle_ids_n": 5,
+   "oracle_matched": 5,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "C1",
+   "cat": "coauthors",
+   "question": "Đồng tác giả của Junjie Ye là ai?",
+   "latency_ms": 6183,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Junjie Ye",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5100777718",
+     "name": "Junjie Ye",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 4,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Junjie Ye là người đã viết bài \"Improving Discriminative Capability of Reward Models in RLHF Using Contrastive Learning\" và \"RoTBench: A Multi-Level Benchmark for Evaluating the Robustness of Large Language Models in Tool Learning\".",
+   "source_paper_ids": [
+    "oa:W4322832290",
+    "oa:W4390529340",
+    "oa:W4404782606",
+    "oa:W4404782948"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     4
+    ]
+   ],
+   "oracle_ids_n": 27,
+   "oracle_check": "count_reported",
+   "oracle_ok": true
+  },
+  {
+   "id": "C2",
+   "cat": "coauthors",
+   "question": "Ai đã cùng viết bài với Maosong Sun?",
+   "latency_ms": 8560,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "coauthors",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Maosong Sun",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5046448314",
+     "name": "Maosong Sun",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 20,
+   "truncated": true,
+   "complete": false,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "The provided information outlines several authors who are co-authored with the same subject, which is a paper titled **\"Browse and Concentrate: Comprehending Multimodal Content via Prior-LLM Context Fusion\"**. The authors mentioned are **Fei Huang**, **Fuwen Luo**, **Gang Chen**, **Ganqu Cui**, **Guirong Chen**, **Ji Zhang**, **Jinyi Hu**, **Jun Liu**, and **Junbo Cui**. All these authors are associated with the same paper, and their co-authorship is explicitly stated in the graph facts provided. The co-authorship information is limited to the sampled 2023-2025 corpus, as indicated in the limi",
+   "source_paper_ids": [
+    "oa:W4385570319",
+    "oa:W4402672026",
+    "oa:W4404783093",
+    "oa:W4412944852",
+    "oa:W4416036106",
+    "oa:W4416036569",
+    "oa:W4416036989"
+   ],
+   "trace": [
+    [
+     "coauthors",
+     "ok",
+     20
+    ]
+   ],
+   "oracle_ids_n": 56,
+   "oracle_check": "count_reported",
+   "oracle_ok": true
+  },
+  {
+   "id": "C3",
+   "cat": "shared_papers",
+   "question": "Junjie Ye và Tao Gui có bài báo chung nào?",
+   "latency_ms": 6854,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "shared_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Junjie Ye",
+     "type": "Author"
+    },
+    {
+     "text": "Tao Gui",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5100777718",
+     "name": "Junjie Ye",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    },
+    {
+     "label": "Author",
+     "id": "oa:A5058353652",
+     "name": "Tao Gui",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 4,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Junjie Ye và Tao Gui có bài báo chung là \"Improving Discriminative Capability of Reward Models in RLHF Using Contrastive Learning\" và \"RoTBench: A Multi-Level Benchmark for Evaluating the Robustness of Large Language Models in Tool Learning\".",
+   "source_paper_ids": [
+    "oa:W4322832290",
+    "oa:W4390529340",
+    "oa:W4404782606",
+    "oa:W4404782948"
+   ],
+   "trace": [
+    [
+     "shared_papers",
+     "ok",
+     4
+    ]
+   ],
+   "oracle_ids_n": 4,
+   "oracle_matched": 4,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "F1",
+   "cat": "author_affiliations",
+   "question": "Caio Corro gắn với tổ chức nào theo các bài báo?",
+   "latency_ms": 2707,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "org_collaborations",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Caio Corro",
+     "type": "Author"
+    },
+    {
+     "text": "tổ chức",
+     "type": "Institution"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5045551176",
+     "name": "Caio Corro",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": false,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 6,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "F2",
+   "cat": "coauthor_affiliations",
+   "question": "Tổ chức của đồng tác giả Junjie Ye trên bài chung là gì?",
+   "latency_ms": 5434,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "shared_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Junjie Ye",
+     "type": "Author"
+    },
+    {
+     "text": "Tổ chức",
+     "type": "Venue"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5100777718",
+     "name": "Junjie Ye",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": true,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "F3",
+   "cat": "author_affiliations",
+   "question": "Cơ quan của Maosong Sun theo từng bài báo?",
+   "latency_ms": 2480,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "org_collaborations",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Maosong Sun",
+     "type": "Institution"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": false,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 1,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "P1",
+   "cat": "paper_authors",
+   "question": "Ai là tác giả của bài (RSA)²: A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding?",
+   "latency_ms": 6011,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "graph_qa",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "RSA",
+     "type": "Paper"
+    },
+    {
+     "text": "A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding",
+     "type": "Topic"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 3,
+   "status_ok": false,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 4,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "P2",
+   "cat": "paper_venue",
+   "question": "Bài (RSA)²: A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding xuất hiện ở venue nào?",
+   "latency_ms": 6806,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "paper_venue",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "(RSA)²: A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding",
+     "type": "Paper"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Paper",
+     "id": "oa:W4412944834",
+     "name": "(RSA)²: A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding",
+     "score": 100.0,
+     "identity_status": null,
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 1,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "A Rhetorical-Strategy-Aware Rational Speech Act Framework for Figurative Language Understanding xuất hiện ở venue: Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers).",
+   "source_paper_ids": [
+    "oa:W4412944834"
+   ],
+   "trace": [
+    [
+     "paper_venue",
+     "ok",
+     1
+    ]
+   ],
+   "oracle_names": [
+    "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+   ],
+   "oracle_check": "venue_name_in_answer",
+   "oracle_ok": true
+  },
+  {
+   "id": "P3",
+   "cat": "paper_citations",
+   "question": "Bài Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation được trích dẫn bởi bài nào trong corpus?",
+   "latency_ms": 6080,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "paper_citations",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation",
+     "type": "Paper"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Paper",
+     "id": "oa:W4385571140",
+     "name": "Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation",
+     "score": 100.0,
+     "identity_status": null,
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 4,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Bài được trích dẫn trong corpus là: **\"Element-aware Summarization with Large Language Models: Expert-aligned Evaluation and Chain-of-Thought Method\"**.",
+   "source_paper_ids": [
+    "oa:W4385572068",
+    "oa:W4389519598",
+    "oa:W4389520127",
+    "oa:W4389520773"
+   ],
+   "trace": [
+    [
+     "paper_citations",
+     "ok",
+     4
+    ]
+   ],
+   "oracle_ids_n": 4,
+   "oracle_matched": 4,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "P4",
+   "cat": "paper_authors",
+   "question": "Danh sách tác giả của bài 3DS: Medical Domain Adaptation of LLMs via Decomposed Difficulty-based Data Selection?",
+   "latency_ms": 5911,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "graph_qa",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "3DS: Medical Domain Adaptation of LLMs via Decomposed Difficulty-based Data Selection",
+     "type": "Paper"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 3,
+   "status_ok": false,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 10,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "T1",
+   "cat": "topic_papers",
+   "question": "Các bài đã gắn nhãn chủ đề Large language models là gì?",
+   "latency_ms": 14766,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "topic_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Large language models",
+     "type": "Topic"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Topic",
+     "id": "topic:llm",
+     "name": "Large language models",
+     "score": 100.0,
+     "identity_status": null,
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 20,
+   "truncated": true,
+   "complete": false,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "The provided information outlines several research papers related to large language models (LLMs), focusing on various aspects such as benchmarking, confidence calibration, and evaluation methods. Here's a summary of the key points:\n\n1. **CFBench**: A comprehensive benchmark for LLMs, focusing on constraints and performance metrics.\n2. **Calibrating LLM Confidence**: A study on improving LLM confidence through perturbed representation stability.\n3. **Can External Validation Tools Improve Annotation Quality**: An investigation into external validation tools for LLM-assisted judging.\n4. **Can Gr",
+   "source_paper_ids": [
+    "oa:W4412889603",
+    "oa:W4412889753",
+    "oa:W4412944827",
+    "oa:W4412945178",
+    "oa:W4412945551",
+    "oa:W4412945616",
+    "oa:W4416035106",
+    "oa:W4416035167",
+    "oa:W4416035542",
+    "oa:W4416036173",
+    "oa:W4416036262",
+    "oa:W4416036285",
+    "oa:W4416036351",
+    "oa:W4416036487",
+    "oa:W4416036585",
+    "oa:W4416036614",
+    "oa:W4416036640",
+    "oa:W4416036727",
+    "oa:W4416037665",
+    "oa:W7131623740"
+   ],
+   "trace": [
+    [
+     "topic_papers",
+     "ok",
+     20
+    ]
+   ],
+   "oracle_ids_n": 328,
+   "oracle_matched": 20,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "T2",
+   "cat": "topic_papers",
+   "question": "Chủ đề Machine translation có những bài nào?",
+   "latency_ms": 29421,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "topic_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Machine translation",
+     "type": "Topic"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Topic",
+     "id": "topic:mt",
+     "name": "Machine translation",
+     "score": 100.0,
+     "identity_status": null,
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 20,
+   "truncated": true,
+   "complete": false,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "The provided information outlines several research topics related to **context-aware neural machine translation**. Here's a summary of the relevant facts:\n\n1. **Continual Knowledge Distillation for Neural Machine Translation**: This paper discusses a method for improving machine translation by leveraging continual knowledge.  \n   - **Paper**: `oa:W4385571568` (2023, ACL Long Paper)  \n   - **Source**: [https://aclanthology.org/2023.acl-long.443/](https://aclanthology.org/2023.acl-long.443/)\n\n2. **End-to-End Single-Channel Speaker-Turn Aware Conversational Speech Translation**: This paper focuse",
+   "source_paper_ids": [
+    "oa:W4319049805",
+    "oa:W4320513433",
+    "oa:W4322832215",
+    "oa:W4385565471",
+    "oa:W4385570154",
+    "oa:W4385571568",
+    "oa:W4385571757",
+    "oa:W4385571900",
+    "oa:W4386752353",
+    "oa:W4389519477",
+    "oa:W4389520728",
+    "oa:W4389523842",
+    "oa:W4389524029",
+    "oa:W4390722253",
+    "oa:W4392083945",
+    "oa:W4402671889",
+    "oa:W4402684033",
+    "oa:W4404782365",
+    "oa:W4412886786",
+    "oa:W4416035837"
+   ],
+   "trace": [
+    [
+     "topic_papers",
+     "ok",
+     20
+    ]
+   ],
+   "oracle_ids_n": 25,
+   "oracle_matched": 20,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "O1",
+   "cat": "org_collaborations",
+   "question": "Carnegie Mellon University hợp tác với tổ chức nào trong corpus?",
+   "latency_ms": 1626,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "out_of_scope",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": false,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 68,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "O2",
+   "cat": "org_collaborations",
+   "question": "Các tổ chức hợp tác với National University of Singapore?",
+   "latency_ms": 1262,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "out_of_scope",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": false,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": [],
+   "oracle_ids_n": 61,
+   "oracle_check": "count_reported",
+   "oracle_ok": false
+  },
+  {
+   "id": "R1",
+   "cat": "network_top",
+   "question": "Top tác giả theo số đồng tác giả riêng biệt là ai?",
+   "latency_ms": 6233,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "network_top",
+   "parse_source": "rules_fallback",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 20,
+   "truncated": true,
+   "complete": false,
+   "llm_calls": 4,
+   "status_ok": true,
+   "answer": "Top tác giả theo số đồng tác giả riêng biệt là: **Maosong Sun**.",
+   "source_paper_ids": [],
+   "trace": [
+    [
+     "network_top",
+     "ok",
+     20
+    ]
+   ],
+   "oracle_top_id": "oa:A5046448314",
+   "oracle_check": "top_name_in_answer",
+   "oracle_ok": true
+  },
+  {
+   "id": "H1",
+   "cat": "author_path",
+   "question": "Đường đồng tác giả giữa Anirudh Ajith và Howard Chen là gì?",
+   "latency_ms": 5419,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_path",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Anirudh Ajith",
+     "type": "Author"
+    },
+    {
+     "text": "Howard Chen",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5000037569",
+     "name": "Anirudh Ajith",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    },
+    {
+     "label": "Author",
+     "id": "oa:A5101444574",
+     "name": "Howard Chen",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 1,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Đường đồng tác giả giữa Anirudh Ajith và Howard Chen là: **Howard Chen**.",
+   "source_paper_ids": [
+    "oa:W4389523773",
+    "oa:W4389524473"
+   ],
+   "trace": [
+    [
+     "author_path",
+     "ok",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "U1",
+   "cat": "unknown_entity",
+   "question": "Bài báo của tác giả \"Nguyen Van Khong Co That\"",
+   "latency_ms": 2378,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Nguyen Van Khong Co That",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": true,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "U2",
+   "cat": "unknown_entity",
+   "question": "Đồng tác giả của \"Zzz Nobodyzzz\" là ai?",
+   "latency_ms": 2377,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Zzz Nobodyzzz",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": true,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "M1",
+   "cat": "ambiguous",
+   "question": "Các bài báo của tác giả Qi Zhang?",
+   "latency_ms": 2290,
+   "error": null,
+   "status": "ambiguous",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Qi Zhang",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "",
+     "name": "Qi Zhang",
+     "score": 100.0,
+     "identity_status": null,
+     "ambiguous_candidates": [
+      {
+       "id": "oa:A5100360194",
+       "label": "Author",
+       "name": "Qi Zhang",
+       "score": 100.0
+      },
+      {
+       "id": "oa:A5100360338",
+       "label": "Author",
+       "name": "Qi Zhang",
+       "score": 100.0
+      },
+      {
+       "id": "oa:A5100360395",
+       "label": "Author",
+       "name": "Qi Zhang",
+       "score": 100.0
+      }
+     ]
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "ambiguous_entity",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": true,
+   "answer": "Tên này khớp nhiều node. Hãy chọn một ID cụ thể rồi hỏi lại.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "X1",
+   "cat": "out_of_scope",
+   "question": "Đặt phòng họp ngày mai lúc 8 giờ",
+   "latency_ms": 1455,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "out_of_scope",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": true,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "X2",
+   "cat": "out_of_scope",
+   "question": "Thời tiết Hà Nội hôm nay thế nào?",
+   "latency_ms": 1330,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "out_of_scope",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": true,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "X3",
+   "cat": "out_of_scope",
+   "question": "Cách nấu một nồi phở bò ngon?",
+   "latency_ms": 1206,
+   "error": null,
+   "status": "out_of_scope",
+   "route": "out_of_scope",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "unsupported_intent",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 2,
+   "status_ok": true,
+   "answer": "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "L1",
+   "cat": "clarify",
+   "question": "Các bài báo của tác giả đó?",
+   "latency_ms": 2028,
+   "error": null,
+   "status": "not_found",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "that author",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "entity_not_found",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": false,
+   "llm_calls": 1,
+   "status_ok": true,
+   "answer": "Không nối được một thực thể trong câu hỏi với graph. Hãy dùng tên đầy đủ hoặc ID.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "Y1",
+   "cat": "chat_history",
+   "question": "Câu hỏi đầu tiên tôi hỏi bạn là gì?",
+   "latency_ms": 1951,
+   "error": null,
+   "status": "answered",
+   "route": "chat_history",
+   "parsed_intent": "unknown",
+   "parse_source": "llm",
+   "parsed_entities": [],
+   "linked_entities": [],
+   "entity_rescue": null,
+   "stop_reason": "chat_history",
+   "iterations": 0,
+   "facts_count": 0,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 2,
+   "status_ok": true,
+   "answer": "Danh sách bài báo của Xipeng Qiu.",
+   "source_paper_ids": [],
+   "trace": []
+  },
+  {
+   "id": "Y2",
+   "cat": "followup_coref",
+   "question": "Thế các đồng tác giả của người đó?",
+   "latency_ms": 14575,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Xipeng Qiu",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5044665993",
+     "name": "Xipeng Qiu",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 10,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Thế các đồng tác giả của người đó là:  \nVisuoThink: Empowering LVLM Reasoning with Multimodal Tree Search, Calibrating the Confidence of Large Language Models by Eliciting Fidelity, F-Eval: Assessing Fundamental Abilities with Refined Evaluation Methods, Full Parameter Fine-tuning for Large Language Models with Limited Resources, Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk, A Probabilistic Framework for Discovering New Intents, CoLLiE: Collaborative Training of Large Language Models in an Efficient Way, DiffusionBERT: Improving Generat",
+   "source_paper_ids": [
+    "oa:W4385569744",
+    "oa:W4385570131",
+    "oa:W4385571266",
+    "oa:W4385572293",
+    "oa:W4389325871",
+    "oa:W4402671897",
+    "oa:W4402671915",
+    "oa:W4404782672",
+    "oa:W4404782860",
+    "oa:W4412945021"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     10
+    ]
+   ],
+   "oracle_ids_n": 52,
+   "oracle_check": "count_reported",
+   "oracle_ok": true
+  },
+  {
+   "id": "N1",
+   "cat": "count",
+   "question": "Xipeng Qiu có bao nhiêu bài báo trong corpus?",
+   "latency_ms": 6896,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Xipeng Qiu",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5044665993",
+     "name": "Xipeng Qiu",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 10,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Xipeng Qiu có 8 bài báo trong corpus.",
+   "source_paper_ids": [
+    "oa:W4385569744",
+    "oa:W4385570131",
+    "oa:W4385571266",
+    "oa:W4385572293",
+    "oa:W4389325871",
+    "oa:W4402671897",
+    "oa:W4402671915",
+    "oa:W4404782672",
+    "oa:W4404782860",
+    "oa:W4412945021"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     10
+    ]
+   ],
+   "oracle_ids_n": 10,
+   "oracle_matched": 10,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "G1",
+   "cat": "author_papers",
+   "question": "Tìm các công bố của Furu Wei.",
+   "latency_ms": 12226,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "author_papers",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Furu Wei",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5014662947",
+     "name": "Furu Wei",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 7,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Furu Wei có các công bố:  \n1. \"Chain-of-Reasoning: Towards Unified Mathematical Reasoning in Large Language Models via a Multi-Paradigm Perspective\" (2025)  \n2. \"Chain-of-Dictionary Prompting Elicits Translation in Large Language Models\" (2024)  \n3. \"Improving Text Embeddings with Large Language Models\" (2024)  \n4. \"Language-Specific Neurons: The Key to Multilingual Capabilities in Large Language Models\" (2024)  \n5. \"Respond in my Language: Mitigating Language Inconsistency in Response Generation based on Large Language Models\" (2024)  \n6. \"Democratizing Reasoning Ability: Tailored Learning fr",
+   "source_paper_ids": [
+    "oa:W4385569785",
+    "oa:W4389524052",
+    "oa:W4402671717",
+    "oa:W4402671755",
+    "oa:W4402672004",
+    "oa:W4404783577",
+    "oa:W4412889980"
+   ],
+   "trace": [
+    [
+     "author_papers",
+     "ok",
+     7
+    ]
+   ],
+   "oracle_ids_n": 7,
+   "oracle_matched": 7,
+   "oracle_extra": 0,
+   "oracle_ok": true
+  },
+  {
+   "id": "G2",
+   "cat": "coauthors",
+   "question": "Đồng tác giả của Florian Boudin?",
+   "latency_ms": 4592,
+   "error": null,
+   "status": "answered",
+   "route": "graph_qa",
+   "parsed_intent": "coauthors",
+   "parse_source": "llm",
+   "parsed_entities": [
+    {
+     "text": "Florian Boudin",
+     "type": "Author"
+    }
+   ],
+   "linked_entities": [
+    {
+     "label": "Author",
+     "id": "oa:A5025206208",
+     "name": "Florian Boudin",
+     "score": 100.0,
+     "identity_status": "verified",
+     "ambiguous_candidates": []
+    }
+   ],
+   "entity_rescue": "catalog",
+   "stop_reason": "sufficient",
+   "iterations": 1,
+   "facts_count": 3,
+   "truncated": false,
+   "complete": true,
+   "llm_calls": 3,
+   "status_ok": true,
+   "answer": "Florian Boudin's co-authors are Leane Jourdan, Nicolas Hernandez, and Richard Dufour.",
+   "source_paper_ids": [
+    "oa:W4392426064"
+   ],
+   "trace": [
+    [
+     "coauthors",
+     "ok",
+     3
+    ]
+   ],
+   "oracle_ids_n": 3,
+   "oracle_check": "count_reported",
+   "oracle_ok": true
+  }
+ ]
+}

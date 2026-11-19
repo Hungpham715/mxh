@@ -1,7 +1,16 @@
+import pytest
+
 from src.data.fixtures import fixture_tables, write_dataset
 from src.data.contracts import load_dataset
+from src.graph import derive as derive_module
 from src.graph import load as loader
 from src.graph.derive import REL_TYPES, derive_edges
+
+
+@pytest.fixture(autouse=True)
+def derived_output_to_tmp(tmp_path, monkeypatch):
+    """Keep build_payload/write_derived from overwriting the real offline/data/derived snapshot."""
+    monkeypatch.setattr(derive_module, "DERIVED", tmp_path / "derived")
 
 
 def _rows(tmp_path):

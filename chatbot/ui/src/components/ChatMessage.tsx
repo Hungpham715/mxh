@@ -29,6 +29,11 @@ export function ChatMessage({ message }: { message: Message }) {
         ) : (
           <div className="markdown"><ReactMarkdown rehypePlugins={[rehypeSanitize]}>{message.content}</ReactMarkdown></div>
         )}
+        {response?.truncated && (
+          <div className="truncation-note" role="note">
+            Kết quả chưa đầy đủ: còn dữ liệu ngoài trang hiện tại chưa được liệt kê.
+          </div>
+        )}
         {response && response.ambiguous_candidates.length > 0 && (
           <div className="candidate-grid" aria-label="Các thực thể có thể chọn">
             {response.ambiguous_candidates.map((candidate) => (

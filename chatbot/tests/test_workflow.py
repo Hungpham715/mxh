@@ -113,8 +113,8 @@ async def test_coauthor_affiliation_uses_only_shared_paper_evidence() -> None:
 
 
 class DuplicatePlanner:
-    def plan(self, intent, linked):
-        _ = intent
+    def plan(self, intent, linked, page_size=None):
+        _ = intent, page_size
         step = QueryStep(
             action=QueryAction.AUTHOR_PAPERS,
             params={"author_id": linked[0].id, "year_from": None, "year_to": None},

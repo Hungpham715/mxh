@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-11-18T00:38:09.466114+00:00",
+  "target": "local Neo4j Community snapshot + Ollama qwen3:0.6b (NOT Aura)",
+  "health": {
+    "status": "ok",
+    "mode": "real",
+    "llm": {
+      "provider": "ollama",
+      "ready": true,
+      "detail": "Ollama and selected model ready"
+    },
+    "graph": {
+      "provider": "neo4j",
+      "ready": true,
+      "detail": "connected; 7134 nodes in scope"
+    }
+  },
+  "event_names": [
+    "start",
+    "parse",
+    "linked",
+    "query_start",
+    "query_result",
+    "decision",
+    "answer",
+    "done"
+  ],
+  "regular": {
+    "status": "answered",
+    "route": "graph_qa",
+    "parsed_intent": "author_papers",
+    "facts_count": 10,
+    "source_paper_ids": [
+      "oa:W4385569744",
+      "oa:W4385570131",
+      "oa:W4385571266",
+      "oa:W4385572293",
+      "oa:W4389325871",
+      "oa:W4402671897",
+      "oa:W4402671915",
+      "oa:W4404782672",
+      "oa:W4404782860",
+      "oa:W4412945021"
+    ]
+  },
+  "stream": {
+    "status": "answered",
+    "route": "graph_qa",
+    "parsed_intent": "author_papers",
+    "facts_count": 10,
+    "source_paper_ids": [
+      "oa:W4385569744",
+      "oa:W4385570131",
+      "oa:W4385571266",
+      "oa:W4385572293",
+      "oa:W4389325871",
+      "oa:W4402671897",
+      "oa:W4402671915",
+      "oa:W4404782672",
+      "oa:W4404782860",
+      "oa:W4412945021"
+    ]
+  },
+  "semantic_match": true,
+  "pass": true
+}

@@ -1,0 +1,41 @@
+{
+  "audit": "graph_integrity_all",
+  "scope_id": "nlpgraph-v1",
+  "database": "local-loopback",
+  "finished_at_utc": "2026-11-18T00:19:48Z",
+  "live_counts": {
+    "total_nodes": 7134,
+    "total_edges": 30971,
+    "scoped_nodes": 7134,
+    "scoped_edges": 30971
+  },
+  "scanned": {
+    "nodes": 7134,
+    "edges": 30971
+  },
+  "counts_match_live": true,
+  "nodes_by_label": {
+    "Author": 5430,
+    "Paper": 1091,
+    "Institution": 600,
+    "Venue": 7,
+    "Topic": 6
+  },
+  "edges_by_type": {
+    "ACTIVE_IN": 139,
+    "AFFILIATED_WITH": 4306,
+    "APPEARS_IN": 1091,
+    "CITES": 26,
+    "COAUTHORED_WITH": 16754,
+    "FIRST_AUTHOR_OF": 1091,
+    "HAS_TOPIC": 451,
+    "ORG_COAUTHORED_WITH": 2001,
+    "OTHER_AUTHOR_OF": 5007,
+    "RESEARCHES": 105
+  },
+  "node_errors": 0,
+  "edge_errors": 0,
+  "errors_by_check": {},
+  "sample_errors": [],
+  "result": "PASS"
+}

@@ -43,9 +43,10 @@ async def run(questions: list[str]) -> None:
             print("=" * 90)
             print("Q:", question)
             print(
-                f"status={response.status} stop={response.stop_reason} "
+                f"status={response.status} route={response.route} stop={response.stop_reason} "
                 f"iterations={response.iterations_used} facts={response.facts_count} "
-                f"llm_calls={response.provider_info}"
+                f"truncated={response.truncated} complete={response.complete} "
+                f"llm_calls={response.llm_calls} providers={response.provider_info}"
             )
             print("A:", response.answer)
             if response.sources:

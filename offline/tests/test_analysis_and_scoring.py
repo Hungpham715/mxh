@@ -32,6 +32,24 @@ def test_communities_deterministic():
     assert c1["communities"] == c2["communities"] and c1["n_communities"] >= 2
 
 
+def test_core_decomposition_finds_triangle_kernel():
+    g = _g()
+    core = metrics.core_decomposition(g)
+    assert core["max_core"] == 2 and core["kernel_size"] == 3
+    assert {m["author_id"] for m in core["kernel_members"]} == {"a0", "a1", "a2"}
+    assert core["community_kernels"] == []
+
+
+def test_core_decomposition_community_kernels_and_empty_graph():
+    g = _g()
+    core = metrics.core_decomposition(g, [["a0", "a1", "a2", "a3"], ["a5", "a6"]])
+    assert core["community_kernels"][0]["max_core"] == 2
+    assert core["community_kernels"][1]["max_core"] == 1
+    assert core["community_kernels"][0]["kernel_members"][0] in {"A0", "A1", "A2"}
+    empty = metrics.core_decomposition(nx.Graph())
+    assert empty["max_core"] == 0 and empty["kernel_members"] == []
+
+
 def test_small_world_runs_on_toy():
     g = nx.connected_watts_strogatz_graph(60, 6, 0.1, seed=1)
     g = nx.relabel_nodes(g, {n: f"n{n}" for n in g})

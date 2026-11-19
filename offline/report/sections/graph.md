@@ -6,11 +6,11 @@
 - Kiểu quan hệ lấy từ whitelist 10 tên cố định, Cypher tham số hóa UNWIND $rows theo lô 300 dòng, có retry cho lỗi tạm thời.
 - Các cạnh suy diễn được tính một lần trong Python từ snapshot đã kiểm (src/graph/derive.py) rồi nạp lên Neo4j; nhờ vậy phân tích cục bộ và graph trên cloud dùng đúng một tập cạnh.
 
-Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.27-aura; trước import instance có 0 nút và 0 quan hệ (0 nút không thuộc dự án).
+Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.26.2; trước import instance có 7.134 nút và 30.971 quan hệ (0 nút không thuộc dự án).
 
 ## 6. Graph trên AuraDB và phân tích mạng đồng tác giả
 
-Import hoàn tất lúc 2026-11-03T08:50:17Z trong 72.5 giây. Đếm lại trên AuraDB (lọc scope_id): **7.134 nút**, **30.971 quan hệ**, 10/10 loại có dữ liệu, 0 cặp cạnh song song trùng lặp, 0 quan hệ thiếu evidence.
+Import hoàn tất lúc 2026-11-17T17:00:29Z trong 2.4 giây. Đếm lại trên AuraDB (lọc scope_id): **7.134 nút**, **30.971 quan hệ**, 10/10 loại có dữ liệu, 0 cặp cạnh song song trùng lặp, 0 quan hệ thiếu evidence.
 
 | Quan hệ | Kế hoạch | Đếm trên AuraDB |
 |---|---|---|
@@ -115,7 +115,7 @@ Phân tích mạng chỉ dùng đồ thị vô hướng, đơn Author—COAUTHOR
 
 Phần lớn tác giả cô lập là tác giả source_only/unresolved (định danh chỉ trong một bài) và tác giả của bài đơn tác giả; corpus là mẫu ~1.100 bài nên mạng bị phân mảnh mạnh – đây là đặc điểm của mẫu, không phải của cộng đồng NLP thật.
 
-![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](D:/nlp-collab-graph/output/analysis/degree_distribution.png)
+![Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).](../output/analysis/degree_distribution.png)
 
 *Hình 2. Phân bố bậc của phép chiếu tác giả (log-log).*
 
@@ -149,7 +149,39 @@ Phương pháp: louvain (networkx.community.louvain_communities, weight=shared p
 | 4 | 82 | 15 | llm(4), retrieval(1) | Graham Neubig, Tongshuang Wu, Yulia Tsvetkov, Pengfei Liu |
 | 5 | 81 | 19 | llm(4), qa(2) | Maarten Sap, Alice Oh, Yejin Choi, Yeon Seonwoo |
 
-![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](D:/nlp-collab-graph/output/analysis/ego_top_pagerank.png)
+### Hạt nhân của mạng (phân rã k-core)
+
+Phân rã k-core (networkx.core_number): một nút thuộc k-core nếu nó nằm trong một đồ thị con mà mọi nút trong đó có ít nhất k láng giềng cũng thuộc đồ thị con ấy. k-core cao nhất là “hạt nhân” liên kết chặt nhất của mạng: core number tối đa **19**, hạt nhân gồm **20 tác giả** với 190 cạnh nội bộ, mật độ 1.
+
+| # | Tác giả | Core number | Bậc | Bậc có trọng số |
+|---|---|---|---|---|
+| 1 | Philip S. Yu | 19 | 42 | 42 |
+| 2 | Henry Peng Zou | 19 | 22 | 22 |
+| 3 | Renhe Jiang | 19 | 19 | 19 |
+| 4 | Dongyuan Li | 19 | 19 | 19 |
+| 5 | Yaozu Wu | 19 | 19 | 19 |
+| 6 | Yue Zhou | 19 | 19 | 19 |
+| 7 | Yangning Li | 19 | 19 | 19 |
+| 8 | Xue Liu | 19 | 19 | 19 |
+| 9 | Wei-Chieh Huang | 19 | 19 | 19 |
+| 10 | Liancheng Fang | 19 | 19 | 19 |
+
+Hạt nhân của 10 cộng đồng lớn nhất (thành viên có core number cao nhất trong từng cộng đồng):
+
+| Cộng đồng | Core number cao nhất | Thành viên hạt nhân (top 5) |
+|---|---|---|
+| 0 | 11 | Jian Luan, Hongzhang Mu, Gaopeng Gou, Li Qian, Yongxiu Xu |
+| 1 | 13 | Maosong Sun, Junjie Fang, Zhiyuan Liu, Yankai Lin, Guirong Chen |
+| 2 | 13 | Xipeng Qiu, Qipeng Guo, Yuqing Yang, Hang Yan, Yu Sun |
+| 3 | 12 | Mohit Bansal, Huaxiu Yao, Yuancheng Xu, Furong Huang, Fuxiao Liu |
+| 4 | 10 | Graham Neubig, Tongshuang Wu, Yulia Tsvetkov, Pengfei Liu, André F. T. Martins |
+| 5 | 8 | Alice Oh, Yeon Seonwoo, Guoyin Wang, Sajal Choudhary, Sunghyun Park |
+| 6 | 15 | Prem Natarajan, Vishesh Kakarala, Charith Peris, Swetha Ranganath, Liam Urbach |
+| 7 | 19 | Philip S. Yu, Henry Peng Zou, Renhe Jiang, Dongyuan Li, Yaozu Wu |
+| 8 | 12 | Tong Xiao, JingBo Zhu, Bei Li, Boxing Chen, Shimin Tao |
+| 9 | 9 | Roee Aharoni, Shruti Rijhwani, Dipanjan Das, Aditya Siddhant, Joshua Maynez |
+
+![Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).](../output/analysis/ego_top_pagerank.png)
 
 *Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).*
 
@@ -170,14 +202,14 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 | LCC (nút / cạnh) | 970 / 4.288 |
 | C_obs (average clustering) | 0.9127 |
 | L_obs (average shortest path) | 10.9876 (exact) |
-| C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0147 |
-| L_rand | 3.3099 |
-| σ = (C_obs/C_rand)/(L_obs/L_rand) | 18.73 |
+| C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0143 |
+| L_rand | 3.3092 |
+| σ = (C_obs/C_rand)/(L_obs/L_rand) | 19.225 |
 | Kết luận | no clear small-world indication |
 
 Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
 
-![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](D:/nlp-collab-graph/output/analysis/small_world.png)
+![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](../output/analysis/small_world.png)
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
@@ -202,7 +234,7 @@ Kiểm tra cấu trúc: 30.971 cạnh được kiểm, **0** cạnh vi phạm.
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 151 | 20 | 15 | 2 | 3 | 0.75 | [0.531; 0.888] |
 
-Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% xấp xỉ phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.87**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8786** (KTC 95% Wilson phân tầng [0.8402, 0.9169]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lại:
 
@@ -219,7 +251,7 @@ Sau khi sửa lỗi hệ thống (mục 7.1), lấy **mẫu mới** và đo lạ
 | RESEARCHES | 105 | 20 | 20 | 0 | 0 | 1 | [0.839; 1.000] |
 | ACTIVE_IN | 139 | 20 | 8 | 0 | 12 | 0.4 | [0.219; 0.613] |
 
-Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% xấp xỉ phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
+Precision macro = **0.825**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.8895** (KTC 95% Wilson phân tầng [0.8566, 0.9224]). Số loại có ước lượng điểm ≥ 0,90: 7/10; số loại có cận dưới Wilson ≥ 0,90: 0/10. “Không kiểm được” được tính là không đúng.
 
 ### 7.1 Lỗi phát hiện và sửa
 
@@ -249,3 +281,24 @@ Precision macro = **0.825**; precision micro có trọng số theo số cạnh m
 | paper_source_audit_40 | 40/40 papers: title, ordered author list and year identical to raw source |
 
 Với 20 mẫu/loại, ngay cả 20/20 đúng thì cận dưới Wilson 95% cũng chỉ ≈ 0,84, nên **không thể khẳng định chắc chắn ≥ 90%**; các con số trên là ước lượng điểm kèm khoảng tin cậy.
+
+### 7.3 Vòng đánh giá độc lập trên mẫu lớn (2026-11-18)
+
+Để khắc phục hạn chế cỡ mẫu 20/loại ở trên, một vòng đánh giá độc lập thứ hai đã kiểm **386 cạnh** (40 mẫu/loại, mẫu phân tầng seed 20261118) đối chiếu trực tiếp với nguồn sơ cấp (landing page ACL/arXiv và PDF của chính công bố). **Provenance:** Independent Codex source review; NOT human annotation. Đây là đánh giá nguồn độc lập **phi-nhân**, không phải nhãn người; hàng đợi nhãn người 386 dòng vẫn để trống và sẵn sàng cho một reviewer độc lập.
+
+| Loại | Số cạnh graph | Mẫu | Đúng | Sai | Không kiểm được | Precision | Wilson 95% |
+|---|---|---|---|---|---|---|---|
+| FIRST_AUTHOR_OF | 1.091 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| OTHER_AUTHOR_OF | 5.007 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| COAUTHORED_WITH | 16.754 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| AFFILIATED_WITH | 4.306 | 40 | 38 | 2 | 0 | 0.95 | [0.835; 0.991] |
+| APPEARS_IN | 1.091 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| HAS_TOPIC | 451 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| CITES | 26 | 26 | 26 | 0 | 0 | 1 | [0.871; 1.000] |
+| ORG_COAUTHORED_WITH | 2.001 | 40 | 38 | 2 | 0 | 0.95 | [0.835; 0.991] |
+| RESEARCHES | 105 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+| ACTIVE_IN | 139 | 40 | 40 | 0 | 0 | 1 | [0.912; 1.000] |
+
+Precision macro = **0.99**; precision micro có trọng số theo số cạnh mỗi loại trong graph = **0.9898** (KTC 95% Wilson phân tầng [0.9732, 0.9962]). Số loại có ước lượng điểm ≥ 0,90: 10/10; số loại có cận dưới Wilson ≥ 0,90: 7/10. “Không kiểm được” được tính là không đúng.
+
+Phương pháp khoảng tin cậy: reliable-kg-estimation: stratified Wilson / Agresti-Coull at the design ESS; ESS thiết kế 362.7, design effect 1.0642. Ở vòng này cả hai ngưỡng của tiêu chí chất lượng (ước lượng điểm &gt; 0,90 và cận dưới tin cậy 95% &gt; 0,90 trên micro có trọng số) đều đạt.

@@ -1,12 +1,39 @@
-"""Tiny block-document model rendered to both Markdown and PDF (ReportLab, embedded Arial for Vietnamese)."""
+"""Tiny block-document model rendered to both Markdown and PDF (ReportLab, embedded TTF for Vietnamese)."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 from xml.sax.saxutils import escape
 
-FONT_DIR = Path("C:/Windows/Fonts")
+# Logical font name -> candidate files by platform. Windows Arial first; on Linux fall back
+# to metric-compatible Liberation Sans, then DejaVu Sans. All styles below keep referring to
+# the logical names ("Arial", "Consolas"), so the rendered document does not depend on the OS.
+FONT_CANDIDATES: dict[str, list[str]] = {
+    "Arial": ["C:/Windows/Fonts/arial.ttf",
+              "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+              "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"],
+    "Arial-Bold": ["C:/Windows/Fonts/arialbd.ttf",
+                   "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+                   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"],
+    "Arial-Italic": ["C:/Windows/Fonts/ariali.ttf",
+                     "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf",
+                     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf"],
+    "Arial-BoldItalic": ["C:/Windows/Fonts/arialbi.ttf",
+                         "/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf",
+                         "/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf"],
+    "Consolas": ["C:/Windows/Fonts/consola.ttf",
+                 "/usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf",
+                 "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"],
+}
+
+
+def _resolve_font(logical: str) -> str:
+    for candidate in FONT_CANDIDATES[logical]:
+        if Path(candidate).exists():
+            return candidate
+    raise FileNotFoundError(f"no usable font for {logical!r}; tried: {FONT_CANDIDATES[logical]}")
 
 
 @dataclass
@@ -41,11 +68,13 @@ class Doc:
                            "\n".join("| " + " | ".join(c.replace("|", "\\|") for c in r) + " |" for r in rows) + "\n")
             elif kind == "img":
                 path, cap, _ = v
+                # Relative to the markdown file when possible, so the report renders on GitHub
+                # regardless of which machine built it (os.path.relpath raises across Windows drives).
                 try:
-                    rel = path.relative_to(base)
+                    rel = Path(os.path.relpath(path, base)).as_posix()
                 except ValueError:
-                    rel = path
-                out.append(f"![{cap}]({rel.as_posix()})\n\n*{cap}*\n")
+                    rel = path.as_posix()
+                out.append(f"![{cap}]({rel})\n\n*{cap}*\n")
         return "\n".join(out)
 
     # ------------------------------------------------------------- pdf
@@ -60,11 +89,8 @@ class Doc:
         from reportlab.platypus import (Image, KeepTogether, ListFlowable, ListItem, PageBreak, Paragraph,
                                         Preformatted, SimpleDocTemplate, Spacer, Table, TableStyle)
 
-        pdfmetrics.registerFont(TTFont("Arial", str(FONT_DIR / "arial.ttf")))
-        pdfmetrics.registerFont(TTFont("Arial-Bold", str(FONT_DIR / "arialbd.ttf")))
-        pdfmetrics.registerFont(TTFont("Arial-Italic", str(FONT_DIR / "ariali.ttf")))
-        pdfmetrics.registerFont(TTFont("Arial-BoldItalic", str(FONT_DIR / "arialbi.ttf")))
-        pdfmetrics.registerFont(TTFont("Consolas", str(FONT_DIR / "consola.ttf")))
+        for logical in FONT_CANDIDATES:
+            pdfmetrics.registerFont(TTFont(logical, _resolve_font(logical)))
         from reportlab.pdfbase.pdfmetrics import registerFontFamily
         registerFontFamily("Arial", normal="Arial", bold="Arial-Bold", italic="Arial-Italic", boldItalic="Arial-BoldItalic")
 

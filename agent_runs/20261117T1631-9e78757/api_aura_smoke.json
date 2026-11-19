@@ -1,0 +1,164 @@
+{
+  "timestamp_utc": "2026-11-19T03:16:26.233813+00:00",
+  "target": "local Neo4j Community snapshot + Ollama qwen3:0.6b (NOT Aura)",
+  "health": {
+    "status": "ok",
+    "mode": "real",
+    "llm": {
+      "provider": "ollama",
+      "ready": true,
+      "detail": "Ollama and selected model ready"
+    },
+    "graph": {
+      "provider": "neo4j",
+      "ready": true,
+      "detail": "connected; 7134 nodes in scope"
+    }
+  },
+  "event_names": [
+    "start",
+    "parse",
+    "linked",
+    "query_start",
+    "query_result",
+    "decision",
+    "answer",
+    "done"
+  ],
+  "regular": {
+    "status": "answered",
+    "route": "graph_qa",
+    "parsed_intent": "author_papers",
+    "facts_count": 10,
+    "source_paper_ids": [
+      "oa:W4385569744",
+      "oa:W4385570131",
+      "oa:W4385571266",
+      "oa:W4385572293",
+      "oa:W4389325871",
+      "oa:W4402671897",
+      "oa:W4402671915",
+      "oa:W4404782672",
+      "oa:W4404782860",
+      "oa:W4412945021"
+    ]
+  },
+  "stream": {
+    "status": "answered",
+    "route": "graph_qa",
+    "parsed_intent": "author_papers",
+    "facts_count": 10,
+    "source_paper_ids": [
+      "oa:W4385569744",
+      "oa:W4385570131",
+      "oa:W4385571266",
+      "oa:W4385572293",
+      "oa:W4389325871",
+      "oa:W4402671897",
+      "oa:W4402671915",
+      "oa:W4404782672",
+      "oa:W4404782860",
+      "oa:W4412945021"
+    ]
+  },
+  "matrix": [
+    {
+      "id": "affiliation",
+      "status": "answered",
+      "route": "graph_qa",
+      "parsed_intent": "author_affiliations",
+      "facts_count": 6,
+      "source_paper_ids": [
+        "oa:W4404782712"
+      ],
+      "pass": true
+    },
+    {
+      "id": "paper_authors",
+      "status": "answered",
+      "route": "graph_qa",
+      "parsed_intent": "paper_authors",
+      "facts_count": 4,
+      "source_paper_ids": [
+        "oa:W4412944834"
+      ],
+      "pass": true
+    },
+    {
+      "id": "organization",
+      "status": "partial",
+      "route": "graph_qa",
+      "parsed_intent": "org_collaborations",
+      "facts_count": 20,
+      "source_paper_ids": [
+        "oa:W4385570234",
+        "oa:W4389518720",
+        "oa:W4389519066",
+        "oa:W4389519114",
+        "oa:W4389519486",
+        "oa:W4389524529",
+        "oa:W4391505486",
+        "oa:W4402671103",
+        "oa:W4402671566",
+        "oa:W4402671611",
+        "oa:W4402671787",
+        "oa:W4402684025",
+        "oa:W4404782854",
+        "oa:W4408146515",
+        "oa:W4412889872",
+        "oa:W4412889949",
+        "oa:W4412944832"
+      ],
+      "pass": true
+    },
+    {
+      "id": "unknown_entity",
+      "status": "not_found",
+      "route": "graph_qa",
+      "parsed_intent": "author_papers",
+      "facts_count": 0,
+      "source_paper_ids": [],
+      "pass": true
+    },
+    {
+      "id": "missing_reference",
+      "status": "clarify",
+      "route": "clarify",
+      "parsed_intent": "unknown",
+      "facts_count": 0,
+      "source_paper_ids": [],
+      "pass": true
+    },
+    {
+      "id": "out_of_scope",
+      "status": "out_of_scope",
+      "route": "out_of_scope",
+      "parsed_intent": "unknown",
+      "facts_count": 0,
+      "source_paper_ids": [],
+      "pass": true
+    },
+    {
+      "id": "chat_history",
+      "status": "answered",
+      "route": "chat_history",
+      "parsed_intent": "unknown",
+      "facts_count": 0,
+      "source_paper_ids": [],
+      "pass": true
+    },
+    {
+      "id": "ambiguous_name",
+      "status": "ambiguous",
+      "route": "graph_qa",
+      "parsed_intent": "author_papers",
+      "facts_count": 0,
+      "source_paper_ids": [],
+      "pass": true
+    }
+  ],
+  "matrix_passed": 8,
+  "matrix_total": 8,
+  "semantic_match": true,
+  "pass": true
+}

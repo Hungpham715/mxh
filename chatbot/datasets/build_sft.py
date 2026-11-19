@@ -22,17 +22,39 @@ from pathlib import Path
 
 from datasets.io import read_models, write_models
 from datasets.schema import QuestionCase, ReviewStatus, SFTSample
-from graphrag.llm.prompts import ANSWER_SYSTEM, PARSE_SYSTEM
-from graphrag.models import EntityMention, QueryFilters, QueryIntent
+from graphrag.llm.prompts import (
+    ANSWER_SYSTEM,
+    ROUTE_PARSE_SYSTEM,
+    build_answer_user,
+    build_parse_user,
+)
+from graphrag.models import EntityMention, QueryFilters, QueryIntent, RouteName
+
+TRAINABLE_STATUSES = {
+    ReviewStatus.APPROVED,
+    ReviewStatus.INDEPENDENT_APPROVED,
+    ReviewStatus.SILVER_APPROVED,
+}
+
+
+def _gold_route(case: QuestionCase) -> RouteName:
+    if case.expected_route is not None:
+        return RouteName(case.expected_route)
+    if case.expected_status == "out_of_scope":
+        return RouteName.OUT_OF_SCOPE
+    return RouteName.GRAPH_QA
 
 
 def parse_completion(case: QuestionCase) -> str:
-    """Build the gold PARSE assistant message: a runtime-valid QueryIntent JSON string."""
+    """Build the gold ROUTE/PARSE assistant message: a runtime-valid QueryIntent JSON string."""
     intent = QueryIntent(
+        route=_gold_route(case),
         intent=case.expected_query.intent,
         entities=[EntityMention(text=m.text, type=m.type) for m in case.entity_mentions],
         filters=QueryFilters(**case.filters) if case.filters else QueryFilters(),
         requested_fields=[],
+        missing_fields=["author_reference"] if case.expected_status == "clarify" else [],
+        history_refs=[],
         unsupported=case.expected_status == "out_of_scope",
         parse_source="llm",
     )
@@ -40,28 +62,33 @@ def parse_completion(case: QuestionCase) -> str:
 
 
 def answer_prompt(case: QuestionCase) -> str:
-    """Reproduce graphrag.answer's user message verbatim."""
-    facts_json = json.dumps(case.verified_facts, ensure_ascii=False)
-    return f"QUESTION:\n{case.question}\nSTATUS:{case.expected_status}\nVERIFIED_FACTS:{facts_json}"
+    """Reproduce graphrag.answer's user message verbatim via the shared builder."""
+    return build_answer_user(
+        case.question,
+        case.expected_status,
+        case.verified_facts,
+        truncated=bool(case.provenance.get("truncated", False)),
+    )
 
 
 def build_samples(cases: list[QuestionCase]) -> list[SFTSample]:
     samples: list[SFTSample] = []
     for case in cases:
-        if case.review_status != ReviewStatus.APPROVED:
+        if case.review_status not in TRAINABLE_STATUSES:
             continue
         if case.split == "test":
             continue
         if case.split not in {"train", "val"}:
-            raise ValueError(f"approved case {case.case_id} needs a train/val/test split")
+            raise ValueError(f"reviewed case {case.case_id} needs a train/val/test split")
 
+        history_dicts = [message.model_dump() for message in case.history]
         samples.append(
             SFTSample(
                 sample_id=f"{case.case_id}-parse",
                 task="PARSE",
                 messages=[
-                    {"role": "system", "content": PARSE_SYSTEM},
-                    {"role": "user", "content": f"QUESTION:\n{case.question}"},
+                    {"role": "system", "content": ROUTE_PARSE_SYSTEM},
+                    {"role": "user", "content": build_parse_user(case.question, history_dicts)},
                     {"role": "assistant", "content": parse_completion(case)},
                 ],
                 split=case.split,
@@ -85,7 +112,7 @@ def build_samples(cases: list[QuestionCase]) -> list[SFTSample]:
             )
 
     if not samples:
-        raise ValueError("no approved non-test samples; complete human review first")
+        raise ValueError("no reviewed non-test samples; complete review first")
     return samples
 
 

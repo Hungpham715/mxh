@@ -38,16 +38,23 @@ answer is substituted. See `docs/EXTERNAL_DEPENDENCIES.md` and `docs/OPERATIONS.
 ## Dataset → review → SFT → evaluation
 
 ```bash
-uv run python -m datasets.generate_from_graph --provider neo4j --execute --out data/generated/candidates.jsonl
-uv run python -m datasets.export_review --input data/generated/candidates.jsonl --out data/generated/review.csv
-uv run python -m datasets.import_review --source data/generated/candidates.jsonl --csv data/generated/review.csv --out data/reviewed/approved.jsonl --rejected data/reviewed/rejected.jsonl
-uv run python -m datasets.split --input data/reviewed/approved.jsonl --out data/splits/reviewed.jsonl
-uv run python -m datasets.build_sft --reviewed data/splits/reviewed.jsonl --out data/splits/sft.jsonl --manifest data/splits/sft.manifest.json
+uv run python -m datasets.generate_from_graph --provider neo4j --execute --per-action 600 --limit 12000 --snapshot-version processed-manifest-sha256:<sha256> --out data/generated/live_candidates.jsonl
+uv run python -m datasets.auto_review --provider neo4j --execute --input data/generated/live_candidates.jsonl --out data/generated/silver_review.csv
+uv run python -m datasets.import_review --source data/generated/live_candidates.jsonl --csv data/generated/silver_review.csv --status-on-yes silver_approved --out data/reviewed/silver.jsonl --rejected data/reviewed/silver_rejected.jsonl
+uv run python -m datasets.split --input data/reviewed/silver.jsonl --out data/splits/silver.jsonl
+uv run python -m datasets.audit_dataset --input data/splits/silver.jsonl --json data/splits/manifest.json --markdown data/splits/quality_audit.md
+uv run python -m datasets.build_sft --reviewed data/splits/silver.jsonl --out data/splits/sft.jsonl --manifest data/splits/sft.manifest.json
 uv run python training/train_sft.py --dry-run --dataset data/splits/sft.jsonl --config training/config_sft.yaml
-uv run python -m evaluation.run_eval --dataset data/splits/reviewed.jsonl --provider ollama --graph neo4j --max-iterations 5 --output-dir reports/eval/B1
+uv run python -m evaluation.run_eval --dataset data/splits/silver.jsonl --allow-silver --provider ollama --graph neo4j --max-iterations 5 --output-dir reports/eval/B1_silver
 ```
 
-Training is optional, GPU-gated, and uses only reviewed train/validation data. The Colab notebook calls the same
+For independent human gold, use `datasets.export_review` and import the completed sheet without
+`--status-on-yes silver_approved`. Training is optional, GPU-gated, and uses only reviewed train/validation data. The Colab notebook calls the same
 training engine and never uploads automatically. The local PEFT adapter runs via `hf_cpu`, not Ollama. Synthetic
 reports carry a non-benchmark banner; official comparison requires the same held-out reviewed test set.
+
+The internal `independent_approved` status is reserved for explicitly identified non-human source review. The
+evaluator reports it as `nonhuman_source_review`, never human or official independent gold. If prompts or code
+were changed after inspecting that set, pass `--development-diagnostic`; use `--page-size 100` when the expected
+answer contains complete sets larger than the interactive API's default page.
 

@@ -4,7 +4,14 @@ import { ChatMessage } from "./components/ChatMessage";
 import { Composer } from "./components/Composer";
 import { Sidebar } from "./components/Sidebar";
 import { getHealth, getPublicConfig, sendChat, streamChat } from "./lib/api";
-import type { ChatResponse, Conversation, HealthStatus, Message, PublicConfig } from "./lib/types";
+import type {
+  ChatResponse,
+  Conversation,
+  HealthStatus,
+  HistoryMessage,
+  Message,
+  PublicConfig,
+} from "./lib/types";
 
 const STORAGE_KEY = "mxh-graphrag-conversations-v1";
 const DEFAULT_CONFIG: PublicConfig = {
@@ -30,6 +37,30 @@ function newConversation(): Conversation {
   return { id: crypto.randomUUID(), title: "Hội thoại mới", messages: [], updatedAt: Date.now() };
 }
 
+function describeStreamEvent(event: string, data: unknown): string {
+  const payload = (data ?? {}) as Record<string, unknown>;
+  switch (event) {
+    case "start":
+      return "Bắt đầu xử lý…";
+    case "parse":
+      return `Đã hiểu câu hỏi (tuyến: ${String(payload.route ?? "?")}, ý định: ${String(payload.intent ?? "?")})`;
+    case "linked":
+      return "Đã nối thực thể với graph…";
+    case "query_start":
+      return `Đang truy vấn graph: ${String(payload.action ?? "?")}…`;
+    case "query_result":
+      return `Nhận ${String(payload.records ?? 0)} bản ghi (${String(payload.new_facts ?? 0)} fact mới)`;
+    case "decision":
+      return `Quyết định bước tiếp theo: ${String(payload.decision ?? "?")}`;
+    case "answer":
+      return "Đang soạn câu trả lời từ bằng chứng…";
+    case "done":
+      return "Hoàn tất";
+    default:
+      return event;
+  }
+}
+
 function loadConversations(): Conversation[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -51,6 +82,7 @@ export default function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [busy, setBusy] = useState(false);
+  const [pendingEvent, setPendingEvent] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const controllerRef = useRef<AbortController | null>(null);
   const endRef = useRef<HTMLDivElement | null>(null);
@@ -129,6 +161,12 @@ export default function App() {
     setBusy(true);
     setError(null);
     const requestConversationId = active.id;
+    // Send the real conversation history so the backend can resolve follow-ups
+    // ("đồng tác giả của người đó?") and answer history meta-questions.
+    const history: HistoryMessage[] = active.messages
+      .filter((message) => !message.pending && message.content.trim().length > 0)
+      .slice(-12)
+      .map((message) => ({ role: message.role, content: message.content.slice(0, 2000) }));
     const userMessage: Message = { id: crypto.randomUUID(), role: "user", content: question };
     const pendingId = crypto.randomUUID();
     const pendingMessage: Message = { id: pendingId, role: "assistant", content: "", pending: true };
@@ -145,15 +183,21 @@ export default function App() {
       let response: ChatResponse;
       if (config.enable_sse) {
         try {
-          response = await streamChat(question, true, () => undefined, controller.signal);
+          response = await streamChat(
+            question,
+            true,
+            (event) => setPendingEvent(describeStreamEvent(event.event, event.data)),
+            history,
+            controller.signal,
+          );
         } catch (streamError) {
           if (controller.signal.aborted) {
             throw streamError;
           }
-          response = await sendChat(question, true, controller.signal);
+          response = await sendChat(question, true, history, controller.signal);
         }
       } else {
-        response = await sendChat(question, true, controller.signal);
+        response = await sendChat(question, true, history, controller.signal);
       }
       updateConversation(requestConversationId, (conversation) => ({
         ...conversation,
@@ -183,6 +227,7 @@ export default function App() {
     } finally {
       controllerRef.current = null;
       setBusy(false);
+      setPendingEvent(null);
     }
   }
 
@@ -242,6 +287,9 @@ export default function App() {
           ) : (
             <div className="messages">
               {active.messages.map((message) => <ChatMessage key={message.id} message={message} />)}
+              {busy && pendingEvent && (
+                <div className="live-status" role="status" aria-live="polite">{pendingEvent}</div>
+              )}
               <div ref={endRef} />
             </div>
           )}

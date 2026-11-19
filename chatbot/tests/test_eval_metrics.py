@@ -6,7 +6,13 @@ import pytest
 from datasets.generate_from_graph import generate
 from datasets.io import write_models
 from evaluation.compare import compare
-from evaluation.metrics import percentile, precision_recall_f1, token_f1
+from evaluation.metrics import (
+    GOLD_LEVELS,
+    factual_set_score,
+    percentile,
+    precision_recall_f1,
+    token_f1,
+)
 from evaluation.run_eval import evaluate, write_report
 
 
@@ -14,7 +20,14 @@ def test_metric_formulas() -> None:
     score = precision_recall_f1({"a", "b"}, {"b", "c"})
     assert score == {"precision": 0.5, "recall": 0.5, "f1": 0.5}
     assert token_f1("Graph evidence", "graph evidence") == 1.0
+    assert factual_set_score("Beta; Alpha.", "Alpha; Beta") == {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+    }
+    assert factual_set_score("Alpha", "Alpha; Beta")["recall"] == 0.5
     assert percentile([1, 2, 3, 4, 5], 0.95) == 5
+    assert "nonhuman_source_review" in GOLD_LEVELS
 
 
 @pytest.mark.asyncio

@@ -1,0 +1,22 @@
+{"case_id": "oos-42-001", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-002", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-003", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-004", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-005", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-006", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-007", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-008", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-009", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-010", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-011", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "oos-42-012", "decision": "yes", "rationale": "question is plainly outside the graph-only academic NLP scope"}
+{"case_id": "independent-history-meta-001", "decision": "yes", "rationale": "answer is the first user message in supplied history"}
+{"case_id": "independent-history-coref-001", "decision": "yes", "rationale": "pronoun refers to Xinting Huang in supplied history; graph facts inherit reviewed base"}
+{"case_id": "independent-clarify-001", "decision": "yes", "rationale": "missing referent requires clarification"}
+{"case_id": "independent-ambiguous-001", "decision": "yes", "rationale": "live catalog contains eight distinct Author nodes named Qi Zhang"}
+{"case_id": "independent-unknown-entity-001", "decision": "yes", "rationale": "name is a deliberate non-catalog entity and must return not_found"}
+{"case_id": "independent-count-001", "decision": "yes", "rationale": "fresh graph-exact base contains 3 distinct authored paper facts"}
+{"case_id": "independent-count-002", "decision": "yes", "rationale": "fresh graph-exact base contains 2 distinct authored paper facts"}
+{"case_id": "independent-count-003", "decision": "yes", "rationale": "fresh graph-exact base contains 2 distinct authored paper facts"}
+{"case_id": "independent-count-004", "decision": "yes", "rationale": "fresh graph-exact base contains 2 distinct authored paper facts"}
+{"case_id": "independent-count-005", "decision": "yes", "rationale": "fresh graph-exact base contains 3 distinct authored paper facts"}

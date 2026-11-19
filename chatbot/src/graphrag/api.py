@@ -91,44 +91,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             return StreamingResponse(_single_error_event("sse_disabled"), media_type="text/event-stream")
 
         async def events():
-            yield _event("start", {"mode": resolved.app_mode})
-            await asyncio.sleep(0)
+            # Events are emitted by the workflow *while* it runs — no post-hoc replay.
             try:
-                response = await asyncio.wait_for(
-                    workflow.run(payload),
-                    timeout=resolved.request_timeout_seconds,
-                )
+                async with asyncio.timeout(resolved.request_timeout_seconds):
+                    async for name, data in workflow.run_events(payload):
+                        yield _event(name, data)
             except TimeoutError:
                 yield _event("error", {"code": "request_timeout"})
-                return
-            yield _event("parse", {"status": response.status})
-            yield _event(
-                "linked",
-                {
-                    "status": response.status,
-                    "ambiguity": [item.model_dump(mode="json") for item in response.ambiguous_candidates],
-                },
-            )
-            for trace in response.trace or []:
-                yield _event(
-                    "query_start",
-                    {
-                        "iteration": trace.iteration,
-                        "action": trace.action,
-                    },
-                )
-                yield _event("query_result", trace.model_dump(mode="json"))
-                yield _event(
-                    "decision",
-                    {
-                        "iteration": trace.iteration,
-                        "decision": trace.status,
-                        "new_facts": trace.new_facts,
-                    },
-                )
-                await asyncio.sleep(0)
-            yield _event("answer", {"answer": response.answer})
-            yield _event("done", response.model_dump(mode="json"))
 
         return StreamingResponse(
             events(),

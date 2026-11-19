@@ -1,0 +1,181 @@
+{
+  "timestamp_utc": "2026-11-19T02:46:42.709003+00:00",
+  "profile": {
+    "mode": "real",
+    "graph": "neo4j",
+    "neo4j_scheme": "neo4j+s",
+    "neo4j_host_suffix": "databases.neo4j.io",
+    "server_agent": "Neo4j/5.27-aura",
+    "database": "neo4j",
+    "scope_id": "nlpgraph-v1"
+  },
+  "entities_input_sha256": "615fb61b540c0cc07808ffb97a129ca3a3cd2ec4eb08db29ed78bd350844de83",
+  "health": {
+    "ready": true,
+    "detail": "connected; 7134 nodes in scope"
+  },
+  "preview": {
+    "nodes": {
+      "Author": 5430,
+      "Institution": 600,
+      "Paper": 1091,
+      "Topic": 6,
+      "Venue": 7
+    },
+    "relationships": {
+      "ACTIVE_IN": 139,
+      "AFFILIATED_WITH": 4306,
+      "APPEARS_IN": 1091,
+      "CITES": 26,
+      "COAUTHORED_WITH": 16754,
+      "FIRST_AUTHOR_OF": 1091,
+      "HAS_TOPIC": 451,
+      "ORG_COAUTHORED_WITH": 2001,
+      "OTHER_AUTHOR_OF": 5007,
+      "RESEARCHES": 105
+    },
+    "scope_id": "nlpgraph-v1"
+  },
+  "actions": [
+    {
+      "action": "author_papers",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "AUTHORED",
+      "first_paper_ids": [
+        "oa:W4416036989"
+      ],
+      "first_source_url": "https://aclanthology.org/2025.emnlp-main.272/",
+      "pass": true
+    },
+    {
+      "action": "coauthors",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "COAUTHORED_WITH",
+      "first_paper_ids": [
+        "oa:W4416036106",
+        "oa:W4416036569"
+      ],
+      "first_source_url": null,
+      "pass": true
+    },
+    {
+      "action": "shared_papers",
+      "records": 4,
+      "truncated": false,
+      "first_predicate": "SHARED_PAPER_WITH",
+      "first_paper_ids": [
+        "oa:W4404782606"
+      ],
+      "first_source_url": "https://aclanthology.org/2024.emnlp-main.852/",
+      "pass": true
+    },
+    {
+      "action": "author_affiliations",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "AFFILIATED_WITH_ON_PAPER",
+      "first_paper_ids": [
+        "oa:W4404782712"
+      ],
+      "first_source_url": "https://aclanthology.org/2024.emnlp-main.1087/",
+      "pass": true
+    },
+    {
+      "action": "coauthor_affiliations",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "COAUTHOR_AFFILIATION_ON_SHARED_PAPER",
+      "first_paper_ids": [
+        "oa:W4416036569"
+      ],
+      "first_source_url": "https://aclanthology.org/2025.emnlp-main.375/",
+      "pass": true
+    },
+    {
+      "action": "paper_authors",
+      "records": 4,
+      "truncated": false,
+      "first_predicate": "FIRST_AUTHOR_OF",
+      "first_paper_ids": [
+        "oa:W4412944834"
+      ],
+      "first_source_url": "https://aclanthology.org/2025.acl-long.1019/",
+      "pass": true
+    },
+    {
+      "action": "topic_papers",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "HAS_LABELLED_PAPER",
+      "first_paper_ids": [
+        "oa:W4416036487"
+      ],
+      "first_source_url": "https://aclanthology.org/2025.emnlp-main.983/",
+      "pass": true
+    },
+    {
+      "action": "paper_venue",
+      "records": 1,
+      "truncated": false,
+      "first_predicate": "APPEARS_IN",
+      "first_paper_ids": [
+        "oa:W4412944834"
+      ],
+      "first_source_url": "https://aclanthology.org/2025.acl-long.1019/",
+      "pass": true
+    },
+    {
+      "action": "paper_citations",
+      "records": 4,
+      "truncated": false,
+      "first_predicate": "CITED_BY_IN_CORPUS",
+      "first_paper_ids": [
+        "oa:W4385572068"
+      ],
+      "first_source_url": "https://aclanthology.org/2023.acl-long.482/",
+      "pass": true
+    },
+    {
+      "action": "org_collaborations",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "ORG_COAUTHORED_WITH",
+      "first_paper_ids": [
+        "oa:W4389518720",
+        "oa:W4389519066",
+        "oa:W4389524529",
+        "oa:W4391505486"
+      ],
+      "first_source_url": null,
+      "pass": true
+    },
+    {
+      "action": "author_path",
+      "records": 1,
+      "truncated": false,
+      "first_predicate": "COAUTHOR_PATH",
+      "first_paper_ids": [
+        "oa:W4322832290",
+        "oa:W4390529340",
+        "oa:W4404782606",
+        "oa:W4404782948"
+      ],
+      "first_source_url": null,
+      "pass": true
+    },
+    {
+      "action": "network_top",
+      "records": 5,
+      "truncated": true,
+      "first_predicate": "RANKED_BY_COAUTHOR_COUNT",
+      "first_paper_ids": [],
+      "first_source_url": null,
+      "pass": true
+    }
+  ],
+  "actions_passed": 12,
+  "actions_total": 12,
+  "pass": true
+}

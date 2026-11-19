@@ -127,6 +127,6 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 
 Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
 
-![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](D:/nlp-collab-graph/output/analysis/relationship_types.png)
+![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](../output/analysis/relationship_types.png)
 
 *Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).*

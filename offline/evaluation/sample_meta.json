@@ -1,17 +1,17 @@
 {
-  "seed": 20261108,
-  "per_type": 20,
-  "n_samples": 200,
+  "seed": 20261118,
+  "per_type": 40,
+  "n_samples": 386,
   "per_type_counts": {
-    "FIRST_AUTHOR_OF": 20,
-    "OTHER_AUTHOR_OF": 20,
-    "COAUTHORED_WITH": 20,
-    "AFFILIATED_WITH": 20,
-    "APPEARS_IN": 20,
-    "HAS_TOPIC": 20,
-    "CITES": 20,
-    "ORG_COAUTHORED_WITH": 20,
-    "RESEARCHES": 20,
-    "ACTIVE_IN": 20
+    "FIRST_AUTHOR_OF": 40,
+    "OTHER_AUTHOR_OF": 40,
+    "COAUTHORED_WITH": 40,
+    "AFFILIATED_WITH": 40,
+    "APPEARS_IN": 40,
+    "HAS_TOPIC": 40,
+    "CITES": 26,
+    "ORG_COAUTHORED_WITH": 40,
+    "RESEARCHES": 40,
+    "ACTIVE_IN": 40
   }
 }

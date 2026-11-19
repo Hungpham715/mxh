@@ -10,6 +10,7 @@ from graphrag.intent_parser import IntentParser
 from graphrag.llm.fake import FakeLLMProvider
 from graphrag.llm.hf_cpu import HFCPUProvider
 from graphrag.llm.ollama_cpu import OllamaProvider
+from graphrag.next_step import NextStepDecider
 from graphrag.planner import Planner
 from graphrag.settings import Settings
 from graphrag.workflow import GraphRAGWorkflow
@@ -47,5 +48,14 @@ def build_dependencies(settings: Settings):
     linker = EntityLinker(repository, settings.fuzzy_score_threshold, settings.fuzzy_score_margin)
     planner = Planner(settings.max_records_per_query)
     answer_generator = GroundedAnswerGenerator(llm)
-    workflow = GraphRAGWorkflow(settings, repository, parser, linker, planner, answer_generator)
+    next_step_decider = NextStepDecider(llm, settings.max_records_per_query)
+    workflow = GraphRAGWorkflow(
+        settings,
+        repository,
+        parser,
+        linker,
+        planner,
+        answer_generator,
+        next_step_decider,
+    )
     return llm, repository, workflow

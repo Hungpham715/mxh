@@ -1,0 +1,18 @@
+{
+  "seed": 20261118,
+  "per_type": 40,
+  "n_samples": 386,
+  "per_type_counts": {
+    "FIRST_AUTHOR_OF": 40,
+    "OTHER_AUTHOR_OF": 40,
+    "COAUTHORED_WITH": 40,
+    "AFFILIATED_WITH": 40,
+    "APPEARS_IN": 40,
+    "HAS_TOPIC": 40,
+    "CITES": 26,
+    "ORG_COAUTHORED_WITH": 40,
+    "RESEARCHES": 40,
+    "ACTIVE_IN": 40
+  },
+  "review_template": "manual_review_template_truth_v2.csv"
+}

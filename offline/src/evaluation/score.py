@@ -90,6 +90,17 @@ def run_score(labels: Path, auto_path: Path | None = None, tag: str = "") -> int
         human = [r for r in rows if (r.get("label_origin") or "human") == "human" and r.get("label")]
         if human:
             out["human"] = {"label_origin": "human", **score_rows(human)}
+        independent = [
+            r
+            for r in rows
+            if (r.get("label_origin") or "") == "independent_source_review" and r.get("label")
+        ]
+        if independent:
+            out["independent_review"] = {
+                "label_origin": "independent_source_review",
+                "disclaimer": "Independent Codex source review; NOT human annotation.",
+                **score_rows(independent),
+            }
     else:
         log.warning("%s not found: no human labels -> human precision NOT MEASURED", labels)
     auto_path = auto_path or (EVAL / f"automated_labels{tag}.csv")
@@ -99,7 +110,12 @@ def run_score(labels: Path, auto_path: Path | None = None, tag: str = "") -> int
                 "label_origin": "automated_preliminary",
                 "disclaimer": "Automated re-verification against cached raw source records; NOT independent human annotation.",
                 **score_rows(list(csv.DictReader(fh)))}
-    out["status"] = "human_scored" if "human" in out else "PENDING_HUMAN_REVIEW (automated preliminary only)"
+    if "human" in out:
+        out["status"] = "human_scored"
+    elif "independent_review" in out:
+        out["status"] = "independent_source_review_scored (NOT human annotation)"
+    else:
+        out["status"] = "PENDING_HUMAN_REVIEW (automated preliminary only)"
     write_json(EVAL / f"scores{tag}.json", out)
     a = out.get("automated_preliminary", {})
     print(f"status: {out['status']}")

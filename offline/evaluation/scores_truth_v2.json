@@ -1,0 +1,175 @@
+{
+  "automated_preliminary": {
+    "label_origin": "automated_preliminary",
+    "disclaimer": "Automated re-verification against cached raw source records; NOT independent human annotation.",
+    "per_type": {
+      "FIRST_AUTHOR_OF": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "OTHER_AUTHOR_OF": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 5007,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "COAUTHORED_WITH": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 16754,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "AFFILIATED_WITH": {
+        "n": 40,
+        "correct": 17,
+        "incorrect": 0,
+        "unverifiable": 23,
+        "graph_count": 4306,
+        "precision": 0.425,
+        "wilson95": [
+          0.2851,
+          0.578
+        ],
+        "errors": {
+          "missing source": 23
+        },
+        "precision_excluding_unverifiable": 1.0
+      },
+      "APPEARS_IN": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 1091,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "HAS_TOPIC": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 451,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "CITES": {
+        "n": 26,
+        "correct": 26,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 26,
+        "precision": 1.0,
+        "wilson95": [
+          0.8713,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ORG_COAUTHORED_WITH": {
+        "n": 40,
+        "correct": 17,
+        "incorrect": 0,
+        "unverifiable": 23,
+        "graph_count": 2001,
+        "precision": 0.425,
+        "wilson95": [
+          0.2851,
+          0.578
+        ],
+        "errors": {
+          "missing source": 23
+        },
+        "precision_excluding_unverifiable": 1.0
+      },
+      "RESEARCHES": {
+        "n": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "graph_count": 105,
+        "precision": 1.0,
+        "wilson95": [
+          0.9124,
+          1.0
+        ],
+        "errors": {},
+        "precision_excluding_unverifiable": 1.0
+      },
+      "ACTIVE_IN": {
+        "n": 40,
+        "correct": 16,
+        "incorrect": 0,
+        "unverifiable": 24,
+        "graph_count": 139,
+        "precision": 0.4,
+        "wilson95": [
+          0.2635,
+          0.554
+        ],
+        "errors": {
+          "only 1 independently verified, 1 without ACL affiliation": 16,
+          "only 1 independently verified, 2 without ACL affiliation": 2,
+          "only 0 independently verified, 4 without ACL affiliation": 1,
+          "only 0 independently verified, 2 without ACL affiliation": 4,
+          "only 0 independently verified, 3 without ACL affiliation": 1
+        },
+        "precision_excluding_unverifiable": 1.0
+      }
+    },
+    "macro_precision": 0.825,
+    "micro_precision_weighted": 0.8802,
+    "micro_ci95_stratified_wilson": [
+      0.8548,
+      0.9017
+    ],
+    "micro_ci95_stratified_agresti_coull": [
+      0.8547,
+      0.9018
+    ],
+    "micro_effective_sample_size": 737.1,
+    "micro_design_effect": 0.5236,
+    "micro_ci_method": "reliable-kg-estimation: stratified Wilson / Agresti-Coull at the design ESS",
+    "types_meeting_0.90_point_estimate": 7,
+    "types_with_wilson_lower_ge_0.90": 6,
+    "n_total": 386
+  },
+  "status": "PENDING_HUMAN_REVIEW (automated preliminary only)"
+}
