@@ -43,7 +43,9 @@ def matrix_cases() -> list[dict]:
             "payload": {
                 "question": f"{entities['top_org'][0]['name']} hợp tác với tổ chức nào trong corpus?"
             },
-            "statuses": {"answered"},
+            # top collaborator org exceeds the 20-row default page: truncated -> partial is the
+            # intended contract, so partial must be accepted alongside answered.
+            "statuses": {"answered", "partial"},
             "intent": "org_collaborations",
         },
         {

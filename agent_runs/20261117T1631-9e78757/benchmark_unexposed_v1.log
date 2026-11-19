@@ -1,0 +1,33 @@
+checkpoint: 10/300 cases
+checkpoint: 20/300 cases
+checkpoint: 30/300 cases
+checkpoint: 40/300 cases
+checkpoint: 50/300 cases
+checkpoint: 60/300 cases
+checkpoint: 70/300 cases
+checkpoint: 80/300 cases
+checkpoint: 90/300 cases
+checkpoint: 100/300 cases
+checkpoint: 110/300 cases
+checkpoint: 120/300 cases
+checkpoint: 130/300 cases
+checkpoint: 140/300 cases
+checkpoint: 150/300 cases
+checkpoint: 160/300 cases
+checkpoint: 170/300 cases
+checkpoint: 180/300 cases
+checkpoint: 190/300 cases
+checkpoint: 200/300 cases
+checkpoint: 210/300 cases
+checkpoint: 220/300 cases
+checkpoint: 230/300 cases
+checkpoint: 240/300 cases
+checkpoint: 250/300 cases
+checkpoint: 260/300 cases
+checkpoint: 270/300 cases
+checkpoint: 280/300 cases
+checkpoint: 290/300 cases
+checkpoint: 300/300 cases
+NON-HUMAN SOURCE-REVIEWED EVALUATION — NOT HUMAN OR OFFICIAL INDEPENDENT GOLD
+model: ollama:qwen3:0.6b
+wrote evaluation artifacts to reports/eval/aura_nonhuman_unexposed_v1

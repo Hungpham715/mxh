@@ -4,3 +4,7 @@
 benchmark_v8_resume pid 1897444
 qa_review_v3 pid 1912807
 benchmark_unexposed_v1 pid 1966848
+e2e_real_run6 pid 2018791
+e2e_real_run7 pid 2034733
+api_server_v2 pid 2041600
+SERVER_PID=2046217

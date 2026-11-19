@@ -1,6 +1,6 @@
 {
-  "timestamp_utc": "2026-11-18T13:53:06.896764+00:00",
-  "target": "AuraDB Neo4j/5.27-aura scope nlpgraph-v1 + Ollama qwen3:0.6b",
+  "timestamp_utc": "2026-11-19T03:16:26.233813+00:00",
+  "target": "local Neo4j Community snapshot + Ollama qwen3:0.6b (NOT Aura)",
   "health": {
     "status": "ok",
     "mode": "real",
@@ -86,7 +86,7 @@
     },
     {
       "id": "organization",
-      "status": "answered",
+      "status": "partial",
       "route": "graph_qa",
       "parsed_intent": "org_collaborations",
       "facts_count": 20,
@@ -122,9 +122,9 @@
     },
     {
       "id": "missing_reference",
-      "status": "not_found",
-      "route": "graph_qa",
-      "parsed_intent": "author_papers",
+      "status": "clarify",
+      "route": "clarify",
+      "parsed_intent": "unknown",
       "facts_count": 0,
       "source_paper_ids": [],
       "pass": true
