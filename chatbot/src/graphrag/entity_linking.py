@@ -56,6 +56,12 @@ def normalize_name(value: str) -> str:
     return re.sub(r"\s+", " ", normalized).strip()
 
 
+def is_pronoun_reference(text: str) -> bool:
+    """True when text refers by pronoun ("tác giả đó", "that author") instead of naming an entity."""
+    normalized = normalize_name(text)
+    return any(marker in normalized for marker in PRONOUN_MARKERS)
+
+
 class EntityLinker:
     def __init__(self, repository: GraphRepository, score_threshold: float, score_margin: float) -> None:
         self.repository = repository
@@ -206,7 +212,7 @@ class EntityLinker:
 
     @staticmethod
     def _refers_by_pronoun(question_norm: str) -> bool:
-        return any(marker in question_norm for marker in PRONOUN_MARKERS)
+        return is_pronoun_reference(question_norm)
 
     @staticmethod
     def _recent_history_matches(

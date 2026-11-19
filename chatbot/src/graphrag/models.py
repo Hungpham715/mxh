@@ -57,10 +57,13 @@ class EntityMention(BaseModel):
     @classmethod
     def normalize_type_case(cls, value: Any) -> Any:
         # Small models often emit "author"/"unknown"; accept any casing of a valid label.
+        # An out-of-vocabulary label (observed: "number") is coerced to "Unknown" so one odd
+        # type cannot fail the whole intent parse; the mention text stays available for linking.
         if isinstance(value, str):
             for allowed in ("Author", "Paper", "Institution", "Venue", "Topic", "Unknown"):
                 if value.casefold() == allowed.casefold():
                     return allowed
+            return "Unknown"
         return value
 
 

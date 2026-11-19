@@ -12,7 +12,7 @@ from collections.abc import AsyncIterator, Iterator
 from typing import Any
 
 from graphrag.answer import GroundedAnswerGenerator
-from graphrag.entity_linking import INTENT_REQUIRED_MENTIONS, EntityLinker
+from graphrag.entity_linking import INTENT_REQUIRED_MENTIONS, EntityLinker, is_pronoun_reference
 from graphrag.evidence import EvidenceNormalizer, build_citations
 from graphrag.graph.base import GraphRepository
 from graphrag.intent_parser import IntentParser
@@ -84,10 +84,10 @@ class GraphRAGWorkflow:
             yield "done", response.model_dump(mode="json")
             return
 
-        # A 0.6B router can emit a valid but semantically inconsistent object. When the live
-        # catalog contains exact names in the question, use their trusted labels to detect that
-        # conflict and give the LLM one bounded correction turn. Intent selection remains with
-        # the model; code validates that the repaired entity contract uses catalog spans only.
+        # A 0.6B router can emit valid JSON while confusing relationships that use the same entity
+        # type (for example coauthors vs author_papers). When exact live-catalog names are present,
+        # give the LLM one focused verification turn. Intent selection remains with the model;
+        # code only constrains accepted entities to trusted catalog spans.
         catalog_mentions = await self.linker.catalog_mentions(request.question)
         required = INTENT_REQUIRED_MENTIONS.get(intent.intent.value)
         catalog_conflict = (
@@ -97,7 +97,11 @@ class GraphRAGWorkflow:
         weak_parse = bool(catalog_mentions) and (
             intent.route == RouteName.OUT_OF_SCOPE or intent.intent.value == "unknown" or catalog_conflict
         )
-        if weak_parse:
+        verify_graph_parse = bool(catalog_mentions) and intent.route in {
+            RouteName.GRAPH_QA,
+            RouteName.CLARIFY,
+        }
+        if weak_parse or verify_graph_parse:
             repaired, repair_calls = await self.parser.repair_with_catalog_context(
                 request.question,
                 history,
@@ -106,8 +110,24 @@ class GraphRAGWorkflow:
             )
             state.llm_calls += repair_calls
             if repaired is not None:
-                intent = repaired
-                state.entity_rescue = "catalog_guided_llm"
+                chosen = repaired.intent
+                if repaired.intent != intent.intent and not catalog_conflict and required is not None:
+                    chosen, arbitration_calls = await self.parser.choose_between_intents(
+                        request.question,
+                        intent.intent,
+                        repaired.intent,
+                    )
+                    state.llm_calls += arbitration_calls
+                if chosen == repaired.intent:
+                    intent = repaired
+                    state.entity_rescue = "catalog_verified_llm"
+
+        if intent.route in {RouteName.GRAPH_QA, RouteName.CLARIFY} and intent.intent.value != "unknown":
+            count_fields, field_calls = await self.parser.classify_requested_fields(request.question)
+            state.llm_calls += field_calls
+            requested_fields = [field for field in intent.requested_fields if field != "count"]
+            requested_fields.extend(count_fields)
+            intent = intent.model_copy(update={"requested_fields": requested_fields})
 
         yield (
             "parse",
@@ -133,6 +153,36 @@ class GraphRAGWorkflow:
                     update={"entities": rescued, "route": RouteName.GRAPH_QA, "missing_fields": []}
                 )
                 state.entity_rescue = state.entity_rescue or "catalog"
+                if not catalog_mentions:
+                    # The question itself names nobody, so the rescue came from history. Follow-up
+                    # questions carry the relationship in words like "đồng tác giả", which a 0.6B
+                    # model often mis-maps on first parse; give the LLM one focused verification
+                    # turn against the recovered catalog entities (same contract as the pre-link
+                    # repair pass — the model decides, code only supplies trusted mentions).
+                    repaired, repair_calls = await self.parser.repair_with_catalog_context(
+                        request.question, history, intent, rescued
+                    )
+                    state.llm_calls += repair_calls
+                    if repaired is not None:
+                        intent = repaired
+                        state.entity_rescue = "catalog_verified_llm"
+
+        # An entity-bearing intent whose question names nobody is a clarification, not a lookup
+        # failure: `not_found` must mean a concrete name was given but is absent from the catalog.
+        # After grounding dropped hallucinated spans and the catalog rescue found nothing, only
+        # pronoun-style references (or nothing) remain — ask the user for the missing name.
+        if intent.route == RouteName.GRAPH_QA and required is not None:
+            named_mentions = [
+                mention for mention in intent.entities if not is_pronoun_reference(mention.text)
+            ]
+            if not named_mentions:
+                intent = intent.model_copy(
+                    update={
+                        "route": RouteName.CLARIFY,
+                        "entities": [],
+                        "missing_fields": [f"{required[0].casefold()}_reference"],
+                    }
+                )
 
         # --- Route dispatch -------------------------------------------------
         if intent.route == RouteName.OUT_OF_SCOPE or intent.unsupported:
@@ -162,6 +212,16 @@ class GraphRAGWorkflow:
             return
 
         if intent.intent.value == "unknown":
+            # A pronoun-style reference with no resolvable antecedent is under-referenced, not
+            # off-topic: ask for the missing name instead of refusing.
+            if is_pronoun_reference(request.question):
+                intent = intent.model_copy(update={"route": RouteName.CLARIFY})
+                state.status = "clarify"
+                state.stop_reason = "clarify_missing_fields"
+                state.answer = self._clarify_question(intent.missing_fields)
+                for event in self._finish(state, request, ambiguous_candidates, intent):
+                    yield event
+                return
             # GRAPH_QA route but no catalog intent: treat as out-of-scope, never guess.
             state.status = "out_of_scope"
             state.stop_reason = "unsupported_intent"
@@ -338,7 +398,7 @@ class GraphRAGWorkflow:
 
         if state.status not in {"error", "clarify"}:
             if state.facts and state.stop_reason == "sufficient":
-                state.status = "answered"
+                state.status = "partial" if state.truncated else "answered"
             elif state.facts:
                 state.status = "partial"
                 state.stop_reason = state.stop_reason or "incomplete"
@@ -347,7 +407,11 @@ class GraphRAGWorkflow:
                 state.stop_reason = state.stop_reason or "empty_result"
 
         state.answer = await self.answer_generator.generate(
-            request.question, state.facts, state.status, truncated=state.truncated
+            request.question,
+            state.facts,
+            state.status,
+            truncated=state.truncated,
+            requested_fields=intent.requested_fields,
         )
         if state.facts:
             state.llm_calls += 1

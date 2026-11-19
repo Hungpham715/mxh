@@ -7,11 +7,15 @@ import time
 import httpx
 import pytest
 
+from graphrag.answer import GroundedAnswerGenerator
 from graphrag.api import create_app
 from graphrag.factory import build_dependencies
 from graphrag.graph.base import GraphQueryResult
 from graphrag.graph.fake_graph import FakeGraphRepository
+from graphrag.intent_parser import IntentParser
+from graphrag.llm.base import LLMResponse
 from graphrag.models import ChatRequest, HistoryMessage, NextDecision, QueryAction, QueryStep
+from graphrag.next_step import NextStepDecider
 from graphrag.settings import Settings
 
 
@@ -71,6 +75,105 @@ async def test_clarify_route_when_reference_missing(dependencies) -> None:
     assert "?" in response.answer
 
 
+class ScriptedLLM:
+    """Returns one fixed payload for every call so a route decision can be tested in isolation."""
+
+    name = "scripted"
+
+    def __init__(self, payload: str) -> None:
+        self.payload = payload
+
+    async def generate(self, messages, *, temperature, max_tokens, json_mode):
+        _ = messages, temperature, max_tokens, json_mode
+        return LLMResponse(content=self.payload, model="scripted", provider=self.name)
+
+
+@pytest.mark.asyncio
+async def test_graph_qa_with_only_pronoun_reference_becomes_clarify(dependencies) -> None:
+    # The model commits to a lookup but the question names nobody (pronoun only, no history).
+    # Code must ask for the missing name instead of reporting a not_found lookup failure.
+    _, _, workflow = dependencies
+    payload = (
+        '{"route":"graph_qa","intent":"author_papers",'
+        '"entities":[{"text":"tác giả đó","type":"Author"}],'
+        '"missing_fields":[],"filters":{"year_from":null,"year_to":null,"topic_id":null,'
+        '"citation_direction":"both"},"requested_fields":[],"history_refs":[],'
+        '"unsupported":false,"parse_source":"llm"}'
+    )
+    workflow.parser = IntentParser(ScriptedLLM(payload))
+    response = await workflow.run(ChatRequest(question="Các bài báo của tác giả đó?"))
+    assert response.route == "clarify"
+    assert response.status == "clarify"
+    assert response.stop_reason == "clarify_missing_fields"
+    assert response.iterations_used == 0
+
+
+@pytest.mark.asyncio
+async def test_unknown_intent_pronoun_question_clarifies_not_refuses(dependencies) -> None:
+    # The model gave up on the intent but the question is an in-domain pronoun reference:
+    # this is a clarification, not an out-of-scope refusal.
+    _, _, workflow = dependencies
+    payload = (
+        '{"route":"graph_qa","intent":"unknown","entities":[],'
+        '"missing_fields":[],"filters":{"year_from":null,"year_to":null,"topic_id":null,'
+        '"citation_direction":"both"},"requested_fields":[],"history_refs":[],'
+        '"unsupported":false,"parse_source":"llm"}'
+    )
+    workflow.parser = IntentParser(ScriptedLLM(payload))
+    response = await workflow.run(ChatRequest(question="Các bài báo của tác giả đó?"))
+    assert response.route == "clarify"
+    assert response.status == "clarify"
+    assert response.stop_reason == "clarify_missing_fields"
+
+
+class SequenceLLM:
+    """Scripted provider consuming one payload per call, then repeating a default."""
+
+    name = "scripted"
+
+    def __init__(self, payloads: list[str], default: str) -> None:
+        self.payloads = list(payloads)
+        self.default = default
+
+    async def generate(self, messages, *, temperature, max_tokens, json_mode):
+        _ = messages, temperature, max_tokens, json_mode
+        content = self.payloads.pop(0) if self.payloads else self.default
+        return LLMResponse(content=content, model="scripted", provider=self.name)
+
+
+@pytest.mark.asyncio
+async def test_history_rescued_followup_gets_one_intent_verification_turn(dependencies) -> None:
+    # Follow-up naming nobody: the rescue recovers "An Nguyen" from history, then the LLM gets
+    # one focused verification turn and corrects author_papers -> coauthors ("đồng tác giả").
+    _, _, workflow = dependencies
+    parse_payload = (
+        '{"route":"graph_qa","intent":"author_papers",'
+        '"entities":[{"text":"người đó","type":"Author"}],'
+        '"missing_fields":[],"filters":{"year_from":null,"year_to":null,"topic_id":null,'
+        '"citation_direction":"both"},"requested_fields":[],"history_refs":[],'
+        '"unsupported":false,"parse_source":"llm"}'
+    )
+    seq = SequenceLLM(
+        [
+            parse_payload,  # parse
+            '{"mode":"values"}',  # answer-shape classifier
+            '{"intent":"coauthors"}',  # post-rescue intent verification
+            '{"sufficient":true,"missing_goals":[]}',  # next-step decision
+        ],
+        default="{}",
+    )
+    workflow.parser = IntentParser(seq)
+    workflow.next_step = NextStepDecider(seq, 20)
+    workflow.answer_generator = GroundedAnswerGenerator(seq)
+    response = await workflow.run(
+        ChatRequest(question="Thế các đồng tác giả của người đó?", history=HISTORY_WITH_AUTHOR)
+    )
+    assert response.status == "answered"
+    assert response.parsed_intent == "coauthors"
+    assert response.entity_rescue == "catalog_verified_llm"
+    assert [entity.id for entity in response.linked_entities] == ["author:an"]
+
+
 @pytest.mark.asyncio
 async def test_out_of_scope_booking_is_refused(dependencies) -> None:
     _, _, workflow = dependencies
@@ -120,7 +223,7 @@ async def test_truncated_results_are_never_complete(dependencies) -> None:
     _, repository, workflow = dependencies
     workflow.repository = TruncatingRepository()
     response = await workflow.run(ChatRequest(question="Bài báo của An Nguyen", debug=True))
-    assert response.status == "answered"
+    assert response.status == "partial"
     assert response.truncated is True
     assert response.complete is False
 
