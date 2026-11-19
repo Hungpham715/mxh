@@ -233,6 +233,25 @@ async def test_out_of_vocabulary_entity_type_is_coerced_to_unknown() -> None:
 
 
 @pytest.mark.asyncio
+async def test_textless_entity_entry_does_not_fail_the_whole_parse() -> None:
+    # Real observed Qwen output for a year-filter question: a stray filter object inside
+    # entities. The valid mention, intent, and filters must survive.
+    payload = (
+        '{"route":"graph_qa","intent":"author_papers",'
+        '"entities":[{"text":"Xipeng Qiu","type":"Author"},{"year_from":2024,"year_to":2025}],'
+        '"filters":{"year_from":2024,"year_to":2025,"topic_id":null,"citation_direction":"both"},'
+        '"requested_fields":[],"missing_fields":[],"history_refs":[],'
+        '"unsupported":false,"parse_source":"llm"}'
+    )
+    parser = IntentParser(ScriptedProvider(payload))
+    intent, calls = await parser.parse("Bài báo của Xipeng Qiu từ năm 2024 đến 2025?")
+    assert calls == 1
+    assert intent.intent == IntentName.AUTHOR_PAPERS
+    assert [mention.text for mention in intent.entities] == ["Xipeng Qiu"]
+    assert (intent.filters.year_from, intent.filters.year_to) == (2024, 2025)
+
+
+@pytest.mark.asyncio
 async def test_ungrounded_entity_mentions_get_one_retry_then_are_dropped() -> None:
     payload = (
         '{"route":"graph_qa","intent":"author_papers","entities":[{"text":"that author","type":"Author"}],'

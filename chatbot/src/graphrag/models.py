@@ -105,6 +105,24 @@ class QueryIntent(BaseModel):
                         return member.value
         return value
 
+    @field_validator("entities", mode="before")
+    @classmethod
+    def drop_textless_entity_entries(cls, value: Any) -> Any:
+        # Small models sometimes append a malformed entry (observed: a bare
+        # {"year_from":2024,"year_to":2025} filter object) to the entities list. Drop dict
+        # items without usable mention text so one malformed entry cannot fail the whole
+        # intent parse; every valid mention and all other fields are preserved untouched.
+        if not isinstance(value, list):
+            return value
+        kept = []
+        for item in value:
+            if isinstance(item, dict):
+                text = item.get("text")
+                if not isinstance(text, str) or not text.strip():
+                    continue
+            kept.append(item)
+        return kept
+
 
 class CandidateEntity(BaseModel):
     id: str

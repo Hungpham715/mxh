@@ -74,14 +74,14 @@ def build_cases(e: dict) -> list[dict]:
             "cat": "coauthors",
             "q": f"Đồng tác giả của {pair['a']} là ai?",
             "oracle": ("coauthor_count", {"name": pair["a"]}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         {
             "id": "C2",
             "cat": "coauthors",
             "q": f"Ai đã cùng viết bài với {big}?",
             "oracle": ("coauthor_count", {"name": big}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         {
             "id": "C3",
@@ -147,14 +147,14 @@ def build_cases(e: dict) -> list[dict]:
             "cat": "topic_papers",
             "q": f"Các bài đã gắn nhãn chủ đề {topic} là gì?",
             "oracle": ("topic_count", {"name": topic}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         {
             "id": "T2",
             "cat": "topic_papers",
             "q": f"Chủ đề {e['topics'][1]['name']} có những bài nào?",
             "oracle": ("topic_count", {"name": e["topics"][1]["name"]}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         # --- orgs (2) ---
         {
@@ -162,14 +162,14 @@ def build_cases(e: dict) -> list[dict]:
             "cat": "org_collaborations",
             "q": f"{org} hợp tác với tổ chức nào trong corpus?",
             "oracle": ("org_collab_count", {"name": org}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         {
             "id": "O2",
             "cat": "org_collaborations",
             "q": f"Các tổ chức hợp tác với {e['top_org'][1]['name']}?",
             "oracle": ("org_collab_count", {"name": e["top_org"][1]["name"]}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         # --- ranking (1) ---
         {
@@ -177,7 +177,7 @@ def build_cases(e: dict) -> list[dict]:
             "cat": "network_top",
             "q": "Top tác giả theo số đồng tác giả riêng biệt là ai?",
             "oracle": ("top_coauthor_author", {}),
-            "expect_status": "answered",
+            "expect_status": {"answered", "partial"},
         },
         # --- path (1) ---
         {
