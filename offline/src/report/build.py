@@ -54,6 +54,7 @@ def build_report(out_pdf: Path) -> int:
     pre = _j(NEO / "preflight.json")
     scores = _j(EVAL / "scores.json") or {}
     scores_post = _j(EVAL / "scores_postfix.json")
+    scores_ind = _j(EVAL / "scores_independent_v2.json")
     struct = _j(EVAL / "structural_checks.json") or {}
     audits = _j(EVAL / "source_audits.json") or {}
     queries = _j(NEO / "example_queries.json")
@@ -99,7 +100,7 @@ def build_report(out_pdf: Path) -> int:
         ["10/10 loại quan hệ có dữ liệu", f"{counts.get('populated_types')}/10", "Đạt" if counts.get("populated_types") == 10 else "Chưa đạt"],
         ["≥ 1.000 Author (đo riêng)", _fmt(len(authors)), "Đạt" if len(authors) >= 1000 else "Chưa đạt"],
         ["Graph trên Neo4j AuraDB", "Có" if imp else "Chưa import", "Đạt" if imp else "Chưa đạt"],
-        ["Precision cạnh ≥ 90% (mỗi type & micro)", _precision_line(scores), "Xem mục 7"],
+        ["Precision cạnh ≥ 90% (mỗi type & micro)", _precision_line(scores, scores_ind), "Xem mục 7"],
     ]
     d.table(["Tiêu chí", "Kết quả thực đo", "Trạng thái"], rows, [0.38, 0.40, 0.22])
 
@@ -277,6 +278,24 @@ def build_report(out_pdf: Path) -> int:
                 [[str(c["community"]), str(c["size"]), str(c["papers"]), ", ".join(f"{t}({n})" for t, n in c["top_topics"]) or "–",
                   ", ".join(c["members_sample"][:4])] for c in net.get("community_summary", [])[:6]],
                 [0.1, 0.1, 0.08, 0.27, 0.45])
+    core_ = net.get("core") or {}
+    if core_.get("kernel_size"):
+        d.h3("Hạt nhân của mạng (phân rã k-core)")
+        d.p(f"Phân rã k-core (networkx.core_number): một nút thuộc k-core nếu nó nằm trong một đồ thị con mà mọi nút "
+            f"trong đó có ít nhất k láng giềng cũng thuộc đồ thị con ấy. k-core cao nhất là “hạt nhân” liên kết chặt nhất "
+            f"của mạng: core number tối đa <b>{core_.get('max_core')}</b>, hạt nhân gồm "
+            f"<b>{_fmt(core_.get('kernel_size'))} tác giả</b> với {_fmt(core_.get('kernel_edges'))} cạnh nội bộ, "
+            f"mật độ {_fmt(core_.get('kernel_density'))}.")
+        d.table(["#", "Tác giả", "Core number", "Bậc", "Bậc có trọng số"],
+                [[str(i), r["name"], str(r["core"]), str(r["degree"]), str(r["weighted_degree"])]
+                 for i, r in enumerate(core_.get("kernel_members", [])[:10], 1)],
+                [0.06, 0.4, 0.16, 0.16, 0.22])
+        if core_.get("community_kernels"):
+            d.p("Hạt nhân của 10 cộng đồng lớn nhất (thành viên có core number cao nhất trong từng cộng đồng):")
+            d.table(["Cộng đồng", "Core number cao nhất", "Thành viên hạt nhân (top 5)"],
+                    [[str(c["community"]), str(c["max_core"]), ", ".join(c["kernel_members"])]
+                     for c in core_["community_kernels"]],
+                    [0.12, 0.2, 0.68])
     d.img(AN / "ego_top_pagerank.png", "Hình 3. Mạng con quanh tác giả có PageRank cao nhất (màu = cộng đồng Louvain).", 14)
     pe = net.get("shortest_path_example")
     if pe:
@@ -324,6 +343,19 @@ def build_report(out_pdf: Path) -> int:
         d.table(["Kiểm tra", "Kết quả"], [[k, str(v)] for k, v in audits.items()], [0.45, 0.55])
     d.p("Với 20 mẫu/loại, ngay cả 20/20 đúng thì cận dưới Wilson 95% cũng chỉ ≈ 0,84, nên <b>không thể khẳng định chắc chắn ≥ 90%</b>; "
         "các con số trên là ước lượng điểm kèm khoảng tin cậy.")
+    ir = (scores_ind or {}).get("independent_review")
+    if ir:
+        d.h3("7.3 Vòng đánh giá độc lập trên mẫu lớn (2026-11-18)")
+        d.p(f"Để khắc phục hạn chế cỡ mẫu 20/loại ở trên, một vòng đánh giá độc lập thứ hai đã kiểm "
+            f"<b>{_fmt(ir.get('n_total'))} cạnh</b> (40 mẫu/loại, mẫu phân tầng seed 20261118) đối chiếu trực tiếp với "
+            "nguồn sơ cấp (landing page ACL/arXiv và PDF của chính công bố). "
+            f"<b>Provenance:</b> {ir.get('disclaimer', '')} Đây là đánh giá nguồn độc lập <b>phi-nhân</b>, không phải "
+            "nhãn người; hàng đợi nhãn người 386 dòng vẫn để trống và sẵn sàng cho một reviewer độc lập.")
+        _score_table(d, ir)
+        d.p(f"Phương pháp khoảng tin cậy: {ir.get('micro_ci_method')}; ESS thiết kế "
+            f"{_fmt(ir.get('micro_effective_sample_size'))}, design effect {_fmt(ir.get('micro_design_effect'))}. "
+            "Ở vòng này cả hai ngưỡng của tiêu chí chất lượng (ước lượng điểm &gt; 0,90 và cận dưới tin cậy 95% &gt; 0,90 "
+            "trên micro có trọng số) đều đạt.")
 
     # ---------------------------------------------------------------- 8
     d.h2("8. Kết luận, hạn chế và cách tái hiện")
@@ -343,7 +375,8 @@ def build_report(out_pdf: Path) -> int:
            "uv run python -m src.cli import --data data/processed --dry-run\nuv run python -m src.cli import --data data/processed\n"
            "uv run python -m src.cli analyze --out output/analysis\nuv run python -m src.cli sample --per-type 20 --seed 20261107\n"
            "uv run python -m src.cli score --labels evaluation/labels.csv\nuv run python -m src.cli report --out report/final.pdf")
-    d.p(f"Hash manifest: papers.jsonl SHA-256 = {manifest['checksums']['papers.jsonl']}. Link GitHub: chưa có (repo chỉ ở máy cục bộ).")
+    d.p(f"Hash manifest: papers.jsonl SHA-256 = {manifest['checksums']['papers.jsonl']}. "
+        "Link GitHub: https://github.com/Hungpham715/mxh (mã nguồn, dữ liệu đã xử lý và các tệp đầu ra phân tích).")
     d.p("Tài liệu tham khảo: ACL Anthology (aclanthology.org/faq/api), arXiv API User Manual (info.arxiv.org/help/api), "
         "OpenAlex Works/Authorships/Topics (help.openalex.org), Neo4j Python Driver Manual, NetworkX small-world reference.")
 
@@ -357,11 +390,15 @@ def build_report(out_pdf: Path) -> int:
     return 0
 
 
-def _precision_line(scores: dict[str, Any]) -> str:
+def _precision_line(scores: dict[str, Any], scores_ind: dict[str, Any] | None = None) -> str:
     a = scores.get("automated_preliminary")
     if "human" in scores:
         h = scores["human"]
         return f"người kiểm: micro {h['micro_precision_weighted']}"
+    ir = (scores_ind or {}).get("independent_review")
+    if ir:
+        lo, hi = ir["micro_ci95_stratified_wilson"]
+        return f"độc lập phi-nhân {_fmt(ir.get('n_total'))} cạnh: micro {ir['micro_precision_weighted']} (Wilson [{lo}; {hi}])"
     if a:
         return f"Chưa có nhãn người; tự động sơ bộ micro {a['micro_precision_weighted']}"
     return "Chưa đo"
