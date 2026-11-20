@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4412889709",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SUBLIME",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Inspired by high-stakes competitions like the International Mathematical Olympiad-where a few well-chosen problems suffice to differentiate top performers—we present SubLIME, which reduces evaluation costs by 80% to 99% while preserving ranking fidelity."
+   }
+  },
+  {
+   "surface": "RCP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It trains a Rank Correlation Prediction (RCP) model that combines limited performance data from only 5-20 anchor LLMs with dataset intrinsic metrics - Difficulty, Quality, and Distributional Dispersion-to predict how closely a candidate subset reflects full-benchmark rankings."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The rapid expansion of Large Language Models (LLMs) and natural language processing datasets has made exhaustive benchmark evaluations computationally prohibitive."
+   }
+  },
+  {
+   "surface": "EVALUATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The rapid expansion of Large Language Models (LLMs) and natural language processing datasets has made exhaustive benchmark evaluations computationally prohibitive."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14480,
+ "eval_count": 117,
+ "ts": "2026-11-20T04:17:29Z"
+}

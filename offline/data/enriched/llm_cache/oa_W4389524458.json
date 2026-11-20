@@ -1,0 +1,107 @@
+{
+ "paper_id": "oa:W4389524458",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "recent success",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The recent success of large language models (LLMs) has shown great potential to develop more powerful conversational recommender systems (CRSs), which rely on natural language conversations to satisfy user needs."
+   }
+  },
+  {
+   "surface": "evaluation protocol",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we embark on an investigation into the utilization of ChatGPT for CRSs, revealing the inadequacy of the existing evaluation protocol."
+   }
+  },
+  {
+   "surface": "public CRS datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through the experiments on two public CRS datasets, we demonstrate notable improvements compared to the prevailing evaluation protocol."
+   }
+  },
+  {
+   "surface": "interactive Evaluation approach",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome the limitation, we further propose an interactive Evaluation approach based on LLMs, named iEvaLM, which harnesses LLM-based user simulators."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we embark on an investigation into the utilization of ChatGPT for CRSs, revealing the inadequacy of the existing evaluation protocol."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The recent success of large language models (LLMs) has shown great potential to develop more powerful conversational recommender systems (CRSs), which rely on natural language conversations to satisfy user needs."
+   }
+  },
+  {
+   "surface": "iEvaLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome the limitation, we further propose an interactive Evaluation approach based on LLMs, named iEvaLM, which harnesses LLM-based user simulators."
+   }
+  },
+  {
+   "surface": "explanation generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we emphasize the evaluation of explainability, and ChatGPT showcases persuasive explanation generation for its recommendations."
+   }
+  },
+  {
+   "surface": "user simulators",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome the limitation, we further propose an interactive Evaluation approach based on LLMs, named iEvaLM, which harnesses LLM-based user simulators."
+   }
+  },
+  {
+   "surface": "persuasive explanation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we emphasize the evaluation of explainability, and ChatGPT showcases persuasive explanation generation for its recommendations."
+   }
+  },
+  {
+   "surface": "flexible and realistic",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our study contributes to a deeper comprehension of the untapped potential of LLMs for CRSs and provides a more flexible and realistic evaluation approach for future research about LLM-based CRSs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "unexplored potential"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16808,
+ "eval_count": 146,
+ "ts": "2026-11-20T03:44:52Z"
+}

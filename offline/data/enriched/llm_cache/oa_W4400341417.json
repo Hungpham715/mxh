@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4400341417",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, this method has limitations as it leaves the task of aggregating digit representations to the model, which lacks direct supervision for this process."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20939,
+ "eval_count": 213,
+ "ts": "2026-11-20T03:47:58Z"
+}

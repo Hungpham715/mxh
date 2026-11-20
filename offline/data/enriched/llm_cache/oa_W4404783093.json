@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4404783093",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TDM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional turn-based chat systems driven by LLMs prevent users from verbally interacting with the system while generating responses.To overcome these limitations, we adapt existing LLMs to duplex models so that they can listen to users while generating output and dynamically adjust themselves to provide instant feedback.Specifically, we divide the queries and responses of conversations into several time slices and then adopt a time-division-multiplexing (TDM) encoding-decoding strategy to process these slices pseudo-simultaneously.Furthermore, to make LLMs proficient enough to handle real-time conversations, we build a fine-tuning dataset consisting of alternating time slices of queries and responses and covering typical feedback types in instantaneous interactions.Our experiments show that although the queries and responses of conversations are segmented into incomplete slices for processing, LLMs can preserve their original performance on standard benchmarks with a few fine-tuning steps on our dataset."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional turn-based chat systems driven by LLMs prevent users from verbally interacting with the system while generating responses.To overcome these limitations, we adapt existing LLMs to duplex models so that they can listen to users while generating output and dynamically adjust themselves to provide instant feedback.Specifically, we divide the queries and responses of conversations into several time slices and then adopt a time-division-multiplexing (TDM) encoding-decoding strategy to process these slices pseudo-simultaneously.Furthermore, to make LLMs proficient enough to handle real-time conversations, we build a fine-tuning dataset consisting of alternating time slices of queries and responses and covering typical feedback types in instantaneous interactions.Our experiments show that although the queries and responses of conversations are segmented into incomplete slices for processing, LLMs can preserve their original performance on standard benchmarks with a few fine-tuning steps on our dataset."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "As large language models (LLMs) increasingly permeate daily lives, there is a growing demand for real-time interactions that mirror human conversations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18374,
+ "eval_count": 96,
+ "ts": "2026-11-20T04:08:33Z"
+}

@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4404782811",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This limitation stems from the absence of large-scale multimodal prompt video datasets, resulting in a lack of visual grounding and restricting their versatility and application in multimodal integration."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35106,
+ "eval_count": 262,
+ "ts": "2026-11-20T04:06:57Z"
+}

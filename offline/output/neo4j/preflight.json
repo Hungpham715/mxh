@@ -1,17 +1,25 @@
 {
   "return_1": 1,
-  "server_agent": "Neo4j/5.26.2",
+  "server_agent": "Neo4j/5.27-aura",
   "protocol": [
-    5,
-    8
+    6,
+    1
   ],
   "components": [
     {
       "name": "Neo4j Kernel",
       "versions": [
-        "5.26.2"
+        "5.27-aura"
       ],
-      "edition": "community"
+      "edition": "enterprise"
+    },
+    {
+      "name": "Cypher",
+      "versions": [
+        "5",
+        "25"
+      ],
+      "edition": ""
     }
   ],
   "labels": [
@@ -19,7 +27,10 @@
     "Paper",
     "Institution",
     "Venue",
-    "Topic"
+    "Topic",
+    "Method",
+    "Dataset",
+    "Task"
   ],
   "relationship_types": [
     "FIRST_AUTHOR_OF",
@@ -31,14 +42,18 @@
     "CITES",
     "ORG_COAUTHORED_WITH",
     "RESEARCHES",
-    "ACTIVE_IN"
+    "ACTIVE_IN",
+    "USES_METHOD",
+    "ADDRESSES_TASK",
+    "EVALUATED_ON",
+    "METHOD_EVALUATED_ON"
   ],
-  "total_nodes": 7134,
-  "total_relationships": 30971,
+  "total_nodes": 8707,
+  "total_relationships": 34459,
   "project_nodes": 7134,
   "project_relationships": 30971,
-  "foreign_nodes": 0,
-  "foreign_relationships": 0,
+  "foreign_nodes": 1573,
+  "foreign_relationships": 3488,
   "constraints": [
     {
       "name": "nlpgraph_author_id_unique",
@@ -48,7 +63,17 @@
       "properties": [
         "id"
       ],
-      "type": "UNIQUENESS"
+      "type": "NODE_PROPERTY_UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_dataset_id_unique",
+      "labelsOrTypes": [
+        "Dataset"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "NODE_PROPERTY_UNIQUENESS"
     },
     {
       "name": "nlpgraph_institution_id_unique",
@@ -58,7 +83,17 @@
       "properties": [
         "id"
       ],
-      "type": "UNIQUENESS"
+      "type": "NODE_PROPERTY_UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_method_id_unique",
+      "labelsOrTypes": [
+        "Method"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "NODE_PROPERTY_UNIQUENESS"
     },
     {
       "name": "nlpgraph_paper_id_unique",
@@ -68,7 +103,17 @@
       "properties": [
         "id"
       ],
-      "type": "UNIQUENESS"
+      "type": "NODE_PROPERTY_UNIQUENESS"
+    },
+    {
+      "name": "nlpgraph_task_id_unique",
+      "labelsOrTypes": [
+        "Task"
+      ],
+      "properties": [
+        "id"
+      ],
+      "type": "NODE_PROPERTY_UNIQUENESS"
     },
     {
       "name": "nlpgraph_topic_id_unique",
@@ -78,7 +123,7 @@
       "properties": [
         "id"
       ],
-      "type": "UNIQUENESS"
+      "type": "NODE_PROPERTY_UNIQUENESS"
     },
     {
       "name": "nlpgraph_venue_id_unique",
@@ -88,7 +133,7 @@
       "properties": [
         "id"
       ],
-      "type": "UNIQUENESS"
+      "type": "NODE_PROPERTY_UNIQUENESS"
     }
   ]
 }

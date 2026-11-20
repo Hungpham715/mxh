@@ -1,0 +1,136 @@
+{
+ "paper_id": "oa:W4385572068",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CNN/DailyMail",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As the most mainstream datasets for the news sub-domain, CNN/DailyMail and BBC XSum have been widely used for performance benchmarking."
+   }
+  },
+  {
+   "surface": "BBC XSum",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As the most mainstream datasets for the news sub-domain, CNN/DailyMail and BBC XSum have been widely used for performance benchmarking."
+   }
+  },
+  {
+   "surface": "Lasswell",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this challenge, we first annotate new expert-writing Element-aware test sets following the “Lasswell Communication Model” proposed by Lasswell, allowing reference summaries to focus on more fine-grained news elements objectively and comprehensively."
+   }
+  },
+  {
+   "surface": "SumCoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Further, we propose a Summary Chain-of-Thought (SumCoT) technique to elicit LLMs to generate summaries step by step, which helps them integrate more fine-grained details of source documents into the final summaries that correlate with the human writing mindset."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CNN/DailyMail",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As the most mainstream datasets for the news sub-domain, CNN/DailyMail and BBC XSum have been widely used for performance benchmarking.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "BBC XSum",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As the most mainstream datasets for the news sub-domain, CNN/DailyMail and BBC XSum have been widely used for performance benchmarking.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Lasswell",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this challenge, we first annotate new expert-writing Element-aware test sets following the “Lasswell Communication Model” proposed by Lasswell, allowing reference summaries to focus on more fine-grained news elements objectively and comprehensively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SumCoT",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Further, we propose a Summary Chain-of-Thought (SumCoT) technique to elicit LLMs to generate summaries step by step, which helps them integrate more fine-grained details of source documents into the final summaries that correlate with the human writing mindset.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "CNN/DailyMail"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "BBC XSum"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "SumCoT"
+  }
+ ],
+ "auto_added_endpoints": [
+  "CNN/DailyMail",
+  "BBC XSum",
+  "Lasswell",
+  "SumCoT"
+ ],
+ "duration_ms": 14505,
+ "eval_count": 309,
+ "ts": "2026-11-20T03:19:05Z"
+}

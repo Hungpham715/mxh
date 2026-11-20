@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4412886872",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We release the resulting self belief classification model and annotated datasets for use in future research."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we develop a novel task for classifying language that contains explicit or implicit mentions of the author’s self beliefs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Measuring the prevalence and dimensions of self beliefs is essential for understanding human self-perception and various psychological outcomes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22271,
+ "eval_count": 249,
+ "ts": "2026-11-20T04:16:21Z"
+}

@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4404783051",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "UNO Arena",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In order to answer this question, we propose the UNO Arena based on the card game UNO to evaluate the sequential decision-making capability of LLMs and explain in detail why we choose UNO."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "With large language models (LLMs) demonstrating powerful capabilities between tasks, we can’t help but ask: Can Current LLMs Effectively Make Sequential Decisions?"
+   }
+  },
+  {
+   "surface": "random players",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We set up random players, DQN-based reinforcement learning players, and LLM players (e.g."
+   }
+  },
+  {
+   "surface": "DQN-based reinforcement learning players",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We set up random players, DQN-based reinforcement learning players, and LLM players (e.g."
+   }
+  },
+  {
+   "surface": "TUTRI player",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, in order to improve the sequential decision-making capability of LLMs, we propose the TUTRI player, which can involves having LLMs reflect their own actions with the summary of game history and the game strategy."
+   }
+  },
+  {
+   "surface": "sequential decision-making",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Sequential decision-making refers to algorithms that take into account the dynamics of the environment, where early decisions affect subsequent decisions."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "GPT-4, Gemini-pro) for comparison testing."
+   }
+  },
+  {
+   "surface": "Gemini-pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "GPT-4, Gemini-pro) for comparison testing."
+   }
+  },
+  {
+   "surface": "game history",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, in order to improve the sequential decision-making capability of LLMs, we propose the TUTRI player, which can involves having LLMs reflect their own actions with the summary of game history and the game strategy."
+   }
+  },
+  {
+   "surface": "reinforcement learning",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We set up random players, DQN-based reinforcement learning players, and LLM players (e.g."
+   }
+  },
+  {
+   "surface": "summary",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, in order to improve the sequential decision-making capability of LLMs, we propose the TUTRI player, which can involves having LLMs reflect their own actions with the summary of game history and the game strategy."
+   }
+  },
+  {
+   "surface": "game strategy",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, in order to improve the sequential decision-making capability of LLMs, we propose the TUTRI player, which can involves having LLMs reflect their own actions with the summary of game history and the game strategy."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Monte Carlo"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "performance"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "breakthrough"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20234,
+ "eval_count": 177,
+ "ts": "2026-11-20T04:08:22Z"
+}

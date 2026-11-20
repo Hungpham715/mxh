@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4412945512",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SpeechFake",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these gaps, we introduce SpeechFake, a large-scale dataset designed specifically for speech deepfake detection."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "SpeechFake"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "SpeechFake"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "SpeechFake"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "SpeechFake"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "SpeechFake"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23253,
+ "eval_count": 111,
+ "ts": "2026-11-20T04:25:16Z"
+}

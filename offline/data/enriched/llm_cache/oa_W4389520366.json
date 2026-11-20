@@ -1,0 +1,108 @@
+{
+ "paper_id": "oa:W4389520366",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "VEC",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To investigate this, we design a benchmark VEC that covers the tasks of (i) Visual concepts, such as the shape and material of objects, and (ii) Embodied Concepts, learned from the interaction with the world such as the temperature of objects."
+   }
+  },
+  {
+   "surface": "CLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts."
+   }
+  },
+  {
+   "surface": "BLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts."
+   }
+  },
+  {
+   "surface": "OPT-175B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For example, OPT-175B performs close to humans with a zero-shot accuracy of 85% on the material concept, yet behaves like random guessing on the mass concept."
+   }
+  },
+  {
+   "surface": "zero-shot",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For example, OPT-175B performs close to humans with a zero-shot accuracy of 85% on the material concept, yet behaves like random guessing on the mass concept."
+   }
+  },
+  {
+   "surface": "mass",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For example, OPT-175B performs close to humans with a zero-shot accuracy of 85% on the material concept, yet behaves like random guessing on the mass concept."
+   }
+  },
+  {
+   "surface": "material",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To investigate this, we design a benchmark VEC that covers the tasks of (i) Visual concepts, such as the shape and material of objects, and (ii) Embodied Concepts, learned from the interaction with the world such as the temperature of objects."
+   }
+  },
+  {
+   "surface": "temperature",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To investigate this, we design a benchmark VEC that covers the tasks of (i) Visual concepts, such as the shape and material of objects, and (ii) Embodied Concepts, learned from the interaction with the world such as the temperature of objects."
+   }
+  },
+  {
+   "surface": "distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Inspired by this, we propose a distillation method to transfer embodied knowledge from VLMs to LMs, achieving performance gain comparable with that by scaling up parameters of LMs 134\\times."
+   }
+  },
+  {
+   "surface": "scaling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our zero (few)-shot prompting results show that the understanding of certain visual concepts emerges as scaling up LMs, but there are still basic concepts to which the scaling law does not apply."
+   }
+  },
+  {
+   "surface": "performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Inspired by this, we propose a distillation method to transfer embodied knowledge from VLMs to LMs, achieving performance gain comparable with that by scaling up parameters of LMs 134\\times."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39110,
+ "eval_count": 315,
+ "ts": "2026-11-20T03:38:41Z"
+}

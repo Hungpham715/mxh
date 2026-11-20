@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4402671730",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "When assessed for detectability in high diversity settings, our Gumbelsoft demonstrates superior performance, with its AUROC score exceeding those of the two alternative variants by a margin of 0.1 to 0.3 and outperforming other decoding-based watermarking methods by a minimum of 0.1."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19436,
+ "eval_count": 147,
+ "ts": "2026-11-20T03:54:15Z"
+}

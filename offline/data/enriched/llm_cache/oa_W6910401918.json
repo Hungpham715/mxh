@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W6910401918",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GAS(P)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we develop GAS(P), an evaluation methodology for surfacing distribution-level group representational biases in generated text, tackling the setting where groups are unprompted (i.e., groups are not specified in the input to generative systems)."
+   }
+  },
+  {
+   "surface": "state-of-the-art",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We apply this novel methodology to investigate gendered representations in occupations across state-of-the-art large language models."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We apply this novel methodology to investigate gendered representations in occupations across state-of-the-art large language models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22484,
+ "eval_count": 172,
+ "ts": "2026-11-20T04:43:39Z"
+}

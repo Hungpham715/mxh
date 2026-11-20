@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385958853",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.4",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CMU-MOSI",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our best model achieves state-of-the-art performance for three datasets (CMU-MOSI, CMU-MOSEI and CH-SIMS)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CMU-MOSI",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We compare different fusion methods and examine the impact of multi-loss training within the multi-modality fusion network, identifying surprisingly important findings relating to subnet performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "CMU-MOSI"
+ ],
+ "duration_ms": 8172,
+ "eval_count": 105,
+ "ts": "2026-11-20T03:23:16Z"
+}

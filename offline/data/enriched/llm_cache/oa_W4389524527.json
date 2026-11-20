@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4389524527",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "sentence",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we aim to identify propaganda in political news at two fine-grained levels: sentence-level and token-level."
+   }
+  },
+  {
+   "surface": "token",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we aim to identify propaganda in political news at two fine-grained levels: sentence-level and token-level."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on the benchmark dataset demonstrate that leveraging guidance from discourse structures can significantly improve both precision and recall of propaganda content identification."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12709,
+ "eval_count": 64,
+ "ts": "2026-11-20T03:45:04Z"
+}

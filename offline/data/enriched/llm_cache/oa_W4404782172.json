@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4404782172",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "meta-learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To predict instances for novel relations with limited training examples, few-shot relation learning approaches have emerged, utilizing techniques such as meta-learning."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "knowledge_graphs"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "few-shot_relation_learning"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "rel_adapter"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "benchmark_kgs"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12841,
+ "eval_count": 115,
+ "ts": "2026-11-20T04:02:12Z"
+}

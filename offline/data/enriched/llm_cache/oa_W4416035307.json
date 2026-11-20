@@ -1,0 +1,56 @@
+{
+ "paper_id": "oa:W4416035307",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose QUIDS, a method that leverages dual-space contrastive learning to isolate intent-relevant information while suppressing irrelevant content."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we study the task of generating user-facing natural language query intent descriptions that surface what the system likely inferred the query to mean, based on post-retrieval evidence."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we study the task of generating user-facing natural language query intent descriptions that surface what the system likely inferred the query to mean, based on post-retrieval evidence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our work contributes to improving the interaction between users and search engines by providing feedback to the user in exploratory search settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21439,
+ "eval_count": 192,
+ "ts": "2026-11-20T04:27:38Z"
+}

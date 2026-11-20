@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4416036528",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments reveal that E2LLM not only outperforms 8 state-of-the-art (SOTA) methods in effectiveness and efficiency for document summarization and question answering, but also achieves the best performance on LongBench v2 among models of comparable size."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Processing long contexts is increasingly important for Large Language Models (LLMs) in tasks like multi-turn dialogues, code generation, and document summarization."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce E2LLM (Encoder Elongated Large Language Models), a novel approach that effectively navigates this paradox.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43845,
+ "eval_count": 388,
+ "ts": "2026-11-20T04:34:27Z"
+}

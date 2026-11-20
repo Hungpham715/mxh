@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4402671664",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "cross-prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-prompt automated essay scoring (AES), an under-investigated but challenging task that has gained increasing popularity in the AES community, aims to train an AES system that can generalize well to prompts that are unseen during model training."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-prompt automated essay scoring (AES), an under-investigated but challenging task that has gained increasing popularity in the AES community, aims to train an AES system that can generalize well to prompts that are unseen during model training."
+   }
+  },
+  {
+   "surface": "asap",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experiments on the ASAP dataset demonstrate that our simple approach to cross-prompt AES can achieve state-of-the-art results."
+   }
+  },
+  {
+   "surface": "simple",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We answer this question by abandoning sophisticated neural architectures and developing a purely feature-based approach to cross-prompt AES that adopts a simple neural architecture."
+   }
+  },
+  {
+   "surface": "neural",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While recently-developed cross-prompt AES models have combined essay representations that are learned via sophisticated neural architectures with so-called prompt-independent features, an intriguing question is: are complex neural models needed to achieve state-of-the-art results?"
+   }
+  },
+  {
+   "surface": "feature",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While recently-developed cross-prompt AES models have combined essay representations that are learned via sophisticated neural architectures with so-called prompt-independent features, an intriguing question is: are complex neural models needed to achieve state-of-the-art results?"
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experiments on the ASAP dataset demonstrate that our simple approach to cross-prompt AES can achieve state-of-the-art results."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17152,
+ "eval_count": 147,
+ "ts": "2026-11-20T03:53:38Z"
+}

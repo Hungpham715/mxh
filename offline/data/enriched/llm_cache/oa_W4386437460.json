@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4386437460",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dialogue action",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Its primary role is to determine the appropriate abstract response, commonly referred to as the \"dialogue action\"."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "dialogue action",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Our extensive evaluation shows that JoTR achieves state-of-the-art performance on two benchmark dialogue modelling tasks, as assessed by both user simulators and human evaluators.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "dialogue action"
+ ],
+ "duration_ms": 9449,
+ "eval_count": 105,
+ "ts": "2026-11-20T03:24:51Z"
+}

@@ -1,0 +1,150 @@
+{
+ "paper_id": "oa:W4412886664",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "structured representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, their role remains ambiguous in the Large Language Models (LLMs) era."
+   }
+  },
+  {
+   "surface": "structure information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We hypothesize that such a decline stems from the structure information being passed into LLMs in a code format unfamiliar to LLMs’ training corpora."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, their role remains ambiguous in the Large Language Models (LLMs) era."
+   }
+  },
+  {
+   "surface": "training-free",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives."
+   }
+  },
+  {
+   "surface": "training-dependent",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives."
+   }
+  },
+  {
+   "surface": "natural language",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The former integrates structural information through natural language descriptions in LLM prompts, whereas its counterpart augments the model’s inference capability through fine-tuning on linguistically described structured representations."
+   }
+  },
+  {
+   "surface": "fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The former integrates structural information through natural language descriptions in LLM prompts, whereas its counterpart augments the model’s inference capability through fine-tuning on linguistically described structured representations."
+   }
+  },
+  {
+   "surface": "PAWS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Performance improvements were observed in widely downstream datasets, with particularly notable gains of 3.17% and 12.38% in PAWS."
+   }
+  },
+  {
+   "surface": "inference capability",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The former integrates structural information through natural language descriptions in LLM prompts, whereas its counterpart augments the model’s inference capability through fine-tuning on linguistically described structured representations."
+   }
+  },
+  {
+   "surface": "reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We hope that our work sheds light and encourages future research to enhance the reasoning and interoperability of LLMs by structure data."
+   }
+  },
+  {
+   "surface": "interoperability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We hope that our work sheds light and encourages future research to enhance the reasoning and interoperability of LLMs by structure data."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "performance improvements"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "performance improvements"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "performance_improvement",
+   "surface": "3.17%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "performance_improvement",
+   "surface": "12.38%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "structure data"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "structure data"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25088,
+ "eval_count": 233,
+ "ts": "2026-11-20T04:15:59Z"
+}

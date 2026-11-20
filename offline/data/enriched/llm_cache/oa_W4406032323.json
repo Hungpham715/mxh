@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4406032323",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformers rely on both content-based and position-based addressing mechanisms to make predictions, but existing positional encoding techniques often diminish the effectiveness of position-based addressing."
+   }
+  },
+  {
+   "surface": "position",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformers rely on both content-based and position-based addressing mechanisms to make predictions, but existing positional encoding techniques often diminish the effectiveness of position-based addressing."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Many current methods enforce rigid patterns in attention maps, limiting the ability to model long-range dependencies and adapt to diverse tasks."
+   }
+  },
+  {
+   "surface": "context",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "TAPE introduces dynamic, context-aware positional encodings, overcoming the constraints of traditional fixed patterns."
+   }
+  },
+  {
+   "surface": "algorithm",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that TAPE can provably facilitate LLM reasoning ability by emulating a broader class of algorithms."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Additionally, most positional encodings are learned as general biases, lacking the specialization required for different instances within a dataset."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "equivalence"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18225,
+ "eval_count": 144,
+ "ts": "2026-11-20T04:13:07Z"
+}

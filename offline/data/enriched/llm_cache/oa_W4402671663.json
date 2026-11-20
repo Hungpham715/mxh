@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4402671663",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RAG",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have demonstrated superior results across a wide range of tasks, and Retrieval-augmented Generation (RAG) is an effective way to enhance the performance by locating relevant information and placing it into the context window of the LLM."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have demonstrated superior results across a wide range of tasks, and Retrieval-augmented Generation (RAG) is an effective way to enhance the performance by locating relevant information and placing it into the context window of the LLM."
+   }
+  },
+  {
+   "surface": "retriever",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, the relationship between retrievers and LLMs in a RAG is still under-investigated."
+   }
+  },
+  {
+   "surface": "bridge model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We validate the ranking and selection assumptions of retrievers in the context of RAG and propose a framework that chains together supervised and reinforcement learning to train a bridge model that optimizes the connection between the retriever and the LLM."
+   }
+  },
+  {
+   "surface": "reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We validate the ranking and selection assumptions of retrievers in the context of RAG and propose a framework that chains together supervised and reinforcement learning to train a bridge model that optimizes the connection between the retriever and the LLM."
+   }
+  },
+  {
+   "surface": "question-answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Empirical results demonstrate the effectiveness of our method in both question-answering and personalized generation tasks."
+   }
+  },
+  {
+   "surface": "personalized generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Empirical results demonstrate the effectiveness of our method in both question-answering and personalized generation tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "supervised learning"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17043,
+ "eval_count": 123,
+ "ts": "2026-11-20T03:53:09Z"
+}

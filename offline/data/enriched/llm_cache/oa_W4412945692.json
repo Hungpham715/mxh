@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4412945692",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "AgenticLU",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose Agentic Long-Context Understanding (AgenticLU), a framework designed to enhance an LLM’s understanding of such queries by integrating targeted self-clarification with contextual grounding within an agentic workflow."
+   }
+  },
+  {
+   "surface": "NarrativeQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By scaling inference as a tree search where each node represents a CoC step, we achieve 97.8% answer recall on NarrativeQA with a search depth of up to three and a branching factor of eight."
+   }
+  },
+  {
+   "surface": "CoC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "At the core of AgenticLU is Chain-of-Clarifications (CoC), where models refine their understanding through self-generated clarification questions and corresponding contextual groundings."
+   }
+  },
+  {
+   "surface": "finetuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To amortize the high cost of this search process to training, we leverage the preference pairs for each step obtained by the CoC workflow and perform two-stage model finetuning: (1) supervised finetuning to learn effective decomposition strategies, and (2) direct preference optimization to enhance reasoning quality."
+   }
+  },
+  {
+   "surface": "preference pairs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To amortize the high cost of this search process to training, we leverage the preference pairs for each step obtained by the CoC workflow and perform two-stage model finetuning: (1) supervised finetuning to learn effective decomposition strategies, and (2) direct preference optimization to enhance reasoning quality."
+   }
+  },
+  {
+   "surface": "two-stage model finetuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To amortize the high cost of this search process to training, we leverage the preference pairs for each step obtained by the CoC workflow and perform two-stage model finetuning: (1) supervised finetuning to learn effective decomposition strategies, and (2) direct preference optimization to enhance reasoning quality."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "search depth"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "branching factor"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "97.8% answer recall"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "search depth"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "branching factor"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21598,
+ "eval_count": 124,
+ "ts": "2026-11-20T04:25:35Z"
+}

@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4412945384",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HiCUPID",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this research gap, we introduce HiCUPID, a new benchmark to probe and unleash the potential of LLMs to deliver personalized responses."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "HiCUPID"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19223,
+ "eval_count": 98,
+ "ts": "2026-11-20T04:22:42Z"
+}

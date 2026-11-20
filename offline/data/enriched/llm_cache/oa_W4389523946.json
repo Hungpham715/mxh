@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4389523946",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "instruction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Instruction-tuned large language models (LLMs), such as ChatGPT, have led to promising zero-shot performance in discriminative natural language understanding (NLU) tasks."
+   }
+  },
+  {
+   "surface": "prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This involves querying the LLM using a prompt containing the question, and the candidate labels to choose from."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Instruction-tuned large language models (LLMs), such as ChatGPT, have led to promising zero-shot performance in discriminative natural language understanding (NLU) tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31979,
+ "eval_count": 149,
+ "ts": "2026-11-20T03:42:05Z"
+}

@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4402671549",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Systematically investigations are conducted on our dataset, and the empirical results demonstrate the benchmarking scores of existing methods and our proposed method can reach the current state-of-the-art."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "A large-scale Chinese dataset containing 12,160 news articles and 13,725 quintuples is publicized as a brand new testbed for our task."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we reconceptualize the event extraction as a classification task by designing a categorization comprising coarse-grained and fine-grained event categories."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "A four-hop Chain-of-Thought LLM-based approach is devised for this task.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "A large-scale Chinese dataset containing 12,160 news articles and 13,725 quintuples is publicized as a brand new testbed for our task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 15777,
+ "eval_count": 190,
+ "ts": "2026-11-20T03:53:03Z"
+}

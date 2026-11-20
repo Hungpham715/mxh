@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4403160901",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose the first method to auto-generate diverse, content-controlled, and model-dependent pseudo-harmful prompts."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using this method, we construct an evaluation dataset called PHTest, which is ten times larger than existing datasets, covers more false refusal patterns, and separately labels controversial prompts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose the first method to auto-generate diverse, content-controlled, and model-dependent pseudo-harmful prompts.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26817,
+ "eval_count": 217,
+ "ts": "2026-11-20T03:59:51Z"
+}

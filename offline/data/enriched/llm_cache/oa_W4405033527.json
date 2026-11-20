@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4405033527",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing MSD methods tend to rely on spurious correlations."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Experimental results demonstrate the superiority of MICL on benchmark datasets, along with the analyses showcasing MICL's advancement in mitigating the effect of spurious correlation."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal sarcasm detection (MSD) is essential for various downstream tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Regarding this phenomenon, this paper undertakes several initiatives.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal sarcasm detection (MSD) is essential for various downstream tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31165,
+ "eval_count": 328,
+ "ts": "2026-11-20T04:13:20Z"
+}

@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4389523773",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "semantics"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27760,
+ "eval_count": 114,
+ "ts": "2026-11-20T03:40:43Z"
+}

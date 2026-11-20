@@ -1,0 +1,123 @@
+{
+ "paper_id": "oa:W4404782854",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "state-of-the-art",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study examines the limitations of state-of-the-art large language models (LLMs) in identifying offensive content within systematically perturbed data, with a focus on Chinese, a language particularly susceptible to such perturbations."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study examines the limitations of state-of-the-art large language models (LLMs) in identifying offensive content within systematically perturbed data, with a focus on Chinese, a language particularly susceptible to such perturbations."
+   }
+  },
+  {
+   "surface": "hate speech",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Detecting hate speech and offensive language is essential for maintaining a safe and respectful digital environment."
+   }
+  },
+  {
+   "surface": "perturbed data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study examines the limitations of state-of-the-art large language models (LLMs) in identifying offensive content within systematically perturbed data, with a focus on Chinese, a language particularly susceptible to such perturbations."
+   }
+  },
+  {
+   "surface": "offensive language",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Detecting hate speech and offensive language is essential for maintaining a safe and respectful digital environment."
+   }
+  },
+  {
+   "surface": "ToxiCloakCN",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce ToxiCloakCN, an enhanced dataset derived from ToxiCN, augmented with homophonic substitutions and emoji transformations, to test the robustness of LLMs against these cloaking perturbations."
+   }
+  },
+  {
+   "surface": "homophonic substitutions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce ToxiCloakCN, an enhanced dataset derived from ToxiCN, augmented with homophonic substitutions and emoji transformations, to test the robustness of LLMs against these cloaking perturbations."
+   }
+  },
+  {
+   "surface": "emoji transformations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce ToxiCloakCN, an enhanced dataset derived from ToxiCN, augmented with homophonic substitutions and emoji transformations, to test the robustness of LLMs against these cloaking perturbations."
+   }
+  },
+  {
+   "surface": "offensiveness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We provide an in-depth analysis of how different types of offensive content are affected by these perturbations and explore the alignment between human and model explanations of offensiveness."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study examines the limitations of state-of-the-art large language models (LLMs) in identifying offensive content within systematically perturbed data, with a focus on Chinese, a language particularly susceptible to such perturbations."
+   }
+  },
+  {
+   "surface": "explanation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We provide an in-depth analysis of how different types of offensive content are affected by these perturbations and explore the alignment between human and model explanations of offensiveness."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "language",
+   "surface": "Chinese"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "human",
+   "surface": "human"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "language",
+   "surface": "Chinese"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "human",
+   "surface": "human"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24725,
+ "eval_count": 268,
+ "ts": "2026-11-20T04:06:20Z"
+}

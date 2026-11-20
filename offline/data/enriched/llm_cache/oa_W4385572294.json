@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385572294",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "language-guided design generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We hope our contributions will propel the research on language-guided design generation forward."
+   }
+  },
+  {
+   "surface": "text-conditional image generation models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Third, we benchmark this task with several text-conditional image generation models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "language-guided design generation",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We hope our contributions will propel the research on language-guided design generation forward.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "text-conditional image generation models",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Third, we benchmark this task with several text-conditional image generation models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "language-guided design generation",
+  "text-conditional image generation models"
+ ],
+ "duration_ms": 6875,
+ "eval_count": 142,
+ "ts": "2026-11-20T03:19:28Z"
+}

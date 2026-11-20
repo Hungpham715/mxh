@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4410985640",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "OPENAI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show that OpenAI's (2024) o1 vastly outperforms other models on tasks involving drawing syntactic trees and phonological generalization."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "OPENAI",
+   "to": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "OPENAI",
+   "to": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "OPENAI",
+   "to": "DATASET"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22279,
+ "eval_count": 228,
+ "ts": "2026-11-20T04:14:36Z"
+}

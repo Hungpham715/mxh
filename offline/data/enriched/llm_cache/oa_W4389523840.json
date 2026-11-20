@@ -1,0 +1,99 @@
+{
+ "paper_id": "oa:W4389523840",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Fighting Fire with Fire",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To combat this emerging risk of LLMs, we propose a novel “Fighting Fire with Fire” (F3) strategy that harnesses modern LLMs’ generative and emergent reasoning capabilities to counter human-written and LLM-generated disinformation."
+   }
+  },
+  {
+   "surface": "GPT-3.5-turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "First, we leverage GPT-3.5-turbo to synthesize authentic and deceptive LLM-generated content through paraphrase-based and perturbation-based prefix-style prompts, respectively."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In our extensive experiments, we observe GPT-3.5-turbo’s zero-shot superiority for both in-distribution and out-of-distribution datasets, where GPT-3.5-turbo consistently achieved accuracy at 68-72%, unlike the decline observed in previous customized and fine-tuned disinformation detectors."
+   }
+  },
+  {
+   "surface": "zero-shot",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Second, we apply zero-shot in-context semantic reasoning techniques with cloze-style prompts to discern genuine from deceptive posts and news articles."
+   }
+  },
+  {
+   "surface": "in-distribution",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In our extensive experiments, we observe GPT-3.5-turbo’s zero-shot superiority for both in-distribution and out-of-distribution datasets, where GPT-3.5-turbo consistently achieved accuracy at 68-72%, unlike the decline observed in previous customized and fine-tuned disinformation detectors."
+   }
+  },
+  {
+   "surface": "out-of-distribution",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In our extensive experiments, we observe GPT-3.5-turbo’s zero-shot superiority for both in-distribution and out-of-distribution datasets, where GPT-3.5-turbo consistently achieved accuracy at 68-72%, unlike the decline observed in previous customized and fine-tuned disinformation detectors."
+   }
+  },
+  {
+   "surface": "accuracy",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In our extensive experiments, we observe GPT-3.5-turbo’s zero-shot superiority for both in-distribution and out-of-distribution datasets, where GPT-3.5-turbo consistently achieved accuracy at 68-72%, unlike the decline observed in previous customized and fine-tuned disinformation detectors."
+   }
+  },
+  {
+   "surface": "68-72",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In our extensive experiments, we observe GPT-3.5-turbo’s zero-shot superiority for both in-distribution and out-of-distribution datasets, where GPT-3.5-turbo consistently achieved accuracy at 68-72%, unlike the decline observed in previous customized and fine-tuned disinformation detectors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "https://github.com/mickeymst/F3"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "paraphrase-based"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "perturbation-based"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "cloze-style"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30825,
+ "eval_count": 151,
+ "ts": "2026-11-20T03:41:49Z"
+}

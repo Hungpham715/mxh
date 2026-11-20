@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389518686",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RLHF-LMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, the most widely-used LMs are fine-tuned with reinforcement learning from human feedback (RLHF-LMs), and some studies have suggested that RLHF-LMs produce conditional probabilities that are very poorly calibrated."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "RLHF-LMs",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In light of this perceived weakness, we conduct a broad evaluation of methods for extracting confidence scores from RLHF-LMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "RLHF-LMs"
+ ],
+ "duration_ms": 7591,
+ "eval_count": 98,
+ "ts": "2026-11-20T03:27:11Z"
+}

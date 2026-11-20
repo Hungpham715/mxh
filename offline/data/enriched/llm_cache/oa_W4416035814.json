@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4416035814",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Hateful memes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Hateful memes have become a significant concern on the Internet, necessitating robust automated detection systems."
+   }
+  },
+  {
+   "surface": "Large Multimodal Models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While Large Multimodal Models (LMMs) have shown promise in hateful meme detection, they face notable challenges like sub-optimal performance and limited out-of-domain generalization capabilities."
+   }
+  },
+  {
+   "surface": "adversarial attacks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis reveals that our approach achieves improved robustness under adversarial attacks compared to SFT models."
+   }
+  },
+  {
+   "surface": "six meme classification datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on six meme classification datasets show that our approach achieves state-of-the-art performance, outperforming larger agentic systems.Moreover, our method generates higher-quality rationales for explaining hateful content compared to standard SFT, enhancing model interpretability."
+   }
+  },
+  {
+   "surface": "state-of-the-art performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on six meme classification datasets show that our approach achieves state-of-the-art performance, outperforming larger agentic systems.Moreover, our method generates higher-quality rationales for explaining hateful content compared to standard SFT, enhancing model interpretability."
+   }
+  },
+  {
+   "surface": "JingbiaoMei",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Code available at https://github.com/JingbiaoMei/RGCL"
+   }
+  },
+  {
+   "surface": "RGCL",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Code available at https://github.com/JingbiaoMei/RGCL"
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "https://github.com/JingbiaoMei/RGCL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14286,
+ "eval_count": 105,
+ "ts": "2026-11-20T04:30:05Z"
+}

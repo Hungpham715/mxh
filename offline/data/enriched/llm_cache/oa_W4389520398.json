@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4389520398",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We experiment with several techniques for ensembling hypotheses produced by LLMs such as ChatGPT, LLaMA, and Alpaca.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43684,
+ "eval_count": 212,
+ "ts": "2026-11-20T03:39:12Z"
+}

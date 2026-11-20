@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4404782964",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ICL",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new paradigm for natural language processing (NLP), where LLMs make predictions based on contexts augmented with a few examples."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "ICL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25969,
+ "eval_count": 108,
+ "ts": "2026-11-20T04:08:31Z"
+}

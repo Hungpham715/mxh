@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4416034073",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We applied a multi-Large Language Model (LLM) negotiation method to refine distortion classification, enabling iterative feedback and role-switching between models to reduce bias and improve label consistency."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous studies using natural language processing (NLP) have focused mainly on small-scale adult datasets, with limited research on adolescents."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We applied a multi-Large Language Model (LLM) negotiation method to refine distortion classification, enabling iterative feedback and role-switching between models to reduce bias and improve label consistency.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Validation through LLMs and expert evaluations showed that while LLMs classified distortions with explicit markers, they struggled with context-dependent reasoning, where human evaluators demonstrated higher accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23116,
+ "eval_count": 254,
+ "ts": "2026-11-20T04:26:59Z"
+}

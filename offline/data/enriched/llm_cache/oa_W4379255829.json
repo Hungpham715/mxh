@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4379255829",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Ukachukwu",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, where named entities such as ``Ukachukwu`` (Igbo), ``Lakicia`` (Swahili), or ``Ingabire`` (Rwandan) are spoken, automatic speech recognition (ASR) models' performance degrades significantly, propagating errors to downstream systems."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Ukachukwu",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We model this problem as a distribution shift and demonstrate that such model bias can be mitigated through multilingual pre-training, intelligent data augmentation strategies to increase the representation of African-named entities, and fine-tuning multilingual ASR models on multiple African accents.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Ukachukwu"
+ ],
+ "duration_ms": 6766,
+ "eval_count": 127,
+ "ts": "2026-11-19T18:08:05Z"
+}

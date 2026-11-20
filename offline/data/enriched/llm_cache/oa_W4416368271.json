@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4416368271",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Knowledge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Knowledge editing and machine unlearning are two popular approaches for large language models (LLMs) to stay up-to-date."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Then, we propose an automatic dataset generator that provides structured interventions across multiple graph levels and data scales, enabling controlled studies of how different modification strategies propagate through model knowledge."
+   }
+  },
+  {
+   "surface": "KnowledgeSmith",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This paper proposes KnowledgeSmith, a unified framework to systematically understand the updating mechanism of LLMs."
+   }
+  },
+  {
+   "surface": "Code",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Code: https://github.com/AIFrontierLab/KnowledgeSmith.git"
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16062,
+ "eval_count": 55,
+ "ts": "2026-11-20T04:39:42Z"
+}

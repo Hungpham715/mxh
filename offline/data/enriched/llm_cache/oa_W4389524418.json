@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4389524418",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models have demonstrated exceptional language understanding capabilities in many NLP tasks."
+   }
+  },
+  {
+   "surface": "adaptive gating",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "This paper introduces adaptive gating in MoE, a flexible training strategy that allows tokens to be processed by a variable number of experts based on expert probability distribution."
+   }
+  },
+  {
+   "surface": "curriculum learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further draw upon curriculum learning to better align the order of training samples and maximize the training time savings."
+   }
+  },
+  {
+   "surface": "inference quality",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive experiments on diverse NLP tasks show that adaptive gating reduces at most 22.5% training time while maintaining inference quality."
+   }
+  },
+  {
+   "surface": "training time",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further draw upon curriculum learning to better align the order of training samples and maximize the training time savings."
+   }
+  },
+  {
+   "surface": "training efficiency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Adaptive gating preserves sparsity while improving training efficiency."
+   }
+  },
+  {
+   "surface": "language task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Moreover, we conduct a comprehensive analysis of the gating decisions and present our insights on which tokens are inherently difficult to process, depending on the specific language task."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "language complexity"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24165,
+ "eval_count": 101,
+ "ts": "2026-11-20T03:43:51Z"
+}

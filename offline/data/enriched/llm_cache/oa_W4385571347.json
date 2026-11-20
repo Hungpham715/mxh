@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385571347",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "NLI",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural language inference (NLI) models are susceptible to learning shortcuts, i.e."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "NLI",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural language inference (NLI) models are susceptible to learning shortcuts, i.e.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "NLI"
+ ],
+ "duration_ms": 5832,
+ "eval_count": 128,
+ "ts": "2026-11-20T03:15:43Z"
+}

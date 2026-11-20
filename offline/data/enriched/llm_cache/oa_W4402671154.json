@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4402671154",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This definition relies on a counterfactual: the ability to observe what would have happened had the model not seen that instance.Existing methods struggle to provide computationally efficient and accurate estimates of this counterfactual."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper fills an important gap in the literature, proposing a new, principled, and efficient method to estimate memorisation based on the difference-in-differences design from econometrics.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 18756,
+ "eval_count": 145,
+ "ts": "2026-11-20T03:50:34Z"
+}

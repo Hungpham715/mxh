@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4389520798",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "NLP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The scientific innovation in Natural Language Processing (NLP) and more broadly in artificial intelligence (AI) is at its fastest pace to date."
+   }
+  },
+  {
+   "surface": "AI",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The scientific innovation in Natural Language Processing (NLP) and more broadly in artificial intelligence (AI) is at its fastest pace to date."
+   }
+  },
+  {
+   "surface": "regulation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This polarization, often amplified by social media, is swaying political agendas on AI regulation and governance and posing issues of regulatory capture."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "regulation",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24583,
+ "eval_count": 142,
+ "ts": "2026-11-20T03:40:24Z"
+}

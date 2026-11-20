@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4416036102",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "zFLoRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a new zero-latency fused low-rank adapter (zFLoRA) that introduces zero or negligible latency overhead on top of the base model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "zFLoRA",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a new zero-latency fused low-rank adapter (zFLoRA) that introduces zero or negligible latency overhead on top of the base model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  }
+ ],
+ "auto_added_endpoints": [
+  "zFLoRA"
+ ],
+ "duration_ms": 17506,
+ "eval_count": 148,
+ "ts": "2026-11-20T04:31:09Z"
+}

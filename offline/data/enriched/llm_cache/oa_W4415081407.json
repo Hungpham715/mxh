@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4415081407",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HART",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present HART, a hierarchical framework of AI risk levels, each corresponding to a detection task."
+   }
+  },
+  {
+   "surface": "2D Detection Method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these tasks, we propose a novel 2D Detection Method, decoupling a text into content and language expression."
+   }
+  },
+  {
+   "surface": "data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We release our data and code at https://github.com/baoguangsheng/truth-mirror."
+   }
+  },
+  {
+   "surface": "RAID",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments demonstrate that 2D method significantly outperforms existing detectors, achieving an AUROC improvement from 0.705 to 0.849 for level-2 detection and from 0.807 to 0.886 for RAID."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "AUROC"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "link",
+   "surface": "github.com/baoguangsheng/truth-mirror"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21419,
+ "eval_count": 229,
+ "ts": "2026-11-20T04:26:05Z"
+}

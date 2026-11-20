@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4402671771",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "NID",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "New Intent Discovery (NID) aims at detecting known and previously undefined categories of user intent by utilizing limited labeled and massive unlabeled data."
+   }
+  },
+  {
+   "surface": "baNID-Bench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "A new benchmark baNID-Bench comprised of three datasets is created to simulate the real-world long-tail distributions."
+   }
+  },
+  {
+   "surface": "ImbaNID",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "ImbaNID-Bench ranges from broad cross-domain to specific single-domain intent categories, providing a thorough representation of practical use cases."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "baNID-Bench"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ImbaNID"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "ImbaNID",
+   "to": "baNID-Bench"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20996,
+ "eval_count": 191,
+ "ts": "2026-11-20T03:54:46Z"
+}

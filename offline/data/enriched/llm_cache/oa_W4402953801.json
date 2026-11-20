@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4402953801",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LARGE_LANGUAGE_MODEL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "EDGE_DEPLOYMENT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "FUNCTION_CALLING"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "FUNCTION_CALENDAR"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MODEL_SIZE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MODEL_SIZE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "FUNCTION_CALLING"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "FUNCTION_CALENDAR"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "FUNCTION_CALENDAR"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "FUNCTION_CALENDAR"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13656,
+ "eval_count": 122,
+ "ts": "2026-11-20T03:59:10Z"
+}

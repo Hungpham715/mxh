@@ -1,0 +1,251 @@
+{
+ "paper_id": "oa:W4416878731",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HELM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "BIG-Bench",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "test-sets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "cheating models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "BART",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "GPT-2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "leaderboard rankings",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "unscrupulous actors",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "fairness",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "reliability",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "manipulation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "benchmarking practices",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "private",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "dynamic",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "comparative",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "systematic",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "reexamination",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "reliable",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "trustworthy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "unseen",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As expected, these models excel on the target benchmarks but fail terribly to generalize to comparable unseen testing sets."
+   }
+  },
+  {
+   "surface": "static",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings underscore three key points: (i) high leaderboard performance on limited open, static benchmarks may not reflect real-world utility; (ii) private or dynamically generated benchmarks should complement open benchmarks to maintain evaluation integrity; and (iii) a reexamination of current benchmarking practices is essential for reliable and trustworthy LM assessment."
+   }
+  },
+  {
+   "surface": "open",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "deliberate",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "inadvertent",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "data leakage",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  },
+  {
+   "surface": "unscrupulous",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet, this openness also creates substantial risks of data leakage during LM testing--deliberate or inadvertent, thereby undermining the fairness and reliability of leaderboard rankings and leaving them vulnerable to manipulation by unscrupulous actors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "unified evaluation"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "unified"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "leverage"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "unmatched"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "unified"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43806,
+ "eval_count": 394,
+ "ts": "2026-11-20T04:42:29Z"
+}

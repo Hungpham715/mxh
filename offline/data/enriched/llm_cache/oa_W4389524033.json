@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389524033",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We validated them on three datasets: Wiki discussion texts individually labeled with aggression and toxicity, and on Unhealthy Conversations dataset."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32270,
+ "eval_count": 183,
+ "ts": "2026-11-20T03:42:38Z"
+}

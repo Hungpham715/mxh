@@ -1,0 +1,140 @@
+{
+ "paper_id": "oa:W4399510385",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "BENCHMARK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We empirically demonstrate that our simple framework is effective in estimating confidence of Flan-ul2, Llama-13b, Mistral-7b and GPT-4 on four benchmark Q\\&A tasks as well as of Pegasus-large and BART-large on two benchmark summarization tasks with it surpassing baselines by even over $10\\%$ (on AUROC) in some cases."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Additionally, our interpretable approach provides insight into features that are predictive of confidence, leading to the interesting and useful discovery that our confidence models built for one LLM generalize zero-shot across others on a given dataset."
+   }
+  },
+  {
+   "surface": "MODEL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Estimating uncertainty or confidence in the responses of a model can be significant in evaluating trust not only in the responses, but also in the model as a whole."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We empirically demonstrate that our simple framework is effective in estimating confidence of Flan-ul2, Llama-13b, Mistral-7b and GPT-4 on four benchmark Q\\&A tasks as well as of Pegasus-large and BART-large on two benchmark summarization tasks with it surpassing baselines by even over $10\\%$ (on AUROC) in some cases."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ESTIMATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "METHOD"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "AUROC"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "performance",
+   "surface": "PERFORMANCE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "baselines",
+   "surface": "BASLINE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "confidence",
+   "surface": "CONFIDENCE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "batch_size",
+   "surface": "BATCH_SIZE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "parameter",
+   "surface": "PARAMETER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "EVIDENCE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "experiment",
+   "surface": "EXPERIMENT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "comparison",
+   "surface": "COMPARISON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result_set",
+   "surface": "RESULT_SET"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "dataset_size",
+   "surface": "DATASET_SIZE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "task_size",
+   "surface": "TASK_SIZE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "sentence",
+   "surface": "EVIDENCE_SENTENCE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "sentence",
+   "surface": "EVIDENCE_SENTENCE_2"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "sentence",
+   "surface": "EVIDENCE_SENTENCE_3"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "sentence",
+   "surface": "EVIDENCE_SENTENCE_4"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16078,
+ "eval_count": 240,
+ "ts": "2026-11-20T07:20:13Z"
+}

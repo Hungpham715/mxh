@@ -1,0 +1,96 @@
+{
+ "paper_id": "oa:W4402684131",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ViSAGe",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this gap, we introduce the ViSAGe (Visual Stereotypes Around the Globe) dataset to enable the evaluation of known nationality-based stereotypes in T2I models, across 135 nationalities."
+   }
+  },
+  {
+   "surface": "Text-to-Image",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent studies have shown that Text-to-Image (T2I) model generations can reflect social stereotypes present in the real world."
+   }
+  },
+  {
+   "surface": "multi-faceted",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We demonstrate ViSAGe’s utility through a multi-faceted evaluation of T2I generations."
+   }
+  },
+  {
+   "surface": "Global South",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Second, we assess the ‘stereotypical pull’ of visual depictions of identity groups, which reveals how the ‘default’ representations of all identity groups in ViSAGe have a pull towards stereotypical depictions, and that this pull is even more prominent for identity groups from the Global South."
+   }
+  },
+  {
+   "surface": "Africa",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we show that stereotypical attributes in ViSAGe are thrice as likely to be present in generated images of corresponding identities as compared to other attributes, and that the offensiveness of these depictions is especially higher for identities from Africa, South America, and South East Asia."
+   }
+  },
+  {
+   "surface": "South America",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we show that stereotypical attributes in ViSAGe are thrice as likely to be present in generated images of corresponding identities as compared to other attributes, and that the offensiveness of these depictions is especially higher for identities from Africa, South America, and South East Asia."
+   }
+  },
+  {
+   "surface": "South East Asia",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we show that stereotypical attributes in ViSAGe are thrice as likely to be present in generated images of corresponding identities as compared to other attributes, and that the offensiveness of these depictions is especially higher for identities from Africa, South America, and South East Asia."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "ViSAGe"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "stereotypical attributes"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "offensiveness"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "stereotypical pull"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "stereotypes"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14986,
+ "eval_count": 143,
+ "ts": "2026-11-20T03:58:59Z"
+}

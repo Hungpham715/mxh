@@ -1,0 +1,31 @@
+{
+ "paper_id": "oa:W4416036324",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our analysis further reveals that GA-Rollback can function as a robust plug-and-play module, integrating seamlessly with other methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20266,
+ "eval_count": 122,
+ "ts": "2026-11-20T04:31:25Z"
+}

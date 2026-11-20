@@ -1,0 +1,180 @@
+{
+ "paper_id": "oa:W4389519479",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "A natural way to design a negotiation dialogue system",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "train an agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "self-play RL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "multi-issue negotiation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We investigate this observation in the context of DealOrNoDeal task, a multi-issue negotiation over books, hats, and balls."
+   }
+  },
+  {
+   "surface": "human-human dialogue",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "negotiation partner",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that although both techniques show promise, a selfish agent, which maximizes its own performance while also avoiding walkaways, performs superior to other variants by implicitly learning to generate value for both itself and the negotiation partner."
+   }
+  },
+  {
+   "surface": "value of compromise",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  },
+  {
+   "surface": "partner",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  },
+  {
+   "surface": "performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  },
+  {
+   "surface": "overall performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  },
+  {
+   "surface": "system",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A natural way to design a negotiation dialogue system is via self-play RL: train an agent that learns to maximize its performance by interacting with a simulated user that has been designed to imitate human-human dialogue data."
+   }
+  },
+  {
+   "surface": "selfish agent",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that although both techniques show promise, a selfish agent, which maximizes its own performance while also avoiding walkaways, performs superior to other variants by implicitly learning to generate value for both itself and the negotiation partner."
+   }
+  },
+  {
+   "surface": "value for both",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that although both techniques show promise, a selfish agent, which maximizes its own performance while also avoiding walkaways, performs superior to other variants by implicitly learning to generate value for both itself and the negotiation partner."
+   }
+  },
+  {
+   "surface": "learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that although both techniques show promise, a selfish agent, which maximizes its own performance while also avoiding walkaways, performs superior to other variants by implicitly learning to generate value for both itself and the negotiation partner."
+   }
+  },
+  {
+   "surface": "value",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  },
+  {
+   "surface": "no agreements",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although this procedure has been adopted in prior work, we find that it results in a fundamentally flawed system that fails to learn the value of compromise in a negotiation, which can often lead to no agreements (i.e., the partner walking away without a deal), ultimately hurting the model’s overall performance."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "simulate user"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "improve"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "improve"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "deal or no deal"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "implied"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "walk away"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43782,
+ "eval_count": 317,
+ "ts": "2026-11-20T03:33:22Z"
+}

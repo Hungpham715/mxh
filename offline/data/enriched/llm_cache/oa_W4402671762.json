@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4402671762",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our unsupervised prompting method performs on par with supervised few-shot learning in LLMs of different sizes for translations between English and 13 Indic and 21 African low-resource languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To elicit LLMs’ ability onto low-resource languages without any supervised data, we propose to assemble synthetic exemplars from a diverse set of high-resource languages to prompt the LLMs to translate from any language into English.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30038,
+ "eval_count": 313,
+ "ts": "2026-11-20T03:55:15Z"
+}

@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385570458",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "long document understanding",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In addition, incorporating varying contexts can especially benefit long document understanding tasks that leverage pre-trained LMs, typically bounded by the input sequence length."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "long document understanding",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In addition, incorporating varying contexts can especially benefit long document understanding tasks that leverage pre-trained LMs, typically bounded by the input sequence length.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "long document understanding"
+ ],
+ "duration_ms": 6506,
+ "eval_count": 101,
+ "ts": "2026-11-20T03:12:31Z"
+}

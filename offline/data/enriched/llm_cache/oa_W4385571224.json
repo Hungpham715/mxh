@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385571224",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "continual language learning benchmarks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on continual language learning benchmarks show that our method is significantly better than all existing no-data-cache methods, and is comparable (or even better) than those using historical data."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "continual language learning benchmarks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on continual language learning benchmarks show that our method is significantly better than all existing no-data-cache methods, and is comparable (or even better) than those using historical data.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "continual language learning benchmarks"
+ ],
+ "duration_ms": 5798,
+ "eval_count": 111,
+ "ts": "2026-11-20T03:15:25Z"
+}

@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4404782920",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent studies have suggested that PLMs be used as dataset generators and a tiny task-specific model be trained to achieve efficient inference."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent studies have suggested that PLMs be used as dataset generators and a tiny task-specific model be trained to achieve efficient inference."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24447,
+ "eval_count": 67,
+ "ts": "2026-11-20T04:06:50Z"
+}

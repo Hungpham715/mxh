@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4402671740",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "teachers",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Teachers are important to imparting knowledge and guiding learners, and the role of large language models (LLMs) as potential educators is emerging as an important area of study."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Teachers are important to imparting knowledge and guiding learners, and the role of large language models (LLMs) as potential educators is emerging as an important area of study."
+   }
+  },
+  {
+   "surface": "questioning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While LLMs have been tested for their comprehension and problem-solving skills, their capability in teaching remains largely unexplored.In teaching, questioning is a key skill that guides students to analyze, evaluate, and synthesize core concepts and principles.Therefore, our research introduces a benchmark to evaluate the questioning capability in education as a teacher of LLMs through evaluating their generated educational questions, utilizing Anderson and Krathwohl’s taxonomy across general, monodisciplinary, and interdisciplinary domains."
+   }
+  },
+  {
+   "surface": "education",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recognizing LLMs’ capability to generate educational content can lead to advances in automated and personalized learning."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Anderson and Krathwohl"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "generating educational questions"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "automated scores"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16817,
+ "eval_count": 129,
+ "ts": "2026-11-20T03:54:25Z"
+}

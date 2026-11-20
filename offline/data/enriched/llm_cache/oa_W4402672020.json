@@ -1,0 +1,30 @@
+{
+ "paper_id": "oa:W4402672020",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14921,
+ "eval_count": 304,
+ "ts": "2026-11-20T07:21:56Z"
+}

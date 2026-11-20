@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385569873",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.4",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "character-level models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that our best performing character-level model exceeds the performance of a token-based model trained with the same settings on the same data, suggesting that character-level models are ready for more widespread adoption."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "character-level models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that our best performing character-level model exceeds the performance of a token-based model trained with the same settings on the same data, suggesting that character-level models are ready for more widespread adoption.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "character-level models"
+ ],
+ "duration_ms": 8169,
+ "eval_count": 112,
+ "ts": "2026-11-20T03:21:19Z"
+}

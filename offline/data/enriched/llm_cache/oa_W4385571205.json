@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385571205",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PARAPHRASE GENERATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on paraphrase generation and machine translation show that the proposed method outperforms autoregressive baselines, while also demonstrating effectiveness in terms of interpretability, controllability, and diversity."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "PARAPHRASE GENERATION",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on paraphrase generation and machine translation show that the proposed method outperforms autoregressive baselines, while also demonstrating effectiveness in terms of interpretability, controllability, and diversity.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "PARAPHRASE GENERATION"
+ ],
+ "duration_ms": 5862,
+ "eval_count": 116,
+ "ts": "2026-11-20T03:15:19Z"
+}

@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4402671027",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TAPERA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle this issue, we propose a new LLM-based framework, TaPERA, for LFTQA tasks."
+   }
+  },
+  {
+   "surface": "FeTaQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Human evaluation results on the FeTaQA and QTSumm datasets indicate that our framework significantly improves strong baselines on both accuracy and truthfulness, as our modular framework is better at table reasoning, and the long-form answer is always consistent with the program output."
+   }
+  },
+  {
+   "surface": "QTSumm",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Human evaluation results on the FeTaQA and QTSumm datasets indicate that our framework significantly improves strong baselines on both accuracy and truthfulness, as our modular framework is better at table reasoning, and the long-form answer is always consistent with the program output."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28434,
+ "eval_count": 222,
+ "ts": "2026-11-20T03:50:45Z"
+}

@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4399354964",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "EXPLORATION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "At the core of agentic behavior is the capacity for exploration, or the ability to actively gather information about the environment."
+   }
+  },
+  {
+   "surface": "CONTROL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "But how do LLM agents explore, and how can we control their exploratory behaviors?"
+   }
+  },
+  {
+   "surface": "UNCERTAINTY",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Secondly, we reveal how applying this control modulates the uncertainty exhibited in the LLM's thoughts, guiding the agent towards more exploratory actions."
+   }
+  },
+  {
+   "surface": "EAST",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To answer these questions, we take a representation-level perspective, and introduce Entropic Activation Steering (EAST), an activation steering method for in-context LLM agents."
+   }
+  },
+  {
+   "surface": "FUNCTIONING",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our work paves the way for a new understanding of the functioning of LLM agents and to effective control of their decision-making behaviors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LARGE_LANGUAGE_MODEL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "IN_CONTEXT_LEARNING_AGENT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ENTROPIC_ACTIVATION_STEERING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK_VARIANTS"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ACTION_SPACE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "EXPLORATION_METHOD"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CONTROL_METHOD"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ACTION_SPACE_GENERATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK_VARIANTS_GENERATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DECISION_MADE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19861,
+ "eval_count": 169,
+ "ts": "2026-11-20T03:47:38Z"
+}

@@ -1,0 +1,115 @@
+{
+ "paper_id": "oa:W4412944962",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Prompt engineering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt engineering for large language models is challenging, as even small prompt perturbations or model changes can significantly impact the generated output texts."
+   }
+  },
+  {
+   "surface": "Evaluation methods",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing evaluation methods of LLM outputs, either automated metrics or human evaluation, have limitations, such as providing limited insights or being labor-intensive."
+   }
+  },
+  {
+   "surface": "Data mining techniques",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on data mining techniques, we automatically distinguish between random (decoding) variations and systematic differences in language model outputs."
+   }
+  },
+  {
+   "surface": "Token patterns",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This process provides token patterns that describe the systematic differences and guide the user in manually analyzing the effects of their prompts and changes in models efficiently."
+   }
+  },
+  {
+   "surface": "Automated metrics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing evaluation methods of LLM outputs, either automated metrics or human evaluation, have limitations, such as providing limited insights or being labor-intensive."
+   }
+  },
+  {
+   "surface": "Human evaluation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing evaluation methods of LLM outputs, either automated metrics or human evaluation, have limitations, such as providing limited insights or being labor-intensive."
+   }
+  },
+  {
+   "surface": "Prompt and model changes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We are further able to discover relevant differences caused by prompt and model changes (e.g."
+   }
+  },
+  {
+   "surface": "Gender",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "related to gender or culture), thus supporting the prompt engineering process and human-centric model behavior research."
+   }
+  },
+  {
+   "surface": "Culture",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "related to gender or culture), thus supporting the prompt engineering process and human-centric model behavior research."
+   }
+  },
+  {
+   "surface": "User study",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "From a human-centric perspective, through demonstration studies and a user study, we show that our token pattern approach helps users understand the systematic differences of language model outputs."
+   }
+  },
+  {
+   "surface": "System",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on data mining techniques, we automatically distinguish between random (decoding) variations and systematic differences in language model outputs."
+   }
+  },
+  {
+   "surface": "Human-centric model behavior research",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "related to gender or culture), thus supporting the prompt engineering process and human-centric model behavior research."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Manual analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22724,
+ "eval_count": 156,
+ "ts": "2026-11-20T04:20:49Z"
+}

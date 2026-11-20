@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4412889619",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLMOps pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce an LLMOps pipeline, “LlamaDuo”, for the seamless migration of knowledge and abilities from service-oriented LLMs to smaller, locally manageable models."
+   }
+  },
+  {
+   "surface": "LlamaDuo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce an LLMOps pipeline, “LlamaDuo”, for the seamless migration of knowledge and abilities from service-oriented LLMs to smaller, locally manageable models."
+   }
+  },
+  {
+   "surface": "https://github.com/deep-diver/llamaduo",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our pipeline implementation is available at https://github.com/deep-diver/llamaduo."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16159,
+ "eval_count": 90,
+ "ts": "2026-11-20T04:17:18Z"
+}

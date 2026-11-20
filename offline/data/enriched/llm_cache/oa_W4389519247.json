@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4389519247",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GEMINI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this issue, we propose an adaptive model, GEMINI, that integrates a rewriter and a generator to mimic the sentence rewriting and abstracting techniques, respectively."
+   }
+  },
+  {
+   "surface": "WikiHow",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments demonstrate that our adaptive approach outperforms the pure abstractive and rewriting baselines on three benchmark datasets, achieving the best results on WikiHow."
+   }
+  },
+  {
+   "surface": "github.com",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We release our code and model at https://github.com/baoguangsheng/gemini."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "GEMINI"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "WikiHow"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47707,
+ "eval_count": 214,
+ "ts": "2026-11-20T03:34:01Z"
+}

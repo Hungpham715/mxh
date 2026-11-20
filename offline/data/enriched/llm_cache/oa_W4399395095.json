@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4399395095",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, it remains unclear whether the variance in performance of these approaches stems from the methodologies employed or the specific symbolic solvers utilized."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The emergence of Large Language Models (LLMs) has demonstrated promising progress in solving logical reasoning tasks effectively."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "TASK",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paradigm has established the current state-of-the-art result in logical reasoning (i.e., deductive reasoning).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "DATASET",
+   "to": "METHOD"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "DATASET",
+   "to": "METHOD"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22530,
+ "eval_count": 246,
+ "ts": "2026-11-20T03:47:49Z"
+}

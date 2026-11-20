@@ -1,0 +1,65 @@
+{
+ "paper_id": "oa:W4416037142",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Dataset condensation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dataset condensation has emerged as a promising technique to improve data efficiency under limited data budgets."
+   }
+  },
+  {
+   "surface": "CondenseLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we introduce CondenseLM, a novel paradigm for both effective and efficient text-level dataset condensation."
+   }
+  },
+  {
+   "surface": "text level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, when applied to the text level, existing methods struggle to compress more information into samples through optimization."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "text level",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, when applied to the text level, existing methods struggle to compress more information into samples through optimization.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [
+  "text level"
+ ],
+ "duration_ms": 37110,
+ "eval_count": 274,
+ "ts": "2026-11-20T04:39:09Z"
+}

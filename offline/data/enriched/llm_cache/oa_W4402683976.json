@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4402683976",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "SPoken-LLM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "StyleTalk"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "In spoken dialogue"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "text-only LLMs"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Spoken-LLM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16301,
+ "eval_count": 133,
+ "ts": "2026-11-20T03:58:24Z"
+}

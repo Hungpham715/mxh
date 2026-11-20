@@ -1,0 +1,61 @@
+{
+ "paper_id": "oa:W4412889893",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing methods often leverage the Self-Instruct framework to generate long-context instruction-tuning data."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advancements in large language models (LLMs) with extended context windows have significantly improved various tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing methods often leverage the Self-Instruct framework to generate long-context instruction-tuning data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To improve long-context capabilities, much work focuses on augmenting LLM’s capabilities with synthetic data.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28730,
+ "eval_count": 281,
+ "ts": "2026-11-20T04:18:56Z"
+}

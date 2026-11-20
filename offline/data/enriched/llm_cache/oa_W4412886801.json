@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412886801",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To measure the effectiveness of our method, we design a public repo-level benchmark CompileAgentBench, and we also design two baselines for comparison by combining two compilation-friendly schemes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To measure the effectiveness of our method, we design a public repo-level benchmark CompileAgentBench, and we also design two baselines for comparison by combining two compilation-friendly schemes.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24850,
+ "eval_count": 203,
+ "ts": "2026-11-20T04:15:54Z"
+}

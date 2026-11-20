@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4412886951",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LARGE LANGUAGE MODEL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Using Large Language Models (LLMs) to generate training data can potentially be a preferable way to improve zero or few-shot NLP tasks."
+   }
+  },
+  {
+   "surface": "RE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Using Large Language Models (LLMs) to generate training data can potentially be a preferable way to improve zero or few-shot NLP tasks."
+   }
+  },
+  {
+   "surface": "RE DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our experiments on commonly used RE datasets show that both attempts can improve the quality of the generated training data."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our experiments on commonly used RE datasets show that both attempts can improve the quality of the generated training data."
+   }
+  },
+  {
+   "surface": "PERFORMANCE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We also find that comparing with directly performing RE with an LLM, training a non-LLM RE model with its generated samples may lead to better performance."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "IN-CONTEXT LEARNING"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "DIRECT PRECISION OPTIMIZATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ZERO SHOT NLP"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "LIMITED PHrasing"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "DIVERSE TRAINING DATA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "CORRECTNESS"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15763,
+ "eval_count": 139,
+ "ts": "2026-11-20T04:16:30Z"
+}

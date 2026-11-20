@@ -1,0 +1,73 @@
+{
+ "paper_id": "oa:W4412945616",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "uncertainty-aware framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce an uncertainty-aware framework designed to enhance the accuracy of LLM responses by systematically incorporating model confidence at critical decision points."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Ensuring the reliability of Large Language Models (LLMs) in complex reasoning tasks remains a formidable challenge, particularly in scenarios that demand precise mathematical calculations and knowledge-intensive open-domain generation."
+   }
+  },
+  {
+   "surface": "mathematical reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose an approach that encourages multi-step reasoning in LLMs and quantify the confidence of intermediate answers such as numerical results in mathematical reasoning and proper nouns in open-domain generation."
+   }
+  },
+  {
+   "surface": "open-domain generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Ensuring the reliability of Large Language Models (LLMs) in complex reasoning tasks remains a formidable challenge, particularly in scenarios that demand precise mathematical calculations and knowledge-intensive open-domain generation."
+   }
+  },
+  {
+   "surface": "confidence",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce an uncertainty-aware framework designed to enhance the accuracy of LLM responses by systematically incorporating model confidence at critical decision points."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conducted extensive experiments in five datasets, three mathematical datasets and two open-domain datasets, using four LLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21204,
+ "eval_count": 167,
+ "ts": "2026-11-20T04:24:41Z"
+}

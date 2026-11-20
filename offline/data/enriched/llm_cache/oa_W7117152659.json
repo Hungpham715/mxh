@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W7117152659",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional KV cache compression methods typically involve permanently evicting or irreversibly merging \"less important\" tokens with low attention scores."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31866,
+ "eval_count": 172,
+ "ts": "2026-11-20T04:44:11Z"
+}

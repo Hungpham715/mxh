@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389523617",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "proposed methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The proposed methods do not require alignments between words and/or corpora for comparison that previous methods do."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Nevertheless, they rival the best-performing system in the SemEval-2020 Task 1."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24123,
+ "eval_count": 93,
+ "ts": "2026-11-20T03:41:13Z"
+}

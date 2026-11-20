@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4412944857",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Their unique structures and usage patterns hinder the direct application of methods primarily designed for English."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We introduce KatFish, the first benchmark dataset for detecting LLM-generated Korean text."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We introduce KatFish, the first benchmark dataset for detecting LLM-generated Korean text.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22159,
+ "eval_count": 231,
+ "ts": "2026-11-20T04:20:44Z"
+}

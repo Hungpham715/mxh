@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4385570687",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "domain adaptation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Self-training emerges as an important research line on domain adaptation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "domain adaptation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Self-training emerges as an important research line on domain adaptation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "domain adaptation"
+  }
+ ],
+ "auto_added_endpoints": [
+  "domain adaptation"
+ ],
+ "duration_ms": 7403,
+ "eval_count": 136,
+ "ts": "2026-11-20T03:13:14Z"
+}

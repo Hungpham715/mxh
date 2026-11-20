@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4404782712",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As such, our method is sound in the sense that (1) well-formedness of predicted tag sequences is ensured via the automaton structure and (2) there is an unambiguous mapping between well-formed sequences of tags and (discontinuous) mentions."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We evaluate our approach on three English datasets in the biomedical domain, and report comparable results to state-of-the-art while having a way simpler and faster model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We rely on a weighted finite state automaton for both marginal and maximum a posteriori inference.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22742,
+ "eval_count": 167,
+ "ts": "2026-11-20T04:05:19Z"
+}

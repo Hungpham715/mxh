@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4412945292",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Mystery-Zebra"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "4,290"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Lexical obfuscation"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Grid puzzles"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "70B"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Puzzles"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "12"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "42"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "12 difficulty levels"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Model sizes"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "LLMs"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Lexical memory"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Logic abstraction"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Formal difficulty degree"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Obfuscated"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Well-known puzzles"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Reasoning abilities"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Consecutive steps"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30164,
+ "eval_count": 258,
+ "ts": "2026-11-20T04:23:44Z"
+}

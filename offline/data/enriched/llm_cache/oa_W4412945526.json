@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4412945526",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MANIM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce TheoremExplainAgent, an agentic approach for generating long-form theorem explanation videos (over 5 minutes) using Manim animations."
+   }
+  },
+  {
+   "surface": "o3-mini",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our results reveal that agentic planning is essential for generating detailed long-form videos, and the o3-mini agent achieves a success rate of 93.8% and an overall score of 0.77."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "THEOREM_EXPLAIN_AGENT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "THEOREM_EXPLAIN_BENCH"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "0.77"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "93.8"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "minor"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "visual element layout"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "reasoning flaws"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14068,
+ "eval_count": 107,
+ "ts": "2026-11-20T04:24:14Z"
+}

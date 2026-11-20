@@ -1,0 +1,97 @@
+{
+ "paper_id": "oa:W4404783368",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PEFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter-efficient fine-tuning (PEFT) is crucial for customizing Large Language Models (LLMs) with constrained resource."
+   }
+  },
+  {
+   "surface": "MoE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we study the PEFT method for LLMs with the Mixture-of-Experts (MoE) architecture and the contents of this work are mainly threefold: (1) We investigate the dispersion degree of the activated experts in customized tasks, and found that the routing distribution for specific task tend to be highly concentrated, while the distribution of activated experts varies significantly across different tasks."
+   }
+  },
+  {
+   "surface": "Mixture-of-Experts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we study the PEFT method for LLMs with the Mixture-of-Experts (MoE) architecture and the contents of this work are mainly threefold: (1) We investigate the dispersion degree of the activated experts in customized tasks, and found that the routing distribution for specific task tend to be highly concentrated, while the distribution of activated experts varies significantly across different tasks."
+   }
+  },
+  {
+   "surface": "Parameter-efficient fine-tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter-efficient fine-tuning (PEFT) is crucial for customizing Large Language Models (LLMs) with constrained resource."
+   }
+  },
+  {
+   "surface": "experts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we study the PEFT method for LLMs with the Mixture-of-Experts (MoE) architecture and the contents of this work are mainly threefold: (1) We investigate the dispersion degree of the activated experts in customized tasks, and found that the routing distribution for specific task tend to be highly concentrated, while the distribution of activated experts varies significantly across different tasks."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we study the PEFT method for LLMs with the Mixture-of-Experts (MoE) architecture and the contents of this work are mainly threefold: (1) We investigate the dispersion degree of the activated experts in customized tasks, and found that the routing distribution for specific task tend to be highly concentrated, while the distribution of activated experts varies significantly across different tasks."
+   }
+  },
+  {
+   "surface": "full-parameter fine-tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "(2) We propose the expert-specialized fine-tuning method, which tunes the experts most relevant to downstream tasks while freezing the other experts; experimental results demonstrate that our method not only improves the tuning efficiency, but also matches or even surpasses the performance of full-parameter fine-tuning."
+   }
+  },
+  {
+   "surface": "expert-specialized fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "(2) We propose the expert-specialized fine-tuning method, which tunes the experts most relevant to downstream tasks while freezing the other experts; experimental results demonstrate that our method not only improves the tuning efficiency, but also matches or even surpasses the performance of full-parameter fine-tuning."
+   }
+  },
+  {
+   "surface": "downstream tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "(2) We propose the expert-specialized fine-tuning method, which tunes the experts most relevant to downstream tasks while freezing the other experts; experimental results demonstrate that our method not only improves the tuning efficiency, but also matches or even surpasses the performance of full-parameter fine-tuning."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "effect",
+   "surface": "training efficiency"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "effect",
+   "surface": "effectiveness"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17491,
+ "eval_count": 118,
+ "ts": "2026-11-20T04:10:03Z"
+}

@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4322832290",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Natural Language Processing (NLP)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The GPT-3.5 models have demonstrated impressive performance in various Natural Language Processing (NLP) tasks, showcasing their strong understanding and reasoning capabilities."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Natural Language Processing (NLP)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The GPT-3.5 models have demonstrated impressive performance in various Natural Language Processing (NLP) tasks, showcasing their strong understanding and reasoning capabilities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Natural Language Processing (NLP)"
+ ],
+ "duration_ms": 5883,
+ "eval_count": 107,
+ "ts": "2026-11-19T18:07:36Z"
+}

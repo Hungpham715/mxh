@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4412945071",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, few methods addressed the complexities of domain-adaptive continual pre-training."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, few methods addressed the complexities of domain-adaptive continual pre-training.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16394,
+ "eval_count": 157,
+ "ts": "2026-11-20T04:21:33Z"
+}

@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4416036736",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We conduct experiments on multiple downstream tasks with various MLLMs, demonstrating that the proposed method is more effective than the baselines in MLLM instruction tuning."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The major challenge is how to efficiently find the synergy between the two modules so that LLMs can adapt their reasoning abilities to downstream tasks while feature encoders can adjust to provide more task-specific information about its modality."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we analyze the MLLM instruction tuning from both theoretical and empirical perspectives, where we find the unbalanced learning between the feature encoder and the LLM can cause problems of oscillation and biased learning that lead to sub-optimal convergence.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46563,
+ "eval_count": 320,
+ "ts": "2026-11-20T04:36:37Z"
+}

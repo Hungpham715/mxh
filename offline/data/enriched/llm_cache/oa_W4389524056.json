@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4389524056",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PRETRAINED LANGUAGE MODELS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pretrained language models have improved zero-shot text classification by allowing the transfer of semantic knowledge from the training data in order to classify among specific label sets in downstream tasks."
+   }
+  },
+  {
+   "surface": "ZERO-SHOT TEXT CLASSIFICATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pretrained language models have improved zero-shot text classification by allowing the transfer of semantic knowledge from the training data in order to classify among specific label sets in downstream tasks."
+   }
+  },
+  {
+   "surface": "MINIMAL EFFORT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose a simple way to further improve zero-shot accuracies with minimal effort."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We curate small finetuning datasets intended to describe the labels for a task."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pretrained language models have improved zero-shot text classification by allowing the transfer of semantic knowledge from the training data in order to classify among specific label sets in downstream tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "17-19%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "MORE ROBUST"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "MORE ACCURATE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "MORE ROBUST"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "MORE ACCURATE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25418,
+ "eval_count": 117,
+ "ts": "2026-11-20T03:43:19Z"
+}

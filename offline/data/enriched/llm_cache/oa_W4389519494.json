@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4389519494",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We first use GPT-4 to generate new test items following a list of expert-developed rules and then apply a fine-tuned LLM to filter the items based on criteria from psychological measurements."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To generate high-quality parallel tests, we propose to fine-tune large language models (LLMs) to simulate how previous students would have responded to unseen items."
+   }
+  },
+  {
+   "surface": "parallel tests",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Moreover, many tests require multiple distinct sets of questions administered throughout the school year to closely monitor students’ progress, known as parallel tests."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "crowdworker responses"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "standard test form"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "K-12 students"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28844,
+ "eval_count": 71,
+ "ts": "2026-11-20T03:38:04Z"
+}

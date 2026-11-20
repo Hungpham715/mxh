@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4412945551",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Previous studies have explored LLMs’ graph reasoning abilities through various techniques, such as different encoding methods for graph structures and the use of carefully designed prompts."
+   }
+  },
+  {
+   "surface": "graph problems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Among these reasoning tasks, graph problems stand out due to their complexity and unique structural characteristics, attracting considerable attention from researchers."
+   }
+  },
+  {
+   "surface": "six graph problems",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, we comprehensively evaluate four graph description orders across six graph problems using six mainstream LLMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "graph problems",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have achieved significant success in reasoning tasks, including mathematical reasoning and logical deduction.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "six graph problems",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, we comprehensively evaluate four graph description orders across six graph problems using six mainstream LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [
+  "graph problems",
+  "six graph problems"
+ ],
+ "duration_ms": 19386,
+ "eval_count": 172,
+ "ts": "2026-11-20T04:24:24Z"
+}

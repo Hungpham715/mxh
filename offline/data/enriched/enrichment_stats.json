@@ -1,0 +1,161 @@
+{
+  "papers": 1091,
+  "entities_total": 1573,
+  "entities_by_type": {
+    "dataset": 383,
+    "method": 606,
+    "task": 584
+  },
+  "entities_by_resolved_by": {
+    "slug": 1412,
+    "gazetteer": 161
+  },
+  "edges_total": 3488,
+  "edges_by_type": {
+    "USES_METHOD": 1578,
+    "ADDRESSES_TASK": 1404,
+    "EVALUATED_ON": 469,
+    "METHOD_EVALUATED_ON": 37
+  },
+  "edges_by_source_kind": {
+    "rules": 1841,
+    "agreement": 131,
+    "llm": 1516
+  },
+  "edges_by_confidence_band": {
+    "rule_medium": 743,
+    "agreement": 131,
+    "llm_extracted": 1516,
+    "rule_high": 1098
+  },
+  "llm": {
+    "results": 1091,
+    "failed": 7,
+    "extractor_versions": {
+      "qwen3-0.6b-ollama-v1.2": 28,
+      "qwen3-0.6b-ollama-v1.3": 119,
+      "qwen3-0.6b-ollama-v1.4": 24,
+      "qwen3-0.6b-ollama-v1.5": 79,
+      "qwen3-0.6b-ollama-v1.6": 841
+    },
+    "models": {
+      "qwen3:0.6b": 1091
+    },
+    "mean_duration_ms": 20333,
+    "drop_reasons": {
+      "endpoint_not_extracted": 1191,
+      "surface_not_in_abstract": 938,
+      "unknown_type": 913,
+      "invalid_entity": 783,
+      "generic_surface": 755,
+      "endpoint_type_mismatch": 140,
+      "invalid_endpoint": 132,
+      "empty_surface": 40,
+      "unknown_rel": 19,
+      "malformed_entity": 1
+    }
+  },
+  "top_unresolved_surfaces": [
+    {
+      "id": "dataset:code",
+      "name": "CODE",
+      "n_papers": 13
+    },
+    {
+      "id": "method:large-language-models",
+      "name": "large language models",
+      "n_papers": 10
+    },
+    {
+      "id": "dataset:large-language-models",
+      "name": "large language models",
+      "n_papers": 9
+    },
+    {
+      "id": "task:rag",
+      "name": "RAG",
+      "n_papers": 4
+    },
+    {
+      "id": "dataset:gpt-4o",
+      "name": "GPT-4o",
+      "n_papers": 3
+    },
+    {
+      "id": "method:code",
+      "name": "CODE",
+      "n_papers": 3
+    },
+    {
+      "id": "method:language-model",
+      "name": "language model",
+      "n_papers": 3
+    },
+    {
+      "id": "method:large-language-model",
+      "name": "large language model",
+      "n_papers": 3
+    },
+    {
+      "id": "method:multimodal",
+      "name": "multimodal",
+      "n_papers": 3
+    },
+    {
+      "id": "method:nlp",
+      "name": "NLP",
+      "n_papers": 3
+    },
+    {
+      "id": "task:bias",
+      "name": "BIAS",
+      "n_papers": 3
+    },
+    {
+      "id": "task:icl",
+      "name": "ICL",
+      "n_papers": 3
+    },
+    {
+      "id": "task:large-language-models",
+      "name": "Large Language Models",
+      "n_papers": 3
+    },
+    {
+      "id": "task:nlp",
+      "name": "NLP",
+      "n_papers": 3
+    },
+    {
+      "id": "task:state-of-the-art-performance",
+      "name": "state-of-the-art performance",
+      "n_papers": 3
+    }
+  ],
+  "gazetteer_version": "gazetteer-v1.0",
+  "llm_model": "qwen3:0.6b",
+  "enrich_version": "enrich-1.0.0",
+  "scope_id": "nlpgraph-enrich-v1",
+  "before_after": {
+    "scope_note": "v1 graph (7134 nodes / 30971 rels) is untouched; enrichment lives in scope nlpgraph-enrich-v1",
+    "before": {
+      "total_nodes": 7134,
+      "total_relationships": 30971
+    },
+    "added_nodes": {
+      "Method": 606,
+      "Dataset": 383,
+      "Task": 584
+    },
+    "added_relationships": {
+      "USES_METHOD": 1578,
+      "ADDRESSES_TASK": 1404,
+      "EVALUATED_ON": 469,
+      "METHOD_EVALUATED_ON": 37
+    },
+    "after_if_imported": {
+      "total_nodes": 8707,
+      "total_relationships": 34459
+    }
+  }
+}

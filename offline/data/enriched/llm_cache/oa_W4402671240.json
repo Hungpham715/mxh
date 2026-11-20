@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4402671240",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Wav2Vec2-XLSR-53",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "25 languages",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "15 writing systems",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "ASR accuracy",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "number of graphemes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "unigram grapheme entropy",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "logographicity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "phonemes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "high logographicity"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "low ASR accuracy"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "no significant effect"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17796,
+ "eval_count": 129,
+ "ts": "2026-11-20T03:50:58Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4389532453",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such a model, finetuned on some source dataset, may provide a better starting point for a new finetuning process on a desired target dataset."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Here, we perform a systematic analysis of this intertraining scheme, over a wide range of English classification tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25154,
+ "eval_count": 228,
+ "ts": "2026-11-20T03:45:34Z"
+}

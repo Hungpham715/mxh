@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4416036484",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PARADIGM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The paradigm of using Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) as evaluative judges has emerged as an effective approach in RLHF and inference-time scaling."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Judge is effective across a wide range of tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "METHOD"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14790,
+ "eval_count": 273,
+ "ts": "2026-11-20T07:23:44Z"
+}

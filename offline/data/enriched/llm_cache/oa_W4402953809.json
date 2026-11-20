@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4402953809",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "FLORES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper describes the corrections made to the FLORES evaluation (dev and devtest) dataset for four African languages, namely Hausa, Northern Sotho (Sepedi), Xitsonga, and isiZulu."
+   }
+  },
+  {
+   "surface": "NLP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The original dataset, though groundbreaking in its coverage of low-resource languages, exhibited various inconsistencies and inaccuracies in the reviewed languages that could potentially hinder the integrity of the evaluation of downstream tasks in natural language processing (NLP), especially machine translation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "NLP",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We believe that our corrections improve the linguistic accuracy and reliability of the data and, thereby, contribute to a more effective evaluation of NLP tasks involving the four African languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "surface",
+   "surface": "Hausa"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "surface",
+   "surface": "Northern Sotho (Sepedi)"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "surface",
+   "surface": "Xitsonga"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "surface",
+   "surface": "isiZulu"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "FLORES"
+  }
+ ],
+ "auto_added_endpoints": [
+  "NLP"
+ ],
+ "duration_ms": 26914,
+ "eval_count": 250,
+ "ts": "2026-11-20T03:59:53Z"
+}

@@ -1,0 +1,43 @@
+{
+ "paper_id": "oa:W4404782191",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-lingual open domain question answering (CLQA) is a complex problem, comprising cross-lingual retrieval from a multilingual knowledge base, followed by answer generation in the query language.Both steps are usually tackled by separate models, requiring substantial annotated datasets, and typically auxiliary resources, like machine translation systems to bridge between languages.In this paper, we show that CLQA can be addressed using a single encoder-decoder model.To effectively train this model, we propose a selfsupervised method based on exploiting the cross-lingual link structure within Wikipedia.We demonstrate how linked Wikipedia pages can be used to synthesise supervisory signals for cross-lingual retrieval, through a form of cloze query, and generate more natural questions to supervise answer generation.Together, we show our approach, CLASS, outperforms comparable methods on both supervised and zero-shot language adaptation settings, including those using machine translation.𝓒 𝐸𝑛 𝓒 𝐸𝑛 𝓒 𝐸𝑛 𝓒 𝑀𝑢𝑙𝑡𝑖 𝓒 𝑀𝑢𝑙𝑡𝑖 Parallel Sentence Mining Once in I n d i a , hippies went to many different destinations, on the beaches of Goa and Kovalam in Trivandrum (Kerala), or crossed the border into Nepal to spend months in Kathmandu.インドでは、ヒッピーは多くの異な る目的地へいったが、トリヴァンド ラム(ケーララ州)のゴアとコバラ ムのビーチに大量に集まったり、 国境を越えたネパールのカトマン ズで数ヶ月過ごしたりした。 q En : Once in [Mask], hippies went to many different destinations..."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-lingual open domain question answering (CLQA) is a complex problem, comprising cross-lingual retrieval from a multilingual knowledge base, followed by answer generation in the query language.Both steps are usually tackled by separate models, requiring substantial annotated datasets, and typically auxiliary resources, like machine translation systems to bridge between languages.In this paper, we show that CLQA can be addressed using a single encoder-decoder model.To effectively train this model, we propose a selfsupervised method based on exploiting the cross-lingual link structure within Wikipedia.We demonstrate how linked Wikipedia pages can be used to synthesise supervisory signals for cross-lingual retrieval, through a form of cloze query, and generate more natural questions to supervise answer generation.Together, we show our approach, CLASS, outperforms comparable methods on both supervised and zero-shot language adaptation settings, including those using machine translation.𝓒 𝐸𝑛 𝓒 𝐸𝑛 𝓒 𝐸𝑛 𝓒 𝑀𝑢𝑙𝑡𝑖 𝓒 𝑀𝑢𝑙𝑡𝑖 Parallel Sentence Mining Once in I n d i a , hippies went to many different destinations, on the beaches of Goa and Kovalam in Trivandrum (Kerala), or crossed the border into Nepal to spend months in Kathmandu.インドでは、ヒッピーは多くの異な る目的地へいったが、トリヴァンド ラム(ケーララ州)のゴアとコバラ ムのビーチに大量に集まったり、 国境を越えたネパールのカトマン ズで数ヶ月過ごしたりした。 q En : Once in [Mask], hippies went to many different destinations..."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "TASK"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17056,
+ "eval_count": 131,
+ "ts": "2026-11-20T04:03:25Z"
+}

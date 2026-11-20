@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4404783577",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "translation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown surprisingly good performance in multilingual neural machine translation (MNMT) even if not being trained explicitly for translation."
+   }
+  },
+  {
+   "surface": "FLORES-200 full devtest set",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "And CoD elicits large gains by up to 13x chrF++ points for MNMT (3.08 to 42.63 for English to Serbian written in Cyrillic script) on FLORES-200 full devtest set."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "translation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown surprisingly good performance in multilingual neural machine translation (MNMT) even if not being trained explicitly for translation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "FLORES-200 full devtest set",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "And CoD elicits large gains by up to 13x chrF++ points for MNMT (3.08 to 42.63 for English to Serbian written in Cyrillic script) on FLORES-200 full devtest set.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [
+  "translation",
+  "FLORES-200 full devtest set"
+ ],
+ "duration_ms": 26314,
+ "eval_count": 230,
+ "ts": "2026-11-20T04:11:32Z"
+}

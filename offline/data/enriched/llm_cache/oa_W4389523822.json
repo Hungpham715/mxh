@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4389523822",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Retrieval-Augmented Generation (RAG), by incorporating external knowledge with parametric memory of language models, has become the state-of-the-art architecture for open-domain QA tasks."
+   }
+  },
+  {
+   "surface": "IAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose an Induction-Augmented Generation (IAG) framework that utilizes inductive knowledge along with the retrieved documents for implicit reasoning."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that IAG outperforms RAG baselines as well as ChatGPT on two Open-Domain QA tasks."
+   }
+  },
+  {
+   "surface": "CSQA2.0",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Notably, our best models have won the first place in the official leaderboards of CSQA2.0 (since Nov 1, 2022) and StrategyQA (since Jan 8, 2023)."
+   }
+  },
+  {
+   "surface": "StrategyQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Notably, our best models have won the first place in the official leaderboards of CSQA2.0 (since Nov 1, 2022) and StrategyQA (since Jan 8, 2023)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43701,
+ "eval_count": 309,
+ "ts": "2026-11-20T03:41:08Z"
+}

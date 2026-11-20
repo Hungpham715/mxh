@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4404782634",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "VISTEL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We revisit knowledge-aware text-based visual question answering, also known as Text-KVQA in the light of modern advancements in large multimodal models (LMMs), and make the following contributions: (i) We propose VisTEL – a principled approach to perform visual text entity linking."
+   }
+  },
+  {
+   "surface": "TEXT-KVQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We revisit knowledge-aware text-based visual question answering, also known as Text-KVQA in the light of modern advancements in large multimodal models (LMMs), and make the following contributions: (i) We propose VisTEL – a principled approach to perform visual text entity linking."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "KALEM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "VISUAL TEXT ENTITY LINKING"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15854,
+ "eval_count": 157,
+ "ts": "2026-11-20T04:04:32Z"
+}

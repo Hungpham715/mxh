@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4402684346",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "semi-supervised sequence generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semi-supervised sequence generation tasks, where the few labeled examples are too scarce to finetune a model, and meanwhile, few-shot prompted large language models (LLMs) exhibit room for improvement."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semi-supervised sequence generation tasks, where the few labeled examples are too scarce to finetune a model, and meanwhile, few-shot prompted large language models (LLMs) exhibit room for improvement."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semi-supervised sequence generation tasks, where the few labeled examples are too scarce to finetune a model, and meanwhile, few-shot prompted large language models (LLMs) exhibit room for improvement."
+   }
+  },
+  {
+   "surface": "pseudolabels",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We find that the student is able to learn a general pattern from the high-quality pseudolabels produced by the teacher during knowledge distillation (KD), and favorably not a general pattern from the low-quality pseudolabels."
+   }
+  },
+  {
+   "surface": "knowledge distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We find that the student is able to learn a general pattern from the high-quality pseudolabels produced by the teacher during knowledge distillation (KD), and favorably not a general pattern from the low-quality pseudolabels."
+   }
+  },
+  {
+   "surface": "effectiveness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct extensive experiments on four syntactic and semantic parsing datasets and show the effectiveness of MCKD for low-resource semi-supervised sequence generation."
+   }
+  },
+  {
+   "surface": "performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "On CRAFT biomedical parsing, for example, 3-stage MCKD with 50 labeled examples outperforms an LLM teacher and vanilla KD by 7.5% and 3.7% parsing F1, respectively, and matches the performance of supervised finetuning with 500 labeled examples."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22402,
+ "eval_count": 198,
+ "ts": "2026-11-20T03:59:41Z"
+}

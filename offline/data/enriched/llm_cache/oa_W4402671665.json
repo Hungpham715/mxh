@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4402671665",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the booming of Large Language Models (LLMs), prompt-learning has become a promising method mainly researched in various research areas."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments on publicly available datasets, and the results show that LLMEmbed achieves strong performance while enjoys low training overhead using lightweight LLM backbones compared to recent methods based on larger LLMs, i.e."
+   }
+  },
+  {
+   "surface": "public",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments on publicly available datasets, and the results show that LLMEmbed achieves strong performance while enjoys low training overhead using lightweight LLM backbones compared to recent methods based on larger LLMs, i.e."
+   }
+  },
+  {
+   "surface": "lightweight",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To illustrate, we first study how to properly extract and fuse the text embeddings via various lightweight LLMs at different network depths to improve their robustness and discrimination, then adapt such embeddings to train the classifier."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the booming of Large Language Models (LLMs), prompt-learning has become a promising method mainly researched in various research areas."
+   }
+  },
+  {
+   "surface": "parameters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our LLMEmbed achieves adequate accuracy on publicly available benchmarks without any fine-tuning while merely use 4% model parameters, 1.8% electricity consumption and 1.5% runtime compared to its counterparts."
+   }
+  },
+  {
+   "surface": "runtime",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our LLMEmbed achieves adequate accuracy on publicly available benchmarks without any fine-tuning while merely use 4% model parameters, 1.8% electricity consumption and 1.5% runtime compared to its counterparts."
+   }
+  },
+  {
+   "surface": "code",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Code is available at: https://github.com/ChunLiu-cs/LLMEmbed-ACL2024."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "energy"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 10233,
+ "eval_count": 80,
+ "ts": "2026-11-20T03:53:13Z"
+}

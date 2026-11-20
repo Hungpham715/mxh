@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4416035807",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large models achieve strong performance on Vision-and-Language Navigation (VLN) tasks, but are costly to run in resource-limited environments."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20170,
+ "eval_count": 266,
+ "ts": "2026-11-20T04:30:31Z"
+}

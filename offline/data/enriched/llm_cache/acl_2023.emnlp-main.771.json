@@ -1,0 +1,47 @@
+{
+ "paper_id": "acl:2023.emnlp-main.771",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing models typically focus on identifying specific types of dialogue knowledge and utilize corresponding datasets for training."
+   }
+  },
+  {
+   "surface": "RESULT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Both automatic and manual evaluation results validate the effectiveness of our framework in exploring and exploiting multi-source multi-type knowledge to generate coherent, informative, and fluent responses."
+   }
+  },
+  {
+   "surface": "EVALUATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Both automatic and manual evaluation results validate the effectiveness of our framework in exploring and exploiting multi-source multi-type knowledge to generate coherent, informative, and fluent responses."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN_DOMAIN"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MULTI_SOURCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 4172,
+ "eval_count": 72,
+ "ts": "2026-11-19T18:07:17Z"
+}

@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4402671676",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "large language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, Large Language Models (LLMs) have made significant advancements and are now widely used across various domains."
+   }
+  },
+  {
+   "surface": "robustly aligned llm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we introduce a Robustly Aligned LLM (RA-LLM) to defend against potential alignment-breaking attacks."
+   }
+  },
+  {
+   "surface": "real-world experiments",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through real-world experiments on open-source large language models, we demonstrate that RA-LLM can successfully defend against both state-of-the-art adversarial prompts and popular handcrafted jailbreaking prompts by reducing their attack success rates from nearly 100% to around 10% or less."
+   }
+  },
+  {
+   "surface": "state-of-the-art adversarial prompts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through real-world experiments on open-source large language models, we demonstrate that RA-LLM can successfully defend against both state-of-the-art adversarial prompts and popular handcrafted jailbreaking prompts by reducing their attack success rates from nearly 100% to around 10% or less."
+   }
+  },
+  {
+   "surface": "popular handcrafted jailbreaking prompts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through real-world experiments on open-source large language models, we demonstrate that RA-LLM can successfully defend against both state-of-the-art adversarial prompts and popular handcrafted jailbreaking prompts by reducing their attack success rates from nearly 100% to around 10% or less."
+   }
+  },
+  {
+   "surface": "attack success rates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through real-world experiments on open-source large language models, we demonstrate that RA-LLM can successfully defend against both state-of-the-art adversarial prompts and popular handcrafted jailbreaking prompts by reducing their attack success rates from nearly 100% to around 10% or less."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "open source large language models"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "alignment breaking attacks"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "100%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "10%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "nearly 100%"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22554,
+ "eval_count": 153,
+ "ts": "2026-11-20T03:54:26Z"
+}

@@ -42,6 +42,7 @@ class Settings(BaseModel):
     use_adapter: bool = False
     dataset_root: Path = Path("data")
     eval_output_dir: Path = Path("reports/eval")
+    atlas_data_dir: Path = Path(__file__).resolve().parents[3] / "offline" / "output" / "analysis"
 
     @model_validator(mode="after")
     def validate_profile(self) -> Settings:

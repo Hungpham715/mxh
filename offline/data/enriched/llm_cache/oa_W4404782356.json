@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4404782356",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) possess the potential to exert substantial influence on public perceptions and interactions with information."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LLM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17836,
+ "eval_count": 66,
+ "ts": "2026-11-20T04:03:35Z"
+}

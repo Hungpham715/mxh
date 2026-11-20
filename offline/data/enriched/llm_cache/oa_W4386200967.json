@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4386200967",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "18 LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Applying this method to 18 LLMs, we found: 1) personality measurements in the outputs of some LLMs under specific prompting configurations are reliable and valid; 2) evidence of reliability and validity of synthetic LLM personality is stronger for larger and instruction fine-tuned models; and 3) personality in LLM outputs can be shaped along desired dimensions to mimic specific human personality profiles."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "18 LLMs",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Applying this method to 18 LLMs, we found: 1) personality measurements in the outputs of some LLMs under specific prompting configurations are reliable and valid; 2) evidence of reliability and validity of synthetic LLM personality is stronger for larger and instruction fine-tuned models; and 3) personality in LLM outputs can be shaped along desired dimensions to mimic specific human personality profiles.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "18 LLMs"
+ ],
+ "duration_ms": 11667,
+ "eval_count": 158,
+ "ts": "2026-11-20T03:24:09Z"
+}

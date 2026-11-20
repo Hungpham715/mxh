@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4416036487",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Current data selection methods adopt a data-centric approach, relying on external annotations and heuristics to identify externally defined high-quality or challenging data."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our exploratory experiments highlight this approach fails to improve the model’s domain performance, due to misalignment between selected data and the model’s knowledge distribution.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39176,
+ "eval_count": 263,
+ "ts": "2026-11-20T04:32:57Z"
+}

@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4385572020",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "COMPLEXTABLE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To pre-train this model, we also created a dataset, called ComplexTable, which consists of 1,000K samples to be released publicly."
+   }
+  },
+  {
+   "surface": "TABLEVLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we propose a novel multi-modal pre-training model for table structure recognition, named TableVLM.With a two-stream multi-modal transformer-based encoder-decoder architecture, TableVLM learns to capture rich table structure-related features by multiple carefully-designed unsupervised objectives inspired by the notion of masked visual-language modeling."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "EXPERIMENT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "DATA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 3077,
+ "eval_count": 61,
+ "ts": "2026-11-20T03:17:51Z"
+}

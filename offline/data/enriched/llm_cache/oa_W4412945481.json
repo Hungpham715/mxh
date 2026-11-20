@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4412945481",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MoE LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As MoE LLMs are celebrated for their exceptional performance, we ask:How can unlearning be performed effectively and efficiently on MoE LLMs?"
+   }
+  },
+  {
+   "surface": "SEUF",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose a novel Selected-Expert Unlearning Framework (SEUF)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LMMs"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "SEUF",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14002,
+ "eval_count": 162,
+ "ts": "2026-11-20T04:24:12Z"
+}

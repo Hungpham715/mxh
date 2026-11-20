@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4402684023",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Comprehensive experiments across 3 LLMs on 4 text evaluation tasks demonstrate that BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations with only 64% API cost on average."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Comprehensive experiments across 3 LLMs on 4 text evaluation tasks demonstrate that BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations with only 64% API cost on average."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the fact that humans treat both criterion definition and inter sample comparison as references for evaluation, we propose BatchEval, a paradigm that conducts batch-wise evaluation iteratively to alleviate the above problems.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24763,
+ "eval_count": 201,
+ "ts": "2026-11-20T03:58:51Z"
+}

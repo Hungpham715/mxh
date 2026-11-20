@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4404783245",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Hugging Face",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To do so, we conduct a model review on Hugging Face to reveal the availability of models to cover various moderation rules and guidelines from three exemplar forums."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further put state-of-the-art LLMs to the test, evaluating how well these models perform in flagging violations of platform rules from one particular forum."
+   }
+  },
+  {
+   "surface": "Volunteer Moderators",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, we conduct a user survey study with volunteer moderators to gain insight into their perspectives on useful moderation models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Model Review"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Moderator Reports"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Model Review"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16624,
+ "eval_count": 123,
+ "ts": "2026-11-20T04:09:39Z"
+}

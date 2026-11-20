@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404782621",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Personality recognition",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Personality recognition aims to identify the personality traits implied in user data such as dialogues and social media posts."
+   }
+  },
+  {
+   "surface": "PersonalityEvd",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, based on the CoPE framework, we construct an explainable personality recognition dataset from dialogues, PersonalityEvd."
+   }
+  },
+  {
+   "surface": "Explainable Personality Recognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a novel task named Explainable Personality Recognition, aiming to reveal the reasoning process as supporting evidence of the personality trait."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Large Language Models"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16963,
+ "eval_count": 99,
+ "ts": "2026-11-20T04:04:26Z"
+}

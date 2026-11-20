@@ -103,6 +103,26 @@ def cmd_report(a: argparse.Namespace) -> int:
     return build_report(Path(a.out))
 
 
+def cmd_enrich(a: argparse.Namespace) -> int:
+    from src.enrichment.run import run_enrichment
+    extractors = tuple(x.strip() for x in a.extractors.split(",") if x.strip())
+    return run_enrichment(Path(a.data), Path(a.out) if a.out else None, extractors=extractors,
+                          limit=a.limit, workers=a.workers, ollama_url=a.ollama_url, model=a.model)
+
+
+def cmd_import_enrichment(a: argparse.Namespace) -> int:
+    from src.enrichment.load_enrichment import run_import_enrichment
+    return run_import_enrichment(Path(a.data), dry_run=a.dry_run, batch_size=a.batch_size)
+
+
+def cmd_audit_enrichment(a: argparse.Namespace) -> int:
+    from src.enrichment.audit import audit_enrichment
+    summary = audit_enrichment(Path(a.data), Path(a.processed), Path(a.out), per_type=a.per_type,
+                               seed=a.seed)
+    log.info("enrichment source audit: %s", summary)
+    return 0 if summary["failed_edges"] == 0 else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     load_env()
     setup_logging()
@@ -150,6 +170,27 @@ def main(argv: list[str] | None = None) -> int:
     s = sub.add_parser("report", help="build the Vietnamese PDF report")
     s.add_argument("--out", default=str(ROOT / "report" / "final.pdf"))
     s.set_defaults(fn=cmd_report)
+    s = sub.add_parser("enrich", help="text-mining enrichment: gazetteer rules + local LLM extraction over abstracts")
+    s.add_argument("--data", default=str(PROCESSED))
+    s.add_argument("--out", default=None, help="output dir (default: data/enriched)")
+    s.add_argument("--extractors", default="rules,llm", help="comma list: rules, llm")
+    s.add_argument("--limit", type=int, default=None, help="only the first N papers (sorted by id)")
+    s.add_argument("--workers", type=int, default=4, help="parallel Ollama requests")
+    s.add_argument("--ollama-url", default="http://127.0.0.1:11434")
+    s.add_argument("--model", default="qwen3:0.6b")
+    s.set_defaults(fn=cmd_enrich)
+    s = sub.add_parser("import-enrichment", help="import data/enriched into Neo4j scope nlpgraph-enrich-v1 (idempotent)")
+    s.add_argument("--data", default=str(ROOT / "data" / "enriched"))
+    s.add_argument("--dry-run", action="store_true")
+    s.add_argument("--batch-size", type=int, default=300)
+    s.set_defaults(fn=cmd_import_enrichment)
+    s = sub.add_parser("audit-enrichment", help="non-human provenance/evidence audit for enriched edges")
+    s.add_argument("--data", default=str(ROOT / "data" / "enriched"))
+    s.add_argument("--processed", default=str(PROCESSED))
+    s.add_argument("--out", default=str(ROOT / "evaluation" / "enrichment"))
+    s.add_argument("--per-type", type=int, default=30)
+    s.add_argument("--seed", type=int, default=20261120)
+    s.set_defaults(fn=cmd_audit_enrichment)
     args = p.parse_args(argv)
     try:
         return int(args.fn(args) or 0)

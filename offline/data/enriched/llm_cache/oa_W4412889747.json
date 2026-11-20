@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4412889747",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We have conducted a comprehensive evaluation across 35 benchmark tasks, and SEE significantly outperforms state-of-the-art baseline methods by a large margin, achieving an average performance gain of 13.94 while reducing computational costs by 58.67%."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17249,
+ "eval_count": 210,
+ "ts": "2026-11-20T04:17:36Z"
+}

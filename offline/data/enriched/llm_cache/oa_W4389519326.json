@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4389519326",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SARCASM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Sarcasm is a complex linguistic construct with incongruity at its very core."
+   }
+  },
+  {
+   "surface": "MUStARD++",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We enrich an existing multimodal conversational dataset, i.e., MUStARD++ with gaze features."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "GAZE_FEATURES"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "EXTRINSIC"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "INTRINSIC"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "CODE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "GAZE_DATA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PERFORMANCE_GAIN"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "GAIN"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "EXTRINSIC_EVALUATION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "INTRINSIC_EVALUATION"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29747,
+ "eval_count": 175,
+ "ts": "2026-11-20T03:38:28Z"
+}

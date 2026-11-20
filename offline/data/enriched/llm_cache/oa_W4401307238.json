@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4401307238",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large Language Models (LLMs) have achieved excellent results in a variety of natural language processing tasks, which inspired us that we train a LLM in the legal domain to help legal retrieval."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "method"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25005,
+ "eval_count": 256,
+ "ts": "2026-11-20T03:48:34Z"
+}

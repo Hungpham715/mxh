@@ -1,0 +1,61 @@
+{
+ "paper_id": "oa:W4416036283",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our method enhances smaller models by integrating In-Context Examples (ICE) from retrieval, enabling the model to better capture contextual information and align with user-level preferences."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural language transformation (NLT) tasks, such as machine translation (MT) and text style transfer (TST), require models to generate accurate and contextually appropriate outputs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our method enhances smaller models by integrating In-Context Examples (ICE) from retrieval, enabling the model to better capture contextual information and align with user-level preferences.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural language transformation (NLT) tasks, such as machine translation (MT) and text style transfer (TST), require models to generate accurate and contextually appropriate outputs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23277,
+ "eval_count": 294,
+ "ts": "2026-11-20T04:31:24Z"
+}

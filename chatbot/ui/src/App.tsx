@@ -1,5 +1,5 @@
-import { Moon, Network, PanelRight, Sun } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { LayoutDashboard, MessageSquare, Moon, Network, PanelRight, Sun } from "lucide-react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { ChatMessage } from "./components/ChatMessage";
 import { Composer } from "./components/Composer";
 import { Sidebar } from "./components/Sidebar";
@@ -14,6 +14,9 @@ import type {
 } from "./lib/types";
 
 const STORAGE_KEY = "mxh-graphrag-conversations-v1";
+const AtlasDashboard = lazy(() =>
+  import("./components/AtlasDashboard").then((module) => ({ default: module.AtlasDashboard })),
+);
 const DEFAULT_CONFIG: PublicConfig = {
   mode: "fake",
   graph_provider: "fake",
@@ -84,6 +87,9 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [pendingEvent, setPendingEvent] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [view, setView] = useState<"chat" | "atlas">(() =>
+    window.location.hash === "#atlas" ? "atlas" : "chat",
+  );
   const controllerRef = useRef<AbortController | null>(null);
   const endRef = useRef<HTMLDivElement | null>(null);
 
@@ -99,6 +105,10 @@ export default function App() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
+
+  useEffect(() => {
+    window.history.replaceState(null, "", view === "atlas" ? "#atlas" : "#chat");
+  }, [view]);
 
   useEffect(() => {
     Promise.all([getPublicConfig(), getHealth()])
@@ -124,6 +134,7 @@ export default function App() {
     setConversations((current) => [created, ...current]);
     setActiveId(created.id);
     setError(null);
+    setView("chat");
   }
 
   function renameConversation(id: string) {
@@ -245,7 +256,7 @@ export default function App() {
         mode={config.mode}
         onToggle={() => setSidebarCollapsed((value) => !value)}
         onNew={addConversation}
-        onSelect={setActiveId}
+        onSelect={(id) => { setActiveId(id); setView("chat"); }}
         onRename={renameConversation}
         onDelete={deleteConversation}
       />
@@ -256,6 +267,10 @@ export default function App() {
             <div><strong>NLP Graph Atlas</strong><span>{config.scope_id}</span></div>
           </div>
           <div className="topbar__actions">
+            <nav className="view-switcher" aria-label="Chuyển khu vực">
+              <button className={view === "chat" ? "view-switcher__active" : ""} onClick={() => setView("chat")}><MessageSquare aria-hidden="true" />Chat</button>
+              <button className={view === "atlas" ? "view-switcher__active" : ""} onClick={() => setView("atlas")}><LayoutDashboard aria-hidden="true" />Atlas</button>
+            </nav>
             <span className={degraded ? "health-dot health-dot--bad" : "health-dot"}>
               {health ? (degraded ? "Dịch vụ chưa sẵn sàng" : "Đã kết nối") : "Đang kiểm tra"}
             </span>
@@ -268,11 +283,11 @@ export default function App() {
           </div>
         </header>
 
-        {config.mode === "fake" && <div className="simulation-banner">SIMULATED — no real LLM/DB · Dùng để kiểm thử luồng, không phải kết quả nghiên cứu thật.</div>}
-        {degraded && <div className="service-alert" role="alert"><strong>Chế độ real chưa sẵn sàng.</strong><span>{health?.llm.detail} · {health?.graph.detail}</span></div>}
+        {view === "chat" && config.mode === "fake" && <div className="simulation-banner">SIMULATED CHAT — no real LLM/DB · Atlas vẫn đọc snapshot phân tích thật.</div>}
+        {view === "chat" && degraded && <div className="service-alert" role="alert"><strong>Chế độ real chưa sẵn sàng.</strong><span>{health?.llm.detail} · {health?.graph.detail}</span></div>}
         {error && <div className="error-alert" role="alert" tabIndex={-1}>{error}</div>}
 
-        <section className="message-stage" aria-label="Nội dung hội thoại">
+        {view === "atlas" ? <Suspense fallback={<section className="atlas-loading">Đang tải Atlas…</section>}><AtlasDashboard onAsk={(question) => { setView("chat"); void ask(question); }} /></Suspense> : <section className="message-stage" aria-label="Nội dung hội thoại">
           {active.messages.length === 0 ? (
             <div className="empty-state">
               <div className="empty-state__mark"><Network aria-hidden="true" /></div>
@@ -293,8 +308,8 @@ export default function App() {
               <div ref={endRef} />
             </div>
           )}
-        </section>
-        <Composer busy={busy} disabled={Boolean(degraded)} onSend={ask} onStop={stop} />
+        </section>}
+        {view === "chat" && <Composer busy={busy} disabled={Boolean(degraded)} onSend={ask} onStop={stop} />}
       </main>
     </div>
   );

@@ -1,0 +1,37 @@
+{
+ "paper_id": "oa:W4404782639",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "EMOKNOB",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose EmoKnob, a framework that allows fine-grained emotion control in speech synthesis with few-shot demonstrative samples of arbitrary emotion."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 10272,
+ "eval_count": 110,
+ "ts": "2026-11-20T04:04:31Z"
+}

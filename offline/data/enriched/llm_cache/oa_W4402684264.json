@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4402684264",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We demonstrate the effectiveness of our method through extensive experiments, where RAFTS can outperform GPT-based methods with a significantly smaller 7B LLM."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To combat misinformation, large language models (LLMs) are adapted to automatically verify claim credibility."
+   }
+  },
+  {
+   "surface": "supervised and LLM baselines",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Combined with informative in-context examples as prior, RAFTS achieves significant improvements to supervised and LLM baselines without complex prompts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The rapid propagation of misinformation poses substantial risks to public interest.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RAPTs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large language models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "supervised and LLM baselines"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22712,
+ "eval_count": 293,
+ "ts": "2026-11-20T04:00:18Z"
+}

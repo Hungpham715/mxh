@@ -28,6 +28,9 @@ uv run python -m src.cli import --data data/processed
 uv run python -m src.cli idempotency --data data/processed        # re-import, compare counts
 uv run python -m src.cli queries                                  # example Cypher with real results
 uv run python -m src.cli analyze --out output/analysis [--source neo4j]
+uv run python -m src.cli enrich --extractors rules,llm --workers 4
+uv run python -m src.cli audit-enrichment
+uv run python -m src.cli import-enrichment --dry-run
 uv run python -m src.cli sample --per-type 20 --seed 20261107 [--tag prefix]
 uv run python -m src.cli score --labels evaluation/labels.csv [--tag prefix]
 uv run python -m src.cli report --out report/final.pdf
@@ -47,9 +50,18 @@ if any of our ids exists without our scope_id; no DELETE/DROP anywhere in the co
 ## Outputs
 - `data/processed/` real snapshot (+ `data/rejected/unresolved.csv`, `large_author_papers.jsonl`, `edges.jsonl`)
 - `output/analysis/` graph counts, author network JSON/CSV, PNG figures; `output/neo4j/` import reports
+- `data/enriched/` grounded Method/Dataset/Task nodes and four evidence-bearing edge types from rules + Qwen
+- `output/analysis/small_world_subnetworks.{json,csv,png}` year/venue/topic sensitivity and fragmentation
+- `evaluation/enrichment/` deterministic non-human source-grounding audit (not semantic human gold)
 - `evaluation/` samples, automated labels (`automated_preliminary`, NOT human), scores, audits, fix log,
   `manual_review_template.csv`
 - `report/final.pdf` (+ `final.md`, `sections/`), `execution_log.md`
+
+The completed enrichment run used local `qwen3:0.6b` with the final stable configuration `OLLAMA_NUM_PARALLEL=4`
+and `--workers 4` on this 16 GB machine; higher settings (6 slots / 12 client workers) were used for parts of the
+run but pushed available memory low enough to trigger provider HTTP 500s. The extractor requests a bounded
+2,048-token context and stores each successful paper result in `data/enriched/llm_cache/`, so reruns resume from
+cache and only retry the logged failures. Parallelism changes throughput only, not the validation contract.
 
 ## Known limitations
 Sampled corpus (1,091 papers) so the author network is fragmented; citations are only in-corpus (26);

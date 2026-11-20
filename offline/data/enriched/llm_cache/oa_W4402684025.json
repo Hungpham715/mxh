@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4402684025",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "sequence annotation tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is a notable dearth of research focusing on chance correction for assessing the reliability of sequence annotation tasks, despite their widespread prevalence in the field."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "sequence annotation tasks",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is a notable dearth of research focusing on chance correction for assessing the reliability of sequence annotation tasks, despite their widespread prevalence in the field.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [
+  "sequence annotation tasks"
+ ],
+ "duration_ms": 20113,
+ "eval_count": 231,
+ "ts": "2026-11-20T03:58:56Z"
+}

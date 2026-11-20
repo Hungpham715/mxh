@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4402671698",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ALIGNMENT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Alignment has become a critical step for instruction-tuned Large Language Models (LLMs) to become helpful assistants."
+   }
+  },
+  {
+   "surface": "ALIGNBENCH",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To fill in this gap, we introduce AlignBench, a comprehensive multi-dimensional benchmark for evaluating LLMs’ alignment in Chinese."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18015,
+ "eval_count": 56,
+ "ts": "2026-11-20T03:53:33Z"
+}

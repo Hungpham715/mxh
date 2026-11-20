@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4404783064",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "REINFORCEMENT LEARNING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Reinforcement learning shows promise in optimizing dialogue policies, but addressing the challenge of reward sparsity remains crucial."
+   }
+  },
+  {
+   "surface": "CURRICULUM LEARNING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While curriculum learning offers a practical solution by strategically training policies from simple to complex, it hinges on the assumption of a gradual increase in goal difficulty to ensure a smooth knowledge transition across varied complexities."
+   }
+  },
+  {
+   "surface": "BOOTSTRAPPED POLICY LEARNING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper proposes a novel Bootstrapped Policy Learning (BPL) framework, which adaptively tailors progressively challenging subgoal curriculum for each complex goal through goal shaping, ensuring a smooth knowledge transition."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "By integrating the summarized curriculum patterns, our BPL has exhibited efficacy and versatility across four publicly available datasets with different difficulty levels."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CURRICULUM LEARNING",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Reinforcement learning shows promise in optimizing dialogue policies, but addressing the challenge of reward sparsity remains crucial.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BOOTSTRAPPED POLICY LEARNING",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While curriculum learning offers a practical solution by strategically training policies from simple to complex, it hinges on the assumption of a gradual increase in goal difficulty to ensure a smooth knowledge transition across varied complexities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "RESULT"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "uses_task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20183,
+ "eval_count": 309,
+ "ts": "2026-11-20T04:09:37Z"
+}

@@ -1,0 +1,138 @@
+{
+ "paper_id": "oa:W4389518718",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SST2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We analyze four English text-classification datasets (SST2, DynaSent, BIOS and DBpedia-Animals)."
+   }
+  },
+  {
+   "surface": "DynaSent",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We analyze four English text-classification datasets (SST2, DynaSent, BIOS and DBpedia-Animals)."
+   }
+  },
+  {
+   "surface": "BIOS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We analyze four English text-classification datasets (SST2, DynaSent, BIOS and DBpedia-Animals)."
+   }
+  },
+  {
+   "surface": "ROBERTA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  },
+  {
+   "surface": "GTP-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  },
+  {
+   "surface": "LRP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  },
+  {
+   "surface": "GradientxInput",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  },
+  {
+   "surface": "GradNorm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We fine-tune and extract explanations from three different models (RoBERTa, GTP-2, and T5), each in three different sizes and apply three post-hoc explainability methods (LRP, GradientxInput, GradNorm)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CONTRASTIVE_EXPLAINED"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "NON-CONTRASTIVE_EXPLAINED"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "human_rationale"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "100"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "contrastive"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "non-contrastive"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "model-based_explanations"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "human_annotations"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "model-based_explanations"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "human_annotations"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "model-based_explanations"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "human_annotations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28359,
+ "eval_count": 227,
+ "ts": "2026-11-20T03:29:22Z"
+}

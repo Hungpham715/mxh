@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4402671579",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we opine that the influence of token entropy should be fully considered in the watermark detection process, i.e., the weight of each token during watermark detection should be customized according to its entropy, rather than setting the weights of all tokens to the same value as in previous methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17517,
+ "eval_count": 191,
+ "ts": "2026-11-20T03:52:24Z"
+}

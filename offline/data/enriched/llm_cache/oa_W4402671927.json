@@ -1,0 +1,99 @@
+{
+ "paper_id": "oa:W4402671927",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MARATHON",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In response to these limitations, we introduce Marathon, a novel evaluation benchmark that adopts a multiple-choice question format."
+   }
+  },
+  {
+   "surface": "EVALUATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In response to these limitations, we introduce Marathon, a novel evaluation benchmark that adopts a multiple-choice question format."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the advancement of large language models (LLMs) and the expansion of their context windows, existing long-context benchmarks fall short in effectively evaluating the models’ comprehension and reasoning abilities in extended texts."
+   }
+  },
+  {
+   "surface": "OPTIMIZATION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conducted comprehensive evaluations on the Marathon benchmark with a range of state-of-the-art LLMs and assessed the effectiveness of various optimization strategies tailored for long-context generation."
+   }
+  },
+  {
+   "surface": "BENCHMARK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the advancement of large language models (LLMs) and the expansion of their context windows, existing long-context benchmarks fall short in effectively evaluating the models’ comprehension and reasoning abilities in extended texts."
+   }
+  },
+  {
+   "surface": "LEADERBOARD",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We anticipate that the Marathon benchmark and its associated leaderboard will enable a more precise and equitable evaluation of LLMs’ capabilities in understanding and reasoning over extended contexts."
+   }
+  },
+  {
+   "surface": "CONVENTIONAL",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Moreover, conventional benchmarks relying on F1 metrics often inaccurately score responses: they may undervalue correct answers that differ from the reference responses and overvalue incorrect ones that resemble the reference texts."
+   }
+  },
+  {
+   "surface": "F1",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Moreover, conventional benchmarks relying on F1 metrics often inaccurately score responses: they may undervalue correct answers that differ from the reference responses and overvalue incorrect ones that resemble the reference texts."
+   }
+  },
+  {
+   "surface": "CONVENTION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Moreover, conventional benchmarks relying on F1 metrics often inaccurately score responses: they may undervalue correct answers that differ from the reference responses and overvalue incorrect ones that resemble the reference texts."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17423,
+ "eval_count": 118,
+ "ts": "2026-11-20T03:56:25Z"
+}

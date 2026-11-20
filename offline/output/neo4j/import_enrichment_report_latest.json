@@ -1,0 +1,53 @@
+{
+  "plan": {
+    "scope_id": "nlpgraph-enrich-v1",
+    "enrich_version": "enrich-1.0.0",
+    "nodes": {
+      "Method": 606,
+      "Dataset": 383,
+      "Task": 584
+    },
+    "relationships": {
+      "USES_METHOD": 1578,
+      "ADDRESSES_TASK": 1404,
+      "EVALUATED_ON": 469,
+      "METHOD_EVALUATED_ON": 37
+    },
+    "rejected_edges": 0,
+    "batch_size": 300,
+    "paper_scope_referenced": "nlpgraph-v1"
+  },
+  "before": {
+    "nodes_by_label": {
+      "Method": 606,
+      "Dataset": 383,
+      "Task": 584
+    },
+    "relationships_by_type": {
+      "USES_METHOD": 1578,
+      "ADDRESSES_TASK": 1404,
+      "EVALUATED_ON": 469,
+      "METHOD_EVALUATED_ON": 37
+    },
+    "nodes": 1573,
+    "relationships": 3488
+  },
+  "after": {
+    "nodes_by_label": {
+      "Method": 606,
+      "Dataset": 383,
+      "Task": 584
+    },
+    "relationships_by_type": {
+      "USES_METHOD": 1578,
+      "ADDRESSES_TASK": 1404,
+      "EVALUATED_ON": 469,
+      "METHOD_EVALUATED_ON": 37
+    },
+    "nodes": 1573,
+    "relationships": 3488
+  },
+  "rejected_edges": [],
+  "seconds": 9.9,
+  "finished_at_utc": "2026-11-20T07:26:13Z"
+}

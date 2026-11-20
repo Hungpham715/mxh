@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4385570262",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.4",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "EaaS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Companies have begun to offer Embedding as a Service (EaaS) based on these LLMs, which can benefit various natural language processing (NLP) tasks for customers."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "EaaS",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Companies have begun to offer Embedding as a Service (EaaS) based on these LLMs, which can benefit various natural language processing (NLP) tasks for customers.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22052,
+ "eval_count": 207,
+ "ts": "2026-11-20T03:20:45Z"
+}

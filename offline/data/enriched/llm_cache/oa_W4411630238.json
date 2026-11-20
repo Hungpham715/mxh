@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4411630238",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, using political bias as a case study, we first establish a methodology to quantify bias in abstractive models, then trace it from the pre-trained models to the task of summarising social media opinions using different models and adaptation methods."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Using a social media text summarisation dataset and contrasting various adaptation methods, we find that tuning a smaller number of parameters is less biased compared to standard fine-tuning; however, the diversity of topics in training data used for fine-tuning is critical."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19488,
+ "eval_count": 216,
+ "ts": "2026-11-20T04:14:45Z"
+}

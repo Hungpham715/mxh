@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4404792931",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LTR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "QFS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "QMSum",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead."
+   }
+  },
+  {
+   "surface": "SQuALITY",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead."
+   }
+  },
+  {
+   "surface": "Query",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "Human",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Human evaluations emphasize the efficacy of our method in terms of relevance and faithfulness of the generated summaries, without sacrificing fluency."
+   }
+  },
+  {
+   "surface": "Error",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further present an error analysis of our model, pinpointing challenges faced and suggesting potential directions for future research in this field."
+   }
+  },
+  {
+   "surface": "Learning-to-Rank",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "Query-focused Summarization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "Segment",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level."
+   }
+  },
+  {
+   "surface": "Secondary",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level."
+   }
+  },
+  {
+   "surface": "Summarization",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "Decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "Rouge"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "BertScore"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "Training-Overhead"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15235,
+ "eval_count": 157,
+ "ts": "2026-11-20T04:12:11Z"
+}

@@ -1,0 +1,81 @@
+{
+ "paper_id": "oa:W4416036335",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The deployment of large language models (LLMs) faces considerable challenges concerning resource constraints and inference efficiency."
+   }
+  },
+  {
+   "surface": "negative knowledge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, prior studies have often overlooked the diversity and quality of knowledge, especially the untapped potential of negative knowledge."
+   }
+  },
+  {
+   "surface": "positive knowledge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For positive knowledge, we enrich its diversity through temperature sampling and employ self-consistency for further denoising and refinement."
+   }
+  },
+  {
+   "surface": "experiment",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Through extensive experiments across multiple reasoning tasks, we demonstrate that our method consistently outperforms existing distillation techniques, yielding higher-quality rationales."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The deployment of large language models (LLMs) faces considerable challenges concerning resource constraints and inference efficiency."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "positive knowledge",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "negative knowledge",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32421,
+ "eval_count": 282,
+ "ts": "2026-11-20T04:32:46Z"
+}

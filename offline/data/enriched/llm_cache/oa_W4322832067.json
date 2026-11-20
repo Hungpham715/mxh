@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4322832067",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DIFFQG",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We release DIFFQG which consists of 759 QA pairs and 1153 examples of paired passages with no factual change."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "DIFFQG",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our dataset summarizes the changes between two versions of the document as questions and answers, studying automatic update summarization in a novel way.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "DIFFQG"
+ ],
+ "duration_ms": 5405,
+ "eval_count": 99,
+ "ts": "2026-11-19T18:07:34Z"
+}

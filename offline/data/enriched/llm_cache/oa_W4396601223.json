@@ -1,0 +1,124 @@
+{
+ "paper_id": "oa:W4396601223",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Baichuan-Small",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively."
+   }
+  },
+  {
+   "surface": "Baichuan-Large",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively."
+   }
+  },
+  {
+   "surface": "Medusa",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "large language models"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "parallel decoding"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "sequential knowledge"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "regressive connection"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "attention decoder"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "augmenting block"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "speculative decoding algorithm"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "efficiency"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "low hit rate"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Clover"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "parallel decoding"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "sequential knowledge"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "efficiency"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "Clover"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "regressive connection"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "attention decoder"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "augmenting block"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28831,
+ "eval_count": 301,
+ "ts": "2026-11-20T03:47:26Z"
+}

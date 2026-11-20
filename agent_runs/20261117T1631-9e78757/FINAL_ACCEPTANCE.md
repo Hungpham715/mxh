@@ -10,7 +10,7 @@ Branch: `agent/mxh-real-20261117-9e78757`
 
 Snapshot: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
 
-Last updated: 2026-11-19 (session 2 — owner-directed completion round)
+Last updated: 2026-11-20 (session 3 — enrichment, Atlas/SNA views, real demo trace, gate re-runs)
 
 ## Owner directive on provenance (2026-11-19)
 
@@ -146,3 +146,85 @@ v3 unexposed benchmark (300): completed one-shot; metrics above
 - Hugging Face authentication/upload: not run; adapter repository status NOT VERIFIED.
 - No credential, payment, destructive DB operation, or main-branch merge was performed.
 - The uncommitted `online/` deletions in the worktree predate this run and were left untouched.
+- Slide decks and PDF report regeneration: excluded from session 3 by explicit owner instruction
+  (2026-11-20); the session-2 13-page report and addenda remain the submitted documents.
+
+## Session 3 (2026-11-20) — text-mining enrichment, Atlas/SNA views, fresh real demo trace
+
+Owner instruction: complete every backlog item except slide/PDF-report work. All numbers below
+come from commands executed on 2026-11-20 in this worktree, not from older artifacts.
+
+### NER/RE enrichment (rubric: data enrichment 2.0 + node/edge recognition 1.0)
+
+- Pipeline `offline/src/enrichment/`: gazetteer rules (`configs/gazetteer.yaml`, v1.0) +
+  local LLM extractor (`qwen3:0.6b` via Ollama, CPU, temperature 0, JSON mode, per-paper
+  resume cache) over all 1,091 abstracts; deterministic merge with grounding guards
+  (entity surface must appear verbatim in the abstract; relation endpoints must be
+  extracted entities; malformed LLM evidence falls back to the exact source sentence and
+  is labelled, never silently kept).
+- Final run: 1,084/1,091 papers extracted; 7 permanent `invalid_json` failures disclosed in
+  `offline/data/enriched/llm_failures.jsonl` (0.6B model limit on specific abstracts;
+  retries are deterministic and do not recover them).
+- Output: 1,573 entities (606 Method / 383 Dataset / 584 Task) and 3,488 edges
+  (USES_METHOD 1,578 / ADDRESSES_TASK 1,404 / EVALUATED_ON 469 / METHOD_EVALUATED_ON 37),
+  every edge carrying `source_kind`, `confidence_band`, `verification_status`,
+  `extractors`, `evidence_paper_ids`, verbatim `evidence_texts`, `build_version`.
+- Mixed extractor revisions (v1.2 28 / v1.3 119 / v1.4 24 / v1.5 79 / v1.6 841) are
+  disclosed per record in `enrichment_stats.json` — the cache accumulated across
+  anti-degeneration prompt/token-cap iterations; each record keeps its own provenance.
+- Quality evidence: `audit-enrichment` on the full merged data (seed 20261120, 30 edges per
+  relation type): 120/120 PASS deterministic source grounding (verbatim evidence in the
+  real abstract, complete provenance, cited-papers ⊆ declared provenance, schema valid),
+  covering source kinds rules 69 / llm 47 / agreement 4. The audit explicitly does NOT
+  claim semantic entity/relation P/R/F1; the human-gold protocol for that is documented in
+  `offline/evaluation/enrichment/summary.json`.
+
+### Aura import (scoped, additive, idempotent)
+
+- `import-enrichment` dry-run then real import into NEW scope `nlpgraph-enrich-v1`
+  (whitelisted static Cypher, MERGE-only, foreign-scope conflict guard): VERIFIED
+  1,573 nodes / 3,488 rels; second identical re-run confirmed idempotency; 0 rejected edges.
+- v1 accepted graph untouched: preflight after import re-counts `nlpgraph-v1` at exactly
+  7,134 nodes / 30,971 relationships (`Neo4j/5.27-aura`); DB totals 8,707 / 34,459.
+- Report: `offline/output/neo4j/import_enrichment_report_latest.json`.
+
+### SNA + Atlas dashboard (rubric: SNA algorithms 1.5 + application UI)
+
+- Small-world sensitivity analysis (`offline/src/analysis/subnetworks.py`): 16 slices
+  (year/venue/topic, ≥10 papers), degree-preserving double-edge-swap null model,
+  σ = (C_obs/C_rand)/(L_obs/L_rand), pre-registered decision rule. Result: 5 slices with
+  small-world indication (year:2024, acl:2023.acl-long, acl:2023.emnlp-main,
+  acl:2025.emnlp-main, topic:llm), 6 without, 5 undetermined (clique-constrained swaps
+  recorded, not crashed or hidden). Whole-network fragmentation (LCC 17.86% of 5,430
+  authors) is disclosed and the conclusion states slice results are sensitivity checks on
+  the sampled corpus, not evidence about the global collaboration network.
+- Chatbot Atlas view (`chatbot/src/graphrag/atlas.py` + `ui/src/components/AtlasDashboard.tsx`):
+  read-only projection of the real committed analysis artifacts (graph counts, PageRank top,
+  Louvain communities, k-core, small-world + sensitivity). If a snapshot file is missing the
+  API returns an explicit `atlas_snapshot_unavailable` error — never synthetic statistics.
+  Verified live: `/api/atlas` 200 with provenance naming the six real artifacts.
+
+### Real multi-hop demo trace (rubric: multi-hop application 3.0)
+
+- Recaptured 2026-11-20T07:28:31Z on current code (the previous 10:08 trace predated the
+  `intent_parser` early-exit change and was discarded as evidence):
+  `chatbot/reports/demo/real_trace.jsonl` + `summary.json`, contract_pass true, 5/5:
+  1-hop author_papers; answered 2-hop author_path with ≥2 cited evidence sources;
+  successive author_papers → author_affiliations queries in one turn; coauthor_affiliations
+  traversal (partial-by-pagination contract); missing-entity refusal with 0 facts, 0 sources.
+- Latency recorded honestly: p50 25.8 s / p95 38.6 s including first-request model cold load.
+- Fallback package for offline presentation: `atlas.png` + trace + summary (credential-free,
+  versioned; all other generated reports stay git-ignored).
+
+### Session-3 gate re-runs (supersede session-2 test counts)
+
+```text
+offline: 111 pytest tests PASS (enrichment + subnetwork suites included)
+chatbot: 100 pytest tests PASS; Ruff lint PASS; Ruff format PASS (91 files)
+UI:      2 Vitest tests PASS; production build PASS (AtlasDashboard lazy chunk)
+Aura:    preflight OK (v1 7,134/30,971 intact; enrich scope 1,573/3,488 VERIFIED ×2)
+Demo:    5/5 real-trace contracts PASS on current code
+```
+
+Gate statuses G0–G8 are unchanged: the session-3 work adds rubric evidence (enrichment,
+SNA, demo) and does not touch the human-gold policy that keeps G3/G6/G7 BLOCKED.

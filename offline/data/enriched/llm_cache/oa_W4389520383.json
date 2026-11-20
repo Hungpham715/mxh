@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4389520383",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "social media platforms",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The proliferation of misinformation on social media platforms (SMPs) poses a significant danger to public health, social cohesion and ultimately democracy."
+   }
+  },
+  {
+   "surface": "fact-checkers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Although professional fact-checkers are crucial to debunking viral claims, they usually do not engage in conversations on social media."
+   }
+  },
+  {
+   "surface": "data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To fill this gap, we present VerMouth, the first large-scale dataset comprising roughly 12 thousand claim-response pairs (linked to debunking articles), accounting for both SMP-style and basic emotions, two factors which have a significant role in misinformation credibility and spreading."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29303,
+ "eval_count": 86,
+ "ts": "2026-11-20T03:40:14Z"
+}

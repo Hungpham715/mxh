@@ -1,0 +1,150 @@
+{
+ "paper_id": "oa:W4412945205",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown significant promise in question-answering (QA) tasks, particularly in retrieval-augmented generation (RAG) scenarios and long-context applications."
+   }
+  },
+  {
+   "surface": "question-answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown significant promise in question-answering (QA) tasks, particularly in retrieval-augmented generation (RAG) scenarios and long-context applications."
+   }
+  },
+  {
+   "surface": "noisy reference documents",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, their performance is hindered by noisy reference documents, which often distract from essential information."
+   }
+  },
+  {
+   "surface": "Transformer-based architectures",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite fine-tuning efforts, Transformer-based architectures struggle to prioritize relevant content."
+   }
+  },
+  {
+   "surface": "differential attention mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recent work proposes the differential attention mechanism to address this issue, but this mechanism is limited by an unsuitable common-mode rejection ratio (CMRR) and high computational costs."
+   }
+  },
+  {
+   "surface": "operational amplifier",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by the operational amplifier (OpAmp), we propose the OpAmp adaptation to address these challenges, which is implemented with adapters efficiently."
+   }
+  },
+  {
+   "surface": "common-mode rejection ratio",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recent work proposes the differential attention mechanism to address this issue, but this mechanism is limited by an unsuitable common-mode rejection ratio (CMRR) and high computational costs."
+   }
+  },
+  {
+   "surface": "high computational costs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recent work proposes the differential attention mechanism to address this issue, but this mechanism is limited by an unsuitable common-mode rejection ratio (CMRR) and high computational costs."
+   }
+  },
+  {
+   "surface": "state-of-the-art LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Empirical evaluations on noisy-context benchmarks reveal that our Qwen2.5-OpAmp-72B model, trained with our OpAmp adaptation, surpasses the performance of state-of-the-art LLMs, including DeepSeek-V3 and GPT-4o.Our code is available at https://github.com/wuhy68/OpampAdapter."
+   }
+  },
+  {
+   "surface": "DeepSeek-V3",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Empirical evaluations on noisy-context benchmarks reveal that our Qwen2.5-OpAmp-72B model, trained with our OpAmp adaptation, surpasses the performance of state-of-the-art LLMs, including DeepSeek-V3 and GPT-4o.Our code is available at https://github.com/wuhy68/OpampAdapter."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Empirical evaluations on noisy-context benchmarks reveal that our Qwen2.5-OpAmp-72B model, trained with our OpAmp adaptation, surpasses the performance of state-of-the-art LLMs, including DeepSeek-V3 and GPT-4o.Our code is available at https://github.com/wuhy68/OpampAdapter."
+   }
+  },
+  {
+   "surface": "OpAmp adaptation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by the operational amplifier (OpAmp), we propose the OpAmp adaptation to address these challenges, which is implemented with adapters efficiently."
+   }
+  },
+  {
+   "surface": "adapter",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by the operational amplifier (OpAmp), we propose the OpAmp adaptation to address these challenges, which is implemented with adapters efficiently."
+   }
+  },
+  {
+   "surface": "pre-trained Transformer blocks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "By integrating the adapter into pre-trained Transformer blocks, our approach enhances focus on the golden context without costly training from scratch."
+   }
+  },
+  {
+   "surface": "Qwen2.5-OpAmp-72B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Empirical evaluations on noisy-context benchmarks reveal that our Qwen2.5-OpAmp-72B model, trained with our OpAmp adaptation, surpasses the performance of state-of-the-art LLMs, including DeepSeek-V3 and GPT-4o.Our code is available at https://github.com/wuhy68/OpampAdapter."
+   }
+  },
+  {
+   "surface": "OpAmp",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by the operational amplifier (OpAmp), we propose the OpAmp adaptation to address these challenges, which is implemented with adapters efficiently."
+   }
+  },
+  {
+   "surface": "https://github.com/wuhy68/OpampAdapter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Empirical evaluations on noisy-context benchmarks reveal that our Qwen2.5-OpAmp-72B model, trained with our OpAmp adaptation, surpasses the performance of state-of-the-art LLMs, including DeepSeek-V3 and GPT-4o.Our code is available at https://github.com/wuhy68/OpampAdapter."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19486,
+ "eval_count": 208,
+ "ts": "2026-11-20T04:22:12Z"
+}

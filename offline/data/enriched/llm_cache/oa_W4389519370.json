@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389519370",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PoemSum",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As a starting, we propose the first-ever dataset for this task, named ‘PoemSum’, consisting of 3011 samples of poetry and its corresponding summarized interpretation in the English language."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "PoemSum",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This task can provide the researchers an opportunity to evaluate the creative language interpretation capacity of the language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "PoemSum"
+ ],
+ "duration_ms": 37784,
+ "eval_count": 93,
+ "ts": "2026-11-20T03:32:47Z"
+}

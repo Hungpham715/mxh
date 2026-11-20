@@ -1,0 +1,127 @@
+{
+ "paper_id": "oa:W4402671775",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "enterprise",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise documents such as forms, receipts, reports, and other such records, often carry rich semantics at the intersection of textual and spatial modalities."
+   }
+  },
+  {
+   "surface": "forms",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise documents such as forms, receipts, reports, and other such records, often carry rich semantics at the intersection of textual and spatial modalities."
+   }
+  },
+  {
+   "surface": "receipts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise documents such as forms, receipts, reports, and other such records, often carry rich semantics at the intersection of textual and spatial modalities."
+   }
+  },
+  {
+   "surface": "reports",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise documents such as forms, receipts, reports, and other such records, often carry rich semantics at the intersection of textual and spatial modalities."
+   }
+  },
+  {
+   "surface": "documents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise documents such as forms, receipts, reports, and other such records, often carry rich semantics at the intersection of textual and spatial modalities."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present DocLLM, a lightweight extension to traditional large language models (LLMs) for reasoning over visual documents, taking into account both textual semantics and spatial layout."
+   }
+  },
+  {
+   "surface": "DocLLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present DocLLM, a lightweight extension to traditional large language models (LLMs) for reasoning over visual documents, taking into account both textual semantics and spatial layout."
+   }
+  },
+  {
+   "surface": "SotA LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We demonstrate that our solution outperforms SotA LLMs on 14 out of 16 datasets across all tasks, and generalizes well to 4 out of 5 previously unseen datasets."
+   }
+  },
+  {
+   "surface": "document intelligence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The pre-trained model is fine-tuned using a large-scale instruction dataset, covering four core document intelligence tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "large-scale"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "pre-training"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "cross-alignment"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "attention"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "bounding box"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "pre-training objective"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "infill text segments"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22064,
+ "eval_count": 230,
+ "ts": "2026-11-20T03:55:22Z"
+}

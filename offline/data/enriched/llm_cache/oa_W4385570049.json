@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4385570049",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RESTORE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Toward this, we create a high-quality dataset (RESTORE) annotated with 8 fine-grained depression symptoms based on the clinically adopted PHQ-9 questionnaire."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "RESTORE"
+  },
+  {
+   "reason": "invalid_endpoint",
+   "rel": "ADDRESSES_TASK",
+   "detail": "target is PAPER"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "RESTORE",
+   "to": "RESTORE"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "RESTORE",
+   "to": "RESTORE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15853,
+ "eval_count": 305,
+ "ts": "2026-11-20T03:10:39Z"
+}

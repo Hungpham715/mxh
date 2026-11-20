@@ -1,0 +1,29 @@
+{
+ "paper_id": "oa:W4416036074",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "GraphKV can be seamlessly utilized in existing KV cache eviction methods such as SnapKV and PyramidKV in a plug-and-play manner."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14376,
+ "eval_count": 95,
+ "ts": "2026-11-20T04:31:04Z"
+}

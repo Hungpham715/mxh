@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4402671842",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GAR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In code search, the Generation-Augmented Retrieval (GAR) framework, which generates exemplar code snippets to augment queries, has emerged as a promising strategy to address the principal challenge of modality misalignment between code snippets and natural language queries, particularly with the demonstrated code generation capabilities of Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "ReCo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we extend the foundational GAR framework and propose a simple yet effective method that additionally Rewrites the Code (ReCo) within the codebase for style normalization."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "Code Style Similarity"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22891,
+ "eval_count": 266,
+ "ts": "2026-11-20T03:55:19Z"
+}

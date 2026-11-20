@@ -1,0 +1,31 @@
+{
+ "paper_id": "oa:W4402671217",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The most fundamental task in this area to which nearly all others can be reduced is that of determining satisfiability."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18897,
+ "eval_count": 68,
+ "ts": "2026-11-20T03:51:24Z"
+}

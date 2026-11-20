@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4404344855",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RAG$^2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we present RAG$^2$ (RAtionale-Guided RAG), a new framework for enhancing the reliability of RAG in biomedical contexts."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "https://github.com/dmis-lab/RAG2"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "https://github.com/dmis-lab/RAG2"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15028,
+ "eval_count": 116,
+ "ts": "2026-11-20T04:00:39Z"
+}

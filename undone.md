@@ -1,20 +1,20 @@
 # MXH — Undone / Deferred / Blocked
-Last updated: 2026-11-19T03:35:00Z
-Run ID: 20261117T1631-9e78757 | Git branch: `agent/mxh-real-20261117-9e78757` | Graph snapshot hash: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
-Overall status: INCOMPLETE — solely due to the human-independent-gold provenance requirement of G3/G6/G7. Every task achievable without a human reviewer is COMPLETE, including a fresh unexposed 300-case REAL benchmark round (v3) built after the owner confirmed on 2026-11-19 that no human review will occur. No machine decision is labelled human anywhere.
+Last updated: 2026-11-20T07:45:00Z
+Run ID: 20261117T1631-9e78757 | Git branch: `agent/mxh-real-20261117-9e78757` | Graph snapshot hash: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1` (v1 scope; enrichment scope `nlpgraph-enrich-v1` is additive and separately reported)
+Overall status: INCOMPLETE — solely due to the human-independent-gold provenance requirement of G3/G6/G7. Every task achievable without a human reviewer is COMPLETE, including session-3 text-mining enrichment (imported and audited), the Atlas/SNA dashboard, the small-world sensitivity analysis, and a fresh five-case real demo trace on current code. No machine decision is labelled human anywhere.
 
 ## Gate status
 | Gate | PASS/FAIL/BLOCKED/DEFERRED | Evidence path | Blocker |
 |---|---|---|---|
 | G0 | PASS | `agent_runs/20261117T1631-9e78757/preflight.md`; per-commit staged diff + secret scans | Unrelated `online/` deletions and `prompt.md` intentionally left outside commits |
-| G1 | PASS | `agent_runs/20261117T1631-9e78757/aura_catalog_smoke.json` | Live Aura re-verified 2026-11-19: 7,134 nodes, 30,971 relationships, all ten types |
+| G1 | PASS | `agent_runs/20261117T1631-9e78757/aura_catalog_smoke.json`; `offline/output/neo4j/import_enrichment_report_latest.json` | Live Aura re-verified 2026-11-20: v1 scope intact at 7,134 nodes / 30,971 relationships (all ten types); additive enrichment scope `nlpgraph-enrich-v1` imported VERIFIED ×2 (idempotent) at 1,573 nodes / 3,488 rels; DB totals 8,707 / 34,459 |
 | G2 | PASS | `offline/reports/graph_audit/integrity_all.json` | 100% structural census, zero errors |
 | G3 | BLOCKED (human provenance) — numeric criterion PASS (non-human) | `offline/evaluation/independent_review_truth_v2.csv`; `offline/reports/graph_audit/quality_report.md` | 386/386 source-reviewed: 382 correct / 4 incorrect, weighted 0.9898, Wilson 95% [0.9732, 0.9962], 10/10 types; audit rows independently spot-checked against PDF/landing page on 2026-11-19; human labels remain 0/386 |
 | G4 | PASS | `agent_runs/20261117T1631-9e78757/aura_catalog_smoke.json` | `Neo4j/5.27-aura`; live counts match; 12/12 read-only actions PASS |
 | G5 | PASS | `api_aura_smoke.json`; `e2e_aura_results.json` | Real Aura/Ollama `qwen3:0.6b` re-verified on final code 2026-11-19: API 8/8 + REST/SSE match; catalog 12/12; E2E 30/31 status, 20/21 oracle (A3 year-filter Qwen run-variance, safe not_found — documented, not hidden) |
 | G6 | BLOCKED (human provenance) — numeric criterion PASS (non-human) | `chatbot/data/splits/independent_holdout_v3.manifest.json`; `chatbot/data/generated/human_gold_review_v2.csv` | 859 non-human source-reviewed held-out cases (v2 522 + v3 337); 11,998 silver; leakage-safe trainval 8,360; independent human gold remains 0/500 |
 | G7 | BLOCKED (human provenance) — unexposed non-human benchmark RUN | `chatbot/reports/eval/aura_nonhuman_unexposed_v1/`; dataset `data/splits/independent_gold_benchmark300_v3_unexposed.jsonl` | 300-case REAL one-shot benchmark on a fresh set (seed 20261119; 283/300 never seen during tuning; 17 fixed-template cases reused and disclosed): set-F1 0.9508 ✓, citation 0.9890 ✓, numeric 1.0 ✓, refusal 0.8333 ✗ (disclosed); no human-gold benchmark exists |
-| G8 | PASS | `offline/report/final.pdf`; addenda 2026-11-18/19; test/build evidence; pushed feature branch | — |
+| G8 | PASS | `offline/report/final.pdf`; addenda 2026-11-18/19; session-3 test/build evidence below; pushed feature branch | Slide deck and PDF-report updates excluded from session 3 by owner instruction; session-2 report remains the submitted document |
 
 ## Work remaining (ordered by dependency)
 
@@ -60,6 +60,17 @@ Overall status: INCOMPLETE — solely due to the human-independent-gold provenan
 - Real-provider smokes re-run on final code: catalog 12/12; API matrix 8/8 + REST/SSE semantic match; E2E 30/31 status, 20/21 oracle, p50 9.8 s / p95 22.7 s. E2E/API scripts' list-category expectations were aligned with the intended truncated→partial contract (large lists at the 20-row default page are `partial` with full DB values preserved in the answer).
 - Test suites re-verified on final code: chatbot 98 pytest + Ruff lint/format PASS; offline 89 pytest PASS; UI 2 tests + production build PASS.
 
+## Resolved since the previous checkpoint (session 3, 2026-11-20)
+- Full-corpus text-mining enrichment COMPLETED: gazetteer rules + `qwen3:0.6b` (Ollama, CPU) over all 1,091 abstracts → 1,573 entities (606 Method / 383 Dataset / 584 Task) and 3,488 edges (USES_METHOD 1,578 / ADDRESSES_TASK 1,404 / EVALUATED_ON 469 / METHOD_EVALUATED_ON 37). 1,084/1,091 extracted; the 7 permanent `invalid_json` failures are disclosed in `offline/data/enriched/llm_failures.jsonl` (deterministic at temperature 0 — retries cannot recover them). Mixed extractor revisions v1.2–v1.6 are recorded per record in `enrichment_stats.json`.
+- Enrichment quality evidence: deterministic non-human source-grounding audit on the FULL merged data (seed 20261120, 30 edges/relation type): 120/120 PASS across source kinds (rules 69 / llm 47 / agreement 4). It certifies verbatim evidence + provenance + schema only — semantic entity/relation P/R/F1 remain NOT measured (human-gold protocol documented in `offline/evaluation/enrichment/summary.json`).
+- Enrichment imported into Aura: NEW additive scope `nlpgraph-enrich-v1` via MERGE-only whitelisted Cypher with foreign-scope conflict guard; dry-run → import VERIFIED (1,573/3,488) → idempotent re-run VERIFIED identical → v1 scope re-counted untouched (7,134/30,971). The accepted v1 graph and its audit/benchmark evidence are unaffected; the chatbot keeps querying `nlpgraph-v1` only.
+- Small-world sensitivity analysis (`offline/src/analysis/subnetworks.py` + outputs): 16 slices, degree-preserving swap null model, pre-registered σ rule → 5 slices with small-world indication (year:2024, acl:2023.acl-long, acl:2023.emnlp-main, acl:2025.emnlp-main, topic:llm), 6 without, 5 undetermined (clique-constrained swaps recorded explicitly). Whole-network fragmentation (LCC 17.86%) disclosed; no numbers were selected or tuned to make σ look better.
+- Atlas dashboard (chatbot `/api/atlas` + `AtlasDashboard.tsx`): serves ONLY the real committed analysis artifacts (counts, PageRank, Louvain, k-core, small-world + sensitivity); missing snapshot → explicit error, never synthetic statistics. Verified live with provenance listing all six artifacts; preview API restarted 2026-11-20 so the running server matches current code.
+- Real demo trace RECAPTURED on current code (previous 10:08 trace predated the 10:16 `intent_parser` change and was discarded): 5/5 contracts PASS — 1-hop retrieval, answered 2-hop author_path with multi-source evidence, successive author_papers→author_affiliations queries, coauthor_affiliations traversal, zero-fact not_found refusal. Latency honest: p50 25.8 s / p95 38.6 s (first sample includes model cold load).
+- Router efficiency fix kept under test: the follow-up affiliation classifier now only runs for `author_papers` intent (one fewer Qwen call for path/coauthor/network queries); covered by `tests/test_intent_parser.py` / `tests/test_api_fake.py`.
+- Audit contract fix (session 3): cited evidence papers must be a non-empty SUBSET of declared `evidence_paper_ids` (evidence payload is deliberately capped per edge) — regression-tested; audit re-run 19/19 then 120/120 PASS.
+- All gates re-run on final code: offline 111 pytest PASS; chatbot 100 pytest PASS + Ruff lint/format PASS; UI 2 tests + production build PASS.
+
 ## Intentionally excluded from THIS RUN
 - GPU SFT / LoRA actual training: not run. Prepared inputs: `chatbot/data/splits/sft_v2.jsonl` (16,744 rows, SHA-256 `75f59644a5ee5e4f8dcd17d26bc1f2b29346cb8017edddf54c8bc50505aaf21c`) and `chatbot/data/splits/sft_v3.jsonl` (disjoint from all 859 reviewed cases, SHA-256 `5313293986eb543abbb1a02f809ca303c57f900cc903df5c3fa29994b5474c57`).
 - Hugging Face authentication/upload: not run; adapter repository status is NOT VERIFIED.
@@ -67,6 +78,12 @@ Overall status: INCOMPLETE — solely due to the human-independent-gold provenan
 - The worktree's unrelated `online/` deletions were left uncommitted (not this run's change).
 
 ## Verified deliverables
+- `offline/data/enriched/enrichment_stats.json` | `3327a210256973d575777c92c04c41a5e4df825691ce4fb69758b16c19bc4456` | full-corpus enrichment (1,573 entities / 3,488 edges; 7 disclosed failures; extractor revisions v1.2–v1.6 per record) | PASS
+- `offline/evaluation/enrichment/summary.json` | `7f37bf931b233c0f010737643c14b0bfb5ea5a65f4aeb47437065836904a5a2a` | `cd offline && uv run python -m src.cli audit-enrichment` | PASS 120/120 source-grounded (non-human; NOT semantic P/R/F1)
+- `offline/output/neo4j/import_enrichment_report_latest.json` | `c5ced0e2e396427b63973677f0eb18751d1391a8a80a7aaf75faa0c4c0fb1a26` | `uv run python -m src.cli import-enrichment` (+ idempotent re-run) | PASS VERIFIED 1,573/3,488 in scope `nlpgraph-enrich-v1`; v1 untouched
+- `offline/output/analysis/small_world_subnetworks.json` | `ad7786ac4931d599a207c906afa0b9e291751ebee425a49eeb0d0d214772b582` | `uv run python -m src.cli analyze` sensitivity step | PASS 16 slices: 5 indication / 6 none / 5 undetermined; fragmentation disclosed
+- `chatbot/reports/demo/summary.json` | `93348c52335bd31326fb14065e6358612cd76c7aa819a5e5f3ff2101e417b3c5` | `cd chatbot && uv run python scripts/capture_real_demo.py --out reports/demo` | PASS 5/5 contracts on current code (2026-11-20T07:28Z)
+- `chatbot/reports/demo/real_trace.jsonl` | `646e4ee528631621937a602d2ecc81ac087d0723b6e6c3495c292d310b580ed9` | same capture run | PASS real Aura + `qwen3:0.6b`, credential-free
 - `agent_runs/20261117T1631-9e78757/e2e_aura_results.json` | `f7cf21782c98d9b0a8e1ca128a195cc4f4277ebdd27db42f7c34fb53f6fedccd` | Aura + Ollama workflow on final code | PASS 30/31 status, 20/21 oracle (A3 year-filter flake documented; safe not_found, no fabricated answer)
 - `agent_runs/20261117T1631-9e78757/api_aura_smoke.json` | `b2fc36d5fbd76bf5ab39431f84d411e5bbe38d92a90d907da0cd6e571e7bc0bf` | FastAPI matrix and REST/SSE on final code | PASS 8/8 and semantic match
 - `agent_runs/20261117T1631-9e78757/aura_catalog_smoke.json` (session-2 rerun) | `e22ca8b16457df5ce9450c9c4f0bd4a3f33b64547c9ee249f8f262338f660dcd` | live Aura 12-action catalog smoke | PASS 12/12, health `connected; 7134 nodes in scope`
@@ -75,6 +92,6 @@ Overall status: INCOMPLETE — solely due to the human-independent-gold provenan
 - `chatbot/data/splits/independent_gold_test_v3.jsonl` | `bed0c0a2545d0b76d52d5814eb9b7cd5765e3c447e9da94aac12836d05bb6c44` | 859-case non-human holdout | PASS
 - `chatbot/data/splits/combined_independent_holdout_v3.jsonl` | `ba525963267fcfb98c7684c4427d7129ed40a81034ae606c9eae3861ee84d2eb` | combined holdout, leakage PASS | PASS
 - `agent_runs/20261117T1631-9e78757/independent_qa_evidence_v3.jsonl` | `765e8459f8606e1926153c83bd3ae63d29813396834465ffab7589650b067819` | v3 review evidence (340 cases) | PASS
-- chatbot suite | current branch | `cd chatbot && uv run ruff check . && uv run ruff format --check . && uv run pytest -q` | PASS, 98 tests
-- offline suite | current branch | `cd offline && uv run python -m pytest -o addopts='' -q` | PASS, 89 tests
-- UI suite/build | current branch | `cd chatbot/ui && npm run test -- --run && npm run build` | PASS re-verified 2026-11-19, 2 tests and production build
+- chatbot suite | current branch | `cd chatbot && uv run ruff check . && uv run ruff format --check . && uv run pytest -q` | PASS, 100 tests (session 3)
+- offline suite | current branch | `cd offline && uv run python -m pytest -o addopts='' -q` | PASS, 111 tests (session 3)
+- UI suite/build | current branch | `cd chatbot/ui && npm run test -- --run && npm run build` | PASS re-verified 2026-11-20, 2 tests and production build

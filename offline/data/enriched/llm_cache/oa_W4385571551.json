@@ -1,0 +1,166 @@
+{
+ "paper_id": "oa:W4385571551",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "BEIR",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "vanilla",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "hard negatives mining",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "knowledge distillation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "effective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Thus, in BERM, a single passage is segmented into multiple units and two unit-level requirements are proposed for representation as the constraint in training to obtain the effective matching signal."
+   }
+  },
+  {
+   "surface": "generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a novel method to improve the generalization of dense retrieval via capturing matching signal called BERM."
+   }
+  },
+  {
+   "surface": "domain",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dense retrieval has shown promise in the first-stage retrieval process when trained on in-domain labeled datasets."
+   }
+  },
+  {
+   "surface": "matching signal",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, previous studies have found that dense retrieval is hard to generalize to unseen domains due to its weak modeling of domain-invariant and interpretable feature (i.e., matching signal between two texts, which is the essence of information retrieval)."
+   }
+  },
+  {
+   "surface": "training",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Thus, in BERM, a single passage is segmented into multiple units and two unit-level requirements are proposed for representation as the constraint in training to obtain the effective matching signal."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "semantic unit balance"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "essential matching unit extractability"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "fine-grained"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "query-oriented"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "saliency"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "domain-invariant"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "interpretable"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "matching"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "feature"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "passage"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "context"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "complex"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "pure"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "matching information"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14423,
+ "eval_count": 294,
+ "ts": "2026-11-20T03:16:24Z"
+}

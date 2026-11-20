@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W6910438939",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "AGENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have shown remarkable advancements in tackling agent-oriented tasks."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have shown remarkable advancements in tackling agent-oriented tasks."
+   }
+  },
+  {
+   "surface": "PilotRL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on the proposed paradigm, we further put forward PilotRL, a global planning-guided training framework for LLM agents driven by progressive reinforcement learning."
+   }
+  },
+  {
+   "surface": "LLAMA3.1-8B-Instruct",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale."
+   }
+  },
+  {
+   "surface": "GPT-4o-mini",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale."
+   }
+  },
+  {
+   "surface": "COMPARABLE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "STATE-OF-ART"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "3.60"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "55.78"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "PARAMETER-SCALE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29703,
+ "eval_count": 152,
+ "ts": "2026-11-20T04:43:08Z"
+}

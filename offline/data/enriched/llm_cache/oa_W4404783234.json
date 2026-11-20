@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4404783234",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through extensive experiments, we demonstrate the considerable gap between state-of-the-art knowledge-editing methods and practical scenarios."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, its current evaluations deviate significantly from practice: their knowledge updates solely consist of structured facts derived from meticulously crafted datasets, instead of practical sources—unstructured texts like news articles, and they often overlook practical real-world knowledge updates."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Knowledge editing injects knowledge updates into language models to keep them correct and up-to-date.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 11242,
+ "eval_count": 243,
+ "ts": "2026-11-20T07:21:48Z"
+}

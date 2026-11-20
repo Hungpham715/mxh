@@ -1,0 +1,154 @@
+{
+ "paper_id": "oa:W4385570848",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CHILDES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "LSTMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "Transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "yes/no questions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then evaluate what these models have learned about English yes/no questions, a phenomenon for which hierarchical structure is crucial."
+   }
+  },
+  {
+   "surface": "neural networks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "standard neural network architectures",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "These results suggest that human-like generalization from text alone requires stronger biases than the general sequence-processing biases of standard neural network architectures."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "perplexity"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "subject",
+   "surface": "children"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "context",
+   "surface": "children’s linguistic input"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "domain",
+   "surface": "English"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "concept",
+   "surface": "hierarchical structure"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "bias",
+   "surface": "learning bias"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "process",
+   "surface": "generalization"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "effect",
+   "surface": "human-like generalization"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "bias",
+   "surface": "stronger biases"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "bias",
+   "surface": "sequence-processing biases"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "alternative",
+   "surface": "correct hierarchical rule"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "alternative",
+   "surface": "incorrect linear rule"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "source",
+   "surface": "text"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "source",
+   "surface": "data"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13579,
+ "eval_count": 272,
+ "ts": "2026-11-20T03:14:20Z"
+}

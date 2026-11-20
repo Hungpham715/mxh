@@ -1,0 +1,89 @@
+{
+ "paper_id": "oa:W4416875783",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "centonisation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This so-called \"centonisation\" theory has received much musicological criticism, but frequent re-use of certain melodic segments has been observed in chant melodies, and the intractable number of possible segmentations allowed the option that some undiscovered segmentation exists that will yet prove the value of centonisation, and recent empirical results have shown that segmentations can outperform music-theoretical features in mode classification."
+   }
+  },
+  {
+   "surface": "nested hierarchical Pitman-Yor language models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the fact that Gregorian chant was memorised, we search for an optimal unsupervised segmentation of chant melody using nested hierarchical Pitman-Yor language models."
+   }
+  },
+  {
+   "surface": "mode classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This so-called \"centonisation\" theory has received much musicological criticism, but frequent re-use of certain melodic segments has been observed in chant melodies, and the intractable number of possible segmentations allowed the option that some undiscovered segmentation exists that will yet prove the value of centonisation, and recent empirical results have shown that segmentations can outperform music-theoretical features in mode classification."
+   }
+  },
+  {
+   "surface": "segmentations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This so-called \"centonisation\" theory has received much musicological criticism, but frequent re-use of certain melodic segments has been observed in chant melodies, and the intractable number of possible segmentations allowed the option that some undiscovered segmentation exists that will yet prove the value of centonisation, and recent empirical results have shown that segmentations can outperform music-theoretical features in mode classification."
+   }
+  },
+  {
+   "surface": "memory efficiency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Modeling a monk memorising the melodies from one liturgical manuscript, we then find empirical evidence for the link between mode classification and memory efficiency, and observe more formulaic areas at the beginnings and ends of melodies corresponding to the practical role of modality in performance."
+   }
+  },
+  {
+   "surface": "liturgical manuscript",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Modeling a monk memorising the melodies from one liturgical manuscript, we then find empirical evidence for the link between mode classification and memory efficiency, and observe more formulaic areas at the beginnings and ends of melodies corresponding to the practical role of modality in performance."
+   }
+  },
+  {
+   "surface": "practical role of modality",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Modeling a monk memorising the melodies from one liturgical manuscript, we then find empirical evidence for the link between mode classification and memory efficiency, and observe more formulaic areas at the beginnings and ends of melodies corresponding to the practical role of modality in performance."
+   }
+  },
+  {
+   "surface": "formulaic areas",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Modeling a monk memorising the melodies from one liturgical manuscript, we then find empirical evidence for the link between mode classification and memory efficiency, and observe more formulaic areas at the beginnings and ends of melodies corresponding to the practical role of modality in performance."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "empirical results"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "empirical evidence"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23848,
+ "eval_count": 117,
+ "ts": "2026-11-20T04:40:35Z"
+}

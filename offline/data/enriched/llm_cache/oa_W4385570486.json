@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4385570486",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TRANSFER learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transfer learning has been shown to be an effective technique for enhancing the performance of low-resource neural machine translation (NMT)."
+   }
+  },
+  {
+   "surface": "low-resource NMT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a k-Nearest-Neighbor Transfer Learning (kNN-TL) approach for low-resource NMT, which leverages the parent knowledge throughout the entire developing process of the child model."
+   }
+  },
+  {
+   "surface": "k-Nearest-Neighbor Transfer Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a k-Nearest-Neighbor Transfer Learning (kNN-TL) approach for low-resource NMT, which leverages the parent knowledge throughout the entire developing process of the child model."
+   }
+  },
+  {
+   "surface": "parent knowledge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods do not make use of the parent knowledge during the child inference, which may limit the translation performance."
+   }
+  },
+  {
+   "surface": "child model",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This is typically achieved through either fine-tuning a child model with a pre-trained parent model, or by utilizing the out- put of the parent model during the training of the child model."
+   }
+  },
+  {
+   "surface": "child-aware datastore construction method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach includes a parent-child representation alignment method, which ensures consistency in the output representations between the two models, and a child-aware datastore construction method that improves inference efficiency by selectively distilling the parent datastore based on relevance to the child model."
+   }
+  },
+  {
+   "surface": "inference efficiency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach includes a parent-child representation alignment method, which ensures consistency in the output representations between the two models, and a child-aware datastore construction method that improves inference efficiency by selectively distilling the parent datastore based on relevance to the child model."
+   }
+  },
+  {
+   "surface": "four low-resource translation tasks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results on four low-resource translation tasks show that kNN-TL outperforms strong baselines."
+   }
+  },
+  {
+   "surface": "strong baselines",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results on four low-resource translation tasks show that kNN-TL outperforms strong baselines."
+   }
+  },
+  {
+   "surface": "https://github.com/NLP2CT/kNN-TL",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Code and scripts are freely available at https://github.com/NLP2CT/kNN-TL."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 6140,
+ "eval_count": 122,
+ "ts": "2026-11-20T03:12:35Z"
+}

@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4393726285",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Recognizing the inadequacy of benchmark datasets in Traditional Chinese, we further introduce Bailong-bench to assess the alignment of models with human preferences and the capability to follow instructions in both Traditional Chinese and English tasks."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Recognizing the inadequacy of benchmark datasets in Traditional Chinese, we further introduce Bailong-bench to assess the alignment of models with human preferences and the capability to follow instructions in both Traditional Chinese and English tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21942,
+ "eval_count": 141,
+ "ts": "2026-11-20T03:47:16Z"
+}

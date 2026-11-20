@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4404783144",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DOWNSTREAM TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing studies evaluate ICL methods primarily based on downstream task performance."
+   }
+  },
+  {
+   "surface": "EVALUATION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This evaluation protocol overlooks the significant cost associated with the demonstration configuration process, i.e., tuning the demonstration as the ICL prompt."
+   }
+  },
+  {
+   "surface": "CONFIGURATION COST",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, in this work, we point out that the evaluation protocol leads to unfair comparisons and potentially biased evaluation, because we surprisingly find the correlation between the configuration costs and task performance."
+   }
+  },
+  {
+   "surface": "TASK PERFORMANCE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing studies evaluate ICL methods primarily based on downstream task performance."
+   }
+  },
+  {
+   "surface": "CONFIGURATION",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This evaluation protocol overlooks the significant cost associated with the demonstration configuration process, i.e., tuning the demonstration as the ICL prompt."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning (ICL) has demonstrated excellent performance across various downstream NLP tasks, especially when synergized with powerful large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "EVALUATION PARADIGM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then we call for a two-dimensional evaluation paradigm that considers both of these aspects, facilitating a fairer comparison.Finally, based on our empirical finding that the optimized demonstration on one language model generalizes across language models of different sizes, we introduce a simple yet efficient strategy that can be applied to any ICL method as a plugin, yielding a better trade-off between the two dimensions according to the proposed evaluation paradigm."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "IN-CENTERED LEARNING"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22234,
+ "eval_count": 255,
+ "ts": "2026-11-20T04:09:34Z"
+}

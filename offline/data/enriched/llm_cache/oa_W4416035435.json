@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4416035435",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "These findings motivate the need for systematic, group-level evaluation when applying pretrained language models to dehumanization detection tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15008,
+ "eval_count": 271,
+ "ts": "2026-11-20T07:23:39Z"
+}

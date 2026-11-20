@@ -1,0 +1,91 @@
+{
+ "paper_id": "oa:W4403577349",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Federated Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Training social event detection models through federated learning (FedSED) aims to improve participants' performance on the task."
+   }
+  },
+  {
+   "surface": "Social Event Detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Training social event detection models through federated learning (FedSED) aims to improve participants' performance on the task."
+   }
+  },
+  {
+   "surface": "DAMe",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper proposes a personalized federated learning framework with a dual aggregation mechanism for social event detection, namely DAMe."
+   }
+  },
+  {
+   "surface": "Federated Learning Framework",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper proposes a personalized federated learning framework with a dual aggregation mechanism for social event detection, namely DAMe."
+   }
+  },
+  {
+   "surface": "Six Social Event Datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments within a realistic simulation of a natural federated setting, utilizing six social event datasets spanning six languages and two social media platforms, along with an ablation study, have demonstrated the effectiveness of the proposed framework."
+   }
+  },
+  {
+   "surface": "Six Languages",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments within a realistic simulation of a natural federated setting, utilizing six social event datasets spanning six languages and two social media platforms, along with an ablation study, have demonstrated the effectiveness of the proposed framework."
+   }
+  },
+  {
+   "surface": "Two Social Media Platforms",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments within a realistic simulation of a natural federated setting, utilizing six social event datasets spanning six languages and two social media platforms, along with an ablation study, have demonstrated the effectiveness of the proposed framework."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Bayesian Optimization"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Natural Federated Setting"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Ablation Study"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Injection Attack"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19342,
+ "eval_count": 134,
+ "ts": "2026-11-20T04:00:00Z"
+}

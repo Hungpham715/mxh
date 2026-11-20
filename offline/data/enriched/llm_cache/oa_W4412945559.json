@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4412945559",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HALLUCINATION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have made remarkable advancements, yet hallucination, where models produce inaccurate or non-factual statements, remains a significant challenge for real-world deployment."
+   }
+  },
+  {
+   "surface": "NEURAL DE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approaches apply neural differential equations (Neural DEs) to model the dynamic system in the latent space of LLMs."
+   }
+  },
+  {
+   "surface": "TRUE-False",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The extensive experiments across five datasets and six widely used LLMs demonstrate the effectiveness of HD-NDEs, especially, achieving over 14% improvement in AUC-ROC on the True-False dataset compared to state-of-the-art techniques."
+   }
+  },
+  {
+   "surface": "AUC-ROC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The extensive experiments across five datasets and six widely used LLMs demonstrate the effectiveness of HD-NDEs, especially, achieving over 14% improvement in AUC-ROC on the True-False dataset compared to state-of-the-art techniques."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20816,
+ "eval_count": 181,
+ "ts": "2026-11-20T04:24:33Z"
+}

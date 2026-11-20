@@ -27,6 +27,28 @@ async def test_health_and_public_config_do_not_expose_secrets(client) -> None:
 
 
 @pytest.mark.asyncio
+async def test_atlas_serves_real_snapshot_even_when_chat_profile_is_fake(client) -> None:
+    response = await client.get("/api/atlas")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["source_kind"] == "real_offline_snapshot"
+    assert payload["counts"]["nodes"]["Paper"] == 1091
+    assert payload["graph"]["nodes"] and payload["graph"]["edges"]
+    assert "watermark" not in payload
+
+
+@pytest.mark.asyncio
+async def test_atlas_missing_snapshot_fails_explicitly_without_fake_fallback(tmp_path) -> None:
+    app = create_app(Settings(atlas_data_dir=tmp_path))
+    async with app.router.lifespan_context(app):
+        transport = httpx.ASGITransport(app=app)
+        async with httpx.AsyncClient(transport=transport, base_url="http://test") as api_client:
+            response = await api_client.get("/api/atlas")
+    assert response.status_code == 503
+    assert response.json()["error"]["code"] == "atlas_snapshot_unavailable"
+
+
+@pytest.mark.asyncio
 @pytest.mark.parametrize(
     "question",
     [

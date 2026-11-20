@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389519110",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dense retrieval model",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This inconsistency between training and inference causes the dense retrieval model to prioritize query information while disregarding the document when computing the document representation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "dense retrieval model",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This inconsistency between training and inference causes the dense retrieval model to prioritize query information while disregarding the document when computing the document representation.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "dense retrieval model"
+ ],
+ "duration_ms": 29912,
+ "eval_count": 98,
+ "ts": "2026-11-20T03:29:29Z"
+}

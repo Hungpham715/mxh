@@ -1,0 +1,56 @@
+{
+ "paper_id": "oa:W4389325702",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DECEPTION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Deception is the intentional practice of twisting information."
+   }
+  },
+  {
+   "surface": "SEPSIS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 12,
+    "evidence_text": "To encourage further research in this field, we are releasing the SEPSIS dataset and code at https://huggingface.co/datasets/ankurani/deception."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SEPSIS",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We curated an annotated dataset of 876,784 samples by amalgamating a popular large-scale fake news dataset and scraped news headlines from the Twitter handle of the Times of India, a well-known Indian news media house.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_endpoint",
+   "rel": "USES_METHOD",
+   "detail": "target is PAPER"
+  },
+  {
+   "reason": "invalid_endpoint",
+   "rel": "ADDRESSES_TASK",
+   "detail": "target is PAPER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23368,
+ "eval_count": 307,
+ "ts": "2026-11-20T03:26:10Z"
+}

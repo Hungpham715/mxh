@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4402672021",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experiments demonstrate that OP-I-PROMPT emerges as a good alternative for evaluating opinion summaries, achieving an average Spearman correlation of 0.70 with human judgments, surpassing prior methodologies."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Furthermore, the absence of sufficient opinion summary evaluation datasets hinders progress in this area."
+   }
+  },
+  {
+   "surface": "opinion summary evaluation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While Large Language Models (LLMs) have shown promise as reference-free metrics for NLG evaluation, their potential remains unexplored for opinion summary evaluation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "opinion summary evaluation",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While Large Language Models (LLMs) have shown promise as reference-free metrics for NLG evaluation, their potential remains unexplored for opinion summary evaluation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [
+  "opinion summary evaluation"
+ ],
+ "duration_ms": 15743,
+ "eval_count": 186,
+ "ts": "2026-11-20T03:57:17Z"
+}

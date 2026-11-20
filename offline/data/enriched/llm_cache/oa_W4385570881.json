@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385570881",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "accuracy-coverage curve (AUAC)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "When trained with CoNAL, classifiers improve in their ability to detect and abstain on novel class examples over prior methods by an average of 2.3% in terms of accuracy under the accuracy-coverage curve (AUAC) and 5.5% AUROC across 4 NLP datasets, with no cost to in-distribution accuracy."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "accuracy-coverage curve (AUAC)",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "When trained with CoNAL, classifiers improve in their ability to detect and abstain on novel class examples over prior methods by an average of 2.3% in terms of accuracy under the accuracy-coverage curve (AUAC) and 5.5% AUROC across 4 NLP datasets, with no cost to in-distribution accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "accuracy-coverage curve (AUAC)"
+ ],
+ "duration_ms": 7714,
+ "eval_count": 147,
+ "ts": "2026-11-20T03:14:05Z"
+}

@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4387323696",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "coherence",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Coherence is an essential property of well-written texts, that refers to the way textual units relate to one another."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "coherence",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Coherence is an essential property of well-written texts, that refers to the way textual units relate to one another.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "coherence",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "coherence",
+   "to": "coherence"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28181,
+ "eval_count": 375,
+ "ts": "2026-11-20T03:26:29Z"
+}

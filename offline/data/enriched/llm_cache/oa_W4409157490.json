@@ -1,0 +1,61 @@
+{
+ "paper_id": "oa:W4409157490",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Based on the foundation of Large Language Models (LLMs), Multilingual LLMs (MLLMs) have been developed to address the challenges faced in multilingual natural language processing, hoping to achieve knowledge transfer from high-resource languages to low-resource languages."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Secondly, we explore the multilingual training corpora of MLLMs and the multilingual datasets oriented for downstream tasks that are crucial to enhance the cross-lingual capability of MLLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22292,
+ "eval_count": 80,
+ "ts": "2026-11-20T04:14:18Z"
+}

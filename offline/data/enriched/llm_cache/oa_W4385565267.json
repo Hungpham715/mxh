@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385565267",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "entity description generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the task of entity description generation, given a context and a specified entity, a model must describe that entity correctly and in a contextually-relevant way."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "entity description generation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the task of entity description generation, given a context and a specified entity, a model must describe that entity correctly and in a contextually-relevant way.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "entity description generation"
+ ],
+ "duration_ms": 32194,
+ "eval_count": 105,
+ "ts": "2026-11-20T03:33:17Z"
+}

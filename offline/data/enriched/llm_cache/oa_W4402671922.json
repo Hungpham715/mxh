@@ -1,0 +1,32 @@
+{
+ "paper_id": "oa:W4402671922",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments conducted on standard BLI datasets for 12 language pairs (6 rich-resource and 6 low-resource) demonstrate substantial gains achieved by our framework."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18650,
+ "eval_count": 156,
+ "ts": "2026-11-20T03:56:16Z"
+}

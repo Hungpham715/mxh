@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4389520333",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "factuality",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by truth-seeking mechanisms in law, we propose a factuality evaluation framework for LMs that is based on cross-examination."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26815,
+ "eval_count": 45,
+ "ts": "2026-11-20T03:38:02Z"
+}

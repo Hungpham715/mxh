@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4402667090",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "EVLGen",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Code: https://github.com/yiren-jian/EVLGen"
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce \\text{EVL}_{\\text{Gen}}, a streamlined framework designed for the pre-training of visually conditioned language generation models with high computational demands, utilizing frozen pre-trained large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "pre-training",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce \\text{EVL}_{\\text{Gen}}, a streamlined framework designed for the pre-training of visually conditioned language generation models with high computational demands, utilizing frozen pre-trained large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "image-text",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Finally, we showcase how our image-text models can seamlessly adapt to video-conditioned language generation tasks through novel soft attentive temporal token contextualizing modules."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "pre-training",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experimental findings demonstrate that our approach accelerates the training of vision-language models by a factor of 5 without a noticeable impact on overall performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "image-text",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Finally, we showcase how our image-text models can seamlessly adapt to video-conditioned language generation tasks through novel soft attentive temporal token contextualizing modules.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [
+  "image-text"
+ ],
+ "duration_ms": 9357,
+ "eval_count": 203,
+ "ts": "2026-11-20T07:20:50Z"
+}

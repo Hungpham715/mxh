@@ -118,14 +118,43 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
     rand = []
     m = lcc.number_of_edges()
     for i in range(n_random):
-        r = lcc.copy()
         s = seed + i + 1
-        nx.double_edge_swap(r, nswap=10 * m, max_tries=100 * m, seed=s)
+        r = None
+        swaps_used = None
+        for requested_swaps in (10 * m, 5 * m, m):
+            candidate = lcc.copy()
+            try:
+                nx.double_edge_swap(
+                    candidate,
+                    nswap=requested_swaps,
+                    max_tries=max(100 * m, 10 * requested_swaps, 1000),
+                    seed=s,
+                )
+            except nx.NetworkXAlgorithmError:
+                continue
+            r = candidate
+            swaps_used = requested_swaps
+            break
+        if r is None:
+            continue
         if not nx.is_connected(r):
             r = nx.Graph(r.subgraph(max(nx.connected_components(r), key=len)))
         c_r = nx.average_clustering(r)
         l_r, _ = avg_shortest_path(r, max_exact, random.Random(s), n_sources)
-        rand.append({"seed": s, "nodes": r.number_of_nodes(), "C": c_r, "L": l_r})
+        random_record = {"seed": s, "nodes": r.number_of_nodes(), "C": c_r, "L": l_r}
+        if swaps_used != 10 * m:
+            random_record["swaps"] = swaps_used
+        rand.append(random_record)
+    if not rand:
+        return {
+            "status": "undetermined",
+            "reason": "degree-preserving randomization infeasible for this constrained LCC",
+            "lcc_nodes": lcc.number_of_nodes(),
+            "lcc_edges": m,
+            "C_obs": round(c_obs, 4),
+            "L_obs": round(l_obs, 4),
+            "L_method": l_method,
+        }
     c_rand = sum(x["C"] for x in rand) / len(rand)
     l_rand = sum(x["L"] for x in rand) / len(rand)
     sigma = (c_obs / c_rand) / (l_obs / l_rand) if c_rand > 0 and l_rand > 0 else None
@@ -138,7 +167,7 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
             "lcc_nodes": lcc.number_of_nodes(), "lcc_edges": m,
             "C_obs": round(c_obs, 4), "L_obs": round(l_obs, 4), "L_method": l_method,
             "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
-            "n_random": n_random, "random_graphs": [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in rand],
+            "n_random": len(rand), "random_graphs": [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in rand],
             "C_rand": round(c_rand, 4), "L_rand": round(l_rand, 4),
             "sigma": round(sigma, 3) if sigma is not None else None, "verdict": verdict,
             "limitations": ["Multi-author papers create cliques that mechanically raise clustering.",

@@ -1,0 +1,87 @@
+{
+ "paper_id": "oa:W4416035575",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PRE-PROCESSING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a systematic pipeline for generating high-quality, ultra-detailed image captions, encompassing both pre-processing and post-processing stages."
+   }
+  },
+  {
+   "surface": "POST-PROCESSING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a systematic pipeline for generating high-quality, ultra-detailed image captions, encompassing both pre-processing and post-processing stages."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To enhance comprehensiveness, we introduce an expansion strategy based on Large Language Models (LLMs), defining eight descriptive dimensions to refine and extend captions, which serve as seed data for training a proprietary captioner model."
+   }
+  },
+  {
+   "surface": "EXPERIMENTAL RESULTS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results demonstrate that our ultra-detailed captions significantly enhance LVLMs’ perception and cognitive abilities across multiple vision-language benchmarks."
+   }
+  },
+  {
+   "surface": "CODE AND DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "The code and dataset are available at https://github.com/yuzeng0-0/UltraCaption."
+   }
+  },
+  {
+   "surface": "HIGH-QUALITY CORRECTED DATA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using high-quality corrected data, we apply Direct Preference Optimization (DPO) and develop a critic-rewrite pipeline, training a sentence-level critic model to mitigate hallucinations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "HIGH QUALITY IMAGE CAPTIONS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "DPO"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "CRAWL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "DIRECT PRECISION OPTIMIZATION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Critic-rewrite pipeline"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18162,
+ "eval_count": 157,
+ "ts": "2026-11-20T04:29:08Z"
+}

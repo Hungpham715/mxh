@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4407123355",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To mitigate verifier failures, we explore reducing reliance on verifiers and conduct preliminary investigations using two simple methods."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Verifier-guided search outperforms repeated sampling when sample size is limited by selecting and prioritizing valid reasoning paths.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21180,
+ "eval_count": 222,
+ "ts": "2026-11-20T04:14:37Z"
+}

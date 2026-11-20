@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4412886665",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this work, we provide an empirical investigation of gist-based context compression methods to improve context processing in large language models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22346,
+ "eval_count": 211,
+ "ts": "2026-11-20T04:15:29Z"
+}

@@ -1,6 +1,6 @@
 import networkx as nx
 
-from src.analysis import metrics
+from src.analysis import metrics, subnetworks
 from src.evaluation.score import score_rows, wilson
 
 
@@ -65,6 +65,33 @@ def test_small_world_runs_on_toy():
 
 def test_small_world_undetermined_on_tiny():
     assert metrics.small_world(_g())["status"] == "undetermined"
+
+
+def test_subnetwork_sensitivity_uses_corpus_slices():
+    authors = [{"id": f"a{i}", "name": f"A{i}", "identity_status": "verified"} for i in range(4)]
+    rows = {
+        "authors.jsonl": authors,
+        "papers.jsonl": [
+            {"id": "p1", "year": 2024, "venue_id": "v1"},
+            {"id": "p2", "year": 2025, "venue_id": "v1"},
+        ],
+        "venues.jsonl": [{"id": "v1", "name": "Venue One"}],
+        "paper_authors.jsonl": [
+            {"paper_id": "p1", "author_id": "a0"}, {"paper_id": "p1", "author_id": "a1"},
+            {"paper_id": "p2", "author_id": "a1"}, {"paper_id": "p2", "author_id": "a2"},
+        ],
+        "paper_topics.jsonl": [
+            {"paper_id": "p1", "topic_id": "qa"}, {"paper_id": "p2", "topic_id": "qa"},
+        ],
+    }
+    result = subnetworks.analyze_subnetworks(rows, _g(), n_random=1, min_papers=1)
+    assert result["schema_version"] == "small-world-sensitivity-v1"
+    assert result["whole_network_fragmentation"]["authors_outside_lcc"] == 4
+    assert {(row["dimension"], row["key"]) for row in result["slices"]} == {
+        ("year", "2024"), ("year", "2025"), ("venue", "v1"), ("topic", "qa")
+    }
+    venue = next(row for row in result["slices"] if row["dimension"] == "venue")
+    assert venue["papers"] == 2 and venue["stats"]["edges"] == 2
 
 
 def test_wilson():

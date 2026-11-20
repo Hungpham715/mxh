@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4416035754",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "In terms of retrieval effect, MS-RAG achieves state-of-the-art performance, which is about 10%-30% improvement than the existing methods."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Due to the limitations in cross-chunk summarization task of naive RAG, graph-based RAG has emerged as a promising solution."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22955,
+ "eval_count": 269,
+ "ts": "2026-11-20T04:30:58Z"
+}

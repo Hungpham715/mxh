@@ -1,0 +1,150 @@
+{
+ "paper_id": "oa:W4416035714",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "randomized smoothing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Randomized smoothing (RS) is one of the prominent techniques to ensure the correctness of machine learning models, where point-wise robustness certificates can be derived analytically."
+   }
+  },
+  {
+   "surface": "oracle classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this by connecting generative outputs to an oracle classification task and showing that RS can still be enabled: the final response can be classified as a discrete action (e.g., service-robot commands in VLAs), as harmful vs."
+   }
+  },
+  {
+   "surface": "generative models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While RS is well understood for classification, its application to generative models is unclear, since their outputs are sequences rather than labels."
+   }
+  },
+  {
+   "surface": "discrete action",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this by connecting generative outputs to an oracle classification task and showing that RS can still be enabled: the final response can be classified as a discrete action (e.g., service-robot commands in VLAs), as harmful vs."
+   }
+  },
+  {
+   "surface": "content moderation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "harmless (content moderation or toxicity detection in VLMs), or even applying oracles to cluster answers into semantically equivalent ones."
+   }
+  },
+  {
+   "surface": "harmful vs. harmless",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this by connecting generative outputs to an oracle classification task and showing that RS can still be enabled: the final response can be classified as a discrete action (e.g., service-robot commands in VLAs), as harmful vs."
+   }
+  },
+  {
+   "surface": "semantically equivalent",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "harmless (content moderation or toxicity detection in VLMs), or even applying oracles to cluster answers into semantically equivalent ones."
+   }
+  },
+  {
+   "surface": "error rate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Provided that the error rate for the oracle classifier comparison is bounded, we develop the theory that associates the number of samples with the corresponding robustness radius."
+   }
+  },
+  {
+   "surface": "bounded",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Provided that the error rate for the oracle classifier comparison is bounded, we develop the theory that associates the number of samples with the corresponding robustness radius."
+   }
+  },
+  {
+   "surface": "number of samples",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Provided that the error rate for the oracle classifier comparison is bounded, we develop the theory that associates the number of samples with the corresponding robustness radius."
+   }
+  },
+  {
+   "surface": "certified radius",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further derive improved scaling laws analytically relating the certified radius and accuracy to the number of samples, showing that the earlier result of 2 to 3 orders of magnitude fewer samples sufficing with minimal loss remains valid even under weaker assumptions."
+   }
+  },
+  {
+   "surface": "scaling laws",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further derive improved scaling laws analytically relating the certified radius and accuracy to the number of samples, showing that the earlier result of 2 to 3 orders of magnitude fewer samples sufficing with minimal loss remains valid even under weaker assumptions."
+   }
+  },
+  {
+   "surface": "accuracy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further derive improved scaling laws analytically relating the certified radius and accuracy to the number of samples, showing that the earlier result of 2 to 3 orders of magnitude fewer samples sufficing with minimal loss remains valid even under weaker assumptions."
+   }
+  },
+  {
+   "surface": "2 to 3 orders of magnitude",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further derive improved scaling laws analytically relating the certified radius and accuracy to the number of samples, showing that the earlier result of 2 to 3 orders of magnitude fewer samples sufficing with minimal loss remains valid even under weaker assumptions."
+   }
+  },
+  {
+   "surface": "minimal loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further derive improved scaling laws analytically relating the certified radius and accuracy to the number of samples, showing that the earlier result of 2 to 3 orders of magnitude fewer samples sufficing with minimal loss remains valid even under weaker assumptions."
+   }
+  },
+  {
+   "surface": "state-of-the-art VLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Together, these advances make robustness certification both well-defined and computationally feasible for state-of-the-art VLMs, as validated against recent jailbreak-style adversarial attacks."
+   }
+  },
+  {
+   "surface": "recent jailbreak-style adversarial attacks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Together, these advances make robustness certification both well-defined and computationally feasible for state-of-the-art VLMs, as validated against recent jailbreak-style adversarial attacks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19129,
+ "eval_count": 182,
+ "ts": "2026-11-20T04:29:51Z"
+}

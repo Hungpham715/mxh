@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4389524306",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we explore the use of pre-trained language models (PLMs) to reason about plan sequences from text instructions in embodied visual environments."
+   }
+  },
+  {
+   "surface": "ALFWorld",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show this simple approach outperforms prior approaches in experiments on the ALFWorld and VirtualHome benchmarks."
+   }
+  },
+  {
+   "surface": "VirtualHome",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show this simple approach outperforms prior approaches in experiments on the ALFWorld and VirtualHome benchmarks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22059,
+ "eval_count": 120,
+ "ts": "2026-11-20T03:44:57Z"
+}

@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4416035167",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "AUTO_AGENT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "REAL_WORLD_APPLICATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MULTI_AGENT_SCENARIOS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "EXPERIMENT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "FAILURE_RATE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "ATTACK"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "DEPLOYABLE_AGENTS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "MULTI_AGENT_SCENARIOS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "VULNERABILITY"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "SELF_EXAMINATION_DEFENSE_METHODS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "DETECTION"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17424,
+ "eval_count": 132,
+ "ts": "2026-11-20T04:27:37Z"
+}

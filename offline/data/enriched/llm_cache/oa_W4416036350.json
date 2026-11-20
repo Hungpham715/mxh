@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4416036350",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MMLU-Pro",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "For multiple-choice questions, it successfully detects all contaminated models with guaranteed FPRs as low as 0.000073% on MMLU-Pro and 0.000017% on Big-Bench-Hard using eight backdoors."
+   }
+  },
+  {
+   "surface": "ALPACA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "For open-ended generation tasks, it generalizes well and identifies all contaminated models on Alpaca with a guaranteed false positive rate of just 0.127% using six backdoors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN_BENCHMARKS"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DYE_PACK"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "BIG_BENCH_HARDF"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "BACKDOOR_ATTACKS"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TEST_DATA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOSS_LOGITS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "MATERIAL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "BACKDOOR_SAMPLES"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "FALSE_POSITIVE_RATE"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "BACKDOOR_TARGETS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "STOCHASTIC_TARGETS"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20831,
+ "eval_count": 164,
+ "ts": "2026-11-20T04:31:41Z"
+}

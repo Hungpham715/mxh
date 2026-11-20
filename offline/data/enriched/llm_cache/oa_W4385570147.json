@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385570147",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also show that CFL mitigates the unintended bias problem through experiments on the BOLD dataset."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35841,
+ "eval_count": 194,
+ "ts": "2026-11-20T03:32:32Z"
+}

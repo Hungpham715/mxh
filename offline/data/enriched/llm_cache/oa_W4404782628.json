@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4404782628",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pretrained language models (PLMs) display impressive performances and have captured the attention of the NLP community.Establishing best practices in pretraining has, therefore, become a major focus of NLP research, especially since insights gained from monolingual English models may not necessarily apply to more complex multilingual models.One significant caveat of the current state of the art is that different works are rarely comparable: they often discuss different parameter counts, training data, and evaluation methodology.This paper proposes a comparison of multilingual pretraining objectives in a controlled methodological environment."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 6601,
+ "eval_count": 147,
+ "ts": "2026-11-20T07:21:22Z"
+}

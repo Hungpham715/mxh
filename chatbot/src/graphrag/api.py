@@ -13,6 +13,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
+from graphrag.atlas import AtlasSnapshotError, load_atlas_snapshot
 from graphrag.factory import build_dependencies
 from graphrag.models import ChatRequest, ChatResponse
 from graphrag.settings import Settings
@@ -80,6 +81,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/graph/preview")
     async def graph_preview() -> dict[str, Any]:
         return await repository.preview()
+
+    @app.get("/api/atlas")
+    async def atlas_snapshot() -> Any:
+        try:
+            return load_atlas_snapshot(resolved.atlas_data_dir)
+        except AtlasSnapshotError as error:
+            return JSONResponse(
+                {"error": {"code": "atlas_snapshot_unavailable", "message": str(error)}},
+                status_code=503,
+            )
 
     @app.post("/api/chat", response_model=ChatResponse)
     async def chat(payload: ChatRequest) -> ChatResponse:

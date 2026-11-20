@@ -1,0 +1,99 @@
+{
+ "paper_id": "oa:W4407123430",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) require significant GPU memory when processing long texts, with the key value (KV) cache consuming up to 70\\% of total memory during inference."
+   }
+  },
+  {
+   "surface": "KV",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) require significant GPU memory when processing long texts, with the key value (KV) cache consuming up to 70\\% of total memory during inference."
+   }
+  },
+  {
+   "surface": "ChunkKV",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce ChunkKV, which fundamentally reimagines KV cache compression by treating semantic chunks - rather than isolated tokens - as basic compression units."
+   }
+  },
+  {
+   "surface": "LongBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "Needle-In-A-HayStack",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "GSM8K",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "JailbreakV",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "code",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The code is available at \\href{https://github.com/NVIDIA/kvpress}{link}."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "70\","
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "26.5\","
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "8.7\","
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "link",
+   "surface": "https://github.com/NVIDIA/kvpress"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21563,
+ "eval_count": 138,
+ "ts": "2026-11-20T04:14:14Z"
+}

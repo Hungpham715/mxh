@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4385570218",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "FLAN-T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Given a collection of usage examples for a target word, and the corresponding data-driven usage clusters (i.e., word senses), a definition is generated for each usage with a specialised Flan-T5 language model, and the most prototypical definition in a usage cluster is chosen as the sense label."
+   }
+  },
+  {
+   "surface": "semantic change analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We demonstrate how the resulting sense labels can make existing approaches to semantic change analysis more interpretable, and how they can allow users — historical linguists, lexicographers, or social scientists — to explore and intuitively explain diachronic trajectories of word meaning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "FLAN-T5",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose using automatically generated natural language definitions of contextualised word usages as interpretable word and word sense representations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "FLAN-T5",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We demonstrate how the resulting sense labels can make existing approaches to semantic change analysis more interpretable, and how they can allow users — historical linguists, lexicographers, or social scientists — to explore and intuitively explain diachronic trajectories of word meaning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "semantic change analysis",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Beyond being human-readable, contextualised definitions also outperform token or usage sentence embeddings in word-in-context semantic similarity judgements, making them a new promising type of lexical representation for NLP.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FLAN-T5"
+  }
+ ],
+ "auto_added_endpoints": [
+  "FLAN-T5",
+  "semantic change analysis"
+ ],
+ "duration_ms": 13567,
+ "eval_count": 269,
+ "ts": "2026-11-20T03:12:28Z"
+}

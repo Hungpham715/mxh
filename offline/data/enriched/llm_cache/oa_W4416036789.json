@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4416036789",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments with four LMs and five multi-choice question answering (MCQA) datasets show that FUR is frequently able to precisely change the underlying models’ prediction for a given instance by unlearning key steps, indicating when a CoT is parametrically faithful."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce a framework for measuring parametric faithfulness of generated reasoning and propose Faithfulness by Unlearning Reasoning steps (FUR), an instance of this framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35841,
+ "eval_count": 118,
+ "ts": "2026-11-20T04:37:09Z"
+}

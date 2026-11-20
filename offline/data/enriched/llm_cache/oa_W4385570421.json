@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385570421",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "action condition inference",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose a task dubbed action condition inference, which extracts mentions of preconditions and postconditions of actions in instructional manuals."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "action condition inference",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose a task dubbed action condition inference, which extracts mentions of preconditions and postconditions of actions in instructional manuals.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "action condition inference"
+ ],
+ "duration_ms": 5922,
+ "eval_count": 117,
+ "ts": "2026-11-20T03:12:17Z"
+}

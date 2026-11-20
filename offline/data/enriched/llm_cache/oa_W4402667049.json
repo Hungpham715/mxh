@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4402667049",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "As language models (LMs) demonstrate their capabilities in various fields, their application to tasks requiring multi-round interactions has become increasingly popular."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ASSET"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "METHOD"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20601,
+ "eval_count": 94,
+ "ts": "2026-11-20T03:49:34Z"
+}

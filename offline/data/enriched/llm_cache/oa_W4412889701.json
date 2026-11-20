@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4412889701",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Furthermore, recent automatic taxonomy construction methods either (1) over-rely on a specific corpus, sacrificing generalizability, or (2) depend heavily on the general knowledge of large language models (LLMs) contained within their pre-training datasets, often overlooking the dynamic nature of evolving scientific domains."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "TaxoAdapt performs iterative hierarchical classification, expanding both the taxonomy width and depth based on corpus’ topical distribution.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27715,
+ "eval_count": 119,
+ "ts": "2026-11-20T04:17:18Z"
+}

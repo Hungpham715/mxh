@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4389520773",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SEAHORSE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce SEAHORSE, a dataset for multilingual, multifaceted summarization evaluation."
+   }
+  },
+  {
+   "surface": "TRUE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that metrics trained with SEAHORSE achieve strong performance on the out-of-domain meta-evaluation benchmarks TRUE (Honovich et al., 2022) and mFACE (Aharoni et al., 2022)."
+   }
+  },
+  {
+   "surface": "mFACE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that metrics trained with SEAHORSE achieve strong performance on the out-of-domain meta-evaluation benchmarks TRUE (Honovich et al., 2022) and mFACE (Aharoni et al., 2022)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "TRUE",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that metrics trained with SEAHORSE achieve strong performance on the out-of-domain meta-evaluation benchmarks TRUE (Honovich et al., 2022) and mFACE (Aharoni et al., 2022).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "mFACE",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that metrics trained with SEAHORSE achieve strong performance on the out-of-domain meta-evaluation benchmarks TRUE (Honovich et al., 2022) and mFACE (Aharoni et al., 2022).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "none",
+   "to": "SEAHORSE"
+  }
+ ],
+ "auto_added_endpoints": [
+  "TRUE",
+  "mFACE"
+ ],
+ "duration_ms": 27497,
+ "eval_count": 129,
+ "ts": "2026-11-20T03:41:58Z"
+}

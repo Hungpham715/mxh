@@ -1,0 +1,17 @@
+dimension,key,label,papers,authors,edges,components,lcc_size,lcc_ratio,C_obs,L_obs,C_rand,L_rand,sigma,verdict
+year,2023,2023,363,1673,4672,256,113,0.0675,0.9194,4.7184,0.1086,2.3935,4.294,no clear small-world indication
+year,2024,2024,364,1968,6998,287,66,0.0335,0.9203,2.7832,0.229,2.0003,2.889,"small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
+year,2025,2025,364,2142,10952,324,100,0.0467,0.9985,1.1471,,,,undetermined
+venue,venue:acl:2023.acl-long,Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),140,683,1875,106,46,0.0673,0.9305,2.5633,0.3422,1.9523,2.071,"small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
+venue,venue:acl:2023.emnlp-main,Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing,140,671,1714,121,24,0.0358,0.9577,1.7754,0.4229,1.6377,2.089,"small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
+venue,venue:acl:2024.acl-long,Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),140,811,3053,114,45,0.0555,0.9926,1.3182,0.8688,1.3182,1.143,no clear small-world indication
+venue,venue:acl:2024.emnlp-main,Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing,140,783,2429,134,24,0.0307,0.9294,1.6812,0.5714,1.5592,1.509,no clear small-world indication
+venue,venue:acl:2025.acl-long,Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),140,973,7284,124,100,0.1028,0.9985,1.1471,,,,undetermined
+venue,venue:acl:2025.emnlp-main,Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing,140,759,2112,132,26,0.0343,0.9738,1.6277,0.4428,1.6277,2.199,"small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
+venue,venue:arxiv:cs.CL,arXiv cs.CL (preprint),251,1241,4241,232,44,0.0355,0.9504,2.0645,0.4861,1.7727,1.679,no clear small-world indication
+topic,llm,llm,328,1860,6525,266,55,0.0296,0.9605,2.1724,0.2773,2.0079,3.202,"small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
+topic,mt,mt,25,118,288,22,11,0.0932,0.9192,1.3636,0.7303,1.3636,1.259,no clear small-world indication
+topic,qa,qa,24,122,320,23,10,0.082,1.0,1.0,,,,undetermined
+topic,retrieval,retrieval,27,157,468,25,16,0.1019,0.9153,1.8167,0.4642,1.6,1.736,no clear small-world indication
+topic,safety_eval,safety_eval,21,112,283,20,9,0.0804,,,,,,undetermined
+topic,summarization,summarization,26,123,324,23,12,0.0976,0.9576,1.0606,,,,undetermined

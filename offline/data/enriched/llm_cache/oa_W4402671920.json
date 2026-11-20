@@ -1,0 +1,109 @@
+{
+ "paper_id": "oa:W4402671920",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TCELongBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We establish a benchmark, named TCELongBench, to evaluate the proficiency of LLMs in handling temporal dynamics and understanding extensive text."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a novel approach using Large Language Models (LLMs) to systematically extract and analyze the event chain within TCE, characterized by their key points and timestamps."
+   }
+  },
+  {
+   "surface": "Temporal Complex Event (TCE)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The digital landscape is rapidly evolving with an ever-increasing volume of online news, emphasizing the need for swift and precise analysis of complex events.We refer to the complex events composed of many news articles over an extended period as Temporal Complex Event (TCE)."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a novel approach using Large Language Models (LLMs) to systematically extract and analyze the event chain within TCE, characterized by their key points and timestamps."
+   }
+  },
+  {
+   "surface": "News Articles",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The digital landscape is rapidly evolving with an ever-increasing volume of online news, emphasizing the need for swift and precise analysis of complex events.We refer to the complex events composed of many news articles over an extended period as Temporal Complex Event (TCE)."
+   }
+  },
+  {
+   "surface": "Temporal Dynamics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We establish a benchmark, named TCELongBench, to evaluate the proficiency of LLMs in handling temporal dynamics and understanding extensive text."
+   }
+  },
+  {
+   "surface": "Event Chain",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a novel approach using Large Language Models (LLMs) to systematically extract and analyze the event chain within TCE, characterized by their key points and timestamps."
+   }
+  },
+  {
+   "surface": "Key Points",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a novel approach using Large Language Models (LLMs) to systematically extract and analyze the event chain within TCE, characterized by their key points and timestamps."
+   }
+  },
+  {
+   "surface": "Timestamps",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a novel approach using Large Language Models (LLMs) to systematically extract and analyze the event chain within TCE, characterized by their key points and timestamps."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "RAG"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Retrieval-Augmented Generation (RAG)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20641,
+ "eval_count": 246,
+ "ts": "2026-11-20T03:56:13Z"
+}
