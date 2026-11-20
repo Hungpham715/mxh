@@ -68,6 +68,15 @@ Ví dụ thật từ corpus (span chứng cứ trích nguyên văn):
 
 Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy mẫu đánh giá; 18/18 nhãn được gán trong pilot được tác tử đánh giá là hợp lý; 32/50 bài UNKNOWN (luật ưu tiên precision). Sửa duy nhất: thêm mẫu 'speech translation' cho mt (v1.1), sau đó đóng băng luật trước khi lấy mẫu đánh giá.
 
+### Đánh giá ngữ nghĩa NER/RE của enrichment
+
+Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
+| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
 Thư mục data/processed/ gồm đúng 8 tệp JSONL UTF-8 (mỗi dòng một đối tượng JSON) và manifest.json được ghi cuối cùng. Bộ nạp chỉ chạy khi đủ tệp, đúng schema và đúng checksum.

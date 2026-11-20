@@ -30,6 +30,7 @@ uv run python -m src.cli queries                                  # example Cyph
 uv run python -m src.cli analyze --out output/analysis [--source neo4j]
 uv run python -m src.cli enrich --extractors rules,llm --workers 4
 uv run python -m src.cli audit-enrichment
+uv run python -m src.cli evaluate-enrichment-semantic  # exact NER/RE P/R/F1 on frozen reviewed slice
 uv run python -m src.cli import-enrichment --dry-run
 uv run python -m src.cli sample --per-type 20 --seed 20261107 [--tag prefix]
 uv run python -m src.cli score --labels evaluation/labels.csv [--tag prefix]
@@ -52,7 +53,8 @@ if any of our ids exists without our scope_id; no DELETE/DROP anywhere in the co
 - `output/analysis/` graph counts, author network JSON/CSV, PNG figures; `output/neo4j/` import reports
 - `data/enriched/` grounded Method/Dataset/Task nodes and four evidence-bearing edge types from rules + Qwen
 - `output/analysis/small_world_subnetworks.{json,csv,png}` year/venue/topic sensitivity and fragmentation
-- `evaluation/enrichment/` deterministic non-human source-grounding audit (not semantic human gold)
+- `evaluation/enrichment/` deterministic source-grounding audit plus the explicit semantic NER/RE reference slice;
+  `semantic_scores.json` is a developer-reviewed nonhuman slice, not independent human gold and not a full-corpus estimate
 - `evaluation/` samples, automated labels (`automated_preliminary`, NOT human), scores, audits, fix log,
   `manual_review_template.csv`
 - `report/final.pdf` (+ `final.md`, `sections/`), `execution_log.md`
@@ -66,4 +68,5 @@ cache and only retry the logged failures. Parallelism changes throughput only, n
 ## Known limitations
 Sampled corpus (1,091 papers) so the author network is fragmented; citations are only in-corpus (26);
 61% of papers have no topic (precision-first rules); affiliation edges that rely on OpenAlex only cannot be
-verified automatically; precision is an automated preliminary estimate pending human review.
+verified automatically; semantic NER/RE scores are reported only for the frozen 12-paper nonhuman reference slice;
+independent human semantic labels remain pending.

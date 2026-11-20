@@ -64,7 +64,20 @@ def test_small_world_runs_on_toy():
 
 
 def test_small_world_undetermined_on_tiny():
-    assert metrics.small_world(_g())["status"] == "undetermined"
+    sw = metrics.small_world(_g())
+    assert sw["status"] == "undetermined"
+    assert sw["whole_network_distance"]["reachable_pair_fraction"] < 1
+    assert sw["whole_network_distance"]["global_efficiency"] > 0
+
+
+def test_whole_network_distance_handles_disconnected_pairs():
+    g = nx.path_graph(3)
+    g.add_node(3)
+    profile = metrics.whole_network_distance(g)
+    assert profile["reachable_pair_fraction"] == 0.5
+    assert profile["component_weighted_average_shortest_path"] == 1.3333
+    assert profile["harmonic_path_length_reachable"] == 1.2
+    assert profile["global_efficiency"] == 0.416667
 
 
 def test_subnetwork_sensitivity_uses_corpus_slices():

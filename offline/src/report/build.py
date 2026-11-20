@@ -55,6 +55,7 @@ def build_report(out_pdf: Path) -> int:
     scores = _j(EVAL / "scores.json") or {}
     scores_post = _j(EVAL / "scores_postfix.json")
     scores_ind = _j(EVAL / "scores_independent_v2.json")
+    semantic = _j(EVAL / "enrichment" / "semantic_scores.json")
     struct = _j(EVAL / "structural_checks.json") or {}
     audits = _j(EVAL / "source_audits.json") or {}
     queries = _j(NEO / "example_queries.json")
@@ -178,6 +179,16 @@ def build_report(out_pdf: Path) -> int:
     if pilot:
         d.p(f"Pilot luật: {pilot.get('n')} bài đầu tiên theo ID đã được xem trước khi lấy mẫu đánh giá; "
             f"{pilot.get('summary', '')}")
+    if semantic:
+        d.h3("Đánh giá ngữ nghĩa NER/RE của enrichment")
+        d.p("Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. "
+            "Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.")
+        d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], [
+            ["Entity (micro)", _fmt(semantic["entity"]["micro"]["precision"]), _fmt(semantic["entity"]["micro"]["recall"]),
+             _fmt(semantic["entity"]["micro"]["f1"]), _fmt(semantic["entity"]["micro"]["support"])],
+            ["Relation (micro)", _fmt(semantic["relation"]["micro"]["precision"]), _fmt(semantic["relation"]["micro"]["recall"]),
+             _fmt(semantic["relation"]["micro"]["f1"]), _fmt(semantic["relation"]["micro"]["support"])],
+        ], [0.36, 0.16, 0.16, 0.16, 0.16])
 
     # ---------------------------------------------------------------- 4
     d.h2("4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j")
@@ -308,8 +319,19 @@ def build_report(out_pdf: Path) -> int:
             ["LCC (nút / cạnh)", f"{_fmt(sw['lcc_nodes'])} / {_fmt(sw['lcc_edges'])}"],
             ["C_obs (average clustering)", _fmt(sw["C_obs"])], ["L_obs (average shortest path)", f"{_fmt(sw['L_obs'])} ({sw['L_method']})"],
             ["C_rand (TB {} đồ thị ngẫu nhiên)".format(sw["n_random"]), _fmt(sw["C_rand"])], ["L_rand", _fmt(sw["L_rand"])],
+            ["L_obs / L_rand", _fmt(sw.get("L_obs_over_L_rand"))],
             ["σ = (C_obs/C_rand)/(L_obs/L_rand)", _fmt(sw["sigma"])], ["Kết luận", sw["verdict"]],
         ], [0.5, 0.5])
+        distance = sw.get("whole_network_distance") or {}
+        d.table(["Mô tả toàn mạng phân mảnh", "Giá trị"], [
+            ["Tỷ lệ cặp có thể đi tới", _fmt(distance.get("reachable_pair_fraction"))],
+            ["Mean shortest path trong các cặp reachable", _fmt(distance.get("component_weighted_average_shortest_path"))],
+            ["Harmonic path length (reachable pairs)", _fmt(distance.get("harmonic_path_length_reachable"))],
+            ["Global efficiency (unreachable = 0)", _fmt(distance.get("global_efficiency"))],
+        ], [0.65, 0.35])
+        d.p(f"L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC {_fmt(sw.get('lcc_nodes'))} nút. Toàn mạng có "
+            f"{_fmt(st.get('connected_components'))} thành phần và chỉ {_fmt(distance.get('reachable_pair_fraction'))} cặp có đường đi; vì vậy các chỉ số này mô tả sự phân mảnh, "
+            "không biến thành bằng chứng small-world toàn mạng.")
         d.p("Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: " +
             "; ".join(sw.get("limitations", [])) + ". Không có kiểm định thống kê nên σ chỉ mang tính mô tả.")
         d.img(AN / "small_world.png", "Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.", 13)
@@ -363,18 +385,20 @@ def build_report(out_pdf: Path) -> int:
         "mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.")
     d.bullets([
         "Phép chiếu tác giả bị phân mảnh do lấy mẫu ~1.100 bài trên hàng chục nghìn bài; mạng thật dày hơn nhiều.",
+        "Small-world chỉ được kiểm trên LCC: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần; harmonic path/global efficiency toàn mạng được báo riêng và không dùng để khẳng định small-world.",
         "Tác giả không khớp OpenAlex được giữ ở mức một bài (source_only), làm giảm số cạnh xuyên bài nhưng tránh gộp nhầm.",
         "Citation chỉ là trích dẫn nội bộ corpus, không đo toàn bộ ảnh hưởng học thuật.",
         "Phân loại chủ đề bằng luật có độ bao phủ hạn chế (nhiều bài UNKNOWN) – chấp nhận để giữ precision.",
         "ORG_COAUTHORED_WITH là đồng xuất hiện trên bài, không phải thỏa thuận hợp tác; ACTIVE_IN chỉ xét trong corpus.",
-        "Ngưỡng “2000 nghìn nút” chưa được giảng viên xác nhận; precision theo người gán nhãn chưa đo.",
+        "Ngưỡng “2000 nghìn nút” chưa được giảng viên xác nhận; semantic NER/RE hiện chỉ có reference slice nonhuman 12 bài, chưa có independent human gold toàn corpus.",
     ])
     d.p("Lệnh tái hiện (cần .env với các biến ở mục 5):")
     d.code("uv sync\nuv run pytest -q\nuv run python -m src.cli fetch --config configs/scope.yaml\n"
            "uv run python -m src.cli prepare --config configs/topics.yaml\nuv run python -m src.cli validate --data data/processed\n"
            "uv run python -m src.cli import --data data/processed --dry-run\nuv run python -m src.cli import --data data/processed\n"
            "uv run python -m src.cli analyze --out output/analysis\nuv run python -m src.cli sample --per-type 20 --seed 20261107\n"
-           "uv run python -m src.cli score --labels evaluation/labels.csv\nuv run python -m src.cli report --out report/final.pdf")
+           "uv run python -m src.cli score --labels evaluation/labels.csv\nuv run python -m src.cli evaluate-enrichment-semantic\n"
+           "uv run python -m src.cli report --out report/final.pdf")
     d.p(f"Hash manifest: papers.jsonl SHA-256 = {manifest['checksums']['papers.jsonl']}. "
         "Link GitHub: https://github.com/Hungpham715/mxh (mã nguồn, dữ liệu đã xử lý và các tệp đầu ra phân tích).")
     d.p("Tài liệu tham khảo: ACL Anthology (aclanthology.org/faq/api), arXiv API User Manual (info.arxiv.org/help/api), "

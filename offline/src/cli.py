@@ -123,6 +123,11 @@ def cmd_audit_enrichment(a: argparse.Namespace) -> int:
     return 0 if summary["failed_edges"] == 0 else 1
 
 
+def cmd_evaluate_enrichment_semantic(a: argparse.Namespace) -> int:
+    from src.enrichment.semantic_eval import run_semantic_eval
+    return run_semantic_eval(Path(a.data), Path(a.processed), Path(a.gold), Path(a.out))
+
+
 def main(argv: list[str] | None = None) -> int:
     load_env()
     setup_logging()
@@ -191,6 +196,12 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--per-type", type=int, default=30)
     s.add_argument("--seed", type=int, default=20261120)
     s.set_defaults(fn=cmd_audit_enrichment)
+    s = sub.add_parser("evaluate-enrichment-semantic", help="exact NER/RE P/R/F1 on a frozen semantic reference slice")
+    s.add_argument("--data", default=str(ROOT / "data" / "enriched"))
+    s.add_argument("--processed", default=str(PROCESSED))
+    s.add_argument("--gold", default=str(ROOT / "evaluation" / "enrichment" / "semantic_gold_nonhuman.jsonl"))
+    s.add_argument("--out", default=str(ROOT / "evaluation" / "enrichment" / "semantic_scores.json"))
+    s.set_defaults(fn=cmd_evaluate_enrichment_semantic)
     args = p.parse_args(argv)
     try:
         return int(args.fn(args) or 0)

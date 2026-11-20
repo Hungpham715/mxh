@@ -1,0 +1,576 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "/home/hung/YEAR_4/MXH/GraphRAG/offline/evaluation/enrichment/semantic_gold_nonhuman.jsonl",
+    "processed_papers": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/processed/papers.jsonl",
+    "data_dir": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/enriched",
+    "papers_evaluated": 12,
+    "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 48,
+      "predicted": 13,
+      "tp": 11,
+      "fp": 2,
+      "fn": 37,
+      "precision": 0.8462,
+      "recall": 0.2292,
+      "f1": 0.3607
+    },
+    "macro_f1": 0.3526,
+    "per_type": {
+      "dataset": {
+        "support": 12,
+        "predicted": 6,
+        "tp": 5,
+        "fp": 1,
+        "fn": 7,
+        "precision": 0.8333,
+        "recall": 0.4167,
+        "f1": 0.5556
+      },
+      "method": {
+        "support": 21,
+        "predicted": 5,
+        "tp": 5,
+        "fp": 0,
+        "fn": 16,
+        "precision": 1.0,
+        "recall": 0.2381,
+        "f1": 0.3846
+      },
+      "task": {
+        "support": 15,
+        "predicted": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 14,
+        "precision": 0.5,
+        "recall": 0.0667,
+        "f1": 0.1176
+      }
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 52,
+      "predicted": 30,
+      "tp": 23,
+      "fp": 7,
+      "fn": 29,
+      "precision": 0.7667,
+      "recall": 0.4423,
+      "f1": 0.561
+    },
+    "macro_f1": 0.534,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 17,
+        "predicted": 11,
+        "tp": 6,
+        "fp": 5,
+        "fn": 11,
+        "precision": 0.5455,
+        "recall": 0.3529,
+        "f1": 0.4286
+      },
+      "EVALUATED_ON": {
+        "support": 11,
+        "predicted": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 7,
+        "precision": 0.6667,
+        "recall": 0.3636,
+        "f1": 0.4706
+      },
+      "USES_METHOD": {
+        "support": 24,
+        "predicted": 13,
+        "tp": 13,
+        "fp": 0,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.5417,
+        "f1": 0.7027
+      }
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4313483670",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:transformer"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4313483670",
+          "method:transformer"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4313483977",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:gender-bias-classification"
+        ],
+        [
+          "task",
+          "task:gender-bias-detection"
+        ],
+        [
+          "task",
+          "task:gender-bias-mitigation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4313483977",
+          "task:gender-bias-classification"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4313483977",
+          "task:gender-bias-detection"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4313483977",
+          "task:gender-bias-mitigation"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4353111756",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:quora"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4353111756",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "EVALUATED_ON",
+          "oa:W4353111756",
+          "dataset:quora"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385565471",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:convolutional-sequence-to-sequence"
+        ],
+        [
+          "method",
+          "method:recursive-network"
+        ],
+        [
+          "method",
+          "method:rnn"
+        ],
+        [
+          "method",
+          "method:transformer"
+        ],
+        [
+          "task",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4385565471",
+          "method:convolutional-sequence-to-sequence"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385565471",
+          "method:recursive-network"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385565471",
+          "method:rnn"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385570154",
+      "entity_fp": [
+        [
+          "task",
+          "task:alignment"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:must-c"
+        ],
+        [
+          "method",
+          "method:cross-modal-mixup"
+        ],
+        [
+          "method",
+          "method:optimal-transport"
+        ],
+        [
+          "task",
+          "task:speech-translation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570154",
+          "task:alignment"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570154",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570154",
+          "task:speech-translation"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4385570154",
+          "dataset:must-c"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385570154",
+          "method:cross-modal-mixup"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385570154",
+          "method:optimal-transport"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385570513",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:grounding-persona-prediction"
+        ],
+        [
+          "task",
+          "task:multimodal-dialogue"
+        ],
+        [
+          "task",
+          "task:next-response-prediction"
+        ],
+        [
+          "task",
+          "task:speaker-identification"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570513",
+          "task:dialogue"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570513",
+          "task:grounding-persona-prediction"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570513",
+          "task:multimodal-dialogue"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570513",
+          "task:next-response-prediction"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570513",
+          "task:speaker-identification"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385570844",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:news"
+        ],
+        [
+          "method",
+          "method:data-augmentation"
+        ],
+        [
+          "task",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "EVALUATED_ON",
+          "oa:W4385570844",
+          "dataset:news"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389520334",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:big-bench"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:bbh"
+        ],
+        [
+          "dataset",
+          "dataset:bbq"
+        ],
+        [
+          "method",
+          "method:imitation-learning"
+        ],
+        [
+          "method",
+          "method:salam"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "EVALUATED_ON",
+          "oa:W4389520334",
+          "dataset:big-bench"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "EVALUATED_ON",
+          "oa:W4389520334",
+          "dataset:bbh"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389520334",
+          "dataset:bbq"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520334",
+          "method:imitation-learning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520334",
+          "method:salam"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389520398",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:alpaca"
+        ],
+        [
+          "method",
+          "method:beam-search"
+        ],
+        [
+          "method",
+          "method:chatgpt"
+        ],
+        [
+          "method",
+          "method:instruction-tuning"
+        ],
+        [
+          "method",
+          "method:mbr-decoding"
+        ],
+        [
+          "method",
+          "method:temperature-sampling"
+        ],
+        [
+          "task",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4389520398",
+          "method:mbr-decoding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520398",
+          "method:temperature-sampling"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389524170",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:hvd"
+        ],
+        [
+          "dataset",
+          "dataset:qure"
+        ],
+        [
+          "method",
+          "method:presque"
+        ],
+        [
+          "task",
+          "task:generalized-quantifier-comprehension"
+        ],
+        [
+          "task",
+          "task:natural-language-inference"
+        ],
+        [
+          "task",
+          "task:quantitative-reasoning"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524170",
+          "task:reasoning"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389524170",
+          "dataset:wikipedia"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524170",
+          "task:generalized-quantifier-comprehension"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524170",
+          "task:quantitative-reasoning"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389524170",
+          "dataset:hvd"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389524170",
+          "dataset:qure"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389524170",
+          "method:presque"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389524318",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "method",
+          "method:instruction-tuning"
+        ],
+        [
+          "task",
+          "task:summarization"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": []
+    },
+    {
+      "paper_id": "arxiv:2507.02982",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:math-word-problem-solving"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "arxiv:2507.02982",
+          "task:math-word-problem-solving"
+        ]
+      ]
+    }
+  ]
+}

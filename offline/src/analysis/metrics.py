@@ -94,11 +94,58 @@ def avg_shortest_path(g: nx.Graph, max_exact: int, rng: random.Random, n_sources
     return tot / cnt, f"approx: BFS from {len(srcs)} random sources (seeded)"
 
 
+def whole_network_distance(g: nx.Graph) -> dict[str, Any]:
+    """Distance descriptors that remain defined when the network is disconnected.
+
+    A single average shortest path over all node pairs is undefined for a fragmented
+    graph.  We therefore report the reachable-pair fraction, component-weighted mean
+    path, harmonic mean over reachable pairs, and global efficiency (unreachable pairs
+    contribute zero).  These are descriptive and do not turn fragmentation into a
+    small-world claim.
+    """
+    n = g.number_of_nodes()
+    if n <= 1:
+        return {
+            "nodes": n,
+            "reachable_pair_fraction": 0.0,
+            "reachable_pairs_ordered": 0,
+            "all_pairs_ordered": 0,
+            "component_weighted_average_shortest_path": None,
+            "harmonic_path_length_reachable": None,
+            "global_efficiency": 0.0,
+        }
+    reachable_pairs = 0
+    distance_sum = 0.0
+    reciprocal_sum = 0.0
+    for component in nx.connected_components(g):
+        size = len(component)
+        reachable_pairs += size * (size - 1)
+        subgraph = g.subgraph(component)
+        for _source, distances in nx.all_pairs_shortest_path_length(subgraph):
+            for distance in distances.values():
+                if distance:
+                    distance_sum += distance
+                    reciprocal_sum += 1.0 / distance
+    all_pairs = n * (n - 1)
+    return {
+        "nodes": n,
+        "reachable_pair_fraction": round(reachable_pairs / all_pairs, 4),
+        "reachable_pairs_ordered": reachable_pairs,
+        "all_pairs_ordered": all_pairs,
+        "component_weighted_average_shortest_path": round(distance_sum / reachable_pairs, 4)
+        if reachable_pairs else None,
+        "harmonic_path_length_reachable": round(reachable_pairs / reciprocal_sum, 4)
+        if reciprocal_sum else None,
+        "global_efficiency": round(reciprocal_sum / all_pairs, 6),
+    }
+
+
 def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int = 3000,
                 n_sources: int = 400) -> dict[str, Any]:
+    whole_distance = whole_network_distance(g)
     comps = sorted(nx.connected_components(g), key=len, reverse=True)
     if not comps or len(comps[0]) < 10:
-        return {"status": "undetermined", "reason": "LCC too small"}
+        return {"status": "undetermined", "reason": "LCC too small", "whole_network_distance": whole_distance}
     # Reproducibility: build the LCC explicitly with integer labels instead of
     # g.subgraph(...). nx.Graph.subgraph internally iterates a *set* of the requested
     # nodes, so its node order (and therefore the seeded double-edge-swap sequence below)
@@ -154,6 +201,7 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
             "C_obs": round(c_obs, 4),
             "L_obs": round(l_obs, 4),
             "L_method": l_method,
+            "whole_network_distance": whole_distance,
         }
     c_rand = sum(x["C"] for x in rand) / len(rand)
     l_rand = sum(x["L"] for x in rand) / len(rand)
@@ -169,9 +217,12 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
             "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
             "n_random": len(rand), "random_graphs": [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in rand],
             "C_rand": round(c_rand, 4), "L_rand": round(l_rand, 4),
+            "L_obs_over_L_rand": round(l_obs / l_rand, 4) if l_rand else None,
             "sigma": round(sigma, 3) if sigma is not None else None, "verdict": verdict,
+            "whole_network_distance": whole_distance,
             "limitations": ["Multi-author papers create cliques that mechanically raise clustering.",
                             "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+                            "The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.",
                             "No significance test performed; sigma is descriptive only."]}
 
 

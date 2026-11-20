@@ -77,6 +77,7 @@ def analyze_subnetworks(
     *,
     n_random: int = 3,
     min_papers: int = 10,
+    whole_distance: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Compare whole-network fragmentation with year, venue, and topic slices."""
     authors = {row["id"]: row for row in rows["authors.jsonl"]}
@@ -136,6 +137,7 @@ def analyze_subnetworks(
         },
         "whole_network_fragmentation": {
             **whole,
+            "distance": whole_distance if whole_distance is not None else metrics.whole_network_distance(whole_graph),
             "authors_outside_lcc": whole["authors_total"] - whole["lcc_size"],
             "authors_outside_lcc_ratio": round(1 - whole["lcc_ratio_of_all_authors"], 4),
             "interpretation": (

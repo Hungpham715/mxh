@@ -90,6 +90,15 @@ Ví dụ thật từ corpus (span chứng cứ trích nguyên văn):
 
 Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy mẫu đánh giá; 18/18 nhãn được gán trong pilot được tác tử đánh giá là hợp lý; 32/50 bài UNKNOWN (luật ưu tiên precision). Sửa duy nhất: thêm mẫu 'speech translation' cho mt (v1.1), sau đó đóng băng luật trước khi lấy mẫu đánh giá.
 
+### Đánh giá ngữ nghĩa NER/RE của enrichment
+
+Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
+| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
 Thư mục data/processed/ gồm đúng 8 tệp JSONL UTF-8 (mỗi dòng một đối tượng JSON) và manifest.json được ghi cuối cùng. Bộ nạp chỉ chạy khi đủ tệp, đúng schema và đúng checksum.
@@ -161,7 +170,7 @@ Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count
 - Kiểu quan hệ lấy từ whitelist 10 tên cố định, Cypher tham số hóa UNWIND $rows theo lô 300 dòng, có retry cho lỗi tạm thời.
 - Các cạnh suy diễn được tính một lần trong Python từ snapshot đã kiểm (src/graph/derive.py) rồi nạp lên Neo4j; nhờ vậy phân tích cục bộ và graph trên cloud dùng đúng một tập cạnh.
 
-Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.26.2; trước import instance có 7.134 nút và 30.971 quan hệ (0 nút không thuộc dự án).
+Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.27-aura; trước import instance có 8.707 nút và 34.459 quan hệ (1.573 nút không thuộc dự án).
 
 ## 6. Graph trên AuraDB và phân tích mạng đồng tác giả
 
@@ -359,10 +368,20 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 | L_obs (average shortest path) | 10.9876 (exact) |
 | C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0143 |
 | L_rand | 3.3092 |
+| L_obs / L_rand | 3.3203 |
 | σ = (C_obs/C_rand)/(L_obs/L_rand) | 19.225 |
 | Kết luận | no clear small-world indication |
 
-Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
+| Mô tả toàn mạng phân mảnh | Giá trị |
+|---|---|
+| Tỷ lệ cặp có thể đi tới | 0.0346 |
+| Mean shortest path trong các cặp reachable | 10.3269 |
+| Harmonic path length (reachable pairs) | 6.047 |
+| Global efficiency (unreachable = 0) | 0.0057 |
+
+L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC 970 nút. Toàn mạng có 810 thành phần và chỉ 0.0346 cặp có đường đi; vì vậy các chỉ số này mô tả sự phân mảnh, không biến thành bằng chứng small-world toàn mạng.
+
+Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
 
 ![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](../output/analysis/small_world.png)
 
@@ -463,11 +482,12 @@ Phương pháp khoảng tin cậy: reliable-kg-estimation: stratified Wilson / A
 Đạt được: pipeline tái hiện được từ nguồn thật tới graph, 10 loại quan hệ có dữ liệu và chứng cứ theo bài, phân tích mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.
 
 - Phép chiếu tác giả bị phân mảnh do lấy mẫu ~1.100 bài trên hàng chục nghìn bài; mạng thật dày hơn nhiều.
+- Small-world chỉ được kiểm trên LCC: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần; harmonic path/global efficiency toàn mạng được báo riêng và không dùng để khẳng định small-world.
 - Tác giả không khớp OpenAlex được giữ ở mức một bài (source_only), làm giảm số cạnh xuyên bài nhưng tránh gộp nhầm.
 - Citation chỉ là trích dẫn nội bộ corpus, không đo toàn bộ ảnh hưởng học thuật.
 - Phân loại chủ đề bằng luật có độ bao phủ hạn chế (nhiều bài UNKNOWN) – chấp nhận để giữ precision.
 - ORG_COAUTHORED_WITH là đồng xuất hiện trên bài, không phải thỏa thuận hợp tác; ACTIVE_IN chỉ xét trong corpus.
-- Ngưỡng “2000 nghìn nút” chưa được giảng viên xác nhận; precision theo người gán nhãn chưa đo.
+- Ngưỡng “2000 nghìn nút” chưa được giảng viên xác nhận; semantic NER/RE hiện chỉ có reference slice nonhuman 12 bài, chưa có independent human gold toàn corpus.
 
 Lệnh tái hiện (cần .env với các biến ở mục 5):
 
@@ -482,6 +502,7 @@ uv run python -m src.cli import --data data/processed
 uv run python -m src.cli analyze --out output/analysis
 uv run python -m src.cli sample --per-type 20 --seed 20261107
 uv run python -m src.cli score --labels evaluation/labels.csv
+uv run python -m src.cli evaluate-enrichment-semantic
 uv run python -m src.cli report --out report/final.pdf
 ```
 

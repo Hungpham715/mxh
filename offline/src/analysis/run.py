@@ -101,7 +101,9 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
             h["evidence_urls"] = [papers[p]["source_url"] for p in h["evidence_paper_ids"]]
 
     sw = metrics.small_world(g)
-    sw_sensitivity = subnetworks.analyze_subnetworks(rows, g)
+    sw_sensitivity = subnetworks.analyze_subnetworks(
+        rows, g, whole_distance=sw.get("whole_network_distance")
+    )
     result = {
         "projection": "Author-COAUTHORED_WITH-Author only (undirected, simple, weight = shared papers)",
         "source": source, "stats": stats,

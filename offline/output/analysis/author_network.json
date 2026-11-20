@@ -1207,11 +1207,22 @@
     ],
     "C_rand": 0.0143,
     "L_rand": 3.3092,
+    "L_obs_over_L_rand": 3.3203,
     "sigma": 19.225,
     "verdict": "no clear small-world indication",
+    "whole_network_distance": {
+      "nodes": 5430,
+      "reachable_pair_fraction": 0.0346,
+      "reachable_pairs_ordered": 1019532,
+      "all_pairs_ordered": 29479470,
+      "component_weighted_average_shortest_path": 10.3269,
+      "harmonic_path_length_reachable": 6.047,
+      "global_efficiency": 0.005719
+    },
     "limitations": [
       "Multi-author papers create cliques that mechanically raise clustering.",
       "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+      "The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.",
       "No significance test performed; sigma is descriptive only."
     ]
   },

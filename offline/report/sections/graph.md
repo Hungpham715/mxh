@@ -6,7 +6,7 @@
 - Kiểu quan hệ lấy từ whitelist 10 tên cố định, Cypher tham số hóa UNWIND $rows theo lô 300 dòng, có retry cho lỗi tạm thời.
 - Các cạnh suy diễn được tính một lần trong Python từ snapshot đã kiểm (src/graph/derive.py) rồi nạp lên Neo4j; nhờ vậy phân tích cục bộ và graph trên cloud dùng đúng một tập cạnh.
 
-Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.26.2; trước import instance có 7.134 nút và 30.971 quan hệ (0 nút không thuộc dự án).
+Preflight AuraDB: RETURN 1 = 1, máy chủ Neo4j/5.27-aura; trước import instance có 8.707 nút và 34.459 quan hệ (1.573 nút không thuộc dự án).
 
 ## 6. Graph trên AuraDB và phân tích mạng đồng tác giả
 
@@ -204,10 +204,20 @@ Ví dụ đường ngắn nhất độ dài 5 giữa hai tác giả trong LCC; m
 | L_obs (average shortest path) | 10.9876 (exact) |
 | C_rand (TB 5 đồ thị ngẫu nhiên) | 0.0143 |
 | L_rand | 3.3092 |
+| L_obs / L_rand | 3.3203 |
 | σ = (C_obs/C_rand)/(L_obs/L_rand) | 19.225 |
 | Kết luận | no clear small-world indication |
 
-Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
+| Mô tả toàn mạng phân mảnh | Giá trị |
+|---|---|
+| Tỷ lệ cặp có thể đi tới | 0.0346 |
+| Mean shortest path trong các cặp reachable | 10.3269 |
+| Harmonic path length (reachable pairs) | 6.047 |
+| Global efficiency (unreachable = 0) | 0.0057 |
+
+L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC 970 nút. Toàn mạng có 810 thành phần và chỉ 0.0346 cặp có đường đi; vì vậy các chỉ số này mô tả sự phân mảnh, không biến thành bằng chứng small-world toàn mạng.
+
+Đồ thị ngẫu nhiên giữ nguyên dãy bậc bằng hoán đổi cạnh kép (10·m lần), 5 seed cố định. Hạn chế: Multi-author papers create cliques that mechanically raise clustering.; Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.; The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.; No significance test performed; sigma is descriptive only.. Không có kiểm định thống kê nên σ chỉ mang tính mô tả.
 
 ![Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.](../output/analysis/small_world.png)
 
