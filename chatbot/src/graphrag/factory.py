@@ -40,6 +40,7 @@ def build_dependencies(settings: Settings):
             password=settings.neo4j_password,
             database=settings.neo4j_database,
             scope_id=settings.neo4j_scope_id,
+            enrichment_scope_id=settings.neo4j_enrichment_scope_id,
             cache_ttl_seconds=settings.entity_cache_ttl_seconds,
             timeout_seconds=settings.request_timeout_seconds,
         )

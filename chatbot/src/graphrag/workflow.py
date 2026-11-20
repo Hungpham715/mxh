@@ -20,6 +20,7 @@ from graphrag.models import (
     CandidateEntity,
     ChatRequest,
     ChatResponse,
+    IntentName,
     NextDecision,
     QueryIntent,
     QueryState,
@@ -89,6 +90,29 @@ class GraphRAGWorkflow:
         # give the LLM one focused verification turn. Intent selection remains with the model;
         # code only constrains accepted entities to trusted catalog spans.
         catalog_mentions = await self.linker.catalog_mentions(request.question)
+        weak_without_catalog = not catalog_mentions and (
+            (intent.route == RouteName.CLARIFY and (intent.intent.value == "unknown" or not intent.entities))
+            or (
+                intent.route == RouteName.GRAPH_QA
+                and bool(intent.entities)
+                and all(entity.type == "Unknown" for entity in intent.entities)
+            )
+        )
+        if weak_without_catalog:
+            verified_route, route_calls = await self.parser.verify_route_without_catalog(
+                request.question, history, intent
+            )
+            state.llm_calls += route_calls
+            if verified_route == RouteName.OUT_OF_SCOPE:
+                intent = intent.model_copy(
+                    update={
+                        "route": RouteName.OUT_OF_SCOPE,
+                        "intent": IntentName.UNKNOWN,
+                        "entities": [],
+                        "missing_fields": [],
+                        "unsupported": True,
+                    }
+                )
         required = INTENT_REQUIRED_MENTIONS.get(intent.intent.value)
         catalog_conflict = (
             required is not None

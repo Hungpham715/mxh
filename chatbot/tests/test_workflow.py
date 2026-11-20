@@ -88,6 +88,25 @@ async def test_all_catalog_actions_execute_on_fake_graph() -> None:
         QueryAction.ORG_COLLABORATIONS: {"institution_id": "inst:hust"},
         QueryAction.AUTHOR_PATH: {"author_id": "author:an", "other_author_id": "author:binh"},
         QueryAction.NETWORK_TOP: {},
+        QueryAction.PAPER_METHODS: {"paper_id": "paper:rag"},
+        QueryAction.METHOD_PAPERS: {
+            "method_id": "method:graphrag",
+            "year_from": None,
+            "year_to": None,
+        },
+        QueryAction.PAPER_DATASETS: {"paper_id": "paper:rag"},
+        QueryAction.DATASET_PAPERS: {
+            "dataset_id": "dataset:nlpgraph-bench",
+            "year_from": None,
+            "year_to": None,
+        },
+        QueryAction.PAPER_TASKS: {"paper_id": "paper:rag"},
+        QueryAction.TASK_PAPERS: {
+            "task_id": "task:question-answering",
+            "year_from": None,
+            "year_to": None,
+        },
+        QueryAction.METHOD_TRENDS: {"year_from": None, "year_to": None},
     }
     for action in QueryAction:
         result = await graph.execute(
@@ -110,6 +129,42 @@ async def test_coauthor_affiliation_uses_only_shared_paper_evidence() -> None:
     assert len(binh_rows) == 1
     assert binh_rows[0]["object_id"] == "inst:vnu"
     assert binh_rows[0]["paper_ids"] == ["paper:rag"]
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize(
+    ("question", "intent", "expected_value"),
+    [
+        ("Bài Graph Evidence for NLP sử dụng phương pháp nào?", "paper_methods", "GraphRAG"),
+        ("Những bài nào sử dụng phương pháp GraphRAG?", "method_papers", "Graph Evidence for NLP"),
+        ("Bài Graph Evidence for NLP được đánh giá trên bộ dữ liệu nào?", "paper_datasets", "NLPGraph Bench"),
+        ("Những bài nào được đánh giá trên NLPGraph Bench?", "dataset_papers", "Graph Evidence for NLP"),
+        ("Bài Graph Evidence for NLP giải quyết bài toán nào?", "paper_tasks", "Question Answering"),
+        ("Những bài nào giải quyết bài toán Question Answering?", "task_papers", "Graph Evidence for NLP"),
+    ],
+)
+async def test_enrichment_questions_use_graph_evidence(
+    dependencies, question: str, intent: str, expected_value: str
+) -> None:
+    _, _, workflow = dependencies
+    response = await workflow.run(ChatRequest(question=question, debug=True))
+    assert response.status == "answered"
+    assert response.parsed_intent == intent
+    assert expected_value in response.answer
+    assert response.sources
+    assert response.trace and response.trace[0].action == intent
+
+
+@pytest.mark.asyncio
+async def test_method_trends_return_db_derived_counts(dependencies) -> None:
+    _, _, workflow = dependencies
+    response = await workflow.run(
+        ChatRequest(question="Phương pháp nào được dùng nhiều nhất trong corpus?", debug=True)
+    )
+    assert response.status == "answered"
+    assert response.parsed_intent == "method_trends"
+    assert "(1 bài)" in response.answer
+    assert response.sources
 
 
 class DuplicatePlanner:

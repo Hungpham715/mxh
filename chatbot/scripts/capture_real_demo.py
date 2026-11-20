@@ -47,6 +47,26 @@ CASES = [
         "question": "Nguyen Van Khong Ton Tai có những bài báo nào?",
         "expected": "explicit not-found or clarification; no invented papers",
     },
+    {
+        "case_id": "enrichment_paper_methods",
+        "kind": "text_mining_enrichment",
+        "question": (
+            "Bài Continual Gradient Low-Rank Projection Fine-Tuning for LLMs sử dụng phương pháp nào?"
+        ),
+        "expected": "Paper to Method facts from USES_METHOD with paper evidence",
+    },
+    {
+        "case_id": "enrichment_method_papers",
+        "kind": "text_mining_enrichment",
+        "question": "Những bài nào sử dụng phương pháp Fine-Tuning năm 2025?",
+        "expected": "Method to Paper retrieval with a year filter and paper evidence",
+    },
+    {
+        "case_id": "enrichment_method_trends",
+        "kind": "text_mining_analysis",
+        "question": "Phương pháp nào được dùng nhiều nhất năm 2025?",
+        "expected": "ranked Method nodes with database-derived distinct paper counts",
+    },
 ]
 
 
@@ -77,6 +97,20 @@ def _contract_error(case_id: str, payload: dict[str, Any]) -> str | None:
         )
         if not clean_refusal:
             return "missing entity case did not refuse cleanly"
+    enrichment_actions = {
+        "enrichment_paper_methods": "paper_methods",
+        "enrichment_method_papers": "method_papers",
+        "enrichment_method_trends": "method_trends",
+    }
+    if case_id in enrichment_actions:
+        evidence_backed = (
+            actions == [enrichment_actions[case_id]]
+            and payload.get("status") in {"answered", "partial"}
+            and payload.get("facts_count", 0) > 0
+            and bool(payload.get("sources"))
+        )
+        if not evidence_backed:
+            return f"expected evidence-backed {enrichment_actions[case_id]}, got {actions}"
     return None
 
 
@@ -156,6 +190,7 @@ async def capture(output_dir: Path, case_ids: set[str] | None = None) -> int:
             "llm_provider": settings.llm_provider,
             "model": settings.ollama_model,
             "scope_id": settings.neo4j_scope_id,
+            "enrichment_scope_id": settings.neo4j_enrichment_scope_id,
             "credential_values_recorded": False,
         },
         "cases": len(records),

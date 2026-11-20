@@ -20,6 +20,7 @@ from src.graph.integrity import (
     check_snapshot_node_coverage,
     finalize_edge_checks,
     new_edge_state,
+    write_error_csvs,
 )
 
 TABLE_LABELS = {
@@ -82,6 +83,18 @@ def test_clean_fixture_graph_passes(clean_graph):
     ctx, node_rows, edge_rows = clean_graph
     errors = _run_audit(ctx, copy.deepcopy(node_rows), copy.deepcopy(edge_rows))
     assert errors.total == 0, errors.node_errors + errors.edge_errors
+
+
+def test_error_csvs_use_repository_stable_lf_line_endings(tmp_path):
+    node_path, edge_path = write_error_csvs(tmp_path, AuditErrors())
+    assert node_path.read_bytes() == b"check,id,detail\n"
+    assert edge_path.read_bytes() == b"check,type,from,to,detail\n"
+
+
+def test_build_context_does_not_rewrite_rejection_artifacts(tmp_path, monkeypatch):
+    monkeypatch.setattr("src.graph.derive.REJECTED", tmp_path)
+    build_context(fixture_tables(), (2023, 2025))
+    assert not (tmp_path / "large_author_papers.jsonl").exists()
 
 
 def _mutated(clean_graph):

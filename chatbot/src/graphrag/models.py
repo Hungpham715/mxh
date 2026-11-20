@@ -23,6 +23,13 @@ class IntentName(StrEnum):
     ORG_COLLABORATIONS = "org_collaborations"
     AUTHOR_PATH = "author_path"
     NETWORK_TOP = "network_top"
+    PAPER_METHODS = "paper_methods"
+    METHOD_PAPERS = "method_papers"
+    PAPER_DATASETS = "paper_datasets"
+    DATASET_PAPERS = "dataset_papers"
+    PAPER_TASKS = "paper_tasks"
+    TASK_PAPERS = "task_papers"
+    METHOD_TRENDS = "method_trends"
     UNKNOWN = "unknown"
 
 
@@ -46,12 +53,34 @@ class QueryAction(StrEnum):
     ORG_COLLABORATIONS = "org_collaborations"
     AUTHOR_PATH = "author_path"
     NETWORK_TOP = "network_top"
+    PAPER_METHODS = "paper_methods"
+    METHOD_PAPERS = "method_papers"
+    PAPER_DATASETS = "paper_datasets"
+    DATASET_PAPERS = "dataset_papers"
+    PAPER_TASKS = "paper_tasks"
+    TASK_PAPERS = "task_papers"
+    METHOD_TRENDS = "method_trends"
+
+
+ENTITY_LABELS = (
+    "Author",
+    "Paper",
+    "Institution",
+    "Venue",
+    "Topic",
+    "Method",
+    "Dataset",
+    "Task",
+    "Unknown",
+)
 
 
 class EntityMention(BaseModel):
     model_config = ConfigDict(extra="forbid")
     text: str = Field(min_length=1, max_length=300)
-    type: Literal["Author", "Paper", "Institution", "Venue", "Topic", "Unknown"] = "Unknown"
+    type: Literal[
+        "Author", "Paper", "Institution", "Venue", "Topic", "Method", "Dataset", "Task", "Unknown"
+    ] = "Unknown"
 
     @field_validator("type", mode="before")
     @classmethod
@@ -60,7 +89,7 @@ class EntityMention(BaseModel):
         # An out-of-vocabulary label (observed: "number") is coerced to "Unknown" so one odd
         # type cannot fail the whole intent parse; the mention text stays available for linking.
         if isinstance(value, str):
-            for allowed in ("Author", "Paper", "Institution", "Venue", "Topic", "Unknown"):
+            for allowed in ENTITY_LABELS:
                 if value.casefold() == allowed.casefold():
                     return allowed
             return "Unknown"
@@ -126,14 +155,14 @@ class QueryIntent(BaseModel):
 
 class CandidateEntity(BaseModel):
     id: str
-    label: Literal["Author", "Paper", "Institution", "Venue", "Topic"]
+    label: Literal["Author", "Paper", "Institution", "Venue", "Topic", "Method", "Dataset", "Task"]
     name: str
     score: float = Field(ge=0, le=100)
 
 
 class LinkedEntity(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    label: Literal["Author", "Paper", "Institution", "Venue", "Topic"]
+    label: Literal["Author", "Paper", "Institution", "Venue", "Topic", "Method", "Dataset", "Task"]
     id: str
     name: str
     score: float = Field(ge=0, le=100)

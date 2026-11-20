@@ -21,6 +21,7 @@ class Neo4jReadOnlyRepository:
         password: str,
         database: str,
         scope_id: str,
+        enrichment_scope_id: str,
         cache_ttl_seconds: int,
         timeout_seconds: float,
     ) -> None:
@@ -33,6 +34,7 @@ class Neo4jReadOnlyRepository:
         self.driver = AsyncGraphDatabase.driver(uri, auth=(username, password), connection_timeout=30)
         self.database = database
         self.scope_id = scope_id
+        self.enrichment_scope_id = enrichment_scope_id
         self.cache_ttl_seconds = cache_ttl_seconds
         self.timeout_seconds = timeout_seconds
         self._catalog: list[EntityRecord] = []
@@ -49,13 +51,19 @@ class Neo4jReadOnlyRepository:
             if self._catalog and is_fresh and not force_refresh:
                 return list(self._catalog)
             query = """
-            MATCH (n) WHERE n.scope_id = $scope
-              AND any(label IN labels(n) WHERE label IN ['Author','Paper','Institution','Venue','Topic'])
+            MATCH (n) WHERE
+              (n.scope_id = $scope
+                AND any(label IN labels(n) WHERE label IN ['Author','Paper','Institution','Venue','Topic']))
+              OR (n.scope_id = $enrichment_scope
+                AND any(label IN labels(n) WHERE label IN ['Method','Dataset','Task']))
             RETURN n.id AS id, labels(n)[0] AS label,
               coalesce(n.name, n.title, n.id) AS name, n.identity_status AS identity_status
             ORDER BY label, name, id
             """
-            records = await self._read(query, {"scope": self.scope_id})
+            records = await self._read(
+                query,
+                {"scope": self.scope_id, "enrichment_scope": self.enrichment_scope_id},
+            )
             self._catalog = [
                 EntityRecord(
                     id=str(record["id"]),
@@ -79,6 +87,7 @@ class Neo4jReadOnlyRepository:
         params = {
             **step.params,
             "scope": self.scope_id,
+            "enrichment_scope": self.enrichment_scope_id,
             "limit": page + 1,
             "year_from": step.params.get("year_from"),
             "year_to": step.params.get("year_to"),
@@ -128,6 +137,7 @@ class Neo4jReadOnlyRepository:
             "nodes": {row["label"]: row["count"] for row in label_rows},
             "relationships": {row["type"]: row["count"] for row in relation_rows},
             "scope_id": self.scope_id,
+            "enrichment_scope_id": self.enrichment_scope_id,
         }
 
     async def close(self) -> None:

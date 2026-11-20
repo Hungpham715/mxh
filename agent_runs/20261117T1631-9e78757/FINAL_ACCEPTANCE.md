@@ -10,7 +10,7 @@ Branch: `agent/mxh-real-20261117-9e78757`
 
 Snapshot: `c2c3f94e79086dc28592bc2188c3e023f2bd7bf062a75a977f9029ba824732f1`
 
-Last updated: 2026-11-20 (session 3 — enrichment, Atlas/SNA views, real demo trace, gate re-runs)
+Last updated: 2026-11-20 (session 4 — enrichment chatbot integration, fresh integrity/demo/gates)
 
 ## Owner directive on provenance (2026-11-19)
 
@@ -35,11 +35,11 @@ human-provenance requirement** for G3/G6/G7.
 | G1 | PASS | live Aura census re-verified 2026-11-19: 7,134 nodes, 30,971 relationships, all ten types, scope `nlpgraph-v1`; snapshot hash matches the local manifest |
 | G2 | PASS | 7,134/7,134 nodes and 30,971/30,971 relationships scanned; zero structural errors (`offline/reports/graph_audit/integrity_all.json`) |
 | G3 | BLOCKED (human) / numeric PASS (non-human) | 386/386 probability-sample rows source-reviewed against ACL/arXiv landing pages + PDFs: 382 correct, 4 real defects; weighted precision 0.9898, stratified Wilson 95% CI [0.9732, 0.9962]; all 10 types covered; reviewer `codex-independent-source-review-v1`, NOT human. Spot-check 2026-11-19: audit row AFFILIATED_WITH-36 re-verified against the PDF front matter (Cohere, not Cambridge) and FIRST_AUTHOR_OF-01 against landing-page metadata — both audit decisions confirmed. Human labels: 0/386 |
-| G4 | PASS | `neo4j+s`, `Neo4j/5.27-aura`; connectivity + counts re-verified 2026-11-19; 12/12 parameterized read-only actions (`aura_catalog_smoke.json`) |
-| G5 | PASS | real Aura + Ollama `qwen3:0.6b` (0.40.16, user-local install); API matrix 8/8 + REST/SSE semantic match; catalog 12/12; E2E on final code 30/31 status, 20/21 oracle (sole miss: A3 year-filter case, Qwen run-variance — parsed `paper_venue` instead of `author_papers`; planner refused safely with `not_found`, no fabricated answer; the same question passed in isolated re-runs) |
+| G4 | PASS | `neo4j+s`, `Neo4j/5.27-aura`; 19 parameterized read-only actions: 12 base plus 7 explicit cross-scope enrichment actions; all seven new actions live-smoked on Aura |
+| G5 | PASS | prior API matrix 8/8 + REST/SSE and E2E 30/31 retained; fresh Aura/Ollama `qwen3:0.6b` demo 8/8 contracts PASS, including Paper→Method, Method→Paper/year, and method ranking |
 | G6 | BLOCKED (human) / numeric PASS (non-human) | 11,998 unique silver rows, 12 actions; 859 non-human source-reviewed held-out cases (522 v2 + 337 v3, 22 challenge rows refreshed), leakage-safe against a 8,360-row silver trainval; human gold 0/500 |
 | G7 | BLOCKED (human) / benchmark RUN (non-human) | fresh unexposed 300-case REAL benchmark on `independent_gold_benchmark300_v3_unexposed.jsonl` (283/300 never used for tuning; 17 fixed-template cases reused, disclosed), final code: status 0.98, intent 0.9467, answer factual set-F1 **0.9508** (target ≥0.85 ✓), citation URL precision **0.9890** (≥0.95 ✓), numeric exactness **1.0** (≥0.95 ✓), clarify 1/1, multi-hop 27/27, refusal **0.8333** (10/12, target ≥0.95 ✗ — disclosed miss), 3 graceful parse errors, p50 8.0 s / p95 23.7 s. Prompt-exposed v8 development diagnostic (pre-fix code): set-F1 0.9384, refusal 0.8333 |
-| G8 | PASS | chatbot 98 tests + Ruff lint/format PASS; offline 89 tests PASS; UI 2 tests + production build PASS; 13-page report + two addenda; safe feature branch pushed |
+| G8 | PASS | chatbot 111 tests + Ruff lint/format PASS; offline 113 tests PASS; UI 2 tests + production build PASS; 13-page report + two addenda; safe feature branch |
 
 ## Real-provider evidence (session 2, final code)
 
@@ -228,3 +228,31 @@ Demo:    5/5 real-trace contracts PASS on current code
 
 Gate statuses G0–G8 are unchanged: the session-3 work adds rubric evidence (enrichment,
 SNA, demo) and does not touch the human-gold policy that keeps G3/G6/G7 BLOCKED.
+
+## Session 4 (2026-11-20) — enrichment scope in chatbot + fresh verification
+
+- Closed the application gap identified in the rubric audit: `Method`, `Dataset`, and `Task`
+  are now in the live entity catalog, with six bidirectional Paper↔enrichment actions and a
+  year-filtered method-ranking action. Every Cypher query is developer-owned, parameterized,
+  read-only, and enforces Paper scope `nlpgraph-v1` separately from enrichment scope
+  `nlpgraph-enrich-v1`.
+- Live Aura smoke found 606 Method / 383 Dataset / 584 Task nodes and PASSed all seven new
+  actions. The 2025 ranking returned database-derived counts and paper citations; pagination
+  remains explicit (`partial` when more rows exist).
+- Real Aura + Ollama demo recaptured on final code at 2026-11-20T14:44Z: 8/8 contracts PASS,
+  p50 28.9 s, p95 36.2 s. Three new cases prove Paper→Method, Method→Paper with year filtering, and
+  method ranking on the imported enrichment data.
+- Fresh full integrity census at 2026-11-20T14:34Z: PASS, 7,134/7,134 base nodes and
+  30,971/30,971 base edges scanned, zero errors; total Aura inventory 8,707/34,459.
+  The audit was made side-effect-free with respect to rejection artifacts and now emits
+  repository-stable LF CSVs.
+- A semantic LLM route-verification turn now handles weak parses without a trusted catalog
+  entity. The previously seen 12-case refusal slice improved from 10/12 to 12/12 on current
+  Aura/Qwen code; this is explicitly a post-fix diagnostic, not fresh independent gold.
+- Final verification: chatbot 111 pytest + Ruff lint/format PASS; offline 113 pytest PASS;
+  UI 2 Vitest tests + production build PASS.
+
+Human-provenance status is unchanged: G3/G6/G7 remain BLOCKED under the master prompt even
+though the disclosed non-human numeric evidence is strong. The existing 300-case benchmark
+does not cover the seven newly added enrichment actions; their current evidence is the
+versioned three-case REAL demo plus direct seven-action Aura smoke, not a relabelled benchmark.

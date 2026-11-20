@@ -49,6 +49,18 @@ class FakeGraphRepository:
             "topic:retrieval": "Retrieval and RAG",
             "topic:safety_eval": "Safety and LLM evaluation",
         }
+        self.methods = {
+            "method:graphrag": "GraphRAG",
+            "method:qwen": "Qwen",
+        }
+        self.datasets = {
+            "dataset:nlpgraph-bench": "NLPGraph Bench",
+            "dataset:safetybench": "SafetyBench",
+        }
+        self.tasks = {
+            "task:question-answering": "Question Answering",
+            "task:safety-evaluation": "Safety Evaluation",
+        }
         self.paper_authors = {
             "paper:rag": ["author:an", "author:binh"],
             "paper:safety": ["author:binh", "author:linh-a"],
@@ -70,6 +82,18 @@ class FakeGraphRepository:
             "paper:solo": "venue:emnlp",
         }
         self.citations = {("paper:safety", "paper:rag")}
+        self.paper_methods = {
+            "paper:rag": ["method:graphrag"],
+            "paper:safety": ["method:qwen"],
+        }
+        self.paper_datasets = {
+            "paper:rag": ["dataset:nlpgraph-bench"],
+            "paper:safety": ["dataset:safetybench"],
+        }
+        self.paper_tasks = {
+            "paper:rag": ["task:question-answering"],
+            "paper:safety": ["task:safety-evaluation"],
+        }
 
     async def entity_catalog(self, *, force_refresh: bool = False) -> list[EntityRecord]:
         _ = force_refresh
@@ -84,6 +108,12 @@ class FakeGraphRepository:
             records.append(EntityRecord(entity_id, "Venue", name))
         for entity_id, name in self.topics.items():
             records.append(EntityRecord(entity_id, "Topic", name))
+        for entity_id, name in self.methods.items():
+            records.append(EntityRecord(entity_id, "Method", name))
+        for entity_id, name in self.datasets.items():
+            records.append(EntityRecord(entity_id, "Dataset", name))
+        for entity_id, name in self.tasks.items():
+            records.append(EntityRecord(entity_id, "Task", name))
         return records
 
     async def execute(self, step: QueryStep) -> GraphQueryResult:
@@ -100,6 +130,13 @@ class FakeGraphRepository:
             QueryAction.ORG_COLLABORATIONS: self._org_collaborations,
             QueryAction.AUTHOR_PATH: self._author_path,
             QueryAction.NETWORK_TOP: self._network_top,
+            QueryAction.PAPER_METHODS: self._paper_methods,
+            QueryAction.METHOD_PAPERS: self._method_papers,
+            QueryAction.PAPER_DATASETS: self._paper_datasets,
+            QueryAction.DATASET_PAPERS: self._dataset_papers,
+            QueryAction.PAPER_TASKS: self._paper_tasks,
+            QueryAction.TASK_PAPERS: self._task_papers,
+            QueryAction.METHOD_TRENDS: self._method_trends,
         }
         records = handlers[step.action](step.params)
         limit = min(step.limit, 100)
@@ -117,6 +154,9 @@ class FakeGraphRepository:
                 "Institution": len(self.institutions),
                 "Venue": len(self.venues),
                 "Topic": len(self.topics),
+                "Method": len(self.methods),
+                "Dataset": len(self.datasets),
+                "Task": len(self.tasks),
             },
             "relationship_types": [action.value for action in QueryAction],
         }
@@ -427,4 +467,121 @@ class FakeGraphRepository:
                 "sources": [],
             }
             rows.append(self._record("network", "RANKED_BY_COAUTHOR_COUNT", author_id, value, []))
+        return sorted(rows, key=lambda row: (-row["value"]["metric_value"], row["value"]["name"]))
+
+    def _paper_assets(
+        self,
+        paper_id: str,
+        mapping: dict[str, list[str]],
+        names: dict[str, str],
+        predicate: str,
+    ) -> list[dict[str, Any]]:
+        paper = self.papers[paper_id]
+        rows = []
+        for asset_id in mapping.get(paper_id, []):
+            value = {
+                "name": names[asset_id],
+                "source_kind": "synthetic",
+                "confidence_band": "fixture",
+                "evidence_texts": [f"Synthetic evidence for {names[asset_id]}."],
+                "sources": [self._source(paper_id)],
+            }
+            rows.append(
+                self._record(
+                    paper_id,
+                    predicate,
+                    asset_id,
+                    value,
+                    [paper_id],
+                    year=paper["year"],
+                    title=paper["title"],
+                )
+            )
+        return rows
+
+    def _asset_papers(
+        self,
+        asset_id: str,
+        mapping: dict[str, list[str]],
+        predicate: str,
+        params: dict[str, Any],
+    ) -> list[dict[str, Any]]:
+        rows = []
+        for paper_id, asset_ids in mapping.items():
+            if asset_id not in asset_ids:
+                continue
+            paper = self.papers[paper_id]
+            if params.get("year_from") and paper["year"] < params["year_from"]:
+                continue
+            if params.get("year_to") and paper["year"] > params["year_to"]:
+                continue
+            value = {
+                "name": paper["title"],
+                "title": paper["title"],
+                "source_kind": "synthetic",
+                "confidence_band": "fixture",
+                "evidence_texts": [f"Synthetic evidence for {paper['title']}."],
+                "sources": [self._source(paper_id)],
+            }
+            rows.append(
+                self._record(
+                    asset_id,
+                    predicate,
+                    paper_id,
+                    value,
+                    [paper_id],
+                    year=paper["year"],
+                    title=paper["title"],
+                )
+            )
+        return sorted(rows, key=lambda row: (-row["year"], row["title"]))
+
+    def _paper_methods(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._paper_assets(params["paper_id"], self.paper_methods, self.methods, "USES_METHOD")
+
+    def _method_papers(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._asset_papers(params["method_id"], self.paper_methods, "METHOD_USED_BY_PAPER", params)
+
+    def _paper_datasets(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._paper_assets(params["paper_id"], self.paper_datasets, self.datasets, "EVALUATED_ON")
+
+    def _dataset_papers(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._asset_papers(params["dataset_id"], self.paper_datasets, "DATASET_USED_BY_PAPER", params)
+
+    def _paper_tasks(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._paper_assets(params["paper_id"], self.paper_tasks, self.tasks, "ADDRESSES_TASK")
+
+    def _task_papers(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        return self._asset_papers(params["task_id"], self.paper_tasks, "TASK_ADDRESSED_BY_PAPER", params)
+
+    def _method_trends(self, params: dict[str, Any]) -> list[dict[str, Any]]:
+        rows = []
+        for method_id, method_name in self.methods.items():
+            paper_ids = []
+            for paper_id, method_ids in self.paper_methods.items():
+                paper = self.papers[paper_id]
+                if method_id not in method_ids:
+                    continue
+                if params.get("year_from") and paper["year"] < params["year_from"]:
+                    continue
+                if params.get("year_to") and paper["year"] > params["year_to"]:
+                    continue
+                paper_ids.append(paper_id)
+            if not paper_ids:
+                continue
+            value = {
+                "name": method_name,
+                "metric": "distinct_paper_count",
+                "metric_value": len(paper_ids),
+                "sources": [self._source(paper_id) for paper_id in paper_ids[:5]],
+            }
+            rows.append(
+                self._record(
+                    "method-trends",
+                    "RANKED_METHOD_BY_PAPER_COUNT",
+                    method_id,
+                    value,
+                    paper_ids[:5],
+                )
+            )
         return sorted(rows, key=lambda row: (-row["value"]["metric_value"], row["value"]["name"]))

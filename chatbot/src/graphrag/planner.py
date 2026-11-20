@@ -26,8 +26,15 @@ class Planner:
 
         if intent.intent == IntentName.UNKNOWN:
             return []
-        if intent.intent == IntentName.NETWORK_TOP:
-            return [self._step(QueryAction.NETWORK_TOP, {}, page_size)]
+        if intent.intent in {IntentName.NETWORK_TOP, IntentName.METHOD_TRENDS}:
+            action = QueryAction(intent.intent.value)
+            params = {}
+            if action == QueryAction.METHOD_TRENDS:
+                params = {
+                    "year_from": intent.filters.year_from,
+                    "year_to": intent.filters.year_to,
+                }
+            return [self._step(action, params, page_size)]
 
         action = QueryAction(intent.intent.value)
         params: dict[str, object] = {}
@@ -41,14 +48,33 @@ class Planner:
         elif action in {QueryAction.SHARED_PAPERS, QueryAction.AUTHOR_PATH}:
             authors = self._many(by_label, "Author", 2)
             params.update(author_id=authors[0].id, other_author_id=authors[1].id)
-        elif action in {QueryAction.PAPER_AUTHORS, QueryAction.PAPER_VENUE, QueryAction.PAPER_CITATIONS}:
+        elif action in {
+            QueryAction.PAPER_AUTHORS,
+            QueryAction.PAPER_VENUE,
+            QueryAction.PAPER_CITATIONS,
+            QueryAction.PAPER_METHODS,
+            QueryAction.PAPER_DATASETS,
+            QueryAction.PAPER_TASKS,
+        }:
             params["paper_id"] = self._one(by_label, "Paper").id
         elif action == QueryAction.TOPIC_PAPERS:
             params["topic_id"] = self._one(by_label, "Topic").id
         elif action == QueryAction.ORG_COLLABORATIONS:
             params["institution_id"] = self._one(by_label, "Institution").id
+        elif action == QueryAction.METHOD_PAPERS:
+            params["method_id"] = self._one(by_label, "Method").id
+        elif action == QueryAction.DATASET_PAPERS:
+            params["dataset_id"] = self._one(by_label, "Dataset").id
+        elif action == QueryAction.TASK_PAPERS:
+            params["task_id"] = self._one(by_label, "Task").id
 
-        if action in {QueryAction.AUTHOR_PAPERS, QueryAction.TOPIC_PAPERS}:
+        if action in {
+            QueryAction.AUTHOR_PAPERS,
+            QueryAction.TOPIC_PAPERS,
+            QueryAction.METHOD_PAPERS,
+            QueryAction.DATASET_PAPERS,
+            QueryAction.TASK_PAPERS,
+        }:
             params["year_from"] = intent.filters.year_from
             params["year_to"] = intent.filters.year_to
         if action == QueryAction.PAPER_CITATIONS:

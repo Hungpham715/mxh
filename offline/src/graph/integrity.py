@@ -103,7 +103,9 @@ def build_context(rows: dict[str, list[dict[str, Any]]], scope_years: tuple[int,
         node_label_of[topic["id"]] = "Topic"
         snapshot_node_keys.add(("Topic", topic["id"]))
 
-    edges = derive_edges(rows)
+    # Integrity audits are read-only diagnostics; deriving expected edge keys must not rewrite
+    # the pipeline's rejection artifacts as a side effect.
+    edges = derive_edges(rows, write_rejections=False)
     derived_edge_keys = {
         (rtype, edge["from"], edge["to"]) for rtype in REL_TYPES for edge in edges[rtype]
     }
@@ -337,11 +339,17 @@ def write_error_csvs(out_dir: Path, errors: AuditErrors) -> tuple[Path, Path]:
     node_path = out_dir / "node_errors.csv"
     edge_path = out_dir / "edge_errors.csv"
     with node_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["check", "id", "detail"])
+        writer = csv.DictWriter(
+            handle, fieldnames=["check", "id", "detail"], lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(errors.node_errors)
     with edge_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["check", "type", "from", "to", "detail"])
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["check", "type", "from", "to", "detail"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(errors.edge_errors)
     return node_path, edge_path

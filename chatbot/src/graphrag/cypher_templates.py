@@ -222,6 +222,121 @@ TEMPLATES: dict[QueryAction, CypherTemplate] = {
         ORDER BY coauthor_count DESC, a.name LIMIT $limit
         """,
     ),
+    QueryAction.PAPER_METHODS: _template(
+        QueryAction.PAPER_METHODS,
+        """
+        MATCH (p:Paper {id: $paper_id})-[r:USES_METHOD]->(m:Method)
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND m.scope_id = $enrichment_scope
+        RETURN p.id AS subject_id, 'USES_METHOD' AS predicate, m.id AS object_id,
+          {name: m.name, source_kind: r.source_kind, confidence_band: r.confidence_band,
+           evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY m.name LIMIT $limit
+        """,
+        "paper_id",
+    ),
+    QueryAction.METHOD_PAPERS: _template(
+        QueryAction.METHOD_PAPERS,
+        """
+        MATCH (p:Paper)-[r:USES_METHOD]->(m:Method {id: $method_id})
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND m.scope_id = $enrichment_scope
+          AND ($year_from IS NULL OR p.year >= $year_from)
+          AND ($year_to IS NULL OR p.year <= $year_to)
+        RETURN m.id AS subject_id, 'METHOD_USED_BY_PAPER' AS predicate, p.id AS object_id,
+          {name: p.title, title: p.title, source_kind: r.source_kind,
+           confidence_band: r.confidence_band, evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY p.year DESC, p.title LIMIT $limit
+        """,
+        "method_id",
+    ),
+    QueryAction.PAPER_DATASETS: _template(
+        QueryAction.PAPER_DATASETS,
+        """
+        MATCH (p:Paper {id: $paper_id})-[r:EVALUATED_ON]->(d:Dataset)
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND d.scope_id = $enrichment_scope
+        RETURN p.id AS subject_id, 'EVALUATED_ON' AS predicate, d.id AS object_id,
+          {name: d.name, source_kind: r.source_kind, confidence_band: r.confidence_band,
+           evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY d.name LIMIT $limit
+        """,
+        "paper_id",
+    ),
+    QueryAction.DATASET_PAPERS: _template(
+        QueryAction.DATASET_PAPERS,
+        """
+        MATCH (p:Paper)-[r:EVALUATED_ON]->(d:Dataset {id: $dataset_id})
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND d.scope_id = $enrichment_scope
+          AND ($year_from IS NULL OR p.year >= $year_from)
+          AND ($year_to IS NULL OR p.year <= $year_to)
+        RETURN d.id AS subject_id, 'DATASET_USED_BY_PAPER' AS predicate, p.id AS object_id,
+          {name: p.title, title: p.title, source_kind: r.source_kind,
+           confidence_band: r.confidence_band, evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY p.year DESC, p.title LIMIT $limit
+        """,
+        "dataset_id",
+    ),
+    QueryAction.PAPER_TASKS: _template(
+        QueryAction.PAPER_TASKS,
+        """
+        MATCH (p:Paper {id: $paper_id})-[r:ADDRESSES_TASK]->(t:Task)
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND t.scope_id = $enrichment_scope
+        RETURN p.id AS subject_id, 'ADDRESSES_TASK' AS predicate, t.id AS object_id,
+          {name: t.name, source_kind: r.source_kind, confidence_band: r.confidence_band,
+           evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY t.name LIMIT $limit
+        """,
+        "paper_id",
+    ),
+    QueryAction.TASK_PAPERS: _template(
+        QueryAction.TASK_PAPERS,
+        """
+        MATCH (p:Paper)-[r:ADDRESSES_TASK]->(t:Task {id: $task_id})
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND t.scope_id = $enrichment_scope
+          AND ($year_from IS NULL OR p.year >= $year_from)
+          AND ($year_to IS NULL OR p.year <= $year_to)
+        RETURN t.id AS subject_id, 'TASK_ADDRESSED_BY_PAPER' AS predicate, p.id AS object_id,
+          {name: p.title, title: p.title, source_kind: r.source_kind,
+           confidence_band: r.confidence_band, evidence_texts: r.evidence_texts,
+           sources: [{paper_id: p.id, title: p.title, url: p.source_url}]} AS value,
+          [p.id] AS paper_ids, p.source_url AS source_url, p.year AS year, p.title AS title
+        ORDER BY p.year DESC, p.title LIMIT $limit
+        """,
+        "task_id",
+    ),
+    QueryAction.METHOD_TRENDS: _template(
+        QueryAction.METHOD_TRENDS,
+        """
+        MATCH (p:Paper)-[r:USES_METHOD]->(m:Method)
+        WHERE p.scope_id = $scope AND r.scope_id = $enrichment_scope
+          AND m.scope_id = $enrichment_scope
+          AND ($year_from IS NULL OR p.year >= $year_from)
+          AND ($year_to IS NULL OR p.year <= $year_to)
+        WITH m, count(DISTINCT p) AS paper_count, collect(DISTINCT p)[0..5] AS papers
+        RETURN 'method-trends' AS subject_id, 'RANKED_METHOD_BY_PAPER_COUNT' AS predicate,
+          m.id AS object_id,
+          {name: m.name, metric: 'distinct_paper_count', metric_value: paper_count,
+           sources: [paper IN papers | {paper_id: paper.id, title: paper.title,
+                                        url: paper.source_url}]} AS value,
+          [paper IN papers | paper.id] AS paper_ids,
+          null AS source_url, null AS year, null AS title
+        ORDER BY paper_count DESC, m.name LIMIT $limit
+        """,
+    ),
 }
 
 

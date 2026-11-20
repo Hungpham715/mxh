@@ -1,15 +1,16 @@
 {
   "schema_version": "real-demo-trace-v1",
-  "captured_at": "2026-11-20T07:28:31.287321+00:00",
+  "captured_at": "2026-11-20T14:44:32.123423+00:00",
   "provenance": {
     "chat_mode": "real",
     "graph_provider": "neo4j",
     "llm_provider": "ollama",
     "model": "qwen3:0.6b",
     "scope_id": "nlpgraph-v1",
+    "enrichment_scope_id": "nlpgraph-enrich-v1",
     "credential_values_recorded": false
   },
-  "cases": 5,
+  "cases": 8,
   "contract_pass": true,
   "contract_errors": {},
   "statuses": {
@@ -17,17 +18,23 @@
     "author_path_2hop": "answered",
     "multi_query_profile": "answered",
     "coauthor_affiliations": "partial",
-    "missing_entity_refusal": "not_found"
+    "missing_entity_refusal": "not_found",
+    "enrichment_paper_methods": "answered",
+    "enrichment_method_papers": "partial",
+    "enrichment_method_trends": "partial"
   },
   "latency_ms": {
-    "p50": 25836,
-    "p95": 38597,
+    "p50": 28866,
+    "p95": 36167,
     "samples": [
-      38597,
-      10887,
-      26162,
-      25836,
-      2959
+      36167,
+      14438,
+      33058,
+      29727,
+      4437,
+      10819,
+      28866,
+      30050
     ]
   },
   "trace_file": "real_trace.jsonl"

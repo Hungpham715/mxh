@@ -2,7 +2,7 @@
 
 Two modes:
 
-* Legacy (``per_action == 0``): the twelve canonical query templates over a single fixed set
+* Legacy (``per_action == 0``): the canonical query templates over a single fixed set
   of entities. Kept for deterministic fake-provider plumbing tests.
 * Sampling (``per_action > 0``): draws up to ``per_action`` entities per query template from
   the live catalog so the training set is large and diverse.
@@ -49,6 +49,13 @@ QUESTION_TEMPLATES = {
     QueryAction.ORG_COLLABORATIONS: "{i} hợp tác với tổ chức nào trong corpus?",
     QueryAction.AUTHOR_PATH: "Đường đồng tác giả giữa {a} và {b} là gì?",
     QueryAction.NETWORK_TOP: "Top tác giả theo số đồng tác giả riêng biệt là ai?",
+    QueryAction.PAPER_METHODS: "Bài {p} sử dụng phương pháp nào?",
+    QueryAction.METHOD_PAPERS: "Những bài nào sử dụng phương pháp {m}?",
+    QueryAction.PAPER_DATASETS: "Bài {p} được đánh giá trên bộ dữ liệu nào?",
+    QueryAction.DATASET_PAPERS: "Những bài nào được đánh giá trên {d}?",
+    QueryAction.PAPER_TASKS: "Bài {p} giải quyết bài toán nào?",
+    QueryAction.TASK_PAPERS: "Những bài nào giải quyết bài toán {k}?",
+    QueryAction.METHOD_TRENDS: "Phương pháp nào được dùng nhiều nhất trong corpus?",
 }
 
 # Two independently worded surface forms per graph action. Sampling applies both forms across
@@ -103,6 +110,34 @@ QUESTION_VARIANTS = {
         "Top tác giả theo số đồng tác giả riêng biệt là ai?",
         "Xếp hạng tác giả có nhiều cộng tác viên khác nhau nhất trong graph.",
     ),
+    QueryAction.PAPER_METHODS: (
+        "Bài {p} sử dụng phương pháp nào?",
+        "Các Method được trích xuất từ abstract của {p} là gì?",
+    ),
+    QueryAction.METHOD_PAPERS: (
+        "Những bài nào sử dụng phương pháp {m}?",
+        "Corpus có công trình nào nhắc việc dùng {m}?",
+    ),
+    QueryAction.PAPER_DATASETS: (
+        "Bài {p} được đánh giá trên bộ dữ liệu nào?",
+        "Các Dataset được trích xuất từ abstract của {p} là gì?",
+    ),
+    QueryAction.DATASET_PAPERS: (
+        "Những bài nào được đánh giá trên {d}?",
+        "Corpus có công trình nào báo cáo kết quả trên {d}?",
+    ),
+    QueryAction.PAPER_TASKS: (
+        "Bài {p} giải quyết bài toán nào?",
+        "Các Task được trích xuất từ abstract của {p} là gì?",
+    ),
+    QueryAction.TASK_PAPERS: (
+        "Những bài nào giải quyết bài toán {k}?",
+        "Corpus có công trình nào nhắm tới task {k}?",
+    ),
+    QueryAction.METHOD_TRENDS: (
+        "Phương pháp nào được dùng nhiều nhất trong corpus?",
+        "Xếp hạng Method theo số bài báo có bằng chứng trong abstract.",
+    ),
 }
 
 # Default filters mirror graphrag.models.QueryFilters; citation_direction is the only one a
@@ -137,24 +172,33 @@ def _author_mention(author) -> EntityMention:
     return EntityMention(text=author.name, type="Author")
 
 
-def _legacy_specs(authors, papers, topics, institutions) -> list[Spec]:
-    """The twelve canonical templates over the first entities (deterministic plumbing)."""
-    if len(authors) < 2 or not papers or not topics or not institutions:
-        raise ValueError("graph needs at least 2 authors and one paper/topic/institution")
+def _legacy_specs(authors, papers, topics, institutions, methods, datasets, tasks) -> list[Spec]:
+    """Canonical templates over the first entities (deterministic plumbing)."""
+    if len(authors) < 2 or not all((papers, topics, institutions, methods, datasets, tasks)):
+        raise ValueError("graph needs 2 authors and one paper/topic/institution/method/dataset/task")
     author_a, author_b = authors[0], authors[1]
     paper = papers[0]
     topic = topics[0]
     institution = institutions[0]
+    method = methods[0]
+    dataset = datasets[0]
+    task = tasks[0]
     a = {"a": author_a.name}
     ab = {"a": author_a.name, "b": author_b.name}
     p = {"p": paper.name}
     t = {"t": topic.name}
     i = {"i": institution.name}
+    m = {"m": method.name}
+    d = {"d": dataset.name}
+    k = {"k": task.name}
     mention_a = [_author_mention(author_a)]
     mention_ab = [_author_mention(author_a), _author_mention(author_b)]
     mention_paper = [EntityMention(text=paper.name, type="Paper")]
     mention_topic = [EntityMention(text=topic.name, type="Topic")]
     mention_inst = [EntityMention(text=institution.name, type="Institution")]
+    mention_method = [EntityMention(text=method.name, type="Method")]
+    mention_dataset = [EntityMention(text=dataset.name, type="Dataset")]
+    mention_task = [EntityMention(text=task.name, type="Task")]
     author_params = {"author_id": author_a.id}
     pair_params = {"author_id": author_a.id, "other_author_id": author_b.id}
     return [
@@ -175,6 +219,28 @@ def _legacy_specs(authors, papers, topics, institutions) -> list[Spec]:
         Spec(QueryAction.ORG_COLLABORATIONS, {"institution_id": institution.id}, i, mention_inst),
         Spec(QueryAction.AUTHOR_PATH, dict(pair_params), ab, mention_ab),
         Spec(QueryAction.NETWORK_TOP, {}, {}, []),
+        Spec(QueryAction.PAPER_METHODS, {"paper_id": paper.id}, p, mention_paper),
+        Spec(
+            QueryAction.METHOD_PAPERS,
+            {"method_id": method.id, "year_from": None, "year_to": None},
+            m,
+            mention_method,
+        ),
+        Spec(QueryAction.PAPER_DATASETS, {"paper_id": paper.id}, p, mention_paper),
+        Spec(
+            QueryAction.DATASET_PAPERS,
+            {"dataset_id": dataset.id, "year_from": None, "year_to": None},
+            d,
+            mention_dataset,
+        ),
+        Spec(QueryAction.PAPER_TASKS, {"paper_id": paper.id}, p, mention_paper),
+        Spec(
+            QueryAction.TASK_PAPERS,
+            {"task_id": task.id, "year_from": None, "year_to": None},
+            k,
+            mention_task,
+        ),
+        Spec(QueryAction.METHOD_TRENDS, {"year_from": None, "year_to": None}, {}, []),
     ]
 
 
@@ -199,7 +265,9 @@ def _unique_name_entities(items: list) -> list:
     return [item for item in items if name_counts[item.name.casefold().strip()] == 1]
 
 
-def _sampled_specs(authors, papers, topics, institutions, per_action: int, rng: random.Random) -> list[Spec]:
+def _sampled_specs(
+    authors, papers, topics, institutions, methods, datasets, tasks, per_action: int, rng: random.Random
+) -> list[Spec]:
     """Expand every template across many entities to build a large, diverse candidate set."""
     specs: list[Spec] = []
 
@@ -226,6 +294,9 @@ def _sampled_specs(authors, papers, topics, institutions, per_action: int, rng: 
         specs.append(
             Spec(QueryAction.PAPER_CITATIONS, {"paper_id": paper.id, "direction": "both"}, values, mention)
         )
+        specs.append(Spec(QueryAction.PAPER_METHODS, {"paper_id": paper.id}, values, mention))
+        specs.append(Spec(QueryAction.PAPER_DATASETS, {"paper_id": paper.id}, values, mention))
+        specs.append(Spec(QueryAction.PAPER_TASKS, {"paper_id": paper.id}, values, mention))
 
     for topic in _pick(topics, per_action, rng):
         specs.append(
@@ -247,6 +318,36 @@ def _sampled_specs(authors, papers, topics, institutions, per_action: int, rng: 
             )
         )
 
+    for method in _pick(methods, per_action, rng):
+        specs.append(
+            Spec(
+                QueryAction.METHOD_PAPERS,
+                {"method_id": method.id, "year_from": None, "year_to": None},
+                {"m": method.name},
+                [EntityMention(text=method.name, type="Method")],
+            )
+        )
+
+    for dataset in _pick(datasets, per_action, rng):
+        specs.append(
+            Spec(
+                QueryAction.DATASET_PAPERS,
+                {"dataset_id": dataset.id, "year_from": None, "year_to": None},
+                {"d": dataset.name},
+                [EntityMention(text=dataset.name, type="Dataset")],
+            )
+        )
+
+    for task in _pick(tasks, per_action, rng):
+        specs.append(
+            Spec(
+                QueryAction.TASK_PAPERS,
+                {"task_id": task.id, "year_from": None, "year_to": None},
+                {"k": task.name},
+                [EntityMention(text=task.name, type="Task")],
+            )
+        )
+
     # Author pairs for the two-author templates.
     pair_pool = _pick(authors, per_action * 2, rng)
     for index in range(0, len(pair_pool) - 1, 2):
@@ -259,6 +360,7 @@ def _sampled_specs(authors, papers, topics, institutions, per_action: int, rng: 
 
     # A single network-wide ranking question (no entity to link).
     specs.append(Spec(QueryAction.NETWORK_TOP, {}, {}, []))
+    specs.append(Spec(QueryAction.METHOD_TRENDS, {"year_from": None, "year_to": None}, {}, []))
 
     rng.shuffle(specs)
     return specs
@@ -305,15 +407,31 @@ async def generate(
         papers = by_label.get("Paper", [])
         topics = by_label.get("Topic", [])
         institutions = by_label.get("Institution", [])
+        methods = by_label.get("Method", [])
+        datasets = by_label.get("Dataset", [])
+        tasks = by_label.get("Task", [])
 
         if per_action > 0:
             authors = _unique_name_entities(authors)
             papers = _unique_name_entities(papers)
             topics = _unique_name_entities(topics)
             institutions = _unique_name_entities(institutions)
-            specs = _sampled_specs(authors, papers, topics, institutions, per_action, rng)
+            methods = _unique_name_entities(methods)
+            datasets = _unique_name_entities(datasets)
+            tasks = _unique_name_entities(tasks)
+            specs = _sampled_specs(
+                authors,
+                papers,
+                topics,
+                institutions,
+                methods,
+                datasets,
+                tasks,
+                per_action,
+                rng,
+            )
         else:
-            specs = _legacy_specs(authors, papers, topics, institutions)
+            specs = _legacy_specs(authors, papers, topics, institutions, methods, datasets, tasks)
 
         cases: list[QuestionCase] = []
         for spec in specs:
@@ -400,6 +518,7 @@ async def build_repository(provider: str):
         settings.neo4j_password,
         settings.neo4j_database,
         settings.neo4j_scope_id,
+        settings.neo4j_enrichment_scope_id,
         settings.entity_cache_ttl_seconds,
         settings.request_timeout_seconds,
     )
@@ -415,7 +534,7 @@ def main() -> None:
         "--per-action",
         type=int,
         default=0,
-        help="entities to sample per template (0 = the twelve canonical templates only)",
+        help="entities to sample per template (0 = canonical templates only)",
     )
     parser.add_argument(
         "--snapshot-version",

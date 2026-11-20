@@ -1,8 +1,9 @@
 # MXH NLP Graph Atlas
 
-Graph-only chatbot for the existing `nlpgraph-v1` author/paper/institution/topic graph. Qwen parses an allowed
-action and writes from verified graph facts; Python owns entity linking, Cypher selection, limits, evidence, and
-citations. Fake mode runs the whole product deterministically and is visibly labelled simulated.
+Graph-only chatbot for the `nlpgraph-v1` author/paper/institution/topic graph and the additive
+`nlpgraph-enrich-v1` Method/Dataset/Task scope. Qwen parses an allowed action and writes from verified graph
+facts; Python owns entity linking, Cypher selection, limits, evidence, and citations. Fake mode runs the whole
+product deterministically and is visibly labelled simulated.
 
 ## See the UI now
 
@@ -38,7 +39,8 @@ Install/pull Ollama, create a real read-only Aura user, and fill Profile B in `.
 answer is substituted. See `docs/EXTERNAL_DEPENDENCIES.md` and `docs/OPERATIONS.md`.
 
 Capture a credential-free real demo trace with direct, two-hop, successive-query, multi-relation, and refusal
-cases using `uv run python scripts/capture_real_demo.py --out reports/demo`; see `docs/DEMO_RUNBOOK.md`.
+cases plus Paper↔Method retrieval and method ranking using
+`uv run python scripts/capture_real_demo.py --out reports/demo`; see `docs/DEMO_RUNBOOK.md`.
 
 ## Dataset → review → SFT → evaluation
 

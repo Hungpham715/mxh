@@ -1,11 +1,11 @@
 {
   "audit": "graph_integrity_all",
   "scope_id": "nlpgraph-v1",
-  "database": "local-loopback",
-  "finished_at_utc": "2026-11-18T00:19:48Z",
+  "database": "remote:702feb***",
+  "finished_at_utc": "2026-11-20T14:34:16Z",
   "live_counts": {
-    "total_nodes": 7134,
-    "total_edges": 30971,
+    "total_nodes": 8707,
+    "total_edges": 34459,
     "scoped_nodes": 7134,
     "scoped_edges": 30971
   },

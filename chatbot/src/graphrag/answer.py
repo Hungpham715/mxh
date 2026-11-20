@@ -24,9 +24,10 @@ class GroundedAnswerGenerator:
         if not facts:
             if status == "out_of_scope":
                 return (
-                    "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, "
-                    "venue và trích dẫn NLP trong corpus. Tôi có thể giúp tra cứu tác giả, "
-                    "bài báo, đồng tác giả, tổ chức, chủ đề, venue và trích dẫn trong corpus NLP 2023–2025."
+                    "Câu hỏi nằm ngoài mạng tác giả, bài báo, tổ chức, chủ đề, venue, trích dẫn "
+                    "và dữ liệu làm giàu NLP trong corpus. Tôi có thể giúp tra cứu tác giả, bài báo, "
+                    "đồng tác giả, tổ chức, chủ đề, phương pháp, bộ dữ liệu và bài toán trong corpus "
+                    "NLP 2023–2025."
                 )
             return "Không tìm thấy dữ liệu phù hợp trong corpus NLP được lấy mẫu."
         payload = [fact.model_dump(mode="json") for fact in facts]
@@ -72,6 +73,11 @@ class GroundedAnswerGenerator:
                     names = fact.value.get("author_names")
                     if isinstance(names, list) and names:
                         raw_values = [" → ".join(str(name) for name in names)]
+                if fact.predicate == "RANKED_METHOD_BY_PAPER_COUNT":
+                    name = fact.value.get("name")
+                    count = fact.value.get("metric_value")
+                    if name is not None and count is not None:
+                        raw_values = [f"{name} ({count} bài)"]
                 if not raw_values and fact.value.get("name") is not None:
                     raw_values = [fact.value["name"]]
             elif fact.value is not None:

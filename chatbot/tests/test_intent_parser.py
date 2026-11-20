@@ -147,6 +147,35 @@ async def test_network_top_discards_model_added_generic_entity() -> None:
 
 
 @pytest.mark.asyncio
+async def test_entity_free_graph_intent_overrides_contradictory_out_of_scope_route() -> None:
+    payload = (
+        '{"route":"out_of_scope","intent":"method_trends","entities":[],'
+        '"filters":{"year_from":2025,"year_to":2025,"topic_id":null,'
+        '"citation_direction":"both"},"requested_fields":[],"missing_fields":[],'
+        '"history_refs":[],"unsupported":true,"parse_source":"llm"}'
+    )
+    parser = IntentParser(ScriptedProvider(payload))
+    intent, calls = await parser.parse("Phương pháp nào được dùng nhiều nhất năm 2025?")
+    assert calls == 1
+    assert intent.route.value == "graph_qa"
+    assert intent.intent == IntentName.METHOD_TRENDS
+    assert intent.unsupported is False
+
+
+@pytest.mark.asyncio
+async def test_route_verifier_uses_llm_semantics_without_catalog_keywords() -> None:
+    parser = IntentParser(ScriptedProvider('{"route":"out_of_scope"}'))
+    previous = QueryIntent(
+        route="graph_qa",
+        intent=IntentName.AUTHOR_PAPERS,
+        entities=[EntityMention(text="1", type="Unknown")],
+    )
+    route, calls = await parser.verify_route_without_catalog("1 cộng 1 bằng mấy?", [], previous)
+    assert calls == 1
+    assert route is not None and route.value == "out_of_scope"
+
+
+@pytest.mark.asyncio
 async def test_catalog_context_repair_keeps_llm_semantics_but_enforces_trusted_entity_type() -> None:
     wrong = (
         '{"route":"graph_qa","intent":"org_collaborations",'

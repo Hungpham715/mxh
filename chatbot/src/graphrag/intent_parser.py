@@ -21,7 +21,12 @@ import unicodedata
 from pydantic import ValidationError
 
 from graphrag.llm.base import LLMProvider
-from graphrag.llm.prompts import REQUESTED_FIELDS_SYSTEM, ROUTE_PARSE_SYSTEM, build_parse_user
+from graphrag.llm.prompts import (
+    REQUESTED_FIELDS_SYSTEM,
+    ROUTE_PARSE_SYSTEM,
+    ROUTE_VERIFY_SYSTEM,
+    build_parse_user,
+)
 from graphrag.models import EntityMention, IntentName, QueryFilters, QueryIntent, RouteName
 
 # Deterministic markers for entity-free routes. Kept intentionally narrow: these decide routing
@@ -68,6 +73,12 @@ INTENT_ENTITY_REQUIREMENTS: dict[IntentName, tuple[str, int]] = {
     IntentName.PAPER_CITATIONS: ("Paper", 1),
     IntentName.ORG_COLLABORATIONS: ("Institution", 1),
     IntentName.AUTHOR_PATH: ("Author", 2),
+    IntentName.PAPER_METHODS: ("Paper", 1),
+    IntentName.METHOD_PAPERS: ("Method", 1),
+    IntentName.PAPER_DATASETS: ("Paper", 1),
+    IntentName.DATASET_PAPERS: ("Dataset", 1),
+    IntentName.PAPER_TASKS: ("Paper", 1),
+    IntentName.TASK_PAPERS: ("Task", 1),
 }
 
 INTENT_DESCRIPTIONS: dict[IntentName, str] = {
@@ -83,8 +94,17 @@ INTENT_DESCRIPTIONS: dict[IntentName, str] = {
     IntentName.ORG_COLLABORATIONS: "các tổ chức khác hợp tác với một tổ chức",
     IntentName.AUTHOR_PATH: "đường đồng tác giả giữa hai tác giả",
     IntentName.NETWORK_TOP: "network-wide author ranking without a named entity",
+    IntentName.PAPER_METHODS: "các phương pháp được trích xuất từ một bài báo",
+    IntentName.METHOD_PAPERS: "các bài báo sử dụng một phương pháp",
+    IntentName.PAPER_DATASETS: "các bộ dữ liệu đánh giá được trích xuất từ một bài báo",
+    IntentName.DATASET_PAPERS: "các bài báo được đánh giá trên một bộ dữ liệu",
+    IntentName.PAPER_TASKS: "các bài toán nghiên cứu được trích xuất từ một bài báo",
+    IntentName.TASK_PAPERS: "các bài báo giải quyết một bài toán nghiên cứu",
+    IntentName.METHOD_TRENDS: "xếp hạng phương pháp theo số bài báo, có thể lọc theo năm",
     IntentName.UNKNOWN: "unsupported or unclear graph request",
 }
+
+ENTITY_FREE_INTENTS = {IntentName.NETWORK_TOP, IntentName.METHOD_TRENDS}
 
 
 def grounding_form(value: str) -> str:
@@ -289,6 +309,41 @@ class IntentParser:
                 )
         return None, 2
 
+    async def verify_route_without_catalog(
+        self,
+        question: str,
+        history: list[dict[str, str]],
+        previous: QueryIntent,
+    ) -> tuple[RouteName | None, int]:
+        """Ask the model to re-check a weak entityless/Unknown route once.
+
+        This is deliberately semantic rather than a keyword classifier. It runs only when the
+        server found no exact catalog name and the first parse cannot support a concrete lookup.
+        Invalid output preserves the original route.
+        """
+        payload = {
+            "question": question,
+            "history": history,
+            "previous_route": previous.route.value,
+            "previous_intent": previous.intent.value,
+            "previous_entities": [entity.model_dump(mode="json") for entity in previous.entities],
+        }
+        response = await self.provider.generate(
+            [
+                {"role": "system", "content": ROUTE_VERIFY_SYSTEM},
+                {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+            ],
+            temperature=0,
+            max_tokens=80,
+            json_mode=True,
+        )
+        try:
+            raw = json.loads(response.content)
+            route = RouteName(str(raw["route"]).casefold())
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+            return None, 1
+        return route, 1
+
     async def choose_between_intents(
         self,
         question: str,
@@ -443,16 +498,21 @@ class IntentParser:
     @staticmethod
     def _normalize_route(intent: QueryIntent) -> QueryIntent:
         """Resolve a self-contradictory clarify label using the model's own concrete signals."""
-        if intent.intent == IntentName.NETWORK_TOP and intent.entities:
+        if intent.intent in ENTITY_FREE_INTENTS and intent.entities:
             # Entity-free catalog action: discard model-added generic spans such as "tác giả".
             intent = intent.model_copy(update={"entities": []})
+        if intent.intent in ENTITY_FREE_INTENTS and intent.route == RouteName.OUT_OF_SCOPE:
+            # A whitelisted entity-free graph intent contradicts an out-of-scope route. Trust
+            # the model's more specific semantic choice and clear the unsupported flag; this
+            # does not rescue unknown/off-domain questions or invent an entity.
+            return intent.model_copy(update={"route": RouteName.GRAPH_QA, "unsupported": False})
         if intent.route != RouteName.CLARIFY:
             return intent
         if intent.intent == IntentName.UNKNOWN:
             return intent
         if intent.missing_fields:
             return intent
-        needs_entity = intent.intent != IntentName.NETWORK_TOP
+        needs_entity = intent.intent not in ENTITY_FREE_INTENTS
         has_usable_signal = (not needs_entity) or bool(intent.entities)
         if has_usable_signal:
             return intent.model_copy(update={"route": RouteName.GRAPH_QA})

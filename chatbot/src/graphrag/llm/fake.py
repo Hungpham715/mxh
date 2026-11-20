@@ -25,6 +25,8 @@ class FakeLLMProvider:
 
         if "TASK=ROUTE/PARSE" in system:
             content = json.dumps(self._parse(user), ensure_ascii=False)
+        elif "TASK=ROUTE_VERIFY" in system:
+            content = json.dumps(self._verify_route(user), ensure_ascii=False)
         elif "TASK=REQUESTED_FIELDS" in system:
             content = json.dumps(self._requested_fields(user), ensure_ascii=False)
         elif "TASK=HISTORY" in system:
@@ -41,6 +43,19 @@ class FakeLLMProvider:
         normalized = user.casefold()
         fields = ["affiliations"] if "tổng quan" in normalized or "overview" in normalized else []
         return {"fields": fields}
+
+    def _verify_route(self, user: str) -> dict[str, str]:
+        try:
+            question = str(json.loads(user).get("question", ""))
+        except (json.JSONDecodeError, AttributeError):
+            question = ""
+        normalized = question.casefold()
+        arithmetic = bool(re.search(r"\b\d+\s*(?:cộng|trừ|nhân|chia|[+*/-])\s*\d+\b", normalized))
+        if self._is_out_of_scope(normalized) or arithmetic:
+            return {"route": "out_of_scope"}
+        if self._has_pronoun_reference(normalized):
+            return {"route": "clarify"}
+        return {"route": "graph_qa"}
 
     async def health(self) -> tuple[bool, str]:
         return True, "deterministic fake provider ready"
@@ -195,6 +210,13 @@ class FakeLLMProvider:
     @staticmethod
     def _detect_intent(question: str) -> str:
         rules = [
+            (("phương pháp phổ biến", "phương pháp nào được dùng nhiều", "top method"), "method_trends"),
+            (("bài nào sử dụng phương pháp", "bài báo nào sử dụng", "papers use method"), "method_papers"),
+            (("sử dụng phương pháp nào", "dùng phương pháp nào", "methods does"), "paper_methods"),
+            (("bài nào được đánh giá trên", "papers evaluated on"), "dataset_papers"),
+            (("đánh giá trên bộ dữ liệu nào", "dataset does"), "paper_datasets"),
+            (("bài nào giải quyết", "papers address task"), "task_papers"),
+            (("giải quyết bài toán nào", "task does"), "paper_tasks"),
             (("đường", "path", "kết nối"), "author_path"),
             (("xếp hạng", "top", "nhiều đồng tác giả"), "network_top"),
             (("tổ chức hợp tác", "institution collaboration"), "org_collaborations"),
@@ -227,6 +249,12 @@ class FakeLLMProvider:
             ("Vietnam National University", "Institution", "institution"),
             ("Retrieval and RAG", "Topic", "topic"),
             ("Safety and LLM evaluation", "Topic", "topic"),
+            ("GraphRAG", "Method", "method"),
+            ("Qwen", "Method", "method"),
+            ("NLPGraph Bench", "Dataset", "dataset"),
+            ("SafetyBench", "Dataset", "dataset"),
+            ("Question Answering", "Task", "task"),
+            ("Safety Evaluation", "Task", "task"),
         ]
 
     @classmethod

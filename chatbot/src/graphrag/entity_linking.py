@@ -30,6 +30,13 @@ INTENT_REQUIRED_MENTIONS: dict[str, tuple[str, int] | None] = {
     "topic_papers": ("Topic", 1),
     "org_collaborations": ("Institution", 1),
     "network_top": None,
+    "paper_methods": ("Paper", 1),
+    "method_papers": ("Method", 1),
+    "paper_datasets": ("Paper", 1),
+    "dataset_papers": ("Dataset", 1),
+    "paper_tasks": ("Paper", 1),
+    "task_papers": ("Task", 1),
+    "method_trends": None,
     "unknown": None,
 }
 

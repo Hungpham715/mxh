@@ -184,6 +184,24 @@ async def test_out_of_scope_booking_is_refused(dependencies) -> None:
 
 
 @pytest.mark.asyncio
+async def test_weak_unknown_entity_parse_gets_semantic_route_verification(dependencies) -> None:
+    _, _, workflow = dependencies
+    parse_payload = (
+        '{"route":"graph_qa","intent":"author_papers",'
+        '"entities":[{"text":"1","type":"Unknown"}],'
+        '"missing_fields":[],"filters":{"year_from":null,"year_to":null,"topic_id":null,'
+        '"citation_direction":"both"},"requested_fields":[],"history_refs":[],'
+        '"unsupported":false,"parse_source":"llm"}'
+    )
+    seq = SequenceLLM([parse_payload, '{"route":"out_of_scope"}'], default="{}")
+    workflow.parser = IntentParser(seq)
+    response = await workflow.run(ChatRequest(question="1 cộng 1 bằng mấy?", debug=True))
+    assert response.status == "out_of_scope"
+    assert response.route == "out_of_scope"
+    assert response.iterations_used == 0
+
+
+@pytest.mark.asyncio
 async def test_followup_resolves_pronoun_from_history(dependencies) -> None:
     _, _, workflow = dependencies
     response = await workflow.run(

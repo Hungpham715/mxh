@@ -34,6 +34,7 @@ class Settings(BaseModel):
     neo4j_password: str | None = None
     neo4j_database: str = "neo4j"
     neo4j_scope_id: str = "nlpgraph-v1"
+    neo4j_enrichment_scope_id: str = "nlpgraph-enrich-v1"
     ollama_base_url: str = "http://127.0.0.1:11434"
     ollama_model: str = "qwen3:0.6b"
     hf_model_id: str = "Qwen/Qwen3-0.6B"
@@ -80,6 +81,7 @@ class Settings(BaseModel):
             "graph_provider": self.graph_provider,
             "llm_provider": self.llm_provider,
             "scope_id": self.neo4j_scope_id,
+            "enrichment_scope_id": self.neo4j_enrichment_scope_id,
             "max_iterations": self.max_iterations,
             "max_records_per_query": self.max_records_per_query,
             "max_graph_hops": self.max_graph_hops,

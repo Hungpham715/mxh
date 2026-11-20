@@ -44,6 +44,8 @@ class EvidenceNormalizer:
             return ["Citation coverage is limited to papers inside this sampled corpus."]
         if "TOPIC" in predicate or "LABELLED" in predicate:
             return ["Topic labels are precision-first and missing labels do not imply absence."]
+        if any(marker in predicate for marker in ("METHOD", "DATASET", "EVALUATED_ON", "TASK")):
+            return ["This relation was text-mined from an abstract; absence is not evidence of non-use."]
         return ["Result is limited to the sampled 2023-2025 corpus."]
 
 

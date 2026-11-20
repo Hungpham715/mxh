@@ -21,7 +21,8 @@ Cypher: it may emit only a validated intent/arguments object, and Python chooses
 
 - `llm/`: three substitutable providers. Real failures remain errors; there is no silent fake fallback.
 - `graph/`: repository boundary isolates synthetic tests from Neo4j sessions and resource lifecycle.
-- `cypher_templates.py`: twelve parameterized, scope-filtered read-only queries.
+- `cypher_templates.py`: nineteen parameterized, scope-filtered read-only queries. Seven use the additive
+  enrichment scope while requiring their Paper endpoints to remain in the base scope.
 - `workflow.py`: explicit state machine rather than LangGraph/agents/tool calling.
 - `evidence.py`: facts and citations are derived from graph records, never model prose.
 

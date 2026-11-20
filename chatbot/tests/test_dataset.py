@@ -18,10 +18,10 @@ from evaluation.run_eval import _label_level
 
 
 @pytest.mark.asyncio
-async def test_fake_generation_covers_twelve_query_templates() -> None:
+async def test_fake_generation_covers_all_query_templates() -> None:
     cases = await generate(provider="fake", seed=42, limit=20, execute=False)
-    assert len(cases) == 12
-    assert len({case.expected_query.intent for case in cases}) == 12
+    assert len(cases) == 19
+    assert len({case.expected_query.intent for case in cases}) == 19
     assert all(case.review_status == ReviewStatus.NEEDS_REVIEW for case in cases)
 
 
@@ -236,7 +236,7 @@ async def test_dataset_audit_reports_action_coverage_without_inventing_gold(tmp_
     write_models(input_path, cases)
     manifest = build_manifest(cases, input_path)
     assert manifest["quality_status"] == "pass"
-    assert len(manifest["actions_present"]) == 12
+    assert len(manifest["actions_present"]) == 19
     assert manifest["silver_cases"] == 0
     assert manifest["nonhuman_source_review_cases"] == 0
     assert manifest["human_gold_cases"] == 0
