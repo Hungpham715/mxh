@@ -1,0 +1,131 @@
+{
+ "paper_id": "oa:W4417226603",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "multi-agent debate framework",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate this risk in a single-turn, multi-agent debate framework: one LLM-based agent provides a factual answer from TruthfulQA, another vigorously defends a falsehood, and the same LLM architecture serves as judge."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In many real-world scenarios, a single Large Language Model (LLM) may encounter contradictory claims-some accurate, others forcefully incorrect-and must judge which is true."
+   }
+  },
+  {
+   "surface": "open-source LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate this risk in a single-turn, multi-agent debate framework: one LLM-based agent provides a factual answer from TruthfulQA, another vigorously defends a falsehood, and the same LLM architecture serves as judge."
+   }
+  },
+  {
+   "surface": "truthfulqa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate this risk in a single-turn, multi-agent debate framework: one LLM-based agent provides a factual answer from TruthfulQA, another vigorously defends a falsehood, and the same LLM architecture serves as judge."
+   }
+  },
+  {
+   "surface": "confidence-weighted persuasion override rate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce the Confidence-Weighted Persuasion Override Rate (CW-POR), which captures not only how often the judge is deceived but also how strongly it believes the incorrect choice."
+   }
+  },
+  {
+   "surface": "LLM architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate this risk in a single-turn, multi-agent debate framework: one LLM-based agent provides a factual answer from TruthfulQA, another vigorously defends a falsehood, and the same LLM architecture serves as judge."
+   }
+  },
+  {
+   "surface": "experiment",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "five open-source LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "agent verbosity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "30-300 words",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "high confidence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our experiments on five open-source LLMs (3B-14B parameters), where we systematically vary agent verbosity (30-300 words), reveal that even smaller models can craft persuasive arguments that override truthful answers-often with high confidence."
+   }
+  },
+  {
+   "surface": "adversarial testing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These findings underscore the importance of robust calibration and adversarial testing to prevent LLMs from confidently endorsing misinformation."
+   }
+  },
+  {
+   "surface": "calibration",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These findings underscore the importance of robust calibration and adversarial testing to prevent LLMs from confidently endorsing misinformation."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "overriding truthful answers"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 9316,
+ "eval_count": 164,
+ "ts": "2026-11-20T07:24:10Z"
+}

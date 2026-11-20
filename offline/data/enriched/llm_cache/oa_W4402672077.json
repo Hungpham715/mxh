@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4402672077",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To this end, we propose a new post-pretraining method for LLMs with an expansion of Transformer blocks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We tune the expanded blocks using only new corpus, efficiently and effectively improving the model’s knowledge while mitigating forgetting.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20296,
+ "eval_count": 193,
+ "ts": "2026-11-20T03:57:56Z"
+}

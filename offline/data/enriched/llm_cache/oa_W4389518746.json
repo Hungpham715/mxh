@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4389518746",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CHEF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With this in mind, we propose a method - CHEF, replicating the morphological transformations inherent in sentences based on lexical and functional morpheme combinations through generative data augmentation."
+   }
+  },
+  {
+   "surface": "Korean",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Korean morphological variations present unique opportunities and challenges in natural language processing (NLP), necessitating an advanced understanding of morpheme-based sentence construction."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 9751,
+ "eval_count": 125,
+ "ts": "2026-11-20T03:28:04Z"
+}

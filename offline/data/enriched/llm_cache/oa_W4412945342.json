@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4412945342",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "OUTLIER-SAFE PRE-TRAINING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce Outlier-Safe Pre-Training (OSP), a practical guideline that proactively prevents outlier formation, rather than relying on post-hoc mitigation."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16474,
+ "eval_count": 103,
+ "ts": "2026-11-20T04:23:07Z"
+}

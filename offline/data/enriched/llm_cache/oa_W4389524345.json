@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4389524345",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FANToM"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "uses_method|addresses_task|evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43911,
+ "eval_count": 284,
+ "ts": "2026-11-20T03:44:03Z"
+}

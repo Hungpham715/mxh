@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4416035841",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We select a dataset of human-written and machine-generated texts spanning 8 domains and produced by 11 different LLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "METHOD"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13240,
+ "eval_count": 77,
+ "ts": "2026-11-20T04:30:19Z"
+}

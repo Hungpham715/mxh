@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404783563",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing methods, such as in-context learning and parameter-efficient fine-tuning, fall short in capturing the complexity of human preferences, especially given the small, personal datasets individuals possess."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing methods, such as in-context learning and parameter-efficient fine-tuning, fall short in capturing the complexity of human preferences, especially given the small, personal datasets individuals possess."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DATASET"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "TASK"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "TASK"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23598,
+ "eval_count": 186,
+ "ts": "2026-11-20T04:10:25Z"
+}

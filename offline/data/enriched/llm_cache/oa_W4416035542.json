@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4416035542",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DEPLOYMENT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20980,
+ "eval_count": 187,
+ "ts": "2026-11-20T04:28:35Z"
+}

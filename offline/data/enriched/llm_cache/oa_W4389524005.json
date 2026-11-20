@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4389524005",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Biases",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Biases in the dataset often enable the model to achieve high performance on in-distribution data, while poorly performing on out-of-distribution data."
+   }
+  },
+  {
+   "surface": "Debiasing methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To mitigate the detrimental effect of the bias on the networks, previous works have proposed debiasing methods that down-weight the biased examples identified by an auxiliary model, which is trained with explicit bias labels."
+   }
+  },
+  {
+   "surface": "Auxiliary model",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To mitigate the detrimental effect of the bias on the networks, previous works have proposed debiasing methods that down-weight the biased examples identified by an auxiliary model, which is trained with explicit bias labels."
+   }
+  },
+  {
+   "surface": "Main model",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As an alternative, we propose a new debiasing framework that introduces binary classifiers between the auxiliary model and the main model, coined bias experts."
+   }
+  },
+  {
+   "surface": "Multi-class learning objective",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Despite the promising debiasing results of recent works, the multi-class learning objective, which has been naively used to train the auxiliary model, may harm the bias mitigation effect due to its regularization effect and competitive nature across classes."
+   }
+  },
+  {
+   "surface": "Binary classifiers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As an alternative, we propose a new debiasing framework that introduces binary classifiers between the auxiliary model and the main model, coined bias experts."
+   }
+  },
+  {
+   "surface": "Bias experts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As an alternative, we propose a new debiasing framework that introduces binary classifiers between the auxiliary model and the main model, coined bias experts."
+   }
+  },
+  {
+   "surface": "Challenge datasets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Consequently, our debiased model consistently outperforms the state-of-the-art on various challenge datasets."
+   }
+  },
+  {
+   "surface": "State-of-the-art",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Consequently, our debiased model consistently outperforms the state-of-the-art on various challenge datasets."
+   }
+  },
+  {
+   "surface": "Out-of-distribution data",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Biases in the dataset often enable the model to achieve high performance on in-distribution data, while poorly performing on out-of-distribution data."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 29498,
+ "eval_count": 106,
+ "ts": "2026-11-20T03:43:03Z"
+}

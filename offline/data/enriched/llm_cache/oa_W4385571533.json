@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385571533",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "standard benchmark",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results have shown that CFSum significantly outperforms multiple strong baselines on the standard benchmark."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "standard benchmark",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results have shown that CFSum significantly outperforms multiple strong baselines on the standard benchmark.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "standard benchmark"
+ ],
+ "duration_ms": 4152,
+ "eval_count": 93,
+ "ts": "2026-11-20T03:16:30Z"
+}

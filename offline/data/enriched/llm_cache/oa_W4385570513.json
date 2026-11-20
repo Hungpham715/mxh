@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385570513",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MPCHAT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, we present the first multimodal persona-based dialogue dataset named MPCHAT, which extends persona with both text and images to contain episodic memories."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Rubin et al., 2003"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Conway, 2009"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "uses_method",
+   "surface": "next response prediction"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "uses_method",
+   "surface": "grounding persona prediction"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "uses_method",
+   "surface": "speaker identification"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "multi-modal persona"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "episodic memories"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 6967,
+ "eval_count": 131,
+ "ts": "2026-11-20T03:12:55Z"
+}

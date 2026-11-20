@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4404782642",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "FOCI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We fill this evaluation gap by creating FOCI (Fine-grained Object ClassIfication), a difficult multiple-choice benchmark for fine-grained object classification, from existing object classification datasets: (1) multiple-choice avoids ambiguous answers associated with casting classification as open-ended QA task; (2) we retain classification difficulty by mining negative labels with a CLIP model."
+   }
+  },
+  {
+   "surface": "ImageNet-21k",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "FOCI complements five popular classification datasets with four domain-specific subsets from ImageNet-21k."
+   }
+  },
+  {
+   "surface": "public LVLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We benchmark 12 public LVLMs on and show that it tests for a complementary skill to established image understanding and reasoning benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "public LVLMs",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We benchmark 12 public LVLMs on and show that it tests for a complementary skill to established image understanding and reasoning benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ImageNet-21k",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Since the image encoders of LVLMs come from these CLIP models, this points to inadequate alignment for fine-grained object distinction between the encoder and the LLM and warrants (pre)training data with more fine-grained annotation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "https://github.com/gregor-ge/FOCI-Benchmark"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ImageNet-21k"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21988,
+ "eval_count": 253,
+ "ts": "2026-11-20T04:04:45Z"
+}

@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4407123425",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "token",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Token representations influence the efficiency and adaptability of language models, yet conventional tokenization strategies impose rigid segmentation boundaries that do not adjust dynamically to evolving contextual relationships."
+   }
+  },
+  {
+   "surface": "morphogenesis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The introduction of contextual morphogenesis establishes a self-organizing mechanism that restructures token boundaries based on learned contextual dependencies, allowing embeddings to evolve progressively across iterative processing steps."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "morphogenesis",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The introduction of contextual morphogenesis establishes a self-organizing mechanism that restructures token boundaries based on learned contextual dependencies, allowing embeddings to evolve progressively across iterative processing steps.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "corpus"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31030,
+ "eval_count": 306,
+ "ts": "2026-11-20T04:13:45Z"
+}

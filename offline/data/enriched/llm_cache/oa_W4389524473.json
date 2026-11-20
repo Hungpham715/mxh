@@ -1,0 +1,65 @@
+{
+ "paper_id": "oa:W4389524473",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformer-based language models (LMs) are powerful and widely-applicable tools, but their usefulness is constrained by a finite context window and the expensive computational cost of processing long text documents."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "auto_compressor"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "unsupervised"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "long_context"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "30_720"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "in_context_learning"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "summary_vector"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "pre_computing"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "large_corpus"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "retrieval_augmented_language"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "passage_re_ranking"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16117,
+ "eval_count": 127,
+ "ts": "2026-11-20T03:45:01Z"
+}

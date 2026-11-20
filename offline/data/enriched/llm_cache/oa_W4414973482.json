@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4414973482",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We provide a comprehensive framework detailing required resources, a phased implementation strategy with concrete milestones, an offline evaluation protocol utilizing curated test cases (Hit@K, Precision@K, Recall@K, MRR), and an online measurement methodology incorporating query success metrics, zero-result rates, and dwell-time proxies."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22440,
+ "eval_count": 303,
+ "ts": "2026-11-20T04:27:03Z"
+}

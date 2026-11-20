@@ -1,0 +1,163 @@
+{
+ "paper_id": "oa:W4417504446",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DATA ANALYSIS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  },
+  {
+   "surface": "PERFORMANCE EVALUATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  },
+  {
+   "surface": "SIMULATION DEDUCTION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  },
+  {
+   "surface": "MANUAL ANALYSIS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional manual analysis approach is time-consuming and limited by human errors."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To enhance efficiency and accuracy, large language models (LLMs) with strong analytical and inferencing capabilities can be employed."
+   }
+  },
+  {
+   "surface": "REPORTS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, high-quality analysis reports with well-structured formatting cannot be obtained through a single instruction input to the LLM."
+   }
+  },
+  {
+   "surface": "SUB-TASKS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this issue, we propose a method that first decomposes the complex task into several sub-tasks and designs effective system prompts and user prompts for each sub-task."
+   }
+  },
+  {
+   "surface": "SYSTEM PROMPTS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this issue, we propose a method that first decomposes the complex task into several sub-tasks and designs effective system prompts and user prompts for each sub-task."
+   }
+  },
+  {
+   "surface": "USER PROMPTS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this issue, we propose a method that first decomposes the complex task into several sub-tasks and designs effective system prompts and user prompts for each sub-task."
+   }
+  },
+  {
+   "surface": "CUSTOM TOOLS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, custom tools are defined and invoked to generate figures and compute metrics."
+   }
+  },
+  {
+   "surface": "REPORT TEMPLATES",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We also design multiple report templates, each tailored to a specific application and input data type, ensuring their adaptability across a variety of scenarios."
+   }
+  },
+  {
+   "surface": "MULTI-ROUND INTERACTIONS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Multi-round interactions with the LLM incorporating self-check and reflection are then conducted to enable structured data extraction as well as multi-step analysis and evaluation."
+   }
+  },
+  {
+   "surface": "REFLECTION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Multi-round interactions with the LLM incorporating self-check and reflection are then conducted to enable structured data extraction as well as multi-step analysis and evaluation."
+   }
+  },
+  {
+   "surface": "DATA EXTRACTION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Multi-round interactions with the LLM incorporating self-check and reflection are then conducted to enable structured data extraction as well as multi-step analysis and evaluation."
+   }
+  },
+  {
+   "surface": "MULTI-STEP ANALYSIS",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Multi-round interactions with the LLM incorporating self-check and reflection are then conducted to enable structured data extraction as well as multi-step analysis and evaluation."
+   }
+  },
+  {
+   "surface": "EVALUATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  },
+  {
+   "surface": "BASELINE METHOD",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive evaluation results demonstrate that the reports generated by our method exhibit higher quality, therefore obtaining higher scores than the baseline method."
+   }
+  },
+  {
+   "surface": "RESULT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive evaluation results demonstrate that the reports generated by our method exhibit higher quality, therefore obtaining higher scores than the baseline method."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "SELF-HECK"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21931,
+ "eval_count": 208,
+ "ts": "2026-11-20T04:41:57Z"
+}

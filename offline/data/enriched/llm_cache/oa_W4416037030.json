@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4416037030",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, current methods have limitations in the analysis and utilization of toxic samples, failing to fully harness their potential."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on benchmark datasets across different model scales and different detoxification tasks verify the effectiveness of our architecture."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on benchmark datasets across different model scales and different detoxification tasks verify the effectiveness of our architecture."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22371,
+ "eval_count": 191,
+ "ts": "2026-11-20T04:38:20Z"
+}

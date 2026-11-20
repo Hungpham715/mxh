@@ -1,0 +1,32 @@
+{
+ "paper_id": "oa:W4404864975",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite notable results achieved by these target-oriented optimization methods, they struggle with the complicated long texts since the implicit long-distance relation, e.g., aspect-opinion relation, is difficult to extract under the position embedding mechanism in generative models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21797,
+ "eval_count": 176,
+ "ts": "2026-11-20T04:12:31Z"
+}

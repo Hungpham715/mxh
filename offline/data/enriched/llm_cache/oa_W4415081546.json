@@ -1,0 +1,31 @@
+{
+ "paper_id": "oa:W4415081546",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, a significant challenge lies in developing meaningful methods to measure these complex processes."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19348,
+ "eval_count": 84,
+ "ts": "2026-11-20T04:26:10Z"
+}

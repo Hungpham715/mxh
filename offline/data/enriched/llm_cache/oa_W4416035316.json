@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4416035316",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While MBR has proven effective in machine translation, where the variability of a language model’s outcome space is naturally constrained, it may face challenges in more open-ended tasks such as dialogue or instruction-following."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "evaluated_on"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21323,
+ "eval_count": 249,
+ "ts": "2026-11-20T04:28:14Z"
+}

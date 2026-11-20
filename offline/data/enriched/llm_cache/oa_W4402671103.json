@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4402671103",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "self-disclosure",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Self-disclosure, while being common and rewarding in social media interaction, also poses privacy risks."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Motivated by the user feedback, we introduce the task of self-disclosure abstraction, which is rephrasing disclosures into less specific terms while preserving their utility, e.g., “Im 16F” to “I’m a teenage girl”."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18171,
+ "eval_count": 76,
+ "ts": "2026-11-20T03:50:38Z"
+}

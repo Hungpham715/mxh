@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4402670982",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Social biases in LLMs are usually measured via bias benchmark datasets."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23657,
+ "eval_count": 249,
+ "ts": "2026-11-20T03:50:01Z"
+}

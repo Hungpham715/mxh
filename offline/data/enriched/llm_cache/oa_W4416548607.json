@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4416548607",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Method: We propose an Etiology-Aware Attention Supervision framework that introduces structured etiological information as an external supervisory signal for training large language models."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, their trustworthiness in diagnosis-oriented medical tasks remains constrained by the lack of structured guidance on how clinically relevant diagnostic evidence is internally attended to and utilized during model learning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Method: We propose an Etiology-Aware Attention Supervision framework that introduces structured etiological information as an external supervisory signal for training large language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24664,
+ "eval_count": 256,
+ "ts": "2026-11-20T04:39:58Z"
+}

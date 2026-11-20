@@ -1,0 +1,39 @@
+{
+  "schema_version": "enrichment-source-audit-v1",
+  "audit_kind": "deterministic_nonhuman_source_grounding",
+  "provenance": {
+    "edge_source": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/enriched",
+    "paper_source": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/processed/papers.jsonl",
+    "seed": 20261120,
+    "sample_per_relation_type": 30,
+    "reviewer": "offline/src/enrichment/audit.py",
+    "human_review": false
+  },
+  "audited_edges": 120,
+  "passed_edges": 120,
+  "failed_edges": 0,
+  "source_grounding_pass_rate": 1.0,
+  "sampled_by_relation_type": {
+    "ADDRESSES_TASK": 30,
+    "EVALUATED_ON": 30,
+    "METHOD_EVALUATED_ON": 30,
+    "USES_METHOD": 30
+  },
+  "verdicts_by_source_kind": {
+    "agreement": {
+      "pass": 4
+    },
+    "llm": {
+      "pass": 47
+    },
+    "rules": {
+      "pass": 69
+    }
+  },
+  "claims_not_supported": [
+    "This audit does not estimate semantic entity precision, recall, or F1.",
+    "This audit does not estimate semantic relation precision, recall, or F1.",
+    "Extractor agreement is not independent human gold."
+  ],
+  "human_gold_protocol": "Freeze unseen papers, have two independent annotators label spans and relations, adjudicate disagreements, then compute exact/overlap entity and relation micro/macro P/R/F1."
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404793006",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our best method yields BLEU, ROUGE, CIDEr, and METEOR scores of 71.3, 78.6, 7.31, and 81.9, respectively, demonstrating practical usability."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Further, to the best of our knowledge, there does not exist a large-scale dataset for this task."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Further, to the best of our knowledge, there does not exist a large-scale dataset for this task."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29239,
+ "eval_count": 327,
+ "ts": "2026-11-20T04:13:06Z"
+}

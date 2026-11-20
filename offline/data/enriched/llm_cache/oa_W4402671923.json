@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4402671923",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CONVERSATIONAL",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Conversational search utilizes muli-turn natural language contexts to retrieve relevant passages."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive experiments conducted on four public datasets, under both normal and zero-shot settings, demonstrate the effectiveness, generalizability, and applicability of ConvAug."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive experiments conducted on four public datasets, under both normal and zero-shot settings, demonstrate the effectiveness, generalizability, and applicability of ConvAug."
+   }
+  },
+  {
+   "surface": "CODE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "A contrastive learning objective is then employed to train a better conversational context encoder."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CONV AUG"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "EXPERIMENT",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23694,
+ "eval_count": 188,
+ "ts": "2026-11-20T03:56:24Z"
+}

@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4402672084",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We carefully craft a novel benchmark from multiple question-answer datasets, and show the efficacy of our method in the LLM customization."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We carefully craft a novel benchmark from multiple question-answer datasets, and show the efficacy of our method in the LLM customization."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The customization of large language models (LLMs) for user-specified tasks gets important."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these restrictions, we first propose Crayon, a novel approach for on-device LLM customization.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27744,
+ "eval_count": 283,
+ "ts": "2026-11-20T03:58:08Z"
+}

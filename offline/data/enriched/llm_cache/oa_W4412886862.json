@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4412886862",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MIND",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this issue, we propose MIND, a multi-agent framework for zero-shot harmful meme detection that does not rely on annotated data."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "MIND"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12831,
+ "eval_count": 54,
+ "ts": "2026-11-20T04:16:06Z"
+}

@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4389524075",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "automated essay scoring",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automated Essay Scoring (AES) aims to automatically assess the quality of essays."
+   }
+  },
+  {
+   "surface": "corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we aim to foster the development of AES for French by providing the TCFLE-8 corpus, a corpus of 6.5k essays collected in the context of the Test de Connaissance du Français (TCF - French Knowledge Test) certification exam."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We also advance the state-of-the-art performance for the AES task in French by experimenting with two strong baselines (i.e."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "corpus",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We report the strict quality procedure that led to the scoring of each essay by at least two raters according to the CEFR levels and to the creation of a balanced corpus.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "corpus"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "automated essay scoring"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38917,
+ "eval_count": 231,
+ "ts": "2026-11-20T03:42:55Z"
+}

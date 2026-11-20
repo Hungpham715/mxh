@@ -1,0 +1,135 @@
+{
+ "paper_id": "oa:W4404783147",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Analogical thinking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans regularly engage in analogical thinking, relating personal experiences to current situations (X is analogous to Y because of Z)."
+   }
+  },
+  {
+   "surface": "Benchmarking approach",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmarking approach focuses on aspects of this ability that are common among humans: (i) recalling related experiences from a large amount of information, and (ii) applying analogical reasoning to complex and lengthy scenarios."
+   }
+  },
+  {
+   "surface": "Human written analogies",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We collect a set of 340 high quality, human written analogies for use in our benchmark, which constitutes the largest such collection to date."
+   }
+  },
+  {
+   "surface": "Large amount of information",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmarking approach focuses on aspects of this ability that are common among humans: (i) recalling related experiences from a large amount of information, and (ii) applying analogical reasoning to complex and lengthy scenarios."
+   }
+  },
+  {
+   "surface": "Needle in a haystack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Surprisingly, scale offers minimal gains when, (i) analogies involve lengthy scenarios, or (ii) recalling relevant scenarios from a large pool of information, a process analogous to finding a needle in a haystack."
+   }
+  },
+  {
+   "surface": "340",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We collect a set of 340 high quality, human written analogies for use in our benchmark, which constitutes the largest such collection to date."
+   }
+  },
+  {
+   "surface": "Proprietary",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We then test a broad collection of models consisting of 12 open source and 3 proprietary in various sizes and architectures."
+   }
+  },
+  {
+   "surface": "12",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We then test a broad collection of models consisting of 12 open source and 3 proprietary in various sizes and architectures."
+   }
+  },
+  {
+   "surface": "Open source",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We then test a broad collection of models consisting of 12 open source and 3 proprietary in various sizes and architectures."
+   }
+  },
+  {
+   "surface": "Architectures",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We then test a broad collection of models consisting of 12 open source and 3 proprietary in various sizes and architectures."
+   }
+  },
+  {
+   "surface": "AnaloBench",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To answer this question, we propose AnaloBench, a benchmark to determine analogical reasoning ability in LMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "AnaloBench",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmarking approach focuses on aspects of this ability that are common among humans: (i) recalling related experiences from a large amount of information, and (ii) applying analogical reasoning to complex and lengthy scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "AnaloBench"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Benchmarking approach"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "AnaloBench",
+   "to": "Human written analogies"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "Human written analogies",
+   "to": "Needle in a haystack"
+  }
+ ],
+ "auto_added_endpoints": [
+  "AnaloBench"
+ ],
+ "duration_ms": 24608,
+ "eval_count": 384,
+ "ts": "2026-11-20T04:10:21Z"
+}

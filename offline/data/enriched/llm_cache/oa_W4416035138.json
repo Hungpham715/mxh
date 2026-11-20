@@ -1,0 +1,111 @@
+{
+ "paper_id": "oa:W4416035138",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "copyright takedown",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This has driven the development of “copyright takedown” methods—post-training approaches aimed at preventing models from generating content substantially similar to copyrighted ones."
+   }
+  },
+  {
+   "surface": "BloomScrub",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose BloomScrub, a remarkably simple yet highly effective inference-time approach that provides certified copyright takedown."
+   }
+  },
+  {
+   "surface": "copyright",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The exposure of large language models (LLMs) to copyrighted material during pre-training raises concerns about unintentional copyright infringement post deployment."
+   }
+  },
+  {
+   "surface": "data sketches",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "By leveraging efficient data sketches (Bloom filters), our approach enables scalable copyright screening—even for large-scale real-world corpora."
+   }
+  },
+  {
+   "surface": "Bloom filters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "By leveraging efficient data sketches (Bloom filters), our approach enables scalable copyright screening—even for large-scale real-world corpora."
+   }
+  },
+  {
+   "surface": "real-world corpora",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "By leveraging efficient data sketches (Bloom filters), our approach enables scalable copyright screening—even for large-scale real-world corpora."
+   }
+  },
+  {
+   "surface": "inference-time approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose BloomScrub, a remarkably simple yet highly effective inference-time approach that provides certified copyright takedown."
+   }
+  },
+  {
+   "surface": "certified",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose BloomScrub, a remarkably simple yet highly effective inference-time approach that provides certified copyright takedown."
+   }
+  },
+  {
+   "surface": "certified risk reduction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "When quotes beyond a length threshold cannot be removed, the system can abstain from responding, offering certified risk reduction."
+   }
+  },
+  {
+   "surface": "adaptive abstention",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that BloomScrub reduces infringement risk, preserves utility, and accommodates different levels of enforcement stringency with adaptive abstention."
+   }
+  },
+  {
+   "surface": "scalable",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "By leveraging efficient data sketches (Bloom filters), our approach enables scalable copyright screening—even for large-scale real-world corpora."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "copyright risk reduction"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "effectiveness"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14857,
+ "eval_count": 134,
+ "ts": "2026-11-20T04:27:30Z"
+}

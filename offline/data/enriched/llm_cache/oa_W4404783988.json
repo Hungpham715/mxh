@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4404783988",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments, conducted with two task types and two types of language models, demonstrate that RSA-Control achieves strong attribute control while maintaining language fluency and content consistency."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments, conducted with two task types and two types of language models, demonstrate that RSA-Control achieves strong attribute control while maintaining language fluency and content consistency.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21056,
+ "eval_count": 197,
+ "ts": "2026-11-20T04:10:42Z"
+}

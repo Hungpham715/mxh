@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4402671850",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Context-Aware MultiModal Learner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this work, we introduce Context-Aware MultiModal Learner (CaMML), for tuning large multimodal models (LMMs)."
+   }
+  },
+  {
+   "surface": "CaMML-7B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on CaMML, we have developed two multimodal models, CaMML-7B and CaMML-13B, that have shown exceptional performance across an array of benchmark datasets for multimodal tasks."
+   }
+  },
+  {
+   "surface": "CaMML-13B",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on CaMML, we have developed two multimodal models, CaMML-7B and CaMML-13B, that have shown exceptional performance across an array of benchmark datasets for multimodal tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "https://github.com/amazon-science/camml"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23316,
+ "eval_count": 144,
+ "ts": "2026-11-20T03:55:39Z"
+}

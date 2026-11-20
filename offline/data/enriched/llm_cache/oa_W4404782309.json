@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4404782309",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HPSG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present new supertaggers trained on English HPSG-based treebanks and test the effects of the best tagger on parsing speed and accuracy."
+   }
+  },
+  {
+   "surface": "WSJ23",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our fine-tuned BERT-based tagger achieves 97.26% accuracy on 950 sentences from WSJ23 and 93.88% on the out-of-domain technical essay The Cathedral and the Bazaar."
+   }
+  },
+  {
+   "surface": "The Cathedral and the Bazaar",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our fine-tuned BERT-based tagger achieves 97.26% accuracy on 950 sentences from WSJ23 and 93.88% on the out-of-domain technical essay The Cathedral and the Bazaar."
+   }
+  },
+  {
+   "surface": "Huggingface",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We contribute the complete datasets reformatted for Huggingface token classification."
+   }
+  },
+  {
+   "surface": "SVM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We use SVM and neural CRF- and BERT-based methods and show that both SVM and neural supertaggers achieve considerably higher accuracy compared to the baseline and lead to an increase not only in the parsing speed but also the parser accuracy with respect to gold dependency structures."
+   }
+  },
+  {
+   "surface": "neural CRF-",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We use SVM and neural CRF- and BERT-based methods and show that both SVM and neural supertaggers achieve considerably higher accuracy compared to the baseline and lead to an increase not only in the parsing speed but also the parser accuracy with respect to gold dependency structures."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We use SVM and neural CRF- and BERT-based methods and show that both SVM and neural supertaggers achieve considerably higher accuracy compared to the baseline and lead to an increase not only in the parsing speed but also the parser accuracy with respect to gold dependency structures."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "accuracy"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "950"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "93.88"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "3"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "97.26"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "93.88"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "100"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "accuracy"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "precision"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "accuracy"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "accuracy"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23606,
+ "eval_count": 183,
+ "ts": "2026-11-20T04:02:50Z"
+}

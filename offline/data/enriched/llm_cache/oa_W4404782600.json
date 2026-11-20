@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W4404782600",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Program of Thoughts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Program of Thoughts (PoT) is an approach characterized by its executable intermediate steps, which ensure the accuracy of the logical calculations in the reasoning process."
+   }
+  },
+  {
+   "surface": "Python",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Currently, PoT primarily uses Python."
+   }
+  },
+  {
+   "surface": "PoT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Program of Thoughts (PoT) is an approach characterized by its executable intermediate steps, which ensure the accuracy of the logical calculations in the reasoning process."
+   }
+  },
+  {
+   "surface": "MultiPoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by this, we propose a task and model agnostic approach called MultiPoT, which harnesses strength and diversity from various languages."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In particular, MultiPoT achieves more than 4.6% improvement on average on ChatGPT (gpt-3.5-turbo-0701)."
+   }
+  },
+  {
+   "surface": "Self-Consistency",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results reveal that it significantly outperforms Python Self-Consistency."
+   }
+  },
+  {
+   "surface": "Python Self-Consistency",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results reveal that it significantly outperforms Python Self-Consistency."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "4.6"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19971,
+ "eval_count": 158,
+ "ts": "2026-11-20T04:04:17Z"
+}

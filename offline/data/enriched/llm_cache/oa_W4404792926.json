@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4404792926",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The increasing availability of multimodal data from electronic health records (EHR) has paved the way for deep learning methods to improve diagnosis accuracy."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, deep learning models are data-driven, requiring large-scale datasets to achieve high generalizability."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28216,
+ "eval_count": 112,
+ "ts": "2026-11-20T04:11:34Z"
+}

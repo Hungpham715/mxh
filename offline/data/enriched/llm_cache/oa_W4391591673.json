@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4391591673",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HiQA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce HiQA, a practical hierarchical contextual augmentation framework for multi-document question answering (MDQA)."
+   }
+  },
+  {
+   "surface": "multi-document question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce HiQA, a practical hierarchical contextual augmentation framework for multi-document question answering (MDQA)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HiQA",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "HiQA enriches text chunks with cascading document metadata, such as document titles and section paths, so that retrieval can use both local content and document structure.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-document question answering",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments show that HiQA improves retrieval and answer quality on MasQA and remains competitive on public MDQA benchmarks, while its benefits are strongest for structured, domain-specific, highly similar document collections.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [
+  "HiQA",
+  "multi-document question answering"
+ ],
+ "duration_ms": 26415,
+ "eval_count": 210,
+ "ts": "2026-11-20T03:46:38Z"
+}

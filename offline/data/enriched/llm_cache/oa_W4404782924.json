@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4404782924",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Ontology Expansion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the rapidly evolving field of conversational AI, Ontology Expansion (OnExp) is crucial for enhancing the adaptability and robustness of conversational agents."
+   }
+  },
+  {
+   "surface": "conversational understanding",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This survey paper provides a comprehensive review of the state-of-the-art techniques in OnExp for conversational understanding."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Ontology Expansion",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This survey paper provides a comprehensive review of the state-of-the-art techniques in OnExp for conversational understanding.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "conversational understanding",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "This survey aspires to be a foundational reference for researchers and practitioners, promoting further exploration and innovation in this crucial domain.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 23600,
+ "eval_count": 173,
+ "ts": "2026-11-20T04:06:54Z"
+}

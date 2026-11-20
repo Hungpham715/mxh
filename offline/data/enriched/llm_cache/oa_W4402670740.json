@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4402670740",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "supervised",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "For this purpose, we propose a supervised two-staged SCD method that uses existing Word-in-Context (WiC) datasets."
+   }
+  },
+  {
+   "surface": "two",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Lexical Semantic Change Detection (SCD) task involves predicting whether a given target word, $w$, changes its meaning between two different text corpora, $C_1$ and $C_2$."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "For this purpose, we propose a supervised two-staged SCD method that uses existing Word-in-Context (WiC) datasets."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15739,
+ "eval_count": 59,
+ "ts": "2026-11-20T03:49:49Z"
+}

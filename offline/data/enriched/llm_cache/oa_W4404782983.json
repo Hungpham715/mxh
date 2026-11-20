@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4404782983",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CWI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Complex Word Identification (CWI) is an essential step in the lexical simplification task and has recently become a task on its own."
+   }
+  },
+  {
+   "surface": "LCP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Some variations of this binary classification task have emerged, such as lexical complexity prediction (LCP) and complexity evaluation of multi-word expressions (MWE)."
+   }
+  },
+  {
+   "surface": "MWE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Some variations of this binary classification task have emerged, such as lexical complexity prediction (LCP) and complexity evaluation of multi-word expressions (MWE)."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Large language models (LLMs) recently became popular in the Natural Language Processing community because of their versatility and capability to solve unseen tasks in zero/few-shot settings."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31790,
+ "eval_count": 253,
+ "ts": "2026-11-20T04:08:13Z"
+}

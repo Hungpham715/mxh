@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W4416036824",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LALMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Audio-Language Models (LALMs) are augmented with the ability to perceive audio, demonstrating impressive capabilities in processing combined audio and text signals."
+   }
+  },
+  {
+   "surface": "audio-text",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This study examines how LALMs prioritize information when presented with inconsistent audio-text pairs."
+   }
+  },
+  {
+   "surface": "supervised fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further investigate the influencing factors of text bias, explore mitigation strategies through supervised fine-tuning, and analyze model confidence patterns that reveal persistent overconfidence even with contradictory inputs."
+   }
+  },
+  {
+   "surface": "audio",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Audio-Language Models (LALMs) are augmented with the ability to perceive audio, demonstrating impressive capabilities in processing combined audio and text signals."
+   }
+  },
+  {
+   "surface": "text",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Audio-Language Models (LALMs) are augmented with the ability to perceive audio, demonstrating impressive capabilities in processing combined audio and text signals."
+   }
+  },
+  {
+   "surface": "modality",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "These findings underscore the need for improved modality balancing during training and more sophisticated fusion mechanisms to enhance robustness when handling conflicting multi-modal inputs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37210,
+ "eval_count": 202,
+ "ts": "2026-11-20T04:37:19Z"
+}

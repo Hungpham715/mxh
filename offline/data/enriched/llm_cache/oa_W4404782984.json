@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4404782984",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "alignment",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A key concern with the concept of “alignment” is the implicit question of “alignment to what?”."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Additionally, preference training and safety measures often overfit to harms common in Western-centric datasets."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17176,
+ "eval_count": 68,
+ "ts": "2026-11-20T04:07:32Z"
+}

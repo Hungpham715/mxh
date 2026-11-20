@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4402671718",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "tokens",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We analyze tokens, which are the smallest unit of text that can be processed by LLMs and make the following observations: (1) probabilities of tokens representing harmful responses are higher than those of harmless responses, and (2) responses containing safety disclaimers appear among the top tokens when token probabilities are sorted in descending order."
+   }
+  },
+  {
+   "surface": "datasets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We perform extensive experiments to evaluate SafeDecoding against six SOTA jailbreak attacks (GCG, AutoDAN, PAIR, DeepInception, SAP30, and template based attack) on five LLMs (Vicuna, Llama2, Guanaco, falcon, and Dolphin) using four benchmark datasets (AdvBench, HEx-PHI, MT-Bench, and Just-Eval)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "evidence"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 5243,
+ "eval_count": 108,
+ "ts": "2026-11-20T07:20:55Z"
+}

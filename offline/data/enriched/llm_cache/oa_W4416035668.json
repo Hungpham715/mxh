@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4416035668",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we introduce LLaMP, a hierarchical multi-agent framework designed to emulate the materials science research workflow."
+   }
+  },
+  {
+   "surface": "MP",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we introduce LLaMP, a hierarchical multi-agent framework designed to emulate the materials science research workflow."
+   }
+  },
+  {
+   "surface": "LLAMP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we introduce LLaMP, a hierarchical multi-agent framework designed to emulate the materials science research workflow."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "https://github.com/chiang-yuan/llamp"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13545,
+ "eval_count": 52,
+ "ts": "2026-11-20T04:29:17Z"
+}

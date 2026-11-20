@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385567133",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "BERT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our empirical results suggest that every transformer module in BERT can act as a winning ticket: fine-tuning each specific module while keeping the rest of the network frozen can lead to comparable performance to the full fine-tuning."
+   }
+  },
+  {
+   "surface": "LayerNorms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Among different modules, LayerNorms exhibit the best capacity for knowledge transfer with limited trainable weights, to the extent that, with only 0.003% of all parameters in the layer-wise analysis, they show acceptable performance on various target tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "BERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our empirical results suggest that every transformer module in BERT can act as a winning ticket: fine-tuning each specific module while keeping the rest of the network frozen can lead to comparable performance to the full fine-tuning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LayerNorms",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Among different modules, LayerNorms exhibit the best capacity for knowledge transfer with limited trainable weights, to the extent that, with only 0.003% of all parameters in the layer-wise analysis, they show acceptable performance on various target tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "BERT",
+  "LayerNorms"
+ ],
+ "duration_ms": 10526,
+ "eval_count": 204,
+ "ts": "2026-11-20T03:09:38Z"
+}

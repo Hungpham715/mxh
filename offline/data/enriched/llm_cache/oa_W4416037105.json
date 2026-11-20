@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4416037105",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LingGym",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "Word-Gloss Inference",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present a controlled evaluation task: Word-Gloss Inference, in which the model must infer a missing word and gloss from context using varying levels of linguistic information (e.g., glosses, grammatical explanations, translations)."
+   }
+  },
+  {
+   "surface": "Interlinear Glossed Text (IGT)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "18",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "meta-linguistic reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "low-resource languages",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Unlike previous work that focuses on specific downstream tasks, we assess whether LLMs can generalize linguistic inference across low-resource languages and structures not seen during training."
+   }
+  },
+  {
+   "surface": "grammatical descriptions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "reasoning performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our results show that incorporating structured linguistic cues leads to consistent improvements in reasoning performance across all models."
+   }
+  },
+  {
+   "surface": "structure",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Unlike previous work that focuses on specific downstream tasks, we assess whether LLMs can generalize linguistic inference across low-resource languages and structures not seen during training."
+   }
+  },
+  {
+   "surface": "language documentation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This work highlights both the promise and current limitations of using LLMs for typologically informed linguistic analysis and low-resource language documentation."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32170,
+ "eval_count": 208,
+ "ts": "2026-11-20T04:39:26Z"
+}

@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4402667037",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present Belebele, a multiple-choice machine reading comprehension (MRC) dataset spanning 122 language variants."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present Belebele, a multiple-choice machine reading comprehension (MRC) dataset spanning 122 language variants.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22822,
+ "eval_count": 161,
+ "ts": "2026-11-20T03:49:04Z"
+}

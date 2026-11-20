@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4402671255",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TEXTS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Texts written in different languages reflect different culturally-dependent beliefs of their writers."
+   }
+  },
+  {
+   "surface": "LANGUAGES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Texts written in different languages reflect different culturally-dependent beliefs of their writers."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17186,
+ "eval_count": 92,
+ "ts": "2026-11-20T03:50:59Z"
+}

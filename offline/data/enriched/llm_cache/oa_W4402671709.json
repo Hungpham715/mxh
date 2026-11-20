@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4402671709",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "DetermLR"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "LogiQA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "ProofWriter"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FOLIO"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "PrOntoQA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "LogicalDeduction"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "DetermLR"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "LogiQA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "ProofWriter"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "FOLIO"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "PrOntoQA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "LogicalDeduction"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18258,
+ "eval_count": 178,
+ "ts": "2026-11-20T03:53:50Z"
+}

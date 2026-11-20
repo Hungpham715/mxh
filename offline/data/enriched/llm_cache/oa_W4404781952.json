@@ -1,0 +1,173 @@
+{
+ "paper_id": "oa:W4404781952",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "long-context",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Improvements in language models’ capabilities have pushed their applications towards longer contexts, making long-context evaluation and development an active research area."
+   }
+  },
+  {
+   "surface": "book",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "information",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "Needle-in-a-Haystack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "shorter",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "We call for a careful design of tasks and benchmarks with distinctly long context, taking into account the characteristics that make it qualitatively different from shorter context."
+   }
+  },
+  {
+   "surface": "book summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "information aggregation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "longer",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Improvements in language models’ capabilities have pushed their applications towards longer contexts, making long-context evaluation and development an active research area."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffusion"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "scope"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffused"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffusion"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "scope"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffused"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffusion"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "scope"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "diffused"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "property",
+   "surface": "longer"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "long-context",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "long-context",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "long-context",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29964,
+ "eval_count": 392,
+ "ts": "2026-11-20T04:01:42Z"
+}

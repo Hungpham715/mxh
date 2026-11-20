@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4392943313",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SemEval-2020 Task 8",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The performance evaluation, using datasets from SemEval-2020 Task 8 and Facebook hateful memes, offers a comparative understanding of GPT responses against human annotations."
+   }
+  },
+  {
+   "surface": "Facebook hateful memes",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The performance evaluation, using datasets from SemEval-2020 Task 8 and Facebook hateful memes, offers a comparative understanding of GPT responses against human annotations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method|dataset|task",
+   "surface": "GPT-3.5"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19088,
+ "eval_count": 123,
+ "ts": "2026-11-20T03:47:32Z"
+}

@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4416036854",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CODE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The code is available at https://github.com/he2720/TaCoMoE."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments are conducted on the DiaASQ dataset, demonstrating that our method significantly outperforms existing parameter-efficient fine-tuning techniques in terms of both accuracy and computational efficiency."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK-AWARE CO-N-T-R-A-S-E-V-E-L"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "CODE",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27778,
+ "eval_count": 235,
+ "ts": "2026-11-20T04:37:34Z"
+}

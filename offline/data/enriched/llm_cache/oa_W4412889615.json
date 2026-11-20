@@ -1,0 +1,30 @@
+{
+ "paper_id": "oa:W4412889615",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Current methods for improvement typically rely on splitting long contexts into fixed-length chunks."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our datasets and code are available at the following link: https://github.com/ECNU-Text-Computing/DCS"
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 10556,
+ "eval_count": 79,
+ "ts": "2026-11-20T04:16:48Z"
+}

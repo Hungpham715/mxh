@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4375868922",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "knowledge graphs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Relation prediction on knowledge graphs (KGs) is a key research topic."
+   }
+  },
+  {
+   "surface": "two fully-inductive datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In the experiments, REPORT performs consistently better than all baselines on almost all the eight version subsets of two fully-inductive datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge graphs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Relation prediction on knowledge graphs (KGs) is a key research topic.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "two fully-inductive datasets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In the experiments, REPORT performs consistently better than all baselines on almost all the eight version subsets of two fully-inductive datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "knowledge graphs",
+  "two fully-inductive datasets"
+ ],
+ "duration_ms": 6812,
+ "eval_count": 153,
+ "ts": "2026-11-19T18:07:58Z"
+}

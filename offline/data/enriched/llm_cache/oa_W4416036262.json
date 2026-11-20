@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4416036262",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The method combines gradient-based importance scoring with targeted parameter ablation to compute an Ability Impact Score (AIS) that quantifies how much each ability contributes to a model’s success on a given benchmark."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce BENCHMARK PROFILING, a diagnostic framework that decomposes benchmark performance into ten cognitively grounded abilities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28195,
+ "eval_count": 291,
+ "ts": "2026-11-20T04:32:17Z"
+}

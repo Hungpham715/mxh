@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4402684026",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "WS-NLVL",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Weakly supervised natural language video localization (WS-NLVL) aims to retrieve the moment corresponding to a language query in a video with only video-language pairs utilized during training."
+   }
+  },
+  {
+   "surface": "Charades-STA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments demonstrate the effectiveness and superiority of our method on the Charades-STA and ActivityNet Captions datasets."
+   }
+  },
+  {
+   "surface": "ActivityNet Captions",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments demonstrate the effectiveness and superiority of our method on the Charades-STA and ActivityNet Captions datasets."
+   }
+  },
+  {
+   "surface": "IMLR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a novel plug-and-play method, Intrinsic Multilateral Logical Rules, namely IMLR, to exploit intrinsic temporal relations and logical rules for WS-NLVL."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19686,
+ "eval_count": 170,
+ "ts": "2026-11-20T03:59:59Z"
+}

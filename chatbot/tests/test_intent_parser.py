@@ -210,15 +210,19 @@ async def test_catalog_verifier_cannot_drop_satisfied_two_entity_contract() -> N
 async def test_answer_mode_classifier_defaults_to_values_and_accepts_explicit_quantity() -> None:
     # Explicit quantity interrogatives are decided in code (same list as ANSWER_MODE_SYSTEM):
     # no LLM call, and a weak-model "values" answer can never downgrade them.
-    quantity = IntentParser(ScriptedProvider('{"mode":"values"}'))
-    fields, calls = await quantity.classify_requested_fields("Alice có bao nhiêu bài báo?")
-    assert calls == 0
+    quantity = IntentParser(ScriptedProvider('{"fields":[]}'))
+    fields, calls = await quantity.classify_requested_fields("Alice có bao nhiêu bài báo?", "author_papers")
+    assert calls == 1
     assert fields == ["count"]
 
     values = IntentParser(ScriptedProvider('{"values":["Alice"]}'))
-    fields, calls = await values.classify_requested_fields("Đồng tác giả của Alice là ai?")
-    assert calls == 1
+    fields, calls = await values.classify_requested_fields("Đồng tác giả của Alice là ai?", "coauthors")
+    assert calls == 0
     assert fields == []
+
+    profile = IntentParser(ScriptedProvider('{"fields":["affiliations"]}'))
+    fields, calls = await profile.classify_requested_fields("Tổng quan về Alice", "author_papers")
+    assert calls == 1 and fields == ["affiliations"]
 
 
 @pytest.mark.asyncio

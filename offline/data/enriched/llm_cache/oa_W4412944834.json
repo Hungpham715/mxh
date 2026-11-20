@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4412944834",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Rational Speech Act",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The Rational Speech Act (RSA) framework, which explicitly models speaker intentions, is the most widespread theory of probabilistic pragmatics, but existing implementations are either unable to account for figurative expressions or require modeling the implicit motivations for using figurative language (e.g., to express joy or annoyance) in a setting-specific way."
+   }
+  },
+  {
+   "surface": "Rhetorical-Strategy-Aware RSA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce the Rhetorical-Strategy-Aware RSA (RSA)² framework which models figurative language use by considering a speaker’s employed rhetorical strategy."
+   }
+  },
+  {
+   "surface": "PragMega+",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Combined with LLMs, it achieves state-of-the-art performance on the ironic split of PragMega+, a new irony interpretation dataset introduced in this study."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Llama 2"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "addresses_task",
+   "surface": "Rational Speech Act"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Llama 2"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evaluated_on",
+   "surface": "PragMega+"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "Rational Speech Act"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 10337,
+ "eval_count": 111,
+ "ts": "2026-11-20T04:20:00Z"
+}

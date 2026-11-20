@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4389523874",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "modern",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Modern NLP models are often trained over large untrusted datasets, raising the potential for a malicious adversary to compromise model behaviour."
+   }
+  },
+  {
+   "surface": "backdoor",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "For instance, backdoors can be implanted through crafting training instances with a specific textual trigger and a target label."
+   }
+  },
+  {
+   "surface": "poisoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper posits that backdoor poisoning attacks exhibit a spurious correlation between simple text features and classification labels, and accordingly, proposes methods for mitigating spurious correlation as means of defence."
+   }
+  },
+  {
+   "surface": "training",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "For instance, backdoors can be implanted through crafting training instances with a specific textual trigger and a target label."
+   }
+  },
+  {
+   "surface": "attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper posits that backdoor poisoning attacks exhibit a spurious correlation between simple text features and classification labels, and accordingly, proposes methods for mitigating spurious correlation as means of defence."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "spurious"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "correlation"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "features"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "classification"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "labels"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "insertion"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19951,
+ "eval_count": 152,
+ "ts": "2026-11-20T03:46:06Z"
+}

@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4404781917",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "automatic metrics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  },
+  {
+   "surface": "metrics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  },
+  {
+   "surface": "abstractive summarization systems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  },
+  {
+   "surface": "reference-free metrics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To be useful, these metrics should be fine-grained, show a high correlation with human annotations, and ideally be independant of reference quality; however, most standard evaluation metrics for summarization are reference-based, and existing reference-free metrics correlates poorly with relevance, especially on summaries of longer documents."
+   }
+  },
+  {
+   "surface": "human annotations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  },
+  {
+   "surface": "low quality reference settings",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We show that this metric can also be used along reference-based metrics to improve their robustness in low quality reference settings."
+   }
+  },
+  {
+   "surface": "reference-based metrics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We show that this metric can also be used along reference-based metrics to improve their robustness in low quality reference settings."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "correlation"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "correlation with human annotations"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "correlation with relevance"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "reference-free"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "reference-based"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "cheapest to compute"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "improve robustness"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15295,
+ "eval_count": 148,
+ "ts": "2026-11-20T04:01:50Z"
+}

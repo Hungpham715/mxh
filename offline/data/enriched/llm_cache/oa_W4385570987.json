@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4385570987",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MUSIQUE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The experiments on complex QA datasets KQA Pro and Musique show that our framework outperforms SOTA methods significantly, demonstrating the effectiveness of leveraging question decomposing for knowledge integration and our RoHT framework."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "EXPLAINABLE_QUESTION_ANSWERING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "HIERARCHICAL_QUESTION_DECOMPOSITION_TREE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "EXPERIMENTAL_DATA_SETS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PROBABILITY_REASONSING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "KQA_PRO"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "BEST_SOLUTION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "QUESTION_DECOMPOSITION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "HIERARCHICAL_QUESTION_DECOMPOSITION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PROBABILITY_REASONSING"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "EXPLAINABLE_QUESTION_ANSWERING"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 9107,
+ "eval_count": 166,
+ "ts": "2026-11-20T03:14:22Z"
+}

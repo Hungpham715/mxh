@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385570557",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Multilingual Knowledge Graph Completion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multilingual Knowledge Graph Completion (KGC) aims to predict missing links with multilingual knowledge graphs."
+   }
+  },
+  {
+   "surface": "language-sensitive multi-graph attention",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these drawbacks, we propose a novel multilingual KGC framework with language-sensitive multi-graph attention such that the missing links on all given KGs can be inferred by a universal knowledge completion model."
+   }
+  },
+  {
+   "surface": "DBP-5L",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets."
+   }
+  },
+  {
+   "surface": "E-PKG",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language-sensitive multi-graph attention",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these drawbacks, we propose a novel multilingual KGC framework with language-sensitive multi-graph attention such that the missing links on all given KGs can be inferred by a universal knowledge completion model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "language-sensitive multi-graph attention"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12089,
+ "eval_count": 250,
+ "ts": "2026-11-20T03:13:10Z"
+}

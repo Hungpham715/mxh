@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4416036563",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LOGIC_COLOL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31136,
+ "eval_count": 162,
+ "ts": "2026-11-20T04:35:32Z"
+}

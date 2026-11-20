@@ -1,0 +1,44 @@
+{
+ "paper_id": "oa:W4412889813",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "tokenisation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We define this mismatch as tokenisation bias."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Modern language models are typically trained over subword sequences, but ultimately define probabilities over character-strings."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15659,
+ "eval_count": 72,
+ "ts": "2026-11-20T04:18:08Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4402671717",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) demonstrate remarkable multilingual capabilities without being pre-trained on specially curated multilingual parallel corpora.It remains a challenging problem to explain the underlying mechanisms by which LLMs process multilingual texts.In this paper, we delve into the composition of Transformer architectures in LLMs to pinpoint language-specific regions.Specially, we propose a novel detection method, language activation probability entropy (LAPE), to identify language-specific neurons within LLMs.Based on LAPE, we conduct comprehensive experiments on several representative LLMs, such as LLaMA-2, BLOOM, and Mistral."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) demonstrate remarkable multilingual capabilities without being pre-trained on specially curated multilingual parallel corpora.It remains a challenging problem to explain the underlying mechanisms by which LLMs process multilingual texts.In this paper, we delve into the composition of Transformer architectures in LLMs to pinpoint language-specific regions.Specially, we propose a novel detection method, language activation probability entropy (LAPE), to identify language-specific neurons within LLMs.Based on LAPE, we conduct comprehensive experiments on several representative LLMs, such as LLaMA-2, BLOOM, and Mistral.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29075,
+ "eval_count": 278,
+ "ts": "2026-11-20T03:54:07Z"
+}

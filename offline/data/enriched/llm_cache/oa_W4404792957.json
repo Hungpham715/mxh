@@ -1,0 +1,91 @@
+{
+ "paper_id": "oa:W4404792957",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Brand Bias",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Many recent studies have investigated social biases in LLMs but brand bias has received little attention."
+   }
+  },
+  {
+   "surface": "Curated Dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using a curated dataset across four brand categories, we probe the behavior of LLMs in this space."
+   }
+  },
+  {
+   "surface": "Global Brands",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Biased models may perpetuate societal inequalities, unfairly favoring established global brands while marginalizing local ones."
+   }
+  },
+  {
+   "surface": "Luxury Gifts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find a consistent pattern of bias in this space—both in terms of disproportionately associating global brands with positive attributes and disproportionately recommending luxury gifts for individuals in high-income countries."
+   }
+  },
+  {
+   "surface": "Country-of-Origin",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also find LLMs are subject to country-of-origin effects which may boost local brand preference in LLM outputs in specific contexts."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Many recent studies have investigated social biases in LLMs but brand bias has received little attention."
+   }
+  },
+  {
+   "surface": "Dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using a curated dataset across four brand categories, we probe the behavior of LLMs in this space."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LMMs"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LMMs"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25895,
+ "eval_count": 154,
+ "ts": "2026-11-20T04:12:06Z"
+}

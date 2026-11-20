@@ -21,7 +21,7 @@ import unicodedata
 from pydantic import ValidationError
 
 from graphrag.llm.base import LLMProvider
-from graphrag.llm.prompts import ANSWER_MODE_SYSTEM, ROUTE_PARSE_SYSTEM, build_parse_user
+from graphrag.llm.prompts import REQUESTED_FIELDS_SYSTEM, ROUTE_PARSE_SYSTEM, build_parse_user
 from graphrag.models import EntityMention, IntentName, QueryFilters, QueryIntent, RouteName
 
 # Deterministic markers for entity-free routes. Kept intentionally narrow: these decide routing
@@ -327,8 +327,10 @@ class IntentParser:
             return first, 1
         return (candidate if choice == "B" else first), 1
 
-    async def classify_requested_fields(self, question: str) -> tuple[list[str], int]:
-        """Use a separate narrow LLM decision for quantity versus value answers.
+    async def classify_requested_fields(
+        self, question: str, intent_name: str | None = None
+    ) -> tuple[list[str], int]:
+        """Use a separate narrow LLM decision for extra fields plus a strict count contract.
 
         Keeping this out of the relationship classifier avoids small-model label anchoring. Any
         malformed or uncertain response safely defaults to values, never an invented count.
@@ -337,22 +339,35 @@ class IntentParser:
         as quantity, and the count itself always comes from the database result set.
         """
         normalized = question.casefold()
-        if any(marker in normalized for marker in QUANTITY_QUESTION_MARKERS):
-            return ["count"], 0
+        fields = ["count"] if any(marker in normalized for marker in QUANTITY_QUESTION_MARKERS) else []
+        # "affiliations" is the only extra semantic field this classifier can add and it is
+        # only meaningful when the primary query is author_papers. Avoid an unnecessary model
+        # call for paths, coauthors, venues, etc.; this does not decide their route or intent.
+        if intent_name != "author_papers":
+            return fields, 0
         try:
             response = await self.provider.generate(
                 [
-                    {"role": "system", "content": ANSWER_MODE_SYSTEM},
-                    {"role": "user", "content": question},
+                    {"role": "system", "content": REQUESTED_FIELDS_SYSTEM},
+                    {
+                        "role": "user",
+                        "content": json.dumps(
+                            {"intent": intent_name or "unknown", "question": question},
+                            ensure_ascii=False,
+                        ),
+                    },
                 ],
                 temperature=0,
-                max_tokens=40,
+                max_tokens=60,
                 json_mode=True,
             )
             payload = json.loads(response.content)
         except (json.JSONDecodeError, TypeError, ValueError):
-            return [], 1
-        return (["count"] if payload.get("mode") == "quantity" else []), 1
+            return fields, 1
+        requested = payload.get("fields")
+        if isinstance(requested, list) and "affiliations" in requested:
+            fields.append("affiliations")
+        return list(dict.fromkeys(fields)), 1
 
     @staticmethod
     def _entity_contract_error(intent: QueryIntent) -> str | None:

@@ -1,0 +1,89 @@
+{
+ "paper_id": "oa:W4404783131",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SLNAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In pursuit of this goal, we introduce SLNAG, a benchmark designed to autonomously integrate novel data and assess LLMs’ ability to comprehend emerging concepts, alongside FOCUS, an approach uses causal inference to enhance LLMs to understand new phrases and their colloquial context."
+   }
+  },
+  {
+   "surface": "FOCUS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In pursuit of this goal, we introduce SLNAG, a benchmark designed to autonomously integrate novel data and assess LLMs’ ability to comprehend emerging concepts, alongside FOCUS, an approach uses causal inference to enhance LLMs to understand new phrases and their colloquial context."
+   }
+  },
+  {
+   "surface": "Internet",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dynamic nature of language, particularly evident in the realm of slang and memes on the Internet, poses serious challenges to the adaptability of Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "real-world instances",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmark and approach involves understanding real-world instances of linguistic shifts, serving as contextual beacons, to form more precise and contextually relevant connections between newly emerging expressions and their meanings."
+   }
+  },
+  {
+   "surface": "linguistic shifts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmark and approach involves understanding real-world instances of linguistic shifts, serving as contextual beacons, to form more precise and contextually relevant connections between newly emerging expressions and their meanings."
+   }
+  },
+  {
+   "surface": "comprehension",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This research aims to bridge this gap by enhancing LLMs’ comprehension of the evolving new concepts on the Internet, without the high cost of continual retraining."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dynamic nature of language, particularly evident in the realm of slang and memes on the Internet, poses serious challenges to the adaptability of Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "Large Language Models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dynamic nature of language, particularly evident in the realm of slang and memes on the Internet, poses serious challenges to the adaptability of Large Language Models (LLMs)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "precision",
+   "surface": "precision"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relevance",
+   "surface": "relevance"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17781,
+ "eval_count": 101,
+ "ts": "2026-11-20T04:08:49Z"
+}

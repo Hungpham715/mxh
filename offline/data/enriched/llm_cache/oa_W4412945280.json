@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4412945280",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Large Language Models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) excel in various natural language processing tasks but remain vulnerable to generating harmful content or being exploited for malicious purposes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Large Language Models",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) excel in various natural language processing tasks but remain vulnerable to generating harmful content or being exploited for malicious purposes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large Language Models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large Language Models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "Large Language Models",
+   "to": "Large Language Models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21455,
+ "eval_count": 232,
+ "ts": "2026-11-20T04:22:23Z"
+}

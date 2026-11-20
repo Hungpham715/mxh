@@ -1,0 +1,139 @@
+{
+ "paper_id": "oa:W4402667011",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Mementos",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this challenge, this paper introduces Mementos, a new benchmark designed to assess MLLMs’ sequential image reasoning abilities."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also employ a GPT-4 assisted method to evaluate MLLM reasoning performance."
+   }
+  },
+  {
+   "surface": "MLLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated proficiency in handling a variety of visual-language tasks."
+   }
+  },
+  {
+   "surface": "MLLM reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also employ a GPT-4 assisted method to evaluate MLLM reasoning performance."
+   }
+  },
+  {
+   "surface": "image sequences",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, current MLLM benchmarks are predominantly designed to evaluate reasoning based on static information about a single image, and the ability of modern MLLMs to extrapolate from image sequences, which is essential for understanding our ever-changing world, has been less investigated."
+   }
+  },
+  {
+   "surface": "sequence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, current MLLM benchmarks are predominantly designed to evaluate reasoning based on static information about a single image, and the ability of modern MLLMs to extrapolate from image sequences, which is essential for understanding our ever-changing world, has been less investigated."
+   }
+  },
+  {
+   "surface": "dynamic information",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through a careful evaluation of nine recent MLLMs on Mementos, including GPT-4V and Gemini, we find that they struggle to accurately describe dynamic information about given image sequences, often leading to hallucinations/misrepresentations of objects and their corresponding behaviors."
+   }
+  },
+  {
+   "surface": "hallucinations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through a careful evaluation of nine recent MLLMs on Mementos, including GPT-4V and Gemini, we find that they struggle to accurately describe dynamic information about given image sequences, often leading to hallucinations/misrepresentations of objects and their corresponding behaviors."
+   }
+  },
+  {
+   "surface": "misrepresentations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through a careful evaluation of nine recent MLLMs on Mementos, including GPT-4V and Gemini, we find that they struggle to accurately describe dynamic information about given image sequences, often leading to hallucinations/misrepresentations of objects and their corresponding behaviors."
+   }
+  },
+  {
+   "surface": "behavioral hallucinations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our quantitative analysis and case studies identify three key factors impacting MLLMs’ sequential image reasoning: the correlation between object and behavioral hallucinations, the influence of co-occurring behaviors, and the compounding impact of behavioral hallucinations."
+   }
+  },
+  {
+   "surface": "co-occurring behaviors",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our quantitative analysis and case studies identify three key factors impacting MLLMs’ sequential image reasoning: the correlation between object and behavioral hallucinations, the influence of co-occurring behaviors, and the compounding impact of behavioral hallucinations."
+   }
+  },
+  {
+   "surface": "compounding impact",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our quantitative analysis and case studies identify three key factors impacting MLLMs’ sequential image reasoning: the correlation between object and behavioral hallucinations, the influence of co-occurring behaviors, and the compounding impact of behavioral hallucinations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "type"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "type"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "dataset"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "task"
+  },
+  {
+   "reason": "unknown_rel",
+   "detail": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36630,
+ "eval_count": 439,
+ "ts": "2026-11-20T03:49:36Z"
+}

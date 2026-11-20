@@ -1,0 +1,49 @@
+{
+ "paper_id": "oa:W4416036553",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SPREADSHEETS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Spreadsheets are critical to data-centric tasks, with rich, structured layouts that enable efficient information transmission."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we first formalize the spreadsheet layout generation task, supported by a seven-criterion evaluation protocol and a dataset of 3,326 spreadsheets."
+   }
+  },
+  {
+   "surface": "CODE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our codes and data is available at Github."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14636,
+ "eval_count": 96,
+ "ts": "2026-11-20T04:35:45Z"
+}

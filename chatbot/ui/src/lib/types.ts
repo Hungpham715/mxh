@@ -77,6 +77,84 @@ export interface HealthStatus {
   graph: { provider: string; ready: boolean; detail: string };
 }
 
+export interface AtlasNode {
+  id: string;
+  name: string;
+  identity_status: string;
+  degree: number;
+  weighted_degree: number;
+  pagerank: number;
+  community: number | null;
+  core_number: number;
+}
+
+export interface AtlasEdge {
+  id: string;
+  source: string;
+  target: string;
+  shared_count: number;
+  evidence_paper_ids: string[];
+}
+
+export interface AtlasSnapshot {
+  schema_version: string;
+  source_kind: "real_offline_snapshot";
+  scope_id: string;
+  provenance: {
+    directory: string;
+    artifacts: string[];
+    projection: string;
+    analysis_source: string;
+  };
+  counts: {
+    nodes: Record<string, number>;
+    relationships: Record<string, number>;
+    total_nodes: number;
+    total_relationships: number;
+  };
+  network_stats: {
+    authors_total: number;
+    edges: number;
+    connected_components: number;
+    lcc_size: number;
+    lcc_ratio_of_all_authors: number;
+  };
+  top_pagerank: Array<{
+    author_id: string;
+    name: string;
+    score: number;
+    degree: number;
+    weighted_degree: number;
+    evidence_paper_ids: string[];
+  }>;
+  communities: { n_communities: number; modularity: number; method: string };
+  community_summary: Array<{
+    community: number;
+    size: number;
+    papers: number;
+    top_topics: Array<[string, number]>;
+    members_sample: string[];
+    kernel_members: string[];
+  }>;
+  core: { max_core: number; kernel_size: number; kernel_density: number };
+  small_world: {
+    C_obs: number;
+    C_rand: number;
+    L_obs: number;
+    L_rand: number;
+    sigma: number;
+    verdict: string;
+    limitations: string[];
+  };
+  small_world_sensitivity?: {
+    slice_count: number;
+    verdict_counts: Record<string, number>;
+    conclusion: string;
+  } | null;
+  graph: { nodes: AtlasNode[]; edges: AtlasEdge[]; bounded: boolean; max_nodes: number };
+  caveats: string[];
+}
+
 export interface Message {
   id: string;
   role: "user" | "assistant";

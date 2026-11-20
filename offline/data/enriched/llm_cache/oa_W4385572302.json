@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4385572302",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.4",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CHARADES-STA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on the ActivityNet Captions and Charades-STA datasets demonstrate the advantages of our approach."
+   }
+  },
+  {
+   "surface": "SPL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address the above problems, we propose a Structure-based Pseudo Label generation (SPL), which first generate free-form interpretable pseudo queries before constructing query-dependent event proposals by modeling the event temporal structure."
+   }
+  },
+  {
+   "surface": "CODE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Code can be found at https://github.com/minghangz/SPL."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VIDEO_SENTENCE_LOCALIZATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ZERO_SHOT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VIDEO_DATA"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ACTIVITYNET_CCAP"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "NOISE_ESTIMATION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "ITERATIVE_METHOD"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "GROUNDING_MODEL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PSEUDO_LABEL"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PSEUDO_QUERIES"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PSEUDO_LABEL_NOISE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15857,
+ "eval_count": 180,
+ "ts": "2026-11-20T03:22:28Z"
+}

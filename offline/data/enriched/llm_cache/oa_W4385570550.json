@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4385570550",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "direct speech-to-speech translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Direct speech-to-speech translation (S2ST), in which all components can be optimized jointly, is advantageous over cascaded approaches to achieve fast inference with a simplified pipeline."
+   }
+  },
+  {
+   "surface": "two-pass direct S2ST architecture",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We present a novel two-pass direct S2ST architecture, UnitY, which first generates textual representations and predicts discrete acoustic units subsequently."
+   }
+  },
+  {
+   "surface": "UnitY",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We present a novel two-pass direct S2ST architecture, UnitY, which first generates textual representations and predicts discrete acoustic units subsequently."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "UnitY",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We present a novel two-pass direct S2ST architecture, UnitY, which first generates textual representations and predicts discrete acoustic units subsequently.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "UnitY"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "UnitY"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "UnitY"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25141,
+ "eval_count": 340,
+ "ts": "2026-11-20T03:25:19Z"
+}

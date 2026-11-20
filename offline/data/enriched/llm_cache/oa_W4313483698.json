@@ -1,0 +1,185 @@
+{
+ "paper_id": "oa:W4313483698",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DISASTERMM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents our solutions for the MediaEval 2022 task on DisasterMM."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively."
+   }
+  },
+  {
+   "surface": "RoBERTa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively."
+   }
+  },
+  {
+   "surface": "Distil BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively."
+   }
+  },
+  {
+   "surface": "ALBERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively."
+   }
+  },
+  {
+   "surface": "Distil BERTA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For LETT, we used three models namely BERT, RoBERTa, and Distil BERTA obtaining an F1-score of 0.6256, 0.6744, and 0.6723, respectively."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "DISASTERMM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents our solutions for the MediaEval 2022 task on DisasterMM.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RoBERTa",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Distil BERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ALBERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "DISASTERMM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents our solutions for the MediaEval 2022 task on DisasterMM.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RoBERTa",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For RCTP, we proposed four different solutions based on BERT, RoBERTa, Distil BERT, and ALBERT obtaining an F1-score of 0.7934, 0.7970, 0.7613, and 0.7924, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Distil BERTA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For LETT, we used three models namely BERT, RoBERTa, and Distil BERTA obtaining an F1-score of 0.6256, 0.6744, and 0.6723, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "DISASTERMM",
+  "BERT",
+  "RoBERTa",
+  "Distil BERT",
+  "ALBERT",
+  "Distil BERTA"
+ ],
+ "duration_ms": 12573,
+ "eval_count": 232,
+ "ts": "2026-11-19T18:07:25Z"
+}

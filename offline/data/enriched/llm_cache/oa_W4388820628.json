@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4388820628",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RAWFC",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To evaluate our method, we conducted experiments on two widely used fact-checking datasets: RAWFC and LIAR."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Then, we instruct-tune an open-sourced language model, called LLaMA, using this evidence, enabling it to predict the veracity of the input claim more accurately."
+   }
+  },
+  {
+   "surface": "LIAR",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To evaluate our method, we conducted experiments on two widely used fact-checking datasets: RAWFC and LIAR."
+   }
+  },
+  {
+   "surface": "https://thcheung.github.io/factllama",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "Our released materials are accessible at: https://thcheung.github.io/factllama."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "LLaMA",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12700,
+ "eval_count": 156,
+ "ts": "2026-11-20T03:25:58Z"
+}

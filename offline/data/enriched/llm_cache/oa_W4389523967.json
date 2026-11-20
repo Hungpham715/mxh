@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4389523967",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "active learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Active learning (AL), a set of algorithms designed to decrease labeling costs by minimizing label complexity, has shown promise in confronting the labeling bottleneck."
+   }
+  },
+  {
+   "surface": "adapter modules",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "low-resource settings",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "text classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present an empirical study of PEFT behavior with AL in low-resource settings for text classification tasks."
+   }
+  },
+  {
+   "surface": "PEFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "FFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings affirm the superiority of PEFT over full-fine tuning (FFT) in low-resource settings and demonstrate that this advantage persists in AL setups."
+   }
+  },
+  {
+   "surface": "forgetting dynamics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We further examine the properties of PEFT and FFT through the lens of forgetting dynamics and instance-level representations, where we find that PEFT yields more stable representations of early and middle layers compared to FFT."
+   }
+  },
+  {
+   "surface": "instance-level representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We further examine the properties of PEFT and FFT through the lens of forgetting dynamics and instance-level representations, where we find that PEFT yields more stable representations of early and middle layers compared to FFT."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27168,
+ "eval_count": 136,
+ "ts": "2026-11-20T03:42:16Z"
+}

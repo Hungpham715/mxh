@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4389524052",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "RESULT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent research on advancing open-source smaller LMs by distilling knowledge from black-box LLMs has obtained promising results in the instruction-following ability."
+   }
+  },
+  {
+   "surface": "CODE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "The code will be available at https://github.com/Raibows/Learn-to-Reason."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Comprehensive experiments and analysis on mathematical and commonsense reasoning tasks demonstrate the effectiveness of our method."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LARGE_LANGUAGE_MODEL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN_SOURCE_SMALL_LM"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "INSTRUCTION_FOLLOWING_ABILITY"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "REASONING_ABILITY"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "PARTNER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24976,
+ "eval_count": 113,
+ "ts": "2026-11-20T03:42:37Z"
+}

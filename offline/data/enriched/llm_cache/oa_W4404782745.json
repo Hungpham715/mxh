@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4404782745",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional methods only target labeled attributes, ignoring biases from unlabeled ones."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We tackle societal bias in image-text datasets by removing spurious correlations between protected groups and image attributes."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluations on multi-label image classification and image captioning tasks show our method effectively reduces bias without compromising performance across various models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Using text-guided inpainting models, our approach ensures protected group independence from all attributes and mitigates inpainting biases through data filtering.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27430,
+ "eval_count": 248,
+ "ts": "2026-11-20T04:05:39Z"
+}

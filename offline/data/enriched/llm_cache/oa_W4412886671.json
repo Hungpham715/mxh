@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4412886671",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Latency",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Latency issues and the challenge of inferring variable human strategies hinder their ability to make autonomous decisions without explicit instructions."
+   }
+  },
+  {
+   "surface": "Experiment",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Through experiments with current independent System 1 and System 2 methods, we validate the necessity of using Dual Process Theory (DPT) in real-time tasks."
+   }
+  },
+  {
+   "surface": "Code",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DPT-Agent’s System 1 uses a Finite-state Machine (FSM) and code-as-policy for fast, intuitive, and controllable decision-making."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Languagemodels"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "System1"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "System2"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Inference"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27399,
+ "eval_count": 338,
+ "ts": "2026-11-20T04:16:16Z"
+}

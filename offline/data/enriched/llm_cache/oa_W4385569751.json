@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4385569751",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GLUE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "ChemProt",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "RCT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "GLUE",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "ChemProt",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "RCT",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "GLUE",
+  "ChemProt",
+  "RCT"
+ ],
+ "duration_ms": 12108,
+ "eval_count": 257,
+ "ts": "2026-11-20T03:09:50Z"
+}

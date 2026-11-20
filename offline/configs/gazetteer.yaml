@@ -1,0 +1,392 @@
+# Curated gazetteer of NLP entities for the rule/dictionary NER baseline (enrichment pipeline).
+#
+# Conventions:
+#   - A plain string entry is a case-INsensitive name with no extra aliases.
+#   - A mapping entry may add: aliases (extra surface forms), case_sensitive (true when the
+#     lowercase spelling is a common English word, e.g. OPT / DROP / whisper / llama),
+#     id (canonical slug override; default = slugified name).
+#   - The entity id becomes "<type>:<slug>", e.g. method:bert, dataset:squad, task:summarization.
+#   - Matching is longest-alias-first with word boundaries, so "GPT-4" wins over "GPT" and
+#     "CNN/DailyMail" wins over "CNN".
+#
+# Provenance: hand-curated by the project team from domain knowledge of the 2023-2025 NLP/LLM
+# literature (the corpus scope in configs/scope.yaml). No external service was used.
+gazetteer_version: gazetteer-v1.0
+
+methods:
+  - Transformer
+  - name: Attention Mechanism
+    aliases: [attention mechanism, self-attention, self attention, cross-attention]
+  - BERT
+  - RoBERTa
+  - ALBERT
+  - ELECTRA
+  - name: DeBERTa
+    aliases: [DeBERTa-v3, DeBERTaV3, DeBERTa-v2]
+  - XLNet
+  - ELMo
+  - name: GPT
+    aliases: [GPT, GPTs]
+  - GPT-2
+  - GPT-3
+  - name: GPT-3.5
+    aliases: [GPT-3.5, GPT 3.5]
+  - name: GPT-4
+    aliases: [GPT-4, GPT-4 Turbo]
+  - GPT-4o
+  - name: GPT-4V
+    aliases: [GPT-4V, GPT-4 Vision]
+  - name: ChatGPT
+    aliases: [ChatGPT, Chat GPT]
+  - InstructGPT
+  - Codex
+  - T5
+  - mT5
+  - Flan-T5
+  - ByT5
+  - UL2
+  - BART
+  - mBART
+  - PEGASUS
+  - name: OPT
+    case_sensitive: true
+  - name: BLOOM
+    aliases: [BLOOMZ]
+    case_sensitive: true
+  - name: LLaMA
+    aliases: [LLaMA-2, LLaMA-3, Llama 2, Llama 3, Llama-2, Llama-3]
+    case_sensitive: true
+  - name: Mistral
+    aliases: [Mistral-7B]
+    case_sensitive: true
+  - name: Mixtral
+    aliases: [Mixtral 8x7B, Mixtral-8x7B]
+  - name: Qwen
+    aliases: [Qwen-7B, Qwen1.5, Qwen2, Qwen2.5]
+  - name: Phi-3
+    aliases: [Phi-1, Phi-2, Phi-3, Phi-1.5, Phi 3]
+    id: phi
+  - name: PaLM
+    aliases: [PaLM, PaLM 2, PaLM-2]
+  - Gemini
+  - name: Gemma
+    case_sensitive: true
+  - name: Falcon
+    aliases: [Falcon-40B, Falcon-7B]
+    case_sensitive: true
+  - Pythia
+  - name: MPT
+    aliases: [MPT-7B, MPT-30B]
+  - name: Vicuna
+    case_sensitive: true
+  - name: Alpaca
+    aliases: [Stanford Alpaca]
+    case_sensitive: true
+  - GLM
+  - ChatGLM
+  - name: ERNIE
+    aliases: [ERNIE 3.0]
+  - Word2Vec
+  - GloVe
+  - fastText
+  - name: Sentence-BERT
+    aliases: [Sentence-BERT, SBERT]
+  - SimCSE
+  - E5
+  - BGE
+  - GTR
+  - Contriever
+  - name: DPR
+    aliases: [DPR, Dense Passage Retrieval, dense passage retrieval]
+  - name: RAG
+    aliases: [Retrieval-Augmented Generation, retrieval-augmented generation,
+              retrieval augmented generation, RAG]
+  - name: LoRA
+    aliases: [LoRA, Low-Rank Adaptation, low-rank adaptation]
+  - QLoRA
+  - name: PEFT
+    aliases: [PEFT, Parameter-Efficient Fine-Tuning, parameter-efficient fine-tuning,
+              parameter efficient fine-tuning]
+  - name: Prefix Tuning
+    aliases: [Prefix-Tuning, prefix tuning, prefix-tuning]
+  - name: Prompt Tuning
+    aliases: [prompt tuning, prompt-tuning]
+  - name: Adapter Tuning
+    aliases: [adapter tuning, adapter fine-tuning]
+  - name: Fine-Tuning
+    aliases: [fine-tuning, finetuning, fine tuning]
+    id: fine-tuning
+  - name: RLHF
+    aliases: [RLHF, Reinforcement Learning from Human Feedback,
+              reinforcement learning from human feedback]
+  - name: DPO
+    aliases: [DPO, Direct Preference Optimization, direct preference optimization]
+  - name: PPO
+    aliases: [PPO, Proximal Policy Optimization]
+  - name: Instruction Tuning
+    aliases: [instruction tuning, instruction-tuning, instruction-tuned, instruction tuned]
+  - name: Chain-of-Thought
+    aliases: [Chain-of-Thought, chain-of-thought, Chain of Thought, chain of thought,
+              chain-of-thought prompting]
+  - name: CoT
+    case_sensitive: true
+    id: chain-of-thought-abbrev
+  - name: Self-Consistency
+    aliases: [self-consistency, self consistency]
+  - name: Tree-of-Thoughts
+    aliases: [Tree-of-Thoughts, tree of thoughts, tree-of-thought]
+  - name: In-Context Learning
+    aliases: [in-context learning, in context learning, ICL]
+  - name: Few-Shot Prompting
+    aliases: [few-shot prompting, few shot prompting, few-shot learning]
+  - name: Knowledge Distillation
+    aliases: [knowledge distillation, model distillation, distillation]
+  - Quantization
+  - Pruning
+  - name: FlashAttention
+    aliases: [FlashAttention, Flash Attention]
+  - vLLM
+  - DeepSpeed
+  - Megatron-LM
+  - name: Speculative Decoding
+    aliases: [speculative decoding]
+  - name: Contrastive Learning
+    aliases: [contrastive learning, contrastive pre-training]
+  - name: Mixture-of-Experts
+    aliases: [Mixture-of-Experts, mixture of experts, MoE]
+  - Switch Transformer
+  - name: Constitutional AI
+    aliases: [Constitutional AI]
+  - RLAIF
+  - name: ReAct
+    case_sensitive: true
+  - Toolformer
+  - Self-Instruct
+  - name: Whisper
+    case_sensitive: true
+  - name: CLIP
+    case_sensitive: true
+  - LLaVA
+  - XLM-R
+  - mBERT
+  - name: NLLB
+    aliases: [NLLB, No Language Left Behind]
+  - LaBSE
+  - name: Beam Search
+    aliases: [beam search, beam-search]
+  - name: Back-Translation
+    aliases: [back-translation, back translation]
+  - name: Data Augmentation
+    aliases: [data augmentation]
+  - name: Active Learning
+    aliases: [active learning]
+  - name: CRF
+    aliases: [CRF, Conditional Random Field, conditional random field]
+  - LSTM
+  - BiLSTM
+  - name: RNN
+    aliases: [RNN, recurrent neural network]
+  - name: CNN
+    aliases: [CNN, convolutional neural network]
+  - name: GNN
+    aliases: [GNN, graph neural network]
+  - name: Seq2Seq
+    aliases: [sequence-to-sequence, seq2seq, seq-to-seq]
+  - name: Encoder-Decoder
+    aliases: [encoder-decoder, encoder decoder]
+  - name: Embedding
+    aliases: [text embedding, word embedding, sentence embedding, embeddings model]
+    id: embedding
+
+datasets:
+  - name: SQuAD
+    aliases: [SQuAD, SQuAD 1.1, SQuAD 2.0, SQUAD]
+  - GLUE
+  - SuperGLUE
+  - name: MMLU
+    aliases: [MMLU, Massive Multitask Language Understanding]
+  - HellaSwag
+  - WinoGrande
+  - PIQA
+  - name: ARC
+    aliases: [ARC, ARC-Challenge, ARC-Easy, AI2 Reasoning Challenge]
+    case_sensitive: true
+  - name: BIG-Bench
+    aliases: [BIG-Bench, BIG-Bench Hard, BBH]
+  - GSM8K
+  - name: MATH
+    aliases: [MATH, MATH dataset, MATH benchmark]
+    case_sensitive: true
+  - HumanEval
+  - MBPP
+  - TruthfulQA
+  - name: Natural Questions
+    aliases: [Natural Questions, NQ]
+  - TriviaQA
+  - HotpotQA
+  - name: DROP
+    case_sensitive: true
+  - CoQA
+  - QuAC
+  - MRPC
+  - QNLI
+  - name: MNLI
+    aliases: [MNLI, MultiNLI]
+  - SNLI
+  - name: SST
+    aliases: [SST, SST-2, Stanford Sentiment Treebank]
+  - AG News
+  - IMDB
+  - name: WikiText
+    aliases: [WikiText, WikiText-2, WikiText-101]
+  - name: Penn Treebank
+    aliases: [Penn Treebank, PTB]
+  - name: C4
+    aliases: [C4, Colossal Clean Crawled Corpus]
+  - name: The Pile
+    aliases: [The Pile, EleutherAI Pile]
+    case_sensitive: true
+  - Wikipedia
+  - name: Common Crawl
+    aliases: [Common Crawl, CommonCrawl, CC100]
+  - OSCAR
+  - CCNet
+  - name: RedPajama
+    aliases: [RedPajama, RedPajama-Data]
+  - Dolma
+  - RefinedWeb
+  - name: FLORES
+    aliases: [FLORES, FLORES-101, FLORES-200, FLORES+]
+  - name: WMT
+    aliases: [WMT, WMT14, WMT16, WMT17, WMT19, WMT22, WMT23, WMT 2014]
+  - IWSLT
+  - name: OPUS
+    case_sensitive: true
+  - Europarl
+  - XNLI
+  - XQuAD
+  - name: TyDi QA
+    aliases: [TyDi QA, TyDiQA, TyDi-QA]
+  - MLQA
+  - name: PAWS
+    aliases: [PAWS, PAWS-X]
+    case_sensitive: true
+  - name: Quora Question Pairs
+    aliases: [Quora Question Pairs, QQP]
+  - MultiRC
+  - BoolQ
+  - RTE
+  - COPA
+  - ReCoRD
+  - XSum
+  - name: CNN/DailyMail
+    aliases: [CNN/DailyMail, CNN/Daily Mail, CNN-DailyMail, CNN-DM, CNNDM]
+  - Gigaword
+  - SAMSum
+  - AlpacaEval
+  - MT-Bench
+  - LongBench
+  - SocialIQA
+  - CommonsenseQA
+  - OpenBookQA
+  - LAMBADA
+  - StoryCloze
+  - name: CoNLL-2003
+    aliases: [CoNLL-2003, CoNLL03, CoNLL 2003]
+  - name: OntoNotes
+    aliases: [OntoNotes, OntoNotes 5.0]
+  - FewNERD
+  - TACRED
+  - DocRED
+  - WebNLG
+  - name: E2E NLG
+    aliases: [E2E NLG Challenge, E2E NLG]
+  - SciQ
+  - SciTail
+  - QASPER
+  - PubMedQA
+  - BioASQ
+  - name: Spider
+    case_sensitive: true
+  - WikiSQL
+  - name: MS MARCO
+    aliases: [MS MARCO, MSMARCO, MS-MARCO, MARCO]
+  - BEIR
+  - name: Universal Dependencies
+    aliases: [Universal Dependencies, UD treebanks]
+  - ShareGPT
+  - name: Self-Instruct Data
+    aliases: [Unnatural Instructions]
+    id: unnatural-instructions
+
+tasks:
+  - name: Machine Translation
+    aliases: [machine translation, neural machine translation, NMT]
+  - name: Question Answering
+    aliases: [question answering, open-domain question answering, QA]
+  - name: Summarization
+    aliases: [summarization, summarisation, text summarization, abstractive summarization,
+              extractive summarization, document summarization]
+  - name: Named Entity Recognition
+    aliases: [named entity recognition, NER, named-entity recognition]
+  - name: Relation Extraction
+    aliases: [relation extraction, relationship extraction]
+  - name: Event Extraction
+    aliases: [event extraction]
+  - name: Information Extraction
+    aliases: [information extraction]
+  - name: Text Classification
+    aliases: [text classification]
+  - name: Sentiment Analysis
+    aliases: [sentiment analysis, sentiment classification]
+  - name: Natural Language Inference
+    aliases: [natural language inference, textual entailment, NLI]
+  - name: Reading Comprehension
+    aliases: [reading comprehension, machine reading comprehension]
+  - name: Dialogue
+    aliases: [dialogue systems, dialog systems, dialogue system, conversational AI,
+              dialogue generation, response generation, task-oriented dialogue]
+  - name: Information Retrieval
+    aliases: [information retrieval, passage retrieval, document retrieval, dense retrieval,
+              text retrieval]
+  - name: Text Generation
+    aliases: [text generation, natural language generation, NLG]
+  - name: Language Modeling
+    aliases: [language modeling, language modelling, causal language modeling,
+              masked language modeling, MLM]
+  - name: Instruction Following
+    aliases: [instruction following, instruction-following]
+  - name: Reasoning
+    aliases: [reasoning, logical reasoning]
+  - name: Commonsense Reasoning
+    aliases: [commonsense reasoning, common-sense reasoning]
+  - name: Mathematical Reasoning
+    aliases: [mathematical reasoning, math reasoning, arithmetic reasoning]
+  - name: Multi-Hop Reasoning
+    aliases: [multi-hop reasoning, multihop reasoning, multi-step reasoning]
+  - name: Code Generation
+    aliases: [code generation, code synthesis, program synthesis, text-to-code]
+  - name: Text-to-SQL
+    aliases: [text-to-SQL, Text2SQL, text to SQL]
+  - name: Semantic Parsing
+    aliases: [semantic parsing]
+  - name: Speech Recognition
+    aliases: [speech recognition, automatic speech recognition, ASR]
+  - name: Coreference Resolution
+    aliases: [coreference resolution, coreference]
+  - name: Part-of-Speech Tagging
+    aliases: [part-of-speech tagging, POS tagging]
+  - name: Dependency Parsing
+    aliases: [dependency parsing]
+  - name: Hallucination Detection
+    aliases: [hallucination detection, hallucination mitigation, hallucination, hallucinations]
+  - name: Alignment
+    aliases: [AI alignment, safety alignment, model alignment]
+  - name: Toxicity Detection
+    aliases: [toxicity detection, toxic text detection, detoxification]
+  - name: Grammatical Error Correction
+    aliases: [grammatical error correction, GEC]
+  - name: Knowledge Graph Construction
+    aliases: [knowledge graph construction, KG construction]
+  - name: Red Teaming
+    aliases: [red teaming, red-teaming]

@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4402671874",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LOW-RANK APPROXIMATION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "PERFORMANCE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "LATENCY",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "Surgical Decomposition",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We demonstrate that surgical decomposition not only provides critical insights into the trade-off between compression and language modelling performance, but also sometimes enhances commonsense reasoning performance of LLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "COMPREHENSIVE RESEARCH"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "COMPREHENSIVE RESEARCH"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MODEL BIASES"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16441,
+ "eval_count": 139,
+ "ts": "2026-11-20T03:56:08Z"
+}

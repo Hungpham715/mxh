@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4396601321",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "non-cognitive skills",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-cognitive skills are crucial for personal and social life well-being, and such skill development can be supported by narrative-based (e.g., storytelling) technologies."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_rel",
+   "detail": "introduced"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14754,
+ "eval_count": 126,
+ "ts": "2026-11-20T03:47:44Z"
+}

@@ -1,0 +1,73 @@
+{
+ "paper_id": "oa:W4412889773",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SHuBERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce SHuBERT (Sign Hidden-Unit BERT), a self-supervised contextual representation model learned from approximately 1,000 hours of American Sign Language video."
+   }
+  },
+  {
+   "surface": "American Sign Language",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce SHuBERT (Sign Hidden-Unit BERT), a self-supervised contextual representation model learned from approximately 1,000 hours of American Sign Language video."
+   }
+  },
+  {
+   "surface": "state-of-the-art performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  },
+  {
+   "surface": "sign language translation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  },
+  {
+   "surface": "isolated sign language recognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  },
+  {
+   "surface": "fingerspelling detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "masked token prediction objectives"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "multi-stream visual sign language input"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21506,
+ "eval_count": 102,
+ "ts": "2026-11-20T04:17:57Z"
+}

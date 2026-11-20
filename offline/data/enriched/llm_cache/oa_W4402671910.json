@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4402671910",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLAMA-2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory."
+   }
+  },
+  {
+   "surface": "LLAMA-2-CHAT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further introduce a CEPE variant that can extend the context window of instruction-tuned models using only unlabeled data, and showcase its effectiveness on LLAMA-2-CHAT, leading to a strong instruction-following model that can leverage very long contexts on downstream tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CONTEXT_EXPANSION_WITH_PARALLEL_ENCODING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LANGUAGE_MODELING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "IN_CONTEXT_LEARNING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RETRIEVAL_AUGMENTED_APPLICATIONS"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "UNLabeled_DATA"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "128K_TOKENS"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "10X_THE_THROUGHPUT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "MEMORY"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "EXTENDED_CONTEXT_WINDOW"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "INSTRUCTION_FOLLOWING_MODEL"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VERY_LONG_CONTEXTS"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21358,
+ "eval_count": 165,
+ "ts": "2026-11-20T03:56:00Z"
+}

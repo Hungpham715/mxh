@@ -1,0 +1,1007 @@
+{
+  "schema_version": "small-world-sensitivity-v1",
+  "method": {
+    "projection": "undirected author co-authorship induced by papers in each slice",
+    "slices": [
+      "year",
+      "venue",
+      "topic"
+    ],
+    "minimum_papers_per_slice": 10,
+    "random_model": "degree-preserving double-edge swap on each slice LCC",
+    "n_random_per_slice": 3,
+    "formula": "sigma = (C_obs / C_rand) / (L_obs / L_rand)",
+    "decision_rule": "indication only when sigma>1, C_obs>2*C_rand, and L_obs<=1.5*L_rand"
+  },
+  "whole_network_fragmentation": {
+    "authors_total": 5430,
+    "edges": 16754,
+    "isolates": 201,
+    "connected_components": 810,
+    "lcc_size": 970,
+    "lcc_ratio_of_all_authors": 0.1786,
+    "density": 0.001137,
+    "component_size_top10": [
+      970,
+      164,
+      87,
+      68,
+      64,
+      41,
+      37,
+      36,
+      34,
+      30
+    ],
+    "mean_degree": 6.171,
+    "authors_outside_lcc": 4460,
+    "authors_outside_lcc_ratio": 0.8214,
+    "interpretation": "Corpus sampling and source-only identities split the observed projection into many components."
+  },
+  "slice_count": 16,
+  "verdict_counts": {
+    "no clear small-world indication": 6,
+    "small-world indication (sigma>1, C>>C_rand, L close to L_rand)": 5,
+    "undetermined": 5
+  },
+  "slices_with_small_world_indication": [
+    "year:2024",
+    "venue:venue:acl:2023.acl-long",
+    "venue:venue:acl:2023.emnlp-main",
+    "venue:venue:acl:2025.emnlp-main",
+    "topic:llm"
+  ],
+  "conclusion": "The sampled author graph is strongly fragmented; slice-level results are sensitivity checks, not evidence for the unsampled global collaboration network.",
+  "slices": [
+    {
+      "dimension": "year",
+      "key": "2023",
+      "label": "2023",
+      "papers": 363,
+      "authors": 1673,
+      "stats": {
+        "authors_total": 1673,
+        "edges": 4672,
+        "isolates": 9,
+        "connected_components": 256,
+        "lcc_size": 113,
+        "lcc_ratio_of_all_authors": 0.0675,
+        "density": 0.00334,
+        "component_size_top10": [
+          113,
+          61,
+          35,
+          23,
+          23,
+          20,
+          20,
+          19,
+          18,
+          17
+        ],
+        "mean_degree": 5.585
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 113,
+        "lcc_edges": 501,
+        "C_obs": 0.9194,
+        "L_obs": 4.7184,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 113,
+            "C": 0.1051,
+            "L": 2.3873
+          },
+          {
+            "seed": 20261109,
+            "nodes": 113,
+            "C": 0.1196,
+            "L": 2.4023
+          },
+          {
+            "seed": 20261110,
+            "nodes": 113,
+            "C": 0.1011,
+            "L": 2.3908
+          }
+        ],
+        "C_rand": 0.1086,
+        "L_rand": 2.3935,
+        "sigma": 4.294,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "year",
+      "key": "2024",
+      "label": "2024",
+      "papers": 364,
+      "authors": 1968,
+      "stats": {
+        "authors_total": 1968,
+        "edges": 6998,
+        "isolates": 8,
+        "connected_components": 287,
+        "lcc_size": 66,
+        "lcc_ratio_of_all_authors": 0.0335,
+        "density": 0.003616,
+        "component_size_top10": [
+          66,
+          45,
+          37,
+          37,
+          36,
+          36,
+          32,
+          30,
+          30,
+          27
+        ],
+        "mean_degree": 7.112
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 66,
+        "lcc_edges": 334,
+        "C_obs": 0.9203,
+        "L_obs": 2.7832,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 66,
+            "C": 0.225,
+            "L": 2.0117
+          },
+          {
+            "seed": 20261109,
+            "nodes": 66,
+            "C": 0.2382,
+            "L": 1.9897
+          },
+          {
+            "seed": 20261110,
+            "nodes": 66,
+            "C": 0.2237,
+            "L": 1.9995
+          }
+        ],
+        "C_rand": 0.229,
+        "L_rand": 2.0003,
+        "sigma": 2.889,
+        "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "year",
+      "key": "2025",
+      "label": "2025",
+      "papers": 364,
+      "authors": 2142,
+      "stats": {
+        "authors_total": 2142,
+        "edges": 10952,
+        "isolates": 6,
+        "connected_components": 324,
+        "lcc_size": 100,
+        "lcc_ratio_of_all_authors": 0.0467,
+        "density": 0.004776,
+        "component_size_top10": [
+          100,
+          44,
+          40,
+          35,
+          31,
+          29,
+          28,
+          19,
+          19,
+          18
+        ],
+        "mean_degree": 10.226
+      },
+      "small_world": {
+        "status": "undetermined",
+        "reason": "degree-preserving randomization infeasible for this constrained LCC",
+        "lcc_nodes": 100,
+        "lcc_edges": 4222,
+        "C_obs": 0.9985,
+        "L_obs": 1.1471,
+        "L_method": "exact"
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2023.acl-long",
+      "label": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "papers": 140,
+      "authors": 683,
+      "stats": {
+        "authors_total": 683,
+        "edges": 1875,
+        "isolates": 2,
+        "connected_components": 106,
+        "lcc_size": 46,
+        "lcc_ratio_of_all_authors": 0.0673,
+        "density": 0.008051,
+        "component_size_top10": [
+          46,
+          20,
+          17,
+          16,
+          13,
+          12,
+          11,
+          11,
+          11,
+          11
+        ],
+        "mean_degree": 5.49
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 46,
+        "lcc_edges": 212,
+        "C_obs": 0.9305,
+        "L_obs": 2.5633,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 46,
+            "C": 0.3389,
+            "L": 1.9478
+          },
+          {
+            "seed": 20261109,
+            "nodes": 46,
+            "C": 0.3399,
+            "L": 1.9449
+          },
+          {
+            "seed": 20261110,
+            "nodes": 46,
+            "C": 0.3477,
+            "L": 1.9643
+          }
+        ],
+        "C_rand": 0.3422,
+        "L_rand": 1.9523,
+        "sigma": 2.071,
+        "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2023.emnlp-main",
+      "label": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "papers": 140,
+      "authors": 671,
+      "stats": {
+        "authors_total": 671,
+        "edges": 1714,
+        "isolates": 1,
+        "connected_components": 121,
+        "lcc_size": 24,
+        "lcc_ratio_of_all_authors": 0.0358,
+        "density": 0.007625,
+        "component_size_top10": [
+          24,
+          16,
+          14,
+          13,
+          12,
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "mean_degree": 5.109
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 24,
+        "lcc_edges": 104,
+        "C_obs": 0.9577,
+        "L_obs": 1.7754,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 24,
+            "C": 0.43,
+            "L": 1.6413
+          },
+          {
+            "seed": 20261109,
+            "nodes": 24,
+            "C": 0.4072,
+            "L": 1.6449
+          },
+          {
+            "seed": 20261110,
+            "nodes": 24,
+            "C": 0.4313,
+            "L": 1.6268
+          }
+        ],
+        "C_rand": 0.4229,
+        "L_rand": 1.6377,
+        "sigma": 2.089,
+        "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2024.acl-long",
+      "label": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "papers": 140,
+      "authors": 811,
+      "stats": {
+        "authors_total": 811,
+        "edges": 3053,
+        "isolates": 1,
+        "connected_components": 114,
+        "lcc_size": 45,
+        "lcc_ratio_of_all_authors": 0.0555,
+        "density": 0.009295,
+        "component_size_top10": [
+          45,
+          24,
+          23,
+          22,
+          19,
+          16,
+          16,
+          16,
+          14,
+          13
+        ],
+        "mean_degree": 7.529
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 45,
+        "lcc_edges": 675,
+        "C_obs": 0.9926,
+        "L_obs": 1.3182,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 45,
+            "C": 0.8682,
+            "L": 1.3182,
+            "swaps": 675
+          },
+          {
+            "seed": 20261109,
+            "nodes": 45,
+            "C": 0.8705,
+            "L": 1.3182,
+            "swaps": 675
+          },
+          {
+            "seed": 20261110,
+            "nodes": 45,
+            "C": 0.8675,
+            "L": 1.3182,
+            "swaps": 675
+          }
+        ],
+        "C_rand": 0.8688,
+        "L_rand": 1.3182,
+        "sigma": 1.143,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2024.emnlp-main",
+      "label": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "papers": 140,
+      "authors": 783,
+      "stats": {
+        "authors_total": 783,
+        "edges": 2429,
+        "isolates": 1,
+        "connected_components": 134,
+        "lcc_size": 24,
+        "lcc_ratio_of_all_authors": 0.0307,
+        "density": 0.007934,
+        "component_size_top10": [
+          24,
+          19,
+          19,
+          18,
+          17,
+          15,
+          13,
+          13,
+          12,
+          11
+        ],
+        "mean_degree": 6.204
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 24,
+        "lcc_edges": 123,
+        "C_obs": 0.9294,
+        "L_obs": 1.6812,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 24,
+            "C": 0.5676,
+            "L": 1.5543
+          },
+          {
+            "seed": 20261109,
+            "nodes": 24,
+            "C": 0.5765,
+            "L": 1.558
+          },
+          {
+            "seed": 20261110,
+            "nodes": 24,
+            "C": 0.5701,
+            "L": 1.5652
+          }
+        ],
+        "C_rand": 0.5714,
+        "L_rand": 1.5592,
+        "sigma": 1.509,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2025.acl-long",
+      "label": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "papers": 140,
+      "authors": 973,
+      "stats": {
+        "authors_total": 973,
+        "edges": 7284,
+        "isolates": 0,
+        "connected_components": 124,
+        "lcc_size": 100,
+        "lcc_ratio_of_all_authors": 0.1028,
+        "density": 0.015404,
+        "component_size_top10": [
+          100,
+          33,
+          22,
+          19,
+          19,
+          18,
+          16,
+          15,
+          15,
+          15
+        ],
+        "mean_degree": 14.972
+      },
+      "small_world": {
+        "status": "undetermined",
+        "reason": "degree-preserving randomization infeasible for this constrained LCC",
+        "lcc_nodes": 100,
+        "lcc_edges": 4222,
+        "C_obs": 0.9985,
+        "L_obs": 1.1471,
+        "L_method": "exact"
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:acl:2025.emnlp-main",
+      "label": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+      "papers": 140,
+      "authors": 759,
+      "stats": {
+        "authors_total": 759,
+        "edges": 2112,
+        "isolates": 1,
+        "connected_components": 132,
+        "lcc_size": 26,
+        "lcc_ratio_of_all_authors": 0.0343,
+        "density": 0.007342,
+        "component_size_top10": [
+          26,
+          20,
+          17,
+          13,
+          12,
+          12,
+          11,
+          10,
+          10,
+          10
+        ],
+        "mean_degree": 5.565
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 26,
+        "lcc_edges": 121,
+        "C_obs": 0.9738,
+        "L_obs": 1.6277,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 26,
+            "C": 0.4454,
+            "L": 1.6277
+          },
+          {
+            "seed": 20261109,
+            "nodes": 26,
+            "C": 0.4401,
+            "L": 1.6277
+          },
+          {
+            "seed": 20261110,
+            "nodes": 26,
+            "C": 0.4429,
+            "L": 1.6277
+          }
+        ],
+        "C_rand": 0.4428,
+        "L_rand": 1.6277,
+        "sigma": 2.199,
+        "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "venue",
+      "key": "venue:arxiv:cs.CL",
+      "label": "arXiv cs.CL (preprint)",
+      "papers": 251,
+      "authors": 1241,
+      "stats": {
+        "authors_total": 1241,
+        "edges": 4241,
+        "isolates": 17,
+        "connected_components": 232,
+        "lcc_size": 44,
+        "lcc_ratio_of_all_authors": 0.0355,
+        "density": 0.005512,
+        "component_size_top10": [
+          44,
+          31,
+          30,
+          26,
+          20,
+          18,
+          16,
+          15,
+          14,
+          14
+        ],
+        "mean_degree": 6.835
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 44,
+        "lcc_edges": 275,
+        "C_obs": 0.9504,
+        "L_obs": 2.0645,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 44,
+            "C": 0.4892,
+            "L": 1.7791
+          },
+          {
+            "seed": 20261109,
+            "nodes": 44,
+            "C": 0.5057,
+            "L": 1.7611
+          },
+          {
+            "seed": 20261110,
+            "nodes": 44,
+            "C": 0.4634,
+            "L": 1.778
+          }
+        ],
+        "C_rand": 0.4861,
+        "L_rand": 1.7727,
+        "sigma": 1.679,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "llm",
+      "label": "llm",
+      "papers": 328,
+      "authors": 1860,
+      "stats": {
+        "authors_total": 1860,
+        "edges": 6525,
+        "isolates": 9,
+        "connected_components": 266,
+        "lcc_size": 55,
+        "lcc_ratio_of_all_authors": 0.0296,
+        "density": 0.003774,
+        "component_size_top10": [
+          55,
+          48,
+          28,
+          28,
+          27,
+          26,
+          24,
+          24,
+          24,
+          23
+        ],
+        "mean_degree": 7.016
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 55,
+        "lcc_edges": 224,
+        "C_obs": 0.9605,
+        "L_obs": 2.1724,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 55,
+            "C": 0.2571,
+            "L": 1.9899
+          },
+          {
+            "seed": 20261109,
+            "nodes": 55,
+            "C": 0.2933,
+            "L": 2.0222
+          },
+          {
+            "seed": 20261110,
+            "nodes": 55,
+            "C": 0.2814,
+            "L": 2.0114
+          }
+        ],
+        "C_rand": 0.2773,
+        "L_rand": 2.0079,
+        "sigma": 3.202,
+        "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "mt",
+      "label": "mt",
+      "papers": 25,
+      "authors": 118,
+      "stats": {
+        "authors_total": 118,
+        "edges": 288,
+        "isolates": 1,
+        "connected_components": 22,
+        "lcc_size": 11,
+        "lcc_ratio_of_all_authors": 0.0932,
+        "density": 0.041721,
+        "component_size_top10": [
+          11,
+          10,
+          8,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6
+        ],
+        "mean_degree": 4.881
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 11,
+        "lcc_edges": 35,
+        "C_obs": 0.9192,
+        "L_obs": 1.3636,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 11,
+            "C": 0.7101,
+            "L": 1.3636,
+            "swaps": 175
+          },
+          {
+            "seed": 20261109,
+            "nodes": 11,
+            "C": 0.7556,
+            "L": 1.3636,
+            "swaps": 175
+          },
+          {
+            "seed": 20261110,
+            "nodes": 11,
+            "C": 0.7253,
+            "L": 1.3636,
+            "swaps": 175
+          }
+        ],
+        "C_rand": 0.7303,
+        "L_rand": 1.3636,
+        "sigma": 1.259,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "qa",
+      "label": "qa",
+      "papers": 24,
+      "authors": 122,
+      "stats": {
+        "authors_total": 122,
+        "edges": 320,
+        "isolates": 0,
+        "connected_components": 23,
+        "lcc_size": 10,
+        "lcc_ratio_of_all_authors": 0.082,
+        "density": 0.043355,
+        "component_size_top10": [
+          10,
+          10,
+          9,
+          8,
+          8,
+          7,
+          7,
+          7,
+          5,
+          5
+        ],
+        "mean_degree": 5.246
+      },
+      "small_world": {
+        "status": "undetermined",
+        "reason": "degree-preserving randomization infeasible for this constrained LCC",
+        "lcc_nodes": 10,
+        "lcc_edges": 45,
+        "C_obs": 1.0,
+        "L_obs": 1.0,
+        "L_method": "exact"
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "retrieval",
+      "label": "retrieval",
+      "papers": 27,
+      "authors": 157,
+      "stats": {
+        "authors_total": 157,
+        "edges": 468,
+        "isolates": 0,
+        "connected_components": 25,
+        "lcc_size": 16,
+        "lcc_ratio_of_all_authors": 0.1019,
+        "density": 0.038217,
+        "component_size_top10": [
+          16,
+          14,
+          10,
+          8,
+          8,
+          8,
+          7,
+          7,
+          6,
+          6
+        ],
+        "mean_degree": 5.962
+      },
+      "small_world": {
+        "status": "computed",
+        "graph": "LCC of author-only co-authorship projection (unweighted)",
+        "lcc_nodes": 16,
+        "lcc_edges": 52,
+        "C_obs": 0.9153,
+        "L_obs": 1.8167,
+        "L_method": "exact",
+        "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+        "n_random": 3,
+        "random_graphs": [
+          {
+            "seed": 20261108,
+            "nodes": 16,
+            "C": 0.4515,
+            "L": 1.6
+          },
+          {
+            "seed": 20261109,
+            "nodes": 16,
+            "C": 0.5394,
+            "L": 1.6333
+          },
+          {
+            "seed": 20261110,
+            "nodes": 16,
+            "C": 0.4017,
+            "L": 1.5667
+          }
+        ],
+        "C_rand": 0.4642,
+        "L_rand": 1.6,
+        "sigma": 1.736,
+        "verdict": "no clear small-world indication",
+        "limitations": [
+          "Multi-author papers create cliques that mechanically raise clustering.",
+          "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+          "No significance test performed; sigma is descriptive only."
+        ]
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "safety_eval",
+      "label": "safety_eval",
+      "papers": 21,
+      "authors": 112,
+      "stats": {
+        "authors_total": 112,
+        "edges": 283,
+        "isolates": 0,
+        "connected_components": 20,
+        "lcc_size": 9,
+        "lcc_ratio_of_all_authors": 0.0804,
+        "density": 0.045528,
+        "component_size_top10": [
+          9,
+          8,
+          8,
+          7,
+          7,
+          7,
+          7,
+          6,
+          6,
+          6
+        ],
+        "mean_degree": 5.054
+      },
+      "small_world": {
+        "status": "undetermined",
+        "reason": "LCC too small"
+      }
+    },
+    {
+      "dimension": "topic",
+      "key": "summarization",
+      "label": "summarization",
+      "papers": 26,
+      "authors": 123,
+      "stats": {
+        "authors_total": 123,
+        "edges": 324,
+        "isolates": 0,
+        "connected_components": 23,
+        "lcc_size": 12,
+        "lcc_ratio_of_all_authors": 0.0976,
+        "density": 0.043183,
+        "component_size_top10": [
+          12,
+          12,
+          12,
+          10,
+          7,
+          7,
+          6,
+          5,
+          5,
+          5
+        ],
+        "mean_degree": 5.268
+      },
+      "small_world": {
+        "status": "undetermined",
+        "reason": "degree-preserving randomization infeasible for this constrained LCC",
+        "lcc_nodes": 12,
+        "lcc_edges": 62,
+        "C_obs": 0.9576,
+        "L_obs": 1.0606,
+        "L_method": "exact"
+      }
+    }
+  ]
+}

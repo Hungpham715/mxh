@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4385570201",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Mental disorders",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Mental disorders affect millions of people worldwide and cause interference with their thinking and behavior."
+   }
+  },
+  {
+   "surface": "social media platforms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Through the past years, awareness created by health campaigns and other sources motivated the study of these disorders using information extracted from social media platforms."
+   }
+  },
+  {
+   "surface": "mental health domain",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "First, we adapted the model to social media language, and then, we adapted it to the mental health domain."
+   }
+  },
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To achieve this goal, we propose a double-domain adaptation of a language model."
+   }
+  },
+  {
+   "surface": "lexical resource",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In both steps, we incorporated a lexical resource to guide the masking process of the language model and, therefore, to help it in paying more attention to words related to mental disorders."
+   }
+  },
+  {
+   "surface": "three major mental disorders",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We have evaluated our model in the detection of signs of three major mental disorders: Anorexia, Self-harm, and Depression."
+   }
+  },
+  {
+   "surface": "state-of-the-art methods",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Results are encouraging as they show that the proposed adaptation enhances the classification performance and yields competitive results against state-of-the-art methods."
+   }
+  },
+  {
+   "surface": "double-domain adaptation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To achieve this goal, we propose a double-domain adaptation of a language model."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "Anorexia"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "Self-harm"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "entity",
+   "surface": "Depression"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "outcome",
+   "surface": "results"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "lexical masking process"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "outcome",
+   "surface": "classification performance"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "outcome",
+   "surface": "competitive results"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 7502,
+ "eval_count": 152,
+ "ts": "2026-11-20T03:11:00Z"
+}

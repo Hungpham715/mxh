@@ -1,0 +1,43 @@
+{
+ "paper_id": "oa:W4389520684",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "https://github.com/ImKeTT/ReSee",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Our code is available at https://github.com/ImKeTT/ReSee."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ReSee-WoW"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ReSee-DD"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34004,
+ "eval_count": 195,
+ "ts": "2026-11-20T03:39:37Z"
+}

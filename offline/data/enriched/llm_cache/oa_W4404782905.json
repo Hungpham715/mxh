@@ -1,0 +1,135 @@
+{
+ "paper_id": "oa:W4404782905",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "VideoFeedback",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we release VideoFeedback, the first large-scale dataset containing human-provided multi-aspect score over 37.6K synthesized videos from 11 existing video generative models."
+   }
+  },
+  {
+   "surface": "VideoScore",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We train VideoScore (initialized from Mantis)based on VideoFeedback to enable automatic video quality assessment."
+   }
+  },
+  {
+   "surface": "EvalCrafter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics."
+   }
+  },
+  {
+   "surface": "GenAI-Bench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics."
+   }
+  },
+  {
+   "surface": "VBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics."
+   }
+  },
+  {
+   "surface": "video generation models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Due to these results, we believe VideoScore can serve as a great proxy for human raters to (1) rate different video models to track progress (2) simulate fine-grained human feedback in Reinforcement Learning with Human Feedback (RLHF) to improve current video generation models."
+   }
+  },
+  {
+   "surface": "Reinforcement Learning with Human Feedback",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Due to these results, we believe VideoScore can serve as a great proxy for human raters to (1) rate different video models to track progress (2) simulate fine-grained human feedback in Reinforcement Learning with Human Feedback (RLHF) to improve current video generation models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "evidence",
+   "surface": "VideoFeedback-test"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "Spearman's correlation"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "77.1"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "50 points"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "human-provided"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "multi-aspect score"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "synthesized videos"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "37.6K"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "11 existing video generative models"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "large-scale"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "human-annotated"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "relation",
+   "surface": "reliable scores"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VideoGeneration"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18401,
+ "eval_count": 228,
+ "ts": "2026-11-20T04:07:05Z"
+}

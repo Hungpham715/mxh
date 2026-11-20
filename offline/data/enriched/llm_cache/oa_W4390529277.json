@@ -1,0 +1,188 @@
+{
+ "paper_id": "oa:W4390529277",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SENTIMENT ANALYSIS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Sentiment analysis provides a mechanism to study the emotions expressed in text."
+   }
+  },
+  {
+   "surface": "BIBLE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we use sentiment analysis for studying selected chapters of the Bible."
+   }
+  },
+  {
+   "surface": "CHAPTER",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we use sentiment analysis for studying selected chapters of the Bible."
+   }
+  },
+  {
+   "surface": "SERMON ON THE MOUNT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These chapters are known as the Sermon on the Mount."
+   }
+  },
+  {
+   "surface": "TRANSLATION",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Recently, sentiment analysis has been used to study and compare translations of the Bhagavad Gita, which is a fundamental and sacred Hindu text."
+   }
+  },
+  {
+   "surface": "KING JAMES VERSION",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "NEW INTERNATIONAL VERSION",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "BASIC ENGLISH VERSION",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "VOCABULARY",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We found that the vocabulary of the respective translations is significantly different."
+   }
+  },
+  {
+   "surface": "OPTIMISM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We detected different levels of humour, optimism, and empathy in the respective chapters that were used by Jesus to deliver his message."
+   }
+  },
+  {
+   "surface": "EMPATHY",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We detected different levels of humour, optimism, and empathy in the respective chapters that were used by Jesus to deliver his message."
+   }
+  },
+  {
+   "surface": "RESULT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our results highlight the varying sentiments across the chapters and verses."
+   }
+  },
+  {
+   "surface": "VERSE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We provide a chapter-by-chapter and verse-by-verse comparison using sentiment and semantic analysis and review the major sentiments expressed."
+   }
+  },
+  {
+   "surface": "CHAP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we use sentiment analysis for studying selected chapters of the Bible."
+   }
+  },
+  {
+   "surface": "SERMON",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These chapters are known as the Sermon on the Mount."
+   }
+  },
+  {
+   "surface": "COMPARISON",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We provide a chapter-by-chapter and verse-by-verse comparison using sentiment and semantic analysis and review the major sentiments expressed."
+   }
+  },
+  {
+   "surface": "SEMANTIC ANALYSIS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We provide a chapter-by-chapter and verse-by-verse comparison using sentiment and semantic analysis and review the major sentiments expressed."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "NEW REVISION STANDARD VERSION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LAMSAS VERSION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "HOUMOUR"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VARIABLES"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CHAPES"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CHAPTER BY CHAP"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "VERSE BY VERSE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "METHOD"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27124,
+ "eval_count": 375,
+ "ts": "2026-11-20T03:46:29Z"
+}

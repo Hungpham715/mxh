@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4389500603",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 7019,
+ "eval_count": 95,
+ "ts": "2026-11-20T03:26:28Z"
+}

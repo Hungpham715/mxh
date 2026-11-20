@@ -76,3 +76,29 @@ def small_world_plot(sw: dict[str, Any], path: Path) -> None:
     fig.tight_layout()
     fig.savefig(path, dpi=160)
     plt.close(fig)
+
+
+def small_world_sensitivity_plot(result: dict[str, Any], path: Path) -> None:
+    """Plot observed/random path ratios and sigma for every computed corpus slice."""
+    rows = [row for row in result.get("slices", []) if row.get("small_world", {}).get("status") == "computed"]
+    if not rows:
+        return
+    labels = [f"{row['dimension']}:{row['key']}" for row in rows]
+    path_ratios = [row["small_world"]["L_obs"] / row["small_world"]["L_rand"] for row in rows]
+    sigmas = [row["small_world"]["sigma"] for row in rows]
+    y = list(range(len(rows)))
+    fig, axes = plt.subplots(1, 2, figsize=(13, max(5, 0.42 * len(rows))))
+    axes[0].barh(y, path_ratios, color="#3b6ea5")
+    axes[0].axvline(1.5, color="#a5473b", linestyle="--", linewidth=1, label="decision threshold 1.5")
+    axes[0].set_yticks(y, labels)
+    axes[0].set_xlabel("L_obs / L_rand (lower is closer)")
+    axes[0].legend(fontsize=8)
+    axes[1].barh(y, sigmas, color="#4f8a5b")
+    axes[1].axvline(1.0, color="#a5473b", linestyle="--", linewidth=1, label="sigma threshold 1")
+    axes[1].set_yticks(y, [""] * len(y))
+    axes[1].set_xlabel("sigma")
+    axes[1].legend(fontsize=8)
+    fig.suptitle("Small-world sensitivity across real corpus slices")
+    fig.tight_layout()
+    fig.savefig(path, dpi=160)
+    plt.close(fig)

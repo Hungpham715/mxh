@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4402671554",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "I am a Strange Dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present “I am a Strange Dataset”, a new dataset for addressing this question."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "GPT 4"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evaluated_on",
+   "surface": "https://github.com/TristanThrush/i-am-a-strange-dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "7B to 70B parameters"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "70B parameters"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "7B to 70B parameters"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evaluated_on",
+   "surface": "https://github.com/TristanThrush/i-am-a-strange-dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evaluated_on",
+   "surface": "https://github.com/TristanThrush/i-am-a-strange-dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "evaluated_on",
+   "surface": "https://github.com/TristanThrush/i-am-a-strange-dataset"
+  },
+  {
+   "reason": "malformed_entity",
+   "detail": "'relations [{'"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23543,
+ "eval_count": 214,
+ "ts": "2026-11-20T03:52:06Z"
+}

@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385570015",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "32 QA benchmarks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We measure the concurrence between 32 QA benchmarks on a set of 20 diverse modeling approaches and find that human-constructed benchmarks have high concurrence amongst themselves, even if their passage and question distributions are very different."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "32 QA benchmarks",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We measure the concurrence between 32 QA benchmarks on a set of 20 diverse modeling approaches and find that human-constructed benchmarks have high concurrence amongst themselves, even if their passage and question distributions are very different.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "32 QA benchmarks"
+ ],
+ "duration_ms": 6352,
+ "eval_count": 120,
+ "ts": "2026-11-20T03:10:23Z"
+}

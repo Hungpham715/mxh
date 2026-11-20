@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4401042788",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "INSTRUCTION",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning (ICL) performs tasks by prompting a large language model (LLM) using an instruction and a small set of annotated examples called demonstrations."
+   }
+  },
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning (ICL) performs tasks by prompting a large language model (LLM) using an instruction and a small set of annotated examples called demonstrations."
+   }
+  },
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Using the suite, we evaluate the relative performance of seven popular instruction selection methods over five metrics relevant to ICL."
+   }
+  },
+  {
+   "surface": "MODEL",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning (ICL) performs tasks by prompting a large language model (LLM) using an instruction and a small set of annotated examples called demonstrations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "experiment",
+   "surface": "EXPERIMENT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18841,
+ "eval_count": 162,
+ "ts": "2026-11-20T03:48:03Z"
+}

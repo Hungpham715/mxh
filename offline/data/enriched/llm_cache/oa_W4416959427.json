@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4416959427",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "GPT-5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "Gemini 3 Pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "Claude Sonnet 4.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN-EVIDENCE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "UP-TO-DATE EXPERT AI"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MED-QA"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "HEALTH-BENCH"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN-EVIDENCE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "UP-TO-DATE EXPERT AI"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MED-QA"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "HEALTH-BENCH"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OPEN-EVIDENCE"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "UP-TO-DATE EXPERT AI"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36024,
+ "eval_count": 240,
+ "ts": "2026-11-20T04:41:52Z"
+}

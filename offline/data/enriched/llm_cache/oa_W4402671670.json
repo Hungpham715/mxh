@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4402671670",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose MAGIC, a new multi-aspect controllable text generation method with disentangled counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "multi-aspect controllable text generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-aspect controllable text generation aims to control the generated texts in attributes from multiple aspects (e.g., “positive” from sentiment and “sport” from topic)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-aspect controllable text generation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-aspect controllable text generation aims to control the generated texts in attributes from multiple aspects (e.g., “positive” from sentiment and “sport” from topic).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [
+  "multi-aspect controllable text generation"
+ ],
+ "duration_ms": 17802,
+ "eval_count": 179,
+ "ts": "2026-11-20T03:53:22Z"
+}

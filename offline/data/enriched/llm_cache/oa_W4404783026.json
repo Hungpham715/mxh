@@ -1,0 +1,65 @@
+{
+ "paper_id": "oa:W4404783026",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce RepMatch, a novel method that characterizes data through the lens of similarity.RepMatch quantifies the similarity between subsets of training instances by comparing the knowledge encoded in models trained on them, overcoming the limitations of existing analysis methods that focus solely on individual instances and are restricted to within-dataset analysis.Our framework allows for a broader evaluation, enabling similarity comparisons across arbitrary subsets of instances, supporting both dataset-to-dataset and instance-to-dataset analyses."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Advances in dataset analysis techniques have enabled more sophisticated approaches to analyzing and characterizing training data instances, often categorizing data based on attributes such as “difficulty”."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate the effectiveness of RepMatch across multiple NLP tasks, datasets, and models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate the effectiveness of RepMatch across multiple NLP tasks, datasets, and models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Advances in dataset analysis techniques have enabled more sophisticated approaches to analyzing and characterizing training data instances, often categorizing data based on attributes such as “difficulty”.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24180,
+ "eval_count": 250,
+ "ts": "2026-11-20T04:08:26Z"
+}

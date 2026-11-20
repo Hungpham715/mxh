@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4404783359",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods struggle to effectively repair the semantics in adversarial examples, resulting in unsatisfactory defense performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To repair the semantics in adversarial examples, we introduce a novel approach named Reactive Perturbation Defocusing (Rapid), which employs an adversarial detector to identify the fake labels of adversarial examples and leverages adversarial attackers to repair the semantics in adversarial examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19674,
+ "eval_count": 163,
+ "ts": "2026-11-20T04:09:59Z"
+}

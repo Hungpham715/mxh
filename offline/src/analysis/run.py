@@ -8,7 +8,7 @@ from typing import Any
 
 import networkx as nx
 
-from src.analysis import metrics, visualize
+from src.analysis import metrics, subnetworks, visualize
 from src.common import DERIVED, log, read_jsonl, write_json
 from src.data.contracts import load_dataset
 from src.graph.derive import REL_TYPES, derive_edges, write_derived
@@ -101,6 +101,7 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
             h["evidence_urls"] = [papers[p]["source_url"] for p in h["evidence_paper_ids"]]
 
     sw = metrics.small_world(g)
+    sw_sensitivity = subnetworks.analyze_subnetworks(rows, g)
     result = {
         "projection": "Author-COAUTHORED_WITH-Author only (undirected, simple, weight = shared papers)",
         "source": source, "stats": stats,
@@ -115,6 +116,11 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     }
     write_json(out / "author_network.json", result)
     write_json(out / "small_world.json", sw)
+    subnetworks.write_subnetwork_outputs(
+        sw_sensitivity,
+        out / "small_world_subnetworks.json",
+        out / "small_world_subnetworks.csv",
+    )
     metrics.write_pairs_csv(g, out / "author_projection_edges.csv")
     with open(out / "author_metrics.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
@@ -130,6 +136,7 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     if ranked:
         visualize.subgraph_plot(g, ranked[0], out / "ego_top_pagerank.png", communities=node_comm)
     visualize.small_world_plot(sw, out / "small_world.png")
+    visualize.small_world_sensitivity_plot(sw_sensitivity, out / "small_world_subnetworks.png")
     log.info("analysis written to %s: %s", out, stats)
     _ = (DERIVED, read_jsonl)
     return 0

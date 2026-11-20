@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4416036640",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM-as-a-judge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM-as-a-judge has become a promising paradigm for using large language models (LLMs) to evaluate natural language generation (NLG), but the uncertainty of its evaluation remains underexplored."
+   }
+  },
+  {
+   "surface": "experiments",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments and analysis, which show that conformal prediction can provide valid prediction interval with coverage guarantees."
+   }
+  },
+  {
+   "surface": "analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments and analysis, which show that conformal prediction can provide valid prediction interval with coverage guarantees."
+   }
+  },
+  {
+   "surface": "valid prediction interval",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments and analysis, which show that conformal prediction can provide valid prediction interval with coverage guarantees."
+   }
+  },
+  {
+   "surface": "coverage guarantees",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We perform extensive experiments and analysis, which show that conformal prediction can provide valid prediction interval with coverage guarantees."
+   }
+  },
+  {
+   "surface": "low-bias alternative",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also suggest a midpoint-based score within the interval as a low-bias alternative to raw model score and weighted average."
+   }
+  },
+  {
+   "surface": "raw model score",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also suggest a midpoint-based score within the interval as a low-bias alternative to raw model score and weighted average."
+   }
+  },
+  {
+   "surface": "weighted average",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also suggest a midpoint-based score within the interval as a low-bias alternative to raw model score and weighted average."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "conformal prediction"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "prediction interval"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "ordinal boundary adjustment"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "midpoint-based score"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "weighted average"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23880,
+ "eval_count": 150,
+ "ts": "2026-11-20T04:35:47Z"
+}

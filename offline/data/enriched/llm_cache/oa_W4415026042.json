@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4415026042",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLMs trained on massive datasets may inadvertently acquire sensitive information such as personal details and potentially harmful content."
+   }
+  },
+  {
+   "surface": "UnLOK-VQA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address this gap, we first introduce a multimodal unlearning benchmark, UnLOK-VQA (Unlearning Outside Knowledge VQA), as well as an attack-and-defense framework to evaluate methods for deleting specific multimodal knowledge from MLLMs."
+   }
+  },
+  {
+   "surface": "image-text pairs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluating how effectively MLLMs can forget such information (targeted unlearning) necessitates the creation of high-quality, well-annotated image-text pairs."
+   }
+  },
+  {
+   "surface": "attack-and-defense framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address this gap, we first introduce a multimodal unlearning benchmark, UnLOK-VQA (Unlearning Outside Knowledge VQA), as well as an attack-and-defense framework to evaluate methods for deleting specific multimodal knowledge from MLLMs."
+   }
+  },
+  {
+   "surface": "visual question-answering dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We extend a visual question-answering dataset using an automated pipeline that generates varying-proximity samples for testing generalization and specificity, followed by manual filtering for maintaining high quality."
+   }
+  },
+  {
+   "surface": "automated pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We extend a visual question-answering dataset using an automated pipeline that generates varying-proximity samples for testing generalization and specificity, followed by manual filtering for maintaining high quality."
+   }
+  },
+  {
+   "surface": "manual filtering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We extend a visual question-answering dataset using an automated pipeline that generates varying-proximity samples for testing generalization and specificity, followed by manual filtering for maintaining high quality."
+   }
+  },
+  {
+   "surface": "generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We extend a visual question-answering dataset using an automated pipeline that generates varying-proximity samples for testing generalization and specificity, followed by manual filtering for maintaining high quality."
+   }
+  },
+  {
+   "surface": "specificity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We extend a visual question-answering dataset using an automated pipeline that generates varying-proximity samples for testing generalization and specificity, followed by manual filtering for maintaining high quality."
+   }
+  },
+  {
+   "surface": "post-editing robustness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Additionally, larger models exhibit greater post-editing robustness, suggesting that scale enhances safety."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17528,
+ "eval_count": 164,
+ "ts": "2026-11-20T04:25:54Z"
+}

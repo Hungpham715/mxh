@@ -1,0 +1,65 @@
+{
+ "paper_id": "oa:W4416037104",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Culture Cartography",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We implement Culture Cartography as a tool called Culture Explorer."
+   }
+  },
+  {
+   "surface": "Culture Explorer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We implement Culture Cartography as a tool called Culture Explorer."
+   }
+  },
+  {
+   "surface": "DeepSeek R1",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  },
+  {
+   "surface": "Llama-4",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "web search"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "Culture Explorer"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25195,
+ "eval_count": 128,
+ "ts": "2026-11-20T04:39:17Z"
+}

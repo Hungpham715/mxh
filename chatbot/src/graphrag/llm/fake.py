@@ -25,6 +25,8 @@ class FakeLLMProvider:
 
         if "TASK=ROUTE/PARSE" in system:
             content = json.dumps(self._parse(user), ensure_ascii=False)
+        elif "TASK=REQUESTED_FIELDS" in system:
+            content = json.dumps(self._requested_fields(user), ensure_ascii=False)
         elif "TASK=HISTORY" in system:
             content = self._history_answer(user)
         elif "TASK=ANSWER" in system:
@@ -33,6 +35,12 @@ class FakeLLMProvider:
             content = json.dumps({"sufficient": True, "reason_code": "enough"})
 
         return LLMResponse(content=content, model="deterministic-fixture-v1", provider=self.name)
+
+    @staticmethod
+    def _requested_fields(user: str) -> dict[str, list[str]]:
+        normalized = user.casefold()
+        fields = ["affiliations"] if "tổng quan" in normalized or "overview" in normalized else []
+        return {"fields": fields}
 
     async def health(self) -> tuple[bool, str]:
         return True, "deterministic fake provider ready"

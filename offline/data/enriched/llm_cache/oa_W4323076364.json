@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4323076364",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "clinical decision-making process",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our results demonstrate the potential for large language models to be effective tools in the clinical decision-making process, while also emphasizing the importance of careful testing and deployment to mitigate their shortcomings."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "clinical decision-making process",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our results demonstrate the potential for large language models to be effective tools in the clinical decision-making process, while also emphasizing the importance of careful testing and deployment to mitigate their shortcomings.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "clinical decision-making process"
+ ],
+ "duration_ms": 5558,
+ "eval_count": 109,
+ "ts": "2026-11-19T18:07:39Z"
+}

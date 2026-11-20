@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4404782792",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite the diversity of the information it can convey, NLF methods are often hand-designed and arbitrary, with little systematic grounding."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this opinion piece, we compile ideas from pedagogy to introduce FELT, a feedback framework for LLMs that outlines various characteristics of the feedback space, and a feedback content taxonomy based on these variables, providing a general mapping of the feedback space.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19921,
+ "eval_count": 201,
+ "ts": "2026-11-20T04:05:51Z"
+}

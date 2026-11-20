@@ -1,0 +1,174 @@
+{
+ "paper_id": "oa:W4404782947",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PEFT Per User",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these shortcomings, we introduce One PEFT Per User (OPPU), employing personalized parameter-efficient fine-tuning (PEFT) modules to store user-specific behavior patterns and preferences."
+   }
+  },
+  {
+   "surface": "LaMP",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results demonstrate that OPPU significantly outperforms existing prompt-based methods across seven diverse tasks in the LaMP benchmark."
+   }
+  },
+  {
+   "surface": "One PEFT Per User",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these shortcomings, we introduce One PEFT Per User (OPPU), employing personalized parameter-efficient fine-tuning (PEFT) modules to store user-specific behavior patterns and preferences."
+   }
+  },
+  {
+   "surface": "user",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Personalization in large language models (LLMs) is increasingly important, aiming to align the LLMs’ interactions, content, and recommendations with individual user preferences."
+   }
+  },
+  {
+   "surface": "behavior history",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent advances have highlighted effective prompt design by enriching user queries with non-parametric knowledge through behavior history retrieval and textual profiles."
+   }
+  },
+  {
+   "surface": "textual profiles",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent advances have highlighted effective prompt design by enriching user queries with non-parametric knowledge through behavior history retrieval and textual profiles."
+   }
+  },
+  {
+   "surface": "privacy issues",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "customization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "complex",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "dynamic",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "user behavior patterns",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "non-parametric",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent advances have highlighted effective prompt design by enriching user queries with non-parametric knowledge through behavior history retrieval and textual profiles."
+   }
+  },
+  {
+   "surface": "PEFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these shortcomings, we introduce One PEFT Per User (OPPU), employing personalized parameter-efficient fine-tuning (PEFT) modules to store user-specific behavior patterns and preferences."
+   }
+  },
+  {
+   "surface": "user preferences",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Personalization in large language models (LLMs) is increasingly important, aiming to align the LLMs’ interactions, content, and recommendations with individual user preferences."
+   }
+  },
+  {
+   "surface": "model ownership",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods faced limitations due to a lack of model ownership, resulting in constrained customization and privacy issues, and often failed to capture complex, dynamic user behavior patterns."
+   }
+  },
+  {
+   "surface": "user behavior shifts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "OPPU integrates parametric user knowledge in the personal PEFT parameters with non-parametric knowledge from retrieval and profiles, adapting LLMs to user behavior shifts."
+   }
+  },
+  {
+   "surface": "modeling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further studies reveal OPPU’s enhanced capabilities in handling user behavior shifts, modeling users at different activity levels, maintaining robustness across various user history formats, and displaying versatility with different PEFT methods."
+   }
+  },
+  {
+   "surface": "activity levels",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further studies reveal OPPU’s enhanced capabilities in handling user behavior shifts, modeling users at different activity levels, maintaining robustness across various user history formats, and displaying versatility with different PEFT methods."
+   }
+  },
+  {
+   "surface": "user history formats",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further studies reveal OPPU’s enhanced capabilities in handling user behavior shifts, modeling users at different activity levels, maintaining robustness across various user history formats, and displaying versatility with different PEFT methods."
+   }
+  },
+  {
+   "surface": "PEFT methods",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further studies reveal OPPU’s enhanced capabilities in handling user behavior shifts, modeling users at different activity levels, maintaining robustness across various user history formats, and displaying versatility with different PEFT methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 20754,
+ "eval_count": 212,
+ "ts": "2026-11-20T04:07:10Z"
+}

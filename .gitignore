@@ -20,4 +20,11 @@ chatbot/data/generated/
 chatbot/data/reviewed/
 chatbot/data/splits/
 chatbot/data/models/
-chatbot/reports/
+# Generated reports stay local, except the bounded credential-free real-demo evidence
+# intentionally packaged for an offline presentation fallback.
+chatbot/reports/*
+!chatbot/reports/demo/
+chatbot/reports/demo/*
+!chatbot/reports/demo/atlas.png
+!chatbot/reports/demo/real_trace.jsonl
+!chatbot/reports/demo/summary.json

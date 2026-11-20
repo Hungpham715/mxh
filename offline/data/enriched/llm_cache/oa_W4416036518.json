@@ -1,0 +1,147 @@
+{
+ "paper_id": "oa:W4416036518",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Humans",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can interpret geospatial information through natural language, while the geospatial cognition capabilities of Large Language Models (LLMs) remain underexplored."
+   }
+  },
+  {
+   "surface": "geospatial cognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can interpret geospatial information through natural language, while the geospatial cognition capabilities of Large Language Models (LLMs) remain underexplored."
+   }
+  },
+  {
+   "surface": "PathBuilder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we introduce PathBuilder, a novel tool for converting natural language instructions into navigation routes, and vice versa, bridging the gap between geospatial information and natural language."
+   }
+  },
+  {
+   "surface": "large-scale evaluation dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We create a large-scale evaluation dataset comprised of 36000 routes from 12 metropolises."
+   }
+  },
+  {
+   "surface": "9 state-of-the-art (SOTA) LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, we propose a new evaluation framework and metrics to rigorously assess 9 state-of-the-art (SOTA) LLMs, on the task of route reversal."
+   }
+  },
+  {
+   "surface": "route reversal",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, we propose a new evaluation framework and metrics to rigorously assess 9 state-of-the-art (SOTA) LLMs, on the task of route reversal."
+   }
+  },
+  {
+   "surface": "reverse routes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The benchmark reveals that LLMs exhibit limited ability to reverse routes: most of the reverse routes neither return to the starting point nor are similar to the optimal route."
+   }
+  },
+  {
+   "surface": "geospatial route",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we propose a scalable benchmark and conduct a comprehensive evaluation of the geospatial route cognition of LLMs."
+   }
+  },
+  {
+   "surface": "route generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Additionally, LLMs face challenges such as low robustness in route generation and high confidence for their incorrect answers."
+   }
+  },
+  {
+   "surface": "low robustness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Additionally, LLMs face challenges such as low robustness in route generation and high confidence for their incorrect answers."
+   }
+  },
+  {
+   "surface": "high confidence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Additionally, LLMs face challenges such as low robustness in route generation and high confidence for their incorrect answers."
+   }
+  },
+  {
+   "surface": "comprehensive evaluation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we propose a scalable benchmark and conduct a comprehensive evaluation of the geospatial route cognition of LLMs."
+   }
+  },
+  {
+   "surface": "geospatial information",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can interpret geospatial information through natural language, while the geospatial cognition capabilities of Large Language Models (LLMs) remain underexplored."
+   }
+  },
+  {
+   "surface": "natural language",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can interpret geospatial information through natural language, while the geospatial cognition capabilities of Large Language Models (LLMs) remain underexplored."
+   }
+  },
+  {
+   "surface": "navigation routes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we introduce PathBuilder, a novel tool for converting natural language instructions into navigation routes, and vice versa, bridging the gap between geospatial information and natural language."
+   }
+  },
+  {
+   "surface": "geospatial route cognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we propose a scalable benchmark and conduct a comprehensive evaluation of the geospatial route cognition of LLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "comprehensive evaluation dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30048,
+ "eval_count": 258,
+ "ts": "2026-11-20T04:34:53Z"
+}

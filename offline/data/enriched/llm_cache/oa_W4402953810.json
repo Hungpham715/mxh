@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4402953810",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CONSTITUENCY PARSING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Constituency parsing involves analyzing a sentence by breaking it into sub-phrases, or constituents."
+   }
+  },
+  {
+   "surface": "ENTITY VIOLATING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new metric, the Entity Violating Rate (EVR), to quantify the extent of entity violations in parsing results."
+   }
+  },
+  {
+   "surface": "ONTONOTES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on three popular datasets-ONTONOTES, PTB, and CTB-demonstrate that our model achieves the lowest EVR while maintaining high precision, recall, and F1-scores comparable to existing models."
+   }
+  },
+  {
+   "surface": "PTB",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on three popular datasets-ONTONOTES, PTB, and CTB-demonstrate that our model achieves the lowest EVR while maintaining high precision, recall, and F1-scores comparable to existing models."
+   }
+  },
+  {
+   "surface": "CTB",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on three popular datasets-ONTONOTES, PTB, and CTB-demonstrate that our model achieves the lowest EVR while maintaining high precision, recall, and F1-scores comparable to existing models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "ENTITY AWARE BIAFFINE ATTENTION"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "ENTITY VIOLATING RATE"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "RESULT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVALUATED ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVALUATED ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVALUATED ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "RESULT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21774,
+ "eval_count": 179,
+ "ts": "2026-11-20T03:59:24Z"
+}

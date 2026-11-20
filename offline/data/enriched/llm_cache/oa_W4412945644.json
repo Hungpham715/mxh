@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4412945644",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Bourdieu1977,1991",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language is a form of symbolic capital that affects people’s lives in many ways (Bourdieu1977,1991)."
+   }
+  },
+  {
+   "surface": "NLP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Although there has been growing interest in under-resourced languages within the NLP community, work in this area faces unique challenges, such as data scarcity and limited access to qualified annotators.In this paper, we collect feedback from individuals directly involved in and impacted by NLP artefacts for medium- and low-resource languages."
+   }
+  },
+  {
+   "surface": "medium-",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Although there has been growing interest in under-resourced languages within the NLP community, work in this area faces unique challenges, such as data scarcity and limited access to qualified annotators.In this paper, we collect feedback from individuals directly involved in and impacted by NLP artefacts for medium- and low-resource languages."
+   }
+  },
+  {
+   "surface": "low-resource",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Although there has been growing interest in under-resourced languages within the NLP community, work in this area faces unique challenges, such as data scarcity and limited access to qualified annotators.In this paper, we collect feedback from individuals directly involved in and impacted by NLP artefacts for medium- and low-resource languages."
+   }
+  },
+  {
+   "surface": "data",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, data in a given language should be regarded as more than just a collection of tokens."
+   }
+  },
+  {
+   "surface": "language",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language is a form of symbolic capital that affects people’s lives in many ways (Bourdieu1977,1991)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 25662,
+ "eval_count": 229,
+ "ts": "2026-11-20T04:24:52Z"
+}

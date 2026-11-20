@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4404781926",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) often exhibit excessive, random, and uninformative uncertainty, rendering them unsuitable for decision-making in human-computer interactions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) often exhibit excessive, random, and uninformative uncertainty, rendering them unsuitable for decision-making in human-computer interactions.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16459,
+ "eval_count": 199,
+ "ts": "2026-11-20T04:01:22Z"
+}

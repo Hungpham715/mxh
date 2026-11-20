@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4389524189",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "METHOD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to other information extraction approaches, interestingly only a few works exist that describe methods for a proper extraction and representation of quantities in text."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using a novel dataset for evaluation, we show that our open source framework outperforms other systems and – to the best of our knowledge – is the first to detect concepts associated with identified quantities."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TASK"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35584,
+ "eval_count": 157,
+ "ts": "2026-11-20T03:43:31Z"
+}

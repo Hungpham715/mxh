@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4403046516",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "COLLOQUIAL PERSIAN POS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Method: This paper introduces a novel corpus, \"Colloquial Persian POS\" (CPPOS), specifically designed to support colloquial Persian text."
+   }
+  },
+  {
+   "surface": "Bijankhan",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "A comparison with another well-known Persian POS corpus named \"Bijankhan\" and the Persian Hazm POS tool trained on Bijankhan revealed that our model trained on CPPOS outperforms them."
+   }
+  },
+  {
+   "surface": "Telegram",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The corpus includes formal and informal text collected from various domains such as political, social, and commercial on Telegram, Twitter, and Instagram more than 520K labeled tokens."
+   }
+  },
+  {
+   "surface": "Twitter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The corpus includes formal and informal text collected from various domains such as political, social, and commercial on Telegram, Twitter, and Instagram more than 520K labeled tokens."
+   }
+  },
+  {
+   "surface": "Instagram",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The corpus includes formal and informal text collected from various domains such as political, social, and commercial on Telegram, Twitter, and Instagram more than 520K labeled tokens."
+   }
+  },
+  {
+   "surface": "POS TAGGING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "POS tagging is a crucial preprocessing task for applications like machine translation, question answering, sentiment analysis, etc."
+   }
+  },
+  {
+   "surface": "ANNOTATION",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "This study also defines a POS tagging guideline for annotating the data and conducting the annotation process."
+   }
+  },
+  {
+   "surface": "TOKENS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The corpus includes formal and informal text collected from various domains such as political, social, and commercial on Telegram, Twitter, and Instagram more than 520K labeled tokens."
+   }
+  },
+  {
+   "surface": "SENTENCES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The tokens and sentences were then manually annotated and verified by a team of linguistic experts."
+   }
+  },
+  {
+   "surface": "PREPROCESSING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "POS tagging is a crucial preprocessing task for applications like machine translation, question answering, sentiment analysis, etc."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21578,
+ "eval_count": 140,
+ "ts": "2026-11-20T03:59:31Z"
+}

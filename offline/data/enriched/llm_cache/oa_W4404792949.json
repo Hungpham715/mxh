@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W4404792949",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We find that language models have difficulties generating fallacious and deceptive reasoning."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We evaluate our approach over five safety-aligned large language models, comparing four previous jailbreak methods, and show that our approach achieves competitive performance with more harmful outputs."
+   }
+  },
+  {
+   "surface": "jailbreak attack method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Exploiting this deficiency, we propose a jailbreak attack method that elicits an aligned language model for malicious output."
+   }
+  },
+  {
+   "surface": "fallacious and deceptive reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We find that language models have difficulties generating fallacious and deceptive reasoning."
+   }
+  },
+  {
+   "surface": "honest counterparts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "When asked to generate deceptive outputs, language models tend to leak honest counterparts but believe them to be false."
+   }
+  },
+  {
+   "surface": "malicious output",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Exploiting this deficiency, we propose a jailbreak attack method that elicits an aligned language model for malicious output."
+   }
+  },
+  {
+   "surface": "safeguard mechanism",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Since a fallacious procedure is generally considered fake and thus harmless by LLMs, it helps bypass the safeguard mechanism."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29707,
+ "eval_count": 171,
+ "ts": "2026-11-20T04:12:04Z"
+}

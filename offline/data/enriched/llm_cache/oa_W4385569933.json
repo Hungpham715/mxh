@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385569933",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ECBD",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "ECBD",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "ECBD"
+ ],
+ "duration_ms": 5648,
+ "eval_count": 116,
+ "ts": "2026-11-20T03:10:17Z"
+}

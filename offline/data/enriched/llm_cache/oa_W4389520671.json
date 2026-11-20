@@ -1,0 +1,22 @@
+{
+ "paper_id": "oa:W4389520671",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "A myriad",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A myriad of different Large Language Models (LLMs) face a common challenge in contextually analyzing table question-answering tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 30046,
+ "eval_count": 67,
+ "ts": "2026-11-20T03:39:11Z"
+}

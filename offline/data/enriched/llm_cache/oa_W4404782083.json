@@ -1,0 +1,141 @@
+{
+ "paper_id": "oa:W4404782083",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "xCOMET",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art trainable machine translation evaluation metrics like xCOMET achieve high correlation with human judgment but rely on large encoders (up to 10.7B parameters), making them computationally expensive and inaccessible to researchers with limited resources."
+   }
+  },
+  {
+   "surface": "xCOMET-lite",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, through distillation, we create an 278M-sized xCOMET-lite metric, which has only 2.6% of xCOMET-XXL parameters, but retains 92.1% of its quality."
+   }
+  },
+  {
+   "surface": "WMT22",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Besides, it surpasses strong small-scale metrics like COMET-22 and BLEURT-20 on the WMT22 metrics challenge dataset by 6.4%, despite using 50% fewer parameters."
+   }
+  },
+  {
+   "surface": "COMET-22",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Besides, it surpasses strong small-scale metrics like COMET-22 and BLEURT-20 on the WMT22 metrics challenge dataset by 6.4%, despite using 50% fewer parameters."
+   }
+  },
+  {
+   "surface": "BLEURT-20",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Besides, it surpasses strong small-scale metrics like COMET-22 and BLEURT-20 on the WMT22 metrics challenge dataset by 6.4%, despite using 50% fewer parameters."
+   }
+  },
+  {
+   "surface": "278M",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, through distillation, we create an 278M-sized xCOMET-lite metric, which has only 2.6% of xCOMET-XXL parameters, but retains 92.1% of its quality."
+   }
+  },
+  {
+   "surface": "50%",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Besides, it surpasses strong small-scale metrics like COMET-22 and BLEURT-20 on the WMT22 metrics challenge dataset by 6.4%, despite using 50% fewer parameters."
+   }
+  },
+  {
+   "surface": "large encoders",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art trainable machine translation evaluation metrics like xCOMET achieve high correlation with human judgment but rely on large encoders (up to 10.7B parameters), making them computationally expensive and inaccessible to researchers with limited resources."
+   }
+  },
+  {
+   "surface": "inaccessible",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art trainable machine translation evaluation metrics like xCOMET achieve high correlation with human judgment but rely on large encoders (up to 10.7B parameters), making them computationally expensive and inaccessible to researchers with limited resources."
+   }
+  },
+  {
+   "surface": "limited",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art trainable machine translation evaluation metrics like xCOMET achieve high correlation with human judgment but rely on large encoders (up to 10.7B parameters), making them computationally expensive and inaccessible to researchers with limited resources."
+   }
+  },
+  {
+   "surface": "resources",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art trainable machine translation evaluation metrics like xCOMET achieve high correlation with human judgment but rely on large encoders (up to 10.7B parameters), making them computationally expensive and inaccessible to researchers with limited resources."
+   }
+  },
+  {
+   "surface": "available",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "All code, dataset, and models are available online."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "92.1"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "result",
+   "surface": "6.4"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "2.6"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "parameters"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "metric",
+   "surface": "computational"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "source",
+   "surface": "online"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20305,
+ "eval_count": 182,
+ "ts": "2026-11-20T04:02:00Z"
+}

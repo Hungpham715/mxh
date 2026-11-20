@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4389523906",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HMER",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Handwritten mathematical expression recognition (HMER) is a multidisciplinary task that generates LaTeX sequences from images."
+   }
+  },
+  {
+   "surface": "CROHME 2014/2016/2019",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments show that RLFN outperforms existing state-of-the-art methods on the CROHME 2014/2016/2019 datasets."
+   }
+  },
+  {
+   "surface": "Recognize and Language Fusion Network",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To validate our proposition, we propose an architecture called Recognize and Language Fusion Network (RLFN), which integrates recognition and language features to output corrected sequences while jointly optimizing with a string decoder recognition model."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "string decoder recognition model"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29702,
+ "eval_count": 123,
+ "ts": "2026-11-20T03:41:42Z"
+}

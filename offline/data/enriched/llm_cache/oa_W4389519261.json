@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4389519261",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "NLU",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, although many Natural Language Understanding (NLU) tasks also require thinking step by step, LLMs perform less well than small-scale Masked Language Models (MLMs)."
+   }
+  },
+  {
+   "surface": "RESULT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of CoTT, we conduct experiments on two NLU tasks: hierarchical classification and relation extraction, and the results show that CoTT outperforms baselines and achieves state-of-the-art performance."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CHAIN_OF_THOUGHT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "COOTT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34505,
+ "eval_count": 127,
+ "ts": "2026-11-20T03:32:54Z"
+}

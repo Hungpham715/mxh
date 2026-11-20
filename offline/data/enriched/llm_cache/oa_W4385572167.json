@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4385572167",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "compositional generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Despite the rising prevalence of neural sequence models, recent empirical evidences suggest their deficiency in compositional generalization."
+   }
+  },
+  {
+   "surface": "SpanSub",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the two challenges, we first propose a novel compositional augmentation strategy dubbed Span Substitution (SpanSub) that enables multi-grained composition of substantial substructures in the whole training set."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "compositional generalization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Despite the rising prevalence of neural sequence models, recent empirical evidences suggest their deficiency in compositional generalization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SpanSub",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the two challenges, we first propose a novel compositional augmentation strategy dubbed Span Substitution (SpanSub) that enables multi-grained composition of substantial substructures in the whole training set.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "SpanSub"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "L2S2"
+  }
+ ],
+ "auto_added_endpoints": [
+  "compositional generalization",
+  "SpanSub"
+ ],
+ "duration_ms": 13371,
+ "eval_count": 268,
+ "ts": "2026-11-20T03:19:06Z"
+}

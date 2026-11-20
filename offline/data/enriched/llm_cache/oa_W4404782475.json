@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4404782475",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "REPOSITORY",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Additionally, we have created a repository containing the resources referenced in our survey."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "INFORMATION"
+  },
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "REPOSITORY"
+  },
+  {
+   "reason": "invalid_endpoint",
+   "rel": "ADDRESSES_TASK",
+   "detail": "target is PAPER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17309,
+ "eval_count": 104,
+ "ts": "2026-11-20T04:03:57Z"
+}

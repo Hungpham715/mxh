@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4404783161",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "VEQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A multimodal large language model MLLMs may struggle with answering visual-based (personal) entity questions (VEQA), such as ”who is A?” or ”who is A that B is talking to?” for various reasons, e.g., the absence of the name of A in the caption or the inability of MLLMs to recognize A, particularly for less common entities."
+   }
+  },
+  {
+   "surface": "query",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MAR then derives the answer to the query by reasoning over this matching graph."
+   }
+  },
+  {
+   "surface": "MAR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce a novel method called Matching-Augmented Reasoning (MAR) to enhance VEQA."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MMLMs"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "vector databases"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "matching graph"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "MAR"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24199,
+ "eval_count": 239,
+ "ts": "2026-11-20T04:09:47Z"
+}

@@ -1,0 +1,31 @@
+{
+ "paper_id": "oa:W4414892789",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper investigates the use of LLMs-as-the-Judge as an alternative evaluation method for biomedical relation extraction."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method_evaluated_on"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19345,
+ "eval_count": 145,
+ "ts": "2026-11-20T04:25:51Z"
+}

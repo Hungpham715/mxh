@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4389523939",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous methods address them by fine-tuning discriminative models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30003,
+ "eval_count": 174,
+ "ts": "2026-11-20T03:41:59Z"
+}

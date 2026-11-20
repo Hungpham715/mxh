@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4416036787",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ACL",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  },
+  {
+   "surface": "Aduato",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  },
+  {
+   "surface": "NLP4SG",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The social impact of Natural Language Processing (NLP) is increasingly important, with a rising community focus on initiatives related to NLP for Social Good (NLP4SG)."
+   }
+  },
+  {
+   "surface": "NLP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The social impact of Natural Language Processing (NLP) is increasingly important, with a rising community focus on initiatives related to NLP for Social Good (NLP4SG)."
+   }
+  },
+  {
+   "surface": "Sustainable Development Goals",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "number",
+   "surface": "20%"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "year",
+   "surface": "2023"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "organization",
+   "surface": "UN"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29128,
+ "eval_count": 269,
+ "ts": "2026-11-20T04:38:15Z"
+}

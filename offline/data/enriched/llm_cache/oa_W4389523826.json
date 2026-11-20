@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4389523826",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Conversation Chronicles",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we introduce a new 1M multi-session dialogue dataset, called Conversation Chronicles, for implementing a long-term conversation setup in which time intervals and fine-grained speaker relationships are incorporated."
+   }
+  },
+  {
+   "surface": "ReBot",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We also propose a dialogue model, called ReBot, which consists of chronological summarization and dialogue generation modules using only around 630M parameters."
+   }
+  },
+  {
+   "surface": "1M",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we introduce a new 1M multi-session dialogue dataset, called Conversation Chronicles, for implementing a long-term conversation setup in which time intervals and fine-grained speaker relationships are incorporated."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "large language model"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "long-term context understanding"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "human engagement score"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21331,
+ "eval_count": 73,
+ "ts": "2026-11-20T03:40:54Z"
+}

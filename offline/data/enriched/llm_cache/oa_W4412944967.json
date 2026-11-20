@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4412944967",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "XLM-R",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While multilingual language models like XLM-R have advanced multilingualism in NLP, they still perform poorly in extremely low-resource languages."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This situation is exacerbated by the fact that modern LLMs such as LLaMA and Qwen support far fewer languages than XLM-R, making text generation models non-existent for many languages in the world."
+   }
+  },
+  {
+   "surface": "Qwen",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This situation is exacerbated by the fact that modern LLMs such as LLaMA and Qwen support far fewer languages than XLM-R, making text generation models non-existent for many languages in the world."
+   }
+  },
+  {
+   "surface": "XLM-SWCM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Applying this framework to four Chinese minority languages, we present XLM-SWCM, and demonstrate its superior performance on various downstream tasks even when compared with much larger models."
+   }
+  },
+  {
+   "surface": "Chinese",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Applying this framework to four Chinese minority languages, we present XLM-SWCM, and demonstrate its superior performance on various downstream tasks even when compared with much larger models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27147,
+ "eval_count": 245,
+ "ts": "2026-11-20T04:20:55Z"
+}

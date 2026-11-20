@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4390529238",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "nucleotide sequence language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a method to fine-tune the nucleotide sequence language model and the text language model based on various databases of antibiotic resistance genes."
+   }
+  },
+  {
+   "surface": "text language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model."
+   }
+  },
+  {
+   "surface": "PubMed articles",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model."
+   }
+  },
+  {
+   "surface": "antibiotic resistance genes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a method to fine-tune the nucleotide sequence language model and the text language model based on various databases of antibiotic resistance genes."
+   }
+  },
+  {
+   "surface": "drug resistance class prediction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our method achieved better performance than the nucleotide sequence language model in the drug resistance class prediction."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "fine-tune"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "text language model"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "ensemble method"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "LMM-based augmentation technique"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20311,
+ "eval_count": 123,
+ "ts": "2026-11-20T03:45:39Z"
+}

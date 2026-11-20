@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385571946",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Chinese CS conversation",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To fill this gap, we construct a Chinese CS conversation (CSConv) dataset, which contains about 2.6K groups of dialogues with therapy principles and emotional support strategy labels."
+   }
+  },
+  {
+   "surface": "Chinese language",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Data sparsity is the main challenge in building CS-based dialogue systems, particularly in the Chinese language."
+   }
+  },
+  {
+   "surface": "CSConv dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments conducted on the CSConv dataset demonstrate the effectiveness of the proposed method, while there is still a large space for improvement compared to human performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese language",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "When communicating with elders with cognitive impairment, cognitive stimulation (CS) help to maintain the cognitive health of elders.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "CSConv dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We first use a progressive mask method based on external knowledge to learn encoders as effective classifiers, which is the prerequisite to predict the therapy principle and emotional support strategy of the target response.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "Chinese language",
+  "CSConv dataset"
+ ],
+ "duration_ms": 8832,
+ "eval_count": 170,
+ "ts": "2026-11-20T03:17:48Z"
+}

@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4387323597",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "SELF",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To further advance LLMs, we propose 'SELF' (Self-Evolution with Language Feedback), a novel approach that enables LLMs to self-improve through self-reflection, akin to human learning processes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "SELF",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments in mathematics and general tasks demonstrate that SELF can enhance the capabilities of LLMs without human intervention.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "SELF"
+ ],
+ "duration_ms": 7897,
+ "eval_count": 93,
+ "ts": "2026-11-20T03:25:28Z"
+}

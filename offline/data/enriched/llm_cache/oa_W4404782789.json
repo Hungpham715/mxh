@@ -1,0 +1,45 @@
+{
+ "paper_id": "oa:W4404782789",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "EMBEDDING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, the framework uses a decoupled text-to-text and image-to-image retriever to search for the top-K similar item text and image embeddings from the item pool."
+   }
+  },
+  {
+   "surface": "EXPERIMENT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, the Attention module for user interests fuses the retrieved information in a cross-modal manner and further guides the personalized generation process in collaboration with the rewritten text.We conducted extensive and comprehensive experiments to demonstrate that our framework can effectively generate results aligned with user preferences, which potentially provides a new paradigm of Rewrite and Retrieve for personalized generation."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DATASET"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "METHOD_EVALUATED_ON"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14999,
+ "eval_count": 76,
+ "ts": "2026-11-20T04:05:42Z"
+}

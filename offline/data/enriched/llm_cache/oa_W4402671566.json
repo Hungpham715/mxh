@@ -1,0 +1,36 @@
+{
+ "paper_id": "oa:W4402671566",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "story",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Story detection in online communities is a challenging task as stories are scattered across communities and interwoven with non-storytelling spans within a single text."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by building and releasing the StorySeeker toolkit, including a richly annotated dataset of 502 Reddit posts and comments, a detailed codebook adapted to the social media context, and models to predict storytelling at the document and span levels."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15189,
+ "eval_count": 78,
+ "ts": "2026-11-20T03:52:11Z"
+}

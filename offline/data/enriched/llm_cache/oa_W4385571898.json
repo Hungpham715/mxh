@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4385571898",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "HotpotQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "PromptRank yields strong retrieval performance on HotpotQA with only 128 training examples compared to state-of-the-art methods trained on thousands of examples — 73.6 recall@10 by PromptRank vs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "HotpotQA",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "PromptRank yields strong retrieval performance on HotpotQA with only 128 training examples compared to state-of-the-art methods trained on thousands of examples — 73.6 recall@10 by PromptRank vs.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "HotpotQA"
+ ],
+ "duration_ms": 6266,
+ "eval_count": 137,
+ "ts": "2026-11-20T03:17:15Z"
+}

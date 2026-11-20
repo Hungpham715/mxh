@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4416035837",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We survey the major milestones in MNMT research, providing a comprehensive overview of relevant datasets and recent methodologies, and discussing key challenges and promising research directions."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We survey the major milestones in MNMT research, providing a comprehensive overview of relevant datasets and recent methodologies, and discussing key challenges and promising research directions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We survey the major milestones in MNMT research, providing a comprehensive overview of relevant datasets and recent methodologies, and discussing key challenges and promising research directions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 13116,
+ "eval_count": 115,
+ "ts": "2026-11-20T04:30:12Z"
+}

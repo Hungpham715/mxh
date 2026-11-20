@@ -1,4 +1,4 @@
-import type { ChatResponse, HealthStatus, HistoryMessage, PublicConfig } from "./types";
+import type { AtlasSnapshot, ChatResponse, HealthStatus, HistoryMessage, PublicConfig } from "./types";
 
 const JSON_HEADERS = { "Content-Type": "application/json" };
 
@@ -16,6 +16,10 @@ export async function getPublicConfig(): Promise<PublicConfig> {
 
 export async function getHealth(): Promise<HealthStatus> {
   return parseJson<HealthStatus>(await fetch("/api/health"));
+}
+
+export async function getAtlasSnapshot(): Promise<AtlasSnapshot> {
+  return parseJson<AtlasSnapshot>(await fetch("/api/atlas"));
 }
 
 export async function sendChat(

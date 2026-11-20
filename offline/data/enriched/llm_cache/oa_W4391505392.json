@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4391505392",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Pecola",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Hence, we propose a novel fine-tuned detector, Pecola, bridging metric-based and fine-tuned methods by contrastive learning on selective perturbation."
+   }
+  },
+  {
+   "surface": "DetectGPT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "DetectGPT, a zero-shot metric-based detector, first introduces perturbation and shows great performance improvement."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Pecola",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "DetectGPT, a zero-shot metric-based detector, first introduces perturbation and shows great performance improvement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "DetectGPT",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "DetectGPT, a zero-shot metric-based detector, first introduces perturbation and shows great performance improvement.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "abstract",
+   "surface": "DetectGPT"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "Pecola"
+  }
+ ],
+ "auto_added_endpoints": [
+  "DetectGPT"
+ ],
+ "duration_ms": 19868,
+ "eval_count": 234,
+ "ts": "2026-11-20T03:46:22Z"
+}

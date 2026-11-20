@@ -1,0 +1,42 @@
+{
+ "paper_id": "oa:W4404782684",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "user",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper studies how contextual information about the user influences the likelihood of an LLM to refuse to execute a request."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "user",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper studies how contextual information about the user influences the likelihood of an LLM to refuse to execute a request.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "user"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "user"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17979,
+ "eval_count": 173,
+ "ts": "2026-11-20T04:05:27Z"
+}

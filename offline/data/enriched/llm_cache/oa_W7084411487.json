@@ -1,0 +1,127 @@
+{
+ "paper_id": "oa:W7084411487",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "large language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models are typically controlled via prompts, which must be repeatedly re-processed for every new query and are difficult to reuse modularly."
+   }
+  },
+  {
+   "surface": "procedural memory framework",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce TokMem, a procedural memory framework that compiles each reusable task procedure into a single trainable memory token."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce TokMem, a procedural memory framework that compiles each reusable task procedure into a single trainable memory token."
+   }
+  },
+  {
+   "surface": "memory token",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce TokMem, a procedural memory framework that compiles each reusable task procedure into a single trainable memory token."
+   }
+  },
+  {
+   "surface": "procedural knowledge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "TokMem keeps the backbone LLM frozen and stores procedural knowledge entirely in these dedicated units, so new procedures can be added continually without interfering with existing ones."
+   }
+  },
+  {
+   "surface": "procedural memory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce TokMem, a procedural memory framework that compiles each reusable task procedure into a single trainable memory token."
+   }
+  },
+  {
+   "surface": "retrieval-augmented prompting",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our results show that TokMem consistently outperforms retrieval-augmented prompting while avoiding repeated context overhead."
+   }
+  },
+  {
+   "surface": "multi-step function-calling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  },
+  {
+   "surface": "parameter-efficient fine-tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Moreover, it matches or exceeds parameter-efficient fine-tuning with substantially fewer trainable parameters."
+   }
+  },
+  {
+   "surface": "constant-size overhead",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Each token serves as both a procedure index and a generation control signal that steers generation, enabling targeted behaviors with constant-size overhead."
+   }
+  },
+  {
+   "surface": "atomic recall",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  },
+  {
+   "surface": "compositional recall",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  },
+  {
+   "surface": "Super-Natural Instructions",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "procedural procedure"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "procedural unit"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27301,
+ "eval_count": 206,
+ "ts": "2026-11-20T04:45:06Z"
+}

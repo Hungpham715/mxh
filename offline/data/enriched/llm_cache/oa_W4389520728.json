@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4389520728",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we tackle single-channel multi-speaker conversational ST with an end-to-end and multi-task training model, named Speaker-Turn Aware Conversational Speech Translation, that combines automatic speech recognition, speech translation and speaker turn detection using special tokens in a serialized labeling format."
+   }
+  },
+  {
+   "surface": "Speaker-Turn Aware Conversational Speech Translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we tackle single-channel multi-speaker conversational ST with an end-to-end and multi-task training model, named Speaker-Turn Aware Conversational Speech Translation, that combines automatic speech recognition, speech translation and speaker turn detection using special tokens in a serialized labeling format."
+   }
+  },
+  {
+   "surface": "Conventional speech-to-text translation (ST) systems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Conventional speech-to-text translation (ST) systems are trained on single-speaker utterances, and they may not generalize to real-life scenarios where the audio contains conversations by multiple speakers."
+   }
+  },
+  {
+   "surface": "Fisher-CALLHOME corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We run experiments on the Fisher-CALLHOME corpus, which we adapted by merging the two single-speaker channels into one multi-speaker channel, thus representing the more realistic and challenging scenario with multi-speaker turns and cross-talk."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Speaker-Turn Aware Conversational Speech Translation",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We run experiments on the Fisher-CALLHOME corpus, which we adapted by merging the two single-speaker channels into one multi-speaker channel, thus representing the more realistic and challenging scenario with multi-speaker turns and cross-talk.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Conventional speech-to-text translation (ST) systems",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Conventional speech-to-text translation (ST) systems are trained on single-speaker utterances, and they may not generalize to real-life scenarios where the audio contains conversations by multiple speakers.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Fisher-CALLHOME corpus",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We release scripts for data processing and model training.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Speaker-Turn Aware Conversational Speech Translation",
+  "Conventional speech-to-text translation (ST) systems",
+  "Fisher-CALLHOME corpus"
+ ],
+ "duration_ms": 29986,
+ "eval_count": 262,
+ "ts": "2026-11-20T03:40:34Z"
+}

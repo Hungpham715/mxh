@@ -1,0 +1,57 @@
+{
+ "paper_id": "oa:W4402671548",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "VIDEO-CHATGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While there have been initial attempts for image-based conversation models, this work addresses the under-explored field of video-based conversation by introducing Video-ChatGPT."
+   }
+  },
+  {
+   "surface": "DATASET",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new dataset of 100,000 video-instruction pairs used to train Video-ChatGPT acquired via manual and semi-automated pipeline that is easily scalable and robust to label noise."
+   }
+  },
+  {
+   "surface": "CODE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It is a multimodal model that merges a video-adapted visual encoder with an LLM."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "METHOD_EVALUATION"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": ""
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "VIDEO-CHATGPT",
+   "to": ""
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21419,
+ "eval_count": 190,
+ "ts": "2026-11-20T03:51:56Z"
+}

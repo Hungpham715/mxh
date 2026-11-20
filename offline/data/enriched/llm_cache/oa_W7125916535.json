@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W7125916535",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "TASK",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing context pruning techniques, such as LLMLingua, achieve promising results for general text but overlook code-specific structures and dependencies, leading to suboptimal performance in programming tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "TASK",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluations across multiple tasks, including code completion, summarization, and question answering, show that LongCodeZip consistently outperforms baseline methods, achieving up to a 5.6x compression ratio without degrading task performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CODE_GENERATION"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CODE_COMPRESSION"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "CODE_COMPRESSION"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29876,
+ "eval_count": 157,
+ "ts": "2026-11-20T04:44:54Z"
+}

@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4416036242",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we propose a novel ensemble method, HiEPS, which integrates the results of diverse prompting strategies to promote LLMs’ reliability."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20875,
+ "eval_count": 125,
+ "ts": "2026-11-20T04:31:03Z"
+}

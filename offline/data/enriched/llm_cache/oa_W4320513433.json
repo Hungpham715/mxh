@@ -1,0 +1,32 @@
+{
+ "paper_id": "oa:W4320513433",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.2",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "DATASET",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Moreover, while a substantial amount of research has been undertaken in statistical machine translation for some datasets in Persian, there is currently no standard baseline for transformer-based text2text models on each corpus."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "PAPER",
+   "to": "DATASET"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 7073,
+ "eval_count": 116,
+ "ts": "2026-11-19T18:07:35Z"
+}

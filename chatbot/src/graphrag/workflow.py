@@ -123,7 +123,9 @@ class GraphRAGWorkflow:
                     state.entity_rescue = "catalog_verified_llm"
 
         if intent.route in {RouteName.GRAPH_QA, RouteName.CLARIFY} and intent.intent.value != "unknown":
-            count_fields, field_calls = await self.parser.classify_requested_fields(request.question)
+            count_fields, field_calls = await self.parser.classify_requested_fields(
+                request.question, intent.intent.value
+            )
             state.llm_calls += field_calls
             requested_fields = [field for field in intent.requested_fields if field != "count"]
             requested_fields.extend(count_fields)

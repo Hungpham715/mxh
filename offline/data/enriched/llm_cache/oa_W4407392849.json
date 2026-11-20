@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4407392849",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two benchmark datasets demonstrate that our proposed VaTiora system is more effective in incorporating the various multimodal signals, and also presents new state-of-the-art performance of VAT-GI."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With such intuition, this work introduces a novel \\emph{unsupervised visual-audio-text grammar induction} task (named \\textbf{VAT-GI}), to induce the constituent grammar trees from parallel images, text, and speech inputs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "method"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28665,
+ "eval_count": 281,
+ "ts": "2026-11-20T04:14:04Z"
+}

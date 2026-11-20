@@ -16,7 +16,9 @@ bash scripts/dev.sh
 ```
 
 Open `http://127.0.0.1:5173`. The UI includes local conversation history, cancel, evidence, query trace, dark
-mode, mobile layout, ambiguity candidates, and POST SSE with non-stream fallback.
+mode, mobile layout, ambiguity candidates, and POST SSE with non-stream fallback. Switch to **Atlas** for the
+real offline SNA snapshot: an interactive Cytoscape co-authorship projection plus PageRank, Louvain, k-core,
+fragmentation, and small-world evidence. Atlas fails explicitly when its tracked analysis artifacts are missing.
 
 ## Quality gates
 
@@ -34,6 +36,9 @@ uv run python training/train_sft.py --dry-run --config training/config_sft.yaml
 Install/pull Ollama, create a real read-only Aura user, and fill Profile B in `.env`. Then run
 `bash scripts/smoke_neo4j.sh` and `bash scripts/smoke_ollama.sh`. Real failures are returned explicitly; no fake
 answer is substituted. See `docs/EXTERNAL_DEPENDENCIES.md` and `docs/OPERATIONS.md`.
+
+Capture a credential-free real demo trace with direct, two-hop, successive-query, multi-relation, and refusal
+cases using `uv run python scripts/capture_real_demo.py --out reports/demo`; see `docs/DEMO_RUNBOOK.md`.
 
 ## Dataset → review → SFT → evaluation
 

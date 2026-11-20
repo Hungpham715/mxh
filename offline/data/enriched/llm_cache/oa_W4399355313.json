@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4399355313",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "NLP pipelines",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose utilizing readily available curricular texts used in institutes specializing in mental health for pre-training the NLP pipelines."
+   }
+  },
+  {
+   "surface": "curricular texts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose utilizing readily available curricular texts used in institutes specializing in mental health for pre-training the NLP pipelines."
+   }
+  },
+  {
+   "surface": "mental health forums",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study explores the use of Natural Language Processing (NLP) pipelines to analyze text data from online mental health forums used for consultations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "CASE-BERT"
+  },
+  {
+   "reason": "empty_surface"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 10909,
+ "eval_count": 95,
+ "ts": "2026-11-20T03:47:37Z"
+}

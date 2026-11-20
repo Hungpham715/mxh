@@ -1,0 +1,40 @@
+{
+ "paper_id": "oa:W4389518778",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.5",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "multilingual LMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce an explanation framework to extract stylistic differences from multilingual LMs and compare styles across languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multilingual LMs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce an explanation framework to extract stylistic differences from multilingual LMs and compare styles across languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "invalid_entity",
+   "surface": "PAPER"
+  }
+ ],
+ "auto_added_endpoints": [
+  "multilingual LMs"
+ ],
+ "duration_ms": 6534,
+ "eval_count": 95,
+ "ts": "2026-11-20T03:27:51Z"
+}

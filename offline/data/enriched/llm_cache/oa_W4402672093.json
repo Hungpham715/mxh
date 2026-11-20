@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4402672093",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Initially, we design a pipeline to create personalized writing instruction datasets enriched with extensive context details as the testbed of this research issue."
+   }
+  },
+  {
+   "surface": "coGenesis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose CoGenesis, a collaborative generation framework integrating large (hosted on cloud infrastructure) and small models (deployed on local devices) to address privacy concerns logically."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "large_model"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "small_model"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "large_model"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "small_model"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "large_model"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "small_model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27885,
+ "eval_count": 203,
+ "ts": "2026-11-20T03:58:45Z"
+}

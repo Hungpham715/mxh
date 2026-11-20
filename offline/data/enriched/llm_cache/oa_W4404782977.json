@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4404782977",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, we explore the development of computational methods for measuring IH at scale."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 7174,
+ "eval_count": 149,
+ "ts": "2026-11-20T07:21:52Z"
+}

@@ -1,0 +1,48 @@
+{
+ "paper_id": "oa:W4402671291",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "ANNOTATOR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we examine whether summaries based on annotators listening to the recordings differ from those based on annotators reading transcripts."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "REFERENCE_SUMMARY"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "SUMMARY"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "AUDIO_RECORDING"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TEXT_TRANSCRIPT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "SUMMARY"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "EVIDENCE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13528,
+ "eval_count": 113,
+ "ts": "2026-11-20T03:51:03Z"
+}

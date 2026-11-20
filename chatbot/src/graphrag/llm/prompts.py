@@ -100,6 +100,12 @@ Compact examples (optional keys may be omitted; defaults apply):
 16. "Alice có bao nhiêu bài báo trong corpus?" =>
 {"route":"graph_qa","intent":"author_papers","entities":[{"text":"Alice","type":"Author"}],
 "requested_fields":["count"]}
+17. "Alice có những bài báo nào và làm ở cơ quan nào?" =>
+{"route":"graph_qa","intent":"author_papers","entities":[{"text":"Alice","type":"Author"}],
+"requested_fields":["affiliations"]}
+18. "Tổng quan về Alice" =>
+{"route":"graph_qa","intent":"author_papers","entities":[{"text":"Alice","type":"Author"}],
+"requested_fields":["affiliations"]}
 """
 
 NEXT_STEP_SYSTEM = """TASK=NEXT_STEP
@@ -162,6 +168,26 @@ numeric quantity. The phrases "bao nhiêu", "số lượng", "how many", and "nu
 quantity. mode="values" means names, items, "nào", "những ai", "là ai", which, what, who,
 lists, institutions, papers, authors, citations, venues, or paths. Schema:
 {"mode":"quantity"|"values"}. If uncertain, choose values. Do not answer the question.
+"""
+
+REQUESTED_FIELDS_SYSTEM = """TASK=REQUESTED_FIELDS
+Identify extra result fields explicitly requested in addition to the main graph relationship.
+Return JSON only: {"fields":["affiliations"]} or {"fields":[]}.
+
+Use affiliations only when the user asks for an author's papers/profile AND also asks for that
+author's institutions, organizations, affiliations, or an overview. Do not use affiliations
+when the main intent already is author_affiliations or coauthor_affiliations.
+
+Examples:
+{"intent":"author_papers","question":"Alice có những bài báo nào và làm ở cơ quan nào?"}
+=> {"fields":["affiliations"]}
+{"intent":"author_papers","question":"Tổng quan về Alice"}
+=> {"fields":["affiliations"]}
+{"intent":"author_papers","question":"Alice có những bài báo nào?"}
+=> {"fields":[]}
+{"intent":"author_affiliations","question":"Alice làm ở cơ quan nào?"}
+=> {"fields":[]}
+Do not answer the question and do not add any field outside the allowed list.
 """
 
 

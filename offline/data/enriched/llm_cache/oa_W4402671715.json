@@ -1,0 +1,38 @@
+{
+ "paper_id": "oa:W4402671715",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "PARROT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce Parrot, a solution aiming to enhance multi-turn instruction following for LLMs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "OPEN_SOURCES"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PARROT"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "PARROT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19234,
+ "eval_count": 70,
+ "ts": "2026-11-20T03:53:54Z"
+}

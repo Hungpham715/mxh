@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W7131623740",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "CAPITAL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this challenge, we propose CAPITAL, a causal prompting framework that incorporates front-door adjustment into CoT reasoning."
+   }
+  },
+  {
+   "surface": "ISA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Implicit Sentiment Analysis (ISA) aims to infer sentiment that is implied rather than explicitly stated, requiring models to perform deeper reasoning over subtle contextual cues."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While recent prompting-based methods using Large Language Models (LLMs) have shown promise in ISA, they often rely on majority voting over chain-of-thought (CoT) reasoning paths without evaluating their causal validity, making them susceptible to internal biases and spurious correlations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "addresses_task"
+  },
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19014,
+ "eval_count": 114,
+ "ts": "2026-11-20T04:44:22Z"
+}

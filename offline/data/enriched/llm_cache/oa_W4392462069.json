@@ -1,0 +1,33 @@
+{
+ "paper_id": "oa:W4392462069",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "dataset",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "method_evaluated_on",
+   "surface": "method"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "dataset",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22321,
+ "eval_count": 218,
+ "ts": "2026-11-20T03:47:33Z"
+}

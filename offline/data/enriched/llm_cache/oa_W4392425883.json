@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4392425883",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.6",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "Socratic method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The Socratic method is a way of guiding students toward solving a problem independently without directly revealing the solution to the problem."
+   }
+  },
+  {
+   "surface": "LLama 2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Next, we propose a method to optimize open-source LLMs such as LLama 2 to prefer ground-truth questions over generated invalid ones, using direct preference optimization (DPO)."
+   }
+  },
+  {
+   "surface": "Socratic questions dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our experiments on a Socratic questions dataset for student code debugging show that a DPO-optimized 7B LLama 2 model can effectively avoid generating invalid questions, and as a result, outperforms existing state-of-the-art prompting methods."
+   }
+  },
+  {
+   "surface": "reinforcement learning with AI feedback",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To alleviate this problem, inspired by reinforcement learning with AI feedback (RLAIF), we first propose a data augmentation method to enrich existing Socratic questioning datasets with questions that are invalid in specific ways."
+   }
+  },
+  {
+   "surface": "data augmentation method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To alleviate this problem, inspired by reinforcement learning with AI feedback (RLAIF), we first propose a data augmentation method to enrich existing Socratic questioning datasets with questions that are invalid in specific ways."
+   }
+  },
+  {
+   "surface": "optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Next, we propose a method to optimize open-source LLMs such as LLama 2 to prefer ground-truth questions over generated invalid ones, using direct preference optimization (DPO)."
+   }
+  },
+  {
+   "surface": "student code debugging",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our experiments on a Socratic questions dataset for student code debugging show that a DPO-optimized 7B LLama 2 model can effectively avoid generating invalid questions, and as a result, outperforms existing state-of-the-art prompting methods."
+   }
+  },
+  {
+   "surface": "invalid outputs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, existing methods that involve prompting these LLMs sometimes produce invalid outputs, e.g., those that directly reveal the solution to the problem or provide irrelevant or premature questions."
+   }
+  },
+  {
+   "surface": "7B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our experiments on a Socratic questions dataset for student code debugging show that a DPO-optimized 7B LLama 2 model can effectively avoid generating invalid questions, and as a result, outperforms existing state-of-the-art prompting methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "unknown_type",
+   "detail": "",
+   "surface": "method_evaluated_on"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19727,
+ "eval_count": 170,
+ "ts": "2026-11-20T03:46:46Z"
+}

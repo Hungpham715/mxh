@@ -1,0 +1,28 @@
+{
+ "paper_id": "oa:W4385564926",
+ "extractor": "llm",
+ "extractor_version": "qwen3-0.6b-ollama-v1.3",
+ "model": "qwen3:0.6b",
+ "entities": [
+  {
+   "surface": "MITQA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present MITQA, a transformer-based TextTableQA system that is explicitly designed to cope with distant supervision along both these axes, through a multi-instance loss objective, together with careful curriculum design."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "MITQA",
+   "to": "MITQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 7189,
+ "eval_count": 153,
+ "ts": "2026-11-20T03:09:02Z"
+}
