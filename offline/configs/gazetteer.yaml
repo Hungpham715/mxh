@@ -4,17 +4,19 @@
 #   - A plain string entry is a case-INsensitive name with no extra aliases.
 #   - A mapping entry may add: aliases (extra surface forms), case_sensitive (true when the
 #     lowercase spelling is a common English word, e.g. OPT / DROP / whisper / llama),
-#     id (canonical slug override; default = slugified name).
+#     id (canonical slug override; default = slugified name), and match_name=false when the
+#     display name itself is too broad and only explicit aliases should match.
 #   - The entity id becomes "<type>:<slug>", e.g. method:bert, dataset:squad, task:summarization.
 #   - Matching is longest-alias-first with word boundaries, so "GPT-4" wins over "GPT" and
 #     "CNN/DailyMail" wins over "CNN".
 #
 # Provenance: hand-curated by the project team from domain knowledge of the 2023-2025 NLP/LLM
 # literature (the corpus scope in configs/scope.yaml). No external service was used.
-gazetteer_version: gazetteer-v1.0
+gazetteer_version: gazetteer-v1.1
 
 methods:
-  - Transformer
+  - name: Transformer
+    aliases: [Transformer, Transformers, transformer network, transformer networks]
   - name: Attention Mechanism
     aliases: [attention mechanism, self-attention, self attention, cross-attention]
   - BERT
@@ -178,6 +180,18 @@ methods:
     aliases: [back-translation, back translation]
   - name: Data Augmentation
     aliases: [data augmentation]
+  - name: Optimal Transport
+    aliases: [optimal transport]
+  - name: Imitation Learning
+    aliases: [imitation learning]
+  - name: MBR Decoding
+    aliases: [MBR decoding, minimum Bayes risk decoding, minimum Bayes risk]
+  - name: Temperature Sampling
+    aliases: [temperature sampling, temperature-based sampling]
+  - name: Convolutional Sequence-to-Sequence
+    aliases: [convolutional sequence-to-sequence, convolutional seq2seq]
+  - name: Recursive Network
+    aliases: [recursive network, recursive networks]
   - name: Active Learning
     aliases: [active learning]
   - name: CRF
@@ -185,7 +199,8 @@ methods:
   - LSTM
   - BiLSTM
   - name: RNN
-    aliases: [RNN, recurrent neural network]
+    aliases: [RNN, RNNs, recurrent neural network, recurrent neural networks,
+              recurrent network, recurrent networks]
   - name: CNN
     aliases: [CNN, convolutional neural network]
   - name: GNN
@@ -212,7 +227,12 @@ datasets:
     aliases: [ARC, ARC-Challenge, ARC-Easy, AI2 Reasoning Challenge]
     case_sensitive: true
   - name: BIG-Bench
-    aliases: [BIG-Bench, BIG-Bench Hard, BBH]
+    aliases: [BIG-Bench]
+  - name: BIG-Bench Hard
+    aliases: [BIG-Bench Hard, BBH]
+    id: bbh
+  - name: BBQ
+    case_sensitive: true
   - GSM8K
   - name: MATH
     aliases: [MATH, MATH dataset, MATH benchmark]
@@ -273,6 +293,20 @@ datasets:
     case_sensitive: true
   - name: Quora Question Pairs
     aliases: [Quora Question Pairs, QQP]
+  - name: Quora
+    case_sensitive: true
+  - name: MuST-C
+    aliases: [MuST-C, MUST-C]
+  - name: CORGI-PM
+    case_sensitive: true
+  - name: MPCHAT
+    case_sensitive: true
+  - name: QuRe
+    case_sensitive: true
+  - name: HVD
+    case_sensitive: true
+  - name: EntSUMv2
+    aliases: [EntSUMv2, ENTSUMV2]
   - MultiRC
   - BoolQ
   - RTE
@@ -322,6 +356,8 @@ datasets:
 tasks:
   - name: Machine Translation
     aliases: [machine translation, neural machine translation, NMT]
+  - name: Speech Translation
+    aliases: [speech translation, end-to-end speech translation]
   - name: Question Answering
     aliases: [question answering, open-domain question answering, QA]
   - name: Summarization
@@ -346,6 +382,15 @@ tasks:
   - name: Dialogue
     aliases: [dialogue systems, dialog systems, dialogue system, conversational AI,
               dialogue generation, response generation, task-oriented dialogue]
+    match_name: false
+  - name: Multimodal Dialogue
+    aliases: [multimodal dialogue, multimodal persona-based dialogue]
+  - name: Next Response Prediction
+    aliases: [next response prediction]
+  - name: Grounding Persona Prediction
+    aliases: [grounding persona prediction]
+  - name: Speaker Identification
+    aliases: [speaker identification]
   - name: Information Retrieval
     aliases: [information retrieval, passage retrieval, document retrieval, dense retrieval,
               text retrieval]
@@ -357,11 +402,18 @@ tasks:
   - name: Instruction Following
     aliases: [instruction following, instruction-following]
   - name: Reasoning
-    aliases: [reasoning, logical reasoning]
+    aliases: [logical reasoning]
+    match_name: false
+  - name: Quantitative Reasoning
+    aliases: [quantitative reasoning, surface-form quantitative reasoning]
+  - name: Generalized Quantifier Comprehension
+    aliases: [generalized quantifier comprehension, quantifier comprehension]
   - name: Commonsense Reasoning
     aliases: [commonsense reasoning, common-sense reasoning]
   - name: Mathematical Reasoning
     aliases: [mathematical reasoning, math reasoning, arithmetic reasoning]
+  - name: Math Word Problem Solving
+    aliases: [math word problem solving, solving math word problems, MWPs]
   - name: Multi-Hop Reasoning
     aliases: [multi-hop reasoning, multihop reasoning, multi-step reasoning]
   - name: Code Generation
@@ -382,6 +434,13 @@ tasks:
     aliases: [hallucination detection, hallucination mitigation, hallucination, hallucinations]
   - name: Alignment
     aliases: [AI alignment, safety alignment, model alignment]
+    match_name: false
+  - name: Gender Bias Detection
+    aliases: [gender bias detection, detect textual gender bias]
+  - name: Gender Bias Classification
+    aliases: [gender bias classification, classify textual gender bias]
+  - name: Gender Bias Mitigation
+    aliases: [gender bias mitigation, mitigate textual gender bias]
   - name: Toxicity Detection
     aliases: [toxicity detection, toxic text detection, detoxification]
   - name: Grammatical Error Correction

@@ -6,11 +6,11 @@ from pathlib import Path
 
 import pytest
 
-from src.enrichment import extract_rules
+from src.enrichment import extract_llm, extract_rules
 from src.enrichment.audit import audit_enrichment
 from src.enrichment.extract_llm import parse_and_validate
 from src.enrichment.gazetteer import Gazetteer, slugify
-from src.enrichment.merge import canonicalize, merge_all
+from src.enrichment.merge import _canonical_llm_surface, canonicalize, merge_all
 from src.enrichment.textutil import sentence_at, split_sentences
 
 MINI_GAZETTEER = """
@@ -80,11 +80,14 @@ def test_resolve_surface_requires_matching_type(gaz: Gazetteer):
 def test_real_gazetteer_loads():
     real = Gazetteer.from_file(Path(__file__).resolve().parents[1] / "configs" / "gazetteer.yaml")
     assert len(real.entries) > 150
-    assert real.version == "gazetteer-v1.0"
+    assert real.version == "gazetteer-v1.1"
     # a few sanity checks on curated content
     assert real.resolve_surface("LLaMA 2", "method") == "method:llama"
     assert real.resolve_surface("chain of thought", "method") == "method:chain-of-thought"
     assert real.resolve_surface("MS MARCO", "dataset") == "dataset:ms-marco"
+    assert real.resolve_surface("BBH", "dataset") == "dataset:bbh"
+    assert real.resolve_surface("dialogue", "task") is None
+    assert real.resolve_surface("task-oriented dialogue", "task") == "task:dialogue"
 
 
 # ------------------------------------------------------------------ textutil
@@ -131,6 +134,29 @@ def test_rules_extract_paper_entities_and_edges(gaz: Gazetteer):
 def test_rules_empty_abstract(gaz: Gazetteer):
     result = extract_rules.extract_paper(_paper(""), gaz, extractor_version="rules-test-v1")
     assert result["entities"] == [] and result["edges"] == []
+
+
+def test_rules_extract_dynamic_scientific_names_without_a_test_specific_dictionary(gaz: Gazetteer):
+    abstract = (
+        "We introduce NOVA, a dataset for multilingual intent detection. "
+        "We propose Spectral Mixup via Optimal Transport (SMOT) and evaluate it on "
+        "the dataset named ORBIT."
+    )
+    result = extract_rules.extract_paper(
+        _paper(abstract), gaz, extractor_version="rules-test-v2"
+    )
+    entity_ids = {entity["entity_id"] for entity in result["entities"]}
+    assert {
+        "dataset:nova",
+        "dataset:orbit",
+        "method:spectral-mixup",
+        "method:optimal-transport",
+    } <= entity_ids
+    edges = {(edge["type"], edge["to"]) for edge in result["edges"]}
+    assert ("EVALUATED_ON", "dataset:nova") in edges
+    assert ("EVALUATED_ON", "dataset:orbit") in edges
+    assert ("USES_METHOD", "method:spectral-mixup") in edges
+    assert ("USES_METHOD", "method:optimal-transport") in edges
 
 
 # ------------------------------------------------------------------ llm parse/validate
@@ -215,6 +241,38 @@ def test_parse_and_validate_grounded_evidence_fallback_and_rejects_bad_json():
     assert entities == [] and relations == [] and drops[0]["reason"] == "invalid_json"
 
 
+def test_llm_request_is_schema_constrained_and_cpu_only(monkeypatch: pytest.MonkeyPatch):
+    captured: dict = {}
+
+    class _Response:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"message": {"content": '{"entities":[],"relations":[]}'}}
+
+    def fake_post(url, json, timeout):
+        captured.update({"url": url, "payload": json, "timeout": timeout})
+        return _Response()
+
+    monkeypatch.setattr(extract_llm.httpx, "post", fake_post)
+    extract_llm.call_ollama("http://localhost:11434", "qwen3.5:0.8b-q8_0", ABSTRACT)
+
+    payload = captured["payload"]
+    assert payload["format"] == extract_llm.EXTRACTION_SCHEMA
+    assert payload["options"]["num_gpu"] == 0
+    assert payload["options"]["num_ctx"] == 4096
+    assert payload["options"]["num_predict"] == 768
+
+
+def test_llm_cache_is_namespaced_by_model_and_extractor_version(tmp_path: Path):
+    first = extract_llm._cache_path(tmp_path, "oa:W1", "qwen3:0.6b")
+    second = extract_llm._cache_path(tmp_path, "oa:W1", "qwen3.5:0.8b-q8_0")
+    assert first != second
+    assert first.name == second.name == "oa_W1.json"
+    assert extract_llm.EXTRACTOR_VERSION in str(second)
+
+
 # ------------------------------------------------------------------ merge
 def test_merge_agreement_and_slug_resolution(gaz: Gazetteer):
     paper = _paper("We evaluate BERT on SQuAD. XPhoneBERT is a new model.")
@@ -255,6 +313,21 @@ def test_merge_agreement_and_slug_resolution(gaz: Gazetteer):
     assert stats["llm"]["models"] == {"unknown": 1}
 
 
+def test_entity_keeps_all_paper_ids_when_display_evidence_is_bounded(gaz: Gazetteer):
+    papers = [
+        {"id": f"p{i}", "year": 2024, "abstract": "We use BERT."}
+        for i in range(4)
+    ]
+    rules = [
+        extract_rules.extract_paper(paper, gaz, extractor_version="rules-test-v1")
+        for paper in papers
+    ]
+    entities, _edges, _stats = merge_all(papers, rules, [], gaz)
+    bert = next(entity for entity in entities if entity["id"] == "method:bert")
+    assert bert["evidence_paper_ids"] == ["p0", "p1", "p2", "p3"]
+    assert len(bert["evidence"]) == 3
+
+
 def test_merge_drops_endpoint_type_mismatch(gaz: Gazetteer):
     paper = _paper("BERT rocks.")
     llm_result = {
@@ -291,6 +364,29 @@ def test_merge_drops_generic_llm_surfaces(gaz: Gazetteer):
 def test_canonicalize(gaz: Gazetteer):
     assert canonicalize("BERT", "method", gaz) == ("method:bert", "gazetteer")
     assert canonicalize("SomeUnknown Model", "method", gaz) == ("method:someunknown-model", "slug")
+
+
+def test_llm_surface_normalization_is_generic_not_validation_name_specific():
+    assert _canonical_llm_surface("Ubuntu IRC dataset") == "Ubuntu IRC"
+    assert _canonical_llm_surface("Multi-Turn Safety Alignment (MTSA) framework") == "MTSA"
+    assert _canonical_llm_surface("long descriptive expansion XYZ-2") == "XYZ-2"
+    assert _canonical_llm_surface("contrastive learning") == "contrastive learning"
+
+
+def test_merge_repairs_llm_type_from_exact_gazetteer_alias(gaz: Gazetteer):
+    paper = _paper("BERT is evaluated here.")
+    llm_result = {
+        "paper_id": paper["id"], "extractor": "llm", "extractor_version": "test",
+        "entities": [{"surface": "BERT", "type": "dataset",
+                      "evidence": {"sentence_index": 0, "evidence_text": paper["abstract"]}}],
+        "relations": [], "drops": [],
+    }
+    entities, edges_by_type, _stats = merge_all([paper], [], [llm_result], gaz)
+    assert [(entity["id"], entity["entity_type"]) for entity in entities] == [
+        ("method:bert", "method")
+    ]
+    assert edges_by_type["USES_METHOD"][0]["to"] == "method:bert"
+    assert edges_by_type["EVALUATED_ON"] == []
 
 
 def test_nonhuman_audit_checks_verbatim_evidence_and_disclaims_semantic_metrics(tmp_path: Path):

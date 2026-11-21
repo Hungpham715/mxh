@@ -1,15 +1,17 @@
-"""LLM extractor: qwen3:0.6b via local Ollama, strict JSON, per-paper cache, resumable.
+"""CPU-capable sub-1B LLM extractor via local Ollama.
 
 This is the "small LLM (<= 9B parameters) used for data processing" component of the project:
 the same local model that powers the chatbot also performs entity/relation extraction over
 the 1,091 abstracts, complementing the deterministic gazetteer baseline in extract_rules.py.
 
 Robustness rules (small models deviate, so every output is validated):
-- Ollama is called with format=json, think=false, temperature=0 (deterministic decoding).
+- Ollama is called with a JSON Schema, think=false, temperature=0, and CPU-only inference by
+  default (``num_gpu=0``).
 - Entity surfaces and relation evidence must be verbatim substrings of the abstract
   (whitespace-normalized, case-insensitive). Anything else is dropped and counted, never kept.
 - Relation endpoints must refer to surfaces the model itself extracted in the same response.
-- Each paper's result is cached on disk, so an interrupted run resumes without re-calling.
+- Each result is cached by paper + model + extractor version. Changing a prompt/model can
+  therefore never silently reuse an incompatible old response.
 """
 from __future__ import annotations
 
@@ -26,29 +28,76 @@ from src.enrichment.schema import is_generic_surface
 from src.enrichment.textutil import split_sentences, sentence_at
 
 EXTRACTOR = "llm"
-EXTRACTOR_VERSION = "qwen3-0.6b-ollama-v1.6"
-DEFAULT_MODEL = "qwen3:0.6b"
+EXTRACTOR_VERSION = "sub1b-ollama-v2.1"
+DEFAULT_MODEL = "qwen3.5:0.8b-q8_0"
 DEFAULT_BASE_URL = "http://127.0.0.1:11434"
 
 # NOTE: v1.0 carried a few-shot example; the 0.6b model copied example entities ("SQuAD",
 # "PAPER") into abstracts that never mentioned them (29 surface_not_in_abstract drops in a
 # 20-paper pilot). v1.1 is example-free: schema + hard verbatim rules only. The validation
 # layer below still catches any leftover hallucination.
-SYSTEM_PROMPT = """You are an information extraction engine for NLP research abstracts.
+SYSTEM_PROMPT = """You extract a high-recall knowledge graph from ONE NLP research abstract.
 You receive ONE abstract. Return ONLY valid JSON matching this schema:
 {"entities":[{"surface":"...","type":"method|dataset|task"}],
  "relations":[{"from_surface":"...","rel":"uses_method|addresses_task|evaluated_on|method_evaluated_on","to_surface":"...","evidence":"..."}]}
 
 Rules:
 - Copy every "surface" and every "evidence" VERBATIM from the given abstract. Never invent text, never reuse text from these instructions.
-- "type": "method" = a NAMED model/algorithm/technique; "dataset" = a NAMED benchmark/corpus; "task" = the application task addressed.
+- Extract EVERY explicit, relevant item, including compared baselines and newly proposed items.
+- "method" includes a named model/algorithm/framework and a specific technical technique such as a decoding, training, augmentation, or optimization method.
+- "dataset" includes a named dataset, benchmark, corpus, or evaluation set.
+- "task" includes a specific research/application task the paper addresses; include explicit task phrases even when they are not proper names.
+- Copy the SHORTEST complete name span: remove surrounding prose and entity-kind suffixes such as "dataset", "benchmark", "framework", "method", "model", or "algorithm". If a long name contains an explicit parenthesized acronym, use the acronym as the surface.
+- A dataset must be a named reusable data/evaluation resource. Languages, people, software tools, and generic phrases such as "public datasets" are not datasets.
+- A method must be a reusable technical method. Do not label task names, error categories, pipeline stages, generic roles such as "teacher model"/"target model", or broad phrases such as "foundation models" as methods.
+- A task must be a research objective evaluated or claimed by this paper. Do not label a language list, a data field, a stage name, a number of questions, or generic components such as retrieval/reasoning/composition unless the paper explicitly evaluates that component as a task.
 - Do NOT extract generic words such as model, method, paper, data, parameters, system, approach, results, performance. Only proper names or established technical terms.
 - Never output the literal word "PAPER". The paper subject is implicit and added by code.
 - The "entities" list MUST contain every surface you reference in "relations".
 - For uses_method / addresses_task / evaluated_on the subject is implicit: set from_surface to an empty string and to_surface to the entity surface.
+- Emit one paper relation for every entity genuinely used, addressed, introduced, or evaluated by this paper. Do not link background-only mentions.
 - method_evaluated_on connects a method surface (from_surface) to a dataset surface (to_surface) when the abstract says the method was evaluated/tested/benchmarked on that dataset.
 - "evidence" must be exactly one sentence copied from the abstract that supports the relation.
-- Prefer precision over recall: skip anything you are not certain about. Empty lists are valid."""
+- Re-read the whole abstract once for missed methods, datasets, and tasks before returning. Empty lists are valid only when none are explicit."""
+
+EXTRACTION_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "entities": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "surface": {"type": "string"},
+                    "type": {"type": "string", "enum": ["method", "dataset", "task"]},
+                },
+                "required": ["surface", "type"],
+            },
+        },
+        "relations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "from_surface": {"type": "string"},
+                    "rel": {
+                        "type": "string",
+                        "enum": [
+                            "uses_method",
+                            "addresses_task",
+                            "evaluated_on",
+                            "method_evaluated_on",
+                        ],
+                    },
+                    "to_surface": {"type": "string"},
+                    "evidence": {"type": "string"},
+                },
+                "required": ["from_surface", "rel", "to_surface", "evidence"],
+            },
+        },
+    },
+    "required": ["entities", "relations"],
+}
 
 # The 0.6b model does not follow the type enum perfectly (observed: "model", "benchmark").
 # Map known synonyms; unknown types are dropped and counted.
@@ -80,13 +129,16 @@ def _clean_key(value: str) -> str:
     return re.sub(r"[\s-]+", "_", str(value).strip().lower())
 
 
-def _cache_path(cache_dir: Path, paper_id: str) -> Path:
+def _cache_path(cache_dir: Path, paper_id: str, model: str = DEFAULT_MODEL) -> Path:
     safe = re.sub(r"[^A-Za-z0-9._-]", "_", paper_id)
-    return cache_dir / f"{safe}.json"
+    model_key = re.sub(r"[^A-Za-z0-9._-]", "_", model)
+    version_key = re.sub(r"[^A-Za-z0-9._-]", "_", EXTRACTOR_VERSION)
+    return cache_dir / model_key / version_key / f"{safe}.json"
 
 
 def call_ollama(base_url: str, model: str, abstract: str, timeout_seconds: float = 180.0,
-                temperature: float = 0.0, num_predict: int = 320) -> dict[str, Any]:
+                temperature: float = 0.0, num_predict: int = 768,
+                num_gpu: int = 0) -> dict[str, Any]:
     """One synchronous chat completion. Returns the parsed Ollama response dict.
 
     temperature > 0 is used on retries: greedy decoding is deterministic, so retrying a
@@ -100,14 +152,18 @@ def call_ollama(base_url: str, model: str, abstract: str, timeout_seconds: float
         ],
         "stream": False,
         "think": False,
-        "format": "json",
-        # 97.8% of the first 137 successful production records completed below 320 tokens.
-        # Attempt one uses that tighter ceiling to stop degenerate loops early; retries below
-        # raise it to 512 so uncommon long-but-valid JSON still has a path to completion.
+        "format": EXTRACTION_SCHEMA,
+        # The old 320-token ceiling was enough for precision-first output but can truncate the
+        # longer candidate lists needed for recall. 768 stays bounded for a sub-1B CPU model.
         # The longest abstract in this frozen 1,091-paper snapshot is 1,917 characters;
         # 2,048 tokens comfortably covers prompt + abstract + bounded response. Keeping this
         # explicit also allows six parallel CPU slots within less context memory than 4x4,096.
-        "options": {"temperature": temperature, "num_predict": num_predict, "num_ctx": 2048},
+        "options": {
+            "temperature": temperature,
+            "num_predict": num_predict,
+            "num_ctx": 4096,
+            "num_gpu": num_gpu,
+        },
     }
     response = httpx.post(f"{base_url.rstrip('/')}/api/chat", json=payload, timeout=timeout_seconds)
     response.raise_for_status()
@@ -253,14 +309,15 @@ def parse_and_validate(content: str, abstract: str) -> tuple[list[dict[str, Any]
 
 
 def extract_paper_llm(paper: dict[str, Any], cache_dir: Path, base_url: str = DEFAULT_BASE_URL,
-                      model: str = DEFAULT_MODEL, max_attempts: int = 3) -> dict[str, Any]:
+                      model: str = DEFAULT_MODEL, max_attempts: int = 3,
+                      num_gpu: int = 0) -> dict[str, Any]:
     """Extract one paper, using the on-disk cache when present (resume-friendly).
 
     Failures are NOT cached, so a re-run retries them. The returned record carries
     "error" instead of entities/relations when all attempts failed.
     """
     paper_id = paper["id"]
-    path = _cache_path(cache_dir, paper_id)
+    path = _cache_path(cache_dir, paper_id, model)
     if path.exists():
         with open(path, encoding="utf-8") as fh:
             return json.load(fh)
@@ -285,7 +342,8 @@ def extract_paper_llm(paper: dict[str, Any], cache_dir: Path, base_url: str = DE
                 model,
                 abstract,
                 temperature=retry_temperature,
-                num_predict=320 if attempt == 1 else 512,
+                num_predict=768 if attempt == 1 else 1024,
+                num_gpu=num_gpu,
             )
             duration_ms = int((time.perf_counter() - started) * 1000)
             content = str(response.get("message", {}).get("content") or "")

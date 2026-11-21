@@ -107,7 +107,8 @@ def cmd_enrich(a: argparse.Namespace) -> int:
     from src.enrichment.run import run_enrichment
     extractors = tuple(x.strip() for x in a.extractors.split(",") if x.strip())
     return run_enrichment(Path(a.data), Path(a.out) if a.out else None, extractors=extractors,
-                          limit=a.limit, workers=a.workers, ollama_url=a.ollama_url, model=a.model)
+                          limit=a.limit, workers=a.workers, ollama_url=a.ollama_url, model=a.model,
+                          num_gpu=a.num_gpu)
 
 
 def cmd_import_enrichment(a: argparse.Namespace) -> int:
@@ -182,7 +183,9 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--limit", type=int, default=None, help="only the first N papers (sorted by id)")
     s.add_argument("--workers", type=int, default=4, help="parallel Ollama requests")
     s.add_argument("--ollama-url", default="http://127.0.0.1:11434")
-    s.add_argument("--model", default="qwen3:0.6b")
+    s.add_argument("--model", default="qwen3.5:0.8b-q8_0")
+    s.add_argument("--num-gpu", type=int, default=0,
+                   help="Ollama GPU layers; 0 guarantees CPU-only inference")
     s.set_defaults(fn=cmd_enrich)
     s = sub.add_parser("import-enrichment", help="import data/enriched into Neo4j scope nlpgraph-enrich-v1 (idempotent)")
     s.add_argument("--data", default=str(ROOT / "data" / "enriched"))

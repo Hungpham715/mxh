@@ -82,7 +82,9 @@ def _parse_entry(raw: Any, entity_type: str) -> tuple[GazetteerEntry, list[str]]
     elif isinstance(raw, dict):
         name = str(raw["name"])
         aliases = list(raw.get("aliases") or [name])
-        if name not in aliases:
+        # Some canonical display names are broader than safe match surfaces (for example
+        # "Dialogue" versus "task-oriented dialogue").
+        if bool(raw.get("match_name", True)) and name not in aliases:
             aliases.append(name)
         case_sensitive = bool(raw.get("case_sensitive", False))
         explicit_id = raw.get("id")
