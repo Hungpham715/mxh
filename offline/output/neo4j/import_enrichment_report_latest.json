@@ -3,15 +3,15 @@
     "scope_id": "nlpgraph-enrich-v1",
     "enrich_version": "enrich-1.0.0",
     "nodes": {
-      "Method": 606,
-      "Dataset": 383,
-      "Task": 584
+      "Method": 2117,
+      "Dataset": 926,
+      "Task": 930
     },
     "relationships": {
-      "USES_METHOD": 1578,
-      "ADDRESSES_TASK": 1404,
-      "EVALUATED_ON": 469,
-      "METHOD_EVALUATED_ON": 37
+      "USES_METHOD": 3241,
+      "ADDRESSES_TASK": 1489,
+      "EVALUATED_ON": 1054,
+      "METHOD_EVALUATED_ON": 66
     },
     "rejected_edges": 0,
     "batch_size": 300,
@@ -34,20 +34,20 @@
   },
   "after": {
     "nodes_by_label": {
-      "Method": 606,
-      "Dataset": 383,
-      "Task": 584
+      "Method": 2443,
+      "Dataset": 1142,
+      "Task": 1405
     },
     "relationships_by_type": {
-      "USES_METHOD": 1578,
-      "ADDRESSES_TASK": 1404,
-      "EVALUATED_ON": 469,
-      "METHOD_EVALUATED_ON": 37
+      "USES_METHOD": 3639,
+      "ADDRESSES_TASK": 2297,
+      "EVALUATED_ON": 1308,
+      "METHOD_EVALUATED_ON": 68
     },
-    "nodes": 1573,
-    "relationships": 3488
+    "nodes": 4990,
+    "relationships": 7312
   },
   "rejected_edges": [],
-  "seconds": 9.9,
-  "finished_at_utc": "2026-11-20T07:26:13Z"
+  "seconds": 30.9,
+  "finished_at_utc": "2026-11-22T01:19:12Z"
 }
