@@ -53,6 +53,7 @@ if any of our ids exists without our scope_id; no DELETE/DROP anywhere in the co
 - `output/analysis/` graph counts, author network JSON/CSV, PNG figures; `output/neo4j/` import reports
 - `data/enriched/` grounded Method/Dataset/Task nodes and four evidence-bearing edge types from rules + Qwen
 - `output/analysis/small_world_subnetworks.{json,csv,png}` year/venue/topic sensitivity and fragmentation
+- `output/analysis/knowledge_graph_small_world.json` full heterogeneous-KG topology; reported separately from the author social network
 - `evaluation/enrichment/` deterministic source-grounding audit plus the explicit semantic NER/RE reference slice;
   `semantic_scores.json` is a developer-reviewed nonhuman slice, not independent human gold and not a full-corpus estimate
 - `evaluation/` samples, automated labels (`automated_preliminary`, NOT human), scores, audits, fix log,

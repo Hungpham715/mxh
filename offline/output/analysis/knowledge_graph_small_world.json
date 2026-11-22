@@ -1,0 +1,240 @@
+{
+  "status": "computed",
+  "graph": "LCC of full heterogeneous KG projected as a simple undirected graph (5 node labels, 10 relationship types)",
+  "lcc_nodes": 7134,
+  "lcc_edges": 30970,
+  "C_obs": 0.7373,
+  "L_obs": 4.448,
+  "L_method": "approx: BFS from 400 random sources (seeded)",
+  "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
+  "n_random": 30,
+  "random_graphs": [
+    {
+      "seed": 20261108,
+      "nodes": 7134,
+      "C": 0.0062,
+      "L": 3.811
+    },
+    {
+      "seed": 20261109,
+      "nodes": 7130,
+      "C": 0.0067,
+      "L": 3.8177
+    },
+    {
+      "seed": 20261110,
+      "nodes": 7132,
+      "C": 0.0063,
+      "L": 3.8426
+    },
+    {
+      "seed": 20261111,
+      "nodes": 7134,
+      "C": 0.0063,
+      "L": 3.8324
+    },
+    {
+      "seed": 20261112,
+      "nodes": 7134,
+      "C": 0.0072,
+      "L": 3.8405
+    },
+    {
+      "seed": 20261113,
+      "nodes": 7134,
+      "C": 0.0073,
+      "L": 3.8243
+    },
+    {
+      "seed": 20261114,
+      "nodes": 7134,
+      "C": 0.0064,
+      "L": 3.7983
+    },
+    {
+      "seed": 20261115,
+      "nodes": 7134,
+      "C": 0.0065,
+      "L": 3.8332
+    },
+    {
+      "seed": 20261116,
+      "nodes": 7134,
+      "C": 0.0065,
+      "L": 3.8036
+    },
+    {
+      "seed": 20261117,
+      "nodes": 7134,
+      "C": 0.0065,
+      "L": 3.8233
+    },
+    {
+      "seed": 20261118,
+      "nodes": 7134,
+      "C": 0.0067,
+      "L": 3.8315
+    },
+    {
+      "seed": 20261119,
+      "nodes": 7134,
+      "C": 0.0072,
+      "L": 3.801
+    },
+    {
+      "seed": 20261120,
+      "nodes": 7134,
+      "C": 0.007,
+      "L": 3.82
+    },
+    {
+      "seed": 20261121,
+      "nodes": 7134,
+      "C": 0.006,
+      "L": 3.8304
+    },
+    {
+      "seed": 20261122,
+      "nodes": 7134,
+      "C": 0.0066,
+      "L": 3.8312
+    },
+    {
+      "seed": 20261123,
+      "nodes": 7134,
+      "C": 0.0062,
+      "L": 3.8264
+    },
+    {
+      "seed": 20261124,
+      "nodes": 7132,
+      "C": 0.0069,
+      "L": 3.8362
+    },
+    {
+      "seed": 20261125,
+      "nodes": 7134,
+      "C": 0.0066,
+      "L": 3.8446
+    },
+    {
+      "seed": 20261126,
+      "nodes": 7134,
+      "C": 0.0065,
+      "L": 3.8085
+    },
+    {
+      "seed": 20261127,
+      "nodes": 7134,
+      "C": 0.0066,
+      "L": 3.847
+    },
+    {
+      "seed": 20261128,
+      "nodes": 7134,
+      "C": 0.0069,
+      "L": 3.801
+    },
+    {
+      "seed": 20261129,
+      "nodes": 7132,
+      "C": 0.0066,
+      "L": 3.8403
+    },
+    {
+      "seed": 20261130,
+      "nodes": 7134,
+      "C": 0.0079,
+      "L": 3.8263
+    },
+    {
+      "seed": 20261131,
+      "nodes": 7134,
+      "C": 0.0065,
+      "L": 3.8436
+    },
+    {
+      "seed": 20261132,
+      "nodes": 7134,
+      "C": 0.0062,
+      "L": 3.821
+    },
+    {
+      "seed": 20261133,
+      "nodes": 7132,
+      "C": 0.0071,
+      "L": 3.841
+    },
+    {
+      "seed": 20261134,
+      "nodes": 7134,
+      "C": 0.0067,
+      "L": 3.8131
+    },
+    {
+      "seed": 20261135,
+      "nodes": 7134,
+      "C": 0.0067,
+      "L": 3.8075
+    },
+    {
+      "seed": 20261136,
+      "nodes": 7132,
+      "C": 0.0066,
+      "L": 3.8337
+    },
+    {
+      "seed": 20261137,
+      "nodes": 7134,
+      "C": 0.0062,
+      "L": 3.838
+    }
+  ],
+  "C_rand": 0.0066,
+  "L_rand": 3.8256,
+  "C_rand_std": 0.0004,
+  "L_rand_std": 0.0144,
+  "C_empirical_p_ge_obs": 0.0323,
+  "L_obs_over_L_rand": 1.1627,
+  "sigma": 95.38,
+  "verdict": "small-world indication (sigma>1, C>>C_rand, L close to L_rand)",
+  "whole_network_distance": {
+    "nodes": 7134,
+    "reachable_pair_fraction": 1.0,
+    "reachable_pairs_ordered": 50886822,
+    "all_pairs_ordered": 50886822,
+    "component_weighted_average_shortest_path": 4.4836,
+    "harmonic_path_length_reachable": 4.2026,
+    "global_efficiency": 0.237945
+  },
+  "limitations": [
+    "This is a heterogeneous knowledge-graph projection, not a social network of authors.",
+    "Authorship and paper membership create dense local motifs that raise clustering.",
+    "Direction and parallel relationship types are collapsed for simple-graph topology.",
+    "The finite seeded null ensemble gives an empirical clustering tail probability, not a universal proof."
+  ],
+  "schema_version": "knowledge-graph-small-world-v1",
+  "projection": "All Paper, Author, Institution, Venue and Topic nodes; all ten base relationship types; direction and parallel types collapsed",
+  "node_labels": {
+    "Paper": 1091,
+    "Author": 5430,
+    "Institution": 600,
+    "Venue": 7,
+    "Topic": 6
+  },
+  "relationship_types": [
+    "FIRST_AUTHOR_OF",
+    "OTHER_AUTHOR_OF",
+    "COAUTHORED_WITH",
+    "AFFILIATED_WITH",
+    "APPEARS_IN",
+    "HAS_TOPIC",
+    "CITES",
+    "ORG_COAUTHORED_WITH",
+    "RESEARCHES",
+    "ACTIVE_IN"
+  ],
+  "simple_edges": 30970,
+  "connected_components": 1,
+  "lcc_ratio": 1.0
+}

@@ -1,6 +1,5 @@
 import networkx as nx
-
-from src.analysis import metrics, subnetworks
+from src.analysis import knowledge_graph, metrics, subnetworks
 from src.evaluation.score import score_rows, wilson
 
 
@@ -61,6 +60,37 @@ def test_small_world_runs_on_toy():
     sw = metrics.small_world(g, n_random=5)
     assert sw["status"] == "computed" and sw["sigma"] > 1
     assert sw["C_obs"] > sw["C_rand"]
+
+
+def test_small_world_accepts_projection_specific_provenance():
+    g = nx.connected_watts_strogatz_graph(40, 4, 0.1, seed=2)
+    sw = metrics.small_world(
+        g,
+        n_random=1,
+        graph_description="toy heterogeneous projection",
+        limitations=["toy-only"],
+    )
+    assert sw["graph"] == "toy heterogeneous projection"
+    assert sw["limitations"] == ["toy-only"]
+
+
+def test_full_knowledge_graph_projection_preserves_node_labels_and_edge_types():
+    rows = {
+        "papers.jsonl": [{"id": "p1"}],
+        "authors.jsonl": [{"id": "a1"}],
+        "institutions.jsonl": [{"id": "i1"}],
+        "venues.jsonl": [{"id": "v1"}],
+    }
+    edges = {relation_type: [] for relation_type in knowledge_graph.REL_TYPES}
+    edges["FIRST_AUTHOR_OF"] = [{"from": "a1", "to": "p1"}]
+    edges["AFFILIATED_WITH"] = [{"from": "a1", "to": "i1"}]
+    edges["APPEARS_IN"] = [{"from": "p1", "to": "v1"}]
+    edges["HAS_TOPIC"] = [{"from": "p1", "to": "topic:qa"}]
+    graph = knowledge_graph.build_projection(rows, edges)
+    assert graph.number_of_nodes() == 10  # four fixture nodes + six canonical topics
+    assert graph.number_of_edges() == 4
+    assert graph.nodes["topic:qa"]["label"] == "Topic"
+    assert graph["a1"]["p1"]["relationship_types"] == {"FIRST_AUTHOR_OF"}
 
 
 def test_small_world_undetermined_on_tiny():

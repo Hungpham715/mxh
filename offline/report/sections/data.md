@@ -70,12 +70,14 @@ Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy 
 
 ### Đánh giá ngữ nghĩa NER/RE của enrichment
 
-Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ của holdout v4 gồm 12 abstract; nhãn đã được freeze trước lần dự đoán đầu tiên. Đây là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài. Hybrid Qwen3.5 0.8B chạy CPU-only, không dùng GPU.
 
 | Bài toán | Precision | Recall | F1 | Support |
 |---|---|---|---|---|
-| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
-| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+| Entity (micro) | 0.4118 | 0.5 | 0.4516 | 56 |
+| Relation (micro) | 0.4 | 0.5 | 0.4444 | 56 |
+
+So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE 41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được vì dùng development slice và evaluator cũ làm mất provenance membership.
 
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 

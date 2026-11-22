@@ -152,3 +152,19 @@ Team 5 làm tốt phần trace; Team 9 làm tốt state multi-hop; Team 6 làm t
 
 Phân tích dựa trên snapshot repo ở commit ghi trong từng file và các báo cáo được cung cấp. Khi code và report mâu thuẫn, kết luận ưu tiên hành vi thể hiện trong code/artifact; số liệu chỉ có trong report được ghi rõ là số do báo cáo nêu.
 
+## Đối chiếu mục tiêu NER/RE và small-world (2026-11-22)
+
+| Hệ thống | Scope / evaluator | Kết quả có artifact | Cách dùng trong project này |
+|---|---|---|---|
+| Team 6 | Toàn heterogeneous Neo4j graph; LCC; 5 đồ thị Erdős–Rényi `G(n,m)` | 5.816 node, LCC 5.679; `L=5,985`, `Lrand=6,908`, `sigma=82,392` trong `external/team_06/small_world_result.json` | Chỉ tham khảo cách báo C/L/sigma; không dùng ER baseline vì không giữ degree sequence. |
+| Team 9 | Toàn heterogeneous KG; 300 degree-preserving null graphs | 6.223/6.223 node trong LCC; `L/Lrand=1,04`, `sigma=10,524` trong `external/team_09/analysis/results/small_world_results.txt` | Bổ sung phép đo cùng scope toàn KG, nhưng giữ riêng kết luận author-only. |
+| Project hiện tại | Author-only coauthorship; degree-preserving null | LCC 970/5.430; `L/Lrand=3,3203`, `sigma=19,225`: **no clear indication** | Kết luận mạng xã hội chính, không thay bằng scope thuận lợi hơn. |
+| Project hiện tại | Toàn heterogeneous KG; 30 degree-preserving null graphs, seed cố định | 7.134/7.134 node trong LCC; `L/Lrand=1,1627`, `sigma=95,38`, empirical `p(Crand>=Cobs)=0,0323` | Artifact `offline/output/analysis/knowledge_graph_small_world.json`; bằng chứng topology KG, không phải mạng tác giả toàn cầu. |
+
+Team 9 có adapter QLoRA Qwen2.5-0.5B sinh entity/relation JSON và mô tả dữ liệu train,
+nhưng snapshot reference không chứa evaluator hoặc score NER/RE extraction tái lập. Các F1 trong
+`chatbot/test_*` là metric phân loại câu trả lời TF/MCQ, không phải NER/RE; vì vậy không dùng chúng
+làm baseline extraction. Project hiện tại báo fresh holdout v4 riêng: hybrid Qwen3.5 0.8B CPU-only
+đạt NER F1 45,16% và RE F1 44,44%, tăng lần lượt 2,81 và 3,06 điểm so với rules-only trên cùng
+holdout, nhưng vẫn chỉ là 12 bài nonhuman và không được trình bày như human/corpus-wide score.
+

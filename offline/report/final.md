@@ -92,12 +92,14 @@ Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy 
 
 ### Đánh giá ngữ nghĩa NER/RE của enrichment
 
-Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ của holdout v4 gồm 12 abstract; nhãn đã được freeze trước lần dự đoán đầu tiên. Đây là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài. Hybrid Qwen3.5 0.8B chạy CPU-only, không dùng GPU.
 
 | Bài toán | Precision | Recall | F1 | Support |
 |---|---|---|---|---|
-| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
-| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+| Entity (micro) | 0.4118 | 0.5 | 0.4516 | 56 |
+| Relation (micro) | 0.4 | 0.5 | 0.4444 | 56 |
+
+So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE 41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được vì dùng development slice và evaluator cũ làm mất provenance membership.
 
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
@@ -387,6 +389,23 @@ L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC 970 nút. T
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
+### Đối chiếu small-world trên toàn knowledge graph
+
+Để đối chiếu công bằng với các đồ án phân tích toàn heterogeneous KG, pipeline đo thêm một projection vô hướng đơn gồm đủ 5 nhãn nút và 10 loại quan hệ. Phép đo này **không thay thế** kết luận của mạng xã hội đồng tác giả ở trên.
+
+| Đại lượng toàn KG | Giá trị |
+|---|---|
+| Nút / cạnh đơn | 7.134 / 30.970 |
+| Tỷ lệ node trong LCC | 1 |
+| Tỷ lệ cặp có đường đi | 1 |
+| C_obs / C_rand | 0.7373 / 0.0066 |
+| L_obs / L_rand | 4.448 / 3.8256 = 1.1627 |
+| σ | 95.38 |
+| Monte Carlo p(C_rand ≥ C_obs) | 0.0323 |
+| Kết luận | small-world indication (sigma>1, C>>C_rand, L close to L_rand) |
+
+Toàn KG liên thông nhờ các node Paper/Venue/Topic/Institution làm cầu nối. Vì membership theo paper tạo motif dày và làm clustering tăng, kết quả này chỉ chứng minh topology small-world của KG; không được diễn giải thành bằng chứng rằng mạng tác giả toàn cầu là small-world.
+
 ## 7. Kiểm tra chất lượng và tiêu chí 90%
 
 Chất lượng cạnh đo bằng **precision** = cạnh đúng / cạnh được kiểm. Quy trình: (1) kiểm tra cấu trúc **mọi** cạnh (đúng kiểu nút hai đầu, có evidence, không trùng, cặp vô hướng chuẩn hóa, ngưỡng ≥ 2 bài, chiều trích dẫn); (2) lấy mẫu phân tầng tối đa 20 cạnh mỗi loại với seed 20261107; (3) kiểm chứng lại từng cạnh mẫu với bản ghi nguồn gốc (XML ACL, feed arXiv, JSON work OpenAlex được lưu cache) – độc lập với tệp JSONL đã xử lý.
@@ -482,7 +501,7 @@ Phương pháp khoảng tin cậy: reliable-kg-estimation: stratified Wilson / A
 Đạt được: pipeline tái hiện được từ nguồn thật tới graph, 10 loại quan hệ có dữ liệu và chứng cứ theo bài, phân tích mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.
 
 - Phép chiếu tác giả bị phân mảnh do lấy mẫu ~1.100 bài trên hàng chục nghìn bài; mạng thật dày hơn nhiều.
-- Small-world chỉ được kiểm trên LCC: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần; harmonic path/global efficiency toàn mạng được báo riêng và không dùng để khẳng định small-world.
+- Author-only: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần nên chưa có chỉ dấu small-world rõ. Toàn heterogeneous KG được báo riêng và có small-world indication; hai scope không được đánh tráo.
 - Tác giả không khớp OpenAlex được giữ ở mức một bài (source_only), làm giảm số cạnh xuyên bài nhưng tránh gộp nhầm.
 - Citation chỉ là trích dẫn nội bộ corpus, không đo toàn bộ ảnh hưởng học thuật.
 - Phân loại chủ đề bằng luật có độ bao phủ hạn chế (nhiều bài UNKNOWN) – chấp nhận để giữ precision.
