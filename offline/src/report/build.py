@@ -58,6 +58,8 @@ def build_report(out_pdf: Path) -> int:
     scores_ind = _j(EVAL / "scores_independent_v2.json")
     semantic_fresh = _j(EVAL / "enrichment" / "semantic_holdout_v4_hybrid_scores.json")
     semantic = semantic_fresh or _j(EVAL / "enrichment" / "semantic_scores.json")
+    semantic_v6 = _j(EVAL / "enrichment" / "semantic_holdout_v6_hybrid_scores.json")
+    semantic_v6_rules = _j(EVAL / "enrichment" / "semantic_holdout_v6_rules_scores.json")
     struct = _j(EVAL / "structural_checks.json") or {}
     audits = _j(EVAL / "source_audits.json") or {}
     queries = _j(NEO / "example_queries.json")
@@ -201,6 +203,29 @@ def build_report(out_pdf: Path) -> int:
             d.p("So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE "
                 "41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được "
                 "vì dùng development slice và evaluator cũ làm mất provenance membership.")
+        if semantic_v6:
+            d.p("Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check/v3/v4/v5) đo cùng cấu hình "
+                "retained nói trên bằng protocol gán nhãn surface-first: nhãn freeze dạng surface verbatim trong "
+                "abstract, rồi ID chuẩn hóa được suy ra bằng chính hàm canonicalization đã freeze "
+                "(_canonicalize_llm + gazetteer v1.2) trước khi mở bất kỳ dự đoán nào. Audit contract của v4 cho thấy 18/56 "
+                "thực thể gold của v4 có ID không tái lập được từ surface verbatim theo contract freeze "
+                "(paraphrase hoặc lệch policy acronym), nên v4 lẫn v5 đều lẫn nhiễu gán nhãn; v6 là phép đo sạch "
+                "hơn của cùng hệ thống, không phải thay đổi model. Không so v6 với v4 như một cải tiến model vì "
+                "protocol gán nhãn khác nhau; đây vẫn là reference nonhuman một annotator.")
+            v6_rows = [
+                ["v6 Entity (micro)", _fmt(semantic_v6["entity"]["micro"]["precision"]), _fmt(semantic_v6["entity"]["micro"]["recall"]),
+                 _fmt(semantic_v6["entity"]["micro"]["f1"]), _fmt(semantic_v6["entity"]["micro"]["support"])],
+                ["v6 Relation (micro)", _fmt(semantic_v6["relation"]["micro"]["precision"]), _fmt(semantic_v6["relation"]["micro"]["recall"]),
+                 _fmt(semantic_v6["relation"]["micro"]["f1"]), _fmt(semantic_v6["relation"]["micro"]["support"])],
+            ]
+            if semantic_v6_rules:
+                v6_rows.extend([
+                    ["v6 Rules-only Entity", _fmt(semantic_v6_rules["entity"]["micro"]["precision"]), _fmt(semantic_v6_rules["entity"]["micro"]["recall"]),
+                     _fmt(semantic_v6_rules["entity"]["micro"]["f1"]), _fmt(semantic_v6_rules["entity"]["micro"]["support"])],
+                    ["v6 Rules-only Relation", _fmt(semantic_v6_rules["relation"]["micro"]["precision"]), _fmt(semantic_v6_rules["relation"]["micro"]["recall"]),
+                     _fmt(semantic_v6_rules["relation"]["micro"]["f1"]), _fmt(semantic_v6_rules["relation"]["micro"]["support"])],
+                ])
+            d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], v6_rows, [0.36, 0.16, 0.16, 0.16, 0.16])
 
     # ---------------------------------------------------------------- 4
     d.h2("4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j")

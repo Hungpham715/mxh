@@ -126,7 +126,10 @@ def cmd_audit_enrichment(a: argparse.Namespace) -> int:
 
 def cmd_evaluate_enrichment_semantic(a: argparse.Namespace) -> int:
     from src.enrichment.semantic_eval import run_semantic_eval
-    return run_semantic_eval(Path(a.data), Path(a.processed), Path(a.gold), Path(a.out))
+    return run_semantic_eval(
+        Path(a.data), Path(a.processed), Path(a.gold), Path(a.out),
+        annotation_protocol=a.annotation_protocol,
+    )
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -204,6 +207,8 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--processed", default=str(PROCESSED))
     s.add_argument("--gold", default=str(ROOT / "evaluation" / "enrichment" / "semantic_gold_nonhuman.jsonl"))
     s.add_argument("--out", default=str(ROOT / "evaluation" / "enrichment" / "semantic_scores.json"))
+    s.add_argument("--annotation-protocol", default="developer_manual_review_of_abstract_text_v1",
+                   help="provenance label for the gold annotation protocol (see the slice manifest)")
     s.set_defaults(fn=cmd_evaluate_enrichment_semantic)
     args = p.parse_args(argv)
     try:

@@ -140,7 +140,8 @@ def _score_by_type(
 
 
 def evaluate_semantic(
-    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path
+    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path,
+    *, annotation_protocol: str = "developer_manual_review_of_abstract_text_v1",
 ) -> dict[str, Any]:
     papers = {row["id"]: row for row in read_jsonl(processed_dir / "papers.jsonl")}
     gold_rows = read_jsonl(gold_path)
@@ -188,7 +189,7 @@ def evaluate_semantic(
             "processed_papers": str(processed_dir / "papers.jsonl"),
             "data_dir": str(data_dir),
             "papers_evaluated": len(gold_rows),
-            "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+            "annotation_protocol": annotation_protocol,
             "annotators": 1,
             "independent_human_gold": False,
             "status": "nonhuman_reference_slice; do not generalize to the full corpus",
@@ -201,7 +202,12 @@ def evaluate_semantic(
     return result
 
 
-def run_semantic_eval(data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path) -> int:
-    result = evaluate_semantic(data_dir, processed_dir, gold_path, out_path)
+def run_semantic_eval(
+    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path,
+    *, annotation_protocol: str = "developer_manual_review_of_abstract_text_v1",
+) -> int:
+    result = evaluate_semantic(
+        data_dir, processed_dir, gold_path, out_path, annotation_protocol=annotation_protocol
+    )
     print(json.dumps({"entity_micro": result["entity"]["micro"], "relation_micro": result["relation"]["micro"]}, ensure_ascii=False))
     return 0
