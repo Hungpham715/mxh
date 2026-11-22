@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4385571809",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While prior work on Classical languages unanimously uses BERT, in this work we create four language models for Ancient Greek that vary along two dimensions to study their versatility for tasks of interest for Classical languages: we explore (i) encoder-only and encoder-decoder architectures using RoBERTa and T5 as strong model types, and create for each of them (ii) a monolingual Ancient Greek and a multilingual instance that includes Latin and English."
+   }
+  },
+  {
+   "surface": "RoBERTa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While prior work on Classical languages unanimously uses BERT, in this work we create four language models for Ancient Greek that vary along two dimensions to study their versatility for tasks of interest for Classical languages: we explore (i) encoder-only and encoder-decoder architectures using RoBERTa and T5 as strong model types, and create for each of them (ii) a monolingual Ancient Greek and a multilingual instance that includes Latin and English."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While prior work on Classical languages unanimously uses BERT, in this work we create four language models for Ancient Greek that vary along two dimensions to study their versatility for tasks of interest for Classical languages: we explore (i) encoder-only and encoder-decoder architectures using RoBERTa and T5 as strong model types, and create for each of them (ii) a monolingual Ancient Greek and a multilingual instance that includes Latin and English."
+   }
+  },
+  {
+   "surface": "Ancient Greek",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in NLP have led to the creation of powerful language models for many languages including Ancient Greek and Latin."
+   }
+  },
+  {
+   "surface": "Latin",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in NLP have led to the creation of powerful language models for many languages including Ancient Greek and Latin."
+   }
+  },
+  {
+   "surface": "English",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While prior work on Classical languages unanimously uses BERT, in this work we create four language models for Ancient Greek that vary along two dimensions to study their versatility for tasks of interest for Classical languages: we explore (i) encoder-only and encoder-decoder architectures using RoBERTa and T5 as strong model types, and create for each of them (ii) a monolingual Ancient Greek and a multilingual instance that includes Latin and English."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Ancient Greek",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Results show that our models provide significant improvements over the SoTA.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Ancient Greek"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Ancient Greek"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Ancient Greek"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21332,
+ "eval_count": 456,
+ "ts": "2026-11-21T15:49:21Z"
+}

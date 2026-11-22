@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4385565413",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EFFICIENT TUNING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our proposed framework, dubbed Dually Sparsity-Embedded Efficient Tuning (DSEE), aims to achieve two key objectives: (i) parameter efficient fine-tuning - by enforcing sparsity-aware low-rank updates on top of the pre-trained weights; and (ii) resource-efficient inference - by encouraging a sparse weight structure towards the final fine-tuned model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "EFFICIENT TUNING",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these pain points, we propose a framework for resource- and parameter-efficient fine-tuning by leveraging the sparsity prior in both weight updates and the final model weights.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "DUELY"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "BETTER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "BETTER"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "BETTER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25146,
+ "eval_count": 395,
+ "ts": "2026-11-21T15:19:11Z"
+}

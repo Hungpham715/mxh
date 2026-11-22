@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4412945526",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TheoremExplainAgent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce TheoremExplainAgent, an agentic approach for generating long-form theorem explanation videos (over 5 minutes) using Manim animations."
+   }
+  },
+  {
+   "surface": "Manim animations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce TheoremExplainAgent, an agentic approach for generating long-form theorem explanation videos (over 5 minutes) using Manim animations."
+   }
+  },
+  {
+   "surface": "TheoremExplainBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics."
+   }
+  },
+  {
+   "surface": "240 theorems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics."
+   }
+  },
+  {
+   "surface": "STEM disciplines",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics."
+   }
+  },
+  {
+   "surface": "5 automated evaluation metrics",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics."
+   }
+  },
+  {
+   "surface": "o3-mini agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our results reveal that agentic planning is essential for generating detailed long-form videos, and the o3-mini agent achieves a success rate of 93.8% and an overall score of 0.77."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Manim animations",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce TheoremExplainAgent, an agentic approach for generating long-form theorem explanation videos (over 5 minutes) using Manim animations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "240 theorems",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "TheoremExplainBench",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our results reveal that agentic planning is essential for generating detailed long-form videos, and the o3-mini agent achieves a success rate of 93.8% and an overall score of 0.77.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "5 automated evaluation metrics"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 40374,
+ "eval_count": 462,
+ "ts": "2026-11-21T20:52:27Z"
+}

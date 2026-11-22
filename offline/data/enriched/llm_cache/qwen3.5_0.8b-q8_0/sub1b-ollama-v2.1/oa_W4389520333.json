@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4389520333",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "factuality evaluation framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by truth-seeking mechanisms in law, we propose a factuality evaluation framework for LMs that is based on cross-examination."
+   }
+  },
+  {
+   "surface": "LM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A prominent weakness of modern language models (LMs) is their tendency to generate factually incorrect text, which hinders their usability."
+   }
+  },
+  {
+   "surface": "examiner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To discover such inconsistencies, we facilitate a multi-turn interaction between the LM that generated the claim and another LM (acting as an examiner) which introduces questions to discover inconsistencies."
+   }
+  },
+  {
+   "surface": "factually incorrect text",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A prominent weakness of modern language models (LMs) is their tendency to generate factually incorrect text, which hinders their usability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LM",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "A natural question is whether such factual errors can be detected automatically.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our key idea is that an incorrect claim is likely to result in inconsistency with other claims that the model generates.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We empirically evaluate our method on factual claims made by multiple recent LMs on four benchmarks, finding that it outperforms existing methods and baselines, often by a large gap.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44685,
+ "eval_count": 448,
+ "ts": "2026-11-21T16:32:29Z"
+}

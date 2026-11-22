@@ -1,0 +1,142 @@
+{
+ "paper_id": "oa:W4406032239",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have revolutionised many fields, with LLM-as-a-service (LLMSaaS) offering accessible, general-purpose solutions without costly task-specific training."
+   }
+  },
+  {
+   "surface": "LLMSaaS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have revolutionised many fields, with LLM-as-a-service (LLMSaaS) offering accessible, general-purpose solutions without costly task-specific training."
+   }
+  },
+  {
+   "surface": "prompt engineering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to the widely studied prompt engineering for directly solving tasks (in vivo), this paper explores LLMs' potential for in-vitro applications: using LLM-generated labels to improve supervised training of mainstream models."
+   }
+  },
+  {
+   "surface": "in-vitro applications",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to the widely studied prompt engineering for directly solving tasks (in vivo), this paper explores LLMs' potential for in-vitro applications: using LLM-generated labels to improve supervised training of mainstream models."
+   }
+  },
+  {
+   "surface": "crowdsourced datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Crowdsourced datasets in this domain often suffer from noisy labels that misrepresent underlying empathy."
+   }
+  },
+  {
+   "surface": "noise-reduced labels",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, the RoBERTa pre-trained language model (PLM) trained with noise-reduced labels yields a state-of-the-art Pearson correlation coefficient of 0.648 on the public NewsEmp benchmarks."
+   }
+  },
+  {
+   "surface": "training data augmentation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We examine two strategies - (1) noisy label correction and (2) training data augmentation - in empathy computing, an emerging task to predict psychology-based questionnaire outcomes from inputs like textual narratives."
+   }
+  },
+  {
+   "surface": "RoBERTa pre-trained language model (PLM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, the RoBERTa pre-trained language model (PLM) trained with noise-reduced labels yields a state-of-the-art Pearson correlation coefficient of 0.648 on the public NewsEmp benchmarks."
+   }
+  },
+  {
+   "surface": "Pearson correlation coefficient",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, the RoBERTa pre-trained language model (PLM) trained with noise-reduced labels yields a state-of-the-art Pearson correlation coefficient of 0.648 on the public NewsEmp benchmarks."
+   }
+  },
+  {
+   "surface": "NewsEmp benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, the RoBERTa pre-trained language model (PLM) trained with noise-reduced labels yields a state-of-the-art Pearson correlation coefficient of 0.648 on the public NewsEmp benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMSaaS",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have revolutionised many fields, with LLM-as-a-service (LLMSaaS) offering accessible, general-purpose solutions without costly task-specific training.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "in-vitro applications",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to the widely studied prompt engineering for directly solving tasks (in vivo), this paper explores LLMs' potential for in-vitro applications: using LLM-generated labels to improve supervised training of mainstream models.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "training data augmentation",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We examine two strategies - (1) noisy label correction and (2) training data augmentation - in empathy computing, an emerging task to predict psychology-based questionnaire outcomes from inputs like textual narratives.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLMs-as-a-service (LLMSaaS)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "crowdsourced datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Pearson correlation coefficient"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "RoBERTa pre-trained language model (PLM)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 53654,
+ "eval_count": 760,
+ "ts": "2026-11-21T19:43:29Z"
+}

@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4404783666",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TWIST",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces TWIST (reusing Transferable Weight Increments for Style Text generation), a novel framework to mitigate data scarcity by utilizing style features in weight increments to transfer low-resource styles effectively."
+   }
+  },
+  {
+   "surface": "Style Text Generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces TWIST (reusing Transferable Weight Increments for Style Text generation), a novel framework to mitigate data scarcity by utilizing style features in weight increments to transfer low-resource styles effectively."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Style Text Generation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34648,
+ "eval_count": 151,
+ "ts": "2026-11-21T19:32:46Z"
+}

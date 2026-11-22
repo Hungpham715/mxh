@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4412945553",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Augmentation framework for Social Event Detection (SED-Aug)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this problem, we propose Augmentation framework for Social Event Detection (SED-Aug), a plug-and-play dual augmentation framework, which combines explicit text-based and implicit feature-space augmentation to enhance data diversity and model robustness."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The explicit augmentation utilizes LLMs to enhance textual information through five diverse generation strategies."
+   }
+  },
+  {
+   "surface": "Twitter2012 dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, SED-Aug outperforms the best baseline model by approximately 17.67% on the Twitter2012 dataset and by about 15.57% on the Twitter2018 dataset in terms of the average F1 score."
+   }
+  },
+  {
+   "surface": "Twitter2018 dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, SED-Aug outperforms the best baseline model by approximately 17.67% on the Twitter2012 dataset and by about 15.57% on the Twitter2018 dataset in terms of the average F1 score."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The explicit augmentation utilizes LLMs to enhance textual information through five diverse generation strategies.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Twitter2012 dataset"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Twitter2018 dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24313,
+ "eval_count": 375,
+ "ts": "2026-11-21T20:53:20Z"
+}

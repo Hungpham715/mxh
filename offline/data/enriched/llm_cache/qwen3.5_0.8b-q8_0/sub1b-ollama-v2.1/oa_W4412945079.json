@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4412945079",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing interest in using large language models (LLMs) for planning in natural language, understanding their behaviors becomes an important research question."
+   }
+  },
+  {
+   "surface": "logical reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work conducts a systematic investigation of LLMs’ ability to perform logical reasoning in natural language."
+   }
+  },
+  {
+   "surface": "natural language",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing interest in using large language models (LLMs) for planning in natural language, understanding their behaviors becomes an important research question."
+   }
+  },
+  {
+   "surface": "modal logic",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce a controlled dataset of hypothetical and disjunctive syllogisms in propositional and modal logic and use it as the testbed for understanding LLM performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "modal logic",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce a controlled dataset of hypothetical and disjunctive syllogisms in propositional and modal logic and use it as the testbed for understanding LLM performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "propositional logic"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "logical reasoning"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "propositional logic"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15467,
+ "eval_count": 371,
+ "ts": "2026-11-21T20:36:36Z"
+}

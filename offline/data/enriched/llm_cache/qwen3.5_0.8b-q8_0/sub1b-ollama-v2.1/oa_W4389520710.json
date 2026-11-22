@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4389520710",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HELM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Rescoring all models from HELM, a widely respected living benchmark, for toxicity with the recent version of the API led to a different ranking of widely used foundation models."
+   }
+  },
+  {
+   "surface": "Perspective API",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Similarly, black-box commercially available APIs for detecting toxicity, such as the Perspective API, are not static, but frequently retrained to address any unattended weaknesses and biases."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Perspective API"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18113,
+ "eval_count": 165,
+ "ts": "2026-11-21T16:40:47Z"
+}

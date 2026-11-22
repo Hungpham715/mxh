@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4389325871",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CoLLiE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  },
+  {
+   "surface": "Lion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  },
+  {
+   "surface": "Adan",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  },
+  {
+   "surface": "Sophia",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  },
+  {
+   "surface": "LOMO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  },
+  {
+   "surface": "AdaLomo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Lion",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Adan",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sophia",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LOMO",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "AdaLomo",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces CoLLiE, an efficient library that facilitates collaborative training of large language models using 3D parallelism, parameter-efficient fine-tuning (PEFT) methods, and optimizers such as Lion, Adan, Sophia, LOMO and AdaLomo.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26299,
+ "eval_count": 474,
+ "ts": "2026-11-21T16:10:59Z"
+}

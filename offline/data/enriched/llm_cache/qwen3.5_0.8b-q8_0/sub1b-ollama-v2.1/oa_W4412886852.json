@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4412886852",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ObfusLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we devise ObfusLM, a privacy-preserving MLaaS framework for both classification and generation tasks."
+   }
+  },
+  {
+   "surface": "classification tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, the solutions incur notable decline in model utility and mainly focus on classification tasks, rendering them impractical for real-world applications."
+   }
+  },
+  {
+   "surface": "generation tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we devise ObfusLM, a privacy-preserving MLaaS framework for both classification and generation tasks."
+   }
+  },
+  {
+   "surface": "privacy protection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "ObfusLM leverages a model obfuscation module to achieve privacy protection for both classification and generation tasks."
+   }
+  },
+  {
+   "surface": "model obfuscation module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "ObfusLM leverages a model obfuscation module to achieve privacy protection for both classification and generation tasks."
+   }
+  },
+  {
+   "surface": "(k, \\epsilon)-anonymity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on (k, \\epsilon)-anonymity, ObfusLM includes novel obfuscation algorithms to reach provable security against EIAs."
+   }
+  },
+  {
+   "surface": "embedding inversion attacks (EIAs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Moreover, recent studies reveal that these obfuscation, if not well designed, is susceptible to embedding inversion attacks (EIAs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "classification tasks",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, the solutions incur notable decline in model utility and mainly focus on classification tasks, rendering them impractical for real-world applications.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "generation tasks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we devise ObfusLM, a privacy-preserving MLaaS framework for both classification and generation tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model obfuscation module",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "ObfusLM leverages a model obfuscation module to achieve privacy protection for both classification and generation tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "(k, \\epsilon)-anonymity",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on (k, \\epsilon)-anonymity, ObfusLM includes novel obfuscation algorithms to reach provable security against EIAs.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "privacy protection",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "ObfusLM leverages a model obfuscation module to achieve privacy protection for both classification and generation tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "embedding inversion attacks (EIAs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28617,
+ "eval_count": 592,
+ "ts": "2026-11-21T20:03:25Z"
+}

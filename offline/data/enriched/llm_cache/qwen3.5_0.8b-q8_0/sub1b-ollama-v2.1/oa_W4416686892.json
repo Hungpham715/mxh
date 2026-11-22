@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4416686892",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DistilledPRAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose DistilledPRAG, a generalizable knowledge-distilled parametric RAG model aligned with standard RAG in document structure and parameter activation."
+   }
+  },
+  {
+   "surface": "LoRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Parametric RAG (PRAG) encodes documents as LoRA parameters within LLMs, offering a possible way to reduce exposure of raw content."
+   }
+  },
+  {
+   "surface": "RAG",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The current RAG system requires uploading plaintext documents to the cloud, risking private data leakage."
+   }
+  },
+  {
+   "surface": "QA datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Experiments on four QA datasets show that DistilledPRAG outperforms baselines in accuracy and generalizes well on OOD data."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LoRA",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Parametric RAG (PRAG) encodes documents as LoRA parameters within LLMs, offering a possible way to reduce exposure of raw content.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "RAG",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Then, we mask the plaintext documents with a special token and translate them to LoRA via a parameter generator, maintaining the standard RAG document structure.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "QA datasets",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Experiments on four QA datasets show that DistilledPRAG outperforms baselines in accuracy and generalizes well on OOD data.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "QA datasets"
+ ],
+ "duration_ms": 45532,
+ "eval_count": 283,
+ "ts": "2026-11-21T22:18:10Z"
+}

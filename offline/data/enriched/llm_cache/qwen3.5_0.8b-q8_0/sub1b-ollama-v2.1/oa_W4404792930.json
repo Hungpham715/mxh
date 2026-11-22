@@ -1,0 +1,108 @@
+{
+ "paper_id": "oa:W4404792930",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Utilizing large language models (LLMs) for data augmentation has yielded encouraging results in mathematical reasoning."
+   }
+  },
+  {
+   "surface": "ControlMath",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose ControlMath, an iterative method involving an equation-generator module and two LLM-based agents."
+   }
+  },
+  {
+   "surface": "Problem-Crafter",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The module creates diverse equations, which the Problem-Crafter agent then transforms into math word problems."
+   }
+  },
+  {
+   "surface": "Reverse-Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The Reverse-Agent filters and selects high-quality data, adhering to the “less is more” principle."
+   }
+  },
+  {
+   "surface": "equation-generator module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose ControlMath, an iterative method involving an equation-generator module and two LLM-based agents."
+   }
+  },
+  {
+   "surface": "math word problems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The module creates diverse equations, which the Problem-Crafter agent then transforms into math word problems."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ControlMath",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Utilizing large language models (LLMs) for data augmentation has yielded encouraging results in mathematical reasoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ControlMath",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The module creates diverse equations, which the Problem-Crafter agent then transforms into math word problems.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ControlMath",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose ControlMath, an iterative method involving an equation-generator module and two LLM-based agents.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ControlMath",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The module creates diverse equations, which the Problem-Crafter agent then transforms into math word problems.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ControlMath"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43039,
+ "eval_count": 465,
+ "ts": "2026-11-21T19:36:36Z"
+}

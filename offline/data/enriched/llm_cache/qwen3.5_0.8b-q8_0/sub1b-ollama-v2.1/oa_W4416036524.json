@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4416036524",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CROP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose Contextual Region-Oriented Visual Token Pruning (CROP), a novel framework to compress visual tokens through a two-step process: Localization and Pruning."
+   }
+  },
+  {
+   "surface": "PLC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Subsequently, two distinct strategies are introduced for pruning: (1) Pre-LLM Compression (PLC), which adaptively compresses different image regions with varying ratios, and (2) Inner-LLM Pruning (ILP), a training-free method that prunes tokens within early LLM layers guided by the identified contextual region."
+   }
+  },
+  {
+   "surface": "ILP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Subsequently, two distinct strategies are introduced for pruning: (1) Pre-LLM Compression (PLC), which adaptively compresses different image regions with varying ratios, and (2) Inner-LLM Pruning (ILP), a training-free method that prunes tokens within early LLM layers guided by the identified contextual region."
+   }
+  },
+  {
+   "surface": "VLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Current VLM-based VQA methods often process entire images, leading to excessive visual tokens that include redundant information irrelevant to the posed question."
+   }
+  },
+  {
+   "surface": "VQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Current VLM-based VQA methods often process entire images, leading to excessive visual tokens that include redundant information irrelevant to the posed question."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PLC",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, CROP first employs an efficient model to identify the contextual region relevant to the input query.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ILP",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, CROP first employs an efficient model to identify the contextual region relevant to the input query.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "VLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Current VLM-based VQA methods often process entire images, leading to excessive visual tokens that include redundant information irrelevant to the posed question.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "VQA",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Current VLM-based VQA methods often process entire images, leading to excessive visual tokens that include redundant information irrelevant to the posed question.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47190,
+ "eval_count": 590,
+ "ts": "2026-11-21T21:47:30Z"
+}

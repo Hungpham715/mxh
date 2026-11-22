@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4389519195",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Visually-Asymmetric coNsistenCy Learning (VANCL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a novel Visually-Asymmetric coNsistenCy Learning (VANCL) approach that addresses the above limitation by enhancing the model’s ability to capture fine-grained visual and layout features through the incorporation of color priors."
+   }
+  },
+  {
+   "surface": "LayoutLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results on benchmark datasets show that our approach substantially outperforms the strong LayoutLM series baseline, demonstrating the effectiveness of our approach."
+   }
+  },
+  {
+   "surface": "benchmark datasets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results on benchmark datasets show that our approach substantially outperforms the strong LayoutLM series baseline, demonstrating the effectiveness of our approach."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "benchmark datasets",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results on benchmark datasets show that our approach substantially outperforms the strong LayoutLM series baseline, demonstrating the effectiveness of our approach.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "benchmark datasets"
+ ],
+ "duration_ms": 16936,
+ "eval_count": 152,
+ "ts": "2026-11-21T16:22:14Z"
+}

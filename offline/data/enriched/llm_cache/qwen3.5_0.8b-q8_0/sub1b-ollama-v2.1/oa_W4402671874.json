@@ -1,0 +1,152 @@
+{
+ "paper_id": "oa:W4402671874",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "low-rank approximations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "deep learning models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is no clear consensus yet on how, when and why these approximations are helpful for large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "weight and feature space",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "transformer-based LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we empirically study the efficacy of weight and feature space decomposition in transformer-based LLMs."
+   }
+  },
+  {
+   "surface": "surgical decomposition",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We demonstrate that surgical decomposition not only provides critical insights into the trade-off between compression and language modelling performance, but also sometimes enhances commonsense reasoning performance of LLMs."
+   }
+  },
+  {
+   "surface": "generalization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "latency of inference",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference."
+   }
+  },
+  {
+   "surface": "commonsense reasoning performance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We demonstrate that surgical decomposition not only provides critical insights into the trade-off between compression and language modelling performance, but also sometimes enhances commonsense reasoning performance of LLMs."
+   }
+  },
+  {
+   "surface": "model bias",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, we extend our investigation to the implications of low-rank approximations on model bias."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "transformer-based LLMs",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we empirically study the efficacy of weight and feature space decomposition in transformer-based LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "generalization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "latency of inference",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-rank approximations, of the weight and feature space can enhance the performance of deep learning models, whether in terms of improving generalization or reducing the latency of inference.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model bias",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, we extend our investigation to the implications of low-rank approximations on model bias.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "deep learning models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large language models (LLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "transformer-based LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "commonsense reasoning performance"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 66661,
+ "eval_count": 930,
+ "ts": "2026-11-21T18:16:36Z"
+}

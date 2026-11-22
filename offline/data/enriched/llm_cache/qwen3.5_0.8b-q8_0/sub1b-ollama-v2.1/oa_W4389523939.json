@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4389523939",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Recently, although some studies has been exploring the application of large language models (LLMs) represented by ChatGPT to various downstream tasks, it is still unclear for the ability of ChatGPT to discover and incrementally extent OOD intents."
+   }
+  },
+  {
+   "surface": "OOD intent discovery",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we comprehensively evaluate ChatGPT on OOD intent discovery and GID, and then outline the strengths and weaknesses of ChatGPT."
+   }
+  },
+  {
+   "surface": "generalized intent discovery (GID)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The tasks of out-of-domain (OOD) intent discovery and generalized intent discovery (GID) aim to extend a closed intent classifier to open-world intent sets, which is crucial to task-oriented dialogue (TOD) systems."
+   }
+  },
+  {
+   "surface": "closed intent classifier",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The tasks of out-of-domain (OOD) intent discovery and generalized intent discovery (GID) aim to extend a closed intent classifier to open-world intent sets, which is crucial to task-oriented dialogue (TOD) systems."
+   }
+  },
+  {
+   "surface": "open-world intent sets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The tasks of out-of-domain (OOD) intent discovery and generalized intent discovery (GID) aim to extend a closed intent classifier to open-world intent sets, which is crucial to task-oriented dialogue (TOD) systems."
+   }
+  },
+  {
+   "surface": "task-oriented dialogue (TOD) systems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The tasks of out-of-domain (OOD) intent discovery and generalized intent discovery (GID) aim to extend a closed intent classifier to open-world intent sets, which is crucial to task-oriented dialogue (TOD) systems."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "OOD intent discovery"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "generalized intent discovery (GID)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "closed intent classifier"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "open-world intent sets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task-oriented dialogue (TOD) systems"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34544,
+ "eval_count": 636,
+ "ts": "2026-11-21T16:54:40Z"
+}

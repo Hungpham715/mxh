@@ -1,0 +1,124 @@
+{
+ "paper_id": "oa:W4412889615",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) often struggle to accurately read and comprehend extremely long texts."
+   }
+  },
+  {
+   "surface": "fixed-length chunks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Current methods for improvement typically rely on splitting long contexts into fixed-length chunks."
+   }
+  },
+  {
+   "surface": "variable-length chunks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In particular, we compute semantic similarities between adjacent sentences, using lower similarities to adaptively divide long contexts into variable-length chunks."
+   }
+  },
+  {
+   "surface": "semantic similarities",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In particular, we compute semantic similarities between adjacent sentences, using lower similarities to adaptively divide long contexts into variable-length chunks."
+   }
+  },
+  {
+   "surface": "question-aware classifier",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further train a question-aware classifier to select sensitive chunks that are critical for answering specific questions."
+   }
+  },
+  {
+   "surface": "multi-hop question-answering benchmarks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on both single-hop and multi-hop question-answering benchmarks show that the proposed approach consistently outperforms strong baselines."
+   }
+  },
+  {
+   "surface": "DCS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our datasets and code are available at the following link: https://github.com/ECNU-Text-Computing/DCS"
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "variable-length chunks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In particular, we compute semantic similarities between adjacent sentences, using lower similarities to adaptively divide long contexts into variable-length chunks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "question-aware classifier",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further train a question-aware classifier to select sensitive chunks that are critical for answering specific questions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DCS",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on both single-hop and multi-hop question-answering benchmarks show that the proposed approach consistently outperforms strong baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DCS",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on both single-hop and multi-hop question-answering benchmarks show that the proposed approach consistently outperforms strong baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dynamic separation"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "single-hop question-answering benchmarks"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dynamic separation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30384,
+ "eval_count": 590,
+ "ts": "2026-11-21T20:09:49Z"
+}

@@ -1,0 +1,139 @@
+{
+ "paper_id": "oa:W4404782973",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ranking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Ranking is a fundamental problem in search, however, existing ranking algorithms usually restrict the granularity of ranking to full passages or require a specific dense index for each desired level of granularity."
+   }
+  },
+  {
+   "surface": "granularity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Ranking is a fundamental problem in search, however, existing ranking algorithms usually restrict the granularity of ranking to full passages or require a specific dense index for each desired level of granularity."
+   }
+  },
+  {
+   "surface": "sentence-level ranking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such lack of flexibility in granularity negatively affects many applications that can benefit from more granular ranking, such as sentence-level ranking for open-domain QA, or proposition-level ranking for attribution."
+   }
+  },
+  {
+   "surface": "proposition-level ranking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such lack of flexibility in granularity negatively affects many applications that can benefit from more granular ranking, such as sentence-level ranking for open-domain QA, or proposition-level ranking for attribution."
+   }
+  },
+  {
+   "surface": "any-granularity ranking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity."
+   }
+  },
+  {
+   "surface": "multi-vector embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity."
+   }
+  },
+  {
+   "surface": "single (coarser) level of granularity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity."
+   }
+  },
+  {
+   "surface": "contrastive loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a multi-granular contrastive loss for training multi-vector approaches and validate its utility with both sentences and propositions as ranking units."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "sentence-level ranking",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such lack of flexibility in granularity negatively affects many applications that can benefit from more granular ranking, such as sentence-level ranking for open-domain QA, or proposition-level ranking for attribution.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "proposition-level ranking",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such lack of flexibility in granularity negatively affects many applications that can benefit from more granular ranking, such as sentence-level ranking for open-domain QA, or proposition-level ranking for attribution.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "any-granularity ranking",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-vector embeddings",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "single (coarser) level of granularity",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce the idea of any-granularity ranking which leverages multi-vector embeddings to rank at varying levels of granularity while maintaining encoding at a single (coarser) level of granularity.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive loss",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a multi-granular contrastive loss for training multi-vector approaches and validate its utility with both sentences and propositions as ranking units.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 28000,
+ "eval_count": 551,
+ "ts": "2026-11-21T19:21:38Z"
+}

@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4416035574",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Selective In-Context Steering (SISTER)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In addition, we propose a novel steering method tailored to ICL—Selective In-Context Steering (SISTER)—grounded in recent insights from ICL research that LLMs utilize label words as key anchors."
+   }
+  },
+  {
+   "surface": "Feature Detection through Prompt Variation (FDPV)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Building on this momentum, we present a novel approach that leverages SAEs to enhance the general in-context learning (ICL) performance of LLMs.Specifically, we introduce Feature Detection through Prompt Variation (FDPV), which leverages the SAE’s remarkable ability to capture subtle differences between prompts, enabling efficient feature selection for downstream steering."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Selective In-Context Steering (SISTER)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Selective In-Context Steering (SISTER)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22770,
+ "eval_count": 210,
+ "ts": "2026-11-21T21:14:51Z"
+}

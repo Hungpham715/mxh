@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4389524074",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "First, we use an LLM to hallucinate a minimal DB schema that it deems adequate to answer the query."
+   }
+  },
+  {
+   "surface": "schema",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Existing Text-to-SQL generators require the entire schema to be encoded with the user text."
+   }
+  },
+  {
+   "surface": "dense retrievals",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We use the hallucinated schema to retrieve a subset of the actual schema, by composing the results from multiple dense retrievals."
+   }
+  },
+  {
+   "surface": "SOTA retrieval-based augmentation methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We show that our method leads to significantly higher recall than SOTA retrieval-based augmentation methods."
+   }
+  },
+  {
+   "surface": "SPIDER dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Since no existing benchmarks exist for schema subsetting on large databases, we introduce two benchmarks: (1) A semi-synthetic dataset of 4502 schema elements, by taking a union of schema on the well-known SPIDER dataset, and (2) A real-life benchmark called SocialDB sourced from an actual large data warehouse comprising of 17844 schema elements."
+   }
+  },
+  {
+   "surface": "SocialDB",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Since no existing benchmarks exist for schema subsetting on large databases, we introduce two benchmarks: (1) A semi-synthetic dataset of 4502 schema elements, by taking a union of schema on the well-known SPIDER dataset, and (2) A real-life benchmark called SocialDB sourced from an actual large data warehouse comprising of 17844 schema elements."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SPIDER dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Since no existing benchmarks exist for schema subsetting on large databases, we introduce two benchmarks: (1) A semi-synthetic dataset of 4502 schema elements, by taking a union of schema on the well-known SPIDER dataset, and (2) A real-life benchmark called SocialDB sourced from an actual large data warehouse comprising of 17844 schema elements.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SocialDB",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Since no existing benchmarks exist for schema subsetting on large databases, we introduce two benchmarks: (1) A semi-synthetic dataset of 4502 schema elements, by taking a union of schema on the well-known SPIDER dataset, and (2) A real-life benchmark called SocialDB sourced from an actual large data warehouse comprising of 17844 schema elements.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "schema"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "schema"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21097,
+ "eval_count": 446,
+ "ts": "2026-11-21T16:58:38Z"
+}

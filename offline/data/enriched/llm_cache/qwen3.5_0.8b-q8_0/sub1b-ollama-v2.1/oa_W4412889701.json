@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4412889701",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TaxoAdapt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address these gaps, we propose TaxoAdapt, a framework that dynamically adapts an LLM-generated taxonomy to a given corpus across multiple dimensions."
+   }
+  },
+  {
+   "surface": "LLM-generated taxonomy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address these gaps, we propose TaxoAdapt, a framework that dynamically adapts an LLM-generated taxonomy to a given corpus across multiple dimensions."
+   }
+  },
+  {
+   "surface": "corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Furthermore, recent automatic taxonomy construction methods either (1) over-rely on a specific corpus, sacrificing generalizability, or (2) depend heavily on the general knowledge of large language models (LLMs) contained within their pre-training datasets, often overlooking the dynamic nature of evolving scientific domains."
+   }
+  },
+  {
+   "surface": "scientific literature",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The rapid evolution of scientific fields introduces challenges in organizing and retrieving scientific literature."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM-generated taxonomy",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address these gaps, we propose TaxoAdapt, a framework that dynamically adapts an LLM-generated taxonomy to a given corpus across multiple dimensions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "corpus"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "scientific literature"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38818,
+ "eval_count": 313,
+ "ts": "2026-11-21T20:11:30Z"
+}

@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4404782207",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, large language models (LLMs) have achieved tremendous breakthroughs in the field of NLP, but still lack understanding of their internal neuron activities when processing different languages."
+   }
+  },
+  {
+   "surface": "MoE architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We designed a method to convert dense LLMs into fine-grained MoE architectures, and then visually studied the multilingual activation patterns of LLMs through expert activation frequency heatmaps."
+   }
+  },
+  {
+   "surface": "activation frequency heatmaps",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We designed a method to convert dense LLMs into fine-grained MoE architectures, and then visually studied the multilingual activation patterns of LLMs through expert activation frequency heatmaps."
+   }
+  },
+  {
+   "surface": "expert activation frequencies",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further explored leveraging the discovered differences in expert activation frequencies to guide sparse activation and pruning."
+   }
+  },
+  {
+   "surface": "sparse activation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further explored leveraging the discovered differences in expert activation frequencies to guide sparse activation and pruning."
+   }
+  },
+  {
+   "surface": "pruning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further explored leveraging the discovered differences in expert activation frequencies to guide sparse activation and pruning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MoE architecture",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We designed a method to convert dense LLMs into fine-grained MoE architectures, and then visually studied the multilingual activation patterns of LLMs through expert activation frequency heatmaps.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19405,
+ "eval_count": 497,
+ "ts": "2026-11-21T18:57:00Z"
+}

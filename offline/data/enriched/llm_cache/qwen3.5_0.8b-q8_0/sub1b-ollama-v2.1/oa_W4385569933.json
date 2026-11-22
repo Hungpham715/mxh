@@ -1,0 +1,122 @@
+{
+ "paper_id": "oa:W4385569933",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "pre-trained language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained language models (LMs) are used for knowledge intensive tasks like question answering, but their knowledge gets continuously outdated as the world changes."
+   }
+  },
+  {
+   "surface": "question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained language models (LMs) are used for knowledge intensive tasks like question answering, but their knowledge gets continuously outdated as the world changes."
+   }
+  },
+  {
+   "surface": "knowledge intensive tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained language models (LMs) are used for knowledge intensive tasks like question answering, but their knowledge gets continuously outdated as the world changes."
+   }
+  },
+  {
+   "surface": "targeted updates to LMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Prior work has studied targeted updates to LMs, injecting individual facts and evaluating whether the model learns these facts while not changing predictions on other contexts."
+   }
+  },
+  {
+   "surface": "injected facts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We take a step forward and study LMs’ abilities to make inferences based on injected facts (or propagate those facts): for example, after learning that something is a TV show, does an LM predict that you can watch it?"
+   }
+  },
+  {
+   "surface": "propagate those facts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We take a step forward and study LMs’ abilities to make inferences based on injected facts (or propagate those facts): for example, after learning that something is a TV show, does an LM predict that you can watch it?"
+   }
+  },
+  {
+   "surface": "ECBD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge."
+   }
+  },
+  {
+   "surface": "new controlled benchmark",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge."
+   }
+  },
+  {
+   "surface": "manually designed templates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge."
+   }
+  },
+  {
+   "surface": "varying levels of inference about injected knowledge",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ECBD",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study this with two cloze-style tasks: an existing dataset of real-world sentences about novel entities (ECBD) as well as a new controlled benchmark with manually designed templates requiring varying levels of inference about injected knowledge.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LMs' abilities to make inferences based on injected facts"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question answering"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "targeted updates to LMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "new controlled benchmark"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41897,
+ "eval_count": 576,
+ "ts": "2026-11-21T15:23:42Z"
+}

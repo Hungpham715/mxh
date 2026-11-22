@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W4402671960",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FinTextQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces FinTextQA, a novel dataset for long-form question answering (LFQA) in finance."
+   }
+  },
+  {
+   "surface": "LFQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces FinTextQA, a novel dataset for long-form question answering (LFQA) in finance."
+   }
+  },
+  {
+   "surface": "Baichuan2-7B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The results indicate that: (1) Among all compared generators, Baichuan2-7B competes closely with GPT-3.5-turbo in accuracy score; (2) The most effective system configuration on our dataset involved setting the embedder, retriever, reranker, and generator as Ada2, Automated Merged Retrieval, Bge-Reranker-Base, and Baichuan2-7B, respectively; (3) models are less susceptible to noise after the length of contexts reaching a specific threshold."
+   }
+  },
+  {
+   "surface": "GPT-3.5-turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The results indicate that: (1) Among all compared generators, Baichuan2-7B competes closely with GPT-3.5-turbo in accuracy score; (2) The most effective system configuration on our dataset involved setting the embedder, retriever, reranker, and generator as Ada2, Automated Merged Retrieval, Bge-Reranker-Base, and Baichuan2-7B, respectively; (3) models are less susceptible to noise after the length of contexts reaching a specific threshold."
+   }
+  },
+  {
+   "surface": "Ada2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The results indicate that: (1) Among all compared generators, Baichuan2-7B competes closely with GPT-3.5-turbo in accuracy score; (2) The most effective system configuration on our dataset involved setting the embedder, retriever, reranker, and generator as Ada2, Automated Merged Retrieval, Bge-Reranker-Base, and Baichuan2-7B, respectively; (3) models are less susceptible to noise after the length of contexts reaching a specific threshold."
+   }
+  },
+  {
+   "surface": "Automated Merged Retrieval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The results indicate that: (1) Among all compared generators, Baichuan2-7B competes closely with GPT-3.5-turbo in accuracy score; (2) The most effective system configuration on our dataset involved setting the embedder, retriever, reranker, and generator as Ada2, Automated Merged Retrieval, Bge-Reranker-Base, and Baichuan2-7B, respectively; (3) models are less susceptible to noise after the length of contexts reaching a specific threshold."
+   }
+  },
+  {
+   "surface": "Bge-Reranker-Base",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The results indicate that: (1) Among all compared generators, Baichuan2-7B competes closely with GPT-3.5-turbo in accuracy score; (2) The most effective system configuration on our dataset involved setting the embedder, retriever, reranker, and generator as Ada2, Automated Merged Retrieval, Bge-Reranker-Base, and Baichuan2-7B, respectively; (3) models are less susceptible to noise after the length of contexts reaching a specific threshold."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LFQA",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces FinTextQA, a novel dataset for long-form question answering (LFQA) in finance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "FinTextQA",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces FinTextQA, a novel dataset for long-form question answering (LFQA) in finance.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "FinTextQA",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work introduces FinTextQA, a novel dataset for long-form question answering (LFQA) in finance.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 52677,
+ "eval_count": 475,
+ "ts": "2026-11-21T18:24:21Z"
+}

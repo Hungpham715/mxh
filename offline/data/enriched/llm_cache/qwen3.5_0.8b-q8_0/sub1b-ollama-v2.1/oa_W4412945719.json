@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4412945719",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multimodal Continual Instruction Tuning (MCIT)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Continual Instruction Tuning (MCIT) aims to finetune Multimodal Large Language Models (MLLMs) to continually align with human intent across sequential tasks."
+   }
+  },
+  {
+   "surface": "Multimodal Large Language Models (MLLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Continual Instruction Tuning (MCIT) aims to finetune Multimodal Large Language Models (MLLMs) to continually align with human intent across sequential tasks."
+   }
+  },
+  {
+   "surface": "Mixture-of-Experts (MoE) LoRA framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing approaches often rely on the Mixture-of-Experts (MoE) LoRA framework to preserve previous instruction alignments."
+   }
+  },
+  {
+   "surface": "Catastrophic Forgetting (CF)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these methods are prone to Catastrophic Forgetting (CF), as they aggregate all LoRA blocks via simple summation, which compromises performance over time."
+   }
+  },
+  {
+   "surface": "BranchLoRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on this insight, we propose BranchLoRA, an asymmetric framework to enhance both efficiency and performance."
+   }
+  },
+  {
+   "surface": "MoELoRA framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we identify a critical parameter inefficiency in the MoELoRA framework within the MCIT context."
+   }
+  },
+  {
+   "surface": "latest MCIT benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive experiments on the latest MCIT benchmark demonstrate that BranchLoRA significantly outperforms MoELoRA and maintains its superiority across various MLLM sizes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BranchLoRA",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing approaches often rely on the Mixture-of-Experts (MoE) LoRA framework to preserve previous instruction alignments.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BranchLoRA",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing approaches often rely on the Mixture-of-Experts (MoE) LoRA framework to preserve previous instruction alignments.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "latest MCIT benchmark",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Extensive experiments on the latest MCIT benchmark demonstrate that BranchLoRA significantly outperforms MoELoRA and maintains its superiority across various MLLM sizes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multimodal Large Language Models (MLLMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46087,
+ "eval_count": 566,
+ "ts": "2026-11-21T20:57:25Z"
+}

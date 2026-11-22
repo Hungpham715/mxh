@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4404782072",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "UR 3",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the Retrieval-Augmented Generation (RAG) system, advanced Large Language Models (LLMs) have emerged as effective Query Likelihood Models (QLMs) in an unsupervised way, which re-rank documents based on the probability of generating the query given the content of a document.However, directly prompting LLMs to approximate QLMs inherently is biased, where the estimated distribution might diverge from the actual document-specific distribution.In this study, we introduce a novel framework, UR 3 , which leverages Bayesian decision theory to both quantify and mitigate this estimation bias.Specifically, UR 3 reformulates the problem as maximizing the probability of document generation, thereby harmonizing the optimization of query and document generation probabilities under a unified risk minimization objective.Our empirical results indicate that UR 3 significantly enhances re-ranking, particularly in improving the Top-1 accuracy.It benefits the QA tasks by achieving higher accuracy with fewer input documents."
+   }
+  },
+  {
+   "surface": "Bayesian decision theory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the Retrieval-Augmented Generation (RAG) system, advanced Large Language Models (LLMs) have emerged as effective Query Likelihood Models (QLMs) in an unsupervised way, which re-rank documents based on the probability of generating the query given the content of a document.However, directly prompting LLMs to approximate QLMs inherently is biased, where the estimated distribution might diverge from the actual document-specific distribution.In this study, we introduce a novel framework, UR 3 , which leverages Bayesian decision theory to both quantify and mitigate this estimation bias.Specifically, UR 3 reformulates the problem as maximizing the probability of document generation, thereby harmonizing the optimization of query and document generation probabilities under a unified risk minimization objective.Our empirical results indicate that UR 3 significantly enhances re-ranking, particularly in improving the Top-1 accuracy.It benefits the QA tasks by achieving higher accuracy with fewer input documents."
+   }
+  },
+  {
+   "surface": "Query Likelihood Models (QLMs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the Retrieval-Augmented Generation (RAG) system, advanced Large Language Models (LLMs) have emerged as effective Query Likelihood Models (QLMs) in an unsupervised way, which re-rank documents based on the probability of generating the query given the content of a document.However, directly prompting LLMs to approximate QLMs inherently is biased, where the estimated distribution might diverge from the actual document-specific distribution.In this study, we introduce a novel framework, UR 3 , which leverages Bayesian decision theory to both quantify and mitigate this estimation bias.Specifically, UR 3 reformulates the problem as maximizing the probability of document generation, thereby harmonizing the optimization of query and document generation probabilities under a unified risk minimization objective.Our empirical results indicate that UR 3 significantly enhances re-ranking, particularly in improving the Top-1 accuracy.It benefits the QA tasks by achieving higher accuracy with fewer input documents."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Query Likelihood Models (QLMs)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the Retrieval-Augmented Generation (RAG) system, advanced Large Language Models (LLMs) have emerged as effective Query Likelihood Models (QLMs) in an unsupervised way, which re-rank documents based on the probability of generating the query given the content of a document.However, directly prompting LLMs to approximate QLMs inherently is biased, where the estimated distribution might diverge from the actual document-specific distribution.In this study, we introduce a novel framework, UR 3 , which leverages Bayesian decision theory to both quantify and mitigate this estimation bias.Specifically, UR 3 reformulates the problem as maximizing the probability of document generation, thereby harmonizing the optimization of query and document generation probabilities under a unified risk minimization objective.Our empirical results indicate that UR 3 significantly enhances re-ranking, particularly in improving the Top-1 accuracy.It benefits the QA tasks by achieving higher accuracy with fewer input documents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Bayesian decision theory",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the Retrieval-Augmented Generation (RAG) system, advanced Large Language Models (LLMs) have emerged as effective Query Likelihood Models (QLMs) in an unsupervised way, which re-rank documents based on the probability of generating the query given the content of a document.However, directly prompting LLMs to approximate QLMs inherently is biased, where the estimated distribution might diverge from the actual document-specific distribution.In this study, we introduce a novel framework, UR 3 , which leverages Bayesian decision theory to both quantify and mitigate this estimation bias.Specifically, UR 3 reformulates the problem as maximizing the probability of document generation, thereby harmonizing the optimization of query and document generation probabilities under a unified risk minimization objective.Our empirical results indicate that UR 3 significantly enhances re-ranking, particularly in improving the Top-1 accuracy.It benefits the QA tasks by achieving higher accuracy with fewer input documents.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Query Likelihood Models (QLMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24175,
+ "eval_count": 358,
+ "ts": "2026-11-21T18:55:21Z"
+}

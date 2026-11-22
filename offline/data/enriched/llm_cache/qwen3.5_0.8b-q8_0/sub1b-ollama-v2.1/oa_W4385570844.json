@@ -1,0 +1,43 @@
+{
+ "paper_id": "oa:W4385570844",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "target-side augmentation method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a target-side augmentation method, introducing a data augmentation (DA) model to generate many potential translations for each source document."
+   }
+  },
+  {
+   "surface": "data augmentation (DA) model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a target-side augmentation method, introducing a data augmentation (DA) model to generate many potential translations for each source document."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "machine translation (MT) model"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "machine translation (MT)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "machine translation (MT)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15553,
+ "eval_count": 280,
+ "ts": "2026-11-21T15:34:23Z"
+}

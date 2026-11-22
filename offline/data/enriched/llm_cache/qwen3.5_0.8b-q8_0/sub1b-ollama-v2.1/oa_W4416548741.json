@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416548741",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MCSEO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To mitigate this issue, we propose MCSEO, a method that enhances multimodal sentence embeddings by incorporating fine-grained object-phrase alignment alongside traditional image-caption alignment."
+   }
+  },
+  {
+   "surface": "segmentation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence."
+   }
+  },
+  {
+   "surface": "object detection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence."
+   }
+  },
+  {
+   "surface": "contrastive learning objective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "segmentation",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "object detection",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive learning objective",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, MCSEO utilizes existing segmentation and object detection models to extract accurate object-phrase pairs, which are then used to optimize a contrastive learning objective tailored to object-phrase correspondence.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 38144,
+ "eval_count": 322,
+ "ts": "2026-11-21T22:16:37Z"
+}

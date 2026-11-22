@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385571439",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "attention mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The attention mechanism is a powerful and effective method utilized in natural language processing."
+   }
+  },
+  {
+   "surface": "weight concatenation operation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To verify this hypothesis, we propose a novel weight concatenation operation and evaluate its efficacy in neural machine translation tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "weight concatenation operation",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To verify this hypothesis, we propose a novel weight concatenation operation and evaluate its efficacy in neural machine translation tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 14148,
+ "eval_count": 128,
+ "ts": "2026-11-21T15:45:44Z"
+}

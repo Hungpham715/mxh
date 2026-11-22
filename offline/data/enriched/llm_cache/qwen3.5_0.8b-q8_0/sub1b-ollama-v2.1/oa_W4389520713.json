@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4389520713",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper proposes a practical multimodal video summarization task setting and a dataset to train and evaluate the task."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper proposes a practical multimodal video summarization task setting and a dataset to train and evaluate the task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper proposes a practical multimodal video summarization task setting and a dataset to train and evaluate the task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 11845,
+ "eval_count": 184,
+ "ts": "2026-11-21T16:40:53Z"
+}

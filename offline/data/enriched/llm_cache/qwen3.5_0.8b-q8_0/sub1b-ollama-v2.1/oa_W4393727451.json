@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4393727451",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Leverage Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address the twin hurdles, we introduce \\textbf{Leverage Learning}."
+   }
+  },
+  {
+   "surface": "Token-Efficient Leverage Learning (TELL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present a streamlined implement of this methodology called Token-Efficient Leverage Learning (TELL)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Token-Efficient Leverage Learning (TELL)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present a streamlined implement of this methodology called Token-Efficient Leverage Learning (TELL).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Token-Efficient Leverage Learning (TELL)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30073,
+ "eval_count": 225,
+ "ts": "2026-11-21T17:21:09Z"
+}

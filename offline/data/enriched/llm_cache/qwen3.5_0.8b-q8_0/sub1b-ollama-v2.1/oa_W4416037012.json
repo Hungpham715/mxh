@@ -1,0 +1,99 @@
+{
+ "paper_id": "oa:W4416037012",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Grounded Multimodal Named Entity Recognition (GMNER)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Grounded Multimodal Named Entity Recognition (GMNER), which aims to extract textual entities, their types, and corresponding visual regions from image-text data, has become a critical task in multimodal information extraction."
+   }
+  },
+  {
+   "surface": "Multi-Agent framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To tackle these issues, we propose MAKAR, a Multi-Agent framework based Knowledge-Augmented Reasoning, comprising three agents: Knowledge Enhancement, Entity Correction, and Entity Reasoning Grounding."
+   }
+  },
+  {
+   "surface": "Knowledge-Augmented Reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To tackle these issues, we propose MAKAR, a Multi-Agent framework based Knowledge-Augmented Reasoning, comprising three agents: Knowledge Enhancement, Entity Correction, and Entity Reasoning Grounding."
+   }
+  },
+  {
+   "surface": "Knowledge Enhancement Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, in the named entity recognition phase, the Knowledge Enhancement Agent leverages a Multimodal Large Language Model (MLLM) as an implicit knowledge base to enhance ambiguous image-text content with its internal knowledge."
+   }
+  },
+  {
+   "surface": "Entity Correction Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "For samples with low-confidence entity boundaries and types, the Entity Correction Agent uses web search tools to retrieve and summarize relevant web content, thereby correcting entities using both internal and external knowledge."
+   }
+  },
+  {
+   "surface": "Entity Reasoning Grounding Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In the entity grounding phase, the Entity Reasoning Grounding Agent utilizes multi-step Chain-of-Thought reasoning to perform grounding for each entity."
+   }
+  },
+  {
+   "surface": "Multimodal Large Language Model (MLLM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, in the named entity recognition phase, the Knowledge Enhancement Agent leverages a Multimodal Large Language Model (MLLM) as an implicit knowledge base to enhance ambiguous image-text content with its internal knowledge."
+   }
+  },
+  {
+   "surface": "web search tools",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "For samples with low-confidence entity boundaries and types, the Entity Correction Agent uses web search tools to retrieve and summarize relevant web content, thereby correcting entities using both internal and external knowledge."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multi-Agent framework"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Knowledge-Augmented Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Knowledge-Augmented Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Knowledge-Augmented Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Knowledge-Augmented Reasoning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33162,
+ "eval_count": 581,
+ "ts": "2026-11-21T22:05:49Z"
+}

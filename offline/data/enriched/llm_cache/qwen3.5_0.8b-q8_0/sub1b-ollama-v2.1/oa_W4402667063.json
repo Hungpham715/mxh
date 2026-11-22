@@ -1,0 +1,131 @@
+{
+ "paper_id": "oa:W4402667063",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multimodal Large Language Models (MLLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in diverse tasks across different domains, with an increasing focus on improving their zero-shot generalization capabilities for unseen multimodal tasks."
+   }
+  },
+  {
+   "surface": "Low-Rank Adaption (LoRA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As MLLMs grow in complexity and size, the need for parameter-efficient fine-tuning methods like Low-Rank Adaption (LoRA), which fine-tunes with a minimal set of parameters, becomes essential."
+   }
+  },
+  {
+   "surface": "Conditional Mixture-of-LoRA (MixLoRA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, this paper introduces a novel approach that integrates multimodal instruction tuning with Conditional Mixture-of-LoRA (MixLoRA)."
+   }
+  },
+  {
+   "surface": "Multimodal instruction tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Multimodal instruction tuning has emerged as a successful strategy for achieving zero-shot generalization by fine-tuning pre-trained models on diverse multimodal tasks through instructions."
+   }
+  },
+  {
+   "surface": "Zero-shot generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in diverse tasks across different domains, with an increasing focus on improving their zero-shot generalization capabilities for unseen multimodal tasks."
+   }
+  },
+  {
+   "surface": "Unseen multimodal tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in diverse tasks across different domains, with an increasing focus on improving their zero-shot generalization capabilities for unseen multimodal tasks."
+   }
+  },
+  {
+   "surface": "Multimodal evaluation datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on various multimodal evaluation datasets indicate that MixLoRA not only outperforms the conventional LoRA with the same or even higher ranks, demonstrating its efficacy and adaptability in diverse multimodal tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Conditional Mixture-of-LoRA (MixLoRA)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, this paper introduces a novel approach that integrates multimodal instruction tuning with Conditional Mixture-of-LoRA (MixLoRA).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Zero-shot generalization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in diverse tasks across different domains, with an increasing focus on improving their zero-shot generalization capabilities for unseen multimodal tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Zero-shot generalization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in diverse tasks across different domains, with an increasing focus on improving their zero-shot generalization capabilities for unseen multimodal tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Conditional Mixture-of-LoRA (MixLoRA)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, this paper introduces a novel approach that integrates multimodal instruction tuning with Conditional Mixture-of-LoRA (MixLoRA).",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Multimodal evaluation datasets",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on various multimodal evaluation datasets indicate that MixLoRA not only outperforms the conventional LoRA with the same or even higher ranks, demonstrating its efficacy and adaptability in diverse multimodal tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Multimodal evaluation datasets",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on various multimodal evaluation datasets indicate that MixLoRA not only outperforms the conventional LoRA with the same or even higher ranks, demonstrating its efficacy and adaptability in diverse multimodal tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 61717,
+ "eval_count": 705,
+ "ts": "2026-11-21T17:35:02Z"
+}

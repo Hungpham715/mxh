@@ -1,0 +1,115 @@
+{
+ "paper_id": "oa:W4402684264",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "retrieval pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Upon input claims, RAFTS starts with evidence retrieval, where we design a retrieval pipeline to collect and re-rank relevant documents from verifiable sources."
+   }
+  },
+  {
+   "surface": "contrastive arguments",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then, RAFTS forms contrastive arguments (i.e., supporting or refuting) conditioned on the retrieved evidence."
+   }
+  },
+  {
+   "surface": "embedding model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In addition, RAFTS leverages an embedding model to identify informative demonstrations, followed by in-context prompting to generate the prediction and explanation."
+   }
+  },
+  {
+   "surface": "in-context prompting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In addition, RAFTS leverages an embedding model to identify informative demonstrations, followed by in-context prompting to generate the prediction and explanation."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To combat misinformation, large language models (LLMs) are adapted to automatically verify claim credibility."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Upon input claims, RAFTS starts with evidence retrieval, where we design a retrieval pipeline to collect and re-rank relevant documents from verifiable sources.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then, RAFTS forms contrastive arguments (i.e., supporting or refuting) conditioned on the retrieved evidence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In addition, RAFTS leverages an embedding model to identify informative demonstrations, followed by in-context prompting to generate the prediction and explanation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our method effectively retrieves relevant documents as evidence and evaluates arguments from varying perspectives, incorporating nuanced information for fine-grained decision-making.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Combined with informative in-context examples as prior, RAFTS achieves significant improvements to supervised and LLM baselines without complex prompts.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive arguments",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We demonstrate the effectiveness of our method through extensive experiments, where RAFTS can outperform GPT-based methods with a significantly smaller 7B LLM.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 37517,
+ "eval_count": 569,
+ "ts": "2026-11-21T18:38:59Z"
+}

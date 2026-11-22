@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4404782665",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "H2A",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To tackle this issue, we first introduce the principle that LLMs should follow in tool use scenarios: H2A."
+   }
+  },
+  {
+   "surface": "ToolAlign",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "In addition, we propose ToolAlign, a dataset comprising instruction-tuning data and preference data to align LLMs with the H2A principle for tool use."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, tool use with LLMs has become one of the primary research topics as it can help LLM generate truthful and helpful responses."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ToolAlign",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "In addition, we propose ToolAlign, a dataset comprising instruction-tuning data and preference data to align LLMs with the H2A principle for tool use.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ToolAlign"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22829,
+ "eval_count": 222,
+ "ts": "2026-11-21T19:11:43Z"
+}

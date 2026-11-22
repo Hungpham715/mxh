@@ -1,0 +1,128 @@
+{
+ "paper_id": "oa:W4402671297",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Since the natural language processing (NLP) community started to make large language models (LLMs) act as a critic to evaluate the quality of generated texts, most of the existing works train a critique generation model on the evaluation data labeled by GPT-4’s direct prompting."
+   }
+  },
+  {
+   "surface": "critique generation model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Since the natural language processing (NLP) community started to make large language models (LLMs) act as a critic to evaluate the quality of generated texts, most of the existing works train a critique generation model on the evaluation data labeled by GPT-4’s direct prompting."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Since the natural language processing (NLP) community started to make large language models (LLMs) act as a critic to evaluate the quality of generated texts, most of the existing works train a critique generation model on the evaluation data labeled by GPT-4’s direct prompting."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "After fine-tuning on these data, the resulting model CritiqueLLM is empirically shown to outperform ChatGPT and all the open-source baselines and even achieve comparable evaluation performance to GPT-4 in system-level correlations of pointwise grading."
+   }
+  },
+  {
+   "surface": "Eval-Instruct",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a simple yet effective method called Eval-Instruct, which can first acquire pointwise grading critiques with pseudo references and then revise these critiques via multi-path prompting to obtain informative evaluation data in different tasks and settings, including pointwise grading and pairwise comparison with / without references."
+   }
+  },
+  {
+   "surface": "CritiqueLLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "After fine-tuning on these data, the resulting model CritiqueLLM is empirically shown to outperform ChatGPT and all the open-source baselines and even achieve comparable evaluation performance to GPT-4 in system-level correlations of pointwise grading."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also demonstrate that our generated critiques can act as scalable feedback to further improve the generation quality of strong LLMs like ChatGPT.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Eval-Instruct",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a simple yet effective method called Eval-Instruct, which can first acquire pointwise grading critiques with pseudo references and then revise these critiques via multi-path prompting to obtain informative evaluation data in different tasks and settings, including pointwise grading and pairwise comparison with / without references.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Eval-Instruct",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We observe that these models lack the ability to generate informative critiques in both pointwise grading and pairwise comparison especially without references.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Eval-Instruct",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As a result, their generated critiques cannot provide fine-grained distinguishability on generated texts, causing unsatisfactory evaluation performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Eval-Instruct",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "After fine-tuning on these data, the resulting model CritiqueLLM is empirically shown to outperform ChatGPT and all the open-source baselines and even achieve comparable evaluation performance to GPT-4 in system-level correlations of pointwise grading.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Eval-Instruct",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also demonstrate that our generated critiques can act as scalable feedback to further improve the generation quality of strong LLMs like ChatGPT.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GPT-4"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49227,
+ "eval_count": 730,
+ "ts": "2026-11-21T17:47:25Z"
+}

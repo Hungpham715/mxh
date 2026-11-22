@@ -1,0 +1,149 @@
+{
+ "paper_id": "oa:W4412944744",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "open-domain question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The effectiveness of open-domain question answering (ODQA), particularly those employing a retriever-reader architecture, depends on the ability to recall relevant documents - a critical step that enables the reader to accurately extract answers."
+   }
+  },
+  {
+   "surface": "retriever-reader architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The effectiveness of open-domain question answering (ODQA), particularly those employing a retriever-reader architecture, depends on the ability to recall relevant documents - a critical step that enables the reader to accurately extract answers."
+   }
+  },
+  {
+   "surface": "query expansion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance this retrieval phase, current query expansion (QE) techniques leverage pre-trained language models (PLM) to mitigate word mismatches and improve the recall of relevant documents."
+   }
+  },
+  {
+   "surface": "pre-trained language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance this retrieval phase, current query expansion (QE) techniques leverage pre-trained language models (PLM) to mitigate word mismatches and improve the recall of relevant documents."
+   }
+  },
+  {
+   "surface": "similarity-based model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, ReAL employs a similarity-based model to classify documents into pseudo-relevant and pseudo-irrelevant sets, and then optimizes term weights via two tailored loss functions to maximize the scoring gap between them."
+   }
+  },
+  {
+   "surface": "two tailored loss functions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, ReAL employs a similarity-based model to classify documents into pseudo-relevant and pseudo-irrelevant sets, and then optimizes term weights via two tailored loss functions to maximize the scoring gap between them."
+   }
+  },
+  {
+   "surface": "ODQA datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on four ODQA datasets and five QE methods show that ReAL consistently enhances retrieval accuracy and overall end-to-end QA performance, providing a robust and efficient solution for improving QE strategies in ODQA scenarios."
+   }
+  },
+  {
+   "surface": "five QE methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on four ODQA datasets and five QE methods show that ReAL consistently enhances retrieval accuracy and overall end-to-end QA performance, providing a robust and efficient solution for improving QE strategies in ODQA scenarios."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "open-domain question answering",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The effectiveness of open-domain question answering (ODQA), particularly those employing a retriever-reader architecture, depends on the ability to recall relevant documents - a critical step that enables the reader to accurately extract answers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "query expansion",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance this retrieval phase, current query expansion (QE) techniques leverage pre-trained language models (PLM) to mitigate word mismatches and improve the recall of relevant documents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "query expansion",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance this retrieval phase, current query expansion (QE) techniques leverage pre-trained language models (PLM) to mitigate word mismatches and improve the recall of relevant documents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "query expansion",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, ReAL employs a similarity-based model to classify documents into pseudo-relevant and pseudo-irrelevant sets, and then optimizes term weights via two tailored loss functions to maximize the scoring gap between them.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "query expansion",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, ReAL employs a similarity-based model to classify documents into pseudo-relevant and pseudo-irrelevant sets, and then optimizes term weights via two tailored loss functions to maximize the scoring gap between them.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ODQA datasets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on four ODQA datasets and five QE methods show that ReAL consistently enhances retrieval accuracy and overall end-to-end QA performance, providing a robust and efficient solution for improving QE strategies in ODQA scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ODQA datasets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on four ODQA datasets and five QE methods show that ReAL consistently enhances retrieval accuracy and overall end-to-end QA performance, providing a robust and efficient solution for improving QE strategies in ODQA scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 61318,
+ "eval_count": 792,
+ "ts": "2026-11-21T20:25:52Z"
+}

@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4402684012",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Functional Distributional Semantics (FDS) models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Functional Distributional Semantics (FDS) models the meaning of words by truth-conditional functions."
+   }
+  },
+  {
+   "surface": "Distributional Inclusion Hypothesis (DIH)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we probe into FDS models and study the representations learnt, drawing connections between quantifications, the Distributional Inclusion Hypothesis (DIH), and the variational-autoencoding objective of FDS model training."
+   }
+  },
+  {
+   "surface": "variational-autoencoding objective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we probe into FDS models and study the representations learnt, drawing connections between quantifications, the Distributional Inclusion Hypothesis (DIH), and the variational-autoencoding objective of FDS model training."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Functional Distributional Semantics (FDS) models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further introduce a training objective that both enables hypernymy learning under the reverse of the DIH and improves hypernymy detection from real corpora.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Distributional Inclusion Hypothesis (DIH)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25618,
+ "eval_count": 279,
+ "ts": "2026-11-21T18:36:31Z"
+}

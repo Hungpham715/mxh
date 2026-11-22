@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4402684131",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ViSAGe",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this gap, we introduce the ViSAGe (Visual Stereotypes Around the Globe) dataset to enable the evaluation of known nationality-based stereotypes in T2I models, across 135 nationalities."
+   }
+  },
+  {
+   "surface": "135 nationalities",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this gap, we introduce the ViSAGe (Visual Stereotypes Around the Globe) dataset to enable the evaluation of known nationality-based stereotypes in T2I models, across 135 nationalities."
+   }
+  },
+  {
+   "surface": "Text-to-Image (T2I) model generations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent studies have shown that Text-to-Image (T2I) model generations can reflect social stereotypes present in the real world."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Text-to-Image (T2I) model generations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent studies have shown that Text-to-Image (T2I) model generations can reflect social stereotypes present in the real world.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "135 nationalities",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this gap, we introduce the ViSAGe (Visual Stereotypes Around the Globe) dataset to enable the evaluation of known nationality-based stereotypes in T2I models, across 135 nationalities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-to-Image (T2I) model generations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-to-Image (T2I) model generations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-to-Image (T2I) model generations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39901,
+ "eval_count": 502,
+ "ts": "2026-11-21T18:38:39Z"
+}

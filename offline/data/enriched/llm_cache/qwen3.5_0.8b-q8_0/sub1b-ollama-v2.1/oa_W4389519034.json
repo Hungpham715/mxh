@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4389519034",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HyperLoRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To fill this gap, our method, HyperLoRA, leverages expert linguistic knowledge to enable resource-efficient adaptation via hypernetworks."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) are trained on corpora disproportionally weighted in favor of Standard American English."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15265,
+ "eval_count": 217,
+ "ts": "2026-11-21T16:18:35Z"
+}

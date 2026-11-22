@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4416036569",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GATEAU",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Thus, we propose GATEAU, a novel framework to address the unique challenge of long context alignment by identifying the influential samples enriched with long-range dependency relations."
+   }
+  },
+  {
+   "surface": "long-range dependency relations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Thus, we propose GATEAU, a novel framework to address the unique challenge of long context alignment by identifying the influential samples enriched with long-range dependency relations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "long-range dependency relations",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, GATEAU measures the long-range dependencies from two essential aspects: the difficulty of generating target responses due to the long-range dependencies, and the difficulty of understanding long inputs due to such dependencies.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 14663,
+ "eval_count": 157,
+ "ts": "2026-11-21T21:50:33Z"
+}

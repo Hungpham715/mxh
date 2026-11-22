@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4412945197",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LoRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose DoMIX, a novel approach that addresses these challenges by leveraging LoRA modules, a representative parameter-efficient fine-tuning (PEFT) method."
+   }
+  },
+  {
+   "surface": "DAP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Domain-Adaptive Pre-training (DAP) has recently gained attention for its effectiveness in fine-tuning pre-trained models."
+   }
+  },
+  {
+   "surface": "continual DAP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Building on this, continual DAP has been explored to develop pre-trained models capable of incrementally incorporating different domain datasets."
+   }
+  },
+  {
+   "surface": "DoMIX",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose DoMIX, a novel approach that addresses these challenges by leveraging LoRA modules, a representative parameter-efficient fine-tuning (PEFT) method."
+   }
+  },
+  {
+   "surface": "standard LLM fine-tuning scenarios",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach enables efficient and parallel domain-adaptive pre-training that is robust to domain order and effectively utilizes accumulated knowledge to provide tailored pre-trained models for specific tasks.We also demonstrate that our method can be extended beyond the DAP setting to standard LLM fine-tuning scenarios."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "continual DAP",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Building on this, continual DAP has been explored to develop pre-trained models capable of incrementally incorporating different domain datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "standard LLM fine-tuning scenarios",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach enables efficient and parallel domain-adaptive pre-training that is robust to domain order and effectively utilizes accumulated knowledge to provide tailored pre-trained models for specific tasks.We also demonstrate that our method can be extended beyond the DAP setting to standard LLM fine-tuning scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DAP"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "continual DAP"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "standard LLM fine-tuning scenarios"
+  }
+ ],
+ "auto_added_endpoints": [
+  "standard LLM fine-tuning scenarios"
+ ],
+ "duration_ms": 31125,
+ "eval_count": 488,
+ "ts": "2026-11-21T20:40:43Z"
+}

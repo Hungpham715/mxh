@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385571224",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "parameter isolation strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our proposed method applies the parameter isolation strategy."
+   }
+  },
+  {
+   "surface": "non-parametric method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To load correct parameters at testing time, we introduce a simple yet effective non-parametric method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "non-parametric method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To load correct parameters at testing time, we introduce a simple yet effective non-parametric method.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 36040,
+ "eval_count": 135,
+ "ts": "2026-11-21T15:42:48Z"
+}

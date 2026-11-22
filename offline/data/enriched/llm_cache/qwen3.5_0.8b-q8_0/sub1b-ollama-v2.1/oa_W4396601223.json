@@ -1,0 +1,112 @@
+{
+ "paper_id": "oa:W4396601223",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Clover",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a new speculative decoding algorithm, Clover, which integrates sequential knowledge into the parallel decoding process."
+   }
+  },
+  {
+   "surface": "Regressive Connection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Clover transmits the sequential knowledge from pre-speculated tokens via the Regressive Connection, then employs an Attention Decoder to integrate these speculated tokens."
+   }
+  },
+  {
+   "surface": "Attention Decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Clover transmits the sequential knowledge from pre-speculated tokens via the Regressive Connection, then employs an Attention Decoder to integrate these speculated tokens."
+   }
+  },
+  {
+   "surface": "Augmenting Block",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Additionally, Clover incorporates an Augmenting Block that modifies the hidden states to better align with the purpose of speculative generation rather than next token prediction."
+   }
+  },
+  {
+   "surface": "Baichuan-Small",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively."
+   }
+  },
+  {
+   "surface": "Baichuan-Large",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Regressive Connection",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Clover transmits the sequential knowledge from pre-speculated tokens via the Regressive Connection, then employs an Attention Decoder to integrate these speculated tokens.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Attention Decoder",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Additionally, Clover incorporates an Augmenting Block that modifies the hidden states to better align with the purpose of speculative generation rather than next token prediction.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Baichuan-Small",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Baichuan-Large",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "The experiment results demonstrate that Clover outperforms the baseline by up to 91% on Baichuan-Small and 146% on Baichuan-Large, respectively, and exceeds the performance of the previously top-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on Baichuan-Large, respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Baichuan-Small"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Baichuan-Large"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49751,
+ "eval_count": 611,
+ "ts": "2026-11-21T17:21:02Z"
+}

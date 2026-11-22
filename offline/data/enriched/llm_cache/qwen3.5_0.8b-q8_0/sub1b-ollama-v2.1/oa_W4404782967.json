@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4404782967",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "static method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a static method for pinpointing significant neurons."
+   }
+  },
+  {
+   "surface": "query neurons",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, since most static methods typically only identify “value neurons” directly contributing to the final prediction, we propose a method for identifying “query neurons” which activate these “value neurons”."
+   }
+  },
+  {
+   "surface": "value neurons",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, since most static methods typically only identify “value neurons” directly contributing to the final prediction, we propose a method for identifying “query neurons” which activate these “value neurons”."
+   }
+  },
+  {
+   "surface": "knowledge",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, we apply our methods to analyze six types of knowledge across both attention and feed-forward network (FFN) layers."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "query neurons",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, since most static methods typically only identify “value neurons” directly contributing to the final prediction, we propose a method for identifying “query neurons” which activate these “value neurons”.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19330,
+ "eval_count": 238,
+ "ts": "2026-11-21T19:21:19Z"
+}

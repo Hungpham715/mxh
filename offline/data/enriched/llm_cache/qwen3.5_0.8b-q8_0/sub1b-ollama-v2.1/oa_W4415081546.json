@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4415081546",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With the advent of large language models (LLMs), which now rival human capabilities in various domains, we are presented with a unique testbed to investigate human cognition through a new lens."
+   }
+  },
+  {
+   "surface": "metaphorical reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We begin by exploring metaphorical reasoning, comparing how LLMs and humans associate abstract words with concrete objects of varying sizes."
+   }
+  },
+  {
+   "surface": "semantic size",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Among the many facets of cognition, one particularly crucial aspect is the concept of semantic size, the perceived magnitude of both abstract and concrete words or concepts."
+   }
+  },
+  {
+   "surface": "human cognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With the advent of large language models (LLMs), which now rival human capabilities in various domains, we are presented with a unique testbed to investigate human cognition through a new lens."
+   }
+  },
+  {
+   "surface": "multi-modal training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our findings reveal that multi-modal training is crucial for LLMs to achieve more human-like understanding, suggesting that real-world, multi-modal experiences are similarly vital for human cognitive development."
+   }
+  },
+  {
+   "surface": "attention-grabbing headlines",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Lastly, we examine whether LLMs are influenced by attention-grabbing headlines with larger semantic sizes in a real-world web shopping scenario."
+   }
+  },
+  {
+   "surface": "web shopping scenario",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Lastly, we examine whether LLMs are influenced by attention-grabbing headlines with larger semantic sizes in a real-world web shopping scenario."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-modal training",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We begin by exploring metaphorical reasoning, comparing how LLMs and humans associate abstract words with concrete objects of varying sizes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "semantic size"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "human cognition"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-modal training"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "attention-grabbing headlines"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "web shopping scenario"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46661,
+ "eval_count": 668,
+ "ts": "2026-11-21T21:04:15Z"
+}

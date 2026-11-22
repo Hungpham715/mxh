@@ -1,0 +1,105 @@
+{
+ "paper_id": "oa:W4402672084",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Crayon",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these restrictions, we first propose Crayon, a novel approach for on-device LLM customization."
+   }
+  },
+  {
+   "surface": "adapter",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Crayon begins by constructing a pool of diverse base adapters, and then we instantly blend them into a customized adapter without extra training."
+   }
+  },
+  {
+   "surface": "base adapters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Crayon begins by constructing a pool of diverse base adapters, and then we instantly blend them into a customized adapter without extra training."
+   }
+  },
+  {
+   "surface": "device-server hybrid inference strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In addition, we develop a device-server hybrid inference strategy, which deftly allocates more demanding queries or non-customized tasks to a larger, more capable LLM on a server."
+   }
+  },
+  {
+   "surface": "LLM customization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these restrictions, we first propose Crayon, a novel approach for on-device LLM customization."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adapter",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these restrictions, we first propose Crayon, a novel approach for on-device LLM customization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "base adapters",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Crayon begins by constructing a pool of diverse base adapters, and then we instantly blend them into a customized adapter without extra training.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adapter",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In addition, we develop a device-server hybrid inference strategy, which deftly allocates more demanding queries or non-customized tasks to a larger, more capable LLM on a server.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "device-server hybrid inference strategy",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "This ensures optimal performance without sacrificing the benefits of on-device customization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM customization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The customization of large language models (LLMs) for user-specified tasks gets important.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 39769,
+ "eval_count": 449,
+ "ts": "2026-11-21T18:32:26Z"
+}

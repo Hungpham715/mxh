@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4411301046",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "COLDSELECT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose COLDSELECT, a joint verbalizer and instance selection approach that models data diversity."
+   }
+  },
+  {
+   "surface": "masked language modeling (MLM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data."
+   }
+  },
+  {
+   "surface": "prompt-based methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data."
+   }
+  },
+  {
+   "surface": "data diversity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose COLDSELECT, a joint verbalizer and instance selection approach that models data diversity."
+   }
+  },
+  {
+   "surface": "cold-start scenarios",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on eight benchmarks demonstrate COLDSELECT's superiority in reducing uncertainty and enhancing generalization, outperforming baselines in verbalizer and few-shot instance selection for cold-start scenarios."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "masked language modeling (MLM)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt-based methods",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt-based methods",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt-based methods",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based methods leverage the knowledge of pre-trained language models (PLMs) trained with a masked language modeling (MLM) objective; however, these methods are sensitive to template, verbalizer, and few-shot instance selection, particularly in cold-start settings with no labeled data.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 20592,
+ "eval_count": 431,
+ "ts": "2026-11-21T19:56:06Z"
+}

@@ -1,0 +1,108 @@
+{
+ "paper_id": "oa:W4404782475",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "in-context learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Understanding in-context learning (ICL) capability that enables large language models (LLMs) to excel in proficiency through demonstration examples is of utmost importance."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Understanding in-context learning (ICL) capability that enables large language models (LLMs) to excel in proficiency through demonstration examples is of utmost importance."
+   }
+  },
+  {
+   "surface": "proficiency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Understanding in-context learning (ICL) capability that enables large language models (LLMs) to excel in proficiency through demonstration examples is of utmost importance."
+   }
+  },
+  {
+   "surface": "demonstration examples",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Understanding in-context learning (ICL) capability that enables large language models (LLMs) to excel in proficiency through demonstration examples is of utmost importance."
+   }
+  },
+  {
+   "surface": "truthfulness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This importance stems not only from the better utilization of this capability across various tasks, but also from the proactive identification and mitigation of potential risks, including concerns regarding truthfulness, bias, and toxicity, that may arise alongside the capability."
+   }
+  },
+  {
+   "surface": "bias",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This importance stems not only from the better utilization of this capability across various tasks, but also from the proactive identification and mitigation of potential risks, including concerns regarding truthfulness, bias, and toxicity, that may arise alongside the capability."
+   }
+  },
+  {
+   "surface": "toxicity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This importance stems not only from the better utilization of this capability across various tasks, but also from the proactive identification and mitigation of potential risks, including concerns regarding truthfulness, bias, and toxicity, that may arise alongside the capability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "proficiency",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This importance stems not only from the better utilization of this capability across various tasks, but also from the proactive identification and mitigation of potential risks, including concerns regarding truthfulness, bias, and toxicity, that may arise alongside the capability.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large language models",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This importance stems not only from the better utilization of this capability across various tasks, but also from the proactive identification and mitigation of potential risks, including concerns regarding truthfulness, bias, and toxicity, that may arise alongside the capability.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "proficiency"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "truthfulness"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "bias"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "toxicity"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39118,
+ "eval_count": 727,
+ "ts": "2026-11-21T19:07:41Z"
+}

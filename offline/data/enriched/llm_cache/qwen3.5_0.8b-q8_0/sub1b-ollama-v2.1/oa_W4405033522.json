@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4405033522",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper introduces a novel framework designed to autonomously evaluate the robustness of LLMs by incorporating refined adversarial prompts and domain-constrained knowledge guidelines in the form of knowledge graphs."
+   }
+  },
+  {
+   "surface": "knowledge graph",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper introduces a novel framework designed to autonomously evaluate the robustness of LLMs by incorporating refined adversarial prompts and domain-constrained knowledge guidelines in the form of knowledge graphs."
+   }
+  },
+  {
+   "surface": "adversarial prompts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper introduces a novel framework designed to autonomously evaluate the robustness of LLMs by incorporating refined adversarial prompts and domain-constrained knowledge guidelines in the form of knowledge graphs."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Traditional methods for evaluating the robustness of large language models (LLMs) often rely on standardized benchmarks, which can escalate costs and limit evaluations across varied domains."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We assess the effectiveness of our framework through extensive testing on both proprietary models like ChatGPT and open-source models such as Llama-3.1, Phi-3, and Mistral."
+   }
+  },
+  {
+   "surface": "Llama-3.1",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We assess the effectiveness of our framework through extensive testing on both proprietary models like ChatGPT and open-source models such as Llama-3.1, Phi-3, and Mistral."
+   }
+  },
+  {
+   "surface": "Phi-3",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We assess the effectiveness of our framework through extensive testing on both proprietary models like ChatGPT and open-source models such as Llama-3.1, Phi-3, and Mistral."
+   }
+  },
+  {
+   "surface": "Mistral",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We assess the effectiveness of our framework through extensive testing on both proprietary models like ChatGPT and open-source models such as Llama-3.1, Phi-3, and Mistral."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28447,
+ "eval_count": 657,
+ "ts": "2026-11-21T19:40:24Z"
+}

@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4385570534",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose DIP (Dead code Insertion based Black-box Attack for Programming Language Model), a high-performance and effective black-box attack method to generate adversarial examples using dead code insertion."
+   }
+  },
+  {
+   "surface": "CodeBERT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large pre-trained Programming Language (PL) models (such as CodeBERT, GraphCodeBERT, CodeT5, etc.), show very powerful performance on these tasks."
+   }
+  },
+  {
+   "surface": "GraphCodeBERT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large pre-trained Programming Language (PL) models (such as CodeBERT, GraphCodeBERT, CodeT5, etc.), show very powerful performance on these tasks."
+   }
+  },
+  {
+   "surface": "CodeT5",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large pre-trained Programming Language (PL) models (such as CodeBERT, GraphCodeBERT, CodeT5, etc.), show very powerful performance on these tasks."
+   }
+  },
+  {
+   "surface": "adversarial examples",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, these PL models are vulnerable to adversarial examples that are generated with slight perturbation."
+   }
+  },
+  {
+   "surface": "compilable",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Unlike natural language, an adversarial example of code must be semantic-preserving and compilable."
+   }
+  },
+  {
+   "surface": "semantic-preserving",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Unlike natural language, an adversarial example of code must be semantic-preserving and compilable."
+   }
+  },
+  {
+   "surface": "compiled preserving semantic functionality",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our method outperforms the state-of-the-art black-box attack in both attack efficiency and attack quality, while generated adversarial examples are compiled preserving semantic functionality."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "compilable",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Due to the requirements, it is hard to directly apply the existing attack methods for natural language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic-preserving",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Unlike natural language, an adversarial example of code must be semantic-preserving and compilable.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "compiled preserving semantic functionality",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our method outperforms the state-of-the-art black-box attack in both attack efficiency and attack quality, while generated adversarial examples are compiled preserving semantic functionality.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CodeBERT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GraphCodeBERT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CodeT5"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "adversarial examples"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30741,
+ "eval_count": 724,
+ "ts": "2026-11-21T15:31:51Z"
+}

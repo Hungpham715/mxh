@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4416035167",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, autonomous agents built on large language models (LLMs) have experienced significant development and are being deployed in real-world applications."
+   }
+  },
+  {
+   "surface": "attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new type of attack that causes malfunctions by misleading the agent into executing repetitive or irrelevant actions."
+   }
+  },
+  {
+   "surface": "malfunction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new type of attack that causes malfunctions by misleading the agent into executing repetitive or irrelevant actions."
+   }
+  },
+  {
+   "surface": "repetitive or irrelevant actions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new type of attack that causes malfunctions by misleading the agent into executing repetitive or irrelevant actions."
+   }
+  },
+  {
+   "surface": "self-examination defense methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To mitigate such attacks, we propose self-examination defense methods."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "attack"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "malfunction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "self-examination defense methods"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33206,
+ "eval_count": 420,
+ "ts": "2026-11-21T21:06:31Z"
+}

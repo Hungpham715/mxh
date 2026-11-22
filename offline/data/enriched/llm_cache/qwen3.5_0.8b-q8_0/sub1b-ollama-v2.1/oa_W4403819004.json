@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4403819004",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "multi-agent simulation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper explores designing artificial organizations with professional behavior in investments using a multi-agent simulation."
+   }
+  },
+  {
+   "surface": "hierarchical decision-making",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The method mimics hierarchical decision-making in investment firms, using news articles to inform decisions."
+   }
+  },
+  {
+   "surface": "news articles",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The method mimics hierarchical decision-making in investment firms, using news articles to inform decisions."
+   }
+  },
+  {
+   "surface": "professional traders' decisions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A large-scale study analyzing over 115,000 news articles of 300 companies across 15 years compared this approach against professional traders' decisions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "hierarchical decision-making",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The method mimics hierarchical decision-making in investment firms, using news articles to inform decisions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-agent simulation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-agent simulation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28120,
+ "eval_count": 337,
+ "ts": "2026-11-21T18:48:43Z"
+}

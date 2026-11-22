@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4389518671",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Rewrite-Retrieve-Read",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work introduces a new framework, Rewrite-Retrieve-Read instead of the previous retrieve-then-read for the retrieval-augmented LLMs from the perspective of the query rewriting."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) play powerful, black-box readers in the retrieve-then-read pipeline, making remarkable progress in knowledge-intensive tasks."
+   }
+  },
+  {
+   "surface": "web search engine",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first prompt an LLM to generate the query, then use a web search engine to retrieve contexts."
+   }
+  },
+  {
+   "surface": "small language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "A small language model is adopted as a trainable rewriter to cater to the black-box LLM reader."
+   }
+  },
+  {
+   "surface": "reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The rewriter is trained using the feedback of the LLM reader by reinforcement learning."
+   }
+  },
+  {
+   "surface": "open-domain QA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Evaluation is conducted on downstream tasks, open-domain QA and multiple-choice QA."
+   }
+  },
+  {
+   "surface": "multiple-choice QA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Evaluation is conducted on downstream tasks, open-domain QA and multiple-choice QA."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work introduces a new framework, Rewrite-Retrieve-Read instead of the previous retrieve-then-read for the retrieval-augmented LLMs from the perspective of the query rewriting.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "web search engine",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Furthermore, to better align the query to the frozen modules, we propose a trainable scheme for our pipeline.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "small language model",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Furthermore, to better align the query to the frozen modules, we propose a trainable scheme for our pipeline.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "reinforcement learning",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The rewriter is trained using the feedback of the LLM reader by reinforcement learning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "open-domain QA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multiple-choice QA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31262,
+ "eval_count": 649,
+ "ts": "2026-11-21T16:11:54Z"
+}

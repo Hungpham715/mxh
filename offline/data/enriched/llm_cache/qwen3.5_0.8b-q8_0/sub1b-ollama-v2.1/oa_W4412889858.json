@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4412889858",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MoNIM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on recent interpretability theories of LMs, we reconceptualize the non-parametric memory represented by kNN-LM as a learnable Mixture-of-Neighbors Induction Memory (MoNIM), which synergizes the induction capabilities of attention heads with the memorization strength of feed-forward networks (FFN)."
+   }
+  },
+  {
+   "surface": "Transformer",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By integrating into the model’s information flow, MoNIM functions as an FFN-like bypass layer within the Transformer architecture, enabling effective learning of new knowledge."
+   }
+  },
+  {
+   "surface": "kNN-LM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on recent interpretability theories of LMs, we reconceptualize the non-parametric memory represented by kNN-LM as a learnable Mixture-of-Neighbors Induction Memory (MoNIM), which synergizes the induction capabilities of attention heads with the memorization strength of feed-forward networks (FFN)."
+   }
+  },
+  {
+   "surface": "Attention Heads",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on recent interpretability theories of LMs, we reconceptualize the non-parametric memory represented by kNN-LM as a learnable Mixture-of-Neighbors Induction Memory (MoNIM), which synergizes the induction capabilities of attention heads with the memorization strength of feed-forward networks (FFN)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By integrating into the model’s information flow, MoNIM functions as an FFN-like bypass layer within the Transformer architecture, enabling effective learning of new knowledge.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MoNIM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MoNIM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30149,
+ "eval_count": 375,
+ "ts": "2026-11-21T20:19:19Z"
+}

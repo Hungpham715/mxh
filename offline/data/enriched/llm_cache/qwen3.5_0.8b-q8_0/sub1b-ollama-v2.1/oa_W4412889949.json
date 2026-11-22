@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412889949",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "crowdsourcing study",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To do so, we compile an inventory of interventions grounded both in prior literature and a crowdsourcing study where participants edited system outputs to make them less human-like."
+   }
+  },
+  {
+   "surface": "system outputs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "How to intervene on such system outputs to mitigate anthropomorphic behaviors and their attendant harmful outcomes, however, remains understudied."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "system outputs",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To do so, we compile an inventory of interventions grounded both in prior literature and a crowdsourcing study where participants edited system outputs to make them less human-like.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "system outputs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19139,
+ "eval_count": 181,
+ "ts": "2026-11-21T20:22:10Z"
+}

@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4417504446",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "simulation deduction plays",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  },
+  {
+   "surface": "traditional manual analysis approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional manual analysis approach is time-consuming and limited by human errors."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To enhance efficiency and accuracy, large language models (LLMs) with strong analytical and inferencing capabilities can be employed."
+   }
+  },
+  {
+   "surface": "performance evaluation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "performance evaluation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Data analysis and performance evaluation of simulation deduction plays a pivotal role in modern warfare, which enables military personnel to gain invaluable insights into the potential effectiveness of different strategies, tactics, and operational plans.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "simulation deduction plays"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "simulation deduction plays"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "simulation deduction plays"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23094,
+ "eval_count": 443,
+ "ts": "2026-11-21T22:26:24Z"
+}

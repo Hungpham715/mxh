@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4389519370",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PoemSum",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As a starting, we propose the first-ever dataset for this task, named ‘PoemSum’, consisting of 3011 samples of poetry and its corresponding summarized interpretation in the English language."
+   }
+  },
+  {
+   "surface": "Poet",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Poetry as a creative art form has existed for generations, and summarization of such content requires deciphering the figurative patterns to find out the actual intent and message of the poet."
+   }
+  },
+  {
+   "surface": "Literal Meaning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Unlike typical text, summarization of poems is a challenging task as poems carry a deeper meaning, which can be easily lost if only the literal meaning is considered."
+   }
+  },
+  {
+   "surface": "Figurative Patterns",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Poetry as a creative art form has existed for generations, and summarization of such content requires deciphering the figurative patterns to find out the actual intent and message of the poet."
+   }
+  },
+  {
+   "surface": "Poetry",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Poetry as a creative art form has existed for generations, and summarization of such content requires deciphering the figurative patterns to find out the actual intent and message of the poet."
+   }
+  },
+  {
+   "surface": "Summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Poetry as a creative art form has existed for generations, and summarization of such content requires deciphering the figurative patterns to find out the actual intent and message of the poet."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "PoemSum",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We have benchmarked the performance of different state-of-the-art summarization models and provided observations on their limitations.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PoemSum"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Poet"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Poet"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Poet"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41926,
+ "eval_count": 531,
+ "ts": "2026-11-21T16:25:13Z"
+}

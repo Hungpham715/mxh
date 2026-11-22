@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W7125966513",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Cross-Lingual SynthDocs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-Lingual SynthDocs is a large-scale synthetic corpus designed to address the scarcity of Arabic resources for Optical Character Recognition (OCR) and Document Understanding (DU)."
+   }
+  },
+  {
+   "surface": "Qwen-2.5-VL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Finetuning Qwen-2.5-VL on SynthDocs yields consistent improvements in Word Error Rate (WER) and Character Error Rate (CER) in terms of OCR across multiple public Arabic benchmarks, Tree-Edit Distance Similarity (TEDS) and Chart Extraction Score (CharTeX) improved as well in other modalities."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Qwen-2.5-VL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33015,
+ "eval_count": 164,
+ "ts": "2026-11-21T22:34:20Z"
+}

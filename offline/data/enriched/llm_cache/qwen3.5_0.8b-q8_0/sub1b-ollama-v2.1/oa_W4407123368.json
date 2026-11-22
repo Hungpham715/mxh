@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4407123368",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CPTR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A novel approach, Context-Preserving Tensorial Reconfiguration (CPTR), enables dynamic reorganization of weight tensors through structured factorization and adaptive contraction, allowing for enhanced contextual integration without substantial computational overhead."
+   }
+  },
+  {
+   "surface": "Tensorial operations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Tensorial operations have provided a foundation for restructuring model representations, yet conventional architectures have struggled to incorporate such techniques without introducing excessive complexity."
+   }
+  },
+  {
+   "surface": "Context-Preserving Tensorial Reconfiguration (CPTR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A novel approach, Context-Preserving Tensorial Reconfiguration (CPTR), enables dynamic reorganization of weight tensors through structured factorization and adaptive contraction, allowing for enhanced contextual integration without substantial computational overhead."
+   }
+  },
+  {
+   "surface": "long-context tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Empirical evaluations demonstrate that CPTR improves coherence retention across extended sequences, leading to measurable reductions in perplexity and improved recall accuracy for long-context tasks."
+   }
+  },
+  {
+   "surface": "language generation fluency",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Performance comparisons reveal that CPTR-enhanced models exhibit greater computational efficiency and reduced memory consumption while maintaining competitive language generation fluency and accuracy."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CPTR",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A novel approach, Context-Preserving Tensorial Reconfiguration (CPTR), enables dynamic reorganization of weight tensors through structured factorization and adaptive contraction, allowing for enhanced contextual integration without substantial computational overhead.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "long-context tasks",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A novel approach, Context-Preserving Tensorial Reconfiguration (CPTR), enables dynamic reorganization of weight tensors through structured factorization and adaptive contraction, allowing for enhanced contextual integration without substantial computational overhead.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "language generation fluency",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Performance comparisons reveal that CPTR-enhanced models exhibit greater computational efficiency and reduced memory consumption while maintaining competitive language generation fluency and accuracy.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long-context tasks"
+  }
+ ],
+ "auto_added_endpoints": [
+  "long-context tasks",
+  "language generation fluency"
+ ],
+ "duration_ms": 46880,
+ "eval_count": 365,
+ "ts": "2026-11-21T19:49:41Z"
+}

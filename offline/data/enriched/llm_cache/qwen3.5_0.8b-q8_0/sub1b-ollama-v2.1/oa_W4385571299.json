@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4385571299",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Stylized Visual Storytelling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce a new task of Stylized Visual Storytelling (SVST), which aims to describe a photo stream with stylized stories that are more expressive and attractive."
+   }
+  },
+  {
+   "surface": "StyleVSG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a multitasking memory-augmented framework called StyleVSG, which is jointly trained on factual visual storytelling data and unpaired style corpus, achieving a trade-off between style accuracy and visual relevance."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Stylized Visual Storytelling"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Stylized Visual Storytelling"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20718,
+ "eval_count": 228,
+ "ts": "2026-11-21T15:43:25Z"
+}

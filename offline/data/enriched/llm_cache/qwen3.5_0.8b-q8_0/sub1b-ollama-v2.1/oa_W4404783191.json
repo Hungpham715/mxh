@@ -1,0 +1,116 @@
+{
+ "paper_id": "oa:W4404783191",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Cognitive Relevance Principle",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners."
+   }
+  },
+  {
+   "surface": "cognitive relevance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners."
+   }
+  },
+  {
+   "surface": "processing effort",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners."
+   }
+  },
+  {
+   "surface": "emotional support agents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this gap, we integrate the “Cognitive Relevance Principle” into emotional support agents in the environment of multi-turn conversation."
+   }
+  },
+  {
+   "surface": "multi-turn conversation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this gap, we integrate the “Cognitive Relevance Principle” into emotional support agents in the environment of multi-turn conversation."
+   }
+  },
+  {
+   "surface": "baseline systems",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The results demonstrate a significant and robust improvement against the baseline systems with respect to response quality, human-likedness and supportivenss."
+   }
+  },
+  {
+   "surface": "Relevance Principle",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Cognitive Relevance Principle",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Cognitive Relevance Principle",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As outlined in the gist of “Cognitive Relevance Principle”, helpful speakers should optimize the “cognitive relevance” through maximizing the “cognitive effects” and minimizing the “processing effort” imposed on listeners.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "effect-effort tradeoff"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "effect-effort tradeoff"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "emotional support agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "emotional support agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Relevance Principle"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "emotional support agents"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45239,
+ "eval_count": 781,
+ "ts": "2026-11-21T19:27:36Z"
+}

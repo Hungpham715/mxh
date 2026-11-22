@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4387185403",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Siamese Representation Learning for Unsupervised Relation Extraction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To tackle this problem, we propose Siamese Representation Learning for Unsupervised Relation Extraction -- a novel framework to simply leverage positive pairs to representation learning, possessing the capability to effectively optimize relation representation of instances and retain hierarchical information in relational feature space."
+   }
+  },
+  {
+   "surface": "Unsupervised Relation Extraction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Unsupervised relation extraction (URE) aims at discovering underlying relations between named entity pairs from open-domain plain text without prior information on relational distribution."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Unsupervised Relation Extraction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Unsupervised Relation Extraction"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20039,
+ "eval_count": 234,
+ "ts": "2026-11-21T16:04:14Z"
+}

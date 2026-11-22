@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4412945300",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GALLa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we take the best of both worlds with GALLa - Graph Aligned Large Language Models."
+   }
+  },
+  {
+   "surface": "Graph Aligned Large Language Models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we take the best of both worlds with GALLa - Graph Aligned Large Language Models."
+   }
+  },
+  {
+   "surface": "Transformer architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Conversely, models that do encode structural information of code make modifications to the Transformer architecture, limiting their scale and compatibility with pretrained LLMs."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Conversely, models that do encode structural information of code make modifications to the Transformer architecture, limiting their scale and compatibility with pretrained LLMs."
+   }
+  },
+  {
+   "surface": "code tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on five code tasks with six different baseline LLMs ranging in size from 350M to 14B validate the effectiveness of GALLa, demonstrating consistent improvement over the baseline, even for powerful models such as LLaMA3 and Qwen2.5-Coder."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer architecture",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "GALLa utilizes graph neural networks and cross-modal alignment technologies to inject the structural information of code into LLMs as an auxiliary task during finetuning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "code tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "code tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39923,
+ "eval_count": 374,
+ "ts": "2026-11-21T20:43:52Z"
+}

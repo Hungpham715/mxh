@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4416035636",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Retrieval Augmented Generation enhances LLM accuracy by adding passages retrieved from an external corpus to the LLM prompt."
+   }
+  },
+  {
+   "surface": "corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Retrieval Augmented Generation enhances LLM accuracy by adding passages retrieved from an external corpus to the LLM prompt."
+   }
+  },
+  {
+   "surface": "benchmark",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Through extensive experiments on three benchmarks, we show how state-of-the-art retrieval pipelines, while attempting to retrieve relevant passages, systematically bring highly distracting ones to the top ranks, with over 60% of queries containing at least one highly distracting passage among the top-10 retrieved passages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "corpus",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Retrieval Augmented Generation enhances LLM accuracy by adding passages retrieved from an external corpus to the LLM prompt.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "benchmark"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21942,
+ "eval_count": 239,
+ "ts": "2026-11-21T21:17:03Z"
+}

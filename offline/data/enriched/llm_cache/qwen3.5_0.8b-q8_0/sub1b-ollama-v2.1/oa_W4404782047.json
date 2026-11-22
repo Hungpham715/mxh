@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4404782047",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GREC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The Generalized Referring Expression Comprehension (GREC) task extends classic REC by generating image bounding boxes for objects referred to in natural language expressions, which may indicate zero, one, or multiple targets."
+   }
+  },
+  {
+   "surface": "REC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The Generalized Referring Expression Comprehension (GREC) task extends classic REC by generating image bounding boxes for objects referred to in natural language expressions, which may indicate zero, one, or multiple targets."
+   }
+  },
+  {
+   "surface": "RECANTFormer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Addressing these challenges, we introduce RECANTFormer, a one-stage method for GREC that combines a decoder-free (encoder-only) transformer architecture with DETR-like Hungarian matching."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "REC",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The Generalized Referring Expression Comprehension (GREC) task extends classic REC by generating image bounding boxes for objects referred to in natural language expressions, which may indicate zero, one, or multiple targets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GREC"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GREC"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34814,
+ "eval_count": 320,
+ "ts": "2026-11-21T18:55:08Z"
+}

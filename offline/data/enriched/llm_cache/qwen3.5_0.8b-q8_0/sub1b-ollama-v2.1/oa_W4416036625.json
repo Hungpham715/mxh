@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4416036625",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PRISM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce PRISM, a highly token-efficient in-context method based on structured schemas that outperforms baselines on diverse tasks with 4x shorter contexts."
+   }
+  },
+  {
+   "surface": "structured schemas",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce PRISM, a highly token-efficient in-context method based on structured schemas that outperforms baselines on diverse tasks with 4x shorter contexts."
+   }
+  },
+  {
+   "surface": "key-value (KV) caches",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This approach produces concise outputs and efficiently leverages key-value (KV) caches to reduce costs by up to 54%."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "structured schemas",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce PRISM, a highly token-efficient in-context method based on structured schemas that outperforms baselines on diverse tasks with 4x shorter contexts.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "key-value (KV) caches",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This approach produces concise outputs and efficiently leverages key-value (KV) caches to reduce costs by up to 54%.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "structured schemas"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "key-value (KV) caches"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38911,
+ "eval_count": 353,
+ "ts": "2026-11-21T21:54:43Z"
+}

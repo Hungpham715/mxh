@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4404782855",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Percept-ToMi",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce two datasets, Percept-ToMi and Percept-FANToM, to evaluate these precursory inferences for ToM in LLMs by annotating characters’ perceptions on ToMi and FANToM, respectively.Our evaluation of eight state-of-the-art LLMs reveals that the models generally perform well in perception inference while exhibiting limited capability in perception-to-belief inference (e.g., lack of inhibitory control).Based on these results, we present PercepToM, a novel ToM method leveraging LLMs’ strong perception inference capability while supplementing their limited perception-to-belief inference."
+   }
+  },
+  {
+   "surface": "Percept-FANToM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce two datasets, Percept-ToMi and Percept-FANToM, to evaluate these precursory inferences for ToM in LLMs by annotating characters’ perceptions on ToMi and FANToM, respectively.Our evaluation of eight state-of-the-art LLMs reveals that the models generally perform well in perception inference while exhibiting limited capability in perception-to-belief inference (e.g., lack of inhibitory control).Based on these results, we present PercepToM, a novel ToM method leveraging LLMs’ strong perception inference capability while supplementing their limited perception-to-belief inference."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While humans naturally develop theory of mind (ToM), the capability to understand other people’s mental states and beliefs, state-of-the-art large language models (LLMs) underperform on simple ToM benchmarks."
+   }
+  },
+  {
+   "surface": "PercepToM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce two datasets, Percept-ToMi and Percept-FANToM, to evaluate these precursory inferences for ToM in LLMs by annotating characters’ perceptions on ToMi and FANToM, respectively.Our evaluation of eight state-of-the-art LLMs reveals that the models generally perform well in perception inference while exhibiting limited capability in perception-to-belief inference (e.g., lack of inhibitory control).Based on these results, we present PercepToM, a novel ToM method leveraging LLMs’ strong perception inference capability while supplementing their limited perception-to-belief inference."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Percept-ToMi",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce two datasets, Percept-ToMi and Percept-FANToM, to evaluate these precursory inferences for ToM in LLMs by annotating characters’ perceptions on ToMi and FANToM, respectively.Our evaluation of eight state-of-the-art LLMs reveals that the models generally perform well in perception inference while exhibiting limited capability in perception-to-belief inference (e.g., lack of inhibitory control).Based on these results, we present PercepToM, a novel ToM method leveraging LLMs’ strong perception inference capability while supplementing their limited perception-to-belief inference.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Percept-FANToM",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce two datasets, Percept-ToMi and Percept-FANToM, to evaluate these precursory inferences for ToM in LLMs by annotating characters’ perceptions on ToMi and FANToM, respectively.Our evaluation of eight state-of-the-art LLMs reveals that the models generally perform well in perception inference while exhibiting limited capability in perception-to-belief inference (e.g., lack of inhibitory control).Based on these results, we present PercepToM, a novel ToM method leveraging LLMs’ strong perception inference capability while supplementing their limited perception-to-belief inference.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PercepToM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24465,
+ "eval_count": 394,
+ "ts": "2026-11-21T19:18:03Z"
+}

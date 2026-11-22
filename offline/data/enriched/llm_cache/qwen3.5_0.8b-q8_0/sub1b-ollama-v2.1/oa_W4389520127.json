@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4389520127",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "two-stage evaluation pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we develop strong-performing automatic metrics for reference-based summarization evaluation, based on a two-stage evaluation pipeline that first extracts basic information units from one text sequence and then checks the extracted units in another sequence."
+   }
+  },
+  {
+   "surface": "basic information units",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we develop strong-performing automatic metrics for reference-based summarization evaluation, based on a two-stage evaluation pipeline that first extracts basic information units from one text sequence and then checks the extracted units in another sequence."
+   }
+  },
+  {
+   "surface": "extracted units in another sequence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we develop strong-performing automatic metrics for reference-based summarization evaluation, based on a two-stage evaluation pipeline that first extracts basic information units from one text sequence and then checks the extracted units in another sequence."
+   }
+  },
+  {
+   "surface": "fine-grained unit level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The metrics we developed include two-stage metrics that can provide high interpretability at both the fine-grained unit level and summary level, and one-stage metrics that achieve a balance between efficiency and interpretability."
+   }
+  },
+  {
+   "surface": "summary level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The metrics we developed include two-stage metrics that can provide high interpretability at both the fine-grained unit level and summary level, and one-stage metrics that achieve a balance between efficiency and interpretability."
+   }
+  },
+  {
+   "surface": "one-stage metrics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The metrics we developed include two-stage metrics that can provide high interpretability at both the fine-grained unit level and summary level, and one-stage metrics that achieve a balance between efficiency and interpretability."
+   }
+  },
+  {
+   "surface": "balance between efficiency and interpretability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The metrics we developed include two-stage metrics that can provide high interpretability at both the fine-grained unit level and summary level, and one-stage metrics that achieve a balance between efficiency and interpretability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "one-stage metrics",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The metrics we developed include two-stage metrics that can provide high interpretability at both the fine-grained unit level and summary level, and one-stage metrics that achieve a balance between efficiency and interpretability.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "basic information units"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "basic information units"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "one-stage metrics"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23079,
+ "eval_count": 512,
+ "ts": "2026-11-21T16:30:37Z"
+}

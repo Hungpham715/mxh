@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4385570090",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "When applied to processing long text, Large Language Models (LLMs) are limited by their context window."
+   }
+  },
+  {
+   "surface": "Parallel Context Windows (PCW)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present Parallel Context Windows (PCW), a method that alleviates the context window restriction for any off-the-shelf LLM without further training."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Parallel Context Windows (PCW)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present Parallel Context Windows (PCW), a method that alleviates the context window restriction for any off-the-shelf LLM without further training.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Parallel Context Windows (PCW)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Parallel Context Windows (PCW)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25798,
+ "eval_count": 315,
+ "ts": "2026-11-21T15:24:48Z"
+}

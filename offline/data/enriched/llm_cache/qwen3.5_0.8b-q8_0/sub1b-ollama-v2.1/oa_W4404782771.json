@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4404782771",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Intelligent Tutoring Systems (ITSs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Intelligent Tutoring Systems (ITSs) can provide personalized and self-paced learning experience."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The emergence of large language models (LLMs) further enables better human-machine interaction, and facilitates the development of conversational ITSs in various disciplines such as math and language learning."
+   }
+  },
+  {
+   "surface": "Conversational ITSs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The emergence of large language models (LLMs) further enables better human-machine interaction, and facilitates the development of conversational ITSs in various disciplines such as math and language learning."
+   }
+  },
+  {
+   "surface": "Dialogic Teaching",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In dialogic teaching, recognizing and adapting to individual characteristics can significantly enhance student engagement and learning efficiency."
+   }
+  },
+  {
+   "surface": "Cognitive Aspects",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we propose a framework to construct profiles of different student groups by refining and integrating both cognitive and noncognitive aspects, and leverage LLMs for personality-aware student simulation in a language learning scenario."
+   }
+  },
+  {
+   "surface": "Noncognitive Aspects",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we propose a framework to construct profiles of different student groups by refining and integrating both cognitive and noncognitive aspects, and leverage LLMs for personality-aware student simulation in a language learning scenario."
+   }
+  },
+  {
+   "surface": "Personality-Aware Student Simulation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we propose a framework to construct profiles of different student groups by refining and integrating both cognitive and noncognitive aspects, and leverage LLMs for personality-aware student simulation in a language learning scenario."
+   }
+  },
+  {
+   "surface": "Language Learning Scenario",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we propose a framework to construct profiles of different student groups by refining and integrating both cognitive and noncognitive aspects, and leverage LLMs for personality-aware student simulation in a language learning scenario."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Dialogic Teaching",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In dialogic teaching, recognizing and adapting to individual characteristics can significantly enhance student engagement and learning efficiency.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Language Learning Scenario",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In dialogic teaching, recognizing and adapting to individual characteristics can significantly enhance student engagement and learning efficiency.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Student Persona"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Teacher's Adaptive Scaffolding Strategies"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Student Persona"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Personality-Aware Student Simulation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Teacher's Adaptive Scaffolding Strategies"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30075,
+ "eval_count": 648,
+ "ts": "2026-11-21T19:14:46Z"
+}

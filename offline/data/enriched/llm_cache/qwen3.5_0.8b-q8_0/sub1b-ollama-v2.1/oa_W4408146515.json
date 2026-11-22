@@ -1,0 +1,167 @@
+{
+ "paper_id": "oa:W4408146515",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework."
+   }
+  },
+  {
+   "surface": "multi-stage BERT fusion framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework."
+   }
+  },
+  {
+   "surface": "hierarchical embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It uses hierarchical embeddings, dual attention mechanisms, and extra features to improve detection of cyberbullying content."
+   }
+  },
+  {
+   "surface": "dual attention mechanisms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It uses hierarchical embeddings, dual attention mechanisms, and extra features to improve detection of cyberbullying content."
+   }
+  },
+  {
+   "surface": "extra features",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It uses hierarchical embeddings, dual attention mechanisms, and extra features to improve detection of cyberbullying content."
+   }
+  },
+  {
+   "surface": "self-attention",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "It uses self-attention and cross-attention to align features and has a hierarchical classification head for multi-category classification."
+   }
+  },
+  {
+   "surface": "cross-attention",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "It uses self-attention and cross-attention to align features and has a hierarchical classification head for multi-category classification."
+   }
+  },
+  {
+   "surface": "hierarchical classification head",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "It uses self-attention and cross-attention to align features and has a hierarchical classification head for multi-category classification."
+   }
+  },
+  {
+   "surface": "dynamic loss balancing strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "A dynamic loss balancing strategy helps optimize learning and improves accuracy, precision, recall, and F1-score."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a multi-stage BERT fusion framework.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-stage BERT fusion framework",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "A dynamic loss balancing strategy helps optimize learning and improves accuracy, precision, recall, and F1-score.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 52609,
+ "eval_count": 707,
+ "ts": "2026-11-21T19:52:41Z"
+}

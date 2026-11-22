@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4389524373",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Situated Language Understanding Agents",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent work has proposed a methodology for the systematic evaluation of “Situated Language Understanding Agents” — agents that operate in rich linguistic and non-linguistic contexts — through testing them in carefully constructed interactive settings."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Other recent work has argued that Large Language Models (LLMs), if suitably set up, can be understood as (simulators of) such agents."
+   }
+  },
+  {
+   "surface": "chat-optimised LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As a proof of concept, this paper investigates five interaction settings, showing that current chat-optimised LLMs are, to an extent, capable of following game-play instructions."
+   }
+  },
+  {
+   "surface": "game-like settings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A connection suggests itself, which this paper explores: Can LLMs be evaluated meaningfully by exposing them to constrained game-like settings that are built to challenge specific capabilities?"
+   }
+  },
+  {
+   "surface": "interactive settings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent work has proposed a methodology for the systematic evaluation of “Situated Language Understanding Agents” — agents that operate in rich linguistic and non-linguistic contexts — through testing them in carefully constructed interactive settings."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "chat-optimised LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "game-like settings"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "interactive settings"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18958,
+ "eval_count": 456,
+ "ts": "2026-11-21T17:01:33Z"
+}

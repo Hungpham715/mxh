@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4400341528",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We conducted experiments on a high quality multilingual embedding model: Tuning it on a single English-only dataset, we observe that the tuning not only preserves the multilingual qualities, but even improves them."
+   }
+  },
+  {
+   "surface": "English-only dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We conducted experiments on a high quality multilingual embedding model: Tuning it on a single English-only dataset, we observe that the tuning not only preserves the multilingual qualities, but even improves them."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "English-only dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We conducted experiments on a high quality multilingual embedding model: Tuning it on a single English-only dataset, we observe that the tuning not only preserves the multilingual qualities, but even improves them.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26993,
+ "eval_count": 135,
+ "ts": "2026-11-21T17:26:28Z"
+}

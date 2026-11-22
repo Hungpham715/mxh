@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4389524558",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ESGDoc",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose a new dataset, ESGDoc, comprising 1,093 ESG annual reports from 563 companies spanning from 2001 to 2022."
+   }
+  },
+  {
+   "surface": "563",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose a new dataset, ESGDoc, comprising 1,093 ESG annual reports from 563 companies spanning from 2001 to 2022."
+   }
+  },
+  {
+   "surface": "2001",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose a new dataset, ESGDoc, comprising 1,093 ESG annual reports from 563 companies spanning from 2001 to 2022."
+   }
+  },
+  {
+   "surface": "2022",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose a new dataset, ESGDoc, comprising 1,093 ESG annual reports from 563 companies spanning from 2001 to 2022."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "1093"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "1093"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ESGDoc"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44175,
+ "eval_count": 652,
+ "ts": "2026-11-21T17:05:29Z"
+}

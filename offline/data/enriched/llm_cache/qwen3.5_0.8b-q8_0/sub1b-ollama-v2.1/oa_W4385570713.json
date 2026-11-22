@@ -1,0 +1,128 @@
+{
+ "paper_id": "oa:W4385570713",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "denoising bottleneck fusion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Therefore, we propose a denoising bottleneck fusion (DBF) model for fine-grained video multimodal fusion."
+   }
+  },
+  {
+   "surface": "forget gate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Prior denoising methods like forget gate are coarse in the granularity of noise filtering."
+   }
+  },
+  {
+   "surface": "mutual information maximization module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "On the other hand, we use a mutual information maximization module to regulate the filter-out module to preserve key information within different modalities."
+   }
+  },
+  {
+   "surface": "bottleneck mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "On the one hand, we employ a bottleneck mechanism to filter out noise and redundancy with a restrained receptive field."
+   }
+  },
+  {
+   "surface": "restrained receptive field",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "On the one hand, we employ a bottleneck mechanism to filter out noise and redundancy with a restrained receptive field."
+   }
+  },
+  {
+   "surface": "denoising bottleneck fusion (DBF) model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Therefore, we propose a denoising bottleneck fusion (DBF) model for fine-grained video multimodal fusion."
+   }
+  },
+  {
+   "surface": "multimodal sentiment analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our DBF model achieves significant improvement over current state-of-the-art baselines on multiple benchmarks covering multimodal sentiment analysis and multimodal summarization tasks."
+   }
+  },
+  {
+   "surface": "multimodal summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our DBF model achieves significant improvement over current state-of-the-art baselines on multiple benchmarks covering multimodal sentiment analysis and multimodal summarization tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "denoising bottleneck fusion",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Prior denoising methods like forget gate are coarse in the granularity of noise filtering.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "denoising bottleneck fusion",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "On the other hand, we use a mutual information maximization module to regulate the filter-out module to preserve key information within different modalities.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "denoising bottleneck fusion",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "On the one hand, we employ a bottleneck mechanism to filter out noise and redundancy with a restrained receptive field.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "denoising bottleneck fusion",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "On the other hand, we use a mutual information maximization module to regulate the filter-out module to preserve key information within different modalities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal sentiment analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal summarization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27692,
+ "eval_count": 711,
+ "ts": "2026-11-21T15:33:29Z"
+}

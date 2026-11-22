@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4405033436",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Backdoors & Breaches",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper explores the application of LLM-based multi-agent collaboration using the Backdoors & Breaches framework, a tabletop game designed for cybersecurity training."
+   }
+  },
+  {
+   "surface": "Incident Response (IR)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Incident response (IR) is a critical aspect of cybersecurity, requiring rapid decision-making and coordinated efforts to address cyberattacks effectively."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Incident Response (IR)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32303,
+ "eval_count": 151,
+ "ts": "2026-11-21T19:39:56Z"
+}

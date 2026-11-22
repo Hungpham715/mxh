@@ -1,0 +1,132 @@
+{
+ "paper_id": "oa:W4416036238",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "To answer one-to-many factual queries (e.g., listing cities of a country), a language model (LM) must simultaneously recall knowledge and avoid repeating previous answers."
+   }
+  },
+  {
+   "surface": "prompt template",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Across multiple datasets, models, and prompt templates, we identify a promote-then-suppress mechanism: the model first recalls all answers, and then suppresses previously generated ones."
+   }
+  },
+  {
+   "surface": "knowledge recall",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, LMs use both the subject and previous answer tokens to perform knowledge recall, with attention propagating subject information and MLPs promoting the answers."
+   }
+  },
+  {
+   "surface": "attention propagating subject information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, LMs use both the subject and previous answer tokens to perform knowledge recall, with attention propagating subject information and MLPs promoting the answers."
+   }
+  },
+  {
+   "surface": "MLPs promoting the answers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, LMs use both the subject and previous answer tokens to perform knowledge recall, with attention propagating subject information and MLPs promoting the answers."
+   }
+  },
+  {
+   "surface": "Token Lens",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our mechanism is corroborated by extensive experimental evidence: in addition to using early decoding and causal tracing, we analyze how components use different tokens by introducing both Token Lens, which decodes aggregated attention updates from specified tokens, and a knockout method that analyzes changes in MLP outputs after removing attention to specified tokens."
+   }
+  },
+  {
+   "surface": "knockout method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our mechanism is corroborated by extensive experimental evidence: in addition to using early decoding and causal tracing, we analyze how components use different tokens by introducing both Token Lens, which decodes aggregated attention updates from specified tokens, and a knockout method that analyzes changes in MLP outputs after removing attention to specified tokens."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "attention propagating subject information",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, LMs use both the subject and previous answer tokens to perform knowledge recall, with attention propagating subject information and MLPs promoting the answers.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MLPs promoting the answers",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, LMs use both the subject and previous answer tokens to perform knowledge recall, with attention propagating subject information and MLPs promoting the answers.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Token Lens",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our mechanism is corroborated by extensive experimental evidence: in addition to using early decoding and causal tracing, we analyze how components use different tokens by introducing both Token Lens, which decodes aggregated attention updates from specified tokens, and a knockout method that analyzes changes in MLP outputs after removing attention to specified tokens.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knockout method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our mechanism is corroborated by extensive experimental evidence: in addition to using early decoding and causal tracing, we analyze how components use different tokens by introducing both Token Lens, which decodes aggregated attention updates from specified tokens, and a knockout method that analyzes changes in MLP outputs after removing attention to specified tokens.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "suppressing mechanism"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "prompt template"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge recall"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "suppressing mechanism"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "suppressing mechanism"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 52417,
+ "eval_count": 715,
+ "ts": "2026-11-21T21:28:52Z"
+}

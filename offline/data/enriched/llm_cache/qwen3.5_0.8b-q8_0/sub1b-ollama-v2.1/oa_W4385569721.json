@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4385569721",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RSTformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces the ‘RSTformer’, a novel summarization model that comprehensively incorporates both the types and uncertainty of rhetorical relations."
+   }
+  },
+  {
+   "surface": "Longformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our RST-attention mechanism, rooted in document-level rhetorical structure, is an extension of the recently devised Longformer framework."
+   }
+  },
+  {
+   "surface": "discourse structure",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "For text summarization, the role of discourse structure is pivotal in discerning the core content of a text."
+   }
+  },
+  {
+   "surface": "nuclearity annotation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Regrettably, prior studies on incorporating Rhetorical Structure Theory (RST) into transformer-based summarization models only consider the nuclearity annotation, thereby overlooking the variety of discourse relation types."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "discourse structure",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "For text summarization, the role of discourse structure is pivotal in discerning the core content of a text.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Longformer",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our RST-attention mechanism, rooted in document-level rhetorical structure, is an extension of the recently devised Longformer framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "nuclearity annotation",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Regrettably, prior studies on incorporating Rhetorical Structure Theory (RST) into transformer-based summarization models only consider the nuclearity annotation, thereby overlooking the variety of discourse relation types.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "discourse structure"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "discourse structure"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23510,
+ "eval_count": 476,
+ "ts": "2026-11-21T15:20:26Z"
+}

@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4416035509",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SwiftKV",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We present SwiftKV, a novel model transformation and distillation procedure targeted at reducing the prefill compute (in FLOPs) of prompt tokens while preserving high generation quality."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our comprehensive experiments show that SwiftKV can effectively reduce prefill computation by 25-50% across several LLM families while incurring minimum quality degradation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "It can achieve a staggering 560 TFlops/GPU of normalized inference throughput, which translates to 16K tokens/s for Llama-3.1-70B.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "It can achieve a staggering 560 TFlops/GPU of normalized inference throughput, which translates to 16K tokens/s for Llama-3.1-70B.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "It can achieve a staggering 560 TFlops/GPU of normalized inference throughput, which translates to 16K tokens/s for Llama-3.1-70B.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49334,
+ "eval_count": 662,
+ "ts": "2026-11-21T21:14:18Z"
+}

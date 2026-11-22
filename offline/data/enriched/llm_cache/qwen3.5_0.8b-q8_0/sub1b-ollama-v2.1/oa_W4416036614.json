@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416036614",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CCPS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce CCPS (Calibrating LLM Confidence by Probing Perturbed Representation Stability), a novel method analyzing internal representational stability in LLMs."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Miscalibration in Large Language Models (LLMs) undermines their reliability, highlighting the need for accurate confidence estimation."
+   }
+  },
+  {
+   "surface": "MMLU",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "CCPS was evaluated on LLMs from 8B to 32B parameters (covering Llama, Qwen, and Mistral architectures) using MMLU and MMLU-Pro benchmarks in both multiple-choice and open-ended formats."
+   }
+  },
+  {
+   "surface": "MMLU-Pro",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "CCPS was evaluated on LLMs from 8B to 32B parameters (covering Llama, Qwen, and Mistral architectures) using MMLU and MMLU-Pro benchmarks in both multiple-choice and open-ended formats."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce CCPS (Calibrating LLM Confidence by Probing Perturbed Representation Stability), a novel method analyzing internal representational stability in LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce CCPS (Calibrating LLM Confidence by Probing Perturbed Representation Stability), a novel method analyzing internal representational stability in LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce CCPS (Calibrating LLM Confidence by Probing Perturbed Representation Stability), a novel method analyzing internal representational stability in LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24862,
+ "eval_count": 345,
+ "ts": "2026-11-21T21:54:55Z"
+}

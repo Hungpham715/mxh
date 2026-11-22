@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4389519114",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PreWoMe",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose PreWoMe, a unified approach capable of handling any type of information-seeking question."
+   }
+  },
+  {
+   "surface": "information-seeking questions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Information-seeking questions in long-form question answering (LFQA) often prove misleading due to ambiguity or false presupposition in the question."
+   }
+  },
+  {
+   "surface": "long-form question answering (LFQA)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Information-seeking questions in long-form question answering (LFQA) often prove misleading due to ambiguity or false presupposition in the question."
+   }
+  },
+  {
+   "surface": "misleading questions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While many existing approaches handle misleading questions, they are tailored to limited questions, which are insufficient in a real-world setting with unpredictable input characteristics."
+   }
+  },
+  {
+   "surface": "false presupposition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Information-seeking questions in long-form question answering (LFQA) often prove misleading due to ambiguity or false presupposition in the question."
+   }
+  },
+  {
+   "surface": "unpredictable input characteristics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While many existing approaches handle misleading questions, they are tailored to limited questions, which are insufficient in a real-world setting with unpredictable input characteristics."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "information-seeking questions",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose PreWoMe, a unified approach capable of handling any type of information-seeking question.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "long-form question answering (LFQA)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose PreWoMe, a unified approach capable of handling any type of information-seeking question.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "misleading questions",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Information-seeking questions in long-form question answering (LFQA) often prove misleading due to ambiguity or false presupposition in the question.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "false presupposition",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While many existing approaches handle misleading questions, they are tailored to limited questions, which are insufficient in a real-world setting with unpredictable input characteristics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "unpredictable input characteristics",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While many existing approaches handle misleading questions, they are tailored to limited questions, which are insufficient in a real-world setting with unpredictable input characteristics.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24751,
+ "eval_count": 526,
+ "ts": "2026-11-21T16:21:45Z"
+}

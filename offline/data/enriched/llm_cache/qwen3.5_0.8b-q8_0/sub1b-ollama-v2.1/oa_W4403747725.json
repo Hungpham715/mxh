@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4403747725",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Cross-lingual sentence encoders",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-lingual sentence encoders (CLSE) create fixed-size sentence representations with aligned translations."
+   }
+  },
+  {
+   "surface": "sentence-level objectives",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Current pre-trained CLSE approaches use sentence-level objectives only."
+   }
+  },
+  {
+   "surface": "token-level objectives",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose MEXMA, a novel approach that integrates both sentence-level and token-level objectives."
+   }
+  },
+  {
+   "surface": "MEXMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose MEXMA, a novel approach that integrates both sentence-level and token-level objectives."
+   }
+  },
+  {
+   "surface": "sentence representation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-lingual sentence encoders (CLSE) create fixed-size sentence representations with aligned translations."
+   }
+  },
+  {
+   "surface": "masked tokens",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The sentence representation in one language is used to predict masked tokens in another language, with both the sentence representation and all tokens directly update the encoder."
+   }
+  },
+  {
+   "surface": "encoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cross-lingual sentence encoders (CLSE) create fixed-size sentence representations with aligned translations."
+   }
+  },
+  {
+   "surface": "bitext mining",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach outperforms current pre-trained cross-lingual sentence encoders on bitext mining as well as several downstream tasks."
+   }
+  },
+  {
+   "surface": "downstream tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach outperforms current pre-trained cross-lingual sentence encoders on bitext mining as well as several downstream tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MEXMA",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose MEXMA, a novel approach that integrates both sentence-level and token-level objectives.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "bitext mining"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "downstream tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27074,
+ "eval_count": 455,
+ "ts": "2026-11-21T18:48:31Z"
+}

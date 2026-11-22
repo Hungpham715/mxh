@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4404783643",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Alignment-Enhanced Decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose Alignment-Enhanced Decoding (AED), a novel defense that employs adaptive decoding to address the root causes of jailbreak issues."
+   }
+  },
+  {
+   "surface": "Competitive Index",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first define the Competitive Index to quantify alignment failures and utilize feedback from self-evaluation to compute post-alignment logits."
+   }
+  },
+  {
+   "surface": "post-alignment logits",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first define the Competitive Index to quantify alignment failures and utilize feedback from self-evaluation to compute post-alignment logits."
+   }
+  },
+  {
+   "surface": "original logits",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, AED adaptively combines Competitive Index and post-alignment logits with the original logits to obtain harmless and helpful distributions."
+   }
+  },
+  {
+   "surface": "five models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct experiments across five models and four common jailbreaks, with the results validating the effectiveness of our approach."
+   }
+  },
+  {
+   "surface": "four common jailbreaks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct experiments across five models and four common jailbreaks, with the results validating the effectiveness of our approach."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "post-alignment logits",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first define the Competitive Index to quantify alignment failures and utilize feedback from self-evaluation to compute post-alignment logits.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "original logits",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, AED adaptively combines Competitive Index and post-alignment logits with the original logits to obtain harmless and helpful distributions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "five models",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct experiments across five models and four common jailbreaks, with the results validating the effectiveness of our approach.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Competitive Index"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "four common jailbreaks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43547,
+ "eval_count": 472,
+ "ts": "2026-11-21T19:32:11Z"
+}

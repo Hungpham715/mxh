@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4402671614",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Simulation Theory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we turn to the prominent cognitive science theory “Simulation Theory” to bridge this gap."
+   }
+  },
+  {
+   "surface": "SimToM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce SimToM, a novel two-stage prompting framework inspired by Simulation Theory’s notion of perspective-taking."
+   }
+  },
+  {
+   "surface": "Perspective-taking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce SimToM, a novel two-stage prompting framework inspired by Simulation Theory’s notion of perspective-taking."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SimToM",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce SimToM, a novel two-stage prompting framework inspired by Simulation Theory’s notion of perspective-taking.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SimToM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SimToM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46400,
+ "eval_count": 283,
+ "ts": "2026-11-21T17:56:42Z"
+}

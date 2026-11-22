@@ -1,0 +1,121 @@
+{
+ "paper_id": "oa:W4385571533",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Coarse-to-Fine contribution network",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we propose a novel Coarse-to-Fine contribution network for multimodal Summarization (CFSum) to consider different contributions of images for summarization."
+   }
+  },
+  {
+   "surface": "Multimodal Summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal summarization usually suffers from the problem that the contribution of the visual modality is unclear."
+   }
+  },
+  {
+   "surface": "pre-filter module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, to eliminate the interference of useless images, we propose a pre-filter module to abandon useless images."
+   }
+  },
+  {
+   "surface": "word level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Second, to make accurate use of useful images, we propose two levels of visual complement modules, word level and phrase level."
+   }
+  },
+  {
+   "surface": "phrase level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Second, to make accurate use of useful images, we propose two levels of visual complement modules, word level and phrase level."
+   }
+  },
+  {
+   "surface": "CFSum",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we propose a novel Coarse-to-Fine contribution network for multimodal Summarization (CFSum) to consider different contributions of images for summarization."
+   }
+  },
+  {
+   "surface": "standard benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results have shown that CFSum significantly outperforms multiple strong baselines on the standard benchmark."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Multimodal Summarization",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing multimodal summarization approaches focus on designing the fusion methods of different modalities, while ignoring the adaptive conditions under which visual modalities are useful.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "standard benchmark",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results have shown that CFSum significantly outperforms multiple strong baselines on the standard benchmark.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Coarse-to-Fine contribution network",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, to eliminate the interference of useless images, we propose a pre-filter module to abandon useless images.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Coarse-to-Fine contribution network",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Second, to make accurate use of useful images, we propose two levels of visual complement modules, word level and phrase level.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Coarse-to-Fine contribution network",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, image contributions are calculated and are adopted to guide the attention of both textual and visual modalities.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 30514,
+ "eval_count": 554,
+ "ts": "2026-11-21T15:46:15Z"
+}

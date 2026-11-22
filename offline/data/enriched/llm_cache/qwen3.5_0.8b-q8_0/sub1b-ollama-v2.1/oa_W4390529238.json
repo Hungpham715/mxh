@@ -1,0 +1,108 @@
+{
+ "paper_id": "oa:W4390529238",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "nucleotide sequence-based language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model."
+   }
+  },
+  {
+   "surface": "text language model based on PubMed articles",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model."
+   }
+  },
+  {
+   "surface": "fine-tune the nucleotide sequence language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a method to fine-tune the nucleotide sequence language model and the text language model based on various databases of antibiotic resistance genes."
+   }
+  },
+  {
+   "surface": "text language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model."
+   }
+  },
+  {
+   "surface": "ensemble method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also propose an LLM-based augmentation technique to supplement the data and an ensemble method to effectively combine the two models."
+   }
+  },
+  {
+   "surface": "benchmark for evaluating the model",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We also propose a benchmark for evaluating the model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-tune the nucleotide sequence language model",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "text language model based on PubMed articles",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we use not only a nucleotide sequence-based language model but also a text language model based on PubMed articles to reflect more biological background knowledge in the model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ensemble method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also propose an LLM-based augmentation technique to supplement the data and an ensemble method to effectively combine the two models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "benchmark for evaluating the model",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We also propose a benchmark for evaluating the model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "benchmark for evaluating the model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37713,
+ "eval_count": 579,
+ "ts": "2026-11-21T17:06:36Z"
+}

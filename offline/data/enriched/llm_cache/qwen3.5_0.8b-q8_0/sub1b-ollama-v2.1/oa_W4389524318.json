@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4389524318",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ENTSUMV2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents ENTSUMV2, a more abstractive version of the original entity-centric ENTSUM summarization dataset."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ENTSUMV2",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct extensive experiments on this dataset using multiple abstractive summarization approaches that employ supervised fine-tuning or large-scale instruction tuning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ENTSUMV2",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Additionally, we perform comprehensive human evaluation that incorporates metrics for measuring crucial facets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "BERT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLaMA"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "GPT-3.5"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "BERT"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLaMA"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "GPT-3.5"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18017,
+ "eval_count": 319,
+ "ts": "2026-11-21T17:01:01Z"
+}

@@ -1,0 +1,13 @@
+{
+ "paper_id": "oa:W4416036727",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16112,
+ "eval_count": 16,
+ "ts": "2026-11-21T21:57:04Z"
+}

@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W6948507715",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "state-of-the-art",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While human communication naturally demonstrates this principle, state-of-the-art language models (LMs) struggle to maintain reliable consistency across task- and domain-specific applications."
+   }
+  },
+  {
+   "surface": "language models (LMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While human communication naturally demonstrates this principle, state-of-the-art language models (LMs) struggle to maintain reliable consistency across task- and domain-specific applications."
+   }
+  },
+  {
+   "surface": "human communication",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While human communication naturally demonstrates this principle, state-of-the-art language models (LMs) struggle to maintain reliable consistency across task- and domain-specific applications."
+   }
+  },
+  {
+   "surface": "contradictions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The hallmark of effective language use lies in consistency: expressing similar meanings in similar contexts and avoiding contradictions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "human communication",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While human communication naturally demonstrates this principle, state-of-the-art language models (LMs) struggle to maintain reliable consistency across task- and domain-specific applications.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "language models (LMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "human communication"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "contradictions"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28780,
+ "eval_count": 427,
+ "ts": "2026-11-21T22:31:06Z"
+}

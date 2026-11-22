@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4389523905",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MS MARCO passage ranking task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We conduct the first empirical study of generative retrieval techniques across various corpus scales, ultimately scaling up to the entire MS MARCO passage ranking task with a corpus of 8.8M passages and evaluating model sizes up to 11B parameters."
+   }
+  },
+  {
+   "surface": "Transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The emerging paradigm of generative retrieval re-frames the classic information retrieval problem into a sequence-to-sequence modeling task, forgoing external indices and encoding an entire document corpus within a single Transformer."
+   }
+  },
+  {
+   "surface": "100K",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although many different approaches have been proposed to improve the effectiveness of generative retrieval, they have only been evaluated on document corpora on the order of 100K in size."
+   }
+  },
+  {
+   "surface": "8.8M passages",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We conduct the first empirical study of generative retrieval techniques across various corpus scales, ultimately scaling up to the entire MS MARCO passage ranking task with a corpus of 8.8M passages and evaluating model sizes up to 11B parameters."
+   }
+  },
+  {
+   "surface": "11B parameters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We conduct the first empirical study of generative retrieval techniques across various corpus scales, ultimately scaling up to the entire MS MARCO passage ranking task with a corpus of 8.8M passages and evaluating model sizes up to 11B parameters."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "100K",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although many different approaches have been proposed to improve the effectiveness of generative retrieval, they have only been evaluated on document corpora on the order of 100K in size.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "8.8M passages",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We conduct the first empirical study of generative retrieval techniques across various corpus scales, ultimately scaling up to the entire MS MARCO passage ranking task with a corpus of 8.8M passages and evaluating model sizes up to 11B parameters.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "11B parameters"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29892,
+ "eval_count": 515,
+ "ts": "2026-11-21T16:53:58Z"
+}

@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4385565267",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the task of entity description generation, given a context and a specified entity, a model must describe that entity correctly and in a contextually-relevant way."
+   }
+  },
+  {
+   "surface": "task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the task of entity description generation, given a context and a specified entity, a model must describe that entity correctly and in a contextually-relevant way."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this task, as well as broader language generation tasks, the generation of a nonfactual description (factual error) versus an incongruous description (contextual error) is fundamentally different, yet often conflated.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30918,
+ "eval_count": 227,
+ "ts": "2026-11-21T15:17:57Z"
+}

@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4412945190",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SkillAggregation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "A new method called SkillAggregation is proposed, which learns to combine estimates from LLM judges without needing additional data or ground truth."
+   }
+  },
+  {
+   "surface": "Crowdlayer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "It extends the Crowdlayer aggregation method, developed for image classification, to exploit the judge estimates during inference."
+   }
+  },
+  {
+   "surface": "HaluEval-Dialogue",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks."
+   }
+  },
+  {
+   "surface": "TruthfulQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks."
+   }
+  },
+  {
+   "surface": "Chatbot Arena",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Crowdlayer",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This work focuses on aggregating predictions from multiple systems where no reference labels are available.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "HaluEval-Dialogue",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "TruthfulQA",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Chatbot Arena",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The approach is compared to a range of standard aggregation methods on HaluEval-Dialogue, TruthfulQA and Chatbot Arena tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 52341,
+ "eval_count": 450,
+ "ts": "2026-11-21T20:40:12Z"
+}

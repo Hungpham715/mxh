@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4412945165",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GraphRAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Graph Retrieval Augmented Generation (GraphRAG) effectively enhances external knowledge integration capabilities by explicitly modeling knowledge relationships, thereby improving the factual accuracy and generation quality of Large Language Models (LLMs) in specialized domains."
+   }
+  },
+  {
+   "surface": "AGIEM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This method uses the Adaptive Graph Information Extraction Module (AGIEM), where Planning, Thought, and Execution Agents work together to precisely model complex graph structures and dynamically adjust information extraction strategies, addressing the challenges of multi-level dependency modeling and adaptive reasoning depth."
+   }
+  },
+  {
+   "surface": "Execution Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This method uses the Adaptive Graph Information Extraction Module (AGIEM), where Planning, Thought, and Execution Agents work together to precisely model complex graph structures and dynamically adjust information extraction strategies, addressing the challenges of multi-level dependency modeling and adaptive reasoning depth."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "AGIEM",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This method uses the Adaptive Graph Information Extraction Module (AGIEM), where Planning, Thought, and Execution Agents work together to precisely model complex graph structures and dynamically adjust information extraction strategies, addressing the challenges of multi-level dependency modeling and adaptive reasoning depth.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Execution Agent",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Additionally, the Self-Reflection with Multiple Perspectives (SR) module improves the accuracy and semantic consistency of reasoning results through self-reflection and backward reasoning mechanisms.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Planning Agent"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Thought Agent"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "SR Module"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Planning Agent"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Thought Agent"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "SR Module"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26171,
+ "eval_count": 508,
+ "ts": "2026-11-21T20:37:51Z"
+}

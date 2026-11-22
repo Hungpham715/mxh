@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4404783131",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SLNAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In pursuit of this goal, we introduce SLNAG, a benchmark designed to autonomously integrate novel data and assess LLMs’ ability to comprehend emerging concepts, alongside FOCUS, an approach uses causal inference to enhance LLMs to understand new phrases and their colloquial context."
+   }
+  },
+  {
+   "surface": "FOCUS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In pursuit of this goal, we introduce SLNAG, a benchmark designed to autonomously integrate novel data and assess LLMs’ ability to comprehend emerging concepts, alongside FOCUS, an approach uses causal inference to enhance LLMs to understand new phrases and their colloquial context."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "FOCUS",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In pursuit of this goal, we introduce SLNAG, a benchmark designed to autonomously integrate novel data and assess LLMs’ ability to comprehend emerging concepts, alongside FOCUS, an approach uses causal inference to enhance LLMs to understand new phrases and their colloquial context.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 33036,
+ "eval_count": 155,
+ "ts": "2026-11-21T19:24:24Z"
+}

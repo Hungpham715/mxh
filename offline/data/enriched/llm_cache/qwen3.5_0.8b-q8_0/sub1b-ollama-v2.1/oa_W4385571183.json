@@ -1,0 +1,123 @@
+{
+ "paper_id": "oa:W4385571183",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "X-CI",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce an explainable complaint dataset, X-CI, the first benchmark dataset for explainable complaint detection."
+   }
+  },
+  {
+   "surface": "complaint label",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label."
+   }
+  },
+  {
+   "surface": "emotion label",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label."
+   }
+  },
+  {
+   "surface": "polarity label",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label."
+   }
+  },
+  {
+   "surface": "complaint severity level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label."
+   }
+  },
+  {
+   "surface": "rationale (explainability)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "complaint label",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "emotion label",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "polarity label",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "complaint severity level",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "rationale (explainability)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Each instance in the X-CI dataset is annotated with five labels: complaint label, emotion label, polarity label, complaint severity level, and rationale (explainability), i.e., the causal span explaining the reason for the complaint/non-complaint label.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "X-CI",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further establish the advantages of our proposed model on various evaluation metrics over the state-of-the-art models and other baselines when applied to the X-CI dataset in both full and few-shot settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 55417,
+ "eval_count": 579,
+ "ts": "2026-11-21T22:47:17Z"
+}

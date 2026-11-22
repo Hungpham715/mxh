@@ -1,0 +1,111 @@
+{
+ "paper_id": "oa:W4404782459",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Efficient Speech Codec (ESC)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In response to these challenges, we introduce the Efficient Speech Codec (ESC), a lightweight, parameter-efficient speech codec based on a cross-scale residual vector quantization scheme and transformers."
+   }
+  },
+  {
+   "surface": "cross-scale residual vector quantization scheme",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In response to these challenges, we introduce the Efficient Speech Codec (ESC), a lightweight, parameter-efficient speech codec based on a cross-scale residual vector quantization scheme and transformers."
+   }
+  },
+  {
+   "surface": "transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In response to these challenges, we introduce the Efficient Speech Codec (ESC), a lightweight, parameter-efficient speech codec based on a cross-scale residual vector quantization scheme and transformers."
+   }
+  },
+  {
+   "surface": "mirrored hierarchical window transformer blocks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our model employs mirrored hierarchical window transformer blocks and performs step-wise decoding from coarse-to-fine feature representations."
+   }
+  },
+  {
+   "surface": "step-wise decoding from coarse-to-fine feature representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our model employs mirrored hierarchical window transformer blocks and performs step-wise decoding from coarse-to-fine feature representations."
+   }
+  },
+  {
+   "surface": "vector quantization techniques",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To enhance bitrate efficiency, we propose a novel combination of vector quantization techniques along with a pre-training paradigm."
+   }
+  },
+  {
+   "surface": "pre-training paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To enhance bitrate efficiency, we propose a novel combination of vector quantization techniques along with a pre-training paradigm."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "cross-scale residual vector quantization scheme",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In response to these challenges, we introduce the Efficient Speech Codec (ESC), a lightweight, parameter-efficient speech codec based on a cross-scale residual vector quantization scheme and transformers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "transformers",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our model employs mirrored hierarchical window transformer blocks and performs step-wise decoding from coarse-to-fine feature representations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "vector quantization techniques",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To enhance bitrate efficiency, we propose a novel combination of vector quantization techniques along with a pre-training paradigm.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "pre-training paradigm",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To enhance bitrate efficiency, we propose a novel combination of vector quantization techniques along with a pre-training paradigm.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 44105,
+ "eval_count": 493,
+ "ts": "2026-11-21T19:06:49Z"
+}

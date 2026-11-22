@@ -1,0 +1,130 @@
+{
+ "paper_id": "oa:W4389523808",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FlowSUM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents FlowSUM, a normalizing flows-based variational encoder-decoder framework for Transformer-based summarization."
+   }
+  },
+  {
+   "surface": "normalizing flows",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents FlowSUM, a normalizing flows-based variational encoder-decoder framework for Transformer-based summarization."
+   }
+  },
+  {
+   "surface": "variational encoder-decoder framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents FlowSUM, a normalizing flows-based variational encoder-decoder framework for Transformer-based summarization."
+   }
+  },
+  {
+   "surface": "Transformer-based summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents FlowSUM, a normalizing flows-based variational encoder-decoder framework for Transformer-based summarization."
+   }
+  },
+  {
+   "surface": "insufficient semantic information in latent representations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Our approach tackles two primary challenges in variational summarization: insufficient semantic information in latent representations and posterior collapse during training."
+   }
+  },
+  {
+   "surface": "posterior collapse during training",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Our approach tackles two primary challenges in variational summarization: insufficient semantic information in latent representations and posterior collapse during training."
+   }
+  },
+  {
+   "surface": "controlled alternate aggressive training (CAAT) strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we employ normalizing flows to enable flexible latent posterior modeling, and we propose a controlled alternate aggressive training (CAAT) strategy with an improved gate mechanism."
+   }
+  },
+  {
+   "surface": "improved gate mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we employ normalizing flows to enable flexible latent posterior modeling, and we propose a controlled alternate aggressive training (CAAT) strategy with an improved gate mechanism."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "normalizing flows",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we employ normalizing flows to enable flexible latent posterior modeling, and we propose a controlled alternate aggressive training (CAAT) strategy with an improved gate mechanism.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "variational encoder-decoder framework",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents FlowSUM, a normalizing flows-based variational encoder-decoder framework for Transformer-based summarization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "controlled alternate aggressive training (CAAT) strategy",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these challenges, we employ normalizing flows to enable flexible latent posterior modeling, and we propose a controlled alternate aggressive training (CAAT) strategy with an improved gate mechanism.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer-based summarization"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "insufficient semantic information in latent representations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "posterior collapse during training"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "controlled alternate aggressive training (CAAT) strategy"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "improved gate mechanism"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48364,
+ "eval_count": 819,
+ "ts": "2026-11-21T16:49:35Z"
+}

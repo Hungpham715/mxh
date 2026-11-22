@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4412945014",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-Attribute Targeted Steering (MAT-Steer)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we introduce Multi-Attribute Targeted Steering (MAT-Steer), a novel steering framework designed for selective token-level intervention across multiple attributes."
+   }
+  },
+  {
+   "surface": "alignment objective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We achieve this by learning steering vectors using an alignment objective that shifts the model’s internal representations of undesirable outputs closer to those of desirable ones while enforcing sparsity and orthogonality among vectors for different attributes, thereby reducing inter-attribute conflicts."
+   }
+  },
+  {
+   "surface": "question answering (QA) tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate MAT-Steer in two distinct settings: (i) on question answering (QA) tasks where we balance attributes like truthfulness, bias, and toxicity; (ii) on generative tasks where we simultaneously improve attributes like helpfulness, correctness, and coherence."
+   }
+  },
+  {
+   "surface": "generative tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate MAT-Steer in two distinct settings: (i) on question answering (QA) tasks where we balance attributes like truthfulness, bias, and toxicity; (ii) on generative tasks where we simultaneously improve attributes like helpfulness, correctness, and coherence."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "alignment objective",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We achieve this by learning steering vectors using an alignment objective that shifts the model’s internal representations of undesirable outputs closer to those of desirable ones while enforcing sparsity and orthogonality among vectors for different attributes, thereby reducing inter-attribute conflicts.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question answering (QA) tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "generative tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 40720,
+ "eval_count": 431,
+ "ts": "2026-11-21T20:34:41Z"
+}

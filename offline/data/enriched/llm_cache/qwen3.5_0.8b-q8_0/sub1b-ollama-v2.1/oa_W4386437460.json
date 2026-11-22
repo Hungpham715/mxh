@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4386437460",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "dialogue policy learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue policy learning (DPL) is a crucial component of dialogue modelling."
+   }
+  },
+  {
+   "surface": "dialogue action",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Its primary role is to determine the appropriate abstract response, commonly referred to as the \"dialogue action\"."
+   }
+  },
+  {
+   "surface": "corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Traditional DPL methodologies have treated this as a sequential decision problem, using pre-defined action candidates extracted from a corpus."
+   }
+  },
+  {
+   "surface": "word-level policy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Unlike traditional methods, JoTR formulates a word-level policy that allows for a more dynamic and adaptable dialogue action generation, without the need for any action templates."
+   }
+  },
+  {
+   "surface": "reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In addition, JoTR employs reinforcement learning with a reward-shaping mechanism to efficiently finetune the word-level dialogue policy, which allows the model to learn from its interactions, improving its performance over time."
+   }
+  },
+  {
+   "surface": "reward-shaping mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In addition, JoTR employs reinforcement learning with a reward-shaping mechanism to efficiently finetune the word-level dialogue policy, which allows the model to learn from its interactions, improving its performance over time."
+   }
+  },
+  {
+   "surface": "dialogue modelling tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 10,
+    "evidence_text": "Our extensive evaluation shows that JoTR achieves state-of-the-art performance on two benchmark dialogue modelling tasks, as assessed by both user simulators and human evaluators."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "word-level policy",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Traditional DPL methodologies have treated this as a sequential decision problem, using pre-defined action candidates extracted from a corpus.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dialogue action"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dialogue policy learning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26633,
+ "eval_count": 385,
+ "ts": "2026-11-21T16:02:31Z"
+}

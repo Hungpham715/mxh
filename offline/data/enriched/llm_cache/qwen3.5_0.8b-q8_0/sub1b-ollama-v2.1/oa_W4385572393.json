@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385572393",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CWPRF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "More specifically, a deep language model-based contrastive weighting model, called CWPRF, is trained to learn to discriminate between relevant and non-relevant documents for semantic search."
+   }
+  },
+  {
+   "surface": "IDF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "For instance, the recent ColBERT-PRF approach heuristically chooses new embeddings to add to the query representation using the inverse document frequency (IDF) of the underlying tokens."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "IDF",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "For instance, the recent ColBERT-PRF approach heuristically chooses new embeddings to add to the query representation using the inverse document frequency (IDF) of the underlying tokens.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19331,
+ "eval_count": 126,
+ "ts": "2026-11-21T15:56:16Z"
+}

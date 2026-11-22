@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4402683976",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "StyleTalk",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Since there is no suitable dataset for achieving this goal, we collect a speech-to-speech dataset, StyleTalk, with the following desired characteristics: when two current speeches have the same content but are spoken in different styles, their responses will be different."
+   }
+  },
+  {
+   "surface": "Spoken-LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To teach LLMs to understand and respond properly to the speaking styles, we propose the Spoken-LLM framework that can model the linguistic content and the speaking styles."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Spoken-LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "StyleTalk"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25439,
+ "eval_count": 214,
+ "ts": "2026-11-21T18:35:30Z"
+}

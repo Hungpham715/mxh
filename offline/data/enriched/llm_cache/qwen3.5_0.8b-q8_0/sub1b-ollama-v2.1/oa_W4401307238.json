@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4401307238",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DeliLaw",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present DeliLaw, a Chinese legal counselling system based on a large language model."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large Language Models (LLMs) have achieved excellent results in a variety of natural language processing tasks, which inspired us that we train a LLM in the legal domain to help legal retrieval."
+   }
+  },
+  {
+   "surface": "legal retrieval module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DeliLaw integrates a legal retrieval module and a case retrieval module to overcome the model hallucination."
+   }
+  },
+  {
+   "surface": "case retrieval module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DeliLaw integrates a legal retrieval module and a case retrieval module to overcome the model hallucination."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present DeliLaw, a Chinese legal counselling system based on a large language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "legal retrieval module",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DeliLaw integrates a legal retrieval module and a case retrieval module to overcome the model hallucination.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "case retrieval module",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DeliLaw integrates a legal retrieval module and a case retrieval module to overcome the model hallucination.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 37333,
+ "eval_count": 305,
+ "ts": "2026-11-21T17:31:10Z"
+}

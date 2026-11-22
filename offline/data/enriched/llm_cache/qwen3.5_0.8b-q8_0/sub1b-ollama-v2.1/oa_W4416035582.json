@@ -1,0 +1,63 @@
+{
+ "paper_id": "oa:W4416035582",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Prior work, primarily on GPT-style models, has identified MLP modules in early layers as key contributors to factual recall."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we conduct a comprehensive evaluation of factual recall across several models—including GPT, LLaMA, Qwen, and DeepSeek—analyzing where and how factual information is encoded and accessed."
+   }
+  },
+  {
+   "surface": "Qwen",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we conduct a comprehensive evaluation of factual recall across several models—including GPT, LLaMA, Qwen, and DeepSeek—analyzing where and how factual information is encoded and accessed."
+   }
+  },
+  {
+   "surface": "DeepSeek",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we conduct a comprehensive evaluation of factual recall across several models—including GPT, LLaMA, Qwen, and DeepSeek—analyzing where and how factual information is encoded and accessed."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Qwen"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Qwen"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DeepSeek"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Qwen"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32320,
+ "eval_count": 340,
+ "ts": "2026-11-21T21:15:23Z"
+}

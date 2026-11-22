@@ -1,0 +1,146 @@
+{
+ "paper_id": "oa:W4385569751",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Pre-trained language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained language models (PLMs) demonstrate excellent abilities to understand texts in the generic domain while struggling in a specific domain."
+   }
+  },
+  {
+   "surface": "Transformer architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel."
+   }
+  },
+  {
+   "surface": "feed-forward networks (FFNs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel."
+   }
+  },
+  {
+   "surface": "domain-specific adapters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel."
+   }
+  },
+  {
+   "surface": "GLUE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "ChemProt",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "RCT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "IMDB",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "Amazon",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  },
+  {
+   "surface": "KILT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "MixDA can be seamlessly plugged into the pretraining-finetuning paradigm and our experiments demonstrate that MixDA achieves superior performance on in-domain tasks (GLUE), out-of-domain tasks (ChemProt, RCT, IMDB, Amazon), and knowledge-intensive tasks (KILT).Further analyses demonstrate the reliability, scalability, and efficiency of our method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer architecture",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "feed-forward networks (FFNs)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "domain-specific adapters",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we decouple the feed-forward networks (FFNs) of the Transformer architecture into two parts: the original pre-trained FFNs to maintain the old-domain knowledge and our novel domain-specific adapters to inject domain-specific knowledge in parallel.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Mixture-of-Adapters (MixDA)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Mixture-of-Adapters (MixDA)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GLUE"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ChemProt"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "KILT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33586,
+ "eval_count": 784,
+ "ts": "2026-11-21T15:22:46Z"
+}

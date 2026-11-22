@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4406032250",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Infinitely Repeated Prisoners' Dilemma",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We frame this problem as an Infinitely Repeated Prisoners' Dilemma, where multiple players strategically decide whether to cooperate or attack."
+   }
+  },
+  {
+   "surface": "attack costs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We analyze the conditions under which cooperation can be sustained, identifying key factors such as attack costs, discount rates, attack success rates, and trigger strategies that influence player behavior."
+   }
+  },
+  {
+   "surface": "discount rates",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We analyze the conditions under which cooperation can be sustained, identifying key factors such as attack costs, discount rates, attack success rates, and trigger strategies that influence player behavior."
+   }
+  },
+  {
+   "surface": "attack success rates",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We analyze the conditions under which cooperation can be sustained, identifying key factors such as attack costs, discount rates, attack success rates, and trigger strategies that influence player behavior."
+   }
+  },
+  {
+   "surface": "trigger strategies",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We analyze the conditions under which cooperation can be sustained, identifying key factors such as attack costs, discount rates, attack success rates, and trigger strategies that influence player behavior."
+   }
+  },
+  {
+   "surface": "forward-looking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We identify tipping points in the system dynamics, demonstrating that cooperation is more likely to be sustained when players are forward-looking."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "forward-looking",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "However, from a defense perspective, we find that simply reducing attack success probabilities can, paradoxically, incentivize attacks under certain conditions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "attack costs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "discount rates"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "attack success rates"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "trigger strategies"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34957,
+ "eval_count": 574,
+ "ts": "2026-11-21T19:45:06Z"
+}

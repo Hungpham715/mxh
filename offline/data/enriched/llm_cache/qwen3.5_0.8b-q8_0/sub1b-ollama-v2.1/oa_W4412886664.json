@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4412886664",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Abstract Meaning Representation (AMR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics."
+   }
+  },
+  {
+   "surface": "Structured representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, their role remains ambiguous in the Large Language Models (LLMs) era."
+   }
+  },
+  {
+   "surface": "Zero-shot setting",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Initial attempts to integrate structured representation into LLMs via a zero-shot setting yielded inferior performance."
+   }
+  },
+  {
+   "surface": "Training-dependent perspective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives."
+   }
+  },
+  {
+   "surface": "PAWS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Performance improvements were observed in widely downstream datasets, with particularly notable gains of 3.17% and 12.38% in PAWS."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Structured representations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Training-dependent perspective",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Training-dependent perspective",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Training-free perspective"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Structured representations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Structured representations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37520,
+ "eval_count": 696,
+ "ts": "2026-11-21T19:57:42Z"
+}

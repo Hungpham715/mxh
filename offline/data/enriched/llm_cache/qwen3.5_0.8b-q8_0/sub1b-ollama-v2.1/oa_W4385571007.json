@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4385571007",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MultiCapCLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To deal with the label shortage problem, we present a simple yet effective zero-shot approach MultiCapCLIP that can generate visual captions for different scenarios and languages without any labeled vision-caption pairs of downstream datasets."
+   }
+  },
+  {
+   "surface": "concept prompts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then it conducts two main steps: 1) retrieving concept prompts that preserve the corresponding domain knowledge of new scenarios; 2) auto-encoding the prompts to learn writing styles to output captions in a desired language."
+   }
+  },
+  {
+   "surface": "auto-encoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then it conducts two main steps: 1) retrieving concept prompts that preserve the corresponding domain knowledge of new scenarios; 2) auto-encoding the prompts to learn writing styles to output captions in a desired language."
+   }
+  },
+  {
+   "surface": "writing styles",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then it conducts two main steps: 1) retrieving concept prompts that preserve the corresponding domain knowledge of new scenarios; 2) auto-encoding the prompts to learn writing styles to output captions in a desired language."
+   }
+  },
+  {
+   "surface": "English",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The extensive experiments on image and video captioning across four benchmarks and four languages (i.e., English, Chinese, German, and French) confirm the effectiveness of our approach."
+   }
+  },
+  {
+   "surface": "Chinese",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The extensive experiments on image and video captioning across four benchmarks and four languages (i.e., English, Chinese, German, and French) confirm the effectiveness of our approach."
+   }
+  },
+  {
+   "surface": "German",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The extensive experiments on image and video captioning across four benchmarks and four languages (i.e., English, Chinese, German, and French) confirm the effectiveness of our approach."
+   }
+  },
+  {
+   "surface": "French",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The extensive experiments on image and video captioning across four benchmarks and four languages (i.e., English, Chinese, German, and French) confirm the effectiveness of our approach."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "auto-encoding",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then it conducts two main steps: 1) retrieving concept prompts that preserve the corresponding domain knowledge of new scenarios; 2) auto-encoding the prompts to learn writing styles to output captions in a desired language.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "writing styles",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then it conducts two main steps: 1) retrieving concept prompts that preserve the corresponding domain knowledge of new scenarios; 2) auto-encoding the prompts to learn writing styles to output captions in a desired language.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "concept prompts"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "English"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chinese"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "German"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "French"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31091,
+ "eval_count": 640,
+ "ts": "2026-11-21T15:37:23Z"
+}

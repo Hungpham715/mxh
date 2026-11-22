@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4402671922",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Unsupervised bilingual lexicon induction (BLI) task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Unsupervised bilingual lexicon induction (BLI) task aims to find word translations between languages and has achieved great success in similar language pairs."
+   }
+  },
+  {
+   "surface": "DM-BLI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce DM-BLI, a Dynamic Multiple subspaces alignment framework for unsupervised BLI."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DM-BLI"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DM-BLI"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26509,
+ "eval_count": 225,
+ "ts": "2026-11-21T18:19:32Z"
+}

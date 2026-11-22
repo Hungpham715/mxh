@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4392425883",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Socratic method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The Socratic method is a way of guiding students toward solving a problem independently without directly revealing the solution to the problem."
+   }
+  },
+  {
+   "surface": "Large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Large language models (LLMs) can be used to augment human effort by automatically generating Socratic questions for students."
+   }
+  },
+  {
+   "surface": "Data augmentation method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To alleviate this problem, inspired by reinforcement learning with AI feedback (RLAIF), we first propose a data augmentation method to enrich existing Socratic questioning datasets with questions that are invalid in specific ways."
+   }
+  },
+  {
+   "surface": "Open-source LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Next, we propose a method to optimize open-source LLMs such as LLama 2 to prefer ground-truth questions over generated invalid ones, using direct preference optimization (DPO)."
+   }
+  },
+  {
+   "surface": "LLama 2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Next, we propose a method to optimize open-source LLMs such as LLama 2 to prefer ground-truth questions over generated invalid ones, using direct preference optimization (DPO)."
+   }
+  },
+  {
+   "surface": "Direct preference optimization (DPO)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Next, we propose a method to optimize open-source LLMs such as LLama 2 to prefer ground-truth questions over generated invalid ones, using direct preference optimization (DPO)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Data augmentation method"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLama 2"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Direct preference optimization (DPO)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44107,
+ "eval_count": 475,
+ "ts": "2026-11-21T17:15:11Z"
+}

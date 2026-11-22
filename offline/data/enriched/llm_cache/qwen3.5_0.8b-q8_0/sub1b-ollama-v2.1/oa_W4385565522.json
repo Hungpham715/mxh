@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4385565522",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-armed bandits",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUST_{\\mathrm{adaptive}} that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator."
+   }
+  },
+  {
+   "surface": "MUST",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a framework called MUST to optimize ToD systems via leveraging Multiple User SimulaTors."
+   }
+  },
+  {
+   "surface": "User Simulator",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "User simulators are agents designed to imitate human users; recent advances have found that Task-oriented Dialogue (ToD) systems optimized toward a user simulator could better satisfy the need of human users."
+   }
+  },
+  {
+   "surface": "Adaptive Interactions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUST_{\\mathrm{adaptive}} that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MUST",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUST_{\\mathrm{adaptive}} that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Adaptive Interactions",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUST_{\\mathrm{adaptive}} that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "User Simulator",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUST_{\\mathrm{adaptive}} that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Adaptive Interactions"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20137,
+ "eval_count": 379,
+ "ts": "2026-11-21T15:19:31Z"
+}

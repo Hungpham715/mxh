@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4362598191",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "persona",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we tackle these issues when creating a large-scale open-domain persona dialogue corpus, where persona implies that the conversation is performed by several actors with a fixed persona and user-side workers from an unspecified crowd."
+   }
+  },
+  {
+   "surface": "crowdworker",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Open-domain conversations involve two or more crowdworkers freely conversing about any topic, and collecting such data is particularly difficult for two reasons: 1) the dataset should be ``crafted\" rather than ``obtained\" due to privacy concerns, and 2) paid creation of such dialogues may differ from how crowdworkers behave in real-world settings."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "persona",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we tackle these issues when creating a large-scale open-domain persona dialogue corpus, where persona implies that the conversation is performed by several actors with a fixed persona and user-side workers from an unspecified crowd.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "persona"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30595,
+ "eval_count": 209,
+ "ts": "2026-11-21T15:13:38Z"
+}

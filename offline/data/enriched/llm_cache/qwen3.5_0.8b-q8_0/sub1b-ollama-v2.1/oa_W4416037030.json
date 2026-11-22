@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4416037030",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DivDetox",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To this end, we propose a novel diverse detoxification framework, DivDetox, which comprises two innovative components: a Multi-Category-Induced Personalized Sample Generation (MPSG) strategy and a Scaled Contrastive DPO (SC-DPO) approach."
+   }
+  },
+  {
+   "surface": "MPSG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To this end, we propose a novel diverse detoxification framework, DivDetox, which comprises two innovative components: a Multi-Category-Induced Personalized Sample Generation (MPSG) strategy and a Scaled Contrastive DPO (SC-DPO) approach."
+   }
+  },
+  {
+   "surface": "SC-DPO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To this end, we propose a novel diverse detoxification framework, DivDetox, which comprises two innovative components: a Multi-Category-Induced Personalized Sample Generation (MPSG) strategy and a Scaled Contrastive DPO (SC-DPO) approach."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MPSG",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The former is designed to elicit a variety of personalized toxic responses from the LLM, while the latter is constructed to precisely and fully utilize these toxic responses.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SC-DPO",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The former is designed to elicit a variety of personalized toxic responses from the LLM, while the latter is constructed to precisely and fully utilize these toxic responses.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27767,
+ "eval_count": 213,
+ "ts": "2026-11-21T22:05:57Z"
+}

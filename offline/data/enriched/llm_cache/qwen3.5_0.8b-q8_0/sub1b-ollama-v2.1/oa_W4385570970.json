@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385570970",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SACL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this, we propose a supervised adversarial contrastive learning (SACL) framework for learning class-spread structured representations in a supervised manner."
+   }
+  },
+  {
+   "surface": "CAT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To avoid the negative impact of adversarial perturbations on context-dependent data, we design a contextual adversarial training (CAT) strategy to learn more diverse features from context and enhance the model’s context robustness."
+   }
+  },
+  {
+   "surface": "SACL-LSTM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Under the framework with CAT, we develop a sequence-based SACL-LSTM to learn label-consistent and context-robust features for ERC."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SACL-LSTM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Under the framework with CAT, we develop a sequence-based SACL-LSTM to learn label-consistent and context-robust features for ERC.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SACL-LSTM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Under the framework with CAT, we develop a sequence-based SACL-LSTM to learn label-consistent and context-robust features for ERC.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 22405,
+ "eval_count": 237,
+ "ts": "2026-11-21T15:36:31Z"
+}

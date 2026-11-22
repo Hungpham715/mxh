@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4402953934",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Polyrating",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we introduce Polyrating, an expressive and flexible rating system based on maximum a posteriori estimation that enables a more nuanced and thorough analysis of model performance at lower costs."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Rating-based human evaluation has become an essential tool to accurately evaluate the impressive performance of large language models (LLMs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Rating-based human evaluation has become an essential tool to accurately evaluate the impressive performance of large language models (LLMs).",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42623,
+ "eval_count": 202,
+ "ts": "2026-11-21T18:43:49Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4389524005",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "bias experts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "As an alternative, we propose a new debiasing framework that introduces binary classifiers between the auxiliary model and the main model, coined bias experts."
+   }
+  },
+  {
+   "surface": "multi-class learning objective",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Despite the promising debiasing results of recent works, the multi-class learning objective, which has been naively used to train the auxiliary model, may harm the bias mitigation effect due to its regularization effect and competitive nature across classes."
+   }
+  },
+  {
+   "surface": "One-vs-Rest approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, each bias expert is trained on a binary classification task derived from the multi-class classification task via the One-vs-Rest approach."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-class learning objective"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "bias experts"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26171,
+ "eval_count": 258,
+ "ts": "2026-11-21T16:55:29Z"
+}

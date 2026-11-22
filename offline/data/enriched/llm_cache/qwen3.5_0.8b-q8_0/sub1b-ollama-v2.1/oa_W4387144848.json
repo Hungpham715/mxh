@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4387144848",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "OpenAI GPT API",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Objective: To assess the performance of the OpenAI GPT API in accurately and efficiently identifying relevant titles and abstracts from real-world clinical review datasets and compare its performance against ground truth labelling by two independent human reviewers."
+   }
+  },
+  {
+   "surface": "clinical review datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Objective: To assess the performance of the OpenAI GPT API in accurately and efficiently identifying relevant titles and abstracts from real-world clinical review datasets and compare its performance against ground truth labelling by two independent human reviewers."
+   }
+  },
+  {
+   "surface": "ground truth labelling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Objective: To assess the performance of the OpenAI GPT API in accurately and efficiently identifying relevant titles and abstracts from real-world clinical review datasets and compare its performance against ground truth labelling by two independent human reviewers."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "clinical review datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ground truth labelling"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31970,
+ "eval_count": 243,
+ "ts": "2026-11-21T16:03:14Z"
+}

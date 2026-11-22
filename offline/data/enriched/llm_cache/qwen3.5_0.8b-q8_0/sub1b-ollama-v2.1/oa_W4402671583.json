@@ -1,0 +1,56 @@
+{
+ "paper_id": "oa:W4402671583",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Adversarial In-Context Learning (adv-ICL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a new method, Adversarial In-Context Learning (adv-ICL), to optimize prompts for in-context learning (ICL)."
+   }
+  },
+  {
+   "surface": "In-Context Learning (ICL)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a new method, Adversarial In-Context Learning (adv-ICL), to optimize prompts for in-context learning (ICL)."
+   }
+  },
+  {
+   "surface": "13 generation and classification tasks including summarization, arithmetic reasoning, machine translation, data-to-text generation, and the MMLU and big-bench hard benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that applying adv-ICL results in significant improvements over state-of-the-art prompt optimization techniques for both open and closed-source models on 13 generation and classification tasks including summarization, arithmetic reasoning, machine translation, data-to-text generation, and the MMLU and big-bench hard benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "13 generation and classification tasks including summarization, arithmetic reasoning, machine translation, data-to-text generation, and the MMLU and big-bench hard benchmarks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that applying adv-ICL results in significant improvements over state-of-the-art prompt optimization techniques for both open and closed-source models on 13 generation and classification tasks including summarization, arithmetic reasoning, machine translation, data-to-text generation, and the MMLU and big-bench hard benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "In-Context Learning (ICL)"
+  }
+ ],
+ "auto_added_endpoints": [
+  "13 generation and classification tasks including summarization, arithmetic reasoning, machine translation, data-to-text generation, and the MMLU and big-bench hard benchmarks"
+ ],
+ "duration_ms": 47305,
+ "eval_count": 315,
+ "ts": "2026-11-21T17:54:17Z"
+}

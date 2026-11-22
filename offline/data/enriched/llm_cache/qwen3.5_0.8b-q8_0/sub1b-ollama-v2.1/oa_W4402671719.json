@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4402671719",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This work explores whether language models encode meaningfully grounded representations of sounds of objects."
+   }
+  },
+  {
+   "surface": "audio model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We learn a linear probe that retrieves the correct text representation of an object given a snippet of audio related to that object, where the sound representation is given by a pretrained audio model."
+   }
+  },
+  {
+   "surface": "contrastive loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This probe is trained via a contrastive loss that pushes the language representations and sound representations of an object to be close to one another."
+   }
+  },
+  {
+   "surface": "probe",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We learn a linear probe that retrieves the correct text representation of an object given a snippet of audio related to that object, where the sound representation is given by a pretrained audio model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive loss",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This probe is trained via a contrastive loss that pushes the language representations and sound representations of an object to be close to one another.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "probe"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44702,
+ "eval_count": 247,
+ "ts": "2026-11-21T18:04:26Z"
+}

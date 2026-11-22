@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4404781952",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "long-context",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Improvements in language models’ capabilities have pushed their applications towards longer contexts, making long-context evaluation and development an active research area."
+   }
+  },
+  {
+   "surface": "needle-in-a-haystack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "book summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "information aggregation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation."
+   }
+  },
+  {
+   "surface": "Diffusion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose two orthogonal axes of difficulty: (I) Diffusion: How hard is it to find the necessary information in the context?"
+   }
+  },
+  {
+   "surface": "Scope",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "(II) Scope: How much necessary information is there to find?"
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "needle-in-a-haystack",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "book summarization",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "information aggregation",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, many disparate use-cases are grouped together under the umbrella term of “long-context”, defined simply by the total length of the model’s input, including - for example - Needle-in-a-Haystack tasks, book summarization, and information aggregation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 20330,
+ "eval_count": 319,
+ "ts": "2026-11-21T18:53:15Z"
+}

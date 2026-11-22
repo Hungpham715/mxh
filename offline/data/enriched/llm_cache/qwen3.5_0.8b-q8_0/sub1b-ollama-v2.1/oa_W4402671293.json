@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4402671293",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SimCAS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a Simple framework to enhance the long-content processing of off-the-shelf pre-trained transformers via three steps: Chunk, Align, and Select (SimCAS)."
+   }
+  },
+  {
+   "surface": "Chunk",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a Simple framework to enhance the long-content processing of off-the-shelf pre-trained transformers via three steps: Chunk, Align, and Select (SimCAS)."
+   }
+  },
+  {
+   "surface": "Align",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a Simple framework to enhance the long-content processing of off-the-shelf pre-trained transformers via three steps: Chunk, Align, and Select (SimCAS)."
+   }
+  },
+  {
+   "surface": "Select",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this challenge, we propose a Simple framework to enhance the long-content processing of off-the-shelf pre-trained transformers via three steps: Chunk, Align, and Select (SimCAS)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Align",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "More specifically, we first divide each long-sequence input into a batch of chunks, then align the inter-chunk information during the encoding steps, and finally, select the most representative hidden states from the encoder for the decoding process.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Select",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "More specifically, we first divide each long-sequence input into a batch of chunks, then align the inter-chunk information during the encoding steps, and finally, select the most representative hidden states from the encoder for the decoding process.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chunk"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37292,
+ "eval_count": 277,
+ "ts": "2026-11-21T17:46:35Z"
+}

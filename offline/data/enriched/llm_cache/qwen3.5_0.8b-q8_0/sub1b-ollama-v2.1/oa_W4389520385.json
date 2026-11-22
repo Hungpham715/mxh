@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4389520385",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "grammar-constrained decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this issue, grammar-constrained decoding (GCD) can be used to control the generation of LMs, guaranteeing that the output follows a given structure."
+   }
+  },
+  {
+   "surface": "input-dependent grammars",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For increased flexibility, we introduce input-dependent grammars, which allow the grammar to depend on the input and thus enable the generation of different output structures for different inputs."
+   }
+  },
+  {
+   "surface": "information extraction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then empirically demonstrate the power and flexibility of GCD-enhanced LMs on (1) information extraction, (2) entity disambiguation, and (3) constituency parsing."
+   }
+  },
+  {
+   "surface": "entity disambiguation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then empirically demonstrate the power and flexibility of GCD-enhanced LMs on (1) information extraction, (2) entity disambiguation, and (3) constituency parsing."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "input-dependent grammars",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For increased flexibility, we introduce input-dependent grammars, which allow the grammar to depend on the input and thus enable the generation of different output structures for different inputs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "consentuity parsing"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "information extraction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "entity disambiguation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "consentuity parsing"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22069,
+ "eval_count": 460,
+ "ts": "2026-11-21T16:36:57Z"
+}

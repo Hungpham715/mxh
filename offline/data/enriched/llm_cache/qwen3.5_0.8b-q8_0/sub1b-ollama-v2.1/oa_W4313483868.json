@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4313483868",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "QDMR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the present paper, semantic parsing challenges are briefly introduced and QDMR formalism in semantic parsing is implemented using sequence to sequence model with attention but uses only part of speech(POS) as a representation of words of a sentence to make the training as simple and as fast as possible and also avoiding curse of dimensionality as well as overfitting."
+   }
+  },
+  {
+   "surface": "POS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the present paper, semantic parsing challenges are briefly introduced and QDMR formalism in semantic parsing is implemented using sequence to sequence model with attention but uses only part of speech(POS) as a representation of words of a sentence to make the training as simple and as fast as possible and also avoiding curse of dimensionality as well as overfitting."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "POS",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the present paper, semantic parsing challenges are briefly introduced and QDMR formalism in semantic parsing is implemented using sequence to sequence model with attention but uses only part of speech(POS) as a representation of words of a sentence to make the training as simple and as fast as possible and also avoiding curse of dimensionality as well as overfitting.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 31409,
+ "eval_count": 145,
+ "ts": "2026-11-21T15:09:37Z"
+}

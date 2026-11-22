@@ -1,0 +1,114 @@
+{
+ "paper_id": "oa:W4404782410",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ICIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we describe ICIP (In-Context Inverse Programming), a method for bootstrapping a language-to-code system using mostly (or entirely) unlabeled programs written using a potentially unfamiliar (but human-readable) library or API."
+   }
+  },
+  {
+   "surface": "In-Context Inverse Programming",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we describe ICIP (In-Context Inverse Programming), a method for bootstrapping a language-to-code system using mostly (or entirely) unlabeled programs written using a potentially unfamiliar (but human-readable) library or API."
+   }
+  },
+  {
+   "surface": "Language-to-code translator",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Building a new language-to-code translator, even starting with a large language model (LM), typically requires annotating a large set of natural language commands with their associated programs."
+   }
+  },
+  {
+   "surface": "Natural language commands",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Building a new language-to-code translator, even starting with a large language model (LM), typically requires annotating a large set of natural language commands with their associated programs."
+   }
+  },
+  {
+   "surface": "Programs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Building a new language-to-code translator, even starting with a large language model (LM), typically requires annotating a large set of natural language commands with their associated programs."
+   }
+  },
+  {
+   "surface": "Overnight and Spider benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Across nine different application domains from the Overnight and Spider benchmarks and text-davinci-003 and CodeLlama-7b-Instruct models, ICIP outperforms a number of prompting baselines."
+   }
+  },
+  {
+   "surface": "Text-davinci-003",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Across nine different application domains from the Overnight and Spider benchmarks and text-davinci-003 and CodeLlama-7b-Instruct models, ICIP outperforms a number of prompting baselines."
+   }
+  },
+  {
+   "surface": "CodeLlama-7b-Instruct",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Across nine different application domains from the Overnight and Spider benchmarks and text-davinci-003 and CodeLlama-7b-Instruct models, ICIP outperforms a number of prompting baselines."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "In-Context Inverse Programming",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "ICIP uses a pre-trained LM to assign candidate natural language descriptions to these programs, then iteratively refines the descriptions to ensure global consistency.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language-to-code translator"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Overnight and Spider benchmarks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-davinci-003"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CodeLlama-7b-Instruct"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Natural language commands"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Programs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30787,
+ "eval_count": 696,
+ "ts": "2026-11-21T19:05:33Z"
+}

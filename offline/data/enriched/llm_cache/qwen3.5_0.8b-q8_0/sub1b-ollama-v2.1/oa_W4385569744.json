@@ -1,0 +1,131 @@
+{
+ "paper_id": "oa:W4385569744",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DiffusionBERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present DiffusionBERT, a new generative masked language model based on discrete dif- fusion models."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present DiffusionBERT, a new generative masked language model based on discrete dif- fusion models."
+   }
+  },
+  {
+   "surface": "absorbing state",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We explore training BERT to learn the reverse process of a discrete diffusion process with an absorbing state and elucidate several designs to improve it."
+   }
+  },
+  {
+   "surface": "noise schedule",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we propose a new noise schedule for the forward diffusion process that controls the degree of noise added at each step based on the information of each token."
+   }
+  },
+  {
+   "surface": "time step",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Sec- ond, we investigate several designs of incorpo- rating the time step into BERT."
+   }
+  },
+  {
+   "surface": "diffusion models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Diffusion models and many pre- trained language models have a shared training objective, i.e., denoising, making it possible to combine the two powerful models and enjoy the best of both worlds."
+   }
+  },
+  {
+   "surface": "generative masked language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on unconditional text generation demonstrate that DiffusionBERT achieves significant improve- ment over existing diffusion models for text (e.g., D3PM and Diffusion-LM) and previous generative masked language models in terms of perplexity and BLEU score."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "absorbing state",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We explore training BERT to learn the reverse process of a discrete diffusion process with an absorbing state and elucidate several designs to improve it.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "time step",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Sec- ond, we investigate several designs of incorpo- rating the time step into BERT.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "diffusion models",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Diffusion models and many pre- trained language models have a shared training objective, i.e., denoising, making it possible to combine the two powerful models and enjoy the best of both worlds.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "generative masked language models",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on unconditional text generation demonstrate that DiffusionBERT achieves significant improve- ment over existing diffusion models for text (e.g., D3PM and Diffusion-LM) and previous generative masked language models in terms of perplexity and BLEU score.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "discrete diffusion models"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "denoising language models"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "discrete diffusion models"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "denoising language models"
+  }
+ ],
+ "auto_added_endpoints": [
+  "diffusion models",
+  "generative masked language models"
+ ],
+ "duration_ms": 31420,
+ "eval_count": 661,
+ "ts": "2026-11-21T15:20:57Z"
+}

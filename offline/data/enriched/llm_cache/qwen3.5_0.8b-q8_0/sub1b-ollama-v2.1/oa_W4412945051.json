@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4412945051",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TMCHT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we propose the Troublemaker Makes Chaos in Honest Town (TMCHT) task, a large-scale, multi-agent, multi-topology text-based attack evaluation framework."
+   }
+  },
+  {
+   "surface": "ARCJ",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "To address these issues, we propose an Adversarial Replication Contagious Jailbreak (ARCJ) method, which optimizes the retrieval suffix to make poisoned samples more easily retrieved and optimizes the replication suffix to make poisoned samples have contagious ability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "TMCHT",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we propose the Troublemaker Makes Chaos in Honest Town (TMCHT) task, a large-scale, multi-agent, multi-topology text-based attack evaluation framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ARCJ",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "To address these issues, we propose an Adversarial Replication Contagious Jailbreak (ARCJ) method, which optimizes the retrieval suffix to make poisoned samples more easily retrieved and optimizes the replication suffix to make poisoned samples have contagious ability.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19147,
+ "eval_count": 235,
+ "ts": "2026-11-21T20:35:05Z"
+}

@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4412886652",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GAIA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, to mitigate the above issues, we propose \\textbf{GAIA}, a \\textbf{G}ame-based \\textbf{A}dversarial self-play \\textbf{I}nter\\textbf{A}ctive training paradigm, which constructs an adversarial two-player (a persuader and a resister) zero-sum game and guides the game to approximate Nash Equilibrium (NE) via reinforcement learning (RL) for the non-collaborative dialogues."
+   }
+  },
+  {
+   "surface": "G",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals."
+   }
+  },
+  {
+   "surface": "A",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals."
+   }
+  },
+  {
+   "surface": "I",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals."
+   }
+  },
+  {
+   "surface": "NE",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Most LLMs-based methods use stimulus prompts or external strategy planners for strategy planning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "G",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "A",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "I",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Non-collaborative dialogue involves two participants with conflicting interests engaging in a multi-round dialogue to achieve their own goals.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30921,
+ "eval_count": 361,
+ "ts": "2026-11-21T19:57:18Z"
+}

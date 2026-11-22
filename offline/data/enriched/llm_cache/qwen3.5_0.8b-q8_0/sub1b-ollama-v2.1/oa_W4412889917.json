@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4412889917",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "StitchLLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Drawing inspiration from the dual-process theory of human cognition, we introduce StitchLLM: a dynamic model routing framework that employs a powerful bottom model to process all queries, and uses a lightweight routing mechanism to allocate computational resources appropriately."
+   }
+  },
+  {
+   "surface": "bottom model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Drawing inspiration from the dual-process theory of human cognition, we introduce StitchLLM: a dynamic model routing framework that employs a powerful bottom model to process all queries, and uses a lightweight routing mechanism to allocate computational resources appropriately."
+   }
+  },
+  {
+   "surface": "lightweight routing mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Drawing inspiration from the dual-process theory of human cognition, we introduce StitchLLM: a dynamic model routing framework that employs a powerful bottom model to process all queries, and uses a lightweight routing mechanism to allocate computational resources appropriately."
+   }
+  },
+  {
+   "surface": "trainable stitching layer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our novel framework optimizes efficiency and maintains performance, leveraging a trainable stitching layer for seamless integration of decoder layers across different LLMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "bottom model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Drawing inspiration from the dual-process theory of human cognition, we introduce StitchLLM: a dynamic model routing framework that employs a powerful bottom model to process all queries, and uses a lightweight routing mechanism to allocate computational resources appropriately.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "lightweight routing mechanism",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Drawing inspiration from the dual-process theory of human cognition, we introduce StitchLLM: a dynamic model routing framework that employs a powerful bottom model to process all queries, and uses a lightweight routing mechanism to allocate computational resources appropriately.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "trainable stitching layer",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our novel framework optimizes efficiency and maintains performance, leveraging a trainable stitching layer for seamless integration of decoder layers across different LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 36425,
+ "eval_count": 350,
+ "ts": "2026-11-21T20:21:51Z"
+}

@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4385572057",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "user study",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a user study on summarized answers generated from state-of-the-art models and our newly proposed extract-and-decontextualize approach."
+   }
+  },
+  {
+   "surface": "extract-and-decontextualize approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a user study on summarized answers generated from state-of-the-art models and our newly proposed extract-and-decontextualize approach."
+   }
+  },
+  {
+   "surface": "state-of-the-art models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a user study on summarized answers generated from state-of-the-art models and our newly proposed extract-and-decontextualize approach."
+   }
+  },
+  {
+   "surface": "ELI5 domain",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find a large proportion of long-form answers (over 90%) in the ELI5 domain can be adequately summarized by at least one system, while complex and implicit answers are challenging to compress."
+   }
+  },
+  {
+   "surface": "extractive summarization dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To promote future work, we provide an extractive summarization dataset covering 1K long-form answers and our user study annotations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "extractive summarization dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To promote future work, we provide an extractive summarization dataset covering 1K long-form answers and our user study annotations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "extract-and-decontextualize approach",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a user study on summarized answers generated from state-of-the-art models and our newly proposed extract-and-decontextualize approach.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "extractive summarization dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To promote future work, we provide an extractive summarization dataset covering 1K long-form answers and our user study annotations.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "extractive summarization dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To promote future work, we provide an extractive summarization dataset covering 1K long-form answers and our user study annotations.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "extract-and-decontextualize approach"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26287,
+ "eval_count": 514,
+ "ts": "2026-11-21T15:51:13Z"
+}

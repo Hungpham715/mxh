@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4393156672",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LimeAttack",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution."
+   }
+  },
+  {
+   "surface": "hard-label attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Therefore, we focus on a more realistic and challenging setting, named hard-label attack, in which the attacker can only query the model and obtain a discrete prediction label."
+   }
+  },
+  {
+   "surface": "local explainable method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution."
+   }
+  },
+  {
+   "surface": "beam search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "local explainable method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "beam search",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a novel hard-label attack algorithm named LimeAttack, which leverages a local explainable method to approximate word importance ranking, and then adopts beam search to find the optimal solution.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "hard-label attack"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45955,
+ "eval_count": 290,
+ "ts": "2026-11-21T17:18:13Z"
+}

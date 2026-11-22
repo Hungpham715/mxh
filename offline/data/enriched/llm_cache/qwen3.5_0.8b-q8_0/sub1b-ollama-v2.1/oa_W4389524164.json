@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4389524164",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VMH",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To complement existing resources, we present multimodal Video Misleading Headline (VMH), a dataset that consists of videos and whether annotators believe the headline is representative of the video’s contents."
+   }
+  },
+  {
+   "surface": "annotators",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To complement existing resources, we present multimodal Video Misleading Headline (VMH), a dataset that consists of videos and whether annotators believe the headline is representative of the video’s contents."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "VMH",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "After collecting and annotating this dataset, we analyze multimodal baselines for detecting misleading headlines.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 10027,
+ "eval_count": 130,
+ "ts": "2026-11-21T16:59:59Z"
+}

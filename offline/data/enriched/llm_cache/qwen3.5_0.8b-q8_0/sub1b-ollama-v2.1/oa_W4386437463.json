@@ -1,0 +1,98 @@
+{
+ "paper_id": "oa:W4386437463",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "clinical notes",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The development of large language models tailored for handling patients' clinical notes is often hindered by the limited accessibility and usability of these notes due to strict privacy regulations."
+   }
+  },
+  {
+   "surface": "synthetic clinical notes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our findings convincingly demonstrate that synthetic clinical notes can serve as viable substitutes for real ones when constructing high-performing clinical language models."
+   }
+  },
+  {
+   "surface": "Asclepius",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We then use these synthetic notes to train our specialized clinical large language model, Asclepius."
+   }
+  },
+  {
+   "surface": "GPT-3.5-turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We benchmark Asclepius against several other large language models, including GPT-3.5-turbo and other open-source alternatives."
+   }
+  },
+  {
+   "surface": "medical professionals",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "This conclusion is supported by detailed evaluations conducted by both GPT-4 and medical professionals."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "This conclusion is supported by detailed evaluations conducted by both GPT-4 and medical professionals."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Asclepius",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We then use these synthetic notes to train our specialized clinical large language model, Asclepius.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-4",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "This conclusion is supported by detailed evaluations conducted by both GPT-4 and medical professionals.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Asclepius"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GPT-3.5-turbo"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "medical professionals"
+  }
+ ],
+ "auto_added_endpoints": [
+  "GPT-4"
+ ],
+ "duration_ms": 38933,
+ "eval_count": 477,
+ "ts": "2026-11-21T16:02:19Z"
+}

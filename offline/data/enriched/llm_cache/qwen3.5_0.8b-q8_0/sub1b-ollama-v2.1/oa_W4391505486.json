@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4391505486",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Despite efforts to expand the knowledge of large language models (LLMs), knowledge gaps -- missing or outdated information in LLMs -- might always persist given the evolving nature of knowledge."
+   }
+  },
+  {
+   "surface": "QA tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with three LLMs on four QA tasks featuring diverse knowledge domains demonstrate that both cooperative and competitive approaches to unveiling LLM knowledge gaps achieve up to 19.3% improvements on abstain accuracy against the strongest baseline."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "QA tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19425,
+ "eval_count": 124,
+ "ts": "2026-11-21T17:13:41Z"
+}

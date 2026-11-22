@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404781926",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLaMA2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We conducted experiments using LLaMA2 and Mistral on multiple free-form QA tasks."
+   }
+  },
+  {
+   "surface": "Mistral",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We conducted experiments using LLaMA2 and Mistral on multiple free-form QA tasks."
+   }
+  },
+  {
+   "surface": "UaIT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To accomplish this, we propose an uncertainty-aware instruction tuning (UaIT) method, aligning LLMs’ perception with the probabilistic uncertainty of the generation."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "UaIT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "UaIT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23453,
+ "eval_count": 222,
+ "ts": "2026-11-21T18:53:03Z"
+}

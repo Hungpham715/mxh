@@ -1,0 +1,124 @@
+{
+ "paper_id": "oa:W4416035754",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "multi-semantic RAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To build a more efficient and effective RAG, we propose the multi-semantic RAG (MS-RAG)."
+   }
+  },
+  {
+   "surface": "chunk-level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To be specific, (i) at indexing stage, we create multiple semantic-level indexes, including chunk-level, relation-level, and entity-level, to leverage the merits of dense vector and knowledge graph."
+   }
+  },
+  {
+   "surface": "relation-level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To be specific, (i) at indexing stage, we create multiple semantic-level indexes, including chunk-level, relation-level, and entity-level, to leverage the merits of dense vector and knowledge graph."
+   }
+  },
+  {
+   "surface": "entity-level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To be specific, (i) at indexing stage, we create multiple semantic-level indexes, including chunk-level, relation-level, and entity-level, to leverage the merits of dense vector and knowledge graph."
+   }
+  },
+  {
+   "surface": "dense vector",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this work, we combine knowledge graphs with dense vector to build a multi-semantic RAG."
+   }
+  },
+  {
+   "surface": "knowledge graph",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this work, we combine knowledge graphs with dense vector to build a multi-semantic RAG."
+   }
+  },
+  {
+   "surface": "mix recall algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(ii) at retrieval stage, unlike the previous LLM-empowered entity extraction, we propose a novel mix recall algorithm."
+   }
+  },
+  {
+   "surface": "multi-semantic rerank module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Finally, we employ a multi-semantic rerank module to purify the results."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dense vector",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To be specific, (i) at indexing stage, we create multiple semantic-level indexes, including chunk-level, relation-level, and entity-level, to leverage the merits of dense vector and knowledge graph.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge graph",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To be specific, (i) at indexing stage, we create multiple semantic-level indexes, including chunk-level, relation-level, and entity-level, to leverage the merits of dense vector and knowledge graph.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "mix recall algorithm",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(ii) at retrieval stage, unlike the previous LLM-empowered entity extraction, we propose a novel mix recall algorithm.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-semantic rerank module",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Finally, we employ a multi-semantic rerank module to purify the results.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "chunk-level"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48815,
+ "eval_count": 590,
+ "ts": "2026-11-21T21:20:19Z"
+}

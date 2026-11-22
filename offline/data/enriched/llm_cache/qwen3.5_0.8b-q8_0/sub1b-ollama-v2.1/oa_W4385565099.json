@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4385565099",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TODAY",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce a novel task named TODAY that bridges this gap with temporal differential analysis, which as the name suggests, evaluates whether systems can correctly understand the effect of incremental changes."
+   }
+  },
+  {
+   "surface": "temporal differential analysis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce a novel task named TODAY that bridges this gap with temporal differential analysis, which as the name suggests, evaluates whether systems can correctly understand the effect of incremental changes."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "temporal differential analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19257,
+ "eval_count": 147,
+ "ts": "2026-11-21T15:17:26Z"
+}

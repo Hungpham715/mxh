@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4415936660",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "reversal",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We formalize a structural property of the causal (autoregressive) language modeling (CLM) objective: reversal invariance."
+   }
+  },
+  {
+   "surface": "CLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We formalize a structural property of the causal (autoregressive) language modeling (CLM) objective: reversal invariance."
+   }
+  },
+  {
+   "surface": "pretraining",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Formally, the next-token prediction loss assigns identical likelihood to a corpus and its reversal, implying that standard CLM pretraining is direction-blind."
+   }
+  },
+  {
+   "surface": "direction-blind",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Formally, the next-token prediction loss assigns identical likelihood to a corpus and its reversal, implying that standard CLM pretraining is direction-blind."
+   }
+  },
+  {
+   "surface": "reversed text",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This symmetry explains why models trained on reversed text can achieve comparable performance to those trained on forward text, despite the inherently time-asymmetric nature of human language and reasoning."
+   }
+  },
+  {
+   "surface": "forward text",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This symmetry explains why models trained on reversed text can achieve comparable performance to those trained on forward text, despite the inherently time-asymmetric nature of human language and reasoning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "reversed text",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This symmetry explains why models trained on reversed text can achieve comparable performance to those trained on forward text, despite the inherently time-asymmetric nature of human language and reasoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "forward text",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This symmetry explains why models trained on reversed text can achieve comparable performance to those trained on forward text, despite the inherently time-asymmetric nature of human language and reasoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26460,
+ "eval_count": 289,
+ "ts": "2026-11-21T21:04:56Z"
+}

@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4385572560",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "graph-induced fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we present a plug-and-play and lightweight method named graph-induced fine-tuning (GIFT) which can adapt various Transformer-based pre-trained language models (PLMs) for universal MPC understanding."
+   }
+  },
+  {
+   "surface": "Transformer-based pre-trained language models (PLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we present a plug-and-play and lightweight method named graph-induced fine-tuning (GIFT) which can adapt various Transformer-based pre-trained language models (PLMs) for universal MPC understanding."
+   }
+  },
+  {
+   "surface": "addressee recognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate GIFT by implementing it into three PLMs, and test the performance on three downstream tasks including addressee recognition, speaker identification and response selection."
+   }
+  },
+  {
+   "surface": "speaker identification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate GIFT by implementing it into three PLMs, and test the performance on three downstream tasks including addressee recognition, speaker identification and response selection."
+   }
+  },
+  {
+   "surface": "response selection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate GIFT by implementing it into three PLMs, and test the performance on three downstream tasks including addressee recognition, speaker identification and response selection."
+   }
+  },
+  {
+   "surface": "MPC understanding",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, existing methods on MPC understanding typically embed interlocutors and utterances into sequential information flows, or utilize only the superficial of inherent graph structures in MPCs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer-based pre-trained language models (PLMs)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we present a plug-and-play and lightweight method named graph-induced fine-tuning (GIFT) which can adapt various Transformer-based pre-trained language models (PLMs) for universal MPC understanding.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "addressee recognition"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "speaker identification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "response selection"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MPC understanding"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42161,
+ "eval_count": 570,
+ "ts": "2026-11-21T15:58:46Z"
+}

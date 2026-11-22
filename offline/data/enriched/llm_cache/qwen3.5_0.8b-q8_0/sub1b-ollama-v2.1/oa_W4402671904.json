@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4402671904",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Open-Set Semi-Supervised Text Classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open-Set Semi-Supervised Text Classification (OSTC) aims to train a classification model on a limited set of labeled texts, alongside plenty of unlabeled texts that include both in-distribution and out-of-distribution examples."
+   }
+  },
+  {
+   "surface": "Adversarial Disagreement Maximization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the properties of in-measurement and cross-measurements, we design an Adversarial Disagreement Maximization (ADM) model that synergeticly optimizes the measurement disagreements."
+   }
+  },
+  {
+   "surface": "OSTC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open-Set Semi-Supervised Text Classification (OSTC) aims to train a classification model on a limited set of labeled texts, alongside plenty of unlabeled texts that include both in-distribution and out-of-distribution examples."
+   }
+  },
+  {
+   "surface": "measurement disagreements",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we revisit the main challenge in OSTC, i.e., outlier detection, from a measurement disagreement perspective and innovatively propose to improve OSTC performance by directly maximizing the measurement disagreements."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Adversarial Disagreement Maximization",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the properties of in-measurement and cross-measurements, we design an Adversarial Disagreement Maximization (ADM) model that synergeticly optimizes the measurement disagreements.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Adversarial Disagreement Maximization"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Adversarial Disagreement Maximization"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "OSTC"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Adversarial Disagreement Maximization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36595,
+ "eval_count": 524,
+ "ts": "2026-11-21T18:17:39Z"
+}

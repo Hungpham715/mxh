@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4402667011",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Mementos",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this challenge, this paper introduces Mementos, a new benchmark designed to assess MLLMs’ sequential image reasoning abilities."
+   }
+  },
+  {
+   "surface": "GPT-4V",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through a careful evaluation of nine recent MLLMs on Mementos, including GPT-4V and Gemini, we find that they struggle to accurately describe dynamic information about given image sequences, often leading to hallucinations/misrepresentations of objects and their corresponding behaviors."
+   }
+  },
+  {
+   "surface": "Gemini",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through a careful evaluation of nine recent MLLMs on Mementos, including GPT-4V and Gemini, we find that they struggle to accurately describe dynamic information about given image sequences, often leading to hallucinations/misrepresentations of objects and their corresponding behaviors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GPT-4V"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Gemini"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43883,
+ "eval_count": 243,
+ "ts": "2026-11-21T17:32:55Z"
+}

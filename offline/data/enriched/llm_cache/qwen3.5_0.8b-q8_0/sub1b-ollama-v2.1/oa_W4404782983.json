@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4404782983",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Large language models (LLMs) recently became popular in the Natural Language Processing community because of their versatility and capability to solve unseen tasks in zero/few-shot settings."
+   }
+  },
+  {
+   "surface": "LLaMA 2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings."
+   }
+  },
+  {
+   "surface": "LLaMA 3",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings."
+   }
+  },
+  {
+   "surface": "Vicuna v1.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings."
+   }
+  },
+  {
+   "surface": "ChatGPT-3.5-turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLaMA 2",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our work investigates LLM usage, specifically open-source models such as Llama 2, Llama 3, and Vicuna v1.5, and closed-source, such as ChatGPT-3.5-turbo and GPT-4o, in the CWI, LCP, and MWE settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT-3.5-turbo",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate zero-shot, few-shot, and fine-tuning settings and show that LLMs struggle in certain conditions or achieve comparable results against existing methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-4o",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate zero-shot, few-shot, and fine-tuning settings and show that LLMs struggle in certain conditions or achieve comparable results against existing methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24083,
+ "eval_count": 414,
+ "ts": "2026-11-21T19:22:02Z"
+}

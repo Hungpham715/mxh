@@ -21,13 +21,13 @@
   },
   "verdicts_by_source_kind": {
     "agreement": {
-      "pass": 4
+      "pass": 15
     },
     "llm": {
-      "pass": 47
+      "pass": 64
     },
     "rules": {
-      "pass": 69
+      "pass": 41
     }
   },
   "claims_not_supported": [

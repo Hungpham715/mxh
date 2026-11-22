@@ -1,0 +1,118 @@
+{
+ "paper_id": "oa:W4416036242",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HiEPS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we propose a novel ensemble method, HiEPS, which integrates the results of diverse prompting strategies to promote LLMs’ reliability."
+   }
+  },
+  {
+   "surface": "HTC prompting strategies",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Given the challenges of understanding the hierarchy, various HTC prompting strategies have been explored to elicit the best performance from LLMs.However, our empirical study reveals that LLMs are highly sensitive to these prompting strategies—(i) within a task, different strategies yield substantially different results, and (ii) across various tasks, the relative effectiveness of a given strategy varies significantly."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Given the challenges of understanding the hierarchy, various HTC prompting strategies have been explored to elicit the best performance from LLMs.However, our empirical study reveals that LLMs are highly sensitive to these prompting strategies—(i) within a task, different strategies yield substantially different results, and (ii) across various tasks, the relative effectiveness of a given strategy varies significantly."
+   }
+  },
+  {
+   "surface": "Hierarchical text classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Hierarchical text classification aims to classify documents into multiple labels within a hierarchical taxonomy, making it an essential yet challenging task in natural language processing."
+   }
+  },
+  {
+   "surface": "Zero-shot manner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recently, using Large Language Models (LLM) to tackle hierarchical text classification in a zero-shot manner has attracted increasing attention due to their cost-efficiency and flexibility."
+   }
+  },
+  {
+   "surface": "Path-valid voting mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also introduce a path-valid voting mechanism for ensembling, which selects a valid result with the highest path frequency score."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HTC prompting strategies",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Given the challenges of understanding the hierarchy, various HTC prompting strategies have been explored to elicit the best performance from LLMs.However, our empirical study reveals that LLMs are highly sensitive to these prompting strategies—(i) within a task, different strategies yield substantially different results, and (ii) across various tasks, the relative effectiveness of a given strategy varies significantly.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Given the challenges of understanding the hierarchy, various HTC prompting strategies have been explored to elicit the best performance from LLMs.However, our empirical study reveals that LLMs are highly sensitive to these prompting strategies—(i) within a task, different strategies yield substantially different results, and (ii) across various tasks, the relative effectiveness of a given strategy varies significantly.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Zero-shot manner",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recently, using Large Language Models (LLM) to tackle hierarchical text classification in a zero-shot manner has attracted increasing attention due to their cost-efficiency and flexibility.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Path-valid voting mechanism",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also introduce a path-valid voting mechanism for ensembling, which selects a valid result with the highest path frequency score.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HTC prompting strategies",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Given the challenges of understanding the hierarchy, various HTC prompting strategies have been explored to elicit the best performance from LLMs.However, our empirical study reveals that LLMs are highly sensitive to these prompting strategies—(i) within a task, different strategies yield substantially different results, and (ii) across various tasks, the relative effectiveness of a given strategy varies significantly.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Hierarchical text classification"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48249,
+ "eval_count": 622,
+ "ts": "2026-11-21T23:32:46Z"
+}

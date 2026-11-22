@@ -1,0 +1,56 @@
+{
+ "paper_id": "oa:W4385571159",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DiffusionNER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this paper, we propose DiffusionNER, which formulates the named entity recognition task as a boundary-denoising diffusion process and thus generates named entities from noisy spans."
+   }
+  },
+  {
+   "surface": "named entity recognition task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this paper, we propose DiffusionNER, which formulates the named entity recognition task as a boundary-denoising diffusion process and thus generates named entities from noisy spans."
+   }
+  },
+  {
+   "surface": "multiple flat and nested NER datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on multiple flat and nested NER datasets demonstrate that DiffusionNER achieves comparable or even better performance than previous state-of-the-art models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "multiple flat and nested NER datasets",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on multiple flat and nested NER datasets demonstrate that DiffusionNER achieves comparable or even better performance than previous state-of-the-art models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "named entity recognition task"
+  }
+ ],
+ "auto_added_endpoints": [
+  "multiple flat and nested NER datasets"
+ ],
+ "duration_ms": 32169,
+ "eval_count": 210,
+ "ts": "2026-11-21T15:38:49Z"
+}

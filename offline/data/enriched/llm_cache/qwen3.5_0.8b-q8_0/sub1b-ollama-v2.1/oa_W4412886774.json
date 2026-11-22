@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4412886774",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Given these challenges, we develop a framework called AndroidGen to enhance the capabilities of LLM-based agents under data scarcity."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models have opened up a world of possibilities for various NLP tasks, sparking optimism for the future."
+   }
+  },
+  {
+   "surface": "application",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We extensively evaluate AndroidGen with AndroidWorld, AitW, and various popular applications, demonstrating its improvements and revealing potential areas for future improvement."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Given these challenges, we develop a framework called AndroidGen to enhance the capabilities of LLM-based agents under data scarcity.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "benchmark"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30262,
+ "eval_count": 404,
+ "ts": "2026-11-21T20:01:04Z"
+}

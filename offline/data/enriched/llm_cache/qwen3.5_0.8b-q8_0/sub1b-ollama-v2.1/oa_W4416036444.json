@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4416036444",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Mamba",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In light of this, Mamba has attracted attention for maintaining a constant inference size, with empirical evidence demonstrating that it can match Transformer performance in sequence modeling while significantly reducing computational costs."
+   }
+  },
+  {
+   "surface": "Transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformers have become the backbone of modern Large Language Models (LLMs); however, their inference overhead grows linearly with the sequence length, posing challenges for modeling long sequences."
+   }
+  },
+  {
+   "surface": "COPY operation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we focus on analyzing the expressive ability of Mamba to perform our defined COPY operation and Chain of Thought (CoT) reasoning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformers have become the backbone of modern Large Language Models (LLMs); however, their inference overhead grows linearly with the sequence length, posing challenges for modeling long sequences.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we focus on analyzing the expressive ability of Mamba to perform our defined COPY operation and Chain of Thought (CoT) reasoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "CoT reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "COPY operation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "CoT reasoning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27269,
+ "eval_count": 394,
+ "ts": "2026-11-21T21:39:21Z"
+}

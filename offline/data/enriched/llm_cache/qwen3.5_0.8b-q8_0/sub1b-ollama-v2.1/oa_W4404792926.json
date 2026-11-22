@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4404792926",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CARER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by how human experts leverage reasoning for medical diagnosis, we propose CARER, a novel health risk prediction framework, that enhances deep learning models with clinical rationales derived from medically proficient Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by how human experts leverage reasoning for medical diagnosis, we propose CARER, a novel health risk prediction framework, that enhances deep learning models with clinical rationales derived from medically proficient Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "EHR",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The increasing availability of multimodal data from electronic health records (EHR) has paved the way for deep learning methods to improve diagnosis accuracy."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "EHR",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The increasing availability of multimodal data from electronic health records (EHR) has paved the way for deep learning methods to improve diagnosis accuracy.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "EHR",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our code is available at https://github.com/tuandung2812/CARER-EMNLP-2024",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "EHR"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29344,
+ "eval_count": 388,
+ "ts": "2026-11-21T19:36:50Z"
+}

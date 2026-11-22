@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385571669",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "pointer network",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We sort gold spans using a predefined order and leverage a pointer network to autoregressively select spans by that order."
+   }
+  },
+  {
+   "surface": "autoregressive span selection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present a simple and unified approach for both continuous and discontinuous constituency parsing via autoregressive span selection."
+   }
+  },
+  {
+   "surface": "simple heuristic",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We use simple heuristic to output valid trees so that our approach is able to predict all possible continuous and discontinuous constituency trees without sacrificing data coverage and without the need to use expensive chart-based parsing algorithms."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "autoregressive span selection",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We sort gold spans using a predefined order and leverage a pointer network to autoregressively select spans by that order.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "autoregressive span selection",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We use simple heuristic to output valid trees so that our approach is able to predict all possible continuous and discontinuous constituency trees without sacrificing data coverage and without the need to use expensive chart-based parsing algorithms.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21901,
+ "eval_count": 244,
+ "ts": "2026-11-21T15:46:56Z"
+}

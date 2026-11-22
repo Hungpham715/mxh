@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4404783368",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Parameter-efficient fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter-efficient fine-tuning (PEFT) is crucial for customizing Large Language Models (LLMs) with constrained resource."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter-efficient fine-tuning (PEFT) is crucial for customizing Large Language Models (LLMs) with constrained resource."
+   }
+  },
+  {
+   "surface": "sparse-architecture LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although there have been various PEFT methods for dense-architecture LLMs, PEFT for sparse-architecture LLMs is still underexplored."
+   }
+  },
+  {
+   "surface": "Mixture-of-Experts (MoE)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we study the PEFT method for LLMs with the Mixture-of-Experts (MoE) architecture and the contents of this work are mainly threefold: (1) We investigate the dispersion degree of the activated experts in customized tasks, and found that the routing distribution for specific task tend to be highly concentrated, while the distribution of activated experts varies significantly across different tasks."
+   }
+  },
+  {
+   "surface": "expert-specialized fine-tuning method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "(2) We propose the expert-specialized fine-tuning method, which tunes the experts most relevant to downstream tasks while freezing the other experts; experimental results demonstrate that our method not only improves the tuning efficiency, but also matches or even surpasses the performance of full-parameter fine-tuning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Large Language Models (LLMs)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter-efficient fine-tuning (PEFT) is crucial for customizing Large Language Models (LLMs) with constrained resource.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "sparse-architecture LLMs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although there have been various PEFT methods for dense-architecture LLMs, PEFT for sparse-architecture LLMs is still underexplored.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "fine-grained experts"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Mixture-of-Experts (MoE)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "expert-specialized fine-tuning method"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "fine-grained experts"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36146,
+ "eval_count": 588,
+ "ts": "2026-11-21T19:30:19Z"
+}

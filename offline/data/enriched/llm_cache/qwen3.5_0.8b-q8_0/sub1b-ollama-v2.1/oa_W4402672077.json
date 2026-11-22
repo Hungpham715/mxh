@@ -1,0 +1,135 @@
+{
+ "paper_id": "oa:W4402672077",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans generally acquire new skills without compromising the old; however, the opposite holds for Large Language Models (LLMs), e.g., from LLaMA to CodeLLaMA."
+   }
+  },
+  {
+   "surface": "CodeLLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans generally acquire new skills without compromising the old; however, the opposite holds for Large Language Models (LLMs), e.g., from LLaMA to CodeLLaMA."
+   }
+  },
+  {
+   "surface": "Transformer blocks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To this end, we propose a new post-pretraining method for LLMs with an expansion of Transformer blocks."
+   }
+  },
+  {
+   "surface": "post-pretraining method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To this end, we propose a new post-pretraining method for LLMs with an expansion of Transformer blocks."
+   }
+  },
+  {
+   "surface": "LLaMA Pro-8.3B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "LLaMA2-7B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "LLaMA Pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "LLaMA Pro - Instruct",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "LLaMA Pro and its instruction-following counterpart (LLaMA Pro - Instruct) achieve advanced performance among various benchmarks, demonstrating superiority over existing open models in the LLaMA family and the immense potential of reasoning and addressing diverse tasks as an intelligent agent."
+   }
+  },
+  {
+   "surface": "general tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "programming",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "mathematics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we experiment on the corpus of code and math, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from LLaMA2-7B, excelling in general tasks, programming, and mathematics."
+   }
+  },
+  {
+   "surface": "LLaMA family",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "LLaMA Pro and its instruction-following counterpart (LLaMA Pro - Instruct) achieve advanced performance among various benchmarks, demonstrating superiority over existing open models in the LLaMA family and the immense potential of reasoning and addressing diverse tasks as an intelligent agent."
+   }
+  },
+  {
+   "surface": "intelligent agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "LLaMA Pro and its instruction-following counterpart (LLaMA Pro - Instruct) achieve advanced performance among various benchmarks, demonstrating superiority over existing open models in the LLaMA family and the immense potential of reasoning and addressing diverse tasks as an intelligent agent."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaMA2-7B"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaMA family"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "intelligent agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "intelligent agent"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35432,
+ "eval_count": 662,
+ "ts": "2026-11-21T18:32:10Z"
+}

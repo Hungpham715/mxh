@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4412945021",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VisuoThink",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome these limitations and inspired by the mechanisms of slow thinking in human cognition, we introduce VisuoThink, a novel framework that seamlessly integrates visuospatial and linguistic domains."
+   }
+  },
+  {
+   "surface": "look-ahead tree search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "VisuoThink facilitates multimodal slow thinking by enabling progressive visual-textual reasoning and incorporates test-time scaling through look-ahead tree search."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "look-ahead tree search",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "VisuoThink facilitates multimodal slow thinking by enabling progressive visual-textual reasoning and incorporates test-time scaling through look-ahead tree search.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 20491,
+ "eval_count": 142,
+ "ts": "2026-11-21T20:34:46Z"
+}

@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4392426167",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FlanT5-XXL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using FlanT5-XXL, an instruction-tuned open-source LLM, with the SemEval 2016 Tasks 6A, 6B, and P-Stance datasets, we study the performance and its variations under different prompts and decoding strategies, as well as the potential biases of the model."
+   }
+  },
+  {
+   "surface": "LLM-based zero-shot stance detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We investigate the performance of LLM-based zero-shot stance detection on tweets."
+   }
+  },
+  {
+   "surface": "P-Stance",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using FlanT5-XXL, an instruction-tuned open-source LLM, with the SemEval 2016 Tasks 6A, 6B, and P-Stance datasets, we study the performance and its variations under different prompts and decoding strategies, as well as the potential biases of the model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "P-Stance",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We show that the zero-shot approach can match or outperform state-of-the-art benchmarks, including fine-tuned models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "P-Stance",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using FlanT5-XXL, an instruction-tuned open-source LLM, with the SemEval 2016 Tasks 6A, 6B, and P-Stance datasets, we study the performance and its variations under different prompts and decoding strategies, as well as the potential biases of the model.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "SemEval 2016 Tasks 6A, 6B, P-Stance"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "SemEval 2016 Tasks 6A, 6B, P-Stance"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FlanT5-XXL"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "SemEval 2016 Tasks 6A, 6B, P-Stance"
+  }
+ ],
+ "auto_added_endpoints": [
+  "P-Stance"
+ ],
+ "duration_ms": 48827,
+ "eval_count": 614,
+ "ts": "2026-11-21T17:16:12Z"
+}

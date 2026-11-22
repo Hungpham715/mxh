@@ -1,0 +1,128 @@
+{
+ "paper_id": "oa:W4389524473",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Transformer-based language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformer-based language models (LMs) are powerful and widely-applicable tools, but their usefulness is constrained by a finite context window and the expensive computational cost of processing long text documents."
+   }
+  },
+  {
+   "surface": "AutoCompressors",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose to adapt pre-trained LMs into AutoCompressors."
+   }
+  },
+  {
+   "surface": "OPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We fine-tune OPT and Llama-2 models on sequences of up to 30,720 tokens and show that AutoCompressors can utilize long contexts to improve perplexity."
+   }
+  },
+  {
+   "surface": "Llama-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We fine-tune OPT and Llama-2 models on sequences of up to 30,720 tokens and show that AutoCompressors can utilize long contexts to improve perplexity."
+   }
+  },
+  {
+   "surface": "sequences of up to 30,720 tokens",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We fine-tune OPT and Llama-2 models on sequences of up to 30,720 tokens and show that AutoCompressors can utilize long contexts to improve perplexity."
+   }
+  },
+  {
+   "surface": "in-context learning",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate AutoCompressors on in-context learning by compressing task demonstrations and find that summary vectors are good substitutes for plain-text demonstrations, increasing accuracy while reducing inference costs."
+   }
+  },
+  {
+   "surface": "retrieval-augmented language modeling",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Finally, we explore the benefits of pre-computing summary vectors for large corpora by applying summary vectors to retrieval-augmented language modeling and a passage re-ranking task."
+   }
+  },
+  {
+   "surface": "passage re-ranking task",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Finally, we explore the benefits of pre-computing summary vectors for large corpora by applying summary vectors to retrieval-augmented language modeling and a passage re-ranking task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "AutoCompressors",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose to adapt pre-trained LMs into AutoCompressors.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "in-context learning",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate AutoCompressors on in-context learning by compressing task demonstrations and find that summary vectors are good substitutes for plain-text demonstrations, increasing accuracy while reducing inference costs.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "retrieval-augmented language modeling",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Finally, we explore the benefits of pre-computing summary vectors for large corpora by applying summary vectors to retrieval-augmented language modeling and a passage re-ranking task.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "passage re-ranking task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Overall, AutoCompressors emerge as a simple and inexpensive solution to extend the context window of LMs while speeding up inference over long contexts.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sequences of up to 30,720 tokens"
+  }
+ ],
+ "auto_added_endpoints": [
+  "in-context learning",
+  "retrieval-augmented language modeling",
+  "passage re-ranking task"
+ ],
+ "duration_ms": 30374,
+ "eval_count": 511,
+ "ts": "2026-11-21T17:04:00Z"
+}

@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4416035606",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have attracted significant attention due to their impressive general capabilities across diverse downstream tasks."
+   }
+  },
+  {
+   "surface": "domain-specific optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, without domain-specific optimization, they often underperform on specialized knowledge benchmarks and even produce hallucination."
+   }
+  },
+  {
+   "surface": "knowledge infusion scaling law",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Building on these insights, we propose a knowledge infusion scaling law that predicts the optimal amount of domain knowledge to inject into large LLMs by analyzing their smaller counterparts."
+   }
+  },
+  {
+   "surface": "critical collapse point",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "1) Critical collapse point: each model exhibits a threshold beyond which its knowledge retention capabilities sharply degrade."
+   }
+  },
+  {
+   "surface": "scale correlation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "2) Scale correlation: these collapse points scale consistently with the model’s size."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "domain-specific optimization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have attracted significant attention due to their impressive general capabilities across diverse downstream tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge infusion scaling law",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Building on these insights, we propose a knowledge infusion scaling law that predicts the optimal amount of domain knowledge to inject into large LLMs by analyzing their smaller counterparts.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "critical collapse point"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "scale correlation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21094,
+ "eval_count": 400,
+ "ts": "2026-11-21T21:15:44Z"
+}

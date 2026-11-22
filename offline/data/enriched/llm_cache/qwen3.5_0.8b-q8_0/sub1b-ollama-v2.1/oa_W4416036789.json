@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4416036789",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "When prompted to think step-by-step, language models (LMs) produce a chain of thought (CoT), a sequence of reasoning steps that the model supposedly used to produce its prediction."
+   }
+  },
+  {
+   "surface": "chain of thought",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "When prompted to think step-by-step, language models (LMs) produce a chain of thought (CoT), a sequence of reasoning steps that the model supposedly used to produce its prediction."
+   }
+  },
+  {
+   "surface": "reasoning steps",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "When prompted to think step-by-step, language models (LMs) produce a chain of thought (CoT), a sequence of reasoning steps that the model supposedly used to produce its prediction."
+   }
+  },
+  {
+   "surface": "model parameters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "FUR erases information contained in reasoning steps from model parameters and measures faithfulness as the resulting effect on the model’s prediction."
+   }
+  },
+  {
+   "surface": "parametric faithfulness",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce a framework for measuring parametric faithfulness of generated reasoning and propose Faithfulness by Unlearning Reasoning steps (FUR), an instance of this framework."
+   }
+  },
+  {
+   "surface": "Faithfulness by Unlearning Reasoning steps (FUR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce a framework for measuring parametric faithfulness of generated reasoning and propose Faithfulness by Unlearning Reasoning steps (FUR), an instance of this framework."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model parameters",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "FUR erases information contained in reasoning steps from model parameters and measures faithfulness as the resulting effect on the model’s prediction.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "MCQA datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "chain of thought"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "MCQA datasets"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "MCQA datasets"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33878,
+ "eval_count": 542,
+ "ts": "2026-11-21T21:57:55Z"
+}

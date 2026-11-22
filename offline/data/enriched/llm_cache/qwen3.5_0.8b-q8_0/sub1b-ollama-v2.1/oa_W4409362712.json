@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4409362712",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EXGEC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To bridge the gap, this paper first introduces the task of EXplainable GEC (EXGEC), which focuses on the integral role of correction and explanation tasks."
+   }
+  },
+  {
+   "surface": "EXCGEC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate the task, we propose EXCGEC, a tailored benchmark for Chinese EXGEC consisting of 8,216 explanation-augmented samples featuring the design of hybrid edit-wise explanations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "8216"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "EXCGEC"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "EXGEC"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "8216"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38624,
+ "eval_count": 299,
+ "ts": "2026-11-21T19:53:33Z"
+}

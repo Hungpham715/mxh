@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4402671972",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While recent Large Language Models (LLMs) have proven useful in answering user queries, they are prone to hallucination, and their responses often lack credibility due to missing references to reliable sources."
+   }
+  },
+  {
+   "surface": "fine-grained rewards",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we propose an effective training framework using fine-grained rewards to teach LLMs to generate highly supportive and relevant citations, while ensuring the correctness of their responses."
+   }
+  },
+  {
+   "surface": "Question Answering (QA)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conduct extensive experiments on Question Answering (QA) datasets taken from the ALCE benchmark and validate the model’s generalizability using EXPERTQA."
+   }
+  },
+  {
+   "surface": "ALCE benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conduct extensive experiments on Question Answering (QA) datasets taken from the ALCE benchmark and validate the model’s generalizability using EXPERTQA."
+   }
+  },
+  {
+   "surface": "LLaMA-2-7B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "On LLaMA-2-7B, the incorporation of fine-grained rewards achieves the best performance among the baselines, even surpassing that of GPT-3.5-turbo."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-grained rewards",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we propose an effective training framework using fine-grained rewards to teach LLMs to generate highly supportive and relevant citations, while ensuring the correctness of their responses.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ALCE benchmark",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conduct extensive experiments on Question Answering (QA) datasets taken from the ALCE benchmark and validate the model’s generalizability using EXPERTQA.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ALCE benchmark",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conduct extensive experiments on Question Answering (QA) datasets taken from the ALCE benchmark and validate the model’s generalizability using EXPERTQA.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 29420,
+ "eval_count": 354,
+ "ts": "2026-11-21T18:25:15Z"
+}

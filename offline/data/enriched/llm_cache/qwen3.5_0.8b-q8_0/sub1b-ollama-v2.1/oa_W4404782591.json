@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4404782591",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "InfiniPot",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Our work aims to address this limitation by introducing InfiniPot, a novel KV cache control framework designed to enable pre-trained LLMs to manage extensive sequences within fixed memory constraints efficiently, without requiring additional training."
+   }
+  },
+  {
+   "surface": "Continual Context Distillation (CCD)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "InfiniPot leverages Continual Context Distillation (CCD), an iterative process that compresses and retains essential information through novel importance metrics, effectively maintaining critical data even without access to future context."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Continual Context Distillation (CCD)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "InfiniPot leverages Continual Context Distillation (CCD), an iterative process that compresses and retains essential information through novel importance metrics, effectively maintaining critical data even without access to future context.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 31534,
+ "eval_count": 141,
+ "ts": "2026-11-21T19:09:13Z"
+}

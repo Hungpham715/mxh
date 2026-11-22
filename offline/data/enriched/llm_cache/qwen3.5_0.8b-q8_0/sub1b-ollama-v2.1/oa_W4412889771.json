@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412889771",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Sequence Labelling Information Contrast Model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "On this basis, we introduce the Sequence Labelling Information Contrast Model (SL-ICM), a novel metric based on information theory for evaluating sequence labeling tasks."
+   }
+  },
+  {
+   "surface": "SL-ICM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "On this basis, we introduce the Sequence Labelling Information Contrast Model (SL-ICM), a novel metric based on information theory for evaluating sequence labeling tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sequence Labelling Information Contrast Model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "On this basis, we introduce the Sequence Labelling Information Contrast Model (SL-ICM), a novel metric based on information theory for evaluating sequence labeling tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Sequence Labelling Information Contrast Model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24255,
+ "eval_count": 218,
+ "ts": "2026-11-21T20:15:31Z"
+}

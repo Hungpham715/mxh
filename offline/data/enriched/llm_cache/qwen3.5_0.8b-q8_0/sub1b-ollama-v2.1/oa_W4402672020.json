@@ -1,0 +1,180 @@
+{
+ "paper_id": "oa:W4402672020",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VoiceCraft",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts."
+   }
+  },
+  {
+   "surface": "Transformer decoder architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence."
+   }
+  },
+  {
+   "surface": "token rearrangement procedure",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence."
+   }
+  },
+  {
+   "surface": "causal masking and delayed stacking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence."
+   }
+  },
+  {
+   "surface": "Speech editing task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2."
+   }
+  },
+  {
+   "surface": "Audiobooks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts."
+   }
+  },
+  {
+   "surface": "Internet videos",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts."
+   }
+  },
+  {
+   "surface": "Podcasts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts."
+   }
+  },
+  {
+   "surface": "Humans",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2."
+   }
+  },
+  {
+   "surface": "VALL-E",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2."
+   }
+  },
+  {
+   "surface": "XTTS v2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "VoiceCraft",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Speech editing task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Audiobooks",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Internet videos",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Podcasts",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Humans",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALL-E and the popular commercial model XTTS v2.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Zero-shot text-to-speech (TTS) task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Zero-shot text-to-speech (TTS) task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VALL-E"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "XTTS v2"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48949,
+ "eval_count": 973,
+ "ts": "2026-11-21T18:29:33Z"
+}

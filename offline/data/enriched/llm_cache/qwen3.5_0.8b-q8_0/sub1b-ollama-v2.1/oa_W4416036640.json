@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4416036640",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM-as-a-judge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM-as-a-judge has become a promising paradigm for using large language models (LLMs) to evaluate natural language generation (NLG), but the uncertainty of its evaluation remains underexplored."
+   }
+  },
+  {
+   "surface": "conformal prediction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work presents the first framework to analyze the uncertainty by offering a prediction interval of LLM-based scoring via conformal prediction."
+   }
+  },
+  {
+   "surface": "ordinal boundary adjustment",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Conformal prediction constructs continuous prediction intervals from a single evaluation run, and we design an ordinal boundary adjustment for discrete rating tasks."
+   }
+  },
+  {
+   "surface": "midpoint-based score",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also suggest a midpoint-based score within the interval as a low-bias alternative to raw model score and weighted average."
+   }
+  },
+  {
+   "surface": "judge reprompting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also explore the usefulness of interval midpoint and judge reprompting for better judgment."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "conformal prediction",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work presents the first framework to analyze the uncertainty by offering a prediction interval of LLM-based scoring via conformal prediction.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ordinal boundary adjustment",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Conformal prediction constructs continuous prediction intervals from a single evaluation run, and we design an ordinal boundary adjustment for discrete rating tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "midpoint-based score",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We also suggest a midpoint-based score within the interval as a low-bias alternative to raw model score and weighted average.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "judge reprompting",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also explore the usefulness of interval midpoint and judge reprompting for better judgment.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 30570,
+ "eval_count": 416,
+ "ts": "2026-11-21T21:55:26Z"
+}

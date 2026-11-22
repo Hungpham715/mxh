@@ -1,0 +1,138 @@
+{
+ "paper_id": "oa:W4402667003",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BitDistiller",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit)."
+   }
+  },
+  {
+   "surface": "Quantization-Aware Training (QAT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit)."
+   }
+  },
+  {
+   "surface": "Knowledge Distillation (KD)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit)."
+   }
+  },
+  {
+   "surface": "CAKLD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, BitDistiller first incorporates a tailored asymmetric quantization and clipping technique to maximally preserve the fidelity of quantized weights, and then proposes a novel Confidence-Aware Kullback-Leibler Divergence (CAKLD) objective, which is employed in a self-distillation manner to enable faster convergence and superior model performance."
+   }
+  },
+  {
+   "surface": "3-bit",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks."
+   }
+  },
+  {
+   "surface": "2-bit",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks."
+   }
+  },
+  {
+   "surface": "general language understanding",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks."
+   }
+  },
+  {
+   "surface": "complex reasoning benchmarks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Quantization-Aware Training (QAT)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Knowledge Distillation (KD)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CAKLD",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces BitDistiller, a framework that synergizes Quantization-Aware Training (QAT) with Knowledge Distillation (KD) to boost the performance of LLMs at ultra-low precisions (sub-4-bit).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "3-bit",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "2-bit",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Empirical evaluations demonstrate that BitDistiller significantly surpasses existing methods in both 3-bit and 2-bit configurations on general language understanding and complex reasoning benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "general language understanding"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "complex reasoning benchmarks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 61775,
+ "eval_count": 767,
+ "ts": "2026-11-21T17:32:11Z"
+}

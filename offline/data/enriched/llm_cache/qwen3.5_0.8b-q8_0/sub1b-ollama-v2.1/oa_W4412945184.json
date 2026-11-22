@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412945184",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Language Model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The proposed formulation quantifies meaning counts as contextual diversity, which is based on the directions of contextualized word vectors obtained from a Language Model (LM)."
+   }
+  },
+  {
+   "surface": "LM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The proposed formulation quantifies meaning counts as contextual diversity, which is based on the directions of contextualized word vectors obtained from a Language Model (LM)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Language Model",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The proposed formulation quantifies meaning counts as contextual diversity, which is based on the directions of contextualized word vectors obtained from a Language Model (LM).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language Model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41546,
+ "eval_count": 175,
+ "ts": "2026-11-21T20:39:19Z"
+}

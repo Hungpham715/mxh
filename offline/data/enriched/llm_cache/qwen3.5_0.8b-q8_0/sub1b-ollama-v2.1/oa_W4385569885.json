@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4385569885",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DITTO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this problem, we propose DITTO (Data-efficient and faIr Targeted subseT selectiOn that uses Submodular Mutual Information (SMI) functions as acquisition functions to find the most informative set of utterances matching a target accent within a fixed budget."
+   }
+  },
+  {
+   "surface": "SMI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this problem, we propose DITTO (Data-efficient and faIr Targeted subseT selectiOn that uses Submodular Mutual Information (SMI) functions as acquisition functions to find the most informative set of utterances matching a target accent within a fixed budget."
+   }
+  },
+  {
+   "surface": "Submodular Mutual Information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this problem, we propose DITTO (Data-efficient and faIr Targeted subseT selectiOn that uses Submodular Mutual Information (SMI) functions as acquisition functions to find the most informative set of utterances matching a target accent within a fixed budget."
+   }
+  },
+  {
+   "surface": "ASR",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "State-of-the-art Automatic Speech Recognition (ASR) systems are known to exhibit disparate performance on varying speech accents."
+   }
+  },
+  {
+   "surface": "Indic-TTS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We show that compared to other speech selection methods, DITTO is 3-5 times as label-efficient for its improvements on the Indic-TTS and L2 datasets."
+   }
+  },
+  {
+   "surface": "L2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We show that compared to other speech selection methods, DITTO is 3-5 times as label-efficient for its improvements on the Indic-TTS and L2 datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SMI",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this problem, we propose DITTO (Data-efficient and faIr Targeted subseT selectiOn that uses Submodular Mutual Information (SMI) functions as acquisition functions to find the most informative set of utterances matching a target accent within a fixed budget.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "ASR",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To improve performance on a specific target accent, a commonly adopted solution is to finetune the ASR model using accent-specific labeled speech.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Indic-TTS",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We show that compared to other speech selection methods, DITTO is 3-5 times as label-efficient for its improvements on the Indic-TTS and L2 datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "L2",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We show that compared to other speech selection methods, DITTO is 3-5 times as label-efficient for its improvements on the Indic-TTS and L2 datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 32702,
+ "eval_count": 492,
+ "ts": "2026-11-21T15:23:57Z"
+}

@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4389519066",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "multilingual benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a systematic analysis of the cost and utility of OpenAI’s language model API on multilingual benchmarks in 22 typologically diverse languages."
+   }
+  },
+  {
+   "surface": "22 typologically diverse languages",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a systematic analysis of the cost and utility of OpenAI’s language model API on multilingual benchmarks in 22 typologically diverse languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "multilingual benchmarks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a systematic analysis of the cost and utility of OpenAI’s language model API on multilingual benchmarks in 22 typologically diverse languages.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "multilingual benchmarks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct a systematic analysis of the cost and utility of OpenAI’s language model API on multilingual benchmarks in 22 typologically diverse languages.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "OpenAI's language model API"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multilingual benchmarks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41203,
+ "eval_count": 333,
+ "ts": "2026-11-21T16:19:54Z"
+}

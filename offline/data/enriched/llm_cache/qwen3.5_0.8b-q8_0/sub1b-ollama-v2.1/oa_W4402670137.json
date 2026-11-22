@@ -1,0 +1,136 @@
+{
+ "paper_id": "oa:W4402670137",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) can generate long-form and coherent text, yet they often hallucinate facts, which undermines their reliability."
+   }
+  },
+  {
+   "surface": "truthful directions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To mitigate this issue, inference-time methods steer LLM representations toward the \"truthful directions\" previously learned for truth elicitation."
+   }
+  },
+  {
+   "surface": "intervention intensity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose LITO, a Learnable Intervention method for Truthfulness Optimization that automatically identifies the optimal intervention intensity tailored to each specific context."
+   }
+  },
+  {
+   "surface": "LITO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose LITO, a Learnable Intervention method for Truthfulness Optimization that automatically identifies the optimal intervention intensity tailored to each specific context."
+   }
+  },
+  {
+   "surface": "model generations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "LITO explores a sequence of model generations based on increasing levels of intervention intensities."
+   }
+  },
+  {
+   "surface": "question-answering datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on multiple LLMs and question-answering datasets demonstrate that LITO improves truthfulness while preserving task accuracy."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "truthful directions",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) can generate long-form and coherent text, yet they often hallucinate facts, which undermines their reliability.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "truthful directions",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To mitigate this issue, inference-time methods steer LLM representations toward the \"truthful directions\" previously learned for truth elicitation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "intervention intensity",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, applying these truthful directions with the same intensity fails to generalize across different query contexts.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LITO",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose LITO, a Learnable Intervention method for Truthfulness Optimization that automatically identifies the optimal intervention intensity tailored to each specific context.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model generations",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "LITO explores a sequence of model generations based on increasing levels of intervention intensities.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model generations",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "It selects the most accurate response or refuses to answer when the predictions are highly uncertain.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question-answering datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question-answering datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question-answering datasets"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 61586,
+ "eval_count": 766,
+ "ts": "2026-11-21T17:37:46Z"
+}

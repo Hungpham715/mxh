@@ -1,0 +1,146 @@
+{
+ "paper_id": "oa:W4404356149",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Differential Diagnosis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Differential diagnosis is crucial for medicine as it helps healthcare providers systematically distinguish between conditions that share similar symptoms."
+   }
+  },
+  {
+   "surface": "Lab Test Results",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study assesses the impact of lab test results on differential diagnoses (DDx) made by large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study assesses the impact of lab test results on differential diagnoses (DDx) made by large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "GPT-3.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Llama-2-70b",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Claude-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Mixtral-8x7B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Top 10",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Top 5",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Top 1",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Five LLMs GPT-4, GPT-3.5, Llama-2-70b, Claude-2, and Mixtral-8x7B were tested to generate Top 10, Top 5, and Top 1 DDx with and without lab data."
+   }
+  },
+  {
+   "surface": "Clinicians",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "A comprehensive evaluation involving GPT-4, a knowledge graph, and clinicians was conducted."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Differential Diagnosis",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study assesses the impact of lab test results on differential diagnoses (DDx) made by large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Differential Diagnosis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 58596,
+ "eval_count": 929,
+ "ts": "2026-11-21T18:51:44Z"
+}

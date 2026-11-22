@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4389518746",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CHEF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With this in mind, we propose a method - CHEF, replicating the morphological transformations inherent in sentences based on lexical and functional morpheme combinations through generative data augmentation."
+   }
+  },
+  {
+   "surface": "label discriminator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "CHEF operates using a morpheme blender and a label discriminator, thereby enhancing the diversity of Korean sentence forms by capturing the properties of agglutination while maintaining label consistency."
+   }
+  },
+  {
+   "surface": "Korean multiple classification datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct experiments on Korean multiple classification datasets, improving model performance in full- and few-shot settings."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "label discriminator",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With this in mind, we propose a method - CHEF, replicating the morphological transformations inherent in sentences based on lexical and functional morpheme combinations through generative data augmentation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Korean multiple classification datasets",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We conduct experiments on Korean multiple classification datasets, improving model performance in full- and few-shot settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "morphism blender"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "morphism blender"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41461,
+ "eval_count": 331,
+ "ts": "2026-11-21T16:15:55Z"
+}

@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4416339372",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "1,774",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "structured episodic memory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We present an architecture that resolves this tension through offline data augmentation and efficient parallel retrieval from structured episodic memory."
+   }
+  },
+  {
+   "surface": "biographical data",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "first-person memories",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "affective-semantic metadata",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "two-stage retrieval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "prompt generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluation using LLM-as-judge and RAGAs metrics shows our approach achieves parity with traditional RAG on GPT-4 while significantly outperforming it on smaller models (GPT-3.5, GPT-3), suggesting particular value for resource-constrained deployments."
+   }
+  },
+  {
+   "surface": "smaller models (GPT-3.5, GPT-3)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluation using LLM-as-judge and RAGAs metrics shows our approach achieves parity with traditional RAG on GPT-4 while significantly outperforming it on smaller models (GPT-3.5, GPT-3), suggesting particular value for resource-constrained deployments."
+   }
+  },
+  {
+   "surface": "Van Gogh",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We use Van Gogh as a test case, but the architecture is generalizable to any historical figure with substantial textual records, offering a practical framework for educational, museum, and research applications requiring both accuracy and efficiency"
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "two-stage retrieval",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our system transforms biographical data into 1,774 enriched first-person memories with affective-semantic metadata, then employs two-stage retrieval achieving 0.52s prompt generation.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-4",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluation using LLM-as-judge and RAGAs metrics shows our approach achieves parity with traditional RAG on GPT-4 while significantly outperforming it on smaller models (GPT-3.5, GPT-3), suggesting particular value for resource-constrained deployments.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "smaller models (GPT-3.5, GPT-3)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluation using LLM-as-judge and RAGAs metrics shows our approach achieves parity with traditional RAG on GPT-4 while significantly outperforming it on smaller models (GPT-3.5, GPT-3), suggesting particular value for resource-constrained deployments.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "1,774"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Van Gogh"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49280,
+ "eval_count": 647,
+ "ts": "2026-11-21T22:13:57Z"
+}

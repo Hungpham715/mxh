@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4416368271",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "KnowledgeSmith",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This paper proposes KnowledgeSmith, a unified framework to systematically understand the updating mechanism of LLMs."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Knowledge editing and machine unlearning are two popular approaches for large language models (LLMs) to stay up-to-date."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39347,
+ "eval_count": 130,
+ "ts": "2026-11-21T22:15:37Z"
+}

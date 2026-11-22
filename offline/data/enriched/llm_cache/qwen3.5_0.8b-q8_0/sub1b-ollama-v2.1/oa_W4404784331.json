@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4404784331",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Word sense disambiguation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Word sense disambiguation (WSD) is a key task in natural language processing and lexical semantics."
+   }
+  },
+  {
+   "surface": "FOOL: FOur-fold Obscure Lexical",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Therefore, we propose FOOL: FOur-fold Obscure Lexical, a new coarse-grained WSD dataset, which includes four different test sets designed to assess the robustness of language models in WSD tasks."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Two sets feature typical WSD scenarios, while the other two include sentences with opposing contexts to challenge the models further.We tested two types of models on the proposed dataset: models with encoders, such as the BERT and T5 series of varying sizes by probing their embeddings, and state-of-the-art large decoder models like GPT-4o and the LlaMA3 family, using zero shot prompting."
+   }
+  },
+  {
+   "surface": "T5 series",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Two sets feature typical WSD scenarios, while the other two include sentences with opposing contexts to challenge the models further.We tested two types of models on the proposed dataset: models with encoders, such as the BERT and T5 series of varying sizes by probing their embeddings, and state-of-the-art large decoder models like GPT-4o and the LlaMA3 family, using zero shot prompting."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Two sets feature typical WSD scenarios, while the other two include sentences with opposing contexts to challenge the models further.We tested two types of models on the proposed dataset: models with encoders, such as the BERT and T5 series of varying sizes by probing their embeddings, and state-of-the-art large decoder models like GPT-4o and the LlaMA3 family, using zero shot prompting."
+   }
+  },
+  {
+   "surface": "LLaMA3 family",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Two sets feature typical WSD scenarios, while the other two include sentences with opposing contexts to challenge the models further.We tested two types of models on the proposed dataset: models with encoders, such as the BERT and T5 series of varying sizes by probing their embeddings, and state-of-the-art large decoder models like GPT-4o and the LlaMA3 family, using zero shot prompting."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FOOL: FOur-fold Obscure Lexical"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FOOL: FOur-fold Obscure Lexical"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FOOL: FOur-fold Obscure Lexical"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FOOL: FOur-fold Obscure Lexical"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FOOL: FOur-fold Obscure Lexical"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47141,
+ "eval_count": 571,
+ "ts": "2026-11-21T19:34:24Z"
+}

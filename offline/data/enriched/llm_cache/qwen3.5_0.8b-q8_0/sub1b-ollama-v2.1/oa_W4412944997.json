@@ -1,0 +1,118 @@
+{
+ "paper_id": "oa:W4412944997",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have revolutionized various domains, including natural language processing, data analysis, and software development, by enabling automation."
+   }
+  },
+  {
+   "surface": "coding agents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In software engineering, LLM-powered coding agents have garnered significant attention due to their potential to automate complex development tasks, assist in debugging, and enhance productivity."
+   }
+  },
+  {
+   "surface": "DARS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To improve coding agent performance, we present Dynamic Action Re-Sampling (DARS), a novel inference time compute scaling approach for coding agents, that is faster and more effective at recovering from sub-optimal decisions compared to baselines."
+   }
+  },
+  {
+   "surface": "SWE-Bench Lite",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate our approach on SWE-Bench Lite benchmark, demonstrating that this scaling strategy achieves a pass@k score of 55% with Claude 3.5 Sonnet V2."
+   }
+  },
+  {
+   "surface": "Claude 3.5 Sonnet V2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate our approach on SWE-Bench Lite benchmark, demonstrating that this scaling strategy achieves a pass@k score of 55% with Claude 3.5 Sonnet V2."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "DARS",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have revolutionized various domains, including natural language processing, data analysis, and software development, by enabling automation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SWE-Bench Lite",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate our approach on SWE-Bench Lite benchmark, demonstrating that this scaling strategy achieves a pass@k score of 55% with Claude 3.5 Sonnet V2.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SWE-Bench Lite",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our framework achieves a pass@1 rate of 47%, outperforming state-of-the-art (SOTA) open-source frameworks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SWE-Bench Lite",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our framework achieves a pass@1 rate of 47%, outperforming state-of-the-art (SOTA) open-source frameworks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SWE-Bench Lite",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our framework achieves a pass@1 rate of 47%, outperforming state-of-the-art (SOTA) open-source frameworks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DARS"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DARS"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DARS"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 51746,
+ "eval_count": 728,
+ "ts": "2026-11-21T20:33:17Z"
+}

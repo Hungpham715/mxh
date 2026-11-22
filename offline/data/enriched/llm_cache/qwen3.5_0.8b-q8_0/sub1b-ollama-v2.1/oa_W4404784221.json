@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4404784221",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "hypothesis-testing framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study introduces a hypothesis-testing framework to assess whether large language models (LLMs) possess genuine reasoning abilities or primarily depend on token bias."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study introduces a hypothesis-testing framework to assess whether large language models (LLMs) possess genuine reasoning abilities or primarily depend on token bias."
+   }
+  },
+  {
+   "surface": "logical reasoning tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We go beyond evaluating LLMs on accuracy; rather, we aim to investigate their token bias in solving logical reasoning tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large language models (LLMs)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We go beyond evaluating LLMs on accuracy; rather, we aim to investigate their token bias in solving logical reasoning tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large language models (LLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "logical reasoning tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18813,
+ "eval_count": 320,
+ "ts": "2026-11-21T19:33:37Z"
+}

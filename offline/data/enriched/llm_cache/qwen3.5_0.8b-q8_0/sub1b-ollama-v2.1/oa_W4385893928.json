@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385893928",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "density-based estimation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Density-based estimation is widely considered as an effective technique by explicitly modeling the distribution of normal data and identifying adversarial ones as outliers."
+   }
+  },
+  {
+   "surface": "Langevin dynamics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach utilizes the gradient of the log-density data distribution and calculates the distribution gap between adversarial and normal samples through multi-step iterations using Langevin dynamics."
+   }
+  },
+  {
+   "surface": "supervised contrastive learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In addition, we use supervised contrastive learning to guide the gradient estimation using label information, which avoids collapsing to a single data manifold and better preserves the anisotropy of the different labeled data distributions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Langevin dynamics",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach utilizes the gradient of the log-density data distribution and calculates the distribution gap between adversarial and normal samples through multi-step iterations using Langevin dynamics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "supervised contrastive learning",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In addition, we use supervised contrastive learning to guide the gradient estimation using label information, which avoids collapsing to a single data manifold and better preserves the anisotropy of the different labeled data distributions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 14819,
+ "eval_count": 260,
+ "ts": "2026-11-21T15:59:40Z"
+}

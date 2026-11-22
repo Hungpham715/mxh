@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W6885087958",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "AXOLOTL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce AXOLOTL, a novel post-processing framework, which operates agnostically across tasks and models, leveraging public APIs to interact with LLMs without direct access to internal parameters."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained Large Language Models (LLMs) have significantly advanced natural language processing capabilities but are susceptible to biases present in their training data, leading to unfair outcomes in various applications."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34365,
+ "eval_count": 201,
+ "ts": "2026-11-21T22:26:09Z"
+}

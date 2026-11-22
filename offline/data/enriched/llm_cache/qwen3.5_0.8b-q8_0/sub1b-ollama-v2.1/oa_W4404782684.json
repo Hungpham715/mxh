@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4404782684",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "For each demographic category and even for American football team fandom, we find that ChatGPT appears to infer a likely political ideology and modify guardrail behavior accordingly."
+   }
+  },
+  {
+   "surface": "guardrails",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While the biases of language models in production are extensively documented, the biases of their guardrails have been neglected."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper studies how contextual information about the user influences the likelihood of an LLM to refuse to execute a request."
+   }
+  },
+  {
+   "surface": "contextual information",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper studies how contextual information about the user influences the likelihood of an LLM to refuse to execute a request."
+   }
+  },
+  {
+   "surface": "user biographies",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By generating user biographies that offer ideological and demographic information, we find a number of biases in guardrail sensitivity on GPT-3.5."
+   }
+  },
+  {
+   "surface": "GPT-3.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By generating user biographies that offer ideological and demographic information, we find a number of biases in guardrail sensitivity on GPT-3.5."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "guardrails",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Guardrails are also sycophantic, refusing to comply with requests for a political position the user is likely to disagree with.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find that certain identity groups and seemingly innocuous information, e.g., sports fandom, can elicit changes in guardrail sensitivity similar to direct statements of political ideology.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "For each demographic category and even for American football team fandom, we find that ChatGPT appears to infer a likely political ideology and modify guardrail behavior accordingly.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "guardrails"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27542,
+ "eval_count": 531,
+ "ts": "2026-11-21T19:13:32Z"
+}

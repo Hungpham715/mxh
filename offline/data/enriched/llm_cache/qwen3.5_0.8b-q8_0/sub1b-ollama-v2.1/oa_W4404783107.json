@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4404783107",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MolTRES",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we introduce a novel chemical language representation learning framework, called MolTRES, to address these issues."
+   }
+  },
+  {
+   "surface": "SMILES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This interest particularly extends to chemical language representation learning, which involves pre-training Transformers on SMILES sequences - textual descriptors of molecules."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SMILES"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14713,
+ "eval_count": 139,
+ "ts": "2026-11-21T19:23:51Z"
+}

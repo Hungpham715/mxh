@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4412945268",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TRACER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a novel approach, TRACER, which leverages large language models (LLMs) to generate realistic and natural conversations for different shopping domains."
+   }
+  },
+  {
+   "surface": "Wizard of Shopping (WoS)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also release the first target-oriented CPS dataset Wizard of Shopping (WoS), containing highly natural and coherent conversations (3.6k) from three shopping domains."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Wizard of Shopping (WoS)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "TRACER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15670,
+ "eval_count": 232,
+ "ts": "2026-11-21T20:42:00Z"
+}

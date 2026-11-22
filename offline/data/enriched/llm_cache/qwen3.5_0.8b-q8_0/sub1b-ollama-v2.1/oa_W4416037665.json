@@ -1,0 +1,166 @@
+{
+ "paper_id": "oa:W4416037665",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence."
+   }
+  },
+  {
+   "surface": "Islamic inheritance law",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper evaluates the knowledge and reasoning capabilities of Large Language Models in Islamic inheritance law, known as 'ilm al-mawarith."
+   }
+  },
+  {
+   "surface": "ilm al-mawarith",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper evaluates the knowledge and reasoning capabilities of Large Language Models in Islamic inheritance law, known as 'ilm al-mawarith."
+   }
+  },
+  {
+   "surface": "benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence."
+   }
+  },
+  {
+   "surface": "multiple-choice questions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence."
+   }
+  },
+  {
+   "surface": "inheritance scenarios",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence."
+   }
+  },
+  {
+   "surface": "distribution of shares prescribed by Islamic jurisprudence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence."
+   }
+  },
+  {
+   "surface": "o3",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  },
+  {
+   "surface": "Gemini 2.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  },
+  {
+   "surface": "ALLaM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  },
+  {
+   "surface": "Fanar",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  },
+  {
+   "surface": "Mistral",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The results reveal a significant performance gap: o3 and Gemini 2.5 achieved accuracies above 90%, whereas ALLaM, Fanar, LLaMA, and Mistral scored below 50%."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "benchmark",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We assess the performance of seven LLMs using a benchmark of 1,000 multiple-choice questions covering diverse inheritance scenarios, designed to test models' ability to understand the inheritance context and compute the distribution of shares prescribed by Islamic jurisprudence.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ilm al-mawarith"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "inheritance scenarios"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "distribution of shares prescribed by Islamic jurisprudence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "o3"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ALLaM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Fanar"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaMA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Mistral"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ilm al-mawarith"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 61577,
+ "eval_count": 1020,
+ "ts": "2026-11-21T22:15:33Z"
+}

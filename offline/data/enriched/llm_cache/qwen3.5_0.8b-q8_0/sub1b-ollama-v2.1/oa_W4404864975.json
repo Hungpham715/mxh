@@ -1,0 +1,148 @@
+{
+ "paper_id": "oa:W4404864975",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ABSA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, generative pre-training based models have demonstrated remarkable results on Aspect-based Sentiment Analysis (ABSA) task."
+   }
+  },
+  {
+   "surface": "Aspect-based Sentiment Analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, generative pre-training based models have demonstrated remarkable results on Aspect-based Sentiment Analysis (ABSA) task."
+   }
+  },
+  {
+   "surface": "generative pre-training based models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recently, generative pre-training based models have demonstrated remarkable results on Aspect-based Sentiment Analysis (ABSA) task."
+   }
+  },
+  {
+   "surface": "target-oriented optimization methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite notable results achieved by these target-oriented optimization methods, they struggle with the complicated long texts since the implicit long-distance relation, e.g., aspect-opinion relation, is difficult to extract under the position embedding mechanism in generative models."
+   }
+  },
+  {
+   "surface": "rule-based static optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Thus, in this paper, we first clarify the causes of the problem and introduce two sequence optimization strategies: the rule-based static optimization and the score-based dynamic optimization."
+   }
+  },
+  {
+   "surface": "score-based dynamic optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Thus, in this paper, we first clarify the causes of the problem and introduce two sequence optimization strategies: the rule-based static optimization and the score-based dynamic optimization."
+   }
+  },
+  {
+   "surface": "PGSO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Based on the dynamic optimization structure, we further propose a unified Prompt-based Generative Sequence Optimization network (named PGSO), which jointly optimizes the training target as well as the generative model."
+   }
+  },
+  {
+   "surface": "prompt construction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, PGSO contains two components, namely, prompt construction and sequence regulator."
+   }
+  },
+  {
+   "surface": "sequence regulator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, PGSO contains two components, namely, prompt construction and sequence regulator."
+   }
+  },
+  {
+   "surface": "four ABSA tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments conducted on four ABSA tasks across multiple benchmarks indicate that PGSO outperforms state-of-the-art methods, with an average improvement of 3.52% in F1 score."
+   }
+  },
+  {
+   "surface": "multiple benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments conducted on four ABSA tasks across multiple benchmarks indicate that PGSO outperforms state-of-the-art methods, with an average improvement of 3.52% in F1 score."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PGSO",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, PGSO contains two components, namely, prompt construction and sequence regulator.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PGSO",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The rule-based approach relies on handcraft priority of dependency relation to reorder the context, while the score-based algorithm dynamically regulates the contextual sequence by calculating word position scores using neural network.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PGSO",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The rule-based approach relies on handcraft priority of dependency relation to reorder the context, while the score-based algorithm dynamically regulates the contextual sequence by calculating word position scores using neural network.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "multiple benchmarks",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments conducted on four ABSA tasks across multiple benchmarks indicate that PGSO outperforms state-of-the-art methods, with an average improvement of 3.52% in F1 score.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "four ABSA tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31118,
+ "eval_count": 665,
+ "ts": "2026-11-21T19:38:57Z"
+}

@@ -1,0 +1,119 @@
+{
+ "paper_id": "oa:W4402671848",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TransliCo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this problem, we propose TransliCo, a framework that optimizes the Transliteration Contrastive Modeling (TCM) objective to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (in our case Latin), which enhances uniformity in the representation space for different scripts."
+   }
+  },
+  {
+   "surface": "TCM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this problem, we propose TransliCo, a framework that optimizes the Transliteration Contrastive Modeling (TCM) objective to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (in our case Latin), which enhances uniformity in the representation space for different scripts."
+   }
+  },
+  {
+   "surface": "mPLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Due to various reasons, many closely related languages use different scripts, which poses a difficulty for multilingual pretrained language models (mPLMs) in learning crosslingual knowledge through lexical overlap."
+   }
+  },
+  {
+   "surface": "Glot500-m",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Using Glot500-m, an mPLM pretrained on over 500 languages, as our source model, we fine-tune it on a small portion (5%) of its training data, and refer to the resulting model as Furina."
+   }
+  },
+  {
+   "surface": "Furina",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Using Glot500-m, an mPLM pretrained on over 500 languages, as our source model, we fine-tune it on a small portion (5%) of its training data, and refer to the resulting model as Furina."
+   }
+  },
+  {
+   "surface": "zero-shot crosslingual transfer tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that Furina not only better aligns representations from distinct scripts but also outperforms the original Glot500-m on various zero-shot crosslingual transfer tasks."
+   }
+  },
+  {
+   "surface": "case study on the Indic group",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Additionally, we achieve consistent improvement in a case study on the Indic group where the languages exhibit areal features but use different scripts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "TCM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this problem, we propose TransliCo, a framework that optimizes the Transliteration Contrastive Modeling (TCM) objective to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (in our case Latin), which enhances uniformity in the representation space for different scripts.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "mPLM",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Due to various reasons, many closely related languages use different scripts, which poses a difficulty for multilingual pretrained language models (mPLMs) in learning crosslingual knowledge through lexical overlap.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "zero-shot crosslingual transfer tasks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We show that Furina not only better aligns representations from distinct scripts but also outperforms the original Glot500-m on various zero-shot crosslingual transfer tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "case study on the Indic group",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Additionally, we achieve consistent improvement in a case study on the Indic group where the languages exhibit areal features but use different scripts.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Furina"
+  }
+ ],
+ "auto_added_endpoints": [
+  "zero-shot crosslingual transfer tasks",
+  "case study on the Indic group"
+ ],
+ "duration_ms": 32737,
+ "eval_count": 494,
+ "ts": "2026-11-21T18:13:50Z"
+}

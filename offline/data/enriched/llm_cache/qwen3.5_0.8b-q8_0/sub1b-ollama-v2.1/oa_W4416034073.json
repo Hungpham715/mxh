@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4416034073",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "KoACD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This study introduces KoACD, the first large-scale dataset of cognitive distortions in Korean adolescents, containing 108,717 instances."
+   }
+  },
+  {
+   "surface": "Cognitive distortion detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "KoACD aims to enhance future research on cognitive distortion detection."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Cognitive distortion detection",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "KoACD aims to enhance future research on cognitive distortion detection.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "KoACD",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This study introduces KoACD, the first large-scale dataset of cognitive distortions in Korean adolescents, containing 108,717 instances.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLM negotiation method"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Cognitive distortion detection"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Cognitive distortion detection"
+ ],
+ "duration_ms": 18918,
+ "eval_count": 275,
+ "ts": "2026-11-21T21:05:49Z"
+}

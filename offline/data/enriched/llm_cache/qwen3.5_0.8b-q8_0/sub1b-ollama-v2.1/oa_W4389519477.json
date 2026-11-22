@@ -1,0 +1,96 @@
+{
+ "paper_id": "oa:W4389519477",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Future-Aware Streaming Translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this issue, we propose a new approach called Future-Aware Streaming Translation (FAST) that adapts an offline ST model for streaming input."
+   }
+  },
+  {
+   "surface": "Future-Aware Inference",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "FAST includes a Future-Aware Inference (FAI) strategy that incorporates future context through a trainable masked embedding, and a Future-Aware Distillation (FAD) framework that transfers future context from an approximation of full speech to streaming input."
+   }
+  },
+  {
+   "surface": "Future-Aware Distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "FAST includes a Future-Aware Inference (FAI) strategy that incorporates future context through a trainable masked embedding, and a Future-Aware Distillation (FAD) framework that transfers future context from an approximation of full speech to streaming input."
+   }
+  },
+  {
+   "surface": "MuST-C EnDe",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experiments on the MuST-C EnDe, EnEs, and EnFr benchmarks show that FAST achieves better trade-offs between translation quality and latency than strong baselines."
+   }
+  },
+  {
+   "surface": "EnEs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experiments on the MuST-C EnDe, EnEs, and EnFr benchmarks show that FAST achieves better trade-offs between translation quality and latency than strong baselines."
+   }
+  },
+  {
+   "surface": "EnFr",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experiments on the MuST-C EnDe, EnEs, and EnFr benchmarks show that FAST achieves better trade-offs between translation quality and latency than strong baselines."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Future-Aware Inference",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "FAST includes a Future-Aware Inference (FAI) strategy that incorporates future context through a trainable masked embedding, and a Future-Aware Distillation (FAD) framework that transfers future context from an approximation of full speech to streaming input.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Future-Aware Distillation",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "FAST includes a Future-Aware Inference (FAI) strategy that incorporates future context through a trainable masked embedding, and a Future-Aware Distillation (FAD) framework that transfers future context from an approximation of full speech to streaming input.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Future-Aware Streaming Translation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Future-Aware Streaming Translation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Future-Aware Streaming Translation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21617,
+ "eval_count": 524,
+ "ts": "2026-11-21T16:25:41Z"
+}

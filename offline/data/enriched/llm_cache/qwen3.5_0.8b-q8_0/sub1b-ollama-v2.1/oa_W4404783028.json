@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4404783028",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "pixel-based",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our extensive evaluation across a wide range of benchmarks shows that incorporating both visual and textual data significantly improves the performance of pixel-based language models."
+   }
+  },
+  {
+   "surface": "next patch prediction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head."
+   }
+  },
+  {
+   "surface": "next token prediction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head."
+   }
+  },
+  {
+   "surface": "multimodal training strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head."
+   }
+  },
+  {
+   "surface": "document images",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we explore the dual modality of language—both visual and textual—within an autoregressive framework, pre-trained on both document images and texts."
+   }
+  },
+  {
+   "surface": "texts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we explore the dual modality of language—both visual and textual—within an autoregressive framework, pre-trained on both document images and texts."
+   }
+  },
+  {
+   "surface": "language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The integration of visual and textual information represents a promising direction in the advancement of language models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "next patch prediction",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "next token prediction",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multimodal training strategy",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our method employs a multimodal training strategy, utilizing visual data through next patch prediction with a regression head and/or textual data through next token prediction with a classification head.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "document images"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "texts"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30648,
+ "eval_count": 641,
+ "ts": "2026-11-21T19:22:57Z"
+}

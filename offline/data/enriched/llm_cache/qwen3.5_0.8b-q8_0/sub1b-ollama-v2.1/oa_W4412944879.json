@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4412944879",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce GRACE, a benchmark for language model calibration that incorporates comparison with human calibration."
+   }
+  },
+  {
+   "surface": "question-answer pairs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "GRACE consists of question-answer pairs, in which each question contains a series of clues that gradually become easier, all leading to the same answer; models must answer correctly as early as possible as the clues are revealed."
+   }
+  },
+  {
+   "surface": "human calibration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce GRACE, a benchmark for language model calibration that incorporates comparison with human calibration."
+   }
+  },
+  {
+   "surface": "calibration errors",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose a metric, CalScore, that uses GRACE to analyze model calibration errors and identify types of model miscalibration that differ from human behavior."
+   }
+  },
+  {
+   "surface": "model miscalibration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose a metric, CalScore, that uses GRACE to analyze model calibration errors and identify types of model miscalibration that differ from human behavior."
+   }
+  },
+  {
+   "surface": "human behavior",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose a metric, CalScore, that uses GRACE to analyze model calibration errors and identify types of model miscalibration that differ from human behavior."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question-answer pairs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "human calibration"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model miscalibration"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18852,
+ "eval_count": 370,
+ "ts": "2026-11-21T20:31:09Z"
+}

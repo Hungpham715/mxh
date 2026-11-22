@@ -1,0 +1,96 @@
+{
+ "paper_id": "oa:W4385572293",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "adversarial purification",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Adversarial purification is a successful defense mechanism against adversarial attacks without requiring knowledge of the form of the incoming attack."
+   }
+  },
+  {
+   "surface": "energy-based models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite the success of adversarial purification in the computer vision field that incorporates generative models such as energy-based models and diffusion models,using purification as a defense strategy against textual adversarial attacks is rarely explored."
+   }
+  },
+  {
+   "surface": "diffusion models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite the success of adversarial purification in the computer vision field that incorporates generative models such as energy-based models and diffusion models,using purification as a defense strategy against textual adversarial attacks is rarely explored."
+   }
+  },
+  {
+   "surface": "textual adversarial attacks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite the success of adversarial purification in the computer vision field that incorporates generative models such as energy-based models and diffusion models,using purification as a defense strategy against textual adversarial attacks is rarely explored."
+   }
+  },
+  {
+   "surface": "word-substitution attacks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We test our proposed adversarial purification method on several strong adversarial attack methods including Textfooler and BERT-Attack and experimental results indicate that the purification algorithm can successfully defend against strong word-substitution attacks."
+   }
+  },
+  {
+   "surface": "language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "With the help of language models, we can inject noise by masking input texts and reconstructing the masked texts based on the masked language models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "With the help of language models, we can inject noise by masking input texts and reconstructing the masked texts based on the masked language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "textual adversarial attacks",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we introduce a novel adversarial purification method that focuses on defending against textual adversarial attacks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "energy-based models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "diffusion models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "word-substitution attacks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31413,
+ "eval_count": 453,
+ "ts": "2026-11-21T15:55:34Z"
+}

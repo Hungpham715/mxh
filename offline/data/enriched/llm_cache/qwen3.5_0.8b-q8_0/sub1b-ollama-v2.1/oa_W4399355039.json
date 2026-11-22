@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4399355039",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "chart question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To facilitate chart-based reasoning using natural language, various downstream tasks have been introduced recently such as chart question answering, chart summarization, and fact-checking with charts."
+   }
+  },
+  {
+   "surface": "chart summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To facilitate chart-based reasoning using natural language, various downstream tasks have been introduced recently such as chart question answering, chart summarization, and fact-checking with charts."
+   }
+  },
+  {
+   "surface": "fact-checking with charts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To facilitate chart-based reasoning using natural language, various downstream tasks have been introduced recently such as chart question answering, chart summarization, and fact-checking with charts."
+   }
+  },
+  {
+   "surface": "large vision language models (LVLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To bridge the gap, this paper presents the first comprehensive evaluation of the recently developed large vision language models (LVLMs) for chart understanding and reasoning tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large vision language models (LVLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large vision language models (LVLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large vision language models (LVLMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22159,
+ "eval_count": 358,
+ "ts": "2026-11-21T17:22:58Z"
+}

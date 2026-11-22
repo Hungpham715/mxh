@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4415975961",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages."
+   }
+  },
+  {
+   "surface": "logistic regression",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages."
+   }
+  },
+  {
+   "surface": "DravidianLangTech@2025",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages."
+   }
+  },
+  {
+   "surface": "Tamil",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages."
+   }
+  },
+  {
+   "surface": "Malayalam",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "logistic regression",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To achieve this, we utilized logistic regression and BERT as base models to train datasets sourced from DravidianLangTech@2025 for Tamil and Malayalam languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DravidianLangTech@2025",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The models were evaluated on test datasets, resulting in a 0.729 macro F1 score for BERT and 0.6279 for logistic regression in Tamil and Malayalam, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DravidianLangTech@2025",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The models were evaluated on test datasets, resulting in a 0.729 macro F1 score for BERT and 0.6279 for logistic regression in Tamil and Malayalam, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 34279,
+ "eval_count": 412,
+ "ts": "2026-11-21T21:05:30Z"
+}

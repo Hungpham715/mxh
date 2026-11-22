@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4412886639",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM-as-a-Judge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM-as-a-Judge, which generates chain-of-thought (CoT) judgments, has become a widely adopted auto-evaluation method."
+   }
+  },
+  {
+   "surface": "Crowd-based Comparative Evaluation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose Crowd-based Comparative Evaluation, which introduces additional crowd responses to compare with the candidate responses, thereby exposing deeper and more comprehensive details within the candidate responses."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Crowd-based Comparative Evaluation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "LLM-as-a-Judge, which generates chain-of-thought (CoT) judgments, has become a widely adopted auto-evaluation method.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Crowd-based Comparative Evaluation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Crowd-based Comparative Evaluation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Crowd-based Comparative Evaluation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41297,
+ "eval_count": 398,
+ "ts": "2026-11-21T19:56:47Z"
+}

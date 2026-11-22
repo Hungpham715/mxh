@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4416036335",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "quality-guided contrastive rationale distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we introduce a novel framework called quality-guided contrastive rationale distillation aimed at enhancing reasoning capabilities through contrastive knowledge learning."
+   }
+  },
+  {
+   "surface": "temperature sampling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For positive knowledge, we enrich its diversity through temperature sampling and employ self-consistency for further denoising and refinement."
+   }
+  },
+  {
+   "surface": "self-consistency",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For positive knowledge, we enrich its diversity through temperature sampling and employ self-consistency for further denoising and refinement."
+   }
+  },
+  {
+   "surface": "self-adversarial approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "For negative knowledge, we propose an innovative self-adversarial approach that generates low-quality rationales by sampling previous iterations of smaller language models, embracing the idea that one can learn from one’s own weaknesses."
+   }
+  },
+  {
+   "surface": "smaller language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "For negative knowledge, we propose an innovative self-adversarial approach that generates low-quality rationales by sampling previous iterations of smaller language models, embracing the idea that one can learn from one’s own weaknesses."
+   }
+  },
+  {
+   "surface": "negative knowledge",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, prior studies have often overlooked the diversity and quality of knowledge, especially the untapped potential of negative knowledge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "temperature sampling",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For positive knowledge, we enrich its diversity through temperature sampling and employ self-consistency for further denoising and refinement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "self-consistency",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For positive knowledge, we enrich its diversity through temperature sampling and employ self-consistency for further denoising and refinement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "self-adversarial approach",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "A contrastive loss is developed to distill both positive and negative knowledge into smaller language models, where an online-updating discriminator is integrated to assess qualities of rationales and assign them appropriate weights, optimizing the training process.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "smaller language models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "negative knowledge"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 54453,
+ "eval_count": 523,
+ "ts": "2026-11-21T21:34:40Z"
+}

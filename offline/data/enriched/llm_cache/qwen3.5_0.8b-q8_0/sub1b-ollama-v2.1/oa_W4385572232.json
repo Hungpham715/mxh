@@ -1,0 +1,154 @@
+{
+ "paper_id": "oa:W4385572232",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "human rationale annotations",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents what we think is a first of its kind, a collection of human rationale annotations augmented with the annotators demographic information."
+   }
+  },
+  {
+   "surface": "annotators demographic information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents what we think is a first of its kind, a collection of human rationale annotations augmented with the annotators demographic information."
+   }
+  },
+  {
+   "surface": "sentiment analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We cover three datasets spanning sentiment analysis and common-sense reasoning, and six demographic groups (balanced across age and ethnicity)."
+   }
+  },
+  {
+   "surface": "common-sense reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We cover three datasets spanning sentiment analysis and common-sense reasoning, and six demographic groups (balanced across age and ethnicity)."
+   }
+  },
+  {
+   "surface": "demographic groups",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We cover three datasets spanning sentiment analysis and common-sense reasoning, and six demographic groups (balanced across age and ethnicity)."
+   }
+  },
+  {
+   "surface": "16 Transformer-based models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find systematic inter-group annotator disagreement and show how 16 Transformer-based models align better with rationales provided by certain demographic groups: We find that models are biased towards aligning best with older and/or white annotators."
+   }
+  },
+  {
+   "surface": "older and/or white annotators",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find systematic inter-group annotator disagreement and show how 16 Transformer-based models align better with rationales provided by certain demographic groups: We find that models are biased towards aligning best with older and/or white annotators."
+   }
+  },
+  {
+   "surface": "model size",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We zoom in on the effects of model size and model distillation, finding –contrary to our expectations– negative correlations between model size and rationale agreement as well as no evidence that either model size or model distillation improves fairness."
+   }
+  },
+  {
+   "surface": "model distillation",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We zoom in on the effects of model size and model distillation, finding –contrary to our expectations– negative correlations between model size and rationale agreement as well as no evidence that either model size or model distillation improves fairness."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "annotators demographic information",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents what we think is a first of its kind, a collection of human rationale annotations augmented with the annotators demographic information.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "demographic groups",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find systematic inter-group annotator disagreement and show how 16 Transformer-based models align better with rationales provided by certain demographic groups: We find that models are biased towards aligning best with older and/or white annotators.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "older and/or white annotators",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We find systematic inter-group annotator disagreement and show how 16 Transformer-based models align better with rationales provided by certain demographic groups: We find that models are biased towards aligning best with older and/or white annotators.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "model size",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We zoom in on the effects of model size and model distillation, finding –contrary to our expectations– negative correlations between model size and rationale agreement as well as no evidence that either model size or model distillation improves fairness.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "model distillation",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We zoom in on the effects of model size and model distillation, finding –contrary to our expectations– negative correlations between model size and rationale agreement as well as no evidence that either model size or model distillation improves fairness.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sentiment analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "common-sense reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "demographic groups"
+  }
+ ],
+ "auto_added_endpoints": [
+  "older and/or white annotators",
+  "model size",
+  "model distillation"
+ ],
+ "duration_ms": 38573,
+ "eval_count": 732,
+ "ts": "2026-11-21T15:55:03Z"
+}

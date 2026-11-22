@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4402671787",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "As natural language becomes the default interface for human-AI interaction, there is a need for LMs to appropriately communicate uncertainties in downstream applications."
+   }
+  },
+  {
+   "surface": "uncertainty",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Lastly, we investigate the preference-annotated datasets used in post training alignment and find that humans are biased against texts with uncertainty."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "uncertainty",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we investigate how LMs incorporate confidence in responses via natural language and how downstream users behave in response to LM-articulated uncertainties.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "post-training alignment"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "post-training alignment"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17157,
+ "eval_count": 236,
+ "ts": "2026-11-21T18:10:36Z"
+}

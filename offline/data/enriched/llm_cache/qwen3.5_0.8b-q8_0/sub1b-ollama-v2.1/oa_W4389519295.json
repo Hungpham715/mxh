@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4389519295",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BabyBERTa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "BabyBERTa, a language model trained on small-scale child-directed speech while none of the words are unmasked during training, has been shown to achieve a level of grammaticality comparable to that of RoBERTa-base, which is trained on 6,000 times more words and 15 times more parameters."
+   }
+  },
+  {
+   "surface": "RoBERTa-base",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "BabyBERTa, a language model trained on small-scale child-directed speech while none of the words are unmasked during training, has been shown to achieve a level of grammaticality comparable to that of RoBERTa-base, which is trained on 6,000 times more words and 15 times more parameters."
+   }
+  },
+  {
+   "surface": "Semantic Role Labeling (SRL)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Relying on this promising result, we explore in this paper the performance of BabyBERTa-based models in downstream tasks, focusing on Semantic Role Labeling (SRL) and two Extractive Question Answering tasks, with the aim of building more efficient systems that rely on less data and smaller models."
+   }
+  },
+  {
+   "surface": "Extractive Question Answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Relying on this promising result, we explore in this paper the performance of BabyBERTa-based models in downstream tasks, focusing on Semantic Role Labeling (SRL) and two Extractive Question Answering tasks, with the aim of building more efficient systems that rely on less data and smaller models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RoBERTa-base",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "BabyBERTa, a language model trained on small-scale child-directed speech while none of the words are unmasked during training, has been shown to achieve a level of grammaticality comparable to that of RoBERTa-base, which is trained on 6,000 times more words and 15 times more parameters.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BabyBERTa",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Relying on this promising result, we explore in this paper the performance of BabyBERTa-based models in downstream tasks, focusing on Semantic Role Labeling (SRL) and two Extractive Question Answering tasks, with the aim of building more efficient systems that rely on less data and smaller models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Extractive Question Answering",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Relying on this promising result, we explore in this paper the performance of BabyBERTa-based models in downstream tasks, focusing on Semantic Role Labeling (SRL) and two Extractive Question Answering tasks, with the aim of building more efficient systems that rely on less data and smaller models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "RoBERTa-base"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "BabyBERTa"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "BabyBERTa"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27500,
+ "eval_count": 609,
+ "ts": "2026-11-21T16:24:23Z"
+}

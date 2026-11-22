@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4402671686",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Counterfactual Logical Modification (CLOMO)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Specifically, we introduce a novel task, Counterfactual Logical Modification (CLOMO), and a high-quality human-annotated benchmark."
+   }
+  },
+  {
+   "surface": "high-quality human-annotated benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Specifically, we introduce a novel task, Counterfactual Logical Modification (CLOMO), and a high-quality human-annotated benchmark."
+   }
+  },
+  {
+   "surface": "decomposed Self-Evaluation Score (SES)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To effectively evaluate a generation model’s counterfactual capabilities, we propose an innovative evaluation metric, the decomposed Self-Evaluation Score (SES) to directly evaluate the natural language output of LLMs instead of modeling the task as a multiple-choice problem."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Counterfactual Logical Modification (CLOMO)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we delve into the realm of counterfactual reasoning capabilities of large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "high-quality human-annotated benchmark",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Specifically, we introduce a novel task, Counterfactual Logical Modification (CLOMO), and a high-quality human-annotated benchmark.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "decomposed Self-Evaluation Score (SES)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we delve into the realm of counterfactual reasoning capabilities of large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24483,
+ "eval_count": 424,
+ "ts": "2026-11-21T17:59:40Z"
+}

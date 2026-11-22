@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4385572302",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SPL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address the above problems, we propose a Structure-based Pseudo Label generation (SPL), which first generate free-form interpretable pseudo queries before constructing query-dependent event proposals by modeling the event temporal structure."
+   }
+  },
+  {
+   "surface": "ActivityNet Captions",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on the ActivityNet Captions and Charades-STA datasets demonstrate the advantages of our approach."
+   }
+  },
+  {
+   "surface": "Charades-STA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on the ActivityNet Captions and Charades-STA datasets demonstrate the advantages of our approach."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ActivityNet Captions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Charades-STA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14524,
+ "eval_count": 225,
+ "ts": "2026-11-21T15:55:49Z"
+}

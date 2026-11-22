@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4416035422",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FrameNet",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using the FrameNet lexical resource, we evaluate models under prompt-based inference and observe that they can perform frame identification effectively even without explicit supervision."
+   }
+  },
+  {
+   "surface": "prompt-based inference",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using the FrameNet lexical resource, we evaluate models under prompt-based inference and observe that they can perform frame identification effectively even without explicit supervision."
+   }
+  },
+  {
+   "surface": "fine-tune",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To assess the impact of task-specific training, we fine-tune the model on FrameNet data, which substantially improves in-domain accuracy while generalizing well to out-of-domain benchmarks."
+   }
+  },
+  {
+   "surface": "FrameNet data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To assess the impact of task-specific training, we fine-tune the model on FrameNet data, which substantially improves in-domain accuracy while generalizing well to out-of-domain benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "FrameNet data",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To assess the impact of task-specific training, we fine-tune the model on FrameNet data, which substantially improves in-domain accuracy while generalizing well to out-of-domain benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "prompt-based inference"
+  }
+ ],
+ "auto_added_endpoints": [
+  "FrameNet data"
+ ],
+ "duration_ms": 18045,
+ "eval_count": 217,
+ "ts": "2026-11-21T21:09:57Z"
+}

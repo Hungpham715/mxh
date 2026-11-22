@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4402671562",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GRANOLA-EQ",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present a simple methodology for enriching existing datasets with multi-granularity answers, and create GRANOLA-EQ, a multi-granularity version of the EntityQuestions dataset."
+   }
+  },
+  {
+   "surface": "Decoding with Response Aggregation (DRAG)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate a range of decoding methods on GRANOLA-EQ, including a new algorithm, called Decoding with Response Aggregation (DRAG), that is geared towards aligning the response granularity with the model’s uncertainty."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "GRANOLA-EQ",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We evaluate a range of decoding methods on GRANOLA-EQ, including a new algorithm, called Decoding with Response Aggregation (DRAG), that is geared towards aligning the response granularity with the model’s uncertainty.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GRANOLA-EQ"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18767,
+ "eval_count": 215,
+ "ts": "2026-11-21T17:52:17Z"
+}

@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4416037087",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "WebInject",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose WebInject, a prompt injection attack that manipulates the webpage environment to induce a web agent to perform an attacker-specified action."
+   }
+  },
+  {
+   "surface": "prompt injection attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose WebInject, a prompt injection attack that manipulates the webpage environment to induce a web agent to perform an attacker-specified action."
+   }
+  },
+  {
+   "surface": "web agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-modal large language model (MLLM)-based web agents interact with webpage environments by generating actions based on screenshots of the webpages."
+   }
+  },
+  {
+   "surface": "raw pixel values",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our attack adds a perturbation to the raw pixel values of the rendered webpage."
+   }
+  },
+  {
+   "surface": "screenshot",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-modal large language model (MLLM)-based web agents interact with webpage environments by generating actions based on screenshots of the webpages."
+   }
+  },
+  {
+   "surface": "attacker-specified action",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose WebInject, a prompt injection attack that manipulates the webpage environment to induce a web agent to perform an attacker-specified action."
+   }
+  },
+  {
+   "surface": "optimization problem",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We formulate the task of finding the perturbation as an optimization problem."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "prompt injection attack",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we propose WebInject, a prompt injection attack that manipulates the webpage environment to induce a web agent to perform an attacker-specified action.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "raw pixel values",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our attack adds a perturbation to the raw pixel values of the rendered webpage.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "screenshot"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "attacker-specified action"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "optimization problem"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 53487,
+ "eval_count": 537,
+ "ts": "2026-11-21T22:09:11Z"
+}

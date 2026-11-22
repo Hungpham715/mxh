@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4404782639",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EmoKnob",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose EmoKnob, a framework that allows fine-grained emotion control in speech synthesis with few-shot demonstrative samples of arbitrary emotion."
+   }
+  },
+  {
+   "surface": "foundation voice cloning models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our framework leverages the expressive speaker representation space made possible by recent advances in foundation voice cloning models."
+   }
+  },
+  {
+   "surface": "text-to-speech (TTS)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While recent advances in Text-to-Speech (TTS) technology produce natural and expressive speech, they lack the option for users to select emotion and control intensity."
+   }
+  },
+  {
+   "surface": "emotion expressiveness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Through objective and subjective evaluations, we show that our emotion control framework effectively embeds emotions into speech and surpasses emotion expressiveness of commercial TTS services."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "foundation voice cloning models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our framework leverages the expressive speaker representation space made possible by recent advances in foundation voice cloning models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "text-to-speech (TTS)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While recent advances in Text-to-Speech (TTS) technology produce natural and expressive speech, they lack the option for users to select emotion and control intensity.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "text-to-speech (TTS)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "emotion expressiveness"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25111,
+ "eval_count": 396,
+ "ts": "2026-11-21T19:11:35Z"
+}

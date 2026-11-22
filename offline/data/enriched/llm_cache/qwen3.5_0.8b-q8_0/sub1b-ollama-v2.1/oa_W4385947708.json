@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4385947708",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-bit Watermark via Position Allocation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose Multi-bit Watermark via Position Allocation, embedding traceable multi-bit information during language model generation."
+   }
+  },
+  {
+   "surface": "embedding traceable multi-bit information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose Multi-bit Watermark via Position Allocation, embedding traceable multi-bit information during language model generation."
+   }
+  },
+  {
+   "surface": "long messages",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Leveraging the benefits of zero-bit watermarking, our method enables robust extraction of the watermark without any model access, embedding and extraction of long messages ($\\geq$ 32-bit) without finetuning, and maintaining text quality, while allowing zero-bit detection all at the same time."
+   }
+  },
+  {
+   "surface": "zero-bit watermarking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Leveraging the benefits of zero-bit watermarking, our method enables robust extraction of the watermark without any model access, embedding and extraction of long messages ($\\geq$ 32-bit) without finetuning, and maintaining text quality, while allowing zero-bit detection all at the same time."
+   }
+  },
+  {
+   "surface": "text quality",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Leveraging the benefits of zero-bit watermarking, our method enables robust extraction of the watermark without any model access, embedding and extraction of long messages ($\\geq$ 32-bit) without finetuning, and maintaining text quality, while allowing zero-bit detection all at the same time."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "embedding traceable multi-bit information",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose Multi-bit Watermark via Position Allocation, embedding traceable multi-bit information during language model generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "zero-bit watermarking",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Leveraging the benefits of zero-bit watermarking, our method enables robust extraction of the watermark without any model access, embedding and extraction of long messages ($\\geq$ 32-bit) without finetuning, and maintaining text quality, while allowing zero-bit detection all at the same time.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long messages"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "text quality"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28079,
+ "eval_count": 439,
+ "ts": "2026-11-21T16:00:56Z"
+}

@@ -1,0 +1,166 @@
+{
+ "paper_id": "oa:W4402671915",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "F-Eval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To bridge the gap, we propose F-Eval, a bilingual evaluation benchmark to evaluate the fundamental abilities, including expression, commonsense and logic."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) garner significant attention for their unprecedented performance, leading to an increasing number of researches evaluating LLMs."
+   }
+  },
+  {
+   "surface": "instruction-following capabilities",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, these evaluation benchmarks are limited to assessing the instruction-following capabilities, overlooking the fundamental abilities that emerge during the pre-training stage."
+   }
+  },
+  {
+   "surface": "pre-training stage",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, these evaluation benchmarks are limited to assessing the instruction-following capabilities, overlooking the fundamental abilities that emerge during the pre-training stage."
+   }
+  },
+  {
+   "surface": "subjective evaluation methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Previous subjective evaluation methods mainly reply on scoring by API models."
+   }
+  },
+  {
+   "surface": "API models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Previous subjective evaluation methods mainly reply on scoring by API models."
+   }
+  },
+  {
+   "surface": "multi-choice objective tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The tasks in F-Eval include multi-choice objective tasks, open-ended objective tasks, reference-based subjective tasks and reference-free subjective tasks."
+   }
+  },
+  {
+   "surface": "open-ended objective tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The tasks in F-Eval include multi-choice objective tasks, open-ended objective tasks, reference-based subjective tasks and reference-free subjective tasks."
+   }
+  },
+  {
+   "surface": "reference-based subjective tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The tasks in F-Eval include multi-choice objective tasks, open-ended objective tasks, reference-based subjective tasks and reference-free subjective tasks."
+   }
+  },
+  {
+   "surface": "reference-free subjective tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The tasks in F-Eval include multi-choice objective tasks, open-ended objective tasks, reference-based subjective tasks and reference-free subjective tasks."
+   }
+  },
+  {
+   "surface": "13 advanced LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We conduct evaluations on 13 advanced LLMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "instruction-following capabilities",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, these evaluation benchmarks are limited to assessing the instruction-following capabilities, overlooking the fundamental abilities that emerge during the pre-training stage.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "pre-training stage",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, these evaluation benchmarks are limited to assessing the instruction-following capabilities, overlooking the fundamental abilities that emerge during the pre-training stage.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "subjective evaluation methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Previous subjective evaluation methods mainly reply on scoring by API models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "API models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, in the absence of references, large models have shown limited ability to discern subtle differences.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "13 advanced LLMs",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We conduct evaluations on 13 advanced LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "expression abilities"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "commonsense abilities"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "logic abilities"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32063,
+ "eval_count": 661,
+ "ts": "2026-11-21T18:19:06Z"
+}

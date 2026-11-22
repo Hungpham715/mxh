@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4385570687",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "On the cross-domain sentiment classification task, DaMSTF improves the performance of BERT with an average of nearly 4%."
+   }
+  },
+  {
+   "surface": "DaMSTF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a new self-training framework for domain adaptation, namely Domain adversarial learning enhanced Self-Training Framework (DaMSTF)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DaMSTF"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20789,
+ "eval_count": 132,
+ "ts": "2026-11-21T15:33:07Z"
+}

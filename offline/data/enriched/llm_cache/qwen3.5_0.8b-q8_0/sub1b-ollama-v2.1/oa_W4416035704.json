@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4416035704",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RAG-Zeval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present RAG-Zeval (RAG-Zero Evaluator), a novel end-to-end framework that formulates faithfulness and correctness evaluation of RAG systems as a rule-guided reasoning task."
+   }
+  },
+  {
+   "surface": "reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach trains evaluators with reinforcement learning, facilitating compact models to generate comprehensive and sound assessments with detailed explanation in one-pass."
+   }
+  },
+  {
+   "surface": "ranking-based outcome reward mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a ranking-based outcome reward mechanism, using preference judgments rather than absolute scores, to address the challenge of obtaining precise pointwise reward signals."
+   }
+  },
+  {
+   "surface": "rule-guided reasoning task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present RAG-Zeval (RAG-Zero Evaluator), a novel end-to-end framework that formulates faithfulness and correctness evaluation of RAG systems as a rule-guided reasoning task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "reinforcement learning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach trains evaluators with reinforcement learning, facilitating compact models to generate comprehensive and sound assessments with detailed explanation in one-pass.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ranking-based outcome reward mechanism",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a ranking-based outcome reward mechanism, using preference judgments rather than absolute scores, to address the challenge of obtaining precise pointwise reward signals.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "rule-guided reasoning task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present RAG-Zeval (RAG-Zero Evaluator), a novel end-to-end framework that formulates faithfulness and correctness evaluation of RAG systems as a rule-guided reasoning task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ranking-based outcome reward mechanism"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "rule-guided reasoning task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ranking-based outcome reward mechanism"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "rule-guided reasoning task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47617,
+ "eval_count": 634,
+ "ts": "2026-11-21T21:19:17Z"
+}

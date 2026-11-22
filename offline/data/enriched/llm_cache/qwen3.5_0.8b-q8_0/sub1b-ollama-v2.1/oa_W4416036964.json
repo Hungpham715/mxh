@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4416036964",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "WebAgent-R1",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we present WebAgent-R1, a simple yet effective end-to-end multi-turn RL framework for training web agents."
+   }
+  },
+  {
+   "surface": "Qwen-2.5-3B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WebAgent-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and LLaMA-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3."
+   }
+  },
+  {
+   "surface": "LLaMA-3.1-8B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WebAgent-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and LLaMA-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3."
+   }
+  },
+  {
+   "surface": "WebArena-Lite",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WebAgent-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and LLaMA-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3."
+   }
+  },
+  {
+   "surface": "OpenAI o3",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WebAgent-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and LLaMA-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "OpenAI o3",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In-depth analyses reveal the effectiveness of the thinking-based prompting strategy and test-time scaling through increased interactions for web tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Qwen-2.5-3B"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaMA-3.1-8B"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44071,
+ "eval_count": 486,
+ "ts": "2026-11-21T22:02:52Z"
+}

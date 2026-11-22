@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4402672094",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Incremental models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Incremental models that process sentences one token at a time will sometimes encounter points where more than one interpretation is possible."
+   }
+  },
+  {
+   "surface": "Restart-incremental Transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we look at how restart-incremental Transformers build and update internal states, in an effort to shed light on what processes cause revisions not viable in autoregressive models."
+   }
+  },
+  {
+   "surface": "interpretation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Incremental models that process sentences one token at a time will sometimes encounter points where more than one interpretation is possible."
+   }
+  },
+  {
+   "surface": "garden path effect",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose an interpretable way to analyse the incremental states, showing that their sequential structure encodes information on the garden path effect and its resolution."
+   }
+  },
+  {
+   "surface": "bidirectional encoders",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method brings insights on various bidirectional encoders for contextualised meaning representation and dependency parsing, contributing to show their advantage over causal models when it comes to revisions."
+   }
+  },
+  {
+   "surface": "dependency parsing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method brings insights on various bidirectional encoders for contextualised meaning representation and dependency parsing, contributing to show their advantage over causal models when it comes to revisions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Restart-incremental Transformers",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we look at how restart-incremental Transformers build and update internal states, in an effort to shed light on what processes cause revisions not viable in autoregressive models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "bidirectional encoders",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method brings insights on various bidirectional encoders for contextualised meaning representation and dependency parsing, contributing to show their advantage over causal models when it comes to revisions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dependency parsing",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method brings insights on various bidirectional encoders for contextualised meaning representation and dependency parsing, contributing to show their advantage over causal models when it comes to revisions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "interpretation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "garden path effect"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 40948,
+ "eval_count": 469,
+ "ts": "2026-11-21T18:33:53Z"
+}

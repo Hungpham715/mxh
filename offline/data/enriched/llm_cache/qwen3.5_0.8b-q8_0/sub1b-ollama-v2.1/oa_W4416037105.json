@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4416037105",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LingGym",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "Interlinear Glossed Text (IGT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "grammatical descriptions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces LingGym, a new benchmark that evaluates LLMs' capacity for meta-linguistic reasoning using Interlinear Glossed Text (IGT) and grammatical descriptions extracted from 18 typologically diverse reference grammars."
+   }
+  },
+  {
+   "surface": "Word-Gloss Inference",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present a controlled evaluation task: Word-Gloss Inference, in which the model must infer a missing word and gloss from context using varying levels of linguistic information (e.g., glosses, grammatical explanations, translations)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Interlinear Glossed Text (IGT)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Unlike previous work that focuses on specific downstream tasks, we assess whether LLMs can generalize linguistic inference across low-resource languages and structures not seen during training.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "grammatical descriptions",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Unlike previous work that focuses on specific downstream tasks, we assess whether LLMs can generalize linguistic inference across low-resource languages and structures not seen during training.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "grammatical descriptions",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present a controlled evaluation task: Word-Gloss Inference, in which the model must infer a missing word and gloss from context using varying levels of linguistic information (e.g., glosses, grammatical explanations, translations).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Interlinear Glossed Text (IGT)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "grammatical descriptions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Word-Gloss Inference"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Word-Gloss Inference"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41658,
+ "eval_count": 764,
+ "ts": "2026-11-21T22:10:38Z"
+}

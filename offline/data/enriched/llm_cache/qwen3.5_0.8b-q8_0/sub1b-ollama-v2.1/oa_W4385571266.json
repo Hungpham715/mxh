@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4385571266",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MP2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present Multi-task Pre-trained Modular Prompt (MP2) to boost prompt tuning for few-shot learning."
+   }
+  },
+  {
+   "surface": "prompt tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt tuning is a parameter-efficient approach to adapting pre-trained language models to downstream tasks."
+   }
+  },
+  {
+   "surface": "few-shot learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although prompt tuning has been shown to match the performance of full model tuning when training data is sufficient, it tends to struggle in few-shot learning settings."
+   }
+  },
+  {
+   "surface": "Chinese tasks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "MP2 is a set of combinable prompts pre-trained on 38 Chinese tasks."
+   }
+  },
+  {
+   "surface": "machine reading comprehension",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To bridge the gap between pre-training and fine-tuning, we formulate upstream and downstream tasks into a unified machine reading comprehension task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "few-shot learning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although prompt tuning has been shown to match the performance of full model tuning when training data is sufficient, it tends to struggle in few-shot learning settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese tasks",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "MP2 is a set of combinable prompts pre-trained on 38 Chinese tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "prompt tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "machine reading comprehension"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28293,
+ "eval_count": 390,
+ "ts": "2026-11-21T15:43:17Z"
+}

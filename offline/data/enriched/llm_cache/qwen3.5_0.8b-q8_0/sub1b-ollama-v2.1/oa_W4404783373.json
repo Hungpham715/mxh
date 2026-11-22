@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4404783373",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "McMarket",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then perform automatic translation on the Electronics category of our dataset, naming it as McMarket."
+   }
+  },
+  {
+   "surface": "MCPQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a novel task of Multilingual Cross-market Product-based Question Answering (MCPQA) and define the task as providing answers to product-related questions in a main marketplace by utilizing information from another resource-rich auxiliary marketplace in a multilingual context."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "McMarket",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We then conduct experiments to benchmark our dataset, using models ranging from traditional lexical models to LLMs in both single-market and cross-market scenarios across McMarket and the corresponding LLM subset.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 32882,
+ "eval_count": 150,
+ "ts": "2026-11-21T19:29:07Z"
+}

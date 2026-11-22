@@ -1,0 +1,115 @@
+{
+ "paper_id": "oa:W4402671240",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ASR",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We investigate what linguistic factors affect the performance of Automatic Speech Recognition (ASR) models."
+   }
+  },
+  {
+   "surface": "Wav2Vec2-XLSR-53",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "multilingual",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "languages",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "writing systems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "graphemes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "entropy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "logographicity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  },
+  {
+   "surface": "phonemes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To examine this, we fine-tune the multilingual self-supervised pretrained model Wav2Vec2-XLSR-53 on 25 languages with 15 writing systems, and we compare their ASR accuracy, number of graphemes, unigram grapheme entropy, logographicity (how much word/morpheme-level information is encoded in the writing system), and number of phonemes."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Wav2Vec2-XLSR-53"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "languages"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "writing systems"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "graphemes"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "entropy"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "logographicity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "phonemes"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35229,
+ "eval_count": 831,
+ "ts": "2026-11-21T17:45:54Z"
+}

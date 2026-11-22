@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4404782600",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Python",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Currently, PoT primarily uses Python."
+   }
+  },
+  {
+   "surface": "PoT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Program of Thoughts (PoT) is an approach characterized by its executable intermediate steps, which ensure the accuracy of the logical calculations in the reasoning process."
+   }
+  },
+  {
+   "surface": "MultiPoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Inspired by this, we propose a task and model agnostic approach called MultiPoT, which harnesses strength and diversity from various languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "PoT",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Program of Thoughts (PoT) is an approach characterized by its executable intermediate steps, which ensure the accuracy of the logical calculations in the reasoning process.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PoT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MultiPoT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PoT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17870,
+ "eval_count": 339,
+ "ts": "2026-11-21T19:09:25Z"
+}

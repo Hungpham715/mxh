@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4389520366",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To investigate this, we design a benchmark VEC that covers the tasks of (i) Visual concepts, such as the shape and material of objects, and (ii) Embodied Concepts, learned from the interaction with the world such as the temperature of objects."
+   }
+  },
+  {
+   "surface": "VEC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To investigate this, we design a benchmark VEC that covers the tasks of (i) Visual concepts, such as the shape and material of objects, and (ii) Embodied Concepts, learned from the interaction with the world such as the temperature of objects."
+   }
+  },
+  {
+   "surface": "LMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language models (LMs) gradually become general-purpose interfaces in the interactive and embodied world, where the understanding of physical concepts is an essential prerequisite."
+   }
+  },
+  {
+   "surface": "CLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts."
+   }
+  },
+  {
+   "surface": "BLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CLIP",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BLIP",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Instead, vision-augmented LMs such as CLIP and BLIP achieve a human-level understanding of embodied concepts.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VEC"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "benchmark"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24210,
+ "eval_count": 468,
+ "ts": "2026-11-21T16:35:17Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4385571184",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Code4Struct",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We observe that semantic structures can be conveniently translated into code and propose Code4Struct to leverage such text-to-structure translation capability to tackle structured prediction tasks."
+   }
+  },
+  {
+   "surface": "Event Argument Extraction (EAE)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As a case study, we formulate Event Argument Extraction (EAE) as converting text into event-argument structures that can be represented as a class object using code."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Event Argument Extraction (EAE)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Event Argument Extraction (EAE)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Event Argument Extraction (EAE)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Event Argument Extraction (EAE)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45352,
+ "eval_count": 427,
+ "ts": "2026-11-21T15:41:03Z"
+}

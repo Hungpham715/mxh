@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4390529277",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Sermon on the Mount",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These chapters are known as the Sermon on the Mount."
+   }
+  },
+  {
+   "surface": "Bible",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we use sentiment analysis for studying selected chapters of the Bible."
+   }
+  },
+  {
+   "surface": "King James Version",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "New International Version",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "New Revised Standard Version",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "Lamsa Version",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "Basic English Version",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We utilize a pre-trained language model for sentiment analysis by reviewing five translations of the Sermon on the Mount, which include the King James version, the New International Version, the New Revised Standard Version, the Lamsa Version, and the Basic English Version."
+   }
+  },
+  {
+   "surface": "Sentiment Analysis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Sentiment analysis provides a mechanism to study the emotions expressed in text."
+   }
+  },
+  {
+   "surface": "Semantic Analysis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We provide a chapter-by-chapter and verse-by-verse comparison using sentiment and semantic analysis and review the major sentiments expressed."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Bible"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Sentiment Analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Sentiment Analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Sentiment Analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45421,
+ "eval_count": 495,
+ "ts": "2026-11-21T17:07:46Z"
+}

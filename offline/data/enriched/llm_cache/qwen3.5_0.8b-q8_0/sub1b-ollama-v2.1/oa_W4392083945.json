@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4392083945",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "aggregated",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our results demonstrate the efficacy of our aggregated detector, providing a promising step towards evermore reliable machine translation systems."
+   }
+  },
+  {
+   "surface": "detector",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous research works have identified that detectors exhibit complementary performance — different detectors excel at detecting different types of hallucinations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "detector",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose to address the limitations of individual detectors by combining them and introducing a straightforward method for aggregating multiple detectors.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "detector"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33404,
+ "eval_count": 187,
+ "ts": "2026-11-21T17:14:27Z"
+}

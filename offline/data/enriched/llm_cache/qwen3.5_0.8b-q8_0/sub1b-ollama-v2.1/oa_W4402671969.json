@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4402671969",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "data generation pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we introduce a data generation pipeline with automated data quality filters, which can synthesize diversified high-quality training and testing data at scale."
+   }
+  },
+  {
+   "surface": "automated data quality filters",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we introduce a data generation pipeline with automated data quality filters, which can synthesize diversified high-quality training and testing data at scale."
+   }
+  },
+  {
+   "surface": "fine-tuned specialist models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further introduce four test sets to benchmark the robustness of fine-tuned specialist models."
+   }
+  },
+  {
+   "surface": "synthetic data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive evaluation shows that fine-tuning on synthetic data improves performance on both in- and out-of-distribution."
+   }
+  },
+  {
+   "surface": "test sets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further introduce four test sets to benchmark the robustness of fine-tuned specialist models."
+   }
+  },
+  {
+   "surface": "fine-tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive evaluation shows that fine-tuning on synthetic data improves performance on both in- and out-of-distribution."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "automated data quality filters",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we introduce a data generation pipeline with automated data quality filters, which can synthesize diversified high-quality training and testing data at scale.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "fine-tuning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we systematically investigate how to robustly fine-tune LLMs for better source quality and answer attributability.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "test sets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further introduce four test sets to benchmark the robustness of fine-tuned specialist models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "synthetic data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fine-tuned specialist models"
+  }
+ ],
+ "auto_added_endpoints": [
+  "fine-tuning"
+ ],
+ "duration_ms": 40962,
+ "eval_count": 466,
+ "ts": "2026-11-21T18:25:02Z"
+}

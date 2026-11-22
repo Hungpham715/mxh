@@ -1,0 +1,143 @@
+{
+ "paper_id": "oa:W4416036489",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Language use",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language use is shaped by pragmatics—i.e., reasoning about communicative goals and norms in context."
+   }
+  },
+  {
+   "surface": "pragmatics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language use is shaped by pragmatics—i.e., reasoning about communicative goals and norms in context."
+   }
+  },
+  {
+   "surface": "reasoning about communicative goals and norms in context",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Language use is shaped by pragmatics—i.e., reasoning about communicative goals and norms in context."
+   }
+  },
+  {
+   "surface": "Language models (LMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As language models (LMs) are increasingly used as conversational agents, it becomes ever more important to understand their pragmatic reasoning abilities."
+   }
+  },
+  {
+   "surface": "conversational agents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As language models (LMs) are increasingly used as conversational agents, it becomes ever more important to understand their pragmatic reasoning abilities."
+   }
+  },
+  {
+   "surface": "wavelength",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose an evaluation framework derived from Wavelength, a popular communication game where a speaker and a listener communicate about a broad range of concepts in a granular manner."
+   }
+  },
+  {
+   "surface": "language comprehension",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study a range of LMs on both language comprehension and language production using direct and Chain-of-Thought (CoT) prompting, and further explore a Rational Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM inference."
+   }
+  },
+  {
+   "surface": "language production",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study a range of LMs on both language comprehension and language production using direct and Chain-of-Thought (CoT) prompting, and further explore a Rational Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM inference."
+   }
+  },
+  {
+   "surface": "direct prompting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "On language production, CoT can outperform direct prompting, and using RSA provides significant improvements over both approaches."
+   }
+  },
+  {
+   "surface": "Chain-of-Thought (CoT) prompting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study a range of LMs on both language comprehension and language production using direct and Chain-of-Thought (CoT) prompting, and further explore a Rational Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM inference."
+   }
+  },
+  {
+   "surface": "Rational Speech Act (RSA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study a range of LMs on both language comprehension and language production using direct and Chain-of-Thought (CoT) prompting, and further explore a Rational Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM inference."
+   }
+  },
+  {
+   "surface": "Bayesian pragmatic reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We study a range of LMs on both language comprehension and language production using direct and Chain-of-Thought (CoT) prompting, and further explore a Rational Speech Act (RSA) approach to incorporating Bayesian pragmatic reasoning into LM inference."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language models (LMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language use"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language comprehension"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language production"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language use"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language comprehension"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language production"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language production"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39334,
+ "eval_count": 826,
+ "ts": "2026-11-21T21:46:43Z"
+}

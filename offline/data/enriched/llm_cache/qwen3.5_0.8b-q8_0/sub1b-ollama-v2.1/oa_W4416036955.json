@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4416036955",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "UnCo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address these limitations, we propose UnCo, a two-stage Uncertainty-driven Collaborative framework that leverages the complementary strengths of small fine-tuned models and MLLMs."
+   }
+  },
+  {
+   "surface": "GMNER",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Grounded Multimodal Named Entity Recognition (GMNER) is a new information extraction task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "GMNER",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Grounded Multimodal Named Entity Recognition (GMNER) is a new information extraction task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GMNER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 14010,
+ "eval_count": 180,
+ "ts": "2026-11-21T22:02:08Z"
+}

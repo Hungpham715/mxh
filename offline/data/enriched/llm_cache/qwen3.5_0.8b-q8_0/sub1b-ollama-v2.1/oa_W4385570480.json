@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4385570480",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MAR",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise."
+   }
+  },
+  {
+   "surface": "Abductive Reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Abductive Reasoning, has long been considered to be at the core ability of humans, which enables us to infer the most plausible explanation of incomplete known phenomena in daily life."
+   }
+  },
+  {
+   "surface": "video",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise."
+   }
+  },
+  {
+   "surface": "past video",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise."
+   }
+  },
+  {
+   "surface": "language premise",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "video",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We conducted extensive experiments on the proposed dataset, and the experimental study shows that the proposed model significantly outperforms existing video-language models in terms of effectiveness on our newly created MAR dataset.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "past video",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To facilitate this research community, this paper sheds new light on Abductive Reasoning by studying a new vision-language task, Multi-modal Action chain abductive Reasoning (MAR), together with a large-scale Abductive Reasoning dataset: Given an incomplete set of language described events, MAR aims to imagine the most plausible event by spatio-temporal grounding in past video and then infer the hypothesis of subsequent action chain that can best explain the language premise.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Abductive Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Abductive Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "language premise"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26771,
+ "eval_count": 481,
+ "ts": "2026-11-21T15:30:17Z"
+}

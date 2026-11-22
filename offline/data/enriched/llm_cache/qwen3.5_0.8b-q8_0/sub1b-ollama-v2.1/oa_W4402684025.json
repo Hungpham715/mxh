@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4402684025",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "randomization model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Utilizing the proposed randomization model and a related comparison approach, we successfully derive the analytical form of the distribution, enabling the computation of the probable location of each annotated text segment and subsequent chance agreement estimation."
+   }
+  },
+  {
+   "surface": "sequence annotation tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is a notable dearth of research focusing on chance correction for assessing the reliability of sequence annotation tasks, despite their widespread prevalence in the field."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sequence annotation tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21907,
+ "eval_count": 139,
+ "ts": "2026-11-21T18:36:53Z"
+}

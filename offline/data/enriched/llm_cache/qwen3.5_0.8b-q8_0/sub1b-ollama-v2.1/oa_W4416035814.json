@@ -1,0 +1,60 @@
+{
+ "paper_id": "oa:W4416035814",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these issues, we propose a robust adaptation framework for hateful meme detection that enhances in-domain accuracy and cross-domain generalization while preserving the general vision-language capabilities of LMMs."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on six meme classification datasets show that our approach achieves state-of-the-art performance, outperforming larger agentic systems.Moreover, our method generates higher-quality rationales for explaining hateful content compared to standard SFT, enhancing model interpretability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "framework",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these issues, we propose a robust adaptation framework for hateful meme detection that enhances in-domain accuracy and cross-domain generalization while preserving the general vision-language capabilities of LMMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on six meme classification datasets show that our approach achieves state-of-the-art performance, outperforming larger agentic systems.Moreover, our method generates higher-quality rationales for explaining hateful content compared to standard SFT, enhancing model interpretability.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38900,
+ "eval_count": 333,
+ "ts": "2026-11-21T21:21:34Z"
+}

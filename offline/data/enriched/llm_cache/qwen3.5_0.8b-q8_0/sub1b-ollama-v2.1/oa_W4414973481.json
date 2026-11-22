@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4414973481",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Set Supervised Fine-Tuning (SSFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We observe that whereas naive fine-tuning with multiple reasoning traces collapses these unique reasoning modes, our proposed method, Set Supervised Fine-Tuning (SSFT), preserves these modes and produces emergent global forking tokens."
+   }
+  },
+  {
+   "surface": "Global Forking Policy Optimization (GFPO)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Global Forking Policy Optimization (GFPO) leverages these maximally steerable tokens to incentivize complex reasoning, and the resulting models consistently outperform their SFT counterparts with GRPO on both math reasoning and execution-based code generation benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Global Forking Policy Optimization (GFPO)",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Global Forking Policy Optimization (GFPO) leverages these maximally steerable tokens to incentivize complex reasoning, and the resulting models consistently outperform their SFT counterparts with GRPO on both math reasoning and execution-based code generation benchmarks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Set Supervised Fine-Tuning (SSFT)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We observe that whereas naive fine-tuning with multiple reasoning traces collapses these unique reasoning modes, our proposed method, Set Supervised Fine-Tuning (SSFT), preserves these modes and produces emergent global forking tokens.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 48159,
+ "eval_count": 322,
+ "ts": "2026-11-21T21:00:12Z"
+}

@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4406032331",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "eRevise+RF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present eRevise+RF, an enhanced AWE system for assessing student essay revisions (e.g., changes made to an essay to improve its quality in response to essay feedback) and providing revision feedback."
+   }
+  },
+  {
+   "surface": "students",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability to revise essays in response to feedback is important for students' writing success."
+   }
+  },
+  {
+   "surface": "teachers",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We deployed the system with 6 teachers and 406 students across 3 schools in Pennsylvania and Louisiana."
+   }
+  },
+  {
+   "surface": "schools",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We deployed the system with 6 teachers and 406 students across 3 schools in Pennsylvania and Louisiana."
+   }
+  },
+  {
+   "surface": "essay",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability to revise essays in response to feedback is important for students' writing success."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "students"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "teachers"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "schools"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "essay"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23107,
+ "eval_count": 386,
+ "ts": "2026-11-21T19:48:01Z"
+}

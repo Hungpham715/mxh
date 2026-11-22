@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4385570360",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "XDailyDialog",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we provide a multilingual parallel open-domain dialog dataset, XDailyDialog, to enable researchers to explore the challenging task of multilingual and cross-lingual open-domain dialog."
+   }
+  },
+  {
+   "surface": "kNN-Chat",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then propose a dialog generation model, kNN-Chat, which has a novel kNN-search mechanism to support unified response retrieval for monolingual, multilingual, and cross-lingual dialogue."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "kNN-Chat"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16011,
+ "eval_count": 130,
+ "ts": "2026-11-21T15:29:31Z"
+}

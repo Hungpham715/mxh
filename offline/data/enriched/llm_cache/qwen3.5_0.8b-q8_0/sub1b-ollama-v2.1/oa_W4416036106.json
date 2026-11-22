@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4416036106",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LACING",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, Therefore, we propose LACING, designed to address such bias with Mu\\underline{\\textbf{L}}timodal Du\\underline{\\textbf{A}}l-attention Me\\underline{\\textbf{C}}han\\underline{\\textbf{I}}sm (MDA) a\\underline{\\textbf{N}}d Soft-Image \\underline{\\textbf{G}}uidance (SIG)."
+   }
+  },
+  {
+   "surface": "MDA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, Therefore, we propose LACING, designed to address such bias with Mu\\underline{\\textbf{L}}timodal Du\\underline{\\textbf{A}}l-attention Me\\underline{\\textbf{C}}han\\underline{\\textbf{I}}sm (MDA) a\\underline{\\textbf{N}}d Soft-Image \\underline{\\textbf{G}}uidance (SIG)."
+   }
+  },
+  {
+   "surface": "SIG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, Therefore, we propose LACING, designed to address such bias with Mu\\underline{\\textbf{L}}timodal Du\\underline{\\textbf{A}}l-attention Me\\underline{\\textbf{C}}han\\underline{\\textbf{I}}sm (MDA) a\\underline{\\textbf{N}}d Soft-Image \\underline{\\textbf{G}}uidance (SIG)."
+   }
+  },
+  {
+   "surface": "parallel dual-attention mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Specifically, MDA adopts a \\textbf{parallel dual-attention mechanism} that constructs separate attention for visual and text inputs to enhance integration of visual inputs across model."
+   }
+  },
+  {
+   "surface": "learnable soft visual prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "SIG uses a \\textbf{learnable soft visual prompt} during training and inference to replace visual inputs, designed to compel LVLMs to prioritize text inputs during inference."
+   }
+  },
+  {
+   "surface": "LVLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large vision-language models (LVLMs) have achieved impressive results in vision-language tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LVLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large vision-language models (LVLMs) have achieved impressive results in vision-language tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MDA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SIG"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LVLMs"
+  }
+ ],
+ "auto_added_endpoints": [
+  "LVLMs"
+ ],
+ "duration_ms": 41953,
+ "eval_count": 430,
+ "ts": "2026-11-21T21:25:36Z"
+}

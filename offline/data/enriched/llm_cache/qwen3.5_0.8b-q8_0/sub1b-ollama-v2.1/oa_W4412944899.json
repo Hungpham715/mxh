@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4412944899",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "third-party annotators",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural Language Processing tasks that aim to infer an author’s private states, e.g., emotions and opinions, from their written text, typically rely on datasets annotated by third-party annotators."
+   }
+  },
+  {
+   "surface": "first-party (author-provided) emotion labels",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we present human subjects experiments on emotion recognition tasks that directly compare third-party annotations with first-party (author-provided) emotion labels."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our findings reveal significant limitations in third-party annotations—whether provided by human annotators or large language models (LLMs)—in faithfully representing authors’ private states."
+   }
+  },
+  {
+   "surface": "human annotators",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our findings reveal significant limitations in third-party annotations—whether provided by human annotators or large language models (LLMs)—in faithfully representing authors’ private states."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "third-party annotators",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural Language Processing tasks that aim to infer an author’s private states, e.g., emotions and opinions, from their written text, typically rely on datasets annotated by third-party annotators.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "human annotators",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further explore methods to improve third-party annotation quality.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "first-party (author-provided) emotion labels"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30073,
+ "eval_count": 467,
+ "ts": "2026-11-21T20:31:26Z"
+}

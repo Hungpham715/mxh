@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4416036854",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TaCoMoE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle these issues, we propose a novel LLM-based multi-task approach, named \\textbf{T}ask-\\textbf{a}ware \\textbf{Co}ntrastive \\textbf{M}ixture \\textbf{o}f \\textbf{E}xperts (\\textbf{TaCoMoE}), to tackle the DiaASQ task by integrating expert-level contrastive loss within task-oriented mixture of experts layer."
+   }
+  },
+  {
+   "surface": "DiaASQ",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper focuses on Dialogue Aspect-based Sentiment Quadruple (DiaASQ) analysis, aiming to extract structured quadruples from multi-turn conversations."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Applying Large Language Models (LLMs) for this specific task presents two primary challenges: the accurate extraction of multiple elements and the understanding of complex dialogue reply structure."
+   }
+  },
+  {
+   "surface": "contrastive loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle these issues, we propose a novel LLM-based multi-task approach, named \\textbf{T}ask-\\textbf{a}ware \\textbf{Co}ntrastive \\textbf{M}ixture \\textbf{o}f \\textbf{E}xperts (\\textbf{TaCoMoE}), to tackle the DiaASQ task by integrating expert-level contrastive loss within task-oriented mixture of experts layer."
+   }
+  },
+  {
+   "surface": "graph-centric dialogue structuring",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, we design a Graph-Centric Dialogue Structuring strategy for representing dialogue reply structure and perform non-opinion utterances detection to enhance the performance of quadruple extraction."
+   }
+  },
+  {
+   "surface": "non-opinion utterances detection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, we design a Graph-Centric Dialogue Structuring strategy for representing dialogue reply structure and perform non-opinion utterances detection to enhance the performance of quadruple extraction."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Applying Large Language Models (LLMs) for this specific task presents two primary challenges: the accurate extraction of multiple elements and the understanding of complex dialogue reply structure.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive loss",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle these issues, we propose a novel LLM-based multi-task approach, named \\textbf{T}ask-\\textbf{a}ware \\textbf{Co}ntrastive \\textbf{M}ixture \\textbf{o}f \\textbf{E}xperts (\\textbf{TaCoMoE}), to tackle the DiaASQ task by integrating expert-level contrastive loss within task-oriented mixture of experts layer.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "graph-centric dialogue structuring",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, we design a Graph-Centric Dialogue Structuring strategy for representing dialogue reply structure and perform non-opinion utterances detection to enhance the performance of quadruple extraction.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "non-opinion utterances detection",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, we design a Graph-Centric Dialogue Structuring strategy for representing dialogue reply structure and perform non-opinion utterances detection to enhance the performance of quadruple extraction.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24947,
+ "eval_count": 500,
+ "ts": "2026-11-21T22:01:39Z"
+}

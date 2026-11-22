@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4412945393",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Unified Legal Retriever",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Therefore, we propose a novel Unified Legal Retriever (UniLR) capable of performing multiple legal retrieval tasks for LLMs."
+   }
+  },
+  {
+   "surface": "Attention Supervision",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we introduce attention supervision to guide the retriever in focusing on key elements during knowledge encoding."
+   }
+  },
+  {
+   "surface": "Heterogeneous Graph",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Next, we design a graph-based method to integrate meta information through a heterogeneous graph, further enriching the knowledge representation."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Despite the impressive capabilities of LLMs, they often generate content with factual inaccuracies in LegalAI, which may lead to serious legal consequences."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Attention Supervision",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we introduce attention supervision to guide the retriever in focusing on key elements during knowledge encoding.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Heterogeneous Graph",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Next, we design a graph-based method to integrate meta information through a heterogeneous graph, further enriching the knowledge representation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Legal AI"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Legal AI"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30756,
+ "eval_count": 423,
+ "ts": "2026-11-21T20:48:03Z"
+}

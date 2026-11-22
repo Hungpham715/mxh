@@ -1,0 +1,43 @@
+{
+ "paper_id": "oa:W4404782792",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FELT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this opinion piece, we compile ideas from pedagogy to introduce FELT, a feedback framework for LLMs that outlines various characteristics of the feedback space, and a feedback content taxonomy based on these variables, providing a general mapping of the feedback space."
+   }
+  },
+  {
+   "surface": "NLF",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Natural Language Feedback (NLF) is an increasingly popular mechanism for aligning Large Language Models (LLMs) to human preferences."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "NLF",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this opinion piece, we compile ideas from pedagogy to introduce FELT, a feedback framework for LLMs that outlines various characteristics of the feedback space, and a feedback content taxonomy based on these variables, providing a general mapping of the feedback space.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "NLF"
+ ],
+ "duration_ms": 20615,
+ "eval_count": 127,
+ "ts": "2026-11-21T19:15:19Z"
+}

@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4402672044",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "open grounded planning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a new planning task–open grounded planning."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The emergence of large language models (LLMs) has increasingly drawn attention to the use of LLMs for human-like planning."
+   }
+  },
+  {
+   "surface": "grounded planning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a new planning task–open grounded planning."
+   }
+  },
+  {
+   "surface": "variable action set",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The primary objective of open grounded planning is to ask the model to generate an executable plan based on a variable action set, thereby ensuring the executability of the produced plan."
+   }
+  },
+  {
+   "surface": "executability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The primary objective of open grounded planning is to ask the model to generate an executable plan based on a variable action set, thereby ensuring the executability of the produced plan."
+   }
+  },
+  {
+   "surface": "benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To this end, we establishes a benchmark for open grounded planning spanning a wide range of domains."
+   }
+  },
+  {
+   "surface": "open domains",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Then we test current state-of-the-art LLMs along with five planning approaches, revealing that existing LLMs and methods still struggle to address the challenges posed by grounded planning in open domains."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "open grounded planning",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Then we test current state-of-the-art LLMs along with five planning approaches, revealing that existing LLMs and methods still struggle to address the challenges posed by grounded planning in open domains.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "open grounded planning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "open grounded planning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35800,
+ "eval_count": 403,
+ "ts": "2026-11-21T18:30:09Z"
+}

@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4412889621",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this study, we introduce a computational pipeline to quantify citation fidelity at scale."
+   }
+  },
+  {
+   "surface": "approximately",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Analyzing a large-scale multi-disciplinary dataset of approximately 13 million citation sentence pairs, we find that citation fidelity is higher when authors cite papers that are 1) more recent and intellectually close, 2) more accessible, and 3) the first author has a lower H-index and the author team is medium-sized."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "sentence-level"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "citation-fidelity"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "citing-papers"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "claimed-in-cited-papers"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "original-claim"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "13-million"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "citation-sentence-pairs"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "13-million"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "sentence-level"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "13-million"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "13-million"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "13-million"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "13-million"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39865,
+ "eval_count": 587,
+ "ts": "2026-11-21T20:10:29Z"
+}

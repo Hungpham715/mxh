@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4404792993",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) frequently memorize long sequences verbatim, often with serious legal and privacy implications."
+   }
+  },
+  {
+   "surface": "Pythia checkpoints",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To complement such work, we develop a framework to study verbatim memorization in a controlled setting by continuing pre-training from Pythia checkpoints with injected sequences."
+   }
+  },
+  {
+   "surface": "verbatim memorization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Much prior work has studied such verbatim memorization using observational data."
+   }
+  },
+  {
+   "surface": "unlearning methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Guided by these insights, we develop stress tests to evaluate unlearning methods and find they often fail to remove the verbatim memorized information, while also degrading the LM."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Pythia checkpoints"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unlearning methods"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18769,
+ "eval_count": 255,
+ "ts": "2026-11-21T19:38:26Z"
+}

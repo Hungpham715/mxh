@@ -1,0 +1,130 @@
+{
+ "paper_id": "oa:W4390529318",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SemEval 2023 Task 2: MultiCoNER II",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper describes the architecture and systems built towards solving the SemEval 2023 Task 2: MultiCoNER II (Multilingual Complex Named Entity Recognition) [1]."
+   }
+  },
+  {
+   "surface": "Decaying auxiliary loss (with residual)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM."
+   }
+  },
+  {
+   "surface": "Triplet token blending",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM."
+   }
+  },
+  {
+   "surface": "Task-optimal heads",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM."
+   }
+  },
+  {
+   "surface": "GPT-3",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We also explore multiple LLMs including GPT-3 and experiment with a variety of dropout and other hyperparameter settings before arriving at our final model which achieves micro & macro f1 of 0.85/0.84 (on dev) and 0.67/0.61 on the test data ."
+   }
+  },
+  {
+   "surface": "dropout",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We also explore multiple LLMs including GPT-3 and experiment with a variety of dropout and other hyperparameter settings before arriving at our final model which achieves micro & macro f1 of 0.85/0.84 (on dev) and 0.67/0.61 on the test data ."
+   }
+  },
+  {
+   "surface": "hyperparameter settings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We also explore multiple LLMs including GPT-3 and experiment with a variety of dropout and other hyperparameter settings before arriving at our final model which achieves micro & macro f1 of 0.85/0.84 (on dev) and 0.67/0.61 on the test data ."
+   }
+  },
+  {
+   "surface": "micro & macro f1",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We also explore multiple LLMs including GPT-3 and experiment with a variety of dropout and other hyperparameter settings before arriving at our final model which achieves micro & macro f1 of 0.85/0.84 (on dev) and 0.67/0.61 on the test data ."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Decaying auxiliary loss (with residual)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Triplet token blending",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Task-optimal heads",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The novel ideas explored are: 1) Decaying auxiliary loss (with residual) - where we train the model on an auxiliary task of Coarse-Grained NER and include this task as a part of the loss function 2) Triplet token blending - where we explore ways of blending the embeddings of neighboring tokens in the final NER layer prior to prediction 3) Task-optimal heads - where we explore a variety of custom heads and learning rates for the final layer of the LLM.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLM fine-tuned with a customized head"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SemEval 2023 Task 2: MultiCoNER II"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SemEval 2023 Task 2: MultiCoNER II"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SemEval 2023 Task 2: MultiCoNER II"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SemEval 2023 Task 2: MultiCoNER II"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 54876,
+ "eval_count": 828,
+ "ts": "2026-11-21T23:56:35Z"
+}

@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416036000",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this gap, we propose a novel metric for evaluating style consistency and introduce a fusion-based generation approach grounded in this metric."
+   }
+  },
+  {
+   "surface": "generation approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this gap, we propose a novel metric for evaluating style consistency and introduce a fusion-based generation approach grounded in this metric."
+   }
+  },
+  {
+   "surface": "two-stage process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method employs a two-stage process: it first assesses the style of candidate responses and then optimizes and integrates them at the instance level through a fusion process."
+   }
+  },
+  {
+   "surface": "fusion process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method employs a two-stage process: it first assesses the style of candidate responses and then optimizes and integrates them at the instance level through a fusion process."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "generation approach",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this gap, we propose a novel metric for evaluating style consistency and introduce a fusion-based generation approach grounded in this metric.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "two-stage process",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method employs a two-stage process: it first assesses the style of candidate responses and then optimizes and integrates them at the instance level through a fusion process.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fusion process",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "This enables the generation of high-quality responses while significantly reducing stylistic variation between instances.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16583,
+ "eval_count": 314,
+ "ts": "2026-11-21T21:24:20Z"
+}

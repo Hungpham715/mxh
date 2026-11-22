@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385570499",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Rel-CSKGC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then propose a CSKG completion method called Rel-CSKGC to predict the relation given the head event and the tail event of a triplet, and train a CSKG completion model based on existing triplets in ATOMIC."
+   }
+  },
+  {
+   "surface": "Dense-ATOMIC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we aim to construct Dense-ATOMIC with high knowledge coverage and massive multi-hop paths."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Dense-ATOMIC",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Both the source code of Rel-CSKGC and Dense-ATOMIC are publicly available on https://github.com/NUSTM/Dense-ATOMIC.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 14156,
+ "eval_count": 151,
+ "ts": "2026-11-21T15:31:20Z"
+}

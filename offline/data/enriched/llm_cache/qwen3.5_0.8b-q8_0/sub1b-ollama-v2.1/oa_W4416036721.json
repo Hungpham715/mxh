@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4416036721",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "R-Bind",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel training-free method R-Bind that simultaneously improves both entity-attribute and entity-relation-entity binding."
+   }
+  },
+  {
+   "surface": "attention maps",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our method introduces three inference-time optimization losses that adjust attention maps during generation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "attention maps",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our method introduces three inference-time optimization losses that adjust attention maps during generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19482,
+ "eval_count": 127,
+ "ts": "2026-11-21T21:56:21Z"
+}

@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4385571944",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Symbolic Chain-of-Thought Distillation (SCoTD)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To achieve this, we introduce Symbolic Chain-of-Thought Distillation (SCoTD), a method to train a smaller student model on rationalizations sampled from a significantly larger teacher model."
+   }
+  },
+  {
+   "surface": "Chain-of-thought prompting",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chain-of-thought prompting (e.g., “Let’s think step-by-ste”) primes large language models to verbalize rationalization for their predictions."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chain-of-thought prompting (e.g., “Let’s think step-by-ste”) primes large language models to verbalize rationalization for their predictions."
+   }
+  },
+  {
+   "surface": "commonsense benchmarks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments across several commonsense benchmarks show that: 1) SCoTD enhances the performance of the student model in both supervised and few-shot settings, and especially for challenge sets; 2) sampling many reasoning chains per instance from the teacher is paramount; and 3) after distillation, student chain-of-thoughts are judged by humans as comparable to the teacher, despite orders of magnitude fewer parameters."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Symbolic Chain-of-Thought Distillation (SCoTD)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "commonsense benchmarks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32381,
+ "eval_count": 348,
+ "ts": "2026-11-21T15:50:12Z"
+}

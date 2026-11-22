@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4389519258",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Skill-KNN",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose Skill-KNN, a skill-based few-shot selection method for in-context learning."
+   }
+  },
+  {
+   "surface": "few-shot selection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Few-shot selection—selecting appropriate examples for each test instance separately—is important for in-context learning."
+   }
+  },
+  {
+   "surface": "in-context learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning is the paradigm that adapts large language models to downstream tasks by providing a few examples."
+   }
+  },
+  {
+   "surface": "pre-trained embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The key advantages of Skill-KNN include: (1) it addresses the problem that existing methods based on pre-trained embeddings can be easily biased by surface natural language features that are not important for the target task; (2) it does not require training or fine-tuning of any models, making it suitable for frequently expanding or changing example banks."
+   }
+  },
+  {
+   "surface": "semantic parsing datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results across five cross-domain semantic parsing datasets and six backbone models show that Skill-KNN significantly outperforms existing methods."
+   }
+  },
+  {
+   "surface": "backbone models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results across five cross-domain semantic parsing datasets and six backbone models show that Skill-KNN significantly outperforms existing methods."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "few-shot selection",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The key advantages of Skill-KNN include: (1) it addresses the problem that existing methods based on pre-trained embeddings can be easily biased by surface natural language features that are not important for the target task; (2) it does not require training or fine-tuning of any models, making it suitable for frequently expanding or changing example banks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "semantic parsing datasets",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results across five cross-domain semantic parsing datasets and six backbone models show that Skill-KNN significantly outperforms existing methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "backbone models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28126,
+ "eval_count": 419,
+ "ts": "2026-11-21T16:22:42Z"
+}

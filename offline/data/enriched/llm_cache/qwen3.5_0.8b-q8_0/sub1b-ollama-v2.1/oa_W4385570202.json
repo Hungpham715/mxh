@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4385570202",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "corpora",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study presents a diverse set of freely available linguistic resources for Turkish natural language processing, including corpora, pretrained models and education material."
+   }
+  },
+  {
+   "surface": "pretrained models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study presents a diverse set of freely available linguistic resources for Turkish natural language processing, including corpora, pretrained models and education material."
+   }
+  },
+  {
+   "surface": "spaCy language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our linguistic resources for Turkish also include pretrained spaCy language models."
+   }
+  },
+  {
+   "surface": "Turkish NLP world",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Along with a thorough description of the resource creation process, we also explain the position of our resources in the Turkish NLP world."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Turkish NLP world",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "The advantages of our linguistic resources are three-fold: they are freely available, they are first of their kind, and they are easy to use in a broad range of implementations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "corpora",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The provided corpora include named entity recognition datasets of diverse genres, including Wikipedia articles and supplement products customer reviews.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "pretrained models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "spaCy language models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33186,
+ "eval_count": 389,
+ "ts": "2026-11-21T15:26:27Z"
+}

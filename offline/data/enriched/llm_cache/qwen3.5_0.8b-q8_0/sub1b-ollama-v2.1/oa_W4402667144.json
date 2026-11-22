@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4402667144",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MemeGuard",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Addressing this gap, we present MemeGuard, a comprehensive framework leveraging Large Language Models (LLMs) and Visual Language Models (VLMs) for meme intervention."
+   }
+  },
+  {
+   "surface": "VLMeme",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "MemeGuard harnesses a specially fine-tuned VLM, VLMeme, for meme interpretation, and a multimodal knowledge selection and ranking mechanism (MKS) for distilling relevant knowledge."
+   }
+  },
+  {
+   "surface": "MKS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "MemeGuard harnesses a specially fine-tuned VLM, VLMeme, for meme interpretation, and a multimodal knowledge selection and ranking mechanism (MKS) for distilling relevant knowledge."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Addressing this gap, we present MemeGuard, a comprehensive framework leveraging Large Language Models (LLMs) and Visual Language Models (VLMs) for meme intervention."
+   }
+  },
+  {
+   "surface": "ICMM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Another key contribution of this work is the Intervening Cyberbullying in Multimodal Memes (ICMM) dataset, a high-quality, labeled dataset featuring toxic memes and their corresponding human-annotated interventions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "VLMeme",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "MemeGuard harnesses a specially fine-tuned VLM, VLMeme, for meme interpretation, and a multimodal knowledge selection and ranking mechanism (MKS) for distilling relevant knowledge.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MKS",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This knowledge is then employed by a general-purpose LLM to generate contextually appropriate interventions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Another key contribution of this work is the Intervening Cyberbullying in Multimodal Memes (ICMM) dataset, a high-quality, labeled dataset featuring toxic memes and their corresponding human-annotated interventions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ICMM",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We leverage ICMM to test MemeGuard, demonstrating its proficiency in generating relevant and effective responses to toxic memes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 51200,
+ "eval_count": 417,
+ "ts": "2026-11-21T17:36:44Z"
+}

@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4405252256",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While Large Language Models (LLMs) have demonstrated impressive natural language understanding capabilities across various text-based tasks, understanding humor has remained a persistent challenge."
+   }
+  },
+  {
+   "surface": "TTS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present an LLM with both the text and the spoken form of a joke, generated using an off-the-shelf text-to-speech (TTS) system."
+   }
+  },
+  {
+   "surface": "humor",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While Large Language Models (LLMs) have demonstrated impressive natural language understanding capabilities across various text-based tasks, understanding humor has remained a persistent challenge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "TTS",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present an LLM with both the text and the spoken form of a joke, generated using an off-the-shelf text-to-speech (TTS) system.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "datasets"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42835,
+ "eval_count": 198,
+ "ts": "2026-11-21T19:42:36Z"
+}

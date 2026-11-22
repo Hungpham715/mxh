@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385570422",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "adaptive learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Adaptive learning aims to provide customized educational activities (e.g., exercises) to address individual learning needs."
+   }
+  },
+  {
+   "surface": "exercise generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Thus, in this paper, we study a novel task of adaptive and personalized exercise generation for online language learning."
+   }
+  },
+  {
+   "surface": "online language learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Thus, in this paper, we study a novel task of adaptive and personalized exercise generation for online language learning."
+   }
+  },
+  {
+   "surface": "Duolingo",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We train and evaluate our model on real-world learner interaction data from Duolingo and demonstrate that LMs guided by student states can generate superior exercises."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "exercise generation",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Thus, in this paper, we study a novel task of adaptive and personalized exercise generation for online language learning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "adaptive learning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19305,
+ "eval_count": 235,
+ "ts": "2026-11-21T15:29:50Z"
+}

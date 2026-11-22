@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4415975965",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Material Contracts Corpus (MCC)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces the Material Contracts Corpus (MCC), a publicly available dataset comprising over one million contracts filed by public companies with the U.S."
+   }
+  },
+  {
+   "surface": "LLaMA-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Contracts in the corpus are categorized by agreement type and linked to specific parties using machine learning and natural language processing techniques, including a fine-tuned LLaMA-2 model for contract classification."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Material Contracts Corpus (MCC)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The MCC further provides metadata such as filing form, document format, and amendment status.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLaMA-2",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Contracts in the corpus are categorized by agreement type and linked to specific parties using machine learning and natural language processing techniques, including a fine-tuned LLaMA-2 model for contract classification.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 23845,
+ "eval_count": 243,
+ "ts": "2026-11-21T21:05:39Z"
+}

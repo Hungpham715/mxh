@@ -1,0 +1,149 @@
+{
+ "paper_id": "oa:W4385570675",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CompoundE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Since translation, rotation, and scaling operations are cascaded to form a composite one, the new model is named CompoundE."
+   }
+  },
+  {
+   "surface": "translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing."
+   }
+  },
+  {
+   "surface": "rotation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing."
+   }
+  },
+  {
+   "surface": "scaling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing."
+   }
+  },
+  {
+   "surface": "knowledge graph embedding (KGE)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Besides, some of them are successfully used in developing effective knowledge graph embedding (KGE)."
+   }
+  },
+  {
+   "surface": "link prediction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets."
+   }
+  },
+  {
+   "surface": "path query answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets."
+   }
+  },
+  {
+   "surface": "entity typing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "translation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "rotation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "scaling",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Geometric transformations including translation, rotation, and scaling are commonly used operations in image processing.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge graph embedding (KGE)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the synergy, we propose a new KGE model by leveraging all three operations in this work.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "link prediction",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "path query answering",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "entity typing",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To demonstrate the effectiveness of CompoundE, we perform three prevalent KG prediction tasks including link prediction, path query answering, and entity typing, on a range of datasets.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 43960,
+ "eval_count": 638,
+ "ts": "2026-11-21T15:32:46Z"
+}

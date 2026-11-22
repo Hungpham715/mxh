@@ -1,0 +1,181 @@
+{
+ "paper_id": "oa:W7133217386",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Breaking down a problem into intermediate steps has demonstrated impressive performance in Large Language Model (LLM) reasoning."
+   }
+  },
+  {
+   "surface": "GSM8K",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach surpasses the corresponding Codex-backboned baselines in few-shot accuracy by $6.34\\%$, $9.56\\%$, and $5.46\\%$ on the GSM8K, AQuA, and StrategyQA benchmarks, respectively."
+   }
+  },
+  {
+   "surface": "AQuA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach surpasses the corresponding Codex-backboned baselines in few-shot accuracy by $6.34\\%$, $9.56\\%$, and $5.46\\%$ on the GSM8K, AQuA, and StrategyQA benchmarks, respectively."
+   }
+  },
+  {
+   "surface": "StrategyQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach surpasses the corresponding Codex-backboned baselines in few-shot accuracy by $6.34\\%$, $9.56\\%$, and $5.46\\%$ on the GSM8K, AQuA, and StrategyQA benchmarks, respectively."
+   }
+  },
+  {
+   "surface": "Llama-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiment results with Llama-2 on arithmetic reasoning demonstrate the efficiency of our method in outperforming the baseline methods with comparable computational budgets."
+   }
+  },
+  {
+   "surface": "decoding algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a decoding algorithm integrating the self-evaluation guidance via stochastic beam search."
+   }
+  },
+  {
+   "surface": "stochastic beam search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a decoding algorithm integrating the self-evaluation guidance via stochastic beam search."
+   }
+  },
+  {
+   "surface": "self-evaluation guidance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a decoding algorithm integrating the self-evaluation guidance via stochastic beam search."
+   }
+  },
+  {
+   "surface": "arithmetic reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiment results with Llama-2 on arithmetic reasoning demonstrate the efficiency of our method in outperforming the baseline methods with comparable computational budgets."
+   }
+  },
+  {
+   "surface": "multi-step reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle this challenge of uncertainty in multi-step reasoning, we introduce a stepwise self-evaluation mechanism to guide and calibrate the reasoning process of LLMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Breaking down a problem into intermediate steps has demonstrated impressive performance in Large Language Model (LLM) reasoning.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiment results with Llama-2 on arithmetic reasoning demonstrate the efficiency of our method in outperforming the baseline methods with comparable computational budgets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Further analysis in multi-step reasoning finds our self-evaluation guidance pinpoints logic failures and leads to higher consistency and robustness.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "decoding algorithm",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a decoding algorithm integrating the self-evaluation guidance via stochastic beam search.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "stochastic beam search",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a decoding algorithm integrating the self-evaluation guidance via stochastic beam search.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "self-evaluation guidance",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The self-evaluation guidance serves as a better-calibrated automatic criterion, facilitating an efficient search in the reasoning space and resulting in superior prediction quality.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "arithmetic reasoning",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiment results with Llama-2 on arithmetic reasoning demonstrate the efficiency of our method in outperforming the baseline methods with comparable computational budgets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-step reasoning",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Further analysis in multi-step reasoning finds our self-evaluation guidance pinpoints logic failures and leads to higher consistency and robustness.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "decoding algorithm",
+  "stochastic beam search",
+  "self-evaluation guidance",
+  "arithmetic reasoning",
+  "multi-step reasoning"
+ ],
+ "duration_ms": 52391,
+ "eval_count": 739,
+ "ts": "2026-11-21T23:46:50Z"
+}

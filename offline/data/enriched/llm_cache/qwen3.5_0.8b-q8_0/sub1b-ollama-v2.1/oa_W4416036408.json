@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4416036408",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have been explored for automating or enhancing penetration testing tasks, but their effectiveness and reliability across diverse attack phases remain open questions."
+   }
+  },
+  {
+   "surface": "penetration testing tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have been explored for automating or enhancing penetration testing tasks, but their effectiveness and reliability across diverse attack phases remain open questions."
+   }
+  },
+  {
+   "surface": "Global Context Memory (GCM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further investigate the impact of core functional capabilities on agent success, operationalized through five targeted augmentations: Global Context Memory (GCM), Inter-Agent Messaging (IAM), Context-Conditioned Invocation (CCI), Adaptive Planning (AP), and Real-Time Monitoring (RTM)."
+   }
+  },
+  {
+   "surface": "Inter-Agent Messaging (IAM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further investigate the impact of core functional capabilities on agent success, operationalized through five targeted augmentations: Global Context Memory (GCM), Inter-Agent Messaging (IAM), Context-Conditioned Invocation (CCI), Adaptive Planning (AP), and Real-Time Monitoring (RTM)."
+   }
+  },
+  {
+   "surface": "Context-Conditioned Invocation (CCI)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further investigate the impact of core functional capabilities on agent success, operationalized through five targeted augmentations: Global Context Memory (GCM), Inter-Agent Messaging (IAM), Context-Conditioned Invocation (CCI), Adaptive Planning (AP), and Real-Time Monitoring (RTM)."
+   }
+  },
+  {
+   "surface": "Adaptive Planning (AP)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further investigate the impact of core functional capabilities on agent success, operationalized through five targeted augmentations: Global Context Memory (GCM), Inter-Agent Messaging (IAM), Context-Conditioned Invocation (CCI), Adaptive Planning (AP), and Real-Time Monitoring (RTM)."
+   }
+  },
+  {
+   "surface": "Real-Time Monitoring (RTM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further investigate the impact of core functional capabilities on agent success, operationalized through five targeted augmentations: Global Context Memory (GCM), Inter-Agent Messaging (IAM), Context-Conditioned Invocation (CCI), Adaptive Planning (AP), and Real-Time Monitoring (RTM)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "penetration testing tasks",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study presents a comprehensive evaluation of multiple LLM-based agents, ranging from singular to modular designs, across realistic penetration testing scenarios, analyzing their empirical performance and recurring failure patterns.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "penetration testing tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49503,
+ "eval_count": 660,
+ "ts": "2026-11-21T21:37:47Z"
+}

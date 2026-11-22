@@ -1,0 +1,55 @@
+{
+ "paper_id": "oa:W4416036324",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Generator-Assistant Stepwise Rollback (GA-Rollback)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address the issue, this paper proposes a novel framework called Generator-Assistant Stepwise Rollback (GA-Rollback) to induce better decision-making for LLM agents."
+   }
+  },
+  {
+   "surface": "LLM agents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address the issue, this paper proposes a novel framework called Generator-Assistant Stepwise Rollback (GA-Rollback) to induce better decision-making for LLM agents."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM agents",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language model (LLM) agents typically adopt a step-by-step reasoning framework, in which they interleave the processes of thinking and acting to accomplish the given task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "Generator-Assistant Stepwise Rollback (GA-Rollback)",
+   "to": "LLM agents"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41207,
+ "eval_count": 411,
+ "ts": "2026-11-21T23:34:02Z"
+}

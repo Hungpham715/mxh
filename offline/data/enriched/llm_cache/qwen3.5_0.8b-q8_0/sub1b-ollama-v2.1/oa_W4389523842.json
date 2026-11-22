@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4389523842",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MMT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal machine translation (MMT) simultaneously takes the source sentence and a relevant image as input for translation."
+   }
+  },
+  {
+   "surface": "Transformer Encoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then we minimize the gap between the synthetic and authentic images by drawing close the input image representations of the Transformer Encoder and the output distributions of the Transformer Decoder."
+   }
+  },
+  {
+   "surface": "Transformer Decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then we minimize the gap between the synthetic and authentic images by drawing close the input image representations of the Transformer Encoder and the output distributions of the Transformer Decoder."
+   }
+  },
+  {
+   "surface": "Multi30K En-De",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that our approach achieves state-of-the-art performance on the Multi30K En-De and En-Fr datasets, while remaining independent of authentic images during inference."
+   }
+  },
+  {
+   "surface": "En-Fr",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that our approach achieves state-of-the-art performance on the Multi30K En-De and En-Fr datasets, while remaining independent of authentic images during inference."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer Encoder",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this challenge, in this paper, we feed synthetic and authentic images to the MMT model, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer Decoder",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this challenge, in this paper, we feed synthetic and authentic images to the MMT model, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Multi30K En-De",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that our approach achieves state-of-the-art performance on the Multi30K En-De and En-Fr datasets, while remaining independent of authentic images during inference.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "En-Fr",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results show that our approach achieves state-of-the-art performance on the Multi30K En-De and En-Fr datasets, while remaining independent of authentic images during inference.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 22425,
+ "eval_count": 449,
+ "ts": "2026-11-21T16:50:58Z"
+}

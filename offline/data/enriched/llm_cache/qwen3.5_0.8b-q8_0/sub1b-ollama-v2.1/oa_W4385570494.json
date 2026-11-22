@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4385570494",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-task learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-task learning (MTL) has emerged as a promising approach for sharing inductive bias across multiple tasks to enable more efficient learning in text classification."
+   }
+  },
+  {
+   "surface": "gradient-based algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing MTL methods for alleviating this issue is to leverage heuristics or gradient-based algorithm to achieve an arbitrary Pareto optimal trade-off among different tasks."
+   }
+  },
+  {
+   "surface": "Pareto optimal trade-off",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing MTL methods for alleviating this issue is to leverage heuristics or gradient-based algorithm to achieve an arbitrary Pareto optimal trade-off among different tasks."
+   }
+  },
+  {
+   "surface": "GetMTL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present a novel gradient trade-off approach to mitigate the task conflict problem, dubbed GetMTL, which can achieve a specific trade-off among different tasks nearby the main objective of multi-task text classification (MTC), so as to improve the performance of each task simultaneously."
+   }
+  },
+  {
+   "surface": "multi-task text classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present a novel gradient trade-off approach to mitigate the task conflict problem, dubbed GetMTL, which can achieve a specific trade-off among different tasks nearby the main objective of multi-task text classification (MTC), so as to improve the performance of each task simultaneously."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GetMTL",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing MTL methods for alleviating this issue is to leverage heuristics or gradient-based algorithm to achieve an arbitrary Pareto optimal trade-off among different tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GetMTL"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-task text classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GetMTL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37693,
+ "eval_count": 432,
+ "ts": "2026-11-21T15:30:55Z"
+}

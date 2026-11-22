@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4404781917",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  },
+  {
+   "surface": "abstract",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "abstract",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic metrics are used as proxies to evaluate abstractive summarization systems when human annotations are too expensive.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "abstract"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "abstract"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36827,
+ "eval_count": 265,
+ "ts": "2026-11-21T18:52:39Z"
+}

@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4416036989",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Grouped-Query Attention (GQA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Grouped-Query Attention (GQA) is a widely adopted strategy for reducing the computational cost of attention layers in large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "context length",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, current GQA configurations are often suboptimal because they overlook how context length influences inference cost."
+   }
+  },
+  {
+   "surface": "model size",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we analyze the relationship among context length, model size, GQA configuration, and model loss, and introduce two innovations: (1) we decouple the total head size from the hidden size, enabling more flexible control over attention FLOPs; and (2) we jointly optimize the model size and the GQA configuration to arrive at a better allocation of inference resources between attention layers and other components."
+   }
+  },
+  {
+   "surface": "GQA configuration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, current GQA configurations are often suboptimal because they overlook how context length influences inference cost."
+   }
+  },
+  {
+   "surface": "model loss",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we analyze the relationship among context length, model size, GQA configuration, and model loss, and introduce two innovations: (1) we decouple the total head size from the hidden size, enabling more flexible control over attention FLOPs; and (2) we jointly optimize the model size and the GQA configuration to arrive at a better allocation of inference resources between attention layers and other components."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "context length"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model size"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model loss"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model loss"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42648,
+ "eval_count": 412,
+ "ts": "2026-11-21T22:03:35Z"
+}

@@ -1,0 +1,49 @@
+{
+ "paper_id": "oa:W4416036903",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Low-bit weight-only quantization significantly reduces the memory footprint of large language models (LLMs), but disproportionately affects certain examples."
+   }
+  },
+  {
+   "surface": "FineWeb",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "\\rho = 0.82) on FineWeb examples."
+   }
+  },
+  {
+   "surface": "50 pairs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We analyze diverse 3-4 bit methods on LLMs ranging from 7B-70B in size and find that the quantization errors of 50 pairs of methods are strongly correlated (avg."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "FineWeb",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We analyze diverse 3-4 bit methods on LLMs ranging from 7B-70B in size and find that the quantization errors of 50 pairs of methods are strongly correlated (avg.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21953,
+ "eval_count": 193,
+ "ts": "2026-11-21T22:02:01Z"
+}

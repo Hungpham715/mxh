@@ -1,0 +1,123 @@
+{
+ "paper_id": "oa:W4412944746",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "token back-tracing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we introduce a two-dimensional analysis framework—comprising token back-tracing and individual token decoding—to uncover how LLMs conduct factual knowledge recall."
+   }
+  },
+  {
+   "surface": "individual token decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we introduce a two-dimensional analysis framework—comprising token back-tracing and individual token decoding—to uncover how LLMs conduct factual knowledge recall."
+   }
+  },
+  {
+   "surface": "three-phase pattern",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation."
+   }
+  },
+  {
+   "surface": "Subject Augmentation and Broadcasting",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation."
+   }
+  },
+  {
+   "surface": "Object Retrieval and Reranking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation."
+   }
+  },
+  {
+   "surface": "Conclusion Fusion and Generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "token back-tracing",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we introduce a two-dimensional analysis framework—comprising token back-tracing and individual token decoding—to uncover how LLMs conduct factual knowledge recall.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "token back-tracing",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we introduce a two-dimensional analysis framework—comprising token back-tracing and individual token decoding—to uncover how LLMs conduct factual knowledge recall.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "three-phase pattern",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "three-phase pattern",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "three-phase pattern",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "three-phase pattern",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through explanatory analysis of three typical reasoning datasets, we identify a consistent three-phase pattern: Subject Augmentation and Broadcasting, Object Retrieval and Reranking, and Conclusion Fusion and Generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 47343,
+ "eval_count": 578,
+ "ts": "2026-11-21T20:26:12Z"
+}

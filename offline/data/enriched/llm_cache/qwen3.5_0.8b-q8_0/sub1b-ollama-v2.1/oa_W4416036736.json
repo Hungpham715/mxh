@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4416036736",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multimodal Balance Coefficient",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by our findings, we propose a Multimodal Balance Coefficient that enables quantitative measurement of the balance of learning."
+   }
+  },
+  {
+   "surface": "Dynamic Learning Scheduler",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on this, we further design a dynamic learning scheduler that better coordinates the learning between the LLM and feature encoder, alleviating the problems of oscillation and biased learning."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Instruction tuning in multimodal large language models (MLLMs) generally involves cooperative learning between a backbone LLM and a feature encoder of non-text input modalities."
+   }
+  },
+  {
+   "surface": "feature encoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Instruction tuning in multimodal large language models (MLLMs) generally involves cooperative learning between a backbone LLM and a feature encoder of non-text input modalities."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we analyze the MLLM instruction tuning from both theoretical and empirical perspectives, where we find the unbalanced learning between the feature encoder and the LLM can cause problems of oscillation and biased learning that lead to sub-optimal convergence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The major challenge is how to efficiently find the synergy between the two modules so that LLMs can adapt their reasoning abilities to downstream tasks while feature encoders can adjust to provide more task-specific information about its modality.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Multimodal Large Language Model (MLLM)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Multimodal Large Language Model (MLLM)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Multimodal Large Language Model (MLLM)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42188,
+ "eval_count": 422,
+ "ts": "2026-11-21T21:57:03Z"
+}

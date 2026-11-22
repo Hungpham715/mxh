@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4402672076",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ChatEA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Against this backdrop, we introduce ChatEA, an innovative framework that incorporates large language models (LLMs) to improve EA."
+   }
+  },
+  {
+   "surface": "KG-code translation module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the constraints of limited input KG data, ChatEA introduces a KG-code translation module that translates KG structures into a format understandable by LLMs, thereby allowing LLMs to utilize their extensive background knowledge to improve EA accuracy."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Against this backdrop, we introduce ChatEA, an innovative framework that incorporates large language models (LLMs) to improve EA."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "KG-code translation module",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the constraints of limited input KG data, ChatEA introduces a KG-code translation module that translates KG structures into a format understandable by LLMs, thereby allowing LLMs to utilize their extensive background knowledge to improve EA accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "large language models (LLMs)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the constraints of limited input KG data, ChatEA introduces a KG-code translation module that translates KG structures into a format understandable by LLMs, thereby allowing LLMs to utilize their extensive background knowledge to improve EA accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "large language models (LLMs)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address the constraints of limited input KG data, ChatEA introduces a KG-code translation module that translates KG structures into a format understandable by LLMs, thereby allowing LLMs to utilize their extensive background knowledge to improve EA accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27967,
+ "eval_count": 326,
+ "ts": "2026-11-21T18:31:46Z"
+}

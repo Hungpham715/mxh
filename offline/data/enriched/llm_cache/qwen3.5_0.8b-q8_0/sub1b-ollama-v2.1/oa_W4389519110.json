@@ -1,0 +1,136 @@
+{
+ "paper_id": "oa:W4389519110",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "dual-encoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dual-encoder has become the de facto architecture for dense retrieval."
+   }
+  },
+  {
+   "surface": "dense retrieval",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dual-encoder has become the de facto architecture for dense retrieval."
+   }
+  },
+  {
+   "surface": "query-informed document representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To alleviate this, recent research has focused on obtaining query-informed document representations."
+   }
+  },
+  {
+   "surface": "curriculum sampling strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a curriculum sampling strategy that utilizes pseudo queries during training and progressively enhances the relevance between the generated query and the real query."
+   }
+  },
+  {
+   "surface": "pseudo queries",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a curriculum sampling strategy that utilizes pseudo queries during training and progressively enhances the relevance between the generated query and the real query."
+   }
+  },
+  {
+   "surface": "generated query",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a curriculum sampling strategy that utilizes pseudo queries during training and progressively enhances the relevance between the generated query and the real query."
+   }
+  },
+  {
+   "surface": "vanilla dense retrieval model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Consequently, it performs even worse than the vanilla dense retrieval model because its performance heavily relies on the relevance between the generated queries and the real query."
+   }
+  },
+  {
+   "surface": "out-of-domain datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experimental results on both in-domain and out-of-domain datasets demonstrate that our approach outperforms previous dense retrieval models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "dense retrieval",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dual-encoder has become the de facto architecture for dense retrieval.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dual-encoder",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dual-encoder has become the de facto architecture for dense retrieval.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "curriculum sampling strategy",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a curriculum sampling strategy that utilizes pseudo queries during training and progressively enhances the relevance between the generated query and the real query.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dual-encoder",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The dual-encoder has become the de facto architecture for dense retrieval.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "in-domain datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dual-encoder"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dual-encoder"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dual-encoder"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36973,
+ "eval_count": 698,
+ "ts": "2026-11-21T16:21:20Z"
+}

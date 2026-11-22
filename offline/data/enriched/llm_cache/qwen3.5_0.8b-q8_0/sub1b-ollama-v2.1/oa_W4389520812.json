@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4389520812",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Although large language models (LLMs) have apparently acquired a certain level of grammatical knowledge and the ability to make generalizations, they fail to interpret negation, a crucial step in Natural Language Processing."
+   }
+  },
+  {
+   "surface": "negation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Although large language models (LLMs) have apparently acquired a certain level of grammatical knowledge and the ability to make generalizations, they fail to interpret negation, a crucial step in Natural Language Processing."
+   }
+  },
+  {
+   "surface": "generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Although large language models (LLMs) have apparently acquired a certain level of grammatical knowledge and the ability to make generalizations, they fail to interpret negation, a crucial step in Natural Language Processing."
+   }
+  },
+  {
+   "surface": "inference capability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We have used our dataset with the largest available open LLMs in a zero-shot approach to grasp their generalization and inference capability and we have also fine-tuned some of the models to assess whether the understanding of negation can be trained."
+   }
+  },
+  {
+   "surface": "fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Although fine-tuning the models on negative sentences improves their performance, the lack of generalization in handling negation is persistent, highlighting the ongoing challenges of LLMs regarding negation understanding and generalization."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-tuning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We have used our dataset with the largest available open LLMs in a zero-shot approach to grasp their generalization and inference capability and we have also fine-tuned some of the models to assess whether the understanding of negation can be trained.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "negation sentences"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "negation sentences"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "negation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36590,
+ "eval_count": 411,
+ "ts": "2026-11-21T16:45:34Z"
+}

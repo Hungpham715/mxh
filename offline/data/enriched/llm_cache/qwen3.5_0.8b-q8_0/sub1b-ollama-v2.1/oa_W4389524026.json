@@ -1,0 +1,150 @@
+{
+ "paper_id": "oa:W4389524026",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy."
+   }
+  },
+  {
+   "surface": "multi-hop logical reasoning problems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy."
+   }
+  },
+  {
+   "surface": "few-shot prompting techniques",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is little existing work investigating the robustness of LLMs with few-shot prompting techniques."
+   }
+  },
+  {
+   "surface": "robustness",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, there is little existing work investigating the robustness of LLMs with few-shot prompting techniques."
+   }
+  },
+  {
+   "surface": "domain-agnostic perturbations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Therefore, we introduce a systematic approach to test the robustness of LLMs in multi-hop reasoning tasks via domain-agnostic perturbations."
+   }
+  },
+  {
+   "surface": "lexical perturbations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "lexical perturbations such as typos, and semantic perturbations such as the inclusion of intermediate reasoning steps in the questions) to conduct behavioral analysis on the LLMs."
+   }
+  },
+  {
+   "surface": "semantic perturbations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "lexical perturbations such as typos, and semantic perturbations such as the inclusion of intermediate reasoning steps in the questions) to conduct behavioral analysis on the LLMs."
+   }
+  },
+  {
+   "surface": "intermediate reasoning steps",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "lexical perturbations such as typos, and semantic perturbations such as the inclusion of intermediate reasoning steps in the questions) to conduct behavioral analysis on the LLMs."
+   }
+  },
+  {
+   "surface": "synonyms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Throughout our experiments, we find that models are more sensitive to certain perturbations such as replacing words with their synonyms."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "robustness",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "domain-agnostic perturbations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "lexical perturbations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic perturbations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "synonyms",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in prompt engineering enable large language models (LLMs) to solve multi-hop logical reasoning problems with impressive accuracy.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-hop logical reasoning problems"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "few-shot prompting techniques"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "intermediate reasoning steps"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47279,
+ "eval_count": 783,
+ "ts": "2026-11-21T16:56:49Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4402667058",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "split votes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In legal decisions, split votes (SV) occur when judges cannot reach a unanimous decision, posing a difficulty for lawyers who must navigate diverse legal arguments and opinions."
+   }
+  },
+  {
+   "surface": "ECHR",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We collect judges’ vote distributions from the European Court of Human Rights (ECHR), and present SV-ECHR, a case outcome classification (COC) dataset with SV information."
+   }
+  },
+  {
+   "surface": "case outcome classification (COC)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We collect judges’ vote distributions from the European Court of Human Rights (ECHR), and present SV-ECHR, a case outcome classification (COC) dataset with SV information."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ECHR"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "split votes"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32603,
+ "eval_count": 219,
+ "ts": "2026-11-21T17:35:09Z"
+}

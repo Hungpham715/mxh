@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4404782611",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "medical decision rules",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Medical decision rules play a key role in many clinical decision support systems (CDSS)."
+   }
+  },
+  {
+   "surface": "binary trees",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We adopt a formulation of medical decision rules as binary trees consisting of condition/decision nodes."
+   }
+  },
+  {
+   "surface": "condition/decision nodes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We adopt a formulation of medical decision rules as binary trees consisting of condition/decision nodes."
+   }
+  },
+  {
+   "surface": "medical decision trees",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Such trees are referred to as medical decision trees and we introduce several generative models to extract them from text."
+   }
+  },
+  {
+   "surface": "generative models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Such trees are referred to as medical decision trees and we introduce several generative models to extract them from text."
+   }
+  },
+  {
+   "surface": "sequence-to-sequence generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The proposed models inherit the merit of two categories of successful natural language generation frameworks, i.e., sequence-to-sequence generation and autoregressive generation."
+   }
+  },
+  {
+   "surface": "autoregressive generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The proposed models inherit the merit of two categories of successful natural language generation frameworks, i.e., sequence-to-sequence generation and autoregressive generation."
+   }
+  },
+  {
+   "surface": "linearization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To unleash the potential of pretrained language models, we design three styles of linearization (natural language, augmented natural language and JSON code), acting as the target sequence for our models."
+   }
+  },
+  {
+   "surface": "natural language",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The proposed models inherit the merit of two categories of successful natural language generation frameworks, i.e., sequence-to-sequence generation and autoregressive generation."
+   }
+  },
+  {
+   "surface": "augmented natural language",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To unleash the potential of pretrained language models, we design three styles of linearization (natural language, augmented natural language and JSON code), acting as the target sequence for our models."
+   }
+  },
+  {
+   "surface": "JSON code",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To unleash the potential of pretrained language models, we design three styles of linearization (natural language, augmented natural language and JSON code), acting as the target sequence for our models."
+   }
+  },
+  {
+   "surface": "Chinese benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our final system achieves 67% tree accuracy on a comprehensive Chinese benchmark, outperforming state-of-the-art baseline by 12%."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese benchmark",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our final system achieves 67% tree accuracy on a comprehensive Chinese benchmark, outperforming state-of-the-art baseline by 12%.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "binary trees"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27108,
+ "eval_count": 448,
+ "ts": "2026-11-21T19:09:52Z"
+}

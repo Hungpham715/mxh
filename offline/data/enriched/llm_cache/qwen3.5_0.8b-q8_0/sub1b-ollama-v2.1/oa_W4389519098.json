@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4389519098",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "affinity scoring function",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose to learn an affinity scoring function to predict transferability between tasks."
+   }
+  },
+  {
+   "surface": "prompt tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information."
+   }
+  },
+  {
+   "surface": "soft prompts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information."
+   }
+  },
+  {
+   "surface": "task embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information."
+   }
+  },
+  {
+   "surface": "transferability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose to learn an affinity scoring function to predict transferability between tasks."
+   }
+  },
+  {
+   "surface": "source tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, how to efficiently find the source tasks that can successfully transfer still remains under-explored."
+   }
+  },
+  {
+   "surface": "target task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Fine-tuning pretrained language models on helpful intermediate tasks often greatly improves the performance of target tasks."
+   }
+  },
+  {
+   "surface": "transfer gain",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The goal is to predict the transfer gain (i.e., affinity) between a task pair, by conditioning on their task embeddings."
+   }
+  },
+  {
+   "surface": "affinity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose to learn an affinity scoring function to predict transferability between tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "affinity scoring function",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "affinity scoring function",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "affinity scoring function",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we conduct prompt tuning and regard soft prompts as task embeddings that summarize task-specific information.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "affinity scoring function"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "affinity scoring function"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "affinity scoring function"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "affinity scoring function"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30722,
+ "eval_count": 740,
+ "ts": "2026-11-21T16:20:33Z"
+}

@@ -1,0 +1,144 @@
+{
+ "paper_id": "oa:W4404782588",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications."
+   }
+  },
+  {
+   "surface": "multi-turn conversations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications."
+   }
+  },
+  {
+   "surface": "recollection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By analyzing human-LLM conversations, we categorize interaction patterns into four types: recollection, expansion, refinement, and follow-up."
+   }
+  },
+  {
+   "surface": "expansion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By analyzing human-LLM conversations, we categorize interaction patterns into four types: recollection, expansion, refinement, and follow-up."
+   }
+  },
+  {
+   "surface": "refinement",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By analyzing human-LLM conversations, we categorize interaction patterns into four types: recollection, expansion, refinement, and follow-up."
+   }
+  },
+  {
+   "surface": "follow-up",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By analyzing human-LLM conversations, we categorize interaction patterns into four types: recollection, expansion, refinement, and follow-up."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We construct multi-turn queries for each category either by augmenting existing datasets or creating new examples using GPT-4 with a human-in-the-loop process to avoid data leakage."
+   }
+  },
+  {
+   "surface": "human-in-the-loop process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We construct multi-turn queries for each category either by augmenting existing datasets or creating new examples using GPT-4 with a human-in-the-loop process to avoid data leakage."
+   }
+  },
+  {
+   "surface": "1170 multi-turn queries",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To study the factors impacting multi-turn abilities, we create single-turn versions of the 1170 multi-turn queries and compare performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-turn conversations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-turn conversations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-turn conversations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-turn conversations",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are increasingly used for complex multi-turn conversations across diverse real-world applications.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-turn conversations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-turn conversations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-turn conversations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-turn conversations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31587,
+ "eval_count": 754,
+ "ts": "2026-11-21T19:09:07Z"
+}

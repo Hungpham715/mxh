@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4389520390",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "automated theorem proving",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automated theorem proving (ATP) has become an appealing domain for exploring the reasoning ability of the recent successful generative language models."
+   }
+  },
+  {
+   "surface": "trigonometric expression",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose TRIGO, an ATP benchmark that not only requires a model to reduce a trigonometric expression with step-by-step proof but also evaluates a generative LM’s reasoning ability on formulas and capability to manipulate, group, and factor number terms."
+   }
+  },
+  {
+   "surface": "step-by-step proof",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose TRIGO, an ATP benchmark that not only requires a model to reduce a trigonometric expression with step-by-step proof but also evaluates a generative LM’s reasoning ability on formulas and capability to manipulate, group, and factor number terms."
+   }
+  },
+  {
+   "surface": "formulas",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose TRIGO, an ATP benchmark that not only requires a model to reduce a trigonometric expression with step-by-step proof but also evaluates a generative LM’s reasoning ability on formulas and capability to manipulate, group, and factor number terms."
+   }
+  },
+  {
+   "surface": "capability to manipulate, group, and factor number terms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose TRIGO, an ATP benchmark that not only requires a model to reduce a trigonometric expression with step-by-step proof but also evaluates a generative LM’s reasoning ability on formulas and capability to manipulate, group, and factor number terms."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "trigonometric expression"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "trigonometric expression"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "formulas"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "capability to manipulate, group, and factor number terms"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32479,
+ "eval_count": 542,
+ "ts": "2026-11-21T16:37:14Z"
+}

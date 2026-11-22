@@ -1,0 +1,110 @@
+{
+ "paper_id": "oa:W4404782046",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have demonstrated a powerful ability for text generation."
+   }
+  },
+  {
+   "surface": "prompt",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, achieving optimal results with a given prompt or instruction can be challenging, especially for billion-sized models."
+   }
+  },
+  {
+   "surface": "instruction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, achieving optimal results with a given prompt or instruction can be challenging, especially for billion-sized models."
+   }
+  },
+  {
+   "surface": "future-constrained generation problem",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we propose formalizing text generation as a future-constrained generation problem to minimize undesirable behaviors and enforce faithfulness to instructions."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have demonstrated a powerful ability for text generation."
+   }
+  },
+  {
+   "surface": "text generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have demonstrated a powerful ability for text generation."
+   }
+  },
+  {
+   "surface": "keyword-constrained generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our extensive experiments demonstrate the effectiveness of the proposed approach across three distinct text generation tasks: keyword-constrained generation (Lin et al., 2020), toxicity reduction (Gehman et al., 2020), and factual correctness in question-answering (Gao et al., 2023)."
+   }
+  },
+  {
+   "surface": "toxicity reduction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our extensive experiments demonstrate the effectiveness of the proposed approach across three distinct text generation tasks: keyword-constrained generation (Lin et al., 2020), toxicity reduction (Gehman et al., 2020), and factual correctness in question-answering (Gao et al., 2023)."
+   }
+  },
+  {
+   "surface": "factual correctness in question-answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our extensive experiments demonstrate the effectiveness of the proposed approach across three distinct text generation tasks: keyword-constrained generation (Lin et al., 2020), toxicity reduction (Gehman et al., 2020), and factual correctness in question-answering (Gao et al., 2023)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "future-constrained generation problem",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The estimation of future constraint satisfaction, accomplished using LLMs, guides the text generation process.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "keyword-constrained generation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "toxicity reduction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "factual correctness in question-answering"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44860,
+ "eval_count": 649,
+ "ts": "2026-11-21T18:54:57Z"
+}

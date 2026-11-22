@@ -1,0 +1,121 @@
+{
+ "paper_id": "oa:W4313483959",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Neural models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Neural models with an encoder-decoder framework provide a feasible solution to Question Generation (QG)."
+   }
+  },
+  {
+   "surface": "encoder-decoder framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Neural models with an encoder-decoder framework provide a feasible solution to Question Generation (QG)."
+   }
+  },
+  {
+   "surface": "Question Generation (QG)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Neural models with an encoder-decoder framework provide a feasible solution to Question Generation (QG)."
+   }
+  },
+  {
+   "surface": "RNN-based model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We apply our approach to a typical RNN-based model and \\textsc{UniLM} to get the improved versions."
+   }
+  },
+  {
+   "surface": "UniLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We apply our approach to a typical RNN-based model and \\textsc{UniLM} to get the improved versions."
+   }
+  },
+  {
+   "surface": "SQuAD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We conduct extensive experiments on SQuAD and MS MARCO datasets."
+   }
+  },
+  {
+   "surface": "MS MARCO",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We conduct extensive experiments on SQuAD and MS MARCO datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "encoder-decoder framework",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Neural models with an encoder-decoder framework provide a feasible solution to Question Generation (QG).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "UniLM",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We apply our approach to a typical RNN-based model and \\textsc{UniLM} to get the improved versions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Question Generation (QG)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Neural models with an encoder-decoder framework provide a feasible solution to Question Generation (QG).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SQuAD",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We conduct extensive experiments on SQuAD and MS MARCO datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MS MARCO",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We conduct extensive experiments on SQuAD and MS MARCO datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 51190,
+ "eval_count": 503,
+ "ts": "2026-11-21T15:10:28Z"
+}

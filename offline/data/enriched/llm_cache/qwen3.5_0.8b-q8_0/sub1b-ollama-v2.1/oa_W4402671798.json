@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4402671798",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EXAMS-V",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce EXAMS-V, a new challenging multi-discipline multimodal multilingual exam benchmark for evaluating vision language models."
+   }
+  },
+  {
+   "surface": "GPT-4V",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our evaluation results demonstrate that this is a challenging dataset, which is difficult even for advanced vision–text models such as GPT-4V and Gemini; this underscores the inherent complexity of the dataset and its significance as a future benchmark."
+   }
+  },
+  {
+   "surface": "Gemini",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our evaluation results demonstrate that this is a challenging dataset, which is difficult even for advanced vision–text models such as GPT-4V and Gemini; this underscores the inherent complexity of the dataset and its significance as a future benchmark."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "vision-language-models"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "vision-language-models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15999,
+ "eval_count": 197,
+ "ts": "2026-11-21T18:10:44Z"
+}

@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4416036244",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DAQu",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this fact, we present a novel retrieval framework called Database-Augmented Query representation (DAQu), which augments the original query with various (query-related) metadata across multiple tables."
+   }
+  },
+  {
+   "surface": "Database-Augmented Query representation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this fact, we present a novel retrieval framework called Database-Augmented Query representation (DAQu), which augments the original query with various (query-related) metadata across multiple tables."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Database-Augmented Query representation",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this fact, we present a novel retrieval framework called Database-Augmented Query representation (DAQu), which augments the original query with various (query-related) metadata across multiple tables.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "query-related metadata"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "query-related metadata"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Database-Augmented Query representation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37018,
+ "eval_count": 293,
+ "ts": "2026-11-21T21:29:29Z"
+}

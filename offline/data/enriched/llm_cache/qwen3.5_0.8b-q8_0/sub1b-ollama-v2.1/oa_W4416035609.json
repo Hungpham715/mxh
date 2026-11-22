@@ -1,0 +1,61 @@
+{
+ "paper_id": "oa:W4416035609",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MemoryOS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To overcome this challenge, we innovatively propose a Memory Operating System, i.e., MemoryOS, to achieve comprehensive and efficient memory management for AI agents."
+   }
+  },
+  {
+   "surface": "LoCoMo benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive experiments on the LoCoMo benchmark show an average improvement of 48.36% on F1 and 46.18% on BLEU-1 over the baselines on GPT-4o-mini, showing contextual coherence and personalized memory retention in long conversations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MemoryOS",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the memory management principles in operating systems, MemoryOS designs a hierarchical storage architecture and consists of four key modules: memory Storage, Updating, Retrieval, and Generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MemoryOS",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our pioneering MemoryOS enables hierarchical memory integration and dynamic updating.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LoCoMo benchmark",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive experiments on the LoCoMo benchmark show an average improvement of 48.36% on F1 and 46.18% on BLEU-1 over the baselines on GPT-4o-mini, showing contextual coherence and personalized memory retention in long conversations.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 38102,
+ "eval_count": 307,
+ "ts": "2026-11-21T21:16:22Z"
+}

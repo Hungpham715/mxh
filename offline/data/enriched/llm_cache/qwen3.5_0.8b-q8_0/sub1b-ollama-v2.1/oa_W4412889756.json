@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4412889756",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CityNavAgent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose CityNavAgent, a large language model (LLM)-empowered agent that significantly reduces the navigation complexity for urban aerial VLN."
+   }
+  },
+  {
+   "surface": "HSPM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we design a hierarchical semantic planning module (HSPM) that decomposes the long-horizon task into sub-goals with different semantic levels."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose CityNavAgent, a large language model (LLM)-empowered agent that significantly reduces the navigation complexity for urban aerial VLN."
+   }
+  },
+  {
+   "surface": "topological graph",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Additionally, a global memory module storing historical trajectories into a topological graph is developed to simplify navigation for visited targets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HSPM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we design a hierarchical semantic planning module (HSPM) that decomposes the long-horizon task into sub-goals with different semantic levels.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The agent reaches the target progressively by achieving sub-goals with different capacities of the LLM.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "topological graph"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37346,
+ "eval_count": 300,
+ "ts": "2026-11-21T20:15:07Z"
+}

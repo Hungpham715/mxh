@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4396833279",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Japanese Tort-case Dataset (JTD)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents the first dataset for Japanese Legal Judgment Prediction (LJP), the Japanese Tort-case Dataset (JTD), which features two tasks: tort prediction and its rationale extraction."
+   }
+  },
+  {
+   "surface": "Tort prediction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents the first dataset for Japanese Legal Judgment Prediction (LJP), the Japanese Tort-case Dataset (JTD), which features two tasks: tort prediction and its rationale extraction."
+   }
+  },
+  {
+   "surface": "Rationale extraction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents the first dataset for Japanese Legal Judgment Prediction (LJP), the Japanese Tort-case Dataset (JTD), which features two tasks: tort prediction and its rationale extraction."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Japanese Tort-case Dataset (JTD)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents the first dataset for Japanese Legal Judgment Prediction (LJP), the Japanese Tort-case Dataset (JTD), which features two tasks: tort prediction and its rationale extraction.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Tort prediction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Rationale extraction"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37574,
+ "eval_count": 290,
+ "ts": "2026-11-21T17:22:21Z"
+}

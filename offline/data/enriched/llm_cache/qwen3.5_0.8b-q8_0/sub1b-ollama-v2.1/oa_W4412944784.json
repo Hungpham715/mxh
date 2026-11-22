@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4412944784",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Hubness",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Hubness, the tendency for a few points to be among the nearest neighbours of a disproportionate number of other points, commonly arises when applying standard distance measures to high-dimensional data, often negatively impacting distance-based analysis."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As autoregressive large language models (LLMs) operate on high-dimensional representations, we ask whether they are also affected by hubness."
+   }
+  },
+  {
+   "surface": "context-modulated frequent tokens",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "They are rather the result of context-modulated frequent tokens often appearing in the pool of likely candidates for next token prediction."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "context-modulated frequent tokens"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35093,
+ "eval_count": 241,
+ "ts": "2026-11-21T20:26:58Z"
+}

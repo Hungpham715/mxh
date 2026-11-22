@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W6891979741",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CSE-SFP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this concern, we propose CSE-SFP, an innovative method that exploits the structural characteristics of generative models."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recent advances in pre-trained language models (PLMs) have driven remarkable progress in this field, particularly through unsupervised embedding derivation methods centered on discriminative PLMs like BERT."
+   }
+  },
+  {
+   "surface": "Information Retrieval",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "As a fundamental task in Information Retrieval and Computational Linguistics, sentence representation has profound implications for a wide range of practical applications such as text clustering, content analysis, question-answering systems, and web search."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Information Retrieval",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "As a fundamental task in Information Retrieval and Computational Linguistics, sentence representation has profound implications for a wide range of practical applications such as text clustering, content analysis, question-answering systems, and web search.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "BERT",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Rigorous experimentation demonstrates that CSE-SFP not only produces higher-quality embeddings but also significantly reduces both training time and memory consumption.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "BERT"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Information Retrieval"
+ ],
+ "duration_ms": 26891,
+ "eval_count": 309,
+ "ts": "2026-11-21T22:26:36Z"
+}

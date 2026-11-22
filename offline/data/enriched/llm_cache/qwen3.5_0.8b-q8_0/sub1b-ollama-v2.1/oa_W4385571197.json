@@ -1,0 +1,183 @@
+{
+ "paper_id": "oa:W4385571197",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "semantic construal",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semantic construal in grammatical constructions using large language models."
+   }
+  },
+  {
+   "surface": "grammatical constructions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semantic construal in grammatical constructions using large language models."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semantic construal in grammatical constructions using large language models."
+   }
+  },
+  {
+   "surface": "contextual word embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "First, we project contextual word embeddings into three interpretable semantic spaces, each defined by a different set of psycholinguistic feature norms."
+   }
+  },
+  {
+   "surface": "interpretable semantic spaces",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "First, we project contextual word embeddings into three interpretable semantic spaces, each defined by a different set of psycholinguistic feature norms."
+   }
+  },
+  {
+   "surface": "psycholinguistic feature norms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "First, we project contextual word embeddings into three interpretable semantic spaces, each defined by a different set of psycholinguistic feature norms."
+   }
+  },
+  {
+   "surface": "the AANN construction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate these interpretable spaces and then use them to automatically derive semantic characterizations of lexical items in two grammatical constructions: nouns in subject or object position within the same sentence, and the AANN construction (e.g., ‘a beautiful three days’)."
+   }
+  },
+  {
+   "surface": "lexical items",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate these interpretable spaces and then use them to automatically derive semantic characterizations of lexical items in two grammatical constructions: nouns in subject or object position within the same sentence, and the AANN construction (e.g., ‘a beautiful three days’)."
+   }
+  },
+  {
+   "surface": "subject position",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We show that a word in subject position is interpreted as more agentive than the very same word in object position, and that the nouns in the AANN construction are interpreted as more measurement-like than when in the canonical alternation."
+   }
+  },
+  {
+   "surface": "object position within the same sentence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate these interpretable spaces and then use them to automatically derive semantic characterizations of lexical items in two grammatical constructions: nouns in subject or object position within the same sentence, and the AANN construction (e.g., ‘a beautiful three days’)."
+   }
+  },
+  {
+   "surface": "AANN construction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We validate these interpretable spaces and then use them to automatically derive semantic characterizations of lexical items in two grammatical constructions: nouns in subject or object position within the same sentence, and the AANN construction (e.g., ‘a beautiful three days’)."
+   }
+  },
+  {
+   "surface": "nouns in the AANN construction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We show that a word in subject position is interpreted as more agentive than the very same word in object position, and that the nouns in the AANN construction are interpreted as more measurement-like than when in the canonical alternation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "grammatical constructions",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semantic construal in grammatical constructions using large language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "interpretable semantic spaces",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "First, we project contextual word embeddings into three interpretable semantic spaces, each defined by a different set of psycholinguistic feature norms.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "psycholinguistic feature norms",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "First, we project contextual word embeddings into three interpretable semantic spaces, each defined by a different set of psycholinguistic feature norms.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "nouns in subject position"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "nouns in object position within the same sentence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "semantic construal"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "grammatical constructions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "grammatical constructions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "grammatical constructions"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "nouns in subject position",
+   "to": "grammatical constructions"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "from": "nouns in object position within the same sentence",
+   "to": "grammatical constructions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "nouns in the AANN construction",
+   "to": "grammatical constructions"
+  }
+ ],
+ "auto_added_endpoints": [
+  "nouns in the AANN construction"
+ ],
+ "duration_ms": 44292,
+ "eval_count": 1013,
+ "ts": "2026-11-21T15:42:44Z"
+}
