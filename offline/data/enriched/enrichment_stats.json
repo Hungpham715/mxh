@@ -1,48 +1,48 @@
 {
   "papers": 1091,
-  "entities_total": 3973,
+  "entities_total": 4181,
   "entities_by_type": {
-    "dataset": 926,
-    "method": 2117,
-    "task": 930
+    "dataset": 938,
+    "method": 2258,
+    "task": 985
   },
   "entities_by_resolved_by": {
-    "slug": 3514,
-    "gazetteer": 459
+    "slug": 3691,
+    "gazetteer": 490
   },
-  "edges_total": 5850,
+  "edges_total": 6092,
   "edges_by_type": {
-    "USES_METHOD": 3241,
-    "ADDRESSES_TASK": 1489,
-    "EVALUATED_ON": 1054,
-    "METHOD_EVALUATED_ON": 66
+    "USES_METHOD": 3413,
+    "ADDRESSES_TASK": 1549,
+    "EVALUATED_ON": 1059,
+    "METHOD_EVALUATED_ON": 71
   },
   "edges_by_source_kind": {
-    "agreement": 820,
-    "rules": 1275,
-    "llm": 3755
+    "agreement": 651,
+    "rules": 1518,
+    "llm": 3923
   },
   "edges_by_confidence_band": {
-    "agreement": 820,
-    "rule_medium": 510,
-    "llm_extracted": 3755,
-    "rule_high": 765
+    "agreement": 651,
+    "rule_medium": 583,
+    "llm_extracted": 3923,
+    "rule_high": 935
   },
   "llm": {
     "results": 1091,
-    "failed": 6,
+    "failed": 2,
     "extractor_versions": {
       "sub1b-ollama-v2.1": 1091
     },
     "models": {
       "qwen3.5:0.8b-q8_0": 1091
     },
-    "mean_duration_ms": 32680,
+    "mean_duration_ms": 32617,
     "drop_reasons": {
       "endpoint_type_mismatch": 1800,
-      "generic_surface": 404,
-      "endpoint_not_extracted": 390,
-      "surface_not_in_abstract": 216
+      "generic_surface": 427,
+      "endpoint_not_extracted": 405,
+      "surface_not_in_abstract": 217
     }
   },
   "top_unresolved_surfaces": [
@@ -52,18 +52,13 @@
       "n_papers": 19
     },
     {
-      "id": "dataset:large-language",
-      "name": "large language",
-      "n_papers": 10
-    },
-    {
       "id": "dataset:large-language-models-llms",
       "name": "large language models (LLMs)",
       "n_papers": 8
     },
     {
-      "id": "method:reinforcement-learning",
-      "name": "reinforcement learning",
+      "id": "task:nlp",
+      "name": "NLP",
       "n_papers": 6
     },
     {
@@ -72,9 +67,24 @@
       "n_papers": 5
     },
     {
+      "id": "method:lms",
+      "name": "LMs",
+      "n_papers": 5
+    },
+    {
       "id": "method:metric",
       "name": "metric",
       "n_papers": 5
+    },
+    {
+      "id": "method:reinforcement-learning",
+      "name": "reinforcement learning",
+      "n_papers": 5
+    },
+    {
+      "id": "method:chain-of-thought-cot",
+      "name": "Chain-of-Thought (CoT)",
+      "n_papers": 4
     },
     {
       "id": "method:contrastive-loss",
@@ -82,18 +92,18 @@
       "n_papers": 4
     },
     {
-      "id": "method:pre-trained-language",
-      "name": "Pre-trained language",
+      "id": "method:plm",
+      "name": "plm",
+      "n_papers": 4
+    },
+    {
+      "id": "method:plms",
+      "name": "PLMs",
       "n_papers": 4
     },
     {
       "id": "method:student",
       "name": "student",
-      "n_papers": 4
-    },
-    {
-      "id": "task:nlp",
-      "name": "NLP",
       "n_papers": 4
     },
     {
@@ -110,19 +120,9 @@
       "id": "dataset:english",
       "name": "English",
       "n_papers": 3
-    },
-    {
-      "id": "dataset:standard",
-      "name": "standard",
-      "n_papers": 3
-    },
-    {
-      "id": "method:annotators",
-      "name": "annotators",
-      "n_papers": 3
     }
   ],
-  "gazetteer_version": "gazetteer-v1.1",
+  "gazetteer_version": "gazetteer-v1.2",
   "llm_model": "qwen3.5:0.8b-q8_0",
   "enrich_version": "enrich-1.0.0",
   "scope_id": "nlpgraph-enrich-v1",
@@ -133,19 +133,19 @@
       "total_relationships": 30971
     },
     "added_nodes": {
-      "Method": 2117,
-      "Dataset": 926,
-      "Task": 930
+      "Method": 2258,
+      "Dataset": 938,
+      "Task": 985
     },
     "added_relationships": {
-      "USES_METHOD": 3241,
-      "ADDRESSES_TASK": 1489,
-      "EVALUATED_ON": 1054,
-      "METHOD_EVALUATED_ON": 66
+      "USES_METHOD": 3413,
+      "ADDRESSES_TASK": 1549,
+      "EVALUATED_ON": 1059,
+      "METHOD_EVALUATED_ON": 71
     },
     "after_if_imported": {
-      "total_nodes": 11107,
-      "total_relationships": 36821
+      "total_nodes": 11315,
+      "total_relationships": 37063
     }
   }
 }

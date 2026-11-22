@@ -2,15 +2,15 @@
   "scope_id": "nlpgraph-enrich-v1",
   "enrich_version": "enrich-1.0.0",
   "nodes": {
-    "Method": 2117,
-    "Dataset": 926,
-    "Task": 930
+    "Method": 2258,
+    "Dataset": 938,
+    "Task": 985
   },
   "relationships": {
-    "USES_METHOD": 3241,
-    "ADDRESSES_TASK": 1489,
-    "EVALUATED_ON": 1054,
-    "METHOD_EVALUATED_ON": 66
+    "USES_METHOD": 3413,
+    "ADDRESSES_TASK": 1549,
+    "EVALUATED_ON": 1059,
+    "METHOD_EVALUATED_ON": 71
   },
   "rejected_edges": 0,
   "batch_size": 300,

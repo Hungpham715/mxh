@@ -77,10 +77,15 @@ def test_resolve_surface_requires_matching_type(gaz: Gazetteer):
     assert gaz.resolve_surface("XPhoneBERT", "method") is None
 
 
+def test_resolve_surface_does_not_collapse_longer_names(gaz: Gazetteer):
+    assert gaz.resolve_surface("BERT-large", "method") is None
+    assert gaz.resolve_surface("question answering evaluation", "task") is None
+
+
 def test_real_gazetteer_loads():
     real = Gazetteer.from_file(Path(__file__).resolve().parents[1] / "configs" / "gazetteer.yaml")
     assert len(real.entries) > 150
-    assert real.version == "gazetteer-v1.1"
+    assert real.version == "gazetteer-v1.2"
     # a few sanity checks on curated content
     assert real.resolve_surface("LLaMA 2", "method") == "method:llama"
     assert real.resolve_surface("chain of thought", "method") == "method:chain-of-thought"
@@ -88,6 +93,9 @@ def test_real_gazetteer_loads():
     assert real.resolve_surface("BBH", "dataset") == "dataset:bbh"
     assert real.resolve_surface("dialogue", "task") is None
     assert real.resolve_surface("task-oriented dialogue", "task") == "task:dialogue"
+    assert real.resolve_surface("GPT-3.5-turbo", "method") == "method:gpt-3-5-turbo"
+    assert real.resolve_surface("supervised fine-tuning", "method") == "method:supervised-fine-tuning"
+    assert real.resolve_surface("WMT22 metrics challenge", "dataset") == "dataset:wmt22-metrics-challenge"
 
 
 # ------------------------------------------------------------------ textutil
@@ -371,6 +379,44 @@ def test_llm_surface_normalization_is_generic_not_validation_name_specific():
     assert _canonical_llm_surface("Multi-Turn Safety Alignment (MTSA) framework") == "MTSA"
     assert _canonical_llm_surface("long descriptive expansion XYZ-2") == "XYZ-2"
     assert _canonical_llm_surface("contrastive learning") == "contrastive learning"
+    assert _canonical_llm_surface("SAM-SGA optimization") == "SAM-SGA"
+    assert _canonical_llm_surface(
+        "zero-shot sharpness-aware quantization",
+        "We propose zero-shot sharpness-aware quantization (ZSAQ).",
+    ) == "ZSAQ"
+
+
+def test_merge_keeps_specific_llm_name_instead_of_embedded_gazetteer_alias(gaz: Gazetteer):
+    paper = _paper("We use BERT-large for question answering evaluation.")
+    llm_result = {
+        "paper_id": paper["id"], "extractor": "llm", "extractor_version": "test",
+        "entities": [
+            {"surface": "BERT-large", "type": "method",
+             "evidence": {"sentence_index": 0, "evidence_text": paper["abstract"]}},
+            {"surface": "question answering evaluation", "type": "task",
+             "evidence": {"sentence_index": 0, "evidence_text": paper["abstract"]}},
+        ],
+        "relations": [], "drops": [],
+    }
+    entities, _edges, _stats = merge_all([paper], [], [llm_result], gaz)
+    assert {entity["id"] for entity in entities} == {
+        "method:bert-large", "task:question-answering-evaluation"
+    }
+
+
+def test_merge_uses_contextual_acronym_for_unknown_named_method(gaz: Gazetteer):
+    abstract = "We propose zero-shot sharpness-aware quantization (ZSAQ)."
+    paper = _paper(abstract)
+    llm_result = {
+        "paper_id": paper["id"], "extractor": "llm", "extractor_version": "test",
+        "entities": [
+            {"surface": "zero-shot sharpness-aware quantization", "type": "method",
+             "evidence": {"sentence_index": 0, "evidence_text": abstract}},
+        ],
+        "relations": [], "drops": [],
+    }
+    entities, _edges, _stats = merge_all([paper], [], [llm_result], gaz)
+    assert [entity["id"] for entity in entities] == ["method:zsaq"]
 
 
 def test_merge_repairs_llm_type_from_exact_gazetteer_alias(gaz: Gazetteer):

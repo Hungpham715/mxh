@@ -1,6 +1,2 @@
 {"paper_id": "oa:W4402667118", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
-{"paper_id": "oa:W4406032307", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
 {"paper_id": "oa:W4416036544", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
-{"paper_id": "oa:W4416548701", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
-{"paper_id": "oa:W6929505769", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
-{"paper_id": "oa:W7134191312", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}

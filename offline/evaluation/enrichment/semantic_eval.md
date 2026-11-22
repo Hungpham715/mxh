@@ -1,142 +1,112 @@
 # Semantic NER/RE evaluation
 
-Exact-ID semantic evaluation of the enrichment extractors (gazetteer rules + sub-1B local
-LLM) against frozen reference slices. Entity matching is exact on `(entity_type,
-canonical_id)`; relation matching is exact on `(relation_type, from_id, to_id)`. Micro
-counts are computed over globally deduplicated canonical IDs (the same canonical entity
-predicted correctly in two papers counts once for NER, while paper-anchored relation
-triples are unique per paper). Each gold row stores the abstract SHA-256 so a changed
-corpus cannot silently invalidate a score.
+This report evaluates the graph-enrichment extractors with exact canonical IDs. An entity
+is correct only when `(entity_type, canonical_id)` matches; a relation is correct only when
+`(relation_type, from_id, to_id)` matches. Each gold row also stores the abstract SHA-256,
+so corpus drift cannot silently change a score.
 
-## Frozen production configuration
+## Retained configuration
 
-All headline numbers below measure this exact configuration (extractor file hashes are
-recorded in each slice manifest):
+- Rules: gazetteer **v1.2** plus the existing dynamic scientific-name patterns.
+- LLM: **Qwen3.5-0.8B-Q8_0**, 752,393,024 parameters, Ollama CPU-only
+  (`num_gpu=0`; live `/api/ps` reported `size_vram: 0`).
+- Extractor: `sub1b-ollama-v2.1`, JSON-Schema output, temperature 0, verbatim surface and
+  evidence validation. Hallucinated text is dropped rather than merged.
+- Canonicalization: exact whole-surface gazetteer resolution. This fixes the previous
+  substring collapse, such as `GPT-3.5-turbo` becoming `GPT-3.5` and `machine translation
+  evaluation` becoming `machine translation`. Explicit adjacent acronyms remain supported.
 
-- Rules: gazetteer v1.1 (`configs/gazetteer.yaml`) + dynamic scientific-name patterns in
-  `extract_rules.py`; full paper-membership provenance (`evidence_paper_ids`).
-- LLM: **Qwen3.5-0.8B-Q8_0** (752,393,024 parameters — satisfies the ≤1B constraint),
-  served by Ollama **CPU-only** (`num_gpu=0`, verified `size_vram: 0`, llamacpp runner),
-  prompt/extractor version `sub1b-ollama-v2.1`, JSON-Schema-constrained output,
-  temperature 0, verbatim-grounding validation (every surface and evidence must be a
-  substring of the abstract; violations are dropped and counted, never kept).
-- Throughput on the 20-core laptop CPU: ≈17 s/paper at workers=1 (12-paper holdout run:
-  208.7 s, 0 failures). Both candidate models (Qwen3-0.6B, Qwen3.5-0.8B) run comfortably
-  on CPU; the 0.8B was selected on development slices **before** opening the holdout.
+The hashes in `semantic_holdout_v4_manifest.json` match the retained extractor and
+gazetteer files. The committed full-corpus enrichment was regenerated with this exact
+configuration from the compatible per-paper cache: **4,181 entities and 6,092 edges** over
+1,091 papers. Four of the six previous invalid-JSON failures were recovered by bounded
+validated retries; two remain explicit in `llm_failures.jsonl`, giving 1,089/1,091 (99.82%)
+LLM coverage. A deterministic 120-edge source-grounding audit passed 120/120, but that audit
+does not estimate semantic precision or recall. The refreshed artifact has not been imported
+into Aura because the current loader is MERGE-only and would leave stale v1.1 residuals in
+the same scope.
 
-## Slice protocol and leakage status
+## Frozen slices and leakage status
 
-Three 12-paper slices, each frozen (labels + extractor hashes) before first scoring.
-Selection is deterministic (sha256 ordering) over cue-eligible papers per year 2023–2025.
+All slices use deterministic SHA-256 selection over cue-eligible 2023–2025 papers. Labels
+were frozen before reading predictions. Annotation is a single nonhuman source review, not
+independent human gold, and has no inter-annotator agreement.
 
-| Slice | File | Role | Leakage status |
-|---|---|---|---|
-| dev12 | `semantic_gold_nonhuman.jsonl` | original development slice | **tuned on** (gazetteer v1.1 was expanded from its false negatives → resubstitution, optimistic) |
-| cross-check12 | `semantic_validation_nonhuman_v2.jsonl` | second slice | **partially tuned** (canonicalization rules were adjusted from its errors; prompt v2.1 frozen on it) |
-| holdout v3 | `semantic_holdout_nonhuman_v3.jsonl` | final untouched slice | **never used for any tuning**; scored exactly once per configuration, then consumed |
+| Slice | Papers | Role | Status |
+|---|---:|---|---|
+| dev12 | 12 | development | tuned on; optimistic |
+| cross-check12 | 12 | development | partly tuned on; optimistic |
+| holdout v3 | 12 | first holdout | consumed while developing v1.2 |
+| **holdout v4** | **12** | one-shot test of retained v1.2 | **untouched before first score** |
+| holdout v5 | 12 | negative audit of discarded v1.3 | untouched before first score, then consumed |
 
-Annotation is a single nonhuman source reviewer (`codex_nonhuman_source_review`) — not
-independent human gold, no inter-annotator agreement.
+## Primary result: untouched holdout v4
 
-## Results (micro P/R/F1, %)
+Exact micro precision/recall/F1:
 
-Frozen hybrid configuration (rules + Qwen3.5-0.8B v2.1) versus rules-only:
+| Configuration | NER P | NER R | NER F1 | RE P | RE R | RE F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| Rules only, v1.2 | 62.07 | 32.14 | 42.35 | 58.06 | 32.14 | 41.38 |
+| **Rules + Qwen3.5 0.8B, v1.2** | **41.18** | **50.00** | **45.16** | **40.00** | **50.00** | **44.44** |
 
-| Slice | Config | NER P | NER R | NER F1 | RE P | RE R | RE F1 |
-|---|---|---|---|---|---|---|---|
-| **holdout v3** | rules-only | 66.67 | 12.12 | **20.51** | 52.94 | 13.24 | **21.18** |
-| **holdout v3** | hybrid (frozen) | 34.43 | 31.82 | **33.07** | 33.33 | 32.35 | **32.84** |
-| cross-check12 | rules-only | 66.67 | 22.22 | 33.33 | 57.89 | 20.00 | 29.73 |
-| cross-check12 | hybrid v2.1 | 51.02 | 46.30 | 48.54 | 47.06 | 43.64 | 45.28 |
-| dev12 | rules-only | 100.00 | 85.42 | 92.13 | 93.75 | 86.54 | 90.00 |
-| dev12 | hybrid v2.1 | 70.00 | 87.50 | 77.78 | 68.66 | 88.46 | 77.31 |
+The hybrid adds recall and improves F1 over rules-only by **+2.81 NER points** and
+**+3.06 RE points**, while reducing precision. Paper-bootstrap 95% CIs (10,000 replicates)
+are wide because this is only 12 papers: NER and RE F1 both [25.45, 60.69]. Per-type NER
+F1 is 55.26% method, 46.15% dataset, and 22.86% task; long and variably phrased task names
+remain the largest weakness.
 
-Headline honest estimate (holdout v3, frozen config, paper-level bootstrap 95% CI,
-10,000 replicates):
+This is a real improvement over the earlier untouched-v3 hybrid result (NER 33.07%, RE
+32.84%), but it is still a small, cue-enriched, nonhuman slice. It is not a corpus-wide
+precision estimate and does not satisfy an independent-human evaluation gate.
 
-- **NER F1 33.07%**, CI [18.57, 46.45] — P 34.43 [17.74, 50.77], R 31.82 [19.35, 43.59]
-- **RE F1 32.84%**, CI [18.57, 46.45] — P 33.33 [17.74, 50.77], R 32.35 [19.35, 43.59]
+## Negative results and retention decision
 
-(Entity and relation CIs coincide because this gold annotates one paper-anchored relation
-per entity, so per-paper resampling counts are identical; verified with two seeds.)
+The failed experiments are part of the result, not hidden selection attempts:
 
-Per-type F1 on holdout v3 (hybrid): method 43%, task 20%, dataset 0% (3 gold datasets —
-see error analysis). USES_METHOD 42%, ADDRESSES_TASK 20%, EVALUATED_ON 0%.
+| Experiment | Evaluation use | NER F1 | RE F1 | Decision |
+|---|---|---:|---:|---|
+| Prompt v2.2, Qwen3.5 0.8B | consumed dev/cross/v3 | lower on every slice | lower/similar | reject; restore v2.1 |
+| GLiNER small v2.1 + rules + Qwen | consumed 36-paper matrix | 35.82 | 35.21 | reject; weak cross-slice robustness and heavy dependency |
+| Gazetteer v1.3 | untouched v5 | 37.41 | 35.46 | reject; missed the predeclared 50/50 gate |
+| Gemma 3 1B + v1.3 | consumed v5 diagnostic | 36.36 | 34.25 | reject; worse than Qwen and 1/12 extraction failures |
 
-On the untouched slice the hybrid **triples recall** over rules-only (12.12→31.82 NER,
-13.24→32.35 RE) at roughly half the precision, netting **+12.6 NER F1 / +11.7 RE F1**.
-The dev12 numbers are resubstitution (rules were tuned on that slice) and the
-cross-check numbers are semi-optimistic (canonicalization was tuned there); the v3 row is
-the defensible generalization estimate. v3 gold is also denser (66 entities/68 relations
-vs 54/55 on cross-check), which lowers all configurations somewhat.
+Gemma was 999.89M parameters (Q4_K_M), ran with `size_vram: 0`, and took 290.4 seconds
+for 12 serial papers. The GLiNER trial used `urchade/gliner_small-v2.1` (152,648,704
+parameters) in an isolated temporary CPU environment; no repository dependency was added.
 
-### Why the previously reported numbers are not comparable
+Gazetteer v1.3 was tuned after opening v4 and produced high resubstitution scores there,
+but it failed the fresh v5 gate. It is therefore not retained. The repository keeps v1.2,
+the last configuration with an untouched one-shot improvement.
 
-The originally reported figures (NER P/R/F1 84.62/22.92/36.07, RE 76.67/44.23/56.10)
-came from (a) an evaluator that undercounted true positives because entity evidence was
-truncated to 3 papers corpus-wide — correct extractions on dense entities were scored as
-false negatives — and (b) the dev12 slice before any tuning, with the old Qwen3-0.6B
-precision-first prompt. After the provenance-contract fix, scores on the same dev12 slice
-rose sharply; the v3 holdout under the fixed evaluator is the number to quote for
-generalization, and dev12/cross-check rows are quoted only as development diagnostics.
+The post-score v5 audit also found canonical-ID annotation inconsistencies (for example
+`dataset:ptb` versus the frozen ontology's `dataset:penn-treebank`). The original v5 labels
+and failed score remain unchanged for provenance. A future evaluation should freeze raw
+mention surfaces and derive gold IDs with the same frozen canonicalization contract before
+any prediction is opened.
 
-## Error analysis (holdout v3 hybrid, 46 entity FN / 44 entity FP)
+## Historical context
 
-1. **Surface-variant canonicalization (~40–50% of FPs)**: the same concept extracted with
-   a different surface → different canonical ID → penalized twice (FP + FN). Examples:
-   `method:sft` ↔ gold `method:supervised-fine-tuning`; `method:gpt-3-5` ↔
-   `method:gpt-3-5-turbo`; `task:structure-generations` ↔ `task:structure-generation`;
-   `dataset:scenario-based` ↔ `dataset:scenario-based-dataset`;
-   `task:semeval-24-competition-task-8` ↔ gold `dataset:semeval-2024-task-8` (type
-   disagreement). Dataset F1 = 0 is driven almost entirely by this class plus one type
-   error, not by missing dataset mentions outright. An alias-normalized secondary
-   evaluation would roughly double the exact-match F1; exact-ID matching is kept as the
-   headline because it is the strict, assumption-free metric.
-2. **Annotation-protocol divergence on generic technical terms**: gold includes broad
-   methods (`distillation`, `attention-mechanism`, `probing`, `supervised-fine-tuning`)
-   that the frozen prompt explicitly instructs the model *not* to extract ("do not label
-   generic phrases"). These are systematic FNs by design disagreement, not model misses.
-3. **Long descriptive task names**: the 0.8B model misses or truncates multi-word task
-   NPs (`situated-language-understanding-agent-evaluation`,
-   `human-machine-mixed-text-detection`), which dominates the task-type recall gap.
-
-Genuine hallucination is rare: the verbatim-grounding guard drops any surface not present
-in the abstract, and the run recorded 0 extraction failures on all 12 papers.
-
-## Limitations and discipline
-
-- Single nonhuman annotator; cue-enriched selection (abstract ≥300 chars + extraction
-  cue) — not a prevalence estimate for all 1,091 papers. Do not present any slice score
-  as a corpus-wide quality claim.
-- **Holdout v3 is consumed.** Any future extractor/canonicalizer change (e.g. alias
-  normalization, the clear next lever) must be validated on a freshly frozen v4 slice;
-  never re-tune and re-score v3.
-- The deterministic source-grounding audit (`summary.json`, `audit_rows.jsonl`) is a
-  separate provenance check and must not be combined with these semantic scores.
-
-## Files
-
-- `semantic_gold_nonhuman.jsonl` — dev12 labels (frozen; tuned on).
-- `semantic_validation_nonhuman_v2.jsonl` + `semantic_validation_v2_manifest.json` —
-  cross-check12 labels + freeze record; `semantic_validation_v2_rules_scores.json` —
-  rules-only baseline there.
-- `semantic_holdout_nonhuman_v3.jsonl` + `semantic_holdout_v3_manifest.json` — holdout
-  labels + freeze record (extractor hashes); `semantic_holdout_v3_rules_scores.json`,
-  `semantic_holdout_v3_hybrid_scores.json` — the one-shot final measurements.
-- `semantic_scores.json` — historical dev12 score under the previous evaluator (kept for
-  provenance; superseded by the table above).
+The older numbers (NER 84.62/22.92/36.07 and RE 76.67/44.23/56.10) are not comparable.
+They used a development slice and an evaluator that truncated entity membership evidence,
+undercounting true positives for dense entities. Exact-ID scoring with full paper provenance
+is the current contract.
 
 ## Reproduce
 
-Slice runs build a 12-paper `processed/papers.jsonl` subset, run enrichment into a fresh
-output dir (fresh `llm_cache/<model>/<version>/` — predictions are never silently reused
-across model/prompt versions), then score:
+Create a 12-paper `papers.jsonl` subset from the manifest IDs, then run:
 
 ```bash
-uv run python -m src.cli enrich --data <slice>/processed --out <slice>/hybrid \
-    --extractors rules,llm --model qwen3.5:0.8b-q8_0 --num-gpu 0 --workers 1
+CUDA_VISIBLE_DEVICES=-1 uv run python -m src.cli enrich \
+  --data <slice>/processed --out <slice>/hybrid --extractors rules,llm \
+  --model qwen3.5:0.8b-q8_0 --num-gpu 0 --workers 1
+
 uv run python -m src.cli evaluate-enrichment-semantic \
-    --data <slice>/hybrid --processed data/processed \
-    --gold evaluation/enrichment/semantic_holdout_nonhuman_v3.jsonl \
-    --out evaluation/enrichment/semantic_holdout_v3_hybrid_scores.json
+  --data <slice>/hybrid --processed <slice>/processed \
+  --gold evaluation/enrichment/semantic_holdout_nonhuman_v4.jsonl \
+  --out evaluation/enrichment/semantic_holdout_v4_hybrid_scores.json
 ```
+
+The cache namespace includes model and extractor version, preventing silent reuse across
+model/prompt changes. `semantic_holdout_v4_manifest.json` records label and code hashes;
+the paired rules and hybrid score JSON files contain full counts, per-type metrics, errors,
+and bootstrap intervals.

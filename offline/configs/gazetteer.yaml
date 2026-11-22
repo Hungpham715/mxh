@@ -12,13 +12,14 @@
 #
 # Provenance: hand-curated by the project team from domain knowledge of the 2023-2025 NLP/LLM
 # literature (the corpus scope in configs/scope.yaml). No external service was used.
-gazetteer_version: gazetteer-v1.1
+gazetteer_version: gazetteer-v1.2
 
 methods:
   - name: Transformer
     aliases: [Transformer, Transformers, transformer network, transformer networks]
   - name: Attention Mechanism
-    aliases: [attention mechanism, self-attention, self attention, cross-attention]
+    aliases: [attention mechanism, attention module, attention modules,
+              self-attention, self attention, cross-attention]
   - BERT
   - RoBERTa
   - ALBERT
@@ -28,13 +29,15 @@ methods:
   - XLNet
   - ELMo
   - name: GPT
-    aliases: [GPT, GPTs]
+    aliases: [GPT, GPTs, GPT-style, GPT-style model, GPT-style models]
   - GPT-2
   - GPT-3
   - name: GPT-3.5
     aliases: [GPT-3.5, GPT 3.5]
+  - name: GPT-3.5-Turbo
+    aliases: [GPT-3.5-Turbo, GPT-3.5 Turbo]
   - name: GPT-4
-    aliases: [GPT-4, GPT-4 Turbo]
+    aliases: [GPT-4, GPT-4 Turbo, GPT-4-Turbo]
   - GPT-4o
   - name: GPT-4V
     aliases: [GPT-4V, GPT-4 Vision]
@@ -56,7 +59,7 @@ methods:
     aliases: [BLOOMZ]
     case_sensitive: true
   - name: LLaMA
-    aliases: [LLaMA-2, LLaMA-3, Llama 2, Llama 3, Llama-2, Llama-3]
+    aliases: [LLaMA 2, LLaMA 3, LLaMA-2, LLaMA-3, Llama 2, Llama 3, Llama-2, Llama-3]
     case_sensitive: true
   - name: Mistral
     aliases: [Mistral-7B]
@@ -64,7 +67,8 @@ methods:
   - name: Mixtral
     aliases: [Mixtral 8x7B, Mixtral-8x7B]
   - name: Qwen
-    aliases: [Qwen-7B, Qwen1.5, Qwen2, Qwen2.5]
+    aliases: [Qwen-7B, Qwen1.5, Qwen2, Qwen2.5, Qwen-based,
+              Qwen-based model, Qwen-based models]
   - name: Phi-3
     aliases: [Phi-1, Phi-2, Phi-3, Phi-1.5, Phi 3]
     id: phi
@@ -93,6 +97,8 @@ methods:
   - fastText
   - name: Sentence-BERT
     aliases: [Sentence-BERT, SBERT]
+  - name: Sentence Transformers
+    aliases: [sentence transformer, sentence transformers]
   - SimCSE
   - E5
   - BGE
@@ -118,6 +124,8 @@ methods:
   - name: Fine-Tuning
     aliases: [fine-tuning, finetuning, fine tuning]
     id: fine-tuning
+  - name: Supervised Fine-Tuning
+    aliases: [supervised fine-tuning, supervised finetuning, supervised fine tuning, SFT]
   - name: RLHF
     aliases: [RLHF, Reinforcement Learning from Human Feedback,
               reinforcement learning from human feedback]
@@ -142,7 +150,11 @@ methods:
   - name: Few-Shot Prompting
     aliases: [few-shot prompting, few shot prompting, few-shot learning]
   - name: Knowledge Distillation
-    aliases: [knowledge distillation, model distillation, distillation]
+    aliases: [knowledge distillation, model distillation]
+  - name: Distillation
+    aliases: [distillation]
+  - name: Black-Box Distillation
+    aliases: [black-box distillation, black box distillation]
   - Quantization
   - Pruning
   - name: FlashAttention
@@ -189,7 +201,8 @@ methods:
   - name: Temperature Sampling
     aliases: [temperature sampling, temperature-based sampling]
   - name: Convolutional Sequence-to-Sequence
-    aliases: [convolutional sequence-to-sequence, convolutional seq2seq]
+    aliases: [convolutional sequence-to-sequence, convolutional sequence-to-sequence network,
+              convolutional sequence-to-sequence networks, convolutional seq2seq]
   - name: Recursive Network
     aliases: [recursive network, recursive networks]
   - name: Active Learning
@@ -212,6 +225,24 @@ methods:
   - name: Embedding
     aliases: [text embedding, word embedding, sentence embedding, embeddings model]
     id: embedding
+  - name: Token Classification
+    aliases: [token classification, token classification problem]
+  - name: Segmentation Loss
+    aliases: [segmentation loss]
+  - name: Ensemble Model
+    aliases: [ensemble model, ensemble models]
+  - name: MLP
+    aliases: [MLP, MLP module, MLP modules, multilayer perceptron]
+  - name: Probing
+    aliases: [probing, representation probing]
+  - name: Knowledge Editing
+    aliases: [knowledge editing]
+  - name: Machine Unlearning
+    aliases: [machine unlearning]
+  - name: Constrained Optimization
+    aliases: [constrained optimization, constrained optimization problem]
+  - name: Automatic Dataset Generator
+    aliases: [automatic dataset generator]
 
 datasets:
   - name: SQuAD
@@ -277,6 +308,8 @@ datasets:
   - RefinedWeb
   - name: FLORES
     aliases: [FLORES, FLORES-101, FLORES-200, FLORES+]
+  - name: WMT22 Metrics Challenge
+    aliases: [WMT22 metrics challenge, WMT22 metrics challenge dataset]
   - name: WMT
     aliases: [WMT, WMT14, WMT16, WMT17, WMT19, WMT22, WMT23, WMT 2014]
   - IWSLT
@@ -294,9 +327,12 @@ datasets:
   - name: Quora Question Pairs
     aliases: [Quora Question Pairs, QQP]
   - name: Quora
+    aliases: [Quora, Quora forum]
     case_sensitive: true
   - name: MuST-C
-    aliases: [MuST-C, MUST-C]
+    aliases: [MuST-C, MUST-C, MuST-C ST, MuST-C ST benchmark]
+  - name: SemEval 2024 Task 8
+    aliases: [SemEval 2024 Task 8, SemEval-2024 Task 8, SemEval'24 Competition Task 8]
   - name: CORGI-PM
     case_sensitive: true
   - name: MPCHAT
@@ -354,8 +390,11 @@ datasets:
     id: unnatural-instructions
 
 tasks:
+  - name: Machine Translation Evaluation
+    aliases: [machine translation evaluation]
   - name: Machine Translation
-    aliases: [machine translation, neural machine translation, NMT]
+    aliases: [machine translation, neural machine translation, LLM-based machine translation,
+              NMT]
   - name: Speech Translation
     aliases: [speech translation, end-to-end speech translation]
   - name: Question Answering
@@ -413,7 +452,8 @@ tasks:
   - name: Mathematical Reasoning
     aliases: [mathematical reasoning, math reasoning, arithmetic reasoning]
   - name: Math Word Problem Solving
-    aliases: [math word problem solving, solving math word problems, MWPs]
+    aliases: [math word problem solving, solving math word problems, math word problems,
+              math word problems (MWPs), MWPs]
   - name: Multi-Hop Reasoning
     aliases: [multi-hop reasoning, multihop reasoning, multi-step reasoning]
   - name: Code Generation
@@ -449,3 +489,17 @@ tasks:
     aliases: [knowledge graph construction, KG construction]
   - name: Red Teaming
     aliases: [red teaming, red-teaming]
+  - name: Automatic Text Evaluation
+    aliases: [automatic text evaluation]
+  - name: Boundary Detection
+    aliases: [boundary detection, identify boundaries, detecting boundaries]
+  - name: Human-Machine Mixed Text Detection
+    aliases: [Human-Machine Mixed Text Detection, mixed text detection]
+  - name: Factual Recall Analysis
+    aliases: [factual recall analysis, evaluation of factual recall]
+  - name: Knowledge Updating
+    aliases: [knowledge updating, updating mechanism]
+  - name: Translationese Analysis
+    aliases: [translationese analysis, prevalence of translationese]
+  - name: Translationese Mitigation
+    aliases: [translationese mitigation, mitigate translationese, reduce translationese]

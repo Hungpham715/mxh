@@ -1,0 +1,717 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "evaluation/enrichment/semantic_holdout_nonhuman_v4.jsonl",
+    "processed_papers": "data/processed/papers.jsonl",
+    "data_dir": "/tmp/graphrag-v4-rules-20261122/rules",
+    "papers_evaluated": 12,
+    "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 56,
+      "predicted": 29,
+      "tp": 18,
+      "fp": 11,
+      "fn": 38,
+      "precision": 0.6207,
+      "recall": 0.3214,
+      "f1": 0.4235
+    },
+    "macro_f1": 0.3667,
+    "per_type": {
+      "dataset": {
+        "support": 3,
+        "predicted": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.3333,
+        "f1": 0.4
+      },
+      "method": {
+        "support": 38,
+        "predicted": 19,
+        "tp": 15,
+        "fp": 4,
+        "fn": 23,
+        "precision": 0.7895,
+        "recall": 0.3947,
+        "f1": 0.5263
+      },
+      "task": {
+        "support": 15,
+        "predicted": 8,
+        "tp": 2,
+        "fp": 6,
+        "fn": 13,
+        "precision": 0.25,
+        "recall": 0.1333,
+        "f1": 0.1739
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2963,
+        0.8276
+      ],
+      "recall": [
+        0.1702,
+        0.4545
+      ],
+      "f1": [
+        0.2188,
+        0.5714
+      ]
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 56,
+      "predicted": 31,
+      "tp": 18,
+      "fp": 13,
+      "fn": 38,
+      "precision": 0.5806,
+      "recall": 0.3214,
+      "f1": 0.4138
+    },
+    "macro_f1": 0.3608,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 15,
+        "predicted": 8,
+        "tp": 2,
+        "fp": 6,
+        "fn": 13,
+        "precision": 0.25,
+        "recall": 0.1333,
+        "f1": 0.1739
+      },
+      "EVALUATED_ON": {
+        "support": 3,
+        "predicted": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.3333,
+        "f1": 0.4
+      },
+      "USES_METHOD": {
+        "support": 38,
+        "predicted": 21,
+        "tp": 15,
+        "fp": 6,
+        "fn": 23,
+        "precision": 0.7143,
+        "recall": 0.3947,
+        "f1": 0.5085
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2963,
+        0.8276
+      ],
+      "recall": [
+        0.1702,
+        0.4545
+      ],
+      "f1": [
+        0.2188,
+        0.5714
+      ]
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4389523967",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:adapter-modules"
+        ],
+        [
+          "method",
+          "method:full-fine-tuning"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4389523967",
+          "method:adapter-modules"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389523967",
+          "method:full-fine-tuning"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389524150",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:sts"
+        ],
+        [
+          "method",
+          "method:embedding"
+        ],
+        [
+          "method",
+          "method:fine-tuning"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:ditto"
+        ],
+        [
+          "task",
+          "task:semantic-textual-similarity"
+        ],
+        [
+          "task",
+          "task:sentence-embedding-anisotropy-mitigation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "EVALUATED_ON",
+          "oa:W4389524150",
+          "dataset:sts"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389524150",
+          "method:embedding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389524150",
+          "method:fine-tuning"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524150",
+          "task:semantic-textual-similarity"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524150",
+          "task:sentence-embedding-anisotropy-mitigation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389524150",
+          "method:ditto"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385571679",
+      "entity_fp": [
+        [
+          "method",
+          "method:embedding"
+        ],
+        [
+          "task",
+          "task:named-entity-recognition"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:dictionary-matching"
+        ],
+        [
+          "method",
+          "method:discipline-embedding"
+        ],
+        [
+          "method",
+          "method:distant-supervision"
+        ],
+        [
+          "method",
+          "method:ds-moce"
+        ],
+        [
+          "method",
+          "method:self-training"
+        ],
+        [
+          "task",
+          "task:course-concept-extraction"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571679",
+          "task:named-entity-recognition"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:embedding"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571679",
+          "task:course-concept-extraction"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:dictionary-matching"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:discipline-embedding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:distant-supervision"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:ds-moce"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571679",
+          "method:self-training"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385571433",
+      "entity_fp": [
+        [
+          "method",
+          "method:openie"
+        ],
+        [
+          "task",
+          "task:information-extraction"
+        ],
+        [
+          "task",
+          "task:question-answering"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:complex-question-answering"
+        ],
+        [
+          "task",
+          "task:open-information-extraction"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571433",
+          "task:information-extraction"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571433",
+          "task:question-answering"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571433",
+          "method:openie"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571433",
+          "task:complex-question-answering"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571433",
+          "task:open-information-extraction"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404792957",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:brand-bias-analysis"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404792957",
+          "task:brand-bias-analysis"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671982",
+      "entity_fp": [],
+      "entity_fn": [],
+      "relation_fp": [],
+      "relation_fn": []
+    },
+    {
+      "paper_id": "oa:W4402683986",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:e-syncvidstory"
+        ],
+        [
+          "method",
+          "method:storyline-guided-generation"
+        ],
+        [
+          "task",
+          "task:synchronized-video-storytelling"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402683986",
+          "task:synchronized-video-storytelling"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402683986",
+          "dataset:e-syncvidstory"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402683986",
+          "method:storyline-guided-generation"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671717",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:lape"
+        ],
+        [
+          "method",
+          "method:neuron-steering"
+        ],
+        [
+          "task",
+          "task:language-specific-neuron-identification"
+        ],
+        [
+          "task",
+          "task:output-language-steering"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671717",
+          "task:language-specific-neuron-identification"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671717",
+          "task:output-language-steering"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671717",
+          "method:lape"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671717",
+          "method:neuron-steering"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4406032250",
+      "entity_fp": [
+        [
+          "task",
+          "task:information-retrieval"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:infinitely-repeated-prisoners-dilemma"
+        ],
+        [
+          "task",
+          "task:ranking-manipulation-attack-analysis"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4406032250",
+          "task:information-retrieval"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4406032250",
+          "task:ranking-manipulation-attack-analysis"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4406032250",
+          "method:infinitely-repeated-prisoners-dilemma"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889893",
+      "entity_fp": [
+        [
+          "method",
+          "method:instruction-tuning"
+        ],
+        [
+          "method",
+          "method:qwen"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:mimg"
+        ],
+        [
+          "method",
+          "method:multi-hop-question-merger-agent"
+        ],
+        [
+          "method",
+          "method:multiple-question-sampling"
+        ],
+        [
+          "method",
+          "method:quality-verification-agent"
+        ],
+        [
+          "method",
+          "method:qwen-2-72b"
+        ],
+        [
+          "method",
+          "method:single-hop-question-generation-agent"
+        ],
+        [
+          "task",
+          "task:long-context-instruction-data-generation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:instruction-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:qwen"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889893",
+          "task:long-context-instruction-data-generation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:mimg"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:multi-hop-question-merger-agent"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:multiple-question-sampling"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:quality-verification-agent"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:qwen-2-72b"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889893",
+          "method:single-hop-question-generation-agent"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416035826",
+      "entity_fp": [
+        [
+          "task",
+          "task:code-generation"
+        ],
+        [
+          "task",
+          "task:mathematical-reasoning"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:supervised-fine-tuning-analysis"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035826",
+          "task:code-generation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035826",
+          "task:mathematical-reasoning"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035826",
+          "task:supervised-fine-tuning-analysis"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416035421",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:finqa"
+        ],
+        [
+          "method",
+          "method:context-aware-program-of-thought-prompting"
+        ],
+        [
+          "method",
+          "method:dynamic-in-context-example-selection"
+        ],
+        [
+          "method",
+          "method:finder"
+        ],
+        [
+          "method",
+          "method:generative-retriever"
+        ],
+        [
+          "method",
+          "method:program-of-thought-prompting"
+        ],
+        [
+          "task",
+          "task:financial-numerical-reasoning"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035421",
+          "task:financial-numerical-reasoning"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4416035421",
+          "dataset:finqa"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035421",
+          "method:context-aware-program-of-thought-prompting"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035421",
+          "method:dynamic-in-context-example-selection"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035421",
+          "method:finder"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035421",
+          "method:generative-retriever"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035421",
+          "method:program-of-thought-prompting"
+        ]
+      ]
+    }
+  ]
+}

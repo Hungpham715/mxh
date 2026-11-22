@@ -154,11 +154,20 @@ class Gazetteer:
     def resolve_surface(self, surface: str, entity_type: str) -> str | None:
         """Map a surface form (e.g. from the LLM extractor) to a curated entity id, if known.
 
-        Returns None when the surface is not in the gazetteer; the caller then falls back to
-        a slug-based id and records resolved_by='slug' (lower trust).
+        Resolution is exact over the complete surface. ``match_text`` intentionally finds
+        aliases embedded in prose, but using that behaviour here would collapse a more specific
+        extracted name to a shorter alias (for example ``GPT-3.5-turbo`` to ``GPT-3.5`` or
+        ``machine translation evaluation`` to ``machine translation``).
+
+        Returns None when the complete surface is not in the gazetteer; the caller then falls
+        back to a slug-based id and records resolved_by='slug' (lower trust).
         """
         mentions = self.match_text(surface)
         for mention in mentions:
-            if mention.entity_type == entity_type:
+            if (
+                mention.entity_type == entity_type
+                and mention.start == 0
+                and mention.end == len(surface)
+            ):
                 return mention.entity_id
         return None
