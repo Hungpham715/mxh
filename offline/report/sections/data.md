@@ -79,6 +79,17 @@ Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ c�
 
 So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE 41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được vì dùng development slice và evaluator cũ làm mất provenance membership.
 
+Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check/v3/v4/v5) đo cùng cấu hình retained nói trên bằng protocol gán nhãn surface-first: nhãn freeze dạng surface verbatim trong abstract, rồi ID chuẩn hóa được suy ra bằng chính hàm canonicalization đã freeze (_canonicalize_llm + gazetteer v1.2) trước khi mở bất kỳ dự đoán nào. Audit contract của v4 cho thấy 18/56 thực thể gold của v4 có ID không tái lập được từ surface verbatim theo contract freeze (paraphrase hoặc lệch policy acronym), nên v4 lẫn v5 đều lẫn nhiễu gán nhãn; v6 là phép đo sạch hơn của cùng hệ thống, không phải thay đổi model. Không so v6 với v4 như một cải tiến model vì protocol gán nhãn khác nhau; đây vẫn là reference nonhuman một annotator.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v6 Entity (micro) | 0.4154 | 0.5094 | 0.4576 | 53 |
+| v6 Relation (micro) | 0.4028 | 0.5179 | 0.4531 | 56 |
+| v6 Rules-only Entity | 0.7647 | 0.2453 | 0.3714 | 53 |
+| v6 Rules-only Relation | 0.625 | 0.2679 | 0.375 | 56 |
+
+Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh protocol gán nhãn sạch hơn, không phải cải tiến model.
+
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
 Thư mục data/processed/ gồm đúng 8 tệp JSONL UTF-8 (mỗi dòng một đối tượng JSON) và manifest.json được ghi cuối cùng. Bộ nạp chỉ chạy khi đủ tệp, đúng schema và đúng checksum.
@@ -136,7 +147,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 | 9 | RESEARCHES | Author→Topic | Tác giả có ≥ 2 bài khác nhau mang nhãn topic đó trong corpus. | 105 | 112 |
 | 10 | ACTIVE_IN | Institution→Topic | Tổ chức có ≥ 2 bài khác nhau (có tác giả khai báo tổ chức) mang topic đó. | 139 | 252 |
 
-Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
+Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (0 bài).
 
 ![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](../output/analysis/relationship_types.png)
 

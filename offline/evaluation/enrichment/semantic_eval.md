@@ -39,6 +39,7 @@ independent human gold, and has no inter-annotator agreement.
 | holdout v3 | 12 | first holdout | consumed while developing v1.2 |
 | **holdout v4** | **12** | one-shot test of retained v1.2 | **untouched before first score** |
 | holdout v5 | 12 | negative audit of discarded v1.3 | untouched before first score, then consumed |
+| holdout v6 | 12 | protocol-corrected measurement of retained v1.2 | untouched before first score; surface-first gold |
 
 ## Primary result: untouched holdout v4
 
@@ -58,6 +59,56 @@ remain the largest weakness.
 This is a real improvement over the earlier untouched-v3 hybrid result (NER 33.07%, RE
 32.84%), but it is still a small, cue-enriched, nonhuman slice. It is not a corpus-wide
 precision estimate and does not satisfy an independent-human evaluation gate.
+
+## Protocol-corrected measurement: holdout v6
+
+The v5 post-score audit showed that hand-assigned gold IDs can disagree with the frozen
+canonicalization contract. A read-only audit of v4 (`v4_gold_contract_audit.json`) confirms
+this: **18/56 v4 gold entity IDs are not mechanically reproducible from verbatim abstract
+surfaces** under the frozen `_canonicalize_llm` + gazetteer v1.2 contract (3 policy
+mismatches such as `method:full-fine-tuning` versus the contract's `method:fft`, and 15
+paraphrase surfaces confirmed by spot-checks). 17 of the 28 v4 false negatives carry such
+IDs; one is provably recoverable. v4 remains the retained one-shot gate result, unchanged.
+
+v6 therefore freezes a new 12-paper slice (all 60 consumed papers excluded) under protocol
+`surface_first_frozen_contract_v2`: the annotator records verbatim surfaces first, and gold
+IDs are derived with the same frozen `_canonicalize_llm` contract before any prediction is
+opened. The slice measures extraction under the shared frozen normalization contract; it
+does not measure canonicalizer correctness itself. The configuration is unchanged
+(v2.1 + gazetteer v1.2); a slice-level cross-check confirmed the current code plus the
+retained LLM cache reproduces `data/enriched` predictions **identically** for all 12 papers.
+
+| Configuration | NER P | NER R | NER F1 | RE P | RE R | RE F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| Rules only, v1.2 | 76.47 | 24.53 | 37.14 | 62.50 | 26.79 | 37.50 |
+| **Rules + Qwen3.5 0.8B, v1.2** | **41.54** | **50.94** | **45.76** | **40.28** | **51.79** | **45.31** |
+
+Paper-bootstrap 95% CIs (10,000 replicates): NER F1 [34.19, 59.20], RE F1 [33.57, 58.73].
+Per-type NER F1: dataset 83.33%, method 51.43%, task 22.22% — long, variably phrased task
+names remain the largest weakness, exactly as on v4. The hybrid advantage over rules-only
+is larger here (+8.62 NER, +7.81 RE) than on v4 (+2.81/+3.06) because rules-only recall is
+lower on this slice.
+
+Provenance notes:
+
+- 55 annotated entity mentions reduce to 53 unique `(type, id)` pairs in the micro score
+  because the retained evaluator counts globally unique pairs (`fine-tuning` and `ChatGPT`
+  each appear in two papers). Relations stay at 56 because they are paper-anchored.
+- The v5 manifest's `schema.py` hash captured a transient gazetteer-v1.3 experimental state.
+  The committed `schema.py` (unchanged since the original enrichment commit) is what the
+  retained snapshot and v6 use; the identical cross-check above verifies this end-to-end.
+- v6 uses a different annotation protocol from v4/v5. The similar F1 magnitude (45.76/45.31
+  versus 45.16/44.44) is a confirmation under a cleaner protocol, **not** a model
+  improvement, and the two slices are not directly comparable as a delta.
+
+v6 error decomposition (hybrid): of 38 entity false positives, roughly 27 are generic or
+descriptive LLM spans (`reasoning`, `planning`, `prompt`, `perplexity`, `embeddings`,
+`bias`, `toxicity`, ...), and roughly 11 are normalization/type/granularity mismatches
+paired with a false negative (`cod` vs `chain-of-dictionary-prompting`, `ppe` vs
+`prior-prompt-engineering-ppe`, `task:rft` vs `method:rft`, `nllb` vs `nllb-3-3b`).
+About 15 of 26 false negatives are true misses of long or novel names. The cheapest
+domain-general lever is therefore precision on generic surfaces; any such change must be
+gated on a NEW untouched slice (v7) with this same surface-first protocol, never on v6.
 
 ## Negative results and retention decision
 
@@ -110,3 +161,15 @@ The cache namespace includes model and extractor version, preventing silent reus
 model/prompt changes. `semantic_holdout_v4_manifest.json` records label and code hashes;
 the paired rules and hybrid score JSON files contain full counts, per-type metrics, errors,
 and bootstrap intervals.
+
+For v6, build the slice from `semantic_holdout_v6_manifest.json` IDs, copy the retained
+namespaced cache entries (`data/enriched/llm_cache/qwen3.5_0.8b-q8_0/sub1b-ollama-v2.1/`)
+into the slice's `hybrid/llm_cache/` tree, and score with the protocol label:
+
+```bash
+uv run python -m src.cli evaluate-enrichment-semantic \
+  --data <slice>/hybrid --processed <slice>/processed \
+  --gold evaluation/enrichment/semantic_holdout_nonhuman_v6.jsonl \
+  --out evaluation/enrichment/semantic_holdout_v6_hybrid_scores.json \
+  --annotation-protocol surface_first_frozen_contract_v2
+```

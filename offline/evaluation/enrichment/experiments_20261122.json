@@ -56,5 +56,22 @@
       "relation_micro_f1": 0.3425,
       "reason": "worse than Qwen on both exact metrics"
     }
-  ]
+  ],
+  "protocol_corrected_measurement": {
+    "slice": "semantic_holdout_nonhuman_v6.jsonl",
+    "protocol": "surface_first_frozen_contract_v2",
+    "configuration": "retained sub1b-ollama-v2.1 + gazetteer-v1.2 (unchanged)",
+    "entity_micro_f1": 0.4576,
+    "relation_micro_f1": 0.4531,
+    "rules_only_entity_micro_f1": 0.3714,
+    "rules_only_relation_micro_f1": 0.375,
+    "hybrid_gain_over_rules": {
+      "entity_f1": 0.0862,
+      "relation_f1": 0.0781
+    },
+    "v4_gold_contract_audit": "18/56 v4 gold IDs not reproducible from verbatim surfaces under the frozen contract; 17/28 v4 FNs affected; 1 provably recoverable",
+    "slice_cross_check": "current code + retained cache reproduces data/enriched predictions identically for all 12 v6 papers",
+    "interpretation": "confirms the v4 F1 magnitude under a cleaner annotation protocol; not a model improvement; v4 and v6 are not comparable as a delta",
+    "next_lever": "generic/descriptive LLM surface FPs (~27/38 v6 entity FPs) and mixed-case acronym normalization; any extractor/gazetteer change must gate on a NEW untouched v7 slice with the surface-first protocol"
+  }
 }

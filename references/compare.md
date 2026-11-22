@@ -168,3 +168,13 @@ làm baseline extraction. Project hiện tại báo fresh holdout v4 riêng: hyb
 đạt NER F1 45,16% và RE F1 44,44%, tăng lần lượt 2,81 và 3,06 điểm so với rules-only trên cùng
 holdout, nhưng vẫn chỉ là 12 bài nonhuman và không được trình bày như human/corpus-wide score.
 
+Bổ sung 2026-11-22 (v6): audit contract cho thấy 18/56 ID gold của v4 không tái lập được từ
+surface verbatim theo canonicalizer đã freeze (paraphrase/acronym policy). Holdout v6 mới
+(12 bài, loại trừ 60 bài đã tiêu) dùng protocol surface-first: freeze surface verbatim rồi
+suy ra ID gold bằng chính `_canonicalize_llm` + gazetteer v1.2 trước khi mở dự đoán. Cùng
+cấu hình retained đạt NER F1 45,76% / RE F1 45,31% (rules-only 37,14%/37,50%; hybrid tăng
+8,62/7,81 điểm), CI bootstrap [34,19; 59,20] và [33,57; 58,73]. Đây là phép đo sạch hơn của
+cùng hệ thống, không phải cải tiến model, và không so trực tiếp với v4 như một delta. Bài học
+áp dụng từ Team 9 vẫn là model chuyên biệt sinh JSON + chuẩn hóa tên/alias trước khi nối graph;
+lever kế tiếp (generic-surface precision, mixed-case acronym) phải gate trên slice v7 mới.
+

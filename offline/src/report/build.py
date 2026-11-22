@@ -226,6 +226,10 @@ def build_report(out_pdf: Path) -> int:
                      _fmt(semantic_v6_rules["relation"]["micro"]["f1"]), _fmt(semantic_v6_rules["relation"]["micro"]["support"])],
                 ])
             d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], v6_rows, [0.36, 0.16, 0.16, 0.16, 0.16])
+            if semantic_v6_rules:
+                d.p("Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; "
+                    "task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh "
+                    "protocol gán nhãn sạch hơn, không phải cải tiến model.")
 
     # ---------------------------------------------------------------- 4
     d.h2("4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j")
