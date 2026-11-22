@@ -60,6 +60,8 @@ def build_report(out_pdf: Path) -> int:
     semantic = semantic_fresh or _j(EVAL / "enrichment" / "semantic_scores.json")
     semantic_v6 = _j(EVAL / "enrichment" / "semantic_holdout_v6_hybrid_scores.json")
     semantic_v6_rules = _j(EVAL / "enrichment" / "semantic_holdout_v6_rules_scores.json")
+    semantic_v7 = _j(EVAL / "enrichment" / "semantic_holdout_v7_retained_scores.json")
+    semantic_v7_rules = _j(EVAL / "enrichment" / "semantic_holdout_v7_rules_scores.json")
     struct = _j(EVAL / "structural_checks.json") or {}
     audits = _j(EVAL / "source_audits.json") or {}
     queries = _j(NEO / "example_queries.json")
@@ -230,6 +232,28 @@ def build_report(out_pdf: Path) -> int:
                 d.p("Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; "
                     "task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh "
                     "protocol gán nhãn sạch hơn, không phải cải tiến model.")
+        if semantic_v7:
+            d.p("Holdout v7 (12 bài mới, loại trừ 72 bài đã tiêu) là gate one-shot cho candidate mở rộng "
+                "stoplist generic-surface: candidate đạt NER 43,24% / RE 41,38%, dưới ngưỡng khai báo trước "
+                "0,50 và trùng khớp retained trên chính v7, nên bị loại và schema đã revert về đúng hash "
+                "committed. v7 đồng thời là phép đo untouched thứ ba của cấu hình retained; slice nhiều tên "
+                "mới khiến rules-only chỉ đạt 18,46%/17,14% và hybrid tăng +24,78/+24,24 điểm — khoảng cách "
+                "hybrid lớn nhất đo được. Ba phép đo untouched (v4, v6, v7) nhất quán về độ lớn; khác biệt "
+                "phản ánh độ khó slice, không phải drift cấu hình.")
+            v7_rows = [
+                ["v7 Entity (micro)", _fmt(semantic_v7["entity"]["micro"]["precision"]), _fmt(semantic_v7["entity"]["micro"]["recall"]),
+                 _fmt(semantic_v7["entity"]["micro"]["f1"]), _fmt(semantic_v7["entity"]["micro"]["support"])],
+                ["v7 Relation (micro)", _fmt(semantic_v7["relation"]["micro"]["precision"]), _fmt(semantic_v7["relation"]["micro"]["recall"]),
+                 _fmt(semantic_v7["relation"]["micro"]["f1"]), _fmt(semantic_v7["relation"]["micro"]["support"])],
+            ]
+            if semantic_v7_rules:
+                v7_rows.extend([
+                    ["v7 Rules-only Entity", _fmt(semantic_v7_rules["entity"]["micro"]["precision"]), _fmt(semantic_v7_rules["entity"]["micro"]["recall"]),
+                     _fmt(semantic_v7_rules["entity"]["micro"]["f1"]), _fmt(semantic_v7_rules["entity"]["micro"]["support"])],
+                    ["v7 Rules-only Relation", _fmt(semantic_v7_rules["relation"]["micro"]["precision"]), _fmt(semantic_v7_rules["relation"]["micro"]["recall"]),
+                     _fmt(semantic_v7_rules["relation"]["micro"]["f1"]), _fmt(semantic_v7_rules["relation"]["micro"]["support"])],
+                ])
+            d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], v7_rows, [0.36, 0.16, 0.16, 0.16, 0.16])
 
     # ---------------------------------------------------------------- 4
     d.h2("4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j")

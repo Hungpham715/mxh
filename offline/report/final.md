@@ -112,6 +112,15 @@ Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check
 
 Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh protocol gán nhãn sạch hơn, không phải cải tiến model.
 
+Holdout v7 (12 bài mới, loại trừ 72 bài đã tiêu) là gate one-shot cho candidate mở rộng stoplist generic-surface: candidate đạt NER 43,24% / RE 41,38%, dưới ngưỡng khai báo trước 0,50 và trùng khớp retained trên chính v7, nên bị loại và schema đã revert về đúng hash committed. v7 đồng thời là phép đo untouched thứ ba của cấu hình retained; slice nhiều tên mới khiến rules-only chỉ đạt 18,46%/17,14% và hybrid tăng +24,78/+24,24 điểm — khoảng cách hybrid lớn nhất đo được. Ba phép đo untouched (v4, v6, v7) nhất quán về độ lớn; khác biệt phản ánh độ khó slice, không phải drift cấu hình.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v7 Entity (micro) | 0.381 | 0.5 | 0.4324 | 48 |
+| v7 Relation (micro) | 0.3636 | 0.48 | 0.4138 | 50 |
+| v7 Rules-only Entity | 0.3529 | 0.125 | 0.1846 | 48 |
+| v7 Rules-only Relation | 0.3 | 0.12 | 0.1714 | 50 |
+
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
 Thư mục data/processed/ gồm đúng 8 tệp JSONL UTF-8 (mỗi dòng một đối tượng JSON) và manifest.json được ghi cuối cùng. Bộ nạp chỉ chạy khi đủ tệp, đúng schema và đúng checksum.

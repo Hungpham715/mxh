@@ -40,6 +40,7 @@ independent human gold, and has no inter-annotator agreement.
 | **holdout v4** | **12** | one-shot test of retained v1.2 | **untouched before first score** |
 | holdout v5 | 12 | negative audit of discarded v1.3 | untouched before first score, then consumed |
 | holdout v6 | 12 | protocol-corrected measurement of retained v1.2 | untouched before first score; surface-first gold |
+| holdout v7 | 12 | one-shot gate for the generic-surface stoplist candidate | untouched before first score; gate failed, candidate rejected |
 
 ## Primary result: untouched holdout v4
 
@@ -109,6 +110,48 @@ paired with a false negative (`cod` vs `chain-of-dictionary-prompting`, `ppe` vs
 About 15 of 26 false negatives are true misses of long or novel names. The cheapest
 domain-general lever is therefore precision on generic surfaces; any such change must be
 gated on a NEW untouched slice (v7) with this same surface-first protocol, never on v6.
+
+## v7 gate: generic-surface stoplist candidate rejected
+
+The candidate extended `schema.py::GENERIC_SLUGS` with domain-general bare capability nouns
+(`reasoning`, `planning`, `prompt`, `embeddings`, `bias`, `toxicity`, ...), metric names
+(`perplexity`, `accuracy`, `rouge`, ...), and research-activity terms (`human-evaluation`,
+`reward-shaping`, `data-curation`, ...). Gazetteer and extractor were unchanged. Development
+sanity used paired re-merges from the retained cache on consumed slices (same gold, same
+snapshots):
+
+| Slice | Retained NER/RE F1 | Candidate NER/RE F1 |
+|---|---|---|
+| dev12 | 73.39 / 73.33 | 74.77 / 74.58 |
+| cross-check12 | 50.49 / 47.17 | 50.49 / 47.17 |
+| holdout v3 | 69.63 / 69.50 | 69.63 / 69.50 |
+| holdout v6 (diagnostic) | 45.76 / 45.31 | 50.94 / 50.00 |
+
+No consumed slice regressed and v6 improved, so the candidate went to the predeclared v7
+gate: both micro F1 >= 0.50 on the first untouched v7 score AND candidate >= retained on
+both metrics on the same slice. v7 froze 12 new papers (72 consumed papers excluded) under
+the same surface-first protocol before any prediction was opened.
+
+**Gate result: FAIL.** Candidate scored NER 43.24 / RE 41.38 on v7 — below the 0.50 bar —
+and was *identical* to retained on v7: the extended stoplist drops nothing on these papers.
+The v6 gain came from surfaces specific to that slice; v7's false positives are different
+(multi-word descriptive spans and type disagreements), so the change did not transfer. The
+candidate is rejected, `schema.py` was reverted, and the reverted hash was verified equal to
+the retained committed blob. No post-score tuning was done on v7.
+
+v7 therefore also stands as a third untouched measurement of the retained configuration:
+
+| Configuration | NER P | NER R | NER F1 | RE P | RE R | RE F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| Rules only, v1.2 | 35.29 | 12.50 | 18.46 | 30.00 | 12.00 | 17.14 |
+| **Rules + Qwen3.5 0.8B, v1.2** | **38.10** | **50.00** | **43.24** | **36.36** | **48.00** | **41.38** |
+
+Bootstrap 95% F1 CIs: NER [28.26, 54.19], RE [27.91, 51.09]. v7 is novel-name-heavy (few
+gazetteer-known entities), which is why rules-only recall collapses to 12.5% and the hybrid
+adds **+24.78 NER / +24.24 RE** — the largest hybrid advantage measured on any slice. The
+three untouched measurements of the retained configuration (v4 45.16/44.44, v6 45.76/45.31,
+v7 43.24/41.38) are consistent in magnitude; slice difficulty, not configuration drift,
+explains the spread. All remain small, cue-enriched, single-nonhuman-reviewer results.
 
 ## Negative results and retention decision
 

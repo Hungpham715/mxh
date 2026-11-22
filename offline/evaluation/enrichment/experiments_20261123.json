@@ -1,0 +1,49 @@
+{
+  "schema_version": "enrichment-experiment-ledger-v1",
+  "date": "2026-11-23",
+  "constraint": "local CPU inference and no model above 1,000,000,000 parameters",
+  "retained": {
+    "model": "qwen3.5:0.8b-q8_0",
+    "parameters": 752393024,
+    "extractor_version": "sub1b-ollama-v2.1",
+    "gazetteer_version": "gazetteer-v1.2",
+    "validation_slice": "semantic_holdout_nonhuman_v4.jsonl",
+    "entity_micro_f1": 0.4516,
+    "relation_micro_f1": 0.4444,
+    "full_corpus": {
+      "papers": 1091,
+      "llm_successes": 1089,
+      "llm_failures": 2,
+      "entities": 4181,
+      "edges": 6092,
+      "source_grounding_audit": "120/120 passed; deterministic nonhuman audit"
+    }
+  },
+  "rejected": [
+    {
+      "name": "generic_slugs_stoplist_extension",
+      "change": "schema.py GENERIC_SLUGS extended with domain-general capability nouns, metric names, and research-activity terms; gazetteer and extractor unchanged",
+      "development_sanity": "paired re-merge from retained cache: dev12 +1.38/+1.25 F1, cross12 and v3 unchanged, v6 +5.18/+4.69 (diagnostic only)",
+      "validation_slice": "semantic_holdout_nonhuman_v7.jsonl",
+      "entity_micro_f1": 0.4324,
+      "relation_micro_f1": 0.4138,
+      "decision_threshold": "both F1 >= 0.50 on first v7 score AND candidate >= retained paired on v7",
+      "reason": "failed predeclared untouched-slice gate; candidate identical to retained on v7 (stoplist drops nothing there), so the v6 gain did not transfer; schema reverted and hash-verified against the retained committed blob"
+    }
+  ],
+  "v7_retained_measurement": {
+    "slice": "semantic_holdout_nonhuman_v7.jsonl",
+    "protocol": "surface_first_frozen_contract_v2",
+    "configuration": "retained sub1b-ollama-v2.1 + gazetteer-v1.2 (unchanged)",
+    "entity_micro_f1": 0.4324,
+    "relation_micro_f1": 0.4138,
+    "rules_only_entity_micro_f1": 0.1846,
+    "rules_only_relation_micro_f1": 0.1714,
+    "hybrid_gain_over_rules": {
+      "entity_f1": 0.2478,
+      "relation_f1": 0.2424
+    },
+    "interpretation": "third untouched measurement of the retained configuration; novel-name-heavy slice explains low rules-only recall and the largest hybrid advantage; consistent in magnitude with v4 and v6",
+    "next_lever": "v7 false positives are multi-word descriptive spans and type disagreements, not bare generic nouns; candidate levers (span-granularity normalization, schema-guided type repair, mixed-case acronyms) each need a NEW untouched v8 gate"
+  }
+}

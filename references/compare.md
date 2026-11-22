@@ -178,3 +178,13 @@ cùng hệ thống, không phải cải tiến model, và không so trực tiế
 áp dụng từ Team 9 vẫn là model chuyên biệt sinh JSON + chuẩn hóa tên/alias trước khi nối graph;
 lever kế tiếp (generic-surface precision, mixed-case acronym) phải gate trên slice v7 mới.
 
+Bổ sung 2026-11-23 (v7): candidate mở rộng stoplist generic-surface (`schema.py GENERIC_SLUGS`)
+qua sanity paired trên các slice consumed (dev12 +1,38/+1,25 F1; cross12/v3 không đổi; v6
++5,18/+4,69 diagnostic) nhưng **FAIL gate one-shot trên v7 untouched**: 43,24%/41,38% dưới
+ngưỡng khai báo trước 0,50 và trùng khớp retained trên chính v7 (stoplist không drop gì ở
+slice này) → bị loại, schema revert và hash-verify đúng blob committed. v7 đồng thời là phép
+đo untouched thứ ba của retained: hybrid 43,24%/41,38%, rules-only 18,46%/17,14% (hybrid
++24,78/+24,24 trên slice nhiều tên mới — khoảng cách hybrid lớn nhất đo được). Kỷ luật thử
+nghiệm giữ nguyên: không tune sau điểm, không hạ gate; lever kế tiếp (span-granularity,
+type repair, mixed-case acronym) phải gate trên slice v8 mới.
+
