@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4385572221",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ConAAP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Contrastive learning regularization method using Adversarial examples for Alleviating the Pathology (ConAAP), which calibrates the sentence representation of out-of-distribution examples."
+   }
+  },
+  {
+   "surface": "Adversarial examples",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Contrastive learning regularization method using Adversarial examples for Alleviating the Pathology (ConAAP), which calibrates the sentence representation of out-of-distribution examples."
+   }
+  },
+  {
+   "surface": "Sentence representation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we explain the model pathology from the view of sentence representation and argue that the counter-intuitive bias degree and direction of the out-of-distribution examples’ representation cause the pathology."
+   }
+  },
+  {
+   "surface": "Counter-intuitive bias degree",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we explain the model pathology from the view of sentence representation and argue that the counter-intuitive bias degree and direction of the out-of-distribution examples’ representation cause the pathology."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Adversarial examples",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Contrastive learning regularization method using Adversarial examples for Alleviating the Pathology (ConAAP), which calibrates the sentence representation of out-of-distribution examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sentence representation",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Contrastive learning regularization method using Adversarial examples for Alleviating the Pathology (ConAAP), which calibrates the sentence representation of out-of-distribution examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Counter-intuitive bias degree",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Contrastive learning regularization method using Adversarial examples for Alleviating the Pathology (ConAAP), which calibrates the sentence representation of out-of-distribution examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Direction of the out-of-distribution examples' representation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Direction of the out-of-distribution examples' representation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17099,
+ "eval_count": 483,
+ "ts": "2026-11-21T15:54:24Z"
+}

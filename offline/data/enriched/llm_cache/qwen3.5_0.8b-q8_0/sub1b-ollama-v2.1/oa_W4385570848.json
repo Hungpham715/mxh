@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4385570848",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LSTMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "Transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  },
+  {
+   "surface": "CHILDES corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "CHILDES corpus",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "CHILDES corpus",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We explore these possibilities by training LSTMs and Transformers - two types of neural networks without a hierarchical bias - on data similar in quantity and content to children’s linguistic input: text from the CHILDES corpus.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CHILDES corpus"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CHILDES corpus"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23226,
+ "eval_count": 446,
+ "ts": "2026-11-21T15:34:38Z"
+}

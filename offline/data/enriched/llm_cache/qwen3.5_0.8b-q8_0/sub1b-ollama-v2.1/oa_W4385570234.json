@@ -1,0 +1,144 @@
+{
+ "paper_id": "oa:W4385570234",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ODQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in open-domain question answering (ODQA) have demonstrated impressive accuracy on general-purpose domains like Wikipedia."
+   }
+  },
+  {
+   "surface": "Wikipedia",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in open-domain question answering (ODQA) have demonstrated impressive accuracy on general-purpose domains like Wikipedia."
+   }
+  },
+  {
+   "surface": "end-to-end model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We not only find that end-to-end models fail to generalize but that high retrieval scores often still yield poor answer prediction accuracy."
+   }
+  },
+  {
+   "surface": "high retrieval scores",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We not only find that end-to-end models fail to generalize but that high retrieval scores often still yield poor answer prediction accuracy."
+   }
+  },
+  {
+   "surface": "data augmentations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address these failures, we investigate several interventions, in the form of data augmentations, for improving model adaption and use our evaluation set to elucidate the relationship between the efficacy of an intervention scheme and the particular type of dataset shifts we consider."
+   }
+  },
+  {
+   "surface": "generalizability test",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a generalizability test that estimates the type of shift in a target dataset without training a model in the target domain and that the type of shift is predictive of which data augmentation schemes will be effective for domain adaption."
+   }
+  },
+  {
+   "surface": "target dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a generalizability test that estimates the type of shift in a target dataset without training a model in the target domain and that the type of shift is predictive of which data augmentation schemes will be effective for domain adaption."
+   }
+  },
+  {
+   "surface": "domain shift",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This work proposes a more realistic end-to-end domain shift evaluation setting covering five diverse domains."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Wikipedia",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in open-domain question answering (ODQA) have demonstrated impressive accuracy on general-purpose domains like Wikipedia.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "target dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a generalizability test that estimates the type of shift in a target dataset without training a model in the target domain and that the type of shift is predictive of which data augmentation schemes will be effective for domain adaption.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "target dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a generalizability test that estimates the type of shift in a target dataset without training a model in the target domain and that the type of shift is predictive of which data augmentation schemes will be effective for domain adaption.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "end-to-end model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We not only find that end-to-end models fail to generalize but that high retrieval scores often still yield poor answer prediction accuracy.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "end-to-end model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We not only find that end-to-end models fail to generalize but that high retrieval scores often still yield poor answer prediction accuracy.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "target dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose a generalizability test that estimates the type of shift in a target dataset without training a model in the target domain and that the type of shift is predictive of which data augmentation schemes will be effective for domain adaption.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "end-to-end model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 50434,
+ "eval_count": 676,
+ "ts": "2026-11-21T23:49:56Z"
+}

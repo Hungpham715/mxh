@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4385570184",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PTO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we depart from the classic fine-tuning based OOD detection toward a parameter-efficient alternative, and propose an unsupervised prefix-tuning based OOD detection framework termed PTO."
+   }
+  },
+  {
+   "surface": "fine-tuning based methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recently fine-tuning based methods have made promising progress."
+   }
+  },
+  {
+   "surface": "OOD detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we depart from the classic fine-tuning based OOD detection toward a parameter-efficient alternative, and propose an unsupervised prefix-tuning based OOD detection framework termed PTO."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-tuning based methods",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Recently fine-tuning based methods have made promising progress.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "OOD detection",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Out-of-distribution (OOD) detection, a fundamental task vexing real-world applications, has attracted growing attention in the NLP community.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fine-tuning based methods"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15654,
+ "eval_count": 291,
+ "ts": "2026-11-21T15:25:54Z"
+}

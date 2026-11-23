@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4385570147",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Causal Average Treatment Effect (ATE) scores",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "Counterfactual augmentation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "Language Models (LMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "Text generation task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "Causally Fair Language (CFL) architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We explore this method, in the context of LM detoxification, and propose the Causally Fair Language (CFL) architecture for detoxifying pre-trained LMs in a plug-and-play manner."
+   }
+  },
+  {
+   "surface": "Structural Causal Model (SCM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our architecture is based on a Structural Causal Model (SCM) that is mathematically transparent and computationally efficient as compared with many existing detoxification techniques."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Text generation task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Text generation task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Language Models (LMs)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We propose a method to control the attributes of Language Models (LMs) for the text generation task using Causal Average Treatment Effect (ATE) scores and counterfactual augmentation.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "RTP benchmark"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language Models (LMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Language Models (LMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29319,
+ "eval_count": 574,
+ "ts": "2026-11-21T15:25:38Z"
+}

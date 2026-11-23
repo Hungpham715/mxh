@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4362598378",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMMaps",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To support such stratified evaluations, we propose LLMMaps as a novel visualization technique that enables users to evaluate LLMs' performance with respect to Q&A datasets."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have revolutionized natural language processing and demonstrated impressive capabilities in various tasks."
+   }
+  },
+  {
+   "surface": "Q&A datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To support such stratified evaluations, we propose LLMMaps as a novel visualization technique that enables users to evaluate LLMs' performance with respect to Q&A datasets."
+   }
+  },
+  {
+   "surface": "knowledge capabilities",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "LLMMaps provide detailed insights into LLMs' knowledge capabilities in different subfields, by transforming Q&A datasets as well as LLM responses into an internal knowledge structure."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge capabilities",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "To assess LLMMaps we use them to conduct a comparative analysis of several state-of-the-art LLMs, such as BLOOM, GPT-2, GPT-3, ChatGPT and LLaMa-13B, as well as two qualitative user evaluations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Q&A datasets",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While LLM performance in specific knowledge fields is often evaluated based on question and answer (Q&A) datasets, such evaluations usually report only a single accuracy number for the dataset, which often covers an entire field.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26822,
+ "eval_count": 495,
+ "ts": "2026-11-21T15:13:56Z"
+}

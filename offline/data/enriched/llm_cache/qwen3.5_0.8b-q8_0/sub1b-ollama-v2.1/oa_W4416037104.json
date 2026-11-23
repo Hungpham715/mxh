@@ -1,0 +1,96 @@
+{
+ "paper_id": "oa:W4416037104",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CultureCartography",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose CultureCartography as a methodology that operationalizes this mixed-initiative vision."
+   }
+  },
+  {
+   "surface": "Culture Explorer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We implement Culture Cartography as a tool called Culture Explorer."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "To serve global users safely and productively, LLMs need culture-specific knowledge that might not be learned during pre-training."
+   }
+  },
+  {
+   "surface": "DeepSeek R1",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  },
+  {
+   "surface": "Llama-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  },
+  {
+   "surface": "GPT-4o",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Compared to a baseline where humans answer LLM-proposed questions, we find that Culture Explorer more effectively produces knowledge that strong models like DeepSeek R1, Llama-4 and GPT-4o are missing, even with web search."
+   }
+  },
+  {
+   "surface": "culture benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Fine-tuning on this data boosts the accuracy of Llama models by up to 19.2% on related culture benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "culture benchmarks",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Fine-tuning on this data boosts the accuracy of Llama models by up to 19.2% on related culture benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "To serve global users safely and productively, LLMs need culture-specific knowledge that might not be learned during pre-training.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23028,
+ "eval_count": 430,
+ "ts": "2026-11-21T22:10:12Z"
+}

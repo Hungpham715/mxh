@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4404782924",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Ontology Expansion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the rapidly evolving field of conversational AI, Ontology Expansion (OnExp) is crucial for enhancing the adaptability and robustness of conversational agents."
+   }
+  },
+  {
+   "surface": "Conversational Agents",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the rapidly evolving field of conversational AI, Ontology Expansion (OnExp) is crucial for enhancing the adaptability and robustness of conversational agents."
+   }
+  },
+  {
+   "surface": "Static, predefined ontologies",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional models rely on static, predefined ontologies, limiting their ability to handle new and unforeseen user needs."
+   }
+  },
+  {
+   "surface": "New and unforeseen user needs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Traditional models rely on static, predefined ontologies, limiting their ability to handle new and unforeseen user needs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Conversational Agents",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This survey paper provides a comprehensive review of the state-of-the-art techniques in OnExp for conversational understanding.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Conversational Agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Conversational Agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Conversational Agents"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Conversational Agents"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 53619,
+ "eval_count": 497,
+ "ts": "2026-11-21T19:20:02Z"
+}

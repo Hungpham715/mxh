@@ -1,0 +1,148 @@
+{
+ "paper_id": "oa:W4402671944",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "multi-objective reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose multi-objective reinforcement learning tailored to generate balanced summaries across all four dimensions."
+   }
+  },
+  {
+   "surface": "MDO_min",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection."
+   }
+  },
+  {
+   "surface": "MDO_pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection."
+   }
+  },
+  {
+   "surface": "summary quality",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency."
+   }
+  },
+  {
+   "surface": "consistency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency."
+   }
+  },
+  {
+   "surface": "coherence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency."
+   }
+  },
+  {
+   "surface": "relevance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency."
+   }
+  },
+  {
+   "surface": "fluency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency."
+   }
+  },
+  {
+   "surface": "multi-dimensional optimization (MDO)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection."
+   }
+  },
+  {
+   "surface": "adaptive learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection."
+   }
+  },
+  {
+   "surface": "baseline models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our approach achieved substantial performance gains compared to baseline models on representative summarization datasets, particularly in the overlooked dimensions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "summary quality",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The evaluation of summary quality encompasses diverse dimensions such as consistency, coherence, relevance, and fluency.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MDO_min",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MDO_pro",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multi-dimensional optimization (MDO)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We introduce two multi-dimensional optimization (MDO) strategies for adaptive learning: 1) MDO_min, rewarding the current lowest dimension score, and 2) MDO_pro, optimizing multiple dimensions similar to multi-task learning, resolves conflicting gradients across dimensions through gradient projection.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "baseline models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49747,
+ "eval_count": 662,
+ "ts": "2026-11-21T18:23:28Z"
+}

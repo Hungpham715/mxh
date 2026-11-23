@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4416036787",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NLP4SG",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The social impact of Natural Language Processing (NLP) is increasingly important, with a rising community focus on initiatives related to NLP for Social Good (NLP4SG)."
+   }
+  },
+  {
+   "surface": "ACL Anthology",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  },
+  {
+   "surface": "UN Sustainable Development Goals",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  },
+  {
+   "surface": "Aduato et al.",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ACL Anthology",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Indeed, in recent years, almost 20% of all papers in the ACL Anthology address topics related to social good as defined by the UN Sustainable Development Goals (Aduato et al.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ACL Anthology",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We discuss the implications of these findings on agenda-setting considerations for the ACL community related to NLP4SG.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ACL Anthology",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "With this approach we discover two surprising facts about the landscape of NLP4SG.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ACL Anthology"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31555,
+ "eval_count": 408,
+ "ts": "2026-11-21T21:57:35Z"
+}

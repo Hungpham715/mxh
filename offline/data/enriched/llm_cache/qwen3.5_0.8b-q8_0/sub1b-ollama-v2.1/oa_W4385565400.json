@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385565400",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NatLogAttack",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose NatLogAttack to perform systematic attacks centring around natural logic, a classical logic formalism that is traceable back to Aristotle’s syllogism and has been closely developed for natural language inference."
+   }
+  },
+  {
+   "surface": "natural logic",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose NatLogAttack to perform systematic attacks centring around natural logic, a classical logic formalism that is traceable back to Aristotle’s syllogism and has been closely developed for natural language inference."
+   }
+  },
+  {
+   "surface": "NLI models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "NatLogAttack provides a tool to probe the existing and future NLI models’ capacity from a key viewpoint and we hope more logic-based attacks will be further explored for understanding the desired property of reasoning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "natural logic",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We propose NatLogAttack to perform systematic attacks centring around natural logic, a classical logic formalism that is traceable back to Aristotle’s syllogism and has been closely developed for natural language inference.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Aristotle's syllogism"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Aristotle's syllogism"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NLI models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23513,
+ "eval_count": 321,
+ "ts": "2026-11-21T15:18:21Z"
+}

@@ -1,0 +1,109 @@
+{
+ "paper_id": "oa:W4416036585",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EnterpriseBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present EnterpriseBench, a comprehensive benchmark that simulates enterprise settings, featuring 500 diverse tasks across software engineering, HR, finance, and administrative domains."
+   }
+  },
+  {
+   "surface": "500 diverse tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We present EnterpriseBench, a comprehensive benchmark that simulates enterprise settings, featuring 500 diverse tasks across software engineering, HR, finance, and administrative domains."
+   }
+  },
+  {
+   "surface": "Enterprise systems",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise systems are crucial for enhancing productivity and decision-making among employees and customers."
+   }
+  },
+  {
+   "surface": "LLM based systems",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Integrating LLM based systems into enterprise systems enables intelligent automation, personalized experiences, and efficient information retrieval, driving operational efficiency and strategic growth."
+   }
+  },
+  {
+   "surface": "LLM agents",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments with state-of-the-art LLM agents demonstrate that even the most capable models achieve only 41.8% task completion, highlighting significant opportunities for improvement in enterprise-focused AI systems."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Enterprise systems",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Enterprise systems are crucial for enhancing productivity and decision-making among employees and customers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM based systems",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Integrating LLM based systems into enterprise systems enables intelligent automation, personalized experiences, and efficient information retrieval, driving operational efficiency and strategic growth.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM agents",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments with state-of-the-art LLM agents demonstrate that even the most capable models achieve only 41.8% task completion, highlighting significant opportunities for improvement in enterprise-focused AI systems.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM agents",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our benchmark uniquely captures key enterprise characteristics including data source fragmentation, access control hierarchies, and cross-functional workflows.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLM agents",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Additionally, we provide a novel data generation pipeline that creates internally consistent enterprise tasks from organizational metadata.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "Enterprise systems",
+  "LLM based systems",
+  "LLM agents"
+ ],
+ "duration_ms": 48813,
+ "eval_count": 404,
+ "ts": "2026-11-21T23:37:24Z"
+}

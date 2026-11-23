@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4404792949",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "jailbreak attack method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Exploiting this deficiency, we propose a jailbreak attack method that elicits an aligned language model for malicious output."
+   }
+  },
+  {
+   "surface": "aligned language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Exploiting this deficiency, we propose a jailbreak attack method that elicits an aligned language model for malicious output."
+   }
+  },
+  {
+   "surface": "hallucination",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We believe the findings could be extended beyond model safety, such as self-verification and hallucination."
+   }
+  },
+  {
+   "surface": "five safety-aligned large language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We evaluate our approach over five safety-aligned large language models, comparing four previous jailbreak methods, and show that our approach achieves competitive performance with more harmful outputs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "hallucination",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We believe the findings could be extended beyond model safety, such as self-verification and hallucination.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "five safety-aligned large language models",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We evaluate our approach over five safety-aligned large language models, comparing four previous jailbreak methods, and show that our approach achieves competitive performance with more harmful outputs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "five safety-aligned large language models"
+ ],
+ "duration_ms": 33262,
+ "eval_count": 222,
+ "ts": "2026-11-21T19:37:38Z"
+}

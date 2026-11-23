@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4389519852",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BigFive",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Work on personality detection has tended to incorporate psychological features from different personality models, such as BigFive and MBTI."
+   }
+  },
+  {
+   "surface": "MBTI",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Work on personality detection has tended to incorporate psychological features from different personality models, such as BigFive and MBTI."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "BigFive",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In experiments on the BigFive and MBTI models, PysAttention achieved average accuracy of 65.66% and 86.30%, respectively, outperforming state-of-the-art methods, indicating that it is effective at encoding psychological features.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MBTI",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In experiments on the BigFive and MBTI models, PysAttention achieved average accuracy of 65.66% and 86.30%, respectively, outperforming state-of-the-art methods, indicating that it is effective at encoding psychological features.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21178,
+ "eval_count": 218,
+ "ts": "2026-11-21T16:30:21Z"
+}

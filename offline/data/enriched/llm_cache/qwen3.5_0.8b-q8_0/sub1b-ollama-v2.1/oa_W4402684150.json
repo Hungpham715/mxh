@@ -1,0 +1,116 @@
+{
+ "paper_id": "oa:W4402684150",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LoCoMo",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Using this pipeline, we collect LoCoMo, a dataset of very long-term conversations, each encompassing 600 turns and 16K tokens on avg., over up to 32 sessions."
+   }
+  },
+  {
+   "surface": "chat sessions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Existing works on long-term open-domain dialogues focus on evaluating model responses within contexts spanning no more than five chat sessions."
+   }
+  },
+  {
+   "surface": "very long-term dialogues",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite advancements in long-context large language models (LLMs) and retrieval augmented generation (RAG) techniques, their efficacy in very long-term dialogues remains unexplored."
+   }
+  },
+  {
+   "surface": "LLM-based agent architectures",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this research gap, we introduce a machine-human pipeline to generate high-quality, very long-term dialogues by leveraging LLM-based agent architectures and grounding their dialogues on personas and temporal event graphs."
+   }
+  },
+  {
+   "surface": "grounding their dialogues on personas and temporal event graphs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this research gap, we introduce a machine-human pipeline to generate high-quality, very long-term dialogues by leveraging LLM-based agent architectures and grounding their dialogues on personas and temporal event graphs."
+   }
+  },
+  {
+   "surface": "human annotators",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The generated conversations are verified and edited by human annotators for long-range consistency and grounding to the event graphs."
+   }
+  },
+  {
+   "surface": "long-range consistency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The generated conversations are verified and edited by human annotators for long-range consistency and grounding to the event graphs."
+   }
+  },
+  {
+   "surface": "grounding to the event graphs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The generated conversations are verified and edited by human annotators for long-range consistency and grounding to the event graphs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "very long-term dialogues",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite advancements in long-context large language models (LLMs) and retrieval augmented generation (RAG) techniques, their efficacy in very long-term dialogues remains unexplored.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "very long-term dialogues",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite advancements in long-context large language models (LLMs) and retrieval augmented generation (RAG) techniques, their efficacy in very long-term dialogues remains unexplored.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "evaluated_on"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "very long-term dialogues"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "very long-term dialogues"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "very long-term dialogues"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49576,
+ "eval_count": 626,
+ "ts": "2026-11-21T18:38:21Z"
+}

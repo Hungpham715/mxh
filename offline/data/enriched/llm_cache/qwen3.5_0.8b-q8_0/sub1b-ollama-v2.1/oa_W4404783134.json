@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4404783134",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Dense Passage Retrieval",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Although Dense Passage Retrieval (DPR) models have achieved significantly enhanced performance, their widespread application is still hindered by the demanding inference efficiency and high deployment costs."
+   }
+  },
+  {
+   "surface": "Knowledge Distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Knowledge distillation is an efficient method to compress models, which transfers knowledge from strong teacher models to weak student models."
+   }
+  },
+  {
+   "surface": "Multi-Teaching-Assistants",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To narrow this performance gap, we propose MTA4DPR, a Multi-Teaching-Assistants based iterative knowledge distillation method for Dense Passage Retrieval, which transfers knowledge from the teacher to the student with the help of multiple assistants in an iterative manner; with each iteration, the student learns from more performant assistants and more difficult data."
+   }
+  },
+  {
+   "surface": "Iterative Knowledge Distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To narrow this performance gap, we propose MTA4DPR, a Multi-Teaching-Assistants based iterative knowledge distillation method for Dense Passage Retrieval, which transfers knowledge from the teacher to the student with the help of multiple assistants in an iterative manner; with each iteration, the student learns from more performant assistants and more difficult data."
+   }
+  },
+  {
+   "surface": "66M student model",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The experimental results show that our 66M student model achieves the state-of-the-art performance among models with same parameters on multiple datasets, and is very competitive when compared with larger, even LLM-based, DPR models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "66M student model",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The experimental results show that our 66M student model achieves the state-of-the-art performance among models with same parameters on multiple datasets, and is very competitive when compared with larger, even LLM-based, DPR models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multi-Teaching-Assistants"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 12126,
+ "eval_count": 307,
+ "ts": "2026-11-21T19:24:36Z"
+}

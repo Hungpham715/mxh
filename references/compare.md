@@ -152,3 +152,39 @@ Team 5 làm tốt phần trace; Team 9 làm tốt state multi-hop; Team 6 làm t
 
 Phân tích dựa trên snapshot repo ở commit ghi trong từng file và các báo cáo được cung cấp. Khi code và report mâu thuẫn, kết luận ưu tiên hành vi thể hiện trong code/artifact; số liệu chỉ có trong report được ghi rõ là số do báo cáo nêu.
 
+## Đối chiếu mục tiêu NER/RE và small-world (2026-11-22)
+
+| Hệ thống | Scope / evaluator | Kết quả có artifact | Cách dùng trong project này |
+|---|---|---|---|
+| Team 6 | Toàn heterogeneous Neo4j graph; LCC; 5 đồ thị Erdős–Rényi `G(n,m)` | 5.816 node, LCC 5.679; `L=5,985`, `Lrand=6,908`, `sigma=82,392` trong `external/team_06/small_world_result.json` | Chỉ tham khảo cách báo C/L/sigma; không dùng ER baseline vì không giữ degree sequence. |
+| Team 9 | Toàn heterogeneous KG; 300 degree-preserving null graphs | 6.223/6.223 node trong LCC; `L/Lrand=1,04`, `sigma=10,524` trong `external/team_09/analysis/results/small_world_results.txt` | Bổ sung phép đo cùng scope toàn KG, nhưng giữ riêng kết luận author-only. |
+| Project hiện tại | Author-only coauthorship; degree-preserving null | LCC 970/5.430; `L/Lrand=3,3203`, `sigma=19,225`: **no clear indication** | Kết luận mạng xã hội chính, không thay bằng scope thuận lợi hơn. |
+| Project hiện tại | Toàn heterogeneous KG; 30 degree-preserving null graphs, seed cố định | 7.134/7.134 node trong LCC; `L/Lrand=1,1627`, `sigma=95,38`, empirical `p(Crand>=Cobs)=0,0323` | Artifact `offline/output/analysis/knowledge_graph_small_world.json`; bằng chứng topology KG, không phải mạng tác giả toàn cầu. |
+
+Team 9 có adapter QLoRA Qwen2.5-0.5B sinh entity/relation JSON và mô tả dữ liệu train,
+nhưng snapshot reference không chứa evaluator hoặc score NER/RE extraction tái lập. Các F1 trong
+`chatbot/test_*` là metric phân loại câu trả lời TF/MCQ, không phải NER/RE; vì vậy không dùng chúng
+làm baseline extraction. Project hiện tại báo fresh holdout v4 riêng: hybrid Qwen3.5 0.8B CPU-only
+đạt NER F1 45,16% và RE F1 44,44%, tăng lần lượt 2,81 và 3,06 điểm so với rules-only trên cùng
+holdout, nhưng vẫn chỉ là 12 bài nonhuman và không được trình bày như human/corpus-wide score.
+
+Bổ sung 2026-11-22 (v6): audit contract cho thấy 18/56 ID gold của v4 không tái lập được từ
+surface verbatim theo canonicalizer đã freeze (paraphrase/acronym policy). Holdout v6 mới
+(12 bài, loại trừ 60 bài đã tiêu) dùng protocol surface-first: freeze surface verbatim rồi
+suy ra ID gold bằng chính `_canonicalize_llm` + gazetteer v1.2 trước khi mở dự đoán. Cùng
+cấu hình retained đạt NER F1 45,76% / RE F1 45,31% (rules-only 37,14%/37,50%; hybrid tăng
+8,62/7,81 điểm), CI bootstrap [34,19; 59,20] và [33,57; 58,73]. Đây là phép đo sạch hơn của
+cùng hệ thống, không phải cải tiến model, và không so trực tiếp với v4 như một delta. Bài học
+áp dụng từ Team 9 vẫn là model chuyên biệt sinh JSON + chuẩn hóa tên/alias trước khi nối graph;
+lever kế tiếp (generic-surface precision, mixed-case acronym) phải gate trên slice v7 mới.
+
+Bổ sung 2026-11-23 (v7): candidate mở rộng stoplist generic-surface (`schema.py GENERIC_SLUGS`)
+qua sanity paired trên các slice consumed (dev12 +1,38/+1,25 F1; cross12/v3 không đổi; v6
++5,18/+4,69 diagnostic) nhưng **FAIL gate one-shot trên v7 untouched**: 43,24%/41,38% dưới
+ngưỡng khai báo trước 0,50 và trùng khớp retained trên chính v7 (stoplist không drop gì ở
+slice này) → bị loại, schema revert và hash-verify đúng blob committed. v7 đồng thời là phép
+đo untouched thứ ba của retained: hybrid 43,24%/41,38%, rules-only 18,46%/17,14% (hybrid
++24,78/+24,24 trên slice nhiều tên mới — khoảng cách hybrid lớn nhất đo được). Kỷ luật thử
+nghiệm giữ nguyên: không tune sau điểm, không hạ gate; lever kế tiếp (span-granularity,
+type repair, mixed-case acronym) phải gate trên slice v8 mới.
+

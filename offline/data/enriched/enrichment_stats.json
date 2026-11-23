@@ -1,139 +1,129 @@
 {
   "papers": 1091,
-  "entities_total": 1573,
+  "entities_total": 4181,
   "entities_by_type": {
-    "dataset": 383,
-    "method": 606,
-    "task": 584
+    "dataset": 938,
+    "method": 2258,
+    "task": 985
   },
   "entities_by_resolved_by": {
-    "slug": 1412,
-    "gazetteer": 161
+    "slug": 3691,
+    "gazetteer": 490
   },
-  "edges_total": 3488,
+  "edges_total": 6092,
   "edges_by_type": {
-    "USES_METHOD": 1578,
-    "ADDRESSES_TASK": 1404,
-    "EVALUATED_ON": 469,
-    "METHOD_EVALUATED_ON": 37
+    "USES_METHOD": 3413,
+    "ADDRESSES_TASK": 1549,
+    "EVALUATED_ON": 1059,
+    "METHOD_EVALUATED_ON": 71
   },
   "edges_by_source_kind": {
-    "rules": 1841,
-    "agreement": 131,
-    "llm": 1516
+    "agreement": 651,
+    "rules": 1518,
+    "llm": 3923
   },
   "edges_by_confidence_band": {
-    "rule_medium": 743,
-    "agreement": 131,
-    "llm_extracted": 1516,
-    "rule_high": 1098
+    "agreement": 651,
+    "rule_medium": 583,
+    "llm_extracted": 3923,
+    "rule_high": 935
   },
   "llm": {
     "results": 1091,
-    "failed": 7,
+    "failed": 2,
     "extractor_versions": {
-      "qwen3-0.6b-ollama-v1.2": 28,
-      "qwen3-0.6b-ollama-v1.3": 119,
-      "qwen3-0.6b-ollama-v1.4": 24,
-      "qwen3-0.6b-ollama-v1.5": 79,
-      "qwen3-0.6b-ollama-v1.6": 841
+      "sub1b-ollama-v2.1": 1091
     },
     "models": {
-      "qwen3:0.6b": 1091
+      "qwen3.5:0.8b-q8_0": 1091
     },
-    "mean_duration_ms": 20333,
+    "mean_duration_ms": 32617,
     "drop_reasons": {
-      "endpoint_not_extracted": 1191,
-      "surface_not_in_abstract": 938,
-      "unknown_type": 913,
-      "invalid_entity": 783,
-      "generic_surface": 755,
-      "endpoint_type_mismatch": 140,
-      "invalid_endpoint": 132,
-      "empty_surface": 40,
-      "unknown_rel": 19,
-      "malformed_entity": 1
+      "endpoint_type_mismatch": 1800,
+      "generic_surface": 427,
+      "endpoint_not_extracted": 405,
+      "surface_not_in_abstract": 217
     }
   },
   "top_unresolved_surfaces": [
     {
-      "id": "dataset:code",
-      "name": "CODE",
-      "n_papers": 13
+      "id": "method:large-language-models-llms",
+      "name": "Large Language Models (LLMs)",
+      "n_papers": 19
     },
     {
-      "id": "method:large-language-models",
-      "name": "large language models",
-      "n_papers": 10
-    },
-    {
-      "id": "dataset:large-language-models",
-      "name": "large language models",
-      "n_papers": 9
-    },
-    {
-      "id": "task:rag",
-      "name": "RAG",
-      "n_papers": 4
-    },
-    {
-      "id": "dataset:gpt-4o",
-      "name": "GPT-4o",
-      "n_papers": 3
-    },
-    {
-      "id": "method:code",
-      "name": "CODE",
-      "n_papers": 3
-    },
-    {
-      "id": "method:language-model",
-      "name": "language model",
-      "n_papers": 3
-    },
-    {
-      "id": "method:large-language-model",
-      "name": "large language model",
-      "n_papers": 3
-    },
-    {
-      "id": "method:multimodal",
-      "name": "multimodal",
-      "n_papers": 3
-    },
-    {
-      "id": "method:nlp",
-      "name": "NLP",
-      "n_papers": 3
-    },
-    {
-      "id": "task:bias",
-      "name": "BIAS",
-      "n_papers": 3
-    },
-    {
-      "id": "task:icl",
-      "name": "ICL",
-      "n_papers": 3
-    },
-    {
-      "id": "task:large-language-models",
-      "name": "Large Language Models",
-      "n_papers": 3
+      "id": "dataset:large-language-models-llms",
+      "name": "large language models (LLMs)",
+      "n_papers": 8
     },
     {
       "id": "task:nlp",
       "name": "NLP",
+      "n_papers": 6
+    },
+    {
+      "id": "dataset:multilingual",
+      "name": "multilingual",
+      "n_papers": 5
+    },
+    {
+      "id": "method:lms",
+      "name": "LMs",
+      "n_papers": 5
+    },
+    {
+      "id": "method:metric",
+      "name": "metric",
+      "n_papers": 5
+    },
+    {
+      "id": "method:reinforcement-learning",
+      "name": "reinforcement learning",
+      "n_papers": 5
+    },
+    {
+      "id": "method:chain-of-thought-cot",
+      "name": "Chain-of-Thought (CoT)",
+      "n_papers": 4
+    },
+    {
+      "id": "method:contrastive-loss",
+      "name": "contrastive loss",
+      "n_papers": 4
+    },
+    {
+      "id": "method:plm",
+      "name": "plm",
+      "n_papers": 4
+    },
+    {
+      "id": "method:plms",
+      "name": "PLMs",
+      "n_papers": 4
+    },
+    {
+      "id": "method:student",
+      "name": "student",
+      "n_papers": 4
+    },
+    {
+      "id": "task:prompt",
+      "name": "Prompt",
+      "n_papers": 4
+    },
+    {
+      "id": "dataset:chinese",
+      "name": "Chinese",
       "n_papers": 3
     },
     {
-      "id": "task:state-of-the-art-performance",
-      "name": "state-of-the-art performance",
+      "id": "dataset:english",
+      "name": "English",
       "n_papers": 3
     }
   ],
-  "gazetteer_version": "gazetteer-v1.0",
-  "llm_model": "qwen3:0.6b",
+  "gazetteer_version": "gazetteer-v1.2",
+  "llm_model": "qwen3.5:0.8b-q8_0",
   "enrich_version": "enrich-1.0.0",
   "scope_id": "nlpgraph-enrich-v1",
   "before_after": {
@@ -143,19 +133,19 @@
       "total_relationships": 30971
     },
     "added_nodes": {
-      "Method": 606,
-      "Dataset": 383,
-      "Task": 584
+      "Method": 2258,
+      "Dataset": 938,
+      "Task": 985
     },
     "added_relationships": {
-      "USES_METHOD": 1578,
-      "ADDRESSES_TASK": 1404,
-      "EVALUATED_ON": 469,
-      "METHOD_EVALUATED_ON": 37
+      "USES_METHOD": 3413,
+      "ADDRESSES_TASK": 1549,
+      "EVALUATED_ON": 1059,
+      "METHOD_EVALUATED_ON": 71
     },
     "after_if_imported": {
-      "total_nodes": 8707,
-      "total_relationships": 34459
+      "total_nodes": 11315,
+      "total_relationships": 37063
     }
   }
 }

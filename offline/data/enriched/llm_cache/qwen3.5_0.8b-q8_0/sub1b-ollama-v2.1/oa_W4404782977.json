@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4404782977",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "intellectual humility",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we focus on one particular virtue: “intellectual humility” (IH), or acknowledging the potential limitations in one’s own beliefs."
+   }
+  },
+  {
+   "surface": "LLM-based models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We manually curate and validate an IH codebook on 350 posts about religion drawn from subreddits and use them to develop LLM-based models for automating this measurement."
+   }
+  },
+  {
+   "surface": "350 posts about religion drawn from subreddits",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We manually curate and validate an IH codebook on 350 posts about religion drawn from subreddits and use them to develop LLM-based models for automating this measurement."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "350 posts about religion drawn from subreddits",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We manually curate and validate an IH codebook on 350 posts about religion drawn from subreddits and use them to develop LLM-based models for automating this measurement.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM-based models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28369,
+ "eval_count": 242,
+ "ts": "2026-11-21T19:21:47Z"
+}

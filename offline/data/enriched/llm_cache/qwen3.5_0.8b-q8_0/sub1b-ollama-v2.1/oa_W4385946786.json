@@ -1,0 +1,102 @@
+{
+ "paper_id": "oa:W4385946786",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "skills-in-context",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We refer to this prompt structure as skills-in-context (SKiC)."
+   }
+  },
+  {
+   "surface": "compositional generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We investigate how to elicit compositional generalization capabilities in large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "in-context learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We examine this problem within the framework of in-context learning and find that demonstrating both foundational skills and compositional examples grounded in these skills within the same prompt context is crucial."
+   }
+  },
+  {
+   "surface": "compositional examples",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We examine this problem within the framework of in-context learning and find that demonstrating both foundational skills and compositional examples grounded in these skills within the same prompt context is crucial."
+   }
+  },
+  {
+   "surface": "skills-in-context (SKiC)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We refer to this prompt structure as skills-in-context (SKiC)."
+   }
+  },
+  {
+   "surface": "zero-shot weak-to-strong generalization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Finally, inspired by our in-context learning study, we show that fine-tuning LLMs with SKiC-style data can elicit zero-shot weak-to-strong generalization, enabling the models to solve much harder problems directly with standard prompting."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "compositional generalization",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We investigate how to elicit compositional generalization capabilities in large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "compositional examples",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We examine this problem within the framework of in-context learning and find that demonstrating both foundational skills and compositional examples grounded in these skills within the same prompt context is crucial.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "zero-shot weak-to-strong generalization",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Finally, inspired by our in-context learning study, we show that fine-tuning LLMs with SKiC-style data can elicit zero-shot weak-to-strong generalization, enabling the models to solve much harder problems directly with standard prompting.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "foundation skills"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "foundation skills"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38793,
+ "eval_count": 498,
+ "ts": "2026-11-21T16:00:43Z"
+}

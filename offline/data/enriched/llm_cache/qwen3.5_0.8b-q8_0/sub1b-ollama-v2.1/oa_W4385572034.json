@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4385572034",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Feature attribution methods (FAs) are popular approaches for providing insights into the model reasoning process of making predictions."
+   }
+  },
+  {
+   "surface": "soft-sufficiency",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments across various natural language processing tasks and different FAs show that our soft-sufficiency and soft-comprehensiveness metrics consistently prefer more faithful explanations compared to hard sufficiency and comprehensiveness."
+   }
+  },
+  {
+   "surface": "soft-comprehensiveness",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments across various natural language processing tasks and different FAs show that our soft-sufficiency and soft-comprehensiveness metrics consistently prefer more faithful explanations compared to hard sufficiency and comprehensiveness."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "soft-sufficiency",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments across various natural language processing tasks and different FAs show that our soft-sufficiency and soft-comprehensiveness metrics consistently prefer more faithful explanations compared to hard sufficiency and comprehensiveness.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "soft-comprehensiveness",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments across various natural language processing tasks and different FAs show that our soft-sufficiency and soft-comprehensiveness metrics consistently prefer more faithful explanations compared to hard sufficiency and comprehensiveness.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19832,
+ "eval_count": 311,
+ "ts": "2026-11-21T15:50:56Z"
+}

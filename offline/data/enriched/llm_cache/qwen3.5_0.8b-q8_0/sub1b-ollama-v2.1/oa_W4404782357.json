@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4404782357",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a framework called Regulating Preferences of Generator (RPG) based on retrieval results, which includes a generator preference extractor, an entity retriever, and a generator with the gate-controlled preference regulator."
+   }
+  },
+  {
+   "surface": "generator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing methods improve the accuracy of entity retrieval and construct data flows between retrieval results and response generator, achieving promising results."
+   }
+  },
+  {
+   "surface": "entity retriever",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a framework called Regulating Preferences of Generator (RPG) based on retrieval results, which includes a generator preference extractor, an entity retriever, and a generator with the gate-controlled preference regulator."
+   }
+  },
+  {
+   "surface": "regulator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a framework called Regulating Preferences of Generator (RPG) based on retrieval results, which includes a generator preference extractor, an entity retriever, and a generator with the gate-controlled preference regulator."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "entity retriever",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a framework called Regulating Preferences of Generator (RPG) based on retrieval results, which includes a generator preference extractor, an entity retriever, and a generator with the gate-controlled preference regulator.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "regulator",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a framework called Regulating Preferences of Generator (RPG) based on retrieval results, which includes a generator preference extractor, an entity retriever, and a generator with the gate-controlled preference regulator.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19005,
+ "eval_count": 357,
+ "ts": "2026-11-21T19:05:02Z"
+}

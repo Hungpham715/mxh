@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4385569686",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "plm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose ConvGQR, a new framework to reformulate conversational queries based on generative pre-trained language models (PLMs), one for query rewriting and another for generating potential answers."
+   }
+  },
+  {
+   "surface": "query rewriting",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To avoid the expensive re-training of the query encoder, most existing methods try to learn a rewriting model to de-contextualize the current query by mimicking the manual query rewriting."
+   }
+  },
+  {
+   "surface": "potential answer",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Another useful information to enhance the search query is the potential answer to the question."
+   }
+  },
+  {
+   "surface": "knowledge infusion mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In addition, to relate query reformulation to the retrieval task, we propose a knowledge infusion mechanism to optimize both query reformulation and retrieval."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "plm",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose ConvGQR, a new framework to reformulate conversational queries based on generative pre-trained language models (PLMs), one for query rewriting and another for generating potential answers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge infusion mechanism",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "In addition, to relate query reformulation to the retrieval task, we propose a knowledge infusion mechanism to optimize both query reformulation and retrieval.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "convgr"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "query rewriting"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "potential answer"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26685,
+ "eval_count": 348,
+ "ts": "2026-11-21T15:20:02Z"
+}

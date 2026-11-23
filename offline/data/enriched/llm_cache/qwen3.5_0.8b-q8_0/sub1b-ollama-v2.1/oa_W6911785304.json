@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W6911785304",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a framework for leveraging subjective metrics derived from the class textual materials across different semesters to assess LLM outputs across various tasks."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Evaluating the performance of Large Language Models (LLMs) is a critical yet challenging task, particularly when aiming to avoid subjective assessments."
+   }
+  },
+  {
+   "surface": "semesters",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a framework for leveraging subjective metrics derived from the class textual materials across different semesters to assess LLM outputs across various tasks."
+   }
+  },
+  {
+   "surface": "tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a framework for leveraging subjective metrics derived from the class textual materials across different semesters to assess LLM outputs across various tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "tasks",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper proposes a framework for leveraging subjective metrics derived from the class textual materials across different semesters to assess LLM outputs across various tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30472,
+ "eval_count": 389,
+ "ts": "2026-11-21T22:27:12Z"
+}

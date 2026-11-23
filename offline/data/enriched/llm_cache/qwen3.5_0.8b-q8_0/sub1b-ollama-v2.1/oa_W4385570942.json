@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4385570942",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "UNIEVENT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To enhance knowledge transfer and enable zero-shot generalization among various combinations, in this work we propose a novel unified framework, called UNIEVENT."
+   }
+  },
+  {
+   "surface": "prefix-based multitask learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Inspired by prefix-based multitask learning, our approach organizes event relational reasoning tasks into a coordinate system with multiple axes, representing inter-event relations and reasoning formulations."
+   }
+  },
+  {
+   "surface": "coordinate-assigning prefixes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We then train a unified text-to-text generative model that utilizes coordinate-assigning prefixes for each task."
+   }
+  },
+  {
+   "surface": "text-to-text generative model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We then train a unified text-to-text generative model that utilizes coordinate-assigning prefixes for each task."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prefix-based multitask learning",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Inspired by prefix-based multitask learning, our approach organizes event relational reasoning tasks into a coordinate system with multiple axes, representing inter-event relations and reasoning formulations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "coordinate-assigning prefixes",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We then train a unified text-to-text generative model that utilizes coordinate-assigning prefixes for each task.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "text-to-text generative model",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "By leveraging our adapted prefixes, our unified model achieves state-of-the-art or competitive performance on both zero-shot and supervised reasoning tasks, as demonstrated in extensive experiments",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 33596,
+ "eval_count": 337,
+ "ts": "2026-11-21T15:36:08Z"
+}

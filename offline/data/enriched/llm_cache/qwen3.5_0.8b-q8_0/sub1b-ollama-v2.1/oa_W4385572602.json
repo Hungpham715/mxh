@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385572602",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ColD Fusion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose ColD Fusion, a method that provides the benefits of multitask learning but leverages distributed computation and requires limited communication and no sharing of data."
+   }
+  },
+  {
+   "surface": "RoBERTa",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We find ColD Fusion outperforms RoBERTa and even previous multitask models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RoBERTa",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We find ColD Fusion outperforms RoBERTa and even previous multitask models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 14591,
+ "eval_count": 132,
+ "ts": "2026-11-21T15:59:06Z"
+}

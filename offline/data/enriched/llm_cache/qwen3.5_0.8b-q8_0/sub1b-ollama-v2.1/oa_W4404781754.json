@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4404781754",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Retrieval-Augmented Generation (RAG)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Retrieval-Augmented Generation (RAG) mitigates this issue by providing external factual evidence."
+   }
+  },
+  {
+   "surface": "LongRAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To this end, we propose LongRAG, a general, dual-perspective, and robust LLM-based RAG system paradigm for LCQA to enhance RAG’s understanding of complex long-context knowledge (i.e., global information and factual details)."
+   }
+  },
+  {
+   "surface": "Vanilla RAG",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive experiments on three multi-hop datasets demonstrate that LongRAG significantly outperforms long-context LLMs (up by 6.94%), advanced RAG (up by 6.16%), and Vanilla RAG (up by 17.25%)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Vanilla RAG",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Extensive experiments on three multi-hop datasets demonstrate that LongRAG significantly outperforms long-context LLMs (up by 6.94%), advanced RAG (up by 6.16%), and Vanilla RAG (up by 17.25%).",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LongContext Question Answering (LCQA)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Retrieval-Augmented Generation (RAG)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LongRAG"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Retrieval-Augmented Generation (RAG)"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Vanilla RAG"
+ ],
+ "duration_ms": 25013,
+ "eval_count": 411,
+ "ts": "2026-11-21T18:52:55Z"
+}

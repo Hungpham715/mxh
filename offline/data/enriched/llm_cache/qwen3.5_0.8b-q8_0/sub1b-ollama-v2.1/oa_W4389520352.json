@@ -1,0 +1,166 @@
+{
+ "paper_id": "oa:W4389520352",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Comparative reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Comparative reasoning is a process of comparing objects, concepts, or entities to draw conclusions, which constitutes a fundamental cognitive ability."
+   }
+  },
+  {
+   "surface": "text-based entity comparison",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach introduces a novel method of collecting scalable data for text-based entity comparison, which leverages both structured and unstructured data."
+   }
+  },
+  {
+   "surface": "structured data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach introduces a novel method of collecting scalable data for text-based entity comparison, which leverages both structured and unstructured data."
+   }
+  },
+  {
+   "surface": "unstructured data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach introduces a novel method of collecting scalable data for text-based entity comparison, which leverages both structured and unstructured data."
+   }
+  },
+  {
+   "surface": "NLP tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While there have been approaches for NLP tasks that require comparative reasoning, they suffer from costly manual data labeling and limited generalizability to different tasks."
+   }
+  },
+  {
+   "surface": "language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose a novel framework to pre-train language models for enhancing their abilities of comparative reasoning over texts."
+   }
+  },
+  {
+   "surface": "pre-training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we present a framework of pre-training language models via three novel objectives on comparative reasoning."
+   }
+  },
+  {
+   "surface": "three novel objectives",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we present a framework of pre-training language models via three novel objectives on comparative reasoning."
+   }
+  },
+  {
+   "surface": "downstream tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluation on downstream tasks including comparative question answering, question generation, and summarization shows that our pre-training framework significantly improves the comparative reasoning abilities of language models, especially under low-resource conditions."
+   }
+  },
+  {
+   "surface": "comparative question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluation on downstream tasks including comparative question answering, question generation, and summarization shows that our pre-training framework significantly improves the comparative reasoning abilities of language models, especially under low-resource conditions."
+   }
+  },
+  {
+   "surface": "question generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluation on downstream tasks including comparative question answering, question generation, and summarization shows that our pre-training framework significantly improves the comparative reasoning abilities of language models, especially under low-resource conditions."
+   }
+  },
+  {
+   "surface": "summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluation on downstream tasks including comparative question answering, question generation, and summarization shows that our pre-training framework significantly improves the comparative reasoning abilities of language models, especially under low-resource conditions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "comparative question answering",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Evaluation on downstream tasks including comparative question answering, question generation, and summarization shows that our pre-training framework significantly improves the comparative reasoning abilities of language models, especially under low-resource conditions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "comparative reasoning",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While there have been approaches for NLP tasks that require comparative reasoning, they suffer from costly manual data labeling and limited generalizability to different tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "comparative reasoning",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While there have been approaches for NLP tasks that require comparative reasoning, they suffer from costly manual data labeling and limited generalizability to different tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "structured data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unstructured data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "structured data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unstructured data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "structured data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unstructured data"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38727,
+ "eval_count": 834,
+ "ts": "2026-11-21T16:34:40Z"
+}

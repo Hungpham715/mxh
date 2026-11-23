@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4404783290",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Nash CoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To alleviate the excessive immersion of the LLM into a specific role, we propose Nash CoT by constructing a competitive system on each path that balances the generation from role-specific LLMs’ and the general LLMs’ generation, thereby ensuring both effective role adoption and diversity in LLM generation further maintaining the performance of multi-path inference while reducing the requirement of the number of inference paths."
+   }
+  },
+  {
+   "surface": "Chain of thought (CoT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chain of thought (CoT) is a reasoning framework that can enhance the performance of large language models (LLMs) on complex inference tasks."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chain of thought (CoT) is a reasoning framework that can enhance the performance of large language models (LLMs) on complex inference tasks."
+   }
+  },
+  {
+   "surface": "multi-path inference",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In particular, among various studies related to CoT, multi-path inference stands out as a simple yet effective improvement."
+   }
+  },
+  {
+   "surface": "question-related role templates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this limitation, we can utilize question-related role templates to guide LLMs into relevant roles, thereby increasing the possibility of correct inferences for each path and further reducing dependence on the number of inference paths while improving reasoning accuracy."
+   }
+  },
+  {
+   "surface": "Arabic Reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We evaluate Nash CoT across various inference tasks, including Arabic Reasoning, Commonsense Question Answering, and Symbolic Inference, achieving results that are comparable to or better than those of multi-path CoT with the equal number of inference paths."
+   }
+  },
+  {
+   "surface": "Commonsense Question Answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We evaluate Nash CoT across various inference tasks, including Arabic Reasoning, Commonsense Question Answering, and Symbolic Inference, achieving results that are comparable to or better than those of multi-path CoT with the equal number of inference paths."
+   }
+  },
+  {
+   "surface": "Symbolic Inference",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We evaluate Nash CoT across various inference tasks, including Arabic Reasoning, Commonsense Question Answering, and Symbolic Inference, achieving results that are comparable to or better than those of multi-path CoT with the equal number of inference paths."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Chain of thought (CoT)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chain of thought (CoT) is a reasoning framework that can enhance the performance of large language models (LLMs) on complex inference tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-path inference"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Arabic Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Commonsense Question Answering"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Symbolic Inference"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33822,
+ "eval_count": 657,
+ "ts": "2026-11-21T19:28:21Z"
+}

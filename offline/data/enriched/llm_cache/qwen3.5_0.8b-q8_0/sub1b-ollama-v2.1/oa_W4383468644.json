@@ -1,0 +1,69 @@
+{
+ "paper_id": "oa:W4383468644",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Word-Group mining approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To solve this problem, we propose a new Word-Group mining approach, which captures the causal effect of any keyword combination and orders the combinations that most affect the prediction."
+   }
+  },
+  {
+   "surface": "counterfactual augmentation method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Then, we build a counterfactual augmentation method based on the multiple word-groups, and use an adaptive voting mechanism to learn the influence of different augmentated samples on the prediction results, so as to force the model to pay attention to effective causal features."
+   }
+  },
+  {
+   "surface": "adaptive voting mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Then, we build a counterfactual augmentation method based on the multiple word-groups, and use an adaptive voting mechanism to learn the influence of different augmentated samples on the prediction results, so as to force the model to pay attention to effective causal features."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "counterfactual augmentation method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, many studies have explored post-hoc interpretable methods to mine shortcuts and causal features for robustness and generalization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "counterfactual augmentation method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Then, we build a counterfactual augmentation method based on the multiple word-groups, and use an adaptive voting mechanism to learn the influence of different augmentated samples on the prediction results, so as to force the model to pay attention to effective causal features.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adaptive voting mechanism",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We demonstrate the effectiveness of the proposed method by several tasks on 8 affective review datasets and 4 toxic language datasets, including cross-domain text classificaion, text attack and gender fairness test.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 33426,
+ "eval_count": 347,
+ "ts": "2026-11-21T15:16:55Z"
+}

@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4389519102",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "M2DF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data."
+   }
+  },
+  {
+   "surface": "Curriculum Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data."
+   }
+  },
+  {
+   "surface": "Multi-grained Multi-curriculum Denoising Framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Curriculum Learning",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Multi-grained Multi-curriculum Denoising Framework",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Multi-grained Multi-curriculum Denoising Framework",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To achieve this goal, we borrow the idea of Curriculum Learning and propose a Multi-grained Multi-curriculum Denoising Framework (M2DF), which can achieve denoising by adjusting the order of training data.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "Multi-grained Multi-curriculum Denoising Framework"
+ ],
+ "duration_ms": 33004,
+ "eval_count": 291,
+ "ts": "2026-11-21T16:20:43Z"
+}

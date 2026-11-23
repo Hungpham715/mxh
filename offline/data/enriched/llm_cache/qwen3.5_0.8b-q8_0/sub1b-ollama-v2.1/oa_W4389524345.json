@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4389524345",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FANToM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce FANToM, a new benchmark designed to stress-test ToM within information-asymmetric conversational contexts via question answering."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our benchmark draws upon important theoretical requisites from psychology and necessary empirical considerations when evaluating large language models (LLMs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show that FANToM is challenging for state-of-the-art LLMs, which perform significantly worse than humans even with chain-of-thought reasoning or fine-tuning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 17750,
+ "eval_count": 133,
+ "ts": "2026-11-21T17:01:19Z"
+}

@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4389518819",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "concept",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Modelling how concepts are related is a central topic in Lexical Semantics."
+   }
+  },
+  {
+   "surface": "relation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "A common strategy is to rely on knowledge graphs (KGs) such as ConceptNet, and to model the relation between two concepts as a set of paths."
+   }
+  },
+  {
+   "surface": "path",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "A common strategy is to rely on knowledge graphs (KGs) such as ConceptNet, and to model the relation between two concepts as a set of paths."
+   }
+  },
+  {
+   "surface": "word",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "However, this is less suitable for words that are only indirectly related and it does not readily allow us to incorporate structured domain knowledge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "path",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "The paths are obtained by first identifying suitable intermediate words and then selecting those words for which informative relation embeddings can be obtained.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "path"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20155,
+ "eval_count": 227,
+ "ts": "2026-11-21T16:18:28Z"
+}

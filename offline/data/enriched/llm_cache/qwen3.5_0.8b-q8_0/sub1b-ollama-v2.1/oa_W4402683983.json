@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4402683983",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given the recent advances in Large Language Models (LLMs), we investigate how a properly crafted prompt can be used to summarize a user’s preferences from past reviews and recommend items based only on language-based preferences."
+   }
+  },
+  {
+   "surface": "prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given the recent advances in Large Language Models (LLMs), we investigate how a properly crafted prompt can be used to summarize a user’s preferences from past reviews and recommend items based only on language-based preferences."
+   }
+  },
+  {
+   "surface": "NL user profile",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we validate the scrutability of our user profile-based recommender by investigating the impact on recommendation changes after editing NL user profiles."
+   }
+  },
+  {
+   "surface": "benchmarking rating prediction datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "According to our evaluations of the model’s rating prediction performance on two benchmarking rating prediction datasets, we observe that this novel approach maintains a performance level on par with established recommender systems in a warm-start setting."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given the recent advances in Large Language Models (LLMs), we investigate how a properly crafted prompt can be used to summarize a user’s preferences from past reviews and recommend items based only on language-based preferences.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given the recent advances in Large Language Models (LLMs), we investigate how a properly crafted prompt can be used to summarize a user’s preferences from past reviews and recommend items based only on language-based preferences.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NL user profile"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24374,
+ "eval_count": 415,
+ "ts": "2026-11-21T18:36:21Z"
+}

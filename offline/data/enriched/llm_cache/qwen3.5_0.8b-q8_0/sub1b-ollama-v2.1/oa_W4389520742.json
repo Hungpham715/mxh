@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4389520742",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Model-tuning Via Prompts (MVP)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we demonstrate surprising gains in adversarial robustness enjoyed by Model-tuning Via Prompts (MVP), an alternative method of adapting to downstream tasks."
+   }
+  },
+  {
+   "surface": "MLP-FT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, NLP practitioners have converged on the following practice: (i) import an off-the-shelf pretrained (masked) language model; (ii) append a multilayer perceptron atop the CLS token’s hidden representation (with randomly initialized weights); and (iii) fine-tune the entire model on a downstream task (MLP-FT)."
+   }
+  },
+  {
+   "surface": "adversarial perturbations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This procedure has produced massive gains on standard NLP benchmarks, but these models remain brittle, even to mild adversarial perturbations."
+   }
+  },
+  {
+   "surface": "NLP datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%."
+   }
+  },
+  {
+   "surface": "4 adversarial attacks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%."
+   }
+  },
+  {
+   "surface": "3 different models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MLP-FT",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This procedure has produced massive gains on standard NLP benchmarks, but these models remain brittle, even to mild adversarial perturbations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "NLP datasets",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "4 adversarial attacks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "3 different models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Across 5 NLP datasets, 4 adversarial attacks, and 3 different models, MVP improves performance against adversarial substitutions by an average of 8% over standard methods and even outperforms adversarial training-based state-of-art defenses by 3.5%.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26094,
+ "eval_count": 575,
+ "ts": "2026-11-21T16:41:20Z"
+}

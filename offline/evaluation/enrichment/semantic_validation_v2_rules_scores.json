@@ -1,0 +1,694 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "evaluation/enrichment/semantic_validation_nonhuman_v2.jsonl",
+    "processed_papers": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/processed/papers.jsonl",
+    "data_dir": "/tmp/graphrag-rules-v3.JGumUl/enriched",
+    "papers_evaluated": 12,
+    "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 54,
+      "predicted": 18,
+      "tp": 12,
+      "fp": 6,
+      "fn": 42,
+      "precision": 0.6667,
+      "recall": 0.2222,
+      "f1": 0.3333
+    },
+    "macro_f1": 0.3529,
+    "per_type": {
+      "dataset": {
+        "support": 9,
+        "predicted": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 6,
+        "precision": 0.75,
+        "recall": 0.3333,
+        "f1": 0.4615
+      },
+      "method": {
+        "support": 24,
+        "predicted": 8,
+        "tp": 6,
+        "fp": 2,
+        "fn": 18,
+        "precision": 0.75,
+        "recall": 0.25,
+        "f1": 0.375
+      },
+      "task": {
+        "support": 21,
+        "predicted": 6,
+        "tp": 3,
+        "fp": 3,
+        "fn": 18,
+        "precision": 0.5,
+        "recall": 0.1429,
+        "f1": 0.2222
+      }
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 55,
+      "predicted": 19,
+      "tp": 11,
+      "fp": 8,
+      "fn": 44,
+      "precision": 0.5789,
+      "recall": 0.2,
+      "f1": 0.2973
+    },
+    "macro_f1": 0.3227,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 21,
+        "predicted": 7,
+        "tp": 2,
+        "fp": 5,
+        "fn": 19,
+        "precision": 0.2857,
+        "recall": 0.0952,
+        "f1": 0.1429
+      },
+      "EVALUATED_ON": {
+        "support": 9,
+        "predicted": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 6,
+        "precision": 0.75,
+        "recall": 0.3333,
+        "f1": 0.4615
+      },
+      "USES_METHOD": {
+        "support": 25,
+        "predicted": 8,
+        "tp": 6,
+        "fp": 2,
+        "fn": 19,
+        "precision": 0.75,
+        "recall": 0.24,
+        "f1": 0.3636
+      }
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4389519066",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:tokenization"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4389519066",
+          "method:tokenization"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389520710",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:helm"
+        ],
+        [
+          "method",
+          "method:perspective-api"
+        ],
+        [
+          "task",
+          "task:toxicity-evaluation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389520710",
+          "task:toxicity-evaluation"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389520710",
+          "dataset:helm"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520710",
+          "method:perspective-api"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385571075",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:simple-german-german"
+        ],
+        [
+          "method",
+          "method:sentence-alignment"
+        ],
+        [
+          "task",
+          "task:sentence-alignment"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571075",
+          "task:sentence-alignment"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4385571075",
+          "dataset:simple-german-german"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571075",
+          "method:sentence-alignment"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385569624",
+      "entity_fp": [
+        [
+          "method",
+          "method:ner"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:earnings-21"
+        ],
+        [
+          "dataset",
+          "dataset:swne"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4385569624",
+          "method:ner"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "EVALUATED_ON",
+          "oa:W4385569624",
+          "dataset:earnings-21"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4385569624",
+          "dataset:swne"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671775",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:docllm"
+        ],
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "task",
+          "task:document-intelligence"
+        ],
+        [
+          "task",
+          "task:multimodal-document-understanding"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671775",
+          "task:document-intelligence"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671775",
+          "task:multimodal-document-understanding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671775",
+          "method:docllm"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671775",
+          "method:fine-tuning"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404782634",
+      "entity_fp": [
+        [
+          "task",
+          "task:question-answering"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:text-kvqa"
+        ],
+        [
+          "method",
+          "method:kalma"
+        ],
+        [
+          "method",
+          "method:vistel"
+        ],
+        [
+          "task",
+          "task:text-based-visual-question-answering"
+        ],
+        [
+          "task",
+          "task:visual-text-entity-linking"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782634",
+          "task:question-answering"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782634",
+          "task:text-based-visual-question-answering"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782634",
+          "task:visual-text-entity-linking"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4404782634",
+          "dataset:text-kvqa"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782634",
+          "method:kalma"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782634",
+          "method:vistel"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671833",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:alignment"
+        ],
+        [
+          "task",
+          "task:preference-evaluation"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671833",
+          "task:alignment"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671833",
+          "task:preference-evaluation"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671923",
+      "entity_fp": [
+        [
+          "method",
+          "method:data-augmentation"
+        ],
+        [
+          "task",
+          "task:hallucination-detection"
+        ],
+        [
+          "task",
+          "task:information-retrieval"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:cognition-aware-prompting"
+        ],
+        [
+          "method",
+          "method:convaug"
+        ],
+        [
+          "method",
+          "method:difficulty-adaptive-sample-filter"
+        ],
+        [
+          "task",
+          "task:conversational-dense-retrieval"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671923",
+          "task:hallucination-detection"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671923",
+          "task:information-retrieval"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671923",
+          "method:data-augmentation"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671923",
+          "task:conversational-dense-retrieval"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671923",
+          "method:cognition-aware-prompting"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671923",
+          "method:convaug"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671923",
+          "method:difficulty-adaptive-sample-filter"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416035706",
+      "entity_fp": [
+        [
+          "task",
+          "task:information-retrieval"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:recursive-task-decomposition"
+        ],
+        [
+          "method",
+          "method:writehere"
+        ],
+        [
+          "task",
+          "task:fiction-writing"
+        ],
+        [
+          "task",
+          "task:long-form-writing"
+        ],
+        [
+          "task",
+          "task:technical-report-generation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035706",
+          "task:information-retrieval"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035706",
+          "task:fiction-writing"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035706",
+          "task:long-form-writing"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035706",
+          "task:technical-report-generation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035706",
+          "method:recursive-task-decomposition"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035706",
+          "method:writehere"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412945071",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:codellama"
+        ],
+        [
+          "method",
+          "method:continual-pre-training"
+        ],
+        [
+          "method",
+          "method:llama"
+        ],
+        [
+          "method",
+          "method:velocitune"
+        ],
+        [
+          "task",
+          "task:code-reasoning"
+        ],
+        [
+          "task",
+          "task:command-line-generation"
+        ],
+        [
+          "task",
+          "task:mathematical-reasoning"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412945071",
+          "task:code-reasoning"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412945071",
+          "task:command-line-generation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412945071",
+          "task:mathematical-reasoning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945071",
+          "method:codellama"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945071",
+          "method:continual-pre-training"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945071",
+          "method:llama"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945071",
+          "method:velocitune"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412886732",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:irc"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:ubuntu-irc"
+        ],
+        [
+          "task",
+          "task:common-ground-misalignment-detection"
+        ],
+        [
+          "task",
+          "task:conversational-grounding"
+        ],
+        [
+          "task",
+          "task:goal-oriented-dialogue"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "EVALUATED_ON",
+          "oa:W4412886732",
+          "dataset:irc"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412886732",
+          "task:common-ground-misalignment-detection"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412886732",
+          "task:conversational-grounding"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412886732",
+          "task:goal-oriented-dialogue"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4412886732",
+          "dataset:ubuntu-irc"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889939",
+      "entity_fp": [
+        [
+          "task",
+          "task:alignment"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:mtsa"
+        ],
+        [
+          "method",
+          "method:multi-turn-reinforcement-learning"
+        ],
+        [
+          "method",
+          "method:red-teaming"
+        ],
+        [
+          "task",
+          "task:multi-turn-safety-alignment"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889939",
+          "task:alignment"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889939",
+          "task:multi-turn-safety-alignment"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889939",
+          "method:mtsa"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889939",
+          "method:multi-turn-reinforcement-learning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889939",
+          "method:red-teaming"
+        ]
+      ]
+    }
+  ]
+}

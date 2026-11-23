@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4412945513",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Automatic Text Classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Skewness in imbalanced datasets affects Automatic Text Classification (ATC), leading to classifier bias toward the majority classes."
+   }
+  },
+  {
+   "surface": "Small and Large Language Model (SLMs and LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work examines undersampling methods to mitigate such bias in Small and Large Language Model (SLMs and LLMs) classifiers."
+   }
+  },
+  {
+   "surface": "classifier bias",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Skewness in imbalanced datasets affects Automatic Text Classification (ATC), leading to classifier bias toward the majority classes."
+   }
+  },
+  {
+   "surface": "undersampling methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work examines undersampling methods to mitigate such bias in Small and Large Language Model (SLMs and LLMs) classifiers."
+   }
+  },
+  {
+   "surface": "Instance Selection techniques",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the limitations found in existing solutions, we propose two novel undersampling methods inspired by state-of-the-art Instance Selection techniques, relying on calibrated confidences and semantic difficulty estimates."
+   }
+  },
+  {
+   "surface": "calibrated confidences",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the limitations found in existing solutions, we propose two novel undersampling methods inspired by state-of-the-art Instance Selection techniques, relying on calibrated confidences and semantic difficulty estimates."
+   }
+  },
+  {
+   "surface": "semantic difficulty estimates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the limitations found in existing solutions, we propose two novel undersampling methods inspired by state-of-the-art Instance Selection techniques, relying on calibrated confidences and semantic difficulty estimates."
+   }
+  },
+  {
+   "surface": "19 baselines",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compare them against 19 baselines across 13 datasets, evaluating: (i) effectiveness, (ii) class imbalance bias, (iii) efficiency, (iv) scalability, and (v) consistency."
+   }
+  },
+  {
+   "surface": "13 datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compare them against 19 baselines across 13 datasets, evaluating: (i) effectiveness, (ii) class imbalance bias, (iii) efficiency, (iv) scalability, and (v) consistency."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Instance Selection techniques",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the limitations found in existing solutions, we propose two novel undersampling methods inspired by state-of-the-art Instance Selection techniques, relying on calibrated confidences and semantic difficulty estimates.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "undersampling methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Based on the limitations found in existing solutions, we propose two novel undersampling methods inspired by state-of-the-art Instance Selection techniques, relying on calibrated confidences and semantic difficulty estimates.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "undersampling methods",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work examines undersampling methods to mitigate such bias in Small and Large Language Model (SLMs and LLMs) classifiers.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "classifier bias"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Automatic Text Classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Automatic Text Classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Automatic Text Classification"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45867,
+ "eval_count": 700,
+ "ts": "2026-11-21T20:52:11Z"
+}

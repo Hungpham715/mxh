@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4401307116",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Structured State Space Models (SSMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Structured State Space Models (SSMs) have emerged as compelling alternatives to Transformer architectures, offering linear-time complexity and superior performance in various sequence modeling tasks."
+   }
+  },
+  {
+   "surface": "Mamba-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite their advantages, SSMs like the original Mamba-2 face training difficulties due to the sensitivities introduced by the extended series of recurrent matrix multiplications."
+   }
+  },
+  {
+   "surface": "Grouped FIR-enhanced SSM (GFSSM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This new structure, denoted as Grouped FIR-enhanced SSM (GFSSM), employs semiseparable matrices for efficient computation."
+   }
+  },
+  {
+   "surface": "Attention Sink",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Furthermore, inspired by the \"attention sink\" phenomenon identified in streaming language models, we incorporate a similar mechanism to enhance the stability and performance of our model over extended sequences."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Mamba-2"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Grouped FIR-enhanced SSM (GFSSM)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Attention Sink"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47393,
+ "eval_count": 380,
+ "ts": "2026-11-21T17:29:38Z"
+}

@@ -1,0 +1,140 @@
+{
+ "paper_id": "oa:W4402671940",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Event Causality Identification (ECI)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Event Causality Identification (ECI) aims to detect whether there exists a causal relation between two events in a document."
+   }
+  },
+  {
+   "surface": "causal relation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Event Causality Identification (ECI) aims to detect whether there exists a causal relation between two events in a document."
+   }
+  },
+  {
+   "surface": "learning paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing studies adopt a kind of identifying after learning paradigm, where events’ representations are first learned and then used for the identification."
+   }
+  },
+  {
+   "surface": "identifying while learning mode",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we take care of the causal direction and propose a new identifying while learning mode for the ECI task."
+   }
+  },
+  {
+   "surface": "causal direction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Furthermore, they mainly focus on the causality existence, but ignoring causal direction."
+   }
+  },
+  {
+   "surface": "iterative learning and identifying framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To this end, this paper designs an iterative learning and identifying framework: In each iteration, we construct an event causality graph, on which events’ causal structure representations are updated for boosting causal identification."
+   }
+  },
+  {
+   "surface": "event causality graph",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To this end, this paper designs an iterative learning and identifying framework: In each iteration, we construct an event causality graph, on which events’ causal structure representations are updated for boosting causal identification."
+   }
+  },
+  {
+   "surface": "boosting next round of causality identification",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We argue that a few causal relations can be easily identified with high confidence, and the directionality and structure of these identified causalities can be utilized to update events’ representations for boosting next round of causality identification."
+   }
+  },
+  {
+   "surface": "public datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on two public datasets show that our approach outperforms the state-of-the-art algorithms in both evaluations for causality existence identification and direction identification."
+   }
+  },
+  {
+   "surface": "causal structure representations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To this end, this paper designs an iterative learning and identifying framework: In each iteration, we construct an event causality graph, on which events’ causal structure representations are updated for boosting causal identification."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "causal structure representations",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we take care of the causal direction and propose a new identifying while learning mode for the ECI task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "events' causal structure representations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "causal relation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "causal direction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "identifying while learning mode"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "causal direction"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "boosting next round of causality identification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "event causality graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "public datasets"
+  }
+ ],
+ "auto_added_endpoints": [
+  "causal structure representations"
+ ],
+ "duration_ms": 49542,
+ "eval_count": 875,
+ "ts": "2026-11-21T18:22:11Z"
+}

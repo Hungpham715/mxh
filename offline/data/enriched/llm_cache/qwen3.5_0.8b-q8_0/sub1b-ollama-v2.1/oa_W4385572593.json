@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4385572593",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SIMMC-VR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose SIMMC-VR, an extension of the SIMMC-2.0 dataset, to a video-grounded task-oriented dialog dataset that captures real-world AI-assisted user scenarios in VR.We propose a novel data collection paradigm that involves(1) generating object-centric multimodal dialog flows with egocentric visual streams and visually-grounded templates,and (2) manually paraphrasing the simulated dialogs for naturalness and diversity while preserving multimodal dependencies."
+   }
+  },
+  {
+   "surface": "SIMMC-2.0",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose SIMMC-VR, an extension of the SIMMC-2.0 dataset, to a video-grounded task-oriented dialog dataset that captures real-world AI-assisted user scenarios in VR.We propose a novel data collection paradigm that involves(1) generating object-centric multimodal dialog flows with egocentric visual streams and visually-grounded templates,and (2) manually paraphrasing the simulated dialogs for naturalness and diversity while preserving multimodal dependencies."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose SIMMC-VR, an extension of the SIMMC-2.0 dataset, to a video-grounded task-oriented dialog dataset that captures real-world AI-assisted user scenarios in VR.We propose a novel data collection paradigm that involves(1) generating object-centric multimodal dialog flows with egocentric visual streams and visually-grounded templates,and (2) manually paraphrasing the simulated dialogs for naturalness and diversity while preserving multimodal dependencies."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SIMMC-2.0",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose SIMMC-VR, an extension of the SIMMC-2.0 dataset, to a video-grounded task-oriented dialog dataset that captures real-world AI-assisted user scenarios in VR.We propose a novel data collection paradigm that involves(1) generating object-centric multimodal dialog flows with egocentric visual streams and visually-grounded templates,and (2) manually paraphrasing the simulated dialogs for naturalness and diversity while preserving multimodal dependencies.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SIMMC-VR"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "SIMMC-2.0"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15357,
+ "eval_count": 287,
+ "ts": "2026-11-21T15:59:01Z"
+}

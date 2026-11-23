@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4404782441",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Scientific Leaderboards",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Scientific leaderboards are standardized ranking systems that facilitate evaluating and comparing competitive methods."
+   }
+  },
+  {
+   "surface": "leaderboard",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Scientific leaderboards are standardized ranking systems that facilitate evaluating and comparing competitive methods."
+   }
+  },
+  {
+   "surface": "TDM triple",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Building on this dataset, we propose three experimental settings that simulate real-world scenarios where TDM triples are fully defined, partially defined, or undefined during leaderboard construction."
+   }
+  },
+  {
+   "surface": "publication",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, the exponential increase in publications has made it infeasible to construct and maintain these leaderboards manually."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "TDM triple",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Scientific leaderboards are standardized ranking systems that facilitate evaluating and comparing competitive methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Scientific Leaderboards",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Scientific leaderboards are standardized ranking systems that facilitate evaluating and comparing competitive methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "leaderboard",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Scientific leaderboards are standardized ranking systems that facilitate evaluating and comparing competitive methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "publication",
+   "to": "leaderboard"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29418,
+ "eval_count": 362,
+ "ts": "2026-11-21T19:07:02Z"
+}

@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4402953801",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TinyAgent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we present TinyAgent, an end-to-end framework for training and deploying task-specific small language model agents capable of function calling for driving agentic systems at the edge."
+   }
+  },
+  {
+   "surface": "LLMCompiler",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first show how to enable accurate function calling for open-source models via the LLMCompiler framework."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then systematically curate a high-quality dataset for function calling, which we use to fine-tune two small language models, TinyAgent-1.1B and 7B."
+   }
+  },
+  {
+   "surface": "TinyAgent-1.1B",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then systematically curate a high-quality dataset for function calling, which we use to fine-tune two small language models, TinyAgent-1.1B and 7B."
+   }
+  },
+  {
+   "surface": "GPT-4-Turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our results show that our models can achieve, and even surpass, the function-calling capabilities of larger models like GPT-4-Turbo, while being fully deployed at the edge."
+   }
+  },
+  {
+   "surface": "Siri-like system",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "As a driving application, we demonstrate a local Siri-like system for Apple's MacBook that can execute user commands through text or voice input."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMCompiler",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first show how to enable accurate function calling for open-source models via the LLMCompiler framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "TinyAgent-1.1B",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then systematically curate a high-quality dataset for function calling, which we use to fine-tune two small language models, TinyAgent-1.1B and 7B.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-4-Turbo",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our results show that our models can achieve, and even surpass, the function-calling capabilities of larger models like GPT-4-Turbo, while being fully deployed at the edge.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "TinyAgent-7B"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "TinyAgent-7B"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Siri-like system"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 55070,
+ "eval_count": 575,
+ "ts": "2026-11-21T18:41:14Z"
+}

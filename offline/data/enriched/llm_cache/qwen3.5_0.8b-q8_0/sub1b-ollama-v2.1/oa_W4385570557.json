@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4385570557",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multilingual Knowledge Graph Completion (KGC)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multilingual Knowledge Graph Completion (KGC) aims to predict missing links with multilingual knowledge graphs."
+   }
+  },
+  {
+   "surface": "alignment dependency",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, existing approaches suffer from two main drawbacks: (a) alignment dependency: the multilingual KGC is always realized with joint entity or relation alignment, which introduces additional alignment models and increases the complexity of the whole framework; (b) training inefficiency: the trained model will only be used for the completion of one target KG, although the data from all KGs are used simultaneously."
+   }
+  },
+  {
+   "surface": "training inefficiency",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, existing approaches suffer from two main drawbacks: (a) alignment dependency: the multilingual KGC is always realized with joint entity or relation alignment, which introduces additional alignment models and increases the complexity of the whole framework; (b) training inefficiency: the trained model will only be used for the completion of one target KG, although the data from all KGs are used simultaneously."
+   }
+  },
+  {
+   "surface": "language-sensitive multi-graph attention (LSMGA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Meanwhile, a language-sensitive multi-graph attention (LSMGA) is proposed to deal with the information inconsistency among different KGs."
+   }
+  },
+  {
+   "surface": "DBP-5L",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets."
+   }
+  },
+  {
+   "surface": "E-PKG",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DBP-5L",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "E-PKG",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results show that our model achieves significant improvements on the DBP-5L and E-PKG datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "alignment dependency"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "training inefficiency"
+  }
+ ],
+ "auto_added_endpoints": [
+  "DBP-5L",
+  "E-PKG"
+ ],
+ "duration_ms": 35279,
+ "eval_count": 476,
+ "ts": "2026-11-21T15:33:02Z"
+}

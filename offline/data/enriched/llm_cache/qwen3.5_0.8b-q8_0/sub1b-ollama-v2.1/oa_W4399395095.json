@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4399395095",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The emergence of Large Language Models (LLMs) has demonstrated promising progress in solving logical reasoning tasks effectively."
+   }
+  },
+  {
+   "surface": "Z3",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9."
+   }
+  },
+  {
+   "surface": "Pyke",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9."
+   }
+  },
+  {
+   "surface": "Prover9",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9."
+   }
+  },
+  {
+   "surface": "LLMs augmented with widely used symbolic solvers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs augmented with widely used symbolic solvers",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Several recent approaches have proposed to change the role of the LLM from the reasoner into a translator between natural language statements and symbolic representations which are then sent to external symbolic solvers to resolve.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Z3",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Pyke",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Prover9",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address this gap, we perform experiments on 3 deductive reasoning benchmarks with LLMs augmented with widely used symbolic solvers: Z3, Pyke, and Prover9.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 44699,
+ "eval_count": 481,
+ "ts": "2026-11-21T17:23:43Z"
+}

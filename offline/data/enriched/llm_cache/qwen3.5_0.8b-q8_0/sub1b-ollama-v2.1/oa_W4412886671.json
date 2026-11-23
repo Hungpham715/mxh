@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4412886671",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Dual Process Theory (DPT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Through experiments with current independent System 1 and System 2 methods, we validate the necessity of using Dual Process Theory (DPT) in real-time tasks."
+   }
+  },
+  {
+   "surface": "Finite-state Machine (FSM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DPT-Agent’s System 1 uses a Finite-state Machine (FSM) and code-as-policy for fast, intuitive, and controllable decision-making."
+   }
+  },
+  {
+   "surface": "code-as-policy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DPT-Agent’s System 1 uses a Finite-state Machine (FSM) and code-as-policy for fast, intuitive, and controllable decision-making."
+   }
+  },
+  {
+   "surface": "Theory of Mind (ToM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DPT-Agent’s System 2 integrates Theory of Mind (ToM) and asynchronous reflection to infer human intentions and perform reasoning-based autonomous decisions."
+   }
+  },
+  {
+   "surface": "Asynchronous reflection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DPT-Agent’s System 2 integrates Theory of Mind (ToM) and asynchronous reflection to infer human intentions and perform reasoning-based autonomous decisions."
+   }
+  },
+  {
+   "surface": "DPT-Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose DPT-Agent, a novel language agent framework that integrates System 1 and System 2 for efficient real-time simultaneous human-AI collaboration."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Finite-state Machine (FSM)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DPT-Agent’s System 1 uses a Finite-state Machine (FSM) and code-as-policy for fast, intuitive, and controllable decision-making.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "code-as-policy",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "DPT-Agent’s System 1 uses a Finite-state Machine (FSM) and code-as-policy for fast, intuitive, and controllable decision-making.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Theory of Mind (ToM)",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DPT-Agent’s System 2 integrates Theory of Mind (ToM) and asynchronous reflection to infer human intentions and perform reasoning-based autonomous decisions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Asynchronous reflection",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DPT-Agent’s System 2 integrates Theory of Mind (ToM) and asynchronous reflection to infer human intentions and perform reasoning-based autonomous decisions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "DPT-Agent",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose DPT-Agent, a novel language agent framework that integrates System 1 and System 2 for efficient real-time simultaneous human-AI collaboration.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21829,
+ "eval_count": 531,
+ "ts": "2026-11-21T19:59:53Z"
+}

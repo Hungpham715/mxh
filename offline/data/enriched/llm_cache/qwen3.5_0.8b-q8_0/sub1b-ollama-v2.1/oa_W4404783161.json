@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4404783161",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Matching-Augmented Reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce a novel method called Matching-Augmented Reasoning (MAR) to enhance VEQA."
+   }
+  },
+  {
+   "surface": "VEQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A multimodal large language model MLLMs may struggle with answering visual-based (personal) entity questions (VEQA), such as ”who is A?” or ”who is A that B is talking to?” for various reasons, e.g., the absence of the name of A in the caption or the inability of MLLMs to recognize A, particularly for less common entities."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VEQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VEQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21781,
+ "eval_count": 201,
+ "ts": "2026-11-21T19:25:33Z"
+}

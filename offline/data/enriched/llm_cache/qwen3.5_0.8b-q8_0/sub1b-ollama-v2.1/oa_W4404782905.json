@@ -1,0 +1,107 @@
+{
+ "paper_id": "oa:W4404782905",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VideoFeedback",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we release VideoFeedback, the first large-scale dataset containing human-provided multi-aspect score over 37.6K synthesized videos from 11 existing video generative models."
+   }
+  },
+  {
+   "surface": "Mantis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We train VideoScore (initialized from Mantis)based on VideoFeedback to enable automatic video quality assessment."
+   }
+  },
+  {
+   "surface": "VideoScore",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We train VideoScore (initialized from Mantis)based on VideoFeedback to enable automatic video quality assessment."
+   }
+  },
+  {
+   "surface": "VideoFeedback-test",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments show that the Spearman’s correlation betweenVideoScore and humans can reach 77.1 on VideoFeedback-test, beating the prior best metrics by about 50 points."
+   }
+  },
+  {
+   "surface": "EvalCrafter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics."
+   }
+  },
+  {
+   "surface": "VBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Mantis",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We train VideoScore (initialized from Mantis)based on VideoFeedback to enable automatic video quality assessment.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "VideoFeedback-test",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments show that the Spearman’s correlation betweenVideoScore and humans can reach 77.1 on VideoFeedback-test, beating the prior best metrics by about 50 points.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "EvalCrafter",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "VBench",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Further result onother held-out EvalCrafter, GenAI-Bench, and VBench show that VideoScore has consistently much higher correlation with humanjudges than other metrics.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "VideoFeedback-test",
+  "EvalCrafter",
+  "VBench"
+ ],
+ "duration_ms": 19734,
+ "eval_count": 376,
+ "ts": "2026-11-21T19:18:34Z"
+}

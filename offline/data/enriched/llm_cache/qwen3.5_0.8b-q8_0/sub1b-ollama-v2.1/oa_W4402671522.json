@@ -1,0 +1,63 @@
+{
+ "paper_id": "oa:W4402671522",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ESCoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To empower the system with better interpretability, we propose an emotional support response generation scheme, named \\textbf{E}motion-Focused and \\textbf{S}trategy-Driven \\textbf{C}hain-\\textbf{o}f-\\textbf{T}hought (\\textbf{ESCoT}), mimicking the process of \\textit{identifying}, \\textit{understanding}, and \\textit{regulating} emotions."
+   }
+  },
+  {
+   "surface": "Dialogue Generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specially, we construct a new dataset with ESCoT in two steps: (1) \\textit{Dialogue Generation} where we first generate diverse conversation situations, then enhance dialogue generation using richer emotional support strategies based on these situations; (2) \\textit{Chain Supplement} where we focus on supplementing selected dialogues with elements such as emotion, stimuli, appraisal, and strategy reason, forming the manually verified chains."
+   }
+  },
+  {
+   "surface": "Chain Supplement",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specially, we construct a new dataset with ESCoT in two steps: (1) \\textit{Dialogue Generation} where we first generate diverse conversation situations, then enhance dialogue generation using richer emotional support strategies based on these situations; (2) \\textit{Chain Supplement} where we focus on supplementing selected dialogues with elements such as emotion, stimuli, appraisal, and strategy reason, forming the manually verified chains."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Emotion-Focused and Strategy-Driven Chain-of-Thought"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Dialogue Generation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chain Supplement"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Dialogue Generation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chain Supplement"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 40459,
+ "eval_count": 634,
+ "ts": "2026-11-21T17:49:30Z"
+}

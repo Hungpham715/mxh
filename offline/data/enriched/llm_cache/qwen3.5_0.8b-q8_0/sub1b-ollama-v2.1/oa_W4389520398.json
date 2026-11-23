@@ -1,0 +1,146 @@
+{
+ "paper_id": "oa:W4389520398",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) are becoming a one-fits-many solution, but they sometimes hallucinate or produce unreliable output."
+   }
+  },
+  {
+   "surface": "hypothesis ensembling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we investigate how hypothesis ensembling can improve the quality of the generated text for the specific problem of LLM-based machine translation."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We experiment with several techniques for ensembling hypotheses produced by LLMs such as ChatGPT, LLaMA, and Alpaca."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We experiment with several techniques for ensembling hypotheses produced by LLMs such as ChatGPT, LLaMA, and Alpaca."
+   }
+  },
+  {
+   "surface": "Alpaca",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We experiment with several techniques for ensembling hypotheses produced by LLMs such as ChatGPT, LLaMA, and Alpaca."
+   }
+  },
+  {
+   "surface": "instruction-based",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding)."
+   }
+  },
+  {
+   "surface": "quality-based reranking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding)."
+   }
+  },
+  {
+   "surface": "minimum Bayes risk (MBR) decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding)."
+   }
+  },
+  {
+   "surface": "LLM-based machine translation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we investigate how hypothesis ensembling can improve the quality of the generated text for the specific problem of LLM-based machine translation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We experiment with several techniques for ensembling hypotheses produced by LLMs such as ChatGPT, LLaMA, and Alpaca.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM-based machine translation",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we investigate how hypothesis ensembling can improve the quality of the generated text for the specific problem of LLM-based machine translation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "instruction-based",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "quality-based reranking",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We provide a comprehensive study along multiple dimensions, including the method to generate hypotheses (multiple prompts, temperature-based sampling, and beam search) and the strategy to produce the final translation (instruction-based, quality-based reranking, and minimum Bayes risk (MBR) decoding).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "hypothesis ensembling"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaMA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Alpaca"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "minimum Bayes risk (MBR) decoding"
+  }
+ ],
+ "auto_added_endpoints": [
+  "LLM-based machine translation"
+ ],
+ "duration_ms": 57936,
+ "eval_count": 892,
+ "ts": "2026-11-21T16:39:31Z"
+}

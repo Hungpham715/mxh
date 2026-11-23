@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4389523840",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Fighting Fire with Fire",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To combat this emerging risk of LLMs, we propose a novel “Fighting Fire with Fire” (F3) strategy that harnesses modern LLMs’ generative and emergent reasoning capabilities to counter human-written and LLM-generated disinformation."
+   }
+  },
+  {
+   "surface": "GPT-3.5-turbo",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "First, we leverage GPT-3.5-turbo to synthesize authentic and deceptive LLM-generated content through paraphrase-based and perturbation-based prefix-style prompts, respectively."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-3.5-turbo",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "First, we leverage GPT-3.5-turbo to synthesize authentic and deceptive LLM-generated content through paraphrase-based and perturbation-based prefix-style prompts, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-3.5-turbo",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Second, we apply zero-shot in-context semantic reasoning techniques with cloze-style prompts to discern genuine from deceptive posts and news articles.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 33096,
+ "eval_count": 241,
+ "ts": "2026-11-21T16:50:43Z"
+}

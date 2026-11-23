@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4404783136",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TraveLER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we propose TraveLER, a method that can create a plan to \"Traverse” through the video, ask questions about individual frames to \"Locate” and store key information, and then \"Evaluate” if there is enough information to answer the question."
+   }
+  },
+  {
+   "surface": "Planner agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome this, we introduce a modular multi-LMM agent framework based on several agents with different roles, instructed by a Planner agent that updates its instructions using shared feedback from the other agents."
+   }
+  },
+  {
+   "surface": "Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome this, we introduce a modular multi-LMM agent framework based on several agents with different roles, instructed by a Planner agent that updates its instructions using shared feedback from the other agents."
+   }
+  },
+  {
+   "surface": "Locate",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we propose TraveLER, a method that can create a plan to \"Traverse” through the video, ask questions about individual frames to \"Locate” and store key information, and then \"Evaluate” if there is enough information to answer the question."
+   }
+  },
+  {
+   "surface": "Evaluate",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, we propose TraveLER, a method that can create a plan to \"Traverse” through the video, ask questions about individual frames to \"Locate” and store key information, and then \"Evaluate” if there is enough information to answer the question."
+   }
+  },
+  {
+   "surface": "Replan",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, if there is not enough information, our method is able to \"Replan” based on its collected knowledge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Planner agent",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome this, we introduce a modular multi-LMM agent framework based on several agents with different roles, instructed by a Planner agent that updates its instructions using shared feedback from the other agents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Replan",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Finally, if there is not enough information, our method is able to \"Replan” based on its collected knowledge.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Locate"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Evaluate"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30414,
+ "eval_count": 540,
+ "ts": "2026-11-21T19:24:55Z"
+}

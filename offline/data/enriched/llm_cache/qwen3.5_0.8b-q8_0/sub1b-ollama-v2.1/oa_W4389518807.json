@@ -1,0 +1,94 @@
+{
+ "paper_id": "oa:W4389518807",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GEMFormer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To address these issues, we propose GEMFormer, a two-stage method that first collects relevant information over the entire document to the memory and then combines it with local context to solve the task."
+   }
+  },
+  {
+   "surface": "multi-hop question answering (MHQA)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Transformers have become the gold standard for many natural language processing tasks and, in particular, for multi-hop question answering (MHQA)."
+   }
+  },
+  {
+   "surface": "long document",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This task includes processing a long document and reasoning over the multiple parts of it."
+   }
+  },
+  {
+   "surface": "reasoning over the multiple parts of it",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This task includes processing a long document and reasoning over the multiple parts of it."
+   }
+  },
+  {
+   "surface": "attention mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Conversely, the second group relies on the attention mechanism of the long input encoding model to facilitate multi-hop reasoning."
+   }
+  },
+  {
+   "surface": "global contextual information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "However, attention-based token representations lack explicit global contextual information to connect reasoning steps."
+   }
+  },
+  {
+   "surface": "supporting facts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We also found that the global explicit memory contains information from supporting facts required for the correct answer."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-hop question answering (MHQA)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This task includes processing a long document and reasoning over the multiple parts of it.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-hop question answering (MHQA)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-hop question answering (MHQA)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-hop question answering (MHQA)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38926,
+ "eval_count": 482,
+ "ts": "2026-11-21T16:17:30Z"
+}

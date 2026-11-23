@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4402671548",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Video-ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While there have been initial attempts for image-based conversation models, this work addresses the under-explored field of video-based conversation by introducing Video-ChatGPT."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Conversation agents fueled by Large Language Models (LLMs) are providing a new way to interact with visual data."
+   }
+  },
+  {
+   "surface": "video-adapted visual encoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It is a multimodal model that merges a video-adapted visual encoder with an LLM."
+   }
+  },
+  {
+   "surface": "dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new dataset of 100,000 video-instruction pairs used to train Video-ChatGPT acquired via manual and semi-automated pipeline that is easily scalable and robust to label noise."
+   }
+  },
+  {
+   "surface": "100,000 video-instruction pairs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new dataset of 100,000 video-instruction pairs used to train Video-ChatGPT acquired via manual and semi-automated pipeline that is easily scalable and robust to label noise."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It is a multimodal model that merges a video-adapted visual encoder with an LLM.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "video-adapted visual encoder",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "It is a multimodal model that merges a video-adapted visual encoder with an LLM.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce a new dataset of 100,000 video-instruction pairs used to train Video-ChatGPT acquired via manual and semi-automated pipeline that is easily scalable and robust to label noise.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 28402,
+ "eval_count": 358,
+ "ts": "2026-11-21T17:50:58Z"
+}

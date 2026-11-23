@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4412945050",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Movie101v2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To advance this field, we introduce Movie101v2, a large-scale, bilingual dataset with enhanced data quality specifically designed for movie narration."
+   }
+  },
+  {
+   "surface": "movie narration",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic movie narration aims to generate video-aligned plot descriptions to assist visually impaired audiences."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "movie narration",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Unlike standard video captioning, it involves not only describing key visual details but also inferring plots that unfold across multiple movie shots, presenting distinct and complex challenges.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "movie narration"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "movie narration"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15591,
+ "eval_count": 293,
+ "ts": "2026-11-21T20:34:56Z"
+}

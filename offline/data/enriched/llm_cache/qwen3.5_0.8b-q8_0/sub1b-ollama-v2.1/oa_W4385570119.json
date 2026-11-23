@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4385570119",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "WhitenedCSE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents a whitening-based contrastive learning method for sentence embedding learning (WhitenedCSE), which combines contrastive learning with a novel shuffled group whitening."
+   }
+  },
+  {
+   "surface": "shuffled group whitening",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents a whitening-based contrastive learning method for sentence embedding learning (WhitenedCSE), which combines contrastive learning with a novel shuffled group whitening."
+   }
+  },
+  {
+   "surface": "contrastive learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents a whitening-based contrastive learning method for sentence embedding learning (WhitenedCSE), which combines contrastive learning with a novel shuffled group whitening."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "shuffled group whitening",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper presents a whitening-based contrastive learning method for sentence embedding learning (WhitenedCSE), which combines contrastive learning with a novel shuffled group whitening.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrastive learning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Generally, contrastive learning pulls distortions of a single sample (i.e., positive samples) close and push negative samples far away, correspondingly facilitating the alignment and uniformity in the feature space.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "BERT{pasted macro 'BA'}"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "BERT{pasted macro 'BA'}"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21210,
+ "eval_count": 411,
+ "ts": "2026-11-21T15:25:09Z"
+}

@@ -1,0 +1,96 @@
+{
+ "paper_id": "oa:W4389519054",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Continual Named Entity Recognition (CNER)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Continual Named Entity Recognition (CNER) is a burgeoning area, which involves updating an existing model by incorporating new entity types sequentially."
+   }
+  },
+  {
+   "surface": "catastrophic forgetting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Nevertheless, continual learning approaches are often severely afflicted by catastrophic forgetting."
+   }
+  },
+  {
+   "surface": "pooled feature distillation loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we introduce a pooled feature distillation loss that skillfully navigates the trade-off between retaining knowledge of old entity types and acquiring new ones, thereby more effectively mitigating the problem of catastrophic forgetting."
+   }
+  },
+  {
+   "surface": "confidence-based pseudo-labeling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Additionally, we develop a confidence-based pseudo-labeling for the non-entity type, i.e., predicting entity types using the old model to handle the semantic shift of the non-entity type."
+   }
+  },
+  {
+   "surface": "adaptive re-weighting type-balanced learning strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Following the pseudo-labeling process, we suggest an adaptive re-weighting type-balanced learning strategy to handle the issue of biased type distribution."
+   }
+  },
+  {
+   "surface": "ten CNER settings",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We carried out comprehensive experiments on ten CNER settings using three different datasets."
+   }
+  },
+  {
+   "surface": "three different datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We carried out comprehensive experiments on ten CNER settings using three different datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ten CNER settings",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We carried out comprehensive experiments on ten CNER settings using three different datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "three different datasets",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We carried out comprehensive experiments on ten CNER settings using three different datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "catastrophic forgetting"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37838,
+ "eval_count": 432,
+ "ts": "2026-11-21T16:19:13Z"
+}

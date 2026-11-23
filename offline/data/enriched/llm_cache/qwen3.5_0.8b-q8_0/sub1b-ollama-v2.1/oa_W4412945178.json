@@ -1,0 +1,132 @@
+{
+ "paper_id": "oa:W4412945178",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RewardBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "We provide extensive experimental results evaluating our method across the three targeted response domains as well as general annotation tasks, using RewardBench (incl."
+   }
+  },
+  {
+   "surface": "AlpacaEval",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "AlpacaEval and LLMBar), RewardMath, as well as three new datasets for domains with saturated pre-existing datasets."
+   }
+  },
+  {
+   "surface": "LLMBar",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "AlpacaEval and LLMBar), RewardMath, as well as three new datasets for domains with saturated pre-existing datasets."
+   }
+  },
+  {
+   "surface": "RewardMath",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "AlpacaEval and LLMBar), RewardMath, as well as three new datasets for domains with saturated pre-existing datasets."
+   }
+  },
+  {
+   "surface": "web-search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our system uses web-search and code execution to ground itself based on external validation, independent of the LLM’s internal knowledge and biases."
+   }
+  },
+  {
+   "surface": "code execution",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our system uses web-search and code execution to ground itself based on external validation, independent of the LLM’s internal knowledge and biases."
+   }
+  },
+  {
+   "surface": "long-form factual",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this work, we explore augmenting standard AI annotator systems with additional tools to improve performance on three challenging response domains: long-form factual, math and code tasks."
+   }
+  },
+  {
+   "surface": "math",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this work, we explore augmenting standard AI annotator systems with additional tools to improve performance on three challenging response domains: long-form factual, math and code tasks."
+   }
+  },
+  {
+   "surface": "code tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this work, we explore augmenting standard AI annotator systems with additional tools to improve performance on three challenging response domains: long-form factual, math and code tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "web-search",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose a tool-using agentic system to provide higher quality feedback on these domains.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "code execution",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our system uses web-search and code execution to ground itself based on external validation, independent of the LLM’s internal knowledge and biases.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long-form factual"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "math"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "code tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long-form factual"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "math"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "code tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 57265,
+ "eval_count": 899,
+ "ts": "2026-11-21T23:26:52Z"
+}

@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4385572331",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "fine-tuned LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper we take the first step to address this open problem by tracing back the origin of a given fine-tuned LLM to its corresponding pre-trained base model."
+   }
+  },
+  {
+   "surface": "pre-trained base model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Thus, we need a method to investigate how a model was trained or a piece of text was generated and what their pre-trained base model was."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fine-tuned LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fine-tuned LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15660,
+ "eval_count": 236,
+ "ts": "2026-11-21T15:55:57Z"
+}

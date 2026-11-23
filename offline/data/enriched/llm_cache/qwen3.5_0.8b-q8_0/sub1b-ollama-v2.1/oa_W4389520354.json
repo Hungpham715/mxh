@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4389520354",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "zero-shot sharpness-aware quantization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Motivated by this, we propose a novel zero-shot sharpness-aware quantization (ZSAQ) framework for the zero-shot quantization of various PLMs."
+   }
+  },
+  {
+   "surface": "SAM-SGA optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The key algorithm in solving ZSAQ is the SAM-SGA optimization, which aims to improve the quantization accuracy and model generalization via optimizing a minimax problem."
+   }
+  },
+  {
+   "surface": "minimax problem",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The key algorithm in solving ZSAQ is the SAM-SGA optimization, which aims to improve the quantization accuracy and model generalization via optimizing a minimax problem."
+   }
+  },
+  {
+   "surface": "zero-shot quantization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While having no access to original training data due to security and privacy concerns has emerged the demand for zero-shot quantization."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "zero-shot sharpness-aware quantization",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The key algorithm in solving ZSAQ is the SAM-SGA optimization, which aims to improve the quantization accuracy and model generalization via optimizing a minimax problem.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "zero-shot sharpness-aware quantization",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We theoretically prove the convergence rate for the minimax optimization problem and this result can be applied to other nonconvex-PL minimax optimization frameworks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "zero-shot quantization",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Motivated by this, we propose a novel zero-shot sharpness-aware quantization (ZSAQ) framework for the zero-shot quantization of various PLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "zero-shot sharpness-aware quantization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37618,
+ "eval_count": 404,
+ "ts": "2026-11-21T16:34:53Z"
+}

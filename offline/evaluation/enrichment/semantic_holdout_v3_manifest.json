@@ -1,0 +1,35 @@
+{
+  "schema_version": "enrichment-semantic-validation-manifest-v1",
+  "created_at": "2026-11-21T21:25:00+07:00",
+  "purpose": "post-freeze nonhuman holdout; not independent human gold",
+  "selection": {
+    "population": "processed papers excluding both prior 12-paper development slices",
+    "years": [2023, 2024, 2025],
+    "papers_per_year": 4,
+    "eligibility": "abstract length >= 300 and neutral extraction cue present",
+    "ordering": "sha256('semantic-validation-v3|' + paper_id)",
+    "prediction_blind_at_label_freeze": true
+  },
+  "annotation": {
+    "annotators": 1,
+    "annotator_kind": "codex_nonhuman_source_review",
+    "independent_human_gold": false,
+    "labels_file": "semantic_holdout_nonhuman_v3.jsonl",
+    "labels_sha256": "23d0326b73ade3774945440b920b7166bc54ae973f87a341044e9853b5b9c420",
+    "labels_frozen_before_first_score": true,
+    "papers": 12,
+    "entities": 68,
+    "relations": 68
+  },
+  "frozen_extractor_sha256": {
+    "src/enrichment/extract_rules.py": "e1e18a42bd3b00a694bb472b0cdd7167ed998457f98541adf6ed450ccbcba44b",
+    "src/enrichment/extract_llm.py": "a5b01d0ac2dae0eb1aecc47ff2458f4725a06e25267db3c48b9c3f1dec8fe831",
+    "src/enrichment/merge.py": "97b72dda5f2af22a1706acae20fe2e7a7b7d5dda6257a5af2b8f088c0f87ea29",
+    "configs/gazetteer.yaml": "c2d71bb810ab58dc6a97b8a6480c7db60adeaf1e1f9991536b3bc82e92ef5b28"
+  },
+  "limitations": [
+    "Single nonhuman annotator; no inter-annotator agreement.",
+    "Selection is cue-enriched rather than a prevalence estimate for all 1,091 papers.",
+    "Useful as a leakage-separated diagnostic only; it cannot satisfy an independent-human gate."
+  ]
+}

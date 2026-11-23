@@ -1,0 +1,132 @@
+{
+ "paper_id": "oa:W4402671303",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SOTOPIA-π",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Motivated by this gap, we propose an interactive learning method, SOTOPIA-π, that improves the social intelligence of language agents."
+   }
+  },
+  {
+   "surface": "behavior cloning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This method leverages behavior cloning and self-reinforcement based training on filtered social interaction data according to large language model (LLM) rating."
+   }
+  },
+  {
+   "surface": "self-reinforcement based training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This method leverages behavior cloning and self-reinforcement based training on filtered social interaction data according to large language model (LLM) rating."
+   }
+  },
+  {
+   "surface": "filtered social interaction data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This method leverages behavior cloning and self-reinforcement based training on filtered social interaction data according to large language model (LLM) rating."
+   }
+  },
+  {
+   "surface": "large language model (LLM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This method leverages behavior cloning and self-reinforcement based training on filtered social interaction data according to large language model (LLM) rating."
+   }
+  },
+  {
+   "surface": "GPT-4-based agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show that our training method allows a 7B LLM to reach the social goal completion ability of an expert model (GPT-4-based agent) without the loss of more generic abilities, such as the ability to answer knowledge-based questions."
+   }
+  },
+  {
+   "surface": "MMLU benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also demonstrate that this training paradigm uncovers some weaknesses in standard evaluation and safety training paradigms that (1) LLM-based evaluation of social intelligence overestimates the abilities of the language agents trained specifically for social interaction, and that (2) despite not training for better safety or question answering (QA) ability, our methods improve the safety of language agents and maintain general QA ability on the MMLU benchmark."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "behavior cloning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This social learning process is largely understudied by existing research on building language agents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "self-reinforcement based training",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This social learning process is largely understudied by existing research on building language agents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "large language model (LLM)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This social learning process is largely understudied by existing research on building language agents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-4-based agent",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This social learning process is largely understudied by existing research on building language agents.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MMLU benchmark",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also demonstrate that this training paradigm uncovers some weaknesses in standard evaluation and safety training paradigms that (1) LLM-based evaluation of social intelligence overestimates the abilities of the language agents trained specifically for social interaction, and that (2) despite not training for better safety or question answering (QA) ability, our methods improve the safety of language agents and maintain general QA ability on the MMLU benchmark.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "filtered social interaction data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GPT-4-based agent"
+  }
+ ],
+ "auto_added_endpoints": [
+  "MMLU benchmark"
+ ],
+ "duration_ms": 57824,
+ "eval_count": 887,
+ "ts": "2026-11-21T17:48:49Z"
+}

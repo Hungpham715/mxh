@@ -1,0 +1,63 @@
+{
+ "paper_id": "oa:W4417226603",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In many real-world scenarios, a single Large Language Model (LLM) may encounter contradictory claims-some accurate, others forcefully incorrect-and must judge which is true."
+   }
+  },
+  {
+   "surface": "TruthfulQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate this risk in a single-turn, multi-agent debate framework: one LLM-based agent provides a factual answer from TruthfulQA, another vigorously defends a falsehood, and the same LLM architecture serves as judge."
+   }
+  },
+  {
+   "surface": "judge",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In many real-world scenarios, a single Large Language Model (LLM) may encounter contradictory claims-some accurate, others forcefully incorrect-and must judge which is true."
+   }
+  },
+  {
+   "surface": "CW-POR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce the Confidence-Weighted Persuasion Override Rate (CW-POR), which captures not only how often the judge is deceived but also how strongly it believes the incorrect choice."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "TruthfulQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20954,
+ "eval_count": 364,
+ "ts": "2026-11-21T22:25:34Z"
+}

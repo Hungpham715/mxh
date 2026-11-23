@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4411120759",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TaxoMatic",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper introduces TaxoMatic, a framework that leverages large language models to automate definition extraction from academic literature."
+   }
+  },
+  {
+   "surface": "LLM-based relevance classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Focusing on the media bias domain, the framework encompasses data collection, LLM-based relevance classification, and extraction of conceptual definitions."
+   }
+  },
+  {
+   "surface": "conceptual definitions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Focusing on the media bias domain, the framework encompasses data collection, LLM-based relevance classification, and extraction of conceptual definitions."
+   }
+  },
+  {
+   "surface": "dataset of 2,398 manually rated articles",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Evaluated on a dataset of 2,398 manually rated articles, the study demonstrates the frameworks effectiveness, with Claude-3-sonnet achieving the best results in both relevance classification and definition extraction."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "dataset of 2,398 manually rated articles",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Evaluated on a dataset of 2,398 manually rated articles, the study demonstrates the frameworks effectiveness, with Claude-3-sonnet achieving the best results in both relevance classification and definition extraction.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM-based relevance classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conceptual definitions"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21819,
+ "eval_count": 334,
+ "ts": "2026-11-21T19:55:18Z"
+}

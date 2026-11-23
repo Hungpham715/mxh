@@ -7,7 +7,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from src.common import EVAL, OUTPUT, PROCESSED, RAW, REJECTED, ROOT, log, read_json, read_jsonl
+from src.common import EVAL, OUTPUT, PROCESSED, RAW, REJECTED, log, read_json, read_jsonl
 from src.graph.derive import REL_TYPES
 from src.report.doc import Doc
 
@@ -49,13 +49,19 @@ def build_report(out_pdf: Path) -> int:
     counts = _j(AN / "graph_counts.json") or {}
     net = _j(AN / "author_network.json") or {}
     sw = net.get("small_world") or {}
+    kg_sw = _j(AN / "knowledge_graph_small_world.json") or {}
     imp = _j(NEO / "import_report_latest.json")
     imp2 = _j(NEO / "idempotency_check.json")
     pre = _j(NEO / "preflight.json")
     scores = _j(EVAL / "scores.json") or {}
     scores_post = _j(EVAL / "scores_postfix.json")
     scores_ind = _j(EVAL / "scores_independent_v2.json")
-    semantic = _j(EVAL / "enrichment" / "semantic_scores.json")
+    semantic_fresh = _j(EVAL / "enrichment" / "semantic_holdout_v4_hybrid_scores.json")
+    semantic = semantic_fresh or _j(EVAL / "enrichment" / "semantic_scores.json")
+    semantic_v6 = _j(EVAL / "enrichment" / "semantic_holdout_v6_hybrid_scores.json")
+    semantic_v6_rules = _j(EVAL / "enrichment" / "semantic_holdout_v6_rules_scores.json")
+    semantic_v7 = _j(EVAL / "enrichment" / "semantic_holdout_v7_retained_scores.json")
+    semantic_v7_rules = _j(EVAL / "enrichment" / "semantic_holdout_v7_rules_scores.json")
     struct = _j(EVAL / "structural_checks.json") or {}
     audits = _j(EVAL / "source_audits.json") or {}
     queries = _j(NEO / "example_queries.json")
@@ -181,14 +187,73 @@ def build_report(out_pdf: Path) -> int:
             f"{pilot.get('summary', '')}")
     if semantic:
         d.h3("Đánh giá ngữ nghĩa NER/RE của enrichment")
-        d.p("Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. "
-            "Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.")
+        if semantic_fresh:
+            d.p("Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ của holdout v4 gồm 12 abstract; "
+                "nhãn đã được freeze trước lần dự đoán đầu tiên. Đây là reference nonhuman (một annotator), không phải "
+                "independent human gold và không được ngoại suy cho 1.091 bài. Hybrid Qwen3.5 0.8B chạy CPU-only, "
+                "không dùng GPU.")
+        else:
+            d.p("Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. "
+                "Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.")
         d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], [
             ["Entity (micro)", _fmt(semantic["entity"]["micro"]["precision"]), _fmt(semantic["entity"]["micro"]["recall"]),
              _fmt(semantic["entity"]["micro"]["f1"]), _fmt(semantic["entity"]["micro"]["support"])],
             ["Relation (micro)", _fmt(semantic["relation"]["micro"]["precision"]), _fmt(semantic["relation"]["micro"]["recall"]),
              _fmt(semantic["relation"]["micro"]["f1"]), _fmt(semantic["relation"]["micro"]["support"])],
         ], [0.36, 0.16, 0.16, 0.16, 0.16])
+        if semantic_fresh:
+            d.p("So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE "
+                "41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được "
+                "vì dùng development slice và evaluator cũ làm mất provenance membership.")
+        if semantic_v6:
+            d.p("Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check/v3/v4/v5) đo cùng cấu hình "
+                "retained nói trên bằng protocol gán nhãn surface-first: nhãn freeze dạng surface verbatim trong "
+                "abstract, rồi ID chuẩn hóa được suy ra bằng chính hàm canonicalization đã freeze "
+                "(_canonicalize_llm + gazetteer v1.2) trước khi mở bất kỳ dự đoán nào. Audit contract của v4 cho thấy 18/56 "
+                "thực thể gold của v4 có ID không tái lập được từ surface verbatim theo contract freeze "
+                "(paraphrase hoặc lệch policy acronym), nên v4 lẫn v5 đều lẫn nhiễu gán nhãn; v6 là phép đo sạch "
+                "hơn của cùng hệ thống, không phải thay đổi model. Không so v6 với v4 như một cải tiến model vì "
+                "protocol gán nhãn khác nhau; đây vẫn là reference nonhuman một annotator.")
+            v6_rows = [
+                ["v6 Entity (micro)", _fmt(semantic_v6["entity"]["micro"]["precision"]), _fmt(semantic_v6["entity"]["micro"]["recall"]),
+                 _fmt(semantic_v6["entity"]["micro"]["f1"]), _fmt(semantic_v6["entity"]["micro"]["support"])],
+                ["v6 Relation (micro)", _fmt(semantic_v6["relation"]["micro"]["precision"]), _fmt(semantic_v6["relation"]["micro"]["recall"]),
+                 _fmt(semantic_v6["relation"]["micro"]["f1"]), _fmt(semantic_v6["relation"]["micro"]["support"])],
+            ]
+            if semantic_v6_rules:
+                v6_rows.extend([
+                    ["v6 Rules-only Entity", _fmt(semantic_v6_rules["entity"]["micro"]["precision"]), _fmt(semantic_v6_rules["entity"]["micro"]["recall"]),
+                     _fmt(semantic_v6_rules["entity"]["micro"]["f1"]), _fmt(semantic_v6_rules["entity"]["micro"]["support"])],
+                    ["v6 Rules-only Relation", _fmt(semantic_v6_rules["relation"]["micro"]["precision"]), _fmt(semantic_v6_rules["relation"]["micro"]["recall"]),
+                     _fmt(semantic_v6_rules["relation"]["micro"]["f1"]), _fmt(semantic_v6_rules["relation"]["micro"]["support"])],
+                ])
+            d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], v6_rows, [0.36, 0.16, 0.16, 0.16, 0.16])
+            if semantic_v6_rules:
+                d.p("Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; "
+                    "task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh "
+                    "protocol gán nhãn sạch hơn, không phải cải tiến model.")
+        if semantic_v7:
+            d.p("Holdout v7 (12 bài mới, loại trừ 72 bài đã tiêu) là gate one-shot cho candidate mở rộng "
+                "stoplist generic-surface: candidate đạt NER 43,24% / RE 41,38%, dưới ngưỡng khai báo trước "
+                "0,50 và trùng khớp retained trên chính v7, nên bị loại và schema đã revert về đúng hash "
+                "committed. v7 đồng thời là phép đo untouched thứ ba của cấu hình retained; slice nhiều tên "
+                "mới khiến rules-only chỉ đạt 18,46%/17,14% và hybrid tăng +24,78/+24,24 điểm — khoảng cách "
+                "hybrid lớn nhất đo được. Ba phép đo untouched (v4, v6, v7) nhất quán về độ lớn; khác biệt "
+                "phản ánh độ khó slice, không phải drift cấu hình.")
+            v7_rows = [
+                ["v7 Entity (micro)", _fmt(semantic_v7["entity"]["micro"]["precision"]), _fmt(semantic_v7["entity"]["micro"]["recall"]),
+                 _fmt(semantic_v7["entity"]["micro"]["f1"]), _fmt(semantic_v7["entity"]["micro"]["support"])],
+                ["v7 Relation (micro)", _fmt(semantic_v7["relation"]["micro"]["precision"]), _fmt(semantic_v7["relation"]["micro"]["recall"]),
+                 _fmt(semantic_v7["relation"]["micro"]["f1"]), _fmt(semantic_v7["relation"]["micro"]["support"])],
+            ]
+            if semantic_v7_rules:
+                v7_rows.extend([
+                    ["v7 Rules-only Entity", _fmt(semantic_v7_rules["entity"]["micro"]["precision"]), _fmt(semantic_v7_rules["entity"]["micro"]["recall"]),
+                     _fmt(semantic_v7_rules["entity"]["micro"]["f1"]), _fmt(semantic_v7_rules["entity"]["micro"]["support"])],
+                    ["v7 Rules-only Relation", _fmt(semantic_v7_rules["relation"]["micro"]["precision"]), _fmt(semantic_v7_rules["relation"]["micro"]["recall"]),
+                     _fmt(semantic_v7_rules["relation"]["micro"]["f1"]), _fmt(semantic_v7_rules["relation"]["micro"]["support"])],
+                ])
+            d.table(["Bài toán", "Precision", "Recall", "F1", "Support"], v7_rows, [0.36, 0.16, 0.16, 0.16, 0.16])
 
     # ---------------------------------------------------------------- 4
     d.h2("4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j")
@@ -338,6 +403,28 @@ def build_report(out_pdf: Path) -> int:
     else:
         d.p(f"Không xác định: {sw.get('reason')}")
 
+    d.h3("Đối chiếu small-world trên toàn knowledge graph")
+    if kg_sw.get("status") == "computed":
+        kg_distance = kg_sw.get("whole_network_distance") or {}
+        d.p("Để đối chiếu công bằng với các đồ án phân tích toàn heterogeneous KG, pipeline đo thêm một projection "
+            "vô hướng đơn gồm đủ 5 nhãn nút và 10 loại quan hệ. Phép đo này <b>không thay thế</b> kết luận của mạng "
+            "xã hội đồng tác giả ở trên.")
+        d.table(["Đại lượng toàn KG", "Giá trị"], [
+            ["Nút / cạnh đơn", f"{_fmt(kg_sw.get('lcc_nodes'))} / {_fmt(kg_sw.get('simple_edges'))}"],
+            ["Tỷ lệ node trong LCC", _fmt(kg_sw.get("lcc_ratio"))],
+            ["Tỷ lệ cặp có đường đi", _fmt(kg_distance.get("reachable_pair_fraction"))],
+            ["C_obs / C_rand", f"{_fmt(kg_sw.get('C_obs'))} / {_fmt(kg_sw.get('C_rand'))}"],
+            ["L_obs / L_rand", f"{_fmt(kg_sw.get('L_obs'))} / {_fmt(kg_sw.get('L_rand'))} = {_fmt(kg_sw.get('L_obs_over_L_rand'))}"],
+            ["σ", _fmt(kg_sw.get("sigma"))],
+            ["Monte Carlo p(C_rand ≥ C_obs)", _fmt(kg_sw.get("C_empirical_p_ge_obs"))],
+            ["Kết luận", kg_sw.get("verdict")],
+        ], [0.5, 0.5])
+        d.p("Toàn KG liên thông nhờ các node Paper/Venue/Topic/Institution làm cầu nối. Vì membership theo paper tạo "
+            "motif dày và làm clustering tăng, kết quả này chỉ chứng minh topology small-world của KG; không được diễn "
+            "giải thành bằng chứng rằng mạng tác giả toàn cầu là small-world.")
+    else:
+        d.p(f"Không xác định: {kg_sw.get('reason', 'chưa sinh artifact')}")
+
     # ---------------------------------------------------------------- 7
     d.h2("7. Kiểm tra chất lượng và tiêu chí 90%")
     d.p("Chất lượng cạnh đo bằng <b>precision</b> = cạnh đúng / cạnh được kiểm. Quy trình: (1) kiểm tra cấu trúc <b>mọi</b> cạnh "
@@ -385,7 +472,7 @@ def build_report(out_pdf: Path) -> int:
         "mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.")
     d.bullets([
         "Phép chiếu tác giả bị phân mảnh do lấy mẫu ~1.100 bài trên hàng chục nghìn bài; mạng thật dày hơn nhiều.",
-        "Small-world chỉ được kiểm trên LCC: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần; harmonic path/global efficiency toàn mạng được báo riêng và không dùng để khẳng định small-world.",
+        "Author-only: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần nên chưa có chỉ dấu small-world rõ. Toàn heterogeneous KG được báo riêng và có small-world indication; hai scope không được đánh tráo.",
         "Tác giả không khớp OpenAlex được giữ ở mức một bài (source_only), làm giảm số cạnh xuyên bài nhưng tránh gộp nhầm.",
         "Citation chỉ là trích dẫn nội bộ corpus, không đo toàn bộ ảnh hưởng học thuật.",
         "Phân loại chủ đề bằng luật có độ bao phủ hạn chế (nhiều bài UNKNOWN) – chấp nhận để giữ precision.",

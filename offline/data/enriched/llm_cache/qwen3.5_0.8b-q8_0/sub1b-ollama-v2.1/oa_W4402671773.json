@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4402671773",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Assembly code search",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Assembly code search is vital for reducing the burden on reverse engineers, allowing them to quickly identify specific functions using natural language within vast binary programs.Despite its significance, this critical task is impeded by the complexities involved in building high-quality datasets."
+   }
+  },
+  {
+   "surface": "Large Language Model (LLM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper explores training a Large Language Model (LLM) to emulate a general compiler."
+   }
+  },
+  {
+   "surface": "Ubuntu packages",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By leveraging Ubuntu packages to compile a dataset of 20 billion tokens, we further continue pre-train CodeLlama as a Virtual Compiler (ViC), capable of compiling any source code to assembly code."
+   }
+  },
+  {
+   "surface": "CodeLlama",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By leveraging Ubuntu packages to compile a dataset of 20 billion tokens, we further continue pre-train CodeLlama as a Virtual Compiler (ViC), capable of compiling any source code to assembly code."
+   }
+  },
+  {
+   "surface": "Virtual Compiler (ViC)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By leveraging Ubuntu packages to compile a dataset of 20 billion tokens, we further continue pre-train CodeLlama as a Virtual Compiler (ViC), capable of compiling any source code to assembly code."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Assembly code search",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper explores training a Large Language Model (LLM) to emulate a general compiler.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CodeLlama",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "By leveraging Ubuntu packages to compile a dataset of 20 billion tokens, we further continue pre-train CodeLlama as a Virtual Compiler (ViC), capable of compiling any source code to assembly code.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Assembly code search"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31847,
+ "eval_count": 383,
+ "ts": "2026-11-21T18:10:19Z"
+}

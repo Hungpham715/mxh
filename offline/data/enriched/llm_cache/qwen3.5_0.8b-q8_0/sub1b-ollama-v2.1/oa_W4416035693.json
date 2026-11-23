@@ -1,0 +1,132 @@
+{
+ "paper_id": "oa:W4416035693",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HAMLET",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce HAMLET, a holistic and automated framework for evaluating the long-context comprehension of large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "long-context comprehension",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce HAMLET, a holistic and automated framework for evaluating the long-context comprehension of large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce HAMLET, a holistic and automated framework for evaluating the long-context comprehension of large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "three-level hierarchy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "HAMLET structures key information of source texts into a three-level hierarchy at root-, branch-, and leaf-levels, and employs query-focused summarization to evaluate how well models faithfully recall the key information at each level."
+   }
+  },
+  {
+   "surface": "leaf-level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "HAMLET structures key information of source texts into a three-level hierarchy at root-, branch-, and leaf-levels, and employs query-focused summarization to evaluate how well models faithfully recall the key information at each level."
+   }
+  },
+  {
+   "surface": "query-focused summarization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "HAMLET structures key information of source texts into a three-level hierarchy at root-, branch-, and leaf-levels, and employs query-focused summarization to evaluate how well models faithfully recall the key information at each level."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HAMLET",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce HAMLET, a holistic and automated framework for evaluating the long-context comprehension of large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "long-context comprehension",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "HAMLET structures key information of source texts into a three-level hierarchy at root-, branch-, and leaf-levels, and employs query-focused summarization to evaluate how well models faithfully recall the key information at each level.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large language models (LLMs)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce HAMLET, a holistic and automated framework for evaluating the long-context comprehension of large language models (LLMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large language models (LLMs)",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our code and dataset are publicly available at https://github.com/DISL-Lab/HAMLET.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "root-level"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "branch-level"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "evaluated_on"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long-context comprehension"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "three-level hierarchy"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "query-focused summarization"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long-context comprehension"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35796,
+ "eval_count": 763,
+ "ts": "2026-11-21T21:17:48Z"
+}

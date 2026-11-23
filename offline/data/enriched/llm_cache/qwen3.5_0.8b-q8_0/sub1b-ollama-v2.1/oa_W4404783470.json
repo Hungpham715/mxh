@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4404783470",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Fast Forward",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Enabled by these low-rank settings, we propose an even more efficient optimization strategy: Fast Forward, a simple and effective approach to accelerate large segments of SGD training."
+   }
+  },
+  {
+   "surface": "low-rank adaptation (LoRA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Parameter efficient finetuning methods like low-rank adaptation (LoRA) aim to reduce the computational costs of finetuning pretrained Language Models (LMs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "low-rank adaptation (LoRA)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Enabled by these low-rank settings, we propose an even more efficient optimization strategy: Fast Forward, a simple and effective approach to accelerate large segments of SGD training.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "small validation set"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "small validation set"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "low-rank adaptation (LoRA)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19654,
+ "eval_count": 293,
+ "ts": "2026-11-21T19:31:06Z"
+}

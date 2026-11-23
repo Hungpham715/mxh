@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4404792950",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have garnered significant attention due to their remarkable ability to process information across various languages."
+   }
+  },
+  {
+   "surface": "multilingual performance",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper introduces a method to enhance the multilingual performance of LLMs by aggregating knowledge from diverse languages."
+   }
+  },
+  {
+   "surface": "knowledge detector",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration."
+   }
+  },
+  {
+   "surface": "language selection process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration."
+   }
+  },
+  {
+   "surface": "answer replacement",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration."
+   }
+  },
+  {
+   "surface": "integration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge detector",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language selection process",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "answer replacement",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "integration",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This approach incorporates a low-resource knowledge detector specific to a language, a strategic language selection process, and mechanisms for answer replacement and integration.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21777,
+ "eval_count": 371,
+ "ts": "2026-11-21T19:37:52Z"
+}

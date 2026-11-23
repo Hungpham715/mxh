@@ -1,0 +1,113 @@
+{
+ "paper_id": "oa:W4372269222",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "joint prediction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Note that our joint prediction is based on an autoregressive model and we need to decide the prediction order of dialog attributes, which is not trivial."
+   }
+  },
+  {
+   "surface": "dialogue history",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Recent work has shown that incorporating dialogue history can help advance SLU performance."
+   }
+  },
+  {
+   "surface": "SLU tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this, we aim to ask: can we jointly model all the SLU tasks while incorporating context to facilitate low-latency and lightweight inference?"
+   }
+  },
+  {
+   "surface": "context",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Most human interactions occur in the form of spoken conversations where the semantic meaning of a given utterance depends on the context."
+   }
+  },
+  {
+   "surface": "autoregressive model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Note that our joint prediction is based on an autoregressive model and we need to decide the prediction order of dialog attributes, which is not trivial."
+   }
+  },
+  {
+   "surface": "order agnostic training method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To mitigate the issue, we also propose an order agnostic training method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "SLU tasks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this, we aim to ask: can we jointly model all the SLU tasks while incorporating context to facilitate low-latency and lightweight inference?",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "autoregressive model",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Note that our joint prediction is based on an autoregressive model and we need to decide the prediction order of dialog attributes, which is not trivial.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "order agnostic training method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To mitigate the issue, we also propose an order agnostic training method.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "joint prediction",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Motivated by this, we aim to ask: can we jointly model all the SLU tasks while incorporating context to facilitate low-latency and lightweight inference?",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "joint prediction",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Note that our joint prediction is based on an autoregressive model and we need to decide the prediction order of dialog attributes, which is not trivial.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26245,
+ "eval_count": 476,
+ "ts": "2026-11-21T15:14:34Z"
+}

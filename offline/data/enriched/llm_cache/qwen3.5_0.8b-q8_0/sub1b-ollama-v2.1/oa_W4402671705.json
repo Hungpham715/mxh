@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4402671705",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NaijaHate",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce NaijaHate, the first dataset annotated for HSD which contains a representative sample of Nigerian tweets."
+   }
+  },
+  {
+   "surface": "NaijaXLM-T",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We then propose NaijaXLM-T, a pretrained model tailored to the Nigerian Twitter context, and establish the key role played by domain-adaptive pretraining and finetuning in maximizing HSD performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "NaijaXLM-T",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we introduce NaijaHate, the first dataset annotated for HSD which contains a representative sample of Nigerian tweets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NaijaXLM-T"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35210,
+ "eval_count": 224,
+ "ts": "2026-11-21T18:00:32Z"
+}

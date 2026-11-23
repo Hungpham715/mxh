@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4412945287",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have achieved remarkable success in machine translation, demonstrating impressive performance across diverse languages."
+   }
+  },
+  {
+   "surface": "translationese",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, translationese—characterized by overly literal and unnatural translations—remains a persistent challenge in LLM-based translation systems."
+   }
+  },
+  {
+   "surface": "supervised fine-tuning (SFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Despite their pre-training on vast corpora of natural utterances, LLMs exhibit translationese errors and generate unexpected unnatural translations, stemming from biases introduced during supervised fine-tuning (SFT)."
+   }
+  },
+  {
+   "surface": "polishing golden references",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce methods to mitigate these biases, including polishing golden references and filtering unnatural training instances."
+   }
+  },
+  {
+   "surface": "filtering unnatural training instances",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce methods to mitigate these biases, including polishing golden references and filtering unnatural training instances."
+   }
+  },
+  {
+   "surface": "human evaluations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Empirical evaluations demonstrate that these approaches significantly reduce translationese while improving translation naturalness, validated by human evaluations and automatic metrics."
+   }
+  },
+  {
+   "surface": "automatic metrics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Empirical evaluations demonstrate that these approaches significantly reduce translationese while improving translation naturalness, validated by human evaluations and automatic metrics."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "translationese"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLMs",
+   "to": "supervised fine-tuning (SFT)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLMs",
+   "to": "polishing golden references"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLMs",
+   "to": "filtering unnatural training instances"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLMs",
+   "to": "human evaluations"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLMs",
+   "to": "automatic metrics"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47761,
+ "eval_count": 596,
+ "ts": "2026-11-21T20:42:48Z"
+}

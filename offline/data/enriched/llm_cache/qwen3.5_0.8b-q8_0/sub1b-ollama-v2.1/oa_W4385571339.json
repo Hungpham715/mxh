@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4385571339",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Chinese Spelling Correction (CSC)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Chinese Spelling Correction (CSC) aims to detect and correct erroneous characters in Chinese texts."
+   }
+  },
+  {
+   "surface": "Hanyu Pinyin",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although efforts have been made to introduce phonetic information (Hanyu Pinyin) in this task, they typically merge phonetic representations with character representations, which tends to weaken the representation effect of normal texts."
+   }
+  },
+  {
+   "surface": "character representations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although efforts have been made to introduce phonetic information (Hanyu Pinyin) in this task, they typically merge phonetic representations with character representations, which tends to weaken the representation effect of normal texts."
+   }
+  },
+  {
+   "surface": "phonetic information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although efforts have been made to introduce phonetic information (Hanyu Pinyin) in this task, they typically merge phonetic representations with character representations, which tends to weaken the representation effect of normal texts."
+   }
+  },
+  {
+   "surface": "pinyin-to-character objective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To learn useful phonetic representations, we introduce a pinyin-to-character objective to ask the model to predict the correct characters based solely on phonetic information, where a separation mask is imposed to disable attention from phonetic input to text."
+   }
+  },
+  {
+   "surface": "separation mask",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To learn useful phonetic representations, we introduce a pinyin-to-character objective to ask the model to predict the correct characters based solely on phonetic information, where a separation mask is imposed to disable attention from phonetic input to text."
+   }
+  },
+  {
+   "surface": "self-distillation module",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To avoid overfitting the phonetics, we further design a self-distillation module to ensure that semantic information plays a major role in the prediction."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese Spelling Correction (CSC)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To learn useful phonetic representations, we introduce a pinyin-to-character objective to ask the model to predict the correct characters based solely on phonetic information, where a separation mask is imposed to disable attention from phonetic input to text.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese Spelling Correction (CSC)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To avoid overfitting the phonetics, we further design a self-distillation module to ensure that semantic information plays a major role in the prediction.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chinese Spelling Correction (CSC)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chinese Spelling Correction (CSC)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Chinese Spelling Correction (CSC)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42402,
+ "eval_count": 579,
+ "ts": "2026-11-21T15:44:31Z"
+}

@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4385570095",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SuperGLUE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the last five years, there has been a significant focus in Natural Language Processing (NLP) on developing larger Pretrained Language Models (PLMs) and introducing benchmarks such as SuperGLUE and SQuAD to measure their abilities in language understanding, reasoning, and reading comprehension."
+   }
+  },
+  {
+   "surface": "SQuAD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the last five years, there has been a significant focus in Natural Language Processing (NLP) on developing larger Pretrained Language Models (PLMs) and introducing benchmarks such as SuperGLUE and SQuAD to measure their abilities in language understanding, reasoning, and reading comprehension."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SuperGLUE",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These PLMs have achieved impressive results on these benchmarks, even surpassing human performance in some cases.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SQuAD",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These PLMs have achieved impressive results on these benchmarks, even surpassing human performance in some cases.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 17904,
+ "eval_count": 192,
+ "ts": "2026-11-21T15:24:55Z"
+}

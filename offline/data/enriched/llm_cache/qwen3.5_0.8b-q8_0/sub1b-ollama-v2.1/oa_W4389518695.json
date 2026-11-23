@@ -1,0 +1,126 @@
+{
+ "paper_id": "oa:W4389518695",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ViSoBERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present the first monolingual pre-trained language model for Vietnamese social media texts, ViSoBERT, which is pre-trained on a large-scale corpus of high-quality and diverse Vietnamese social media texts using XLM-R architecture."
+   }
+  },
+  {
+   "surface": "XLM-R",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present the first monolingual pre-trained language model for Vietnamese social media texts, ViSoBERT, which is pre-trained on a large-scale corpus of high-quality and diverse Vietnamese social media texts using XLM-R architecture."
+   }
+  },
+  {
+   "surface": "Vietnamese social media texts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present the first monolingual pre-trained language model for Vietnamese social media texts, ViSoBERT, which is pre-trained on a large-scale corpus of high-quality and diverse Vietnamese social media texts using XLM-R architecture."
+   }
+  },
+  {
+   "surface": "emotion recognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection."
+   }
+  },
+  {
+   "surface": "sentiment analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection."
+   }
+  },
+  {
+   "surface": "spam reviews detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection."
+   }
+  },
+  {
+   "surface": "hate speech spans detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "XLM-R",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present the first monolingual pre-trained language model for Vietnamese social media texts, ViSoBERT, which is pre-trained on a large-scale corpus of high-quality and diverse Vietnamese social media texts using XLM-R architecture.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "emotion recognition",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "sentiment analysis",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "spam reviews detection",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "hate speech spans detection",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, we explored our pre-trained model on five important natural language downstream tasks on Vietnamese social media texts: emotion recognition, hate speech detection, sentiment analysis, spam reviews detection, and hate speech spans detection.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "emotion recognition",
+  "sentiment analysis",
+  "spam reviews detection",
+  "hate speech spans detection"
+ ],
+ "duration_ms": 34765,
+ "eval_count": 353,
+ "ts": "2026-11-21T16:13:07Z"
+}

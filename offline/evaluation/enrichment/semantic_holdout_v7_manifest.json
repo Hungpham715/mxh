@@ -1,0 +1,64 @@
+{
+  "schema_version": "enrichment-semantic-validation-manifest-v1",
+  "created_at": "2026-11-23T00:04:43+07:00",
+  "purpose": "untouched gate slice for the generic-surface stoplist candidate (schema GENERIC_SLUGS extension); surface-first gold with contract-derived IDs; not independent human gold",
+  "selection": {
+    "population": "processed papers excluding all 72 papers in dev12, cross-check12, holdout v3, v4, v5, and v6",
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "papers_per_year": 4,
+    "eligibility": "abstract length >= 300 and neutral extraction cue regex present: dataset|benchmark|corpus|evaluate|experiment|method|model|framework|task|propose|introduce (with inflections)",
+    "ordering": "sha256('semantic-validation-v7|' + paper_id)",
+    "prediction_blind_at_label_freeze": true,
+    "prediction_blind_detail": "selected and labelled from processed abstracts only; per-paper extractor caches and data/enriched predictions for these IDs were not read before the freeze"
+  },
+  "annotation": {
+    "annotators": 1,
+    "annotator_kind": "claude_nonhuman_source_review",
+    "independent_human_gold": false,
+    "protocol": "surface_first_frozen_contract_v2",
+    "protocol_text": "Same inclusion protocol as v6: one entity per concept; surface = first fullest verbatim name span (including parenthesized acronym when written); include named methods/models/frameworks proposed, used, or compared, named datasets/benchmarks, conventional named tasks; exclude generic model families, generic nouns, metrics, products, diseases, and paper-internal descriptive components; relations follow mention-implies-link plus METHOD_EVALUATED_ON only when explicitly stated.",
+    "gold_id_derivation": "src/enrichment/merge.py::_canonicalize_llm(surface, type, gazetteer v1.2, context=sentence containing the surface); independent of GENERIC_SLUGS, so the stoplist candidate cannot influence gold IDs.",
+    "labels_file": "semantic_holdout_nonhuman_v7.jsonl",
+    "labels_sha256": "97792932db8bbd8b78dfa3202e9f6a4fc40e08ff66bb0bbabcc6b60eaba26b43",
+    "labels_frozen_before_first_score": true,
+    "papers": 12,
+    "entities": 48,
+    "relations": 50
+  },
+  "frozen_extractor_sha256": {
+    "src/enrichment/extract_rules.py": "e1e18a42bd3b00a694bb472b0cdd7167ed998457f98541adf6ed450ccbcba44b",
+    "src/enrichment/extract_llm.py": "a5b01d0ac2dae0eb1aecc47ff2458f4725a06e25267db3c48b9c3f1dec8fe831",
+    "src/enrichment/merge.py": "2ef02034eeb7ebafae3b15d13c736b7ae1ac6aaa0288f108b9678fed4b102872",
+    "src/enrichment/gazetteer.py": "eb4be7700e50b41170abdb8087b45f3a9ecd6e385dddb37c152018841c1c6b87",
+    "configs/gazetteer.yaml": "c2c77c5dbf603fe5752b9eef1fef8ced7a89a9db0d9c2cb92fc5faead9587a2b"
+  },
+  "retained_schema_sha256": "240f6f98f8475a488138e3f2f89292ff9f7c255a30bc488f15cc8ba1147d6932",
+  "candidate_schema_sha256": "4a409a5afff8d2d87c3409cb79e6647c575acd5f522459fe7b8bc6c01c076a6a",
+  "candidate_change": "schema.py GENERIC_SLUGS extended with domain-general bare capability nouns, metric names, and research-activity terms observed as slug-resolved false positives on v4/v6; gazetteer and extractor unchanged",
+  "frozen_runtime": {
+    "llm_model": "qwen3.5:0.8b-q8_0",
+    "llm_parameters": 752393024,
+    "llm_extractor_version": "sub1b-ollama-v2.1",
+    "rules_version": "rules-gazetteer-v1.2",
+    "num_gpu": 0
+  },
+  "decision_rule": {
+    "role": "one-shot gate for the generic-surface stoplist candidate",
+    "primary_metrics": [
+      "entity_micro_f1",
+      "relation_micro_f1"
+    ],
+    "go_threshold": "candidate both F1 >= 0.50 on the first v7 score AND candidate >= retained on both metrics on the same v7 slice (paired, both scored from the retained cache without tuning)",
+    "no_post_score_tuning_on_v7": true
+  },
+  "limitations": [
+    "Single nonhuman annotator; no inter-annotator agreement.",
+    "Selection is cue-enriched rather than a prevalence estimate for all 1,091 papers.",
+    "Small slice; wide bootstrap intervals; cannot satisfy an independent-human gate.",
+    "Gold IDs inherit the frozen canonicalizer contract; canonicalizer quirks surface as system errors under that contract."
+  ]
+}

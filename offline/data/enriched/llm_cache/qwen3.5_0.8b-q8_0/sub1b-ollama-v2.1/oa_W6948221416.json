@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W6948221416",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multilingual large language models (LLMs) face an often-overlooked challenge stemming from intrinsic semantic differences across languages."
+   }
+  },
+  {
+   "surface": "alignment norms",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper identifies such disagreements as conflicts between two fundamental alignment norms in multilingual LLMs: cross-linguistic consistency (CL-consistency), which seeks universal concepts across languages, and consistency with folk judgments (Folk-consistency), which respects language-specific semantic norms."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "cross-lingual knowledge transfer"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "cross-lingual knowledge transfer"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "cross-lingual knowledge transfer"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "alignment norms"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "cross-lingual knowledge transfer"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "cross-lingual knowledge transfer"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "cross-lingual knowledge transfer"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48779,
+ "eval_count": 657,
+ "ts": "2026-11-21T22:30:37Z"
+}

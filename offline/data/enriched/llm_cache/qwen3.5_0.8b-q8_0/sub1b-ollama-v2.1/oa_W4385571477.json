@@ -1,0 +1,93 @@
+{
+ "paper_id": "oa:W4385571477",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "dialogue response generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue response generation requires an agent to generate a response according to the current dialogue history, in terms of which two-party dialogues have been well studied, but leaving a great gap for multi-party dialogues at the same time."
+   }
+  },
+  {
+   "surface": "two-party dialogues",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue response generation requires an agent to generate a response according to the current dialogue history, in terms of which two-party dialogues have been well studied, but leaving a great gap for multi-party dialogues at the same time."
+   }
+  },
+  {
+   "surface": "multi-party dialogues",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue response generation requires an agent to generate a response according to the current dialogue history, in terms of which two-party dialogues have been well studied, but leaving a great gap for multi-party dialogues at the same time."
+   }
+  },
+  {
+   "surface": "addressee labels",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, due to the lack of annotated addressee labels in multi-party dialogue datasets, it is hard to use them to pre-train a response generation model for multi-party dialogues."
+   }
+  },
+  {
+   "surface": "pre-trained language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Thanks to the huge amount of two-party conversational data, various pre-trained language models for two-party dialogue response generation have been proposed."
+   }
+  },
+  {
+   "surface": "Expectation-Maximization (EM) approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this obstacle, we propose an Expectation-Maximization (EM) approach that iteratively performs the expectation steps to generate addressee labels, and the maximization steps to optimize a response generation model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "dialogue response generation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue response generation requires an agent to generate a response according to the current dialogue history, in terms of which two-party dialogues have been well studied, but leaving a great gap for multi-party dialogues at the same time.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Expectation-Maximization (EM) approach",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Thanks to the huge amount of two-party conversational data, various pre-trained language models for two-party dialogue response generation have been proposed.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Expectation-Maximization (EM) approach",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The official implementation of this paper is available at https://github.com/EricLee8/MPDRG.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 17615,
+ "eval_count": 379,
+ "ts": "2026-11-21T15:45:57Z"
+}

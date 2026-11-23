@@ -1,0 +1,119 @@
+{
+ "paper_id": "oa:W4402684346",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "student model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we present the discovery that a student model distilled from a few-shot prompted LLM can commonly generalize better than its teacher to unseen examples on such tasks."
+   }
+  },
+  {
+   "surface": "knowledge distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We find that the student is able to learn a general pattern from the high-quality pseudolabels produced by the teacher during knowledge distillation (KD), and favorably not a general pattern from the low-quality pseudolabels."
+   }
+  },
+  {
+   "surface": "few-shot prompted large language models (LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We study semi-supervised sequence generation tasks, where the few labeled examples are too scarce to finetune a model, and meanwhile, few-shot prompted large language models (LLMs) exhibit room for improvement."
+   }
+  },
+  {
+   "surface": "pseudolabels",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We find that the student is able to learn a general pattern from the high-quality pseudolabels produced by the teacher during knowledge distillation (KD), and favorably not a general pattern from the low-quality pseudolabels."
+   }
+  },
+  {
+   "surface": "MCKD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Leveraging this discovery, we propose a new method, Multistage Collaborative Knowledge Distillation from an LLM (MCKD), for these tasks."
+   }
+  },
+  {
+   "surface": "CRAFT biomedical parsing",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "On CRAFT biomedical parsing, for example, 3-stage MCKD with 50 labeled examples outperforms an LLM teacher and vanilla KD by 7.5% and 3.7% parsing F1, respectively, and matches the performance of supervised finetuning with 500 labeled examples."
+   }
+  },
+  {
+   "surface": "four syntactic and semantic parsing datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct extensive experiments on four syntactic and semantic parsing datasets and show the effectiveness of MCKD for low-resource semi-supervised sequence generation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge distillation",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We find that the student is able to learn a general pattern from the high-quality pseudolabels produced by the teacher during knowledge distillation (KD), and favorably not a general pattern from the low-quality pseudolabels.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MCKD",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Leveraging this discovery, we propose a new method, Multistage Collaborative Knowledge Distillation from an LLM (MCKD), for these tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "CRAFT biomedical parsing",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "On CRAFT biomedical parsing, for example, 3-stage MCKD with 50 labeled examples outperforms an LLM teacher and vanilla KD by 7.5% and 3.7% parsing F1, respectively, and matches the performance of supervised finetuning with 500 labeled examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "four syntactic and semantic parsing datasets",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We conduct extensive experiments on four syntactic and semantic parsing datasets and show the effectiveness of MCKD for low-resource semi-supervised sequence generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "teacher model"
+  }
+ ],
+ "auto_added_endpoints": [
+  "CRAFT biomedical parsing",
+  "four syntactic and semantic parsing datasets"
+ ],
+ "duration_ms": 42547,
+ "eval_count": 465,
+ "ts": "2026-11-21T23:14:24Z"
+}

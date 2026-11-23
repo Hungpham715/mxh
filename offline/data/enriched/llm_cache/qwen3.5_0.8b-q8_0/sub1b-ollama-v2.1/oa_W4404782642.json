@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4404782642",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "FOCI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We fill this evaluation gap by creating FOCI (Fine-grained Object ClassIfication), a difficult multiple-choice benchmark for fine-grained object classification, from existing object classification datasets: (1) multiple-choice avoids ambiguous answers associated with casting classification as open-ended QA task; (2) we retain classification difficulty by mining negative labels with a CLIP model."
+   }
+  },
+  {
+   "surface": "CLIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We fill this evaluation gap by creating FOCI (Fine-grained Object ClassIfication), a difficult multiple-choice benchmark for fine-grained object classification, from existing object classification datasets: (1) multiple-choice avoids ambiguous answers associated with casting classification as open-ended QA task; (2) we retain classification difficulty by mining negative labels with a CLIP model."
+   }
+  },
+  {
+   "surface": "LVLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent Large Vision-Language Models (LVLMs) demonstrate impressive abilities on numerous image understanding and reasoning tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CLIP",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We fill this evaluation gap by creating FOCI (Fine-grained Object ClassIfication), a difficult multiple-choice benchmark for fine-grained object classification, from existing object classification datasets: (1) multiple-choice avoids ambiguous answers associated with casting classification as open-ended QA task; (2) we retain classification difficulty by mining negative labels with a CLIP model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LVLMs",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We benchmark 12 public LVLMs on and show that it tests for a complementary skill to established image understanding and reasoning benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LVLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37283,
+ "eval_count": 289,
+ "ts": "2026-11-21T19:11:20Z"
+}

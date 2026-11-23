@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416035222",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MicroEdit",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose MicroEdit, a neuron-level editing method that performs minimal and controlled interventions within LLMs."
+   }
+  },
+  {
+   "surface": "Sparse Autoencoder (SAE)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By leveraging a sparse autoencoder (SAE), MicroEdit disentangles knowledge representations and activates only a minimal set of necessary neurons for precise parameter updates."
+   }
+  },
+  {
+   "surface": "LLaM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments show that MicroEdit outperforms prior methods and robustly handles lifelong knowledge editing across QA and Hallucination settings on LLaM and Mistral."
+   }
+  },
+  {
+   "surface": "Mistral",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments show that MicroEdit outperforms prior methods and robustly handles lifelong knowledge editing across QA and Hallucination settings on LLaM and Mistral."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sparse Autoencoder (SAE)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "By leveraging a sparse autoencoder (SAE), MicroEdit disentangles knowledge representations and activates only a minimal set of necessary neurons for precise parameter updates.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "LLaM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments show that MicroEdit outperforms prior methods and robustly handles lifelong knowledge editing across QA and Hallucination settings on LLaM and Mistral.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Mistral",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Extensive experiments show that MicroEdit outperforms prior methods and robustly handles lifelong knowledge editing across QA and Hallucination settings on LLaM and Mistral.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 20967,
+ "eval_count": 336,
+ "ts": "2026-11-21T21:07:04Z"
+}

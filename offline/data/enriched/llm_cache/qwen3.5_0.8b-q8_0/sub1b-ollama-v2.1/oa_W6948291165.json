@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W6948291165",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-objective preference alignment of large language models (LLMs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-objective preference alignment of large language models (LLMs) is critical for developing AI systems that are more configurable, personalizable, helpful, and safe."
+   }
+  },
+  {
+   "surface": "Large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multi-objective preference alignment of large language models (LLMs) is critical for developing AI systems that are more configurable, personalizable, helpful, and safe."
+   }
+  },
+  {
+   "surface": "Prompt conditioning mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our approach incorporates a prompt conditioning mechanism, allowing us to train a single preference-conditional policy, that can adapt to new preference combinations at inference."
+   }
+  },
+  {
+   "surface": "Multi-Objective Online DPO (MO-ODPO) algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper introduces the Multi-Objective Online DPO (MO-ODPO) algorithm, designed to robustly and efficiently align model behaviors with multiple, potentially conflicting human preferences."
+   }
+  },
+  {
+   "surface": "Two popular benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on two popular benchmarks show that MO-ODPO Pareto-dominates existing baselines while providing excellent inference-time steerability between diverse objectives."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Two popular benchmarks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments on two popular benchmarks show that MO-ODPO Pareto-dominates existing baselines while providing excellent inference-time steerability between diverse objectives.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Prompt conditioning mechanism"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multi-Objective Online DPO (MO-ODPO) algorithm"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36400,
+ "eval_count": 406,
+ "ts": "2026-11-21T22:30:51Z"
+}

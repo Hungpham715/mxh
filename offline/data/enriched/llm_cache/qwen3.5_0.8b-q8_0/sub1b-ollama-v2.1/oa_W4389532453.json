@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4389532453",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "finetuned",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Previous studies observed that finetuned models may be better base models than the vanilla pretrained model."
+   }
+  },
+  {
+   "surface": "vanilla pretrained model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Previous studies observed that finetuned models may be better base models than the vanilla pretrained model."
+   }
+  },
+  {
+   "surface": "source dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such a model, finetuned on some source dataset, may provide a better starting point for a new finetuning process on a desired target dataset."
+   }
+  },
+  {
+   "surface": "target dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such a model, finetuned on some source dataset, may provide a better starting point for a new finetuning process on a desired target dataset."
+   }
+  },
+  {
+   "surface": "HuggingFace hub",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Last, we release an updating ranking of best models in the HuggingFace hub per architecture."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "vanilla pretrained model",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Such a model, finetuned on some source dataset, may provide a better starting point for a new finetuning process on a desired target dataset.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HuggingFace hub"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28781,
+ "eval_count": 282,
+ "ts": "2026-11-21T17:05:58Z"
+}

@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4416037126",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Code and reasoning recently exhibit a mutually reinforcing relationship in large language models (LLMs): Code is abstract, modular, highly structured and has strong logic, guiding reasoning in training and inference."
+   }
+  },
+  {
+   "surface": "Code",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Code and reasoning recently exhibit a mutually reinforcing relationship in large language models (LLMs): Code is abstract, modular, highly structured and has strong logic, guiding reasoning in training and inference."
+   }
+  },
+  {
+   "surface": "Reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Code and reasoning recently exhibit a mutually reinforcing relationship in large language models (LLMs): Code is abstract, modular, highly structured and has strong logic, guiding reasoning in training and inference."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Code"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Reasoning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Code"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35234,
+ "eval_count": 264,
+ "ts": "2026-11-21T22:10:48Z"
+}

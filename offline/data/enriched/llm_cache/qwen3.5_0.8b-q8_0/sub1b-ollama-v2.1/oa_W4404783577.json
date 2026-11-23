@@ -1,0 +1,122 @@
+{
+ "paper_id": "oa:W4404783577",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CoD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To this end, we present a novel framework, CoD, Chain-of-Dictionary Prompting, which augments LLMs with prior knowledge with the chains of multilingual dictionaries for a subset of input words to elicit translation abilities for LLMs."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown surprisingly good performance in multilingual neural machine translation (MNMT) even if not being trained explicitly for translation."
+   }
+  },
+  {
+   "surface": "MNMT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown surprisingly good performance in multilingual neural machine translation (MNMT) even if not being trained explicitly for translation."
+   }
+  },
+  {
+   "surface": "Bilingual Dictionary",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As supported by our experiments, a bilingual dictionary between the source and the target language could help."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments indicate that ChatGPT and InstructGPT still have room for improvement in translating many language pairs."
+   }
+  },
+  {
+   "surface": "InstructGPT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments indicate that ChatGPT and InstructGPT still have room for improvement in translating many language pairs."
+   }
+  },
+  {
+   "surface": "FLORES-200",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "And CoD elicits large gains by up to 13x chrF++ points for MNMT (3.08 to 42.63 for English to Serbian written in Cyrillic script) on FLORES-200 full devtest set."
+   }
+  },
+  {
+   "surface": "English to Serbian written in Cyrillic script",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "And CoD elicits large gains by up to 13x chrF++ points for MNMT (3.08 to 42.63 for English to Serbian written in Cyrillic script) on FLORES-200 full devtest set."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Bilingual Dictionary",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As supported by our experiments, a bilingual dictionary between the source and the target language could help.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ChatGPT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "InstructGPT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FLORES-200"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "English to Serbian written in Cyrillic script"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "FLORES-200"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "English to Serbian written in Cyrillic script"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45216,
+ "eval_count": 849,
+ "ts": "2026-11-21T19:32:40Z"
+}

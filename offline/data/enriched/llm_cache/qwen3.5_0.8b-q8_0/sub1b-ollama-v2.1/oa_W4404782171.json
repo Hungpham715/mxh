@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4404782171",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Reflection-Reinforced Self-Training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we present Reflection-Reinforced Self-Training (Re-ReST), which uses a reflector to refine low-quality generated samples during self-training."
+   }
+  },
+  {
+   "surface": "self-training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we investigate the use of self-training in language agents, which can generate supervision from the agent itself, offering a promising alternative without relying on human or stronger model demonstrations."
+   }
+  },
+  {
+   "surface": "reflector",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we present Reflection-Reinforced Self-Training (Re-ReST), which uses a reflector to refine low-quality generated samples during self-training."
+   }
+  },
+  {
+   "surface": "feedback from an external environment",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The reflector takes the agent’s output and feedback from an external environment (e.g., unit test results in code generation) to produce improved samples."
+   }
+  },
+  {
+   "surface": "unit test results in code generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The reflector takes the agent’s output and feedback from an external environment (e.g., unit test results in code generation) to produce improved samples."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "self-training",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Self-training, however, requires high-quality model-generated samples, which are hard to obtain for challenging language agent tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "reflector",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we present Reflection-Reinforced Self-Training (Re-ReST), which uses a reflector to refine low-quality generated samples during self-training.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "feedback from an external environment",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The reflector takes the agent’s output and feedback from an external environment (e.g., unit test results in code generation) to produce improved samples.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "unit test results in code generation",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The reflector takes the agent’s output and feedback from an external environment (e.g., unit test results in code generation) to produce improved samples.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "agent's output"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "agent's output"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33728,
+ "eval_count": 592,
+ "ts": "2026-11-21T18:56:34Z"
+}

@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4404782725",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Despite impressive performance on language modelling and complex reasoning tasks, Large Language Models (LLMs) fall short on the same tasks in uncommon settings or with distribution shifts, exhibiting a lack of generalisation ability."
+   }
+  },
+  {
+   "surface": "Independent Causal Mechanisms (ICMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "One reason for this success is the existence and use of Independent Causal Mechanisms (ICMs) representing high-level concepts that only sparsely interact."
+   }
+  },
+  {
+   "surface": "causal models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "By contrast, systems such as causal models, that learn abstract variables and causal relationships, can demonstrate increased robustness against changes in the distribution."
+   }
+  },
+  {
+   "surface": "LLM architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We develop a new LLM architecture composed of multiple sparsely interacting language modelling modules."
+   }
+  },
+  {
+   "surface": "language modelling modules",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We develop a new LLM architecture composed of multiple sparsely interacting language modelling modules."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Independent Causal Mechanisms (ICMs)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "One reason for this success is the existence and use of Independent Causal Mechanisms (ICMs) representing high-level concepts that only sparsely interact.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "causal models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "One reason for this success is the existence and use of Independent Causal Mechanisms (ICMs) representing high-level concepts that only sparsely interact.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM architecture",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We develop a new LLM architecture composed of multiple sparsely interacting language modelling modules.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language modelling modules",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We develop a new LLM architecture composed of multiple sparsely interacting language modelling modules.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21697,
+ "eval_count": 441,
+ "ts": "2026-11-21T19:14:07Z"
+}

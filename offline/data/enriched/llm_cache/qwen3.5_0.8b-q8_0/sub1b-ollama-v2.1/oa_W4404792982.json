@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4404792982",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Two-Dimensional Coordinate System",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we provide a Two-Dimensional Coordinate System that unifies both views into a systematic framework."
+   }
+  },
+  {
+   "surface": "peak inverse rank metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose the peak inverse rank metric to detect the task recognition ability of LLMs and study LLMs’ reactions to different definitions of similarity."
+   }
+  },
+  {
+   "surface": "classification tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Based on these, we conduct extensive experiments to elucidate how ICL functions across each quadrant on multiple representative classification tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "peak inverse rank metric",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We propose the peak inverse rank metric to detect the task recognition ability of LLMs and study LLMs’ reactions to different definitions of similarity.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "classification tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16362,
+ "eval_count": 234,
+ "ts": "2026-11-21T19:38:16Z"
+}

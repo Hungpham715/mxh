@@ -1,0 +1,122 @@
+{
+ "paper_id": "oa:W4404782297",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Contrastive Shortcut Injection (CSI)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we propose a method named Contrastive Shortcut Injection (CSI), by leveraging activation values, integrates trigger design and data selection strategies to craft stronger shortcut features."
+   }
+  },
+  {
+   "surface": "backdoor attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based learning paradigm has been shown to be vulnerable to backdoor attacks."
+   }
+  },
+  {
+   "surface": "prompt-based learning paradigm",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Prompt-based learning paradigm has been shown to be vulnerable to backdoor attacks."
+   }
+  },
+  {
+   "surface": "clean-label attack",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Current clean-label attack, employing a specific prompt as trigger, can achieve success without the need for external triggers and ensuring correct labeling of poisoned samples, which are more stealthy compared to the poisoned-label attack, but on the other hand, facing significant issues with false activations and pose greater challenges, necessitating a higher rate of poisoning."
+   }
+  },
+  {
+   "surface": "backdoor acts as a shortcut",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In addressing this issue, we are inspired by the notion that a backdoor acts as a shortcut, and posit that this shortcut stems from the contrast between the trigger and the data utilized for poisoning."
+   }
+  },
+  {
+   "surface": "contrast between the trigger and the data utilized for poisoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In addressing this issue, we are inspired by the notion that a backdoor acts as a shortcut, and posit that this shortcut stems from the contrast between the trigger and the data utilized for poisoning."
+   }
+  },
+  {
+   "surface": "few-shot text classification tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "With extensive experiments on full-shot and few-shot text classification tasks, we empirically validate CSI’s high effectiveness and high stealthiness at low poisoning rates."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "clean-label attack",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Current clean-label attack, employing a specific prompt as trigger, can achieve success without the need for external triggers and ensuring correct labeling of poisoned samples, which are more stealthy compared to the poisoned-label attack, but on the other hand, facing significant issues with false activations and pose greater challenges, necessitating a higher rate of poisoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "backdoor acts as a shortcut",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we propose a method named Contrastive Shortcut Injection (CSI), by leveraging activation values, integrates trigger design and data selection strategies to craft stronger shortcut features.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contrast between the trigger and the data utilized for poisoning",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we propose a method named Contrastive Shortcut Injection (CSI), by leveraging activation values, integrates trigger design and data selection strategies to craft stronger shortcut features.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "full-shot text classification tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "backdoor attack"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "prompt-based learning paradigm"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "full-shot text classification tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "few-shot text classification tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 59233,
+ "eval_count": 785,
+ "ts": "2026-11-21T19:01:30Z"
+}

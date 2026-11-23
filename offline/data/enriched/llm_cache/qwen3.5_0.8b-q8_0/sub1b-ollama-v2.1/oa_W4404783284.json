@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4404783284",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HateWiC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce the Hateful Word in Context Classification (HateWiC) task and present a dataset of ~4000 WiC-instances, each labeled by three annotators."
+   }
+  },
+  {
+   "surface": "~4000",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce the Hateful Word in Context Classification (HateWiC) task and present a dataset of ~4000 WiC-instances, each labeled by three annotators."
+   }
+  },
+  {
+   "surface": "annotators",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce the Hateful Word in Context Classification (HateWiC) task and present a dataset of ~4000 WiC-instances, each labeled by three annotators."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "HateWiC",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we introduce the Hateful Word in Context Classification (HateWiC) task and present a dataset of ~4000 WiC-instances, each labeled by three annotators.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HateWiC"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HateWiC"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15804,
+ "eval_count": 272,
+ "ts": "2026-11-21T19:27:58Z"
+}

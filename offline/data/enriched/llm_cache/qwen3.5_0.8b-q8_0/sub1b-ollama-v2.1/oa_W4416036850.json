@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4416036850",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "llm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Persona assignment has become a common strategy for customizing LLM use to particular tasks and contexts."
+   }
+  },
+  {
+   "surface": "nation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this study, we explore how evaluation of different nations changes when LLMs are assigned specific nationality personas."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "llm",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assign 193 different nationality personas (e.g., an American person) to five LLMs and examine how the LLM evaluations (or “perceptions”) of countries change.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "nationality_persona"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "nation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33947,
+ "eval_count": 217,
+ "ts": "2026-11-21T22:01:21Z"
+}

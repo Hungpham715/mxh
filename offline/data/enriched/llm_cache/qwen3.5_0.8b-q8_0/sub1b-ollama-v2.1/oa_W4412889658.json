@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4412889658",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Video-LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce a benchmark to evaluate whether video-large language models (Video-LLMs) can naturally process continuous first-person visual observations like humans, enabling recall, perception, reasoning, and navigation."
+   }
+  },
+  {
+   "surface": "drones",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We have manually control drones to collect 3D embodied motion video data from real-world cities and simulated environments, resulting in 1.5k video clips."
+   }
+  },
+  {
+   "surface": "3D embodied motion video data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We have manually control drones to collect 3D embodied motion video data from real-world cities and simulated environments, resulting in 1.5k video clips."
+   }
+  },
+  {
+   "surface": "multiple-choice questions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Then we design a pipeline to generate 5.2k multiple-choice questions."
+   }
+  },
+  {
+   "surface": "correlation analysis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Correlation analysis provides insight into the relationships between different tasks, showing that causal reasoning has a strong correlation with recall, perception, and navigation, while the abilities for counterfactual and associative reasoning exhibit lower correlation with other tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "drones",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We have manually control drones to collect 3D embodied motion video data from real-world cities and simulated environments, resulting in 1.5k video clips.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multiple-choice questions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "correlation analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34277,
+ "eval_count": 378,
+ "ts": "2026-11-21T20:10:43Z"
+}

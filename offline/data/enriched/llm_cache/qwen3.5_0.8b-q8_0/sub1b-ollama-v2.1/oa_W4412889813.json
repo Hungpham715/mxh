@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4412889813",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "tokenisation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We define this mismatch as tokenisation bias."
+   }
+  },
+  {
+   "surface": "subword",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Modern language models are typically trained over subword sequences, but ultimately define probabilities over character-strings."
+   }
+  },
+  {
+   "surface": "model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Modern language models are typically trained over subword sequences, but ultimately define probabilities over character-strings."
+   }
+  },
+  {
+   "surface": "vocabulary",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we quantify one particular type of tokenisation bias: the effect of including or not a subword (e.g., \\langle hello \\rangle) in a tokeniser’s vocabulary on the probability a trained model assigns to the corresponding characters (i.e., “hello”)."
+   }
+  },
+  {
+   "surface": "tokeniser",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Ideally, the choice of the tokeniser—which maps character-strings to subwords—should not affect the probability assigned to the underlying character-string; in practice, it does."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42623,
+ "eval_count": 430,
+ "ts": "2026-11-21T20:17:00Z"
+}

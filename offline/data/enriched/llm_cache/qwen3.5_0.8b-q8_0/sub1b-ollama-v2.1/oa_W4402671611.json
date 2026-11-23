@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4402671611",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study investigates the concept of the ‘right to be forgotten’ within the context of large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "unlearning methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our research delineates a comprehensive framework for machine unlearning in pre-trained LLMs, encompassing a critical analysis of seven diverse unlearning methods."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "unlearning methods",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We explore machine unlearning as a pivotal solution, with a focus on pre-trained models–a notably under-researched area.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unlearning methods"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unlearning methods"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43485,
+ "eval_count": 260,
+ "ts": "2026-11-21T17:55:56Z"
+}

@@ -1,0 +1,70 @@
+{
+ "paper_id": "oa:W4402671694",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "temperature-scaling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we test what effect temperature-scaling of large language model (LLM) predictions has on surprisal estimates and their predictive power of reading times of English texts."
+   }
+  },
+  {
+   "surface": "surprisal estimates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we test what effect temperature-scaling of large language model (LLM) predictions has on surprisal estimates and their predictive power of reading times of English texts."
+   }
+  },
+  {
+   "surface": "reading times",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we test what effect temperature-scaling of large language model (LLM) predictions has on surprisal estimates and their predictive power of reading times of English texts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "surprisal estimates",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we test what effect temperature-scaling of large language model (LLM) predictions has on surprisal estimates and their predictive power of reading times of English texts.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLM predictions"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "LLM predictions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reading times"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reading times"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reading times"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31783,
+ "eval_count": 465,
+ "ts": "2026-11-21T17:59:57Z"
+}

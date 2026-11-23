@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4416035706",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "WriteHERE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper we propose WriteHERE, a general agent framework that achieves human-like adaptive writing through recursive task decomposition and dynamic integration of three fundamental task types: retrieval, reasoning, and composition."
+   }
+  },
+  {
+   "surface": "planning mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our methodology features: 1) a planning mechanism that interleaves recursive task decomposition and execution, eliminating artificial restrictions on writing workflow; and 2) integration of task types that facilitates heterogeneous task decomposition."
+   }
+  },
+  {
+   "surface": "task types",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper we propose WriteHERE, a general agent framework that achieves human-like adaptive writing through recursive task decomposition and dynamic integration of three fundamental task types: retrieval, reasoning, and composition."
+   }
+  },
+  {
+   "surface": "fiction writing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Evaluations on both fiction writing and technical report generation show that our method consistently outperforms state-of-the-art approaches across all automatic evaluation metrics, demonstrating the effectiveness and broad applicability of our proposed framework."
+   }
+  },
+  {
+   "surface": "technical report generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Evaluations on both fiction writing and technical report generation show that our method consistently outperforms state-of-the-art approaches across all automatic evaluation metrics, demonstrating the effectiveness and broad applicability of our proposed framework."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "planning mechanism",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our methodology features: 1) a planning mechanism that interleaves recursive task decomposition and execution, eliminating artificial restrictions on writing workflow; and 2) integration of task types that facilitates heterogeneous task decomposition.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "task types",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper we propose WriteHERE, a general agent framework that achieves human-like adaptive writing through recursive task decomposition and dynamic integration of three fundamental task types: retrieval, reasoning, and composition.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fiction writing"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "technical report generation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34940,
+ "eval_count": 407,
+ "ts": "2026-11-21T21:19:31Z"
+}

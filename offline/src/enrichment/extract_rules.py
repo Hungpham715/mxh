@@ -18,8 +18,8 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from src.enrichment.gazetteer import Gazetteer, Mention
-from src.enrichment.schema import MAX_EVIDENCE_PER_EDGE
+from src.enrichment.gazetteer import Gazetteer, Mention, slugify
+from src.enrichment.schema import MAX_EVIDENCE_PER_EDGE, is_generic_surface
 from src.enrichment.textutil import Sentence, split_sentences, sentence_at
 
 EXTRACTOR = "rules"
@@ -41,6 +41,77 @@ _TYPE_TO_RELATION = {
     "dataset": ("EVALUATED_ON", EVAL_CUES),
     "task": ("ADDRESSES_TASK", TASK_CUES),
 }
+
+# Product/model names change much faster than a curated gazetteer. These conservative patterns
+# recover explicit scientific naming constructions while staying fully extractive. They do not
+# contain names from the evaluation slice.
+_NAME = r"[A-Z][A-Za-z0-9]*(?:[-.][A-Za-z0-9]+)*"
+_NAMED_BEFORE_KIND = re.compile(
+    rf"\b(?P<name>{_NAME})(?=(?:\s+[A-Z]{{2,6}})?\s+"
+    r"(?P<kind>dataset|benchmark|corpus|framework|method|model|algorithm)s?\b)"
+)
+_NAMED_AFTER_KIND = re.compile(
+    rf"\b(?P<kind>(?i:dataset|benchmark|corpus|framework|method|model|algorithm))s?\s+"
+    rf"(?:named|called)\s+(?P<name>{_NAME})\b",
+)
+_NAMED_APPOSITION = re.compile(
+    rf"\b(?P<name>{_NAME})(?:\s*\([^)]{{1,24}}\))?,\s+"
+    r"(?:an?\s+)?(?:novel\s+|new\s+)?"
+    r"(?P<kind>(?i:dataset|benchmark|corpus|framework|method|model|algorithm))\b",
+)
+_PROPOSED_VIA = re.compile(
+    r"\b(?i:propose|introduce|present)\s+"
+    r"(?P<left>[A-Z][A-Za-z0-9-]*(?:\s+[A-Za-z][A-Za-z0-9-]*){0,4})\s+(?i:via)\s+"
+    r"(?P<right>[A-Z][A-Za-z0-9-]*(?:\s+[A-Za-z][A-Za-z0-9-]*){0,4})"
+    r"\s*\([A-Z][A-Z0-9-]{1,12}\)",
+)
+
+
+def _dynamic_mentions(text: str, gazetteer: Gazetteer) -> list[Mention]:
+    """Find high-precision names introduced with an explicit dataset/method construction."""
+    found: list[Mention] = []
+    seen: set[tuple[int, int, str]] = set()
+
+    def add(surface: str, start: int, kind: str) -> None:
+        entity_type = "dataset" if kind.lower() in {"dataset", "benchmark", "corpus"} else "method"
+        # Single title-cased adjectives/nouns ("Chinese corpus", "Existing methods") are
+        # common sentence text, not scientific names. Require an internal capital, digit,
+        # hyphen, or all-caps acronym for dynamically discovered one-token names.
+        looks_named = (
+            surface.isupper()
+            or any(char.isupper() for char in surface[1:])
+            or any(char.isdigit() for char in surface)
+            or "-" in surface
+        )
+        if is_generic_surface(surface) or not looks_named:
+            return
+        end = start + len(surface)
+        key = (start, end, entity_type)
+        if key in seen:
+            return
+        seen.add(key)
+        entity_id = gazetteer.resolve_surface(surface, entity_type)
+        found.append(Mention(
+            entity_id=entity_id or f"{entity_type}:{slugify(surface)}",
+            entity_type=entity_type,
+            canonical_name=(
+                gazetteer.entries[entity_id].canonical_name if entity_id else surface
+            ),
+            surface=surface,
+            start=start,
+            end=end,
+        ))
+
+    for pattern in (_NAMED_BEFORE_KIND, _NAMED_AFTER_KIND, _NAMED_APPOSITION):
+        for match in pattern.finditer(text):
+            add(match.group("name"), match.start("name"), match.group("kind"))
+
+    # Compositional proposed names such as "Foo Mixup via Optimal Transport (FMOT)"
+    # describe two reusable techniques. Keep the exact left/right spans, not the acronym.
+    for match in _PROPOSED_VIA.finditer(text):
+        add(match.group("left"), match.start("left"), "method")
+        add(match.group("right"), match.start("right"), "method")
+    return found
 
 
 def _make_edge(rel_type: str, from_id: str, to_id: str, paper: dict[str, Any],
@@ -66,6 +137,13 @@ def extract_paper(paper: dict[str, Any], gazetteer: Gazetteer, extractor_version
 
     sentences = split_sentences(abstract)
     mentions = gazetteer.match_text(abstract)
+    claimed = {(mention.start, mention.end, mention.entity_type) for mention in mentions}
+    for mention in _dynamic_mentions(abstract, gazetteer):
+        key = (mention.start, mention.end, mention.entity_type)
+        if key not in claimed:
+            mentions.append(mention)
+            claimed.add(key)
+    mentions.sort(key=lambda mention: (mention.start, mention.end, mention.entity_type))
     if not mentions:
         return empty
 

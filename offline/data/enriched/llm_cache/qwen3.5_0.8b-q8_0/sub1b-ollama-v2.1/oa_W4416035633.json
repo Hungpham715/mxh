@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4416035633",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GraphRAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Graph retrieval-augmented generation (GraphRAG) enhances LLM reasoning by integrating structured knowledge from external graphs."
+   }
+  },
+  {
+   "surface": "GraphRAG-Filtering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, we identify two key challenges that plague GraphRAG: (1) Retrieving noisy and irrelevant information can degrade performance and (2) Excessive reliance on external knowledge suppresses the model’s intrinsic reasoning.To address these issues, we propose GraphRAG-FI (Filtering & Integration), consisting of GraphRAG-Filtering and GraphRAG-Integration."
+   }
+  },
+  {
+   "surface": "GraphRAG-Integration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, we identify two key challenges that plague GraphRAG: (1) Retrieving noisy and irrelevant information can degrade performance and (2) Excessive reliance on external knowledge suppresses the model’s intrinsic reasoning.To address these issues, we propose GraphRAG-FI (Filtering & Integration), consisting of GraphRAG-Filtering and GraphRAG-Integration."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have revolutionized the field of natural language processing."
+   }
+  },
+  {
+   "surface": "knowledge graph QA tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experiments on knowledge graph QA tasks demonstrate that GraphRAG-FI significantly improves reasoning performance across multiple backbone models, establishing a more reliable and effective GraphRAG framework."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GraphRAG-Filtering",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "GraphRAG-Filtering employs a two-stage filtering mechanism to refine retrieved information.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GraphRAG-Integration",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, we identify two key challenges that plague GraphRAG: (1) Retrieving noisy and irrelevant information can degrade performance and (2) Excessive reliance on external knowledge suppresses the model’s intrinsic reasoning.To address these issues, we propose GraphRAG-FI (Filtering & Integration), consisting of GraphRAG-Filtering and GraphRAG-Integration.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph QA tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32030,
+ "eval_count": 360,
+ "ts": "2026-11-21T21:16:54Z"
+}

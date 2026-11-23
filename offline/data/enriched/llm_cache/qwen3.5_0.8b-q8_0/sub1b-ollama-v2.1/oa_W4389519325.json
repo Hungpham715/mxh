@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4389519325",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) especially ChatGPT have produced impressive results in various areas, but their potential human-like psychology is still largely unexplored."
+   }
+  },
+  {
+   "surface": "MBTI",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a generic evaluation framework for LLMs to assess human personalities based on Myers Briggs Type Indicator (MBTI) tests."
+   }
+  },
+  {
+   "surface": "InstructGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our experiments reveal ChatGPT's ability to assess human personalities, and the average results demonstrate that it can achieve more consistent and fairer assessments in spite of lower robustness against prompt biases compared with InstructGPT."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MBTI",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "The proposed framework enables LLMs to flexibly assess personalities of different groups of people.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "InstructGPT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31929,
+ "eval_count": 246,
+ "ts": "2026-11-21T16:24:04Z"
+}

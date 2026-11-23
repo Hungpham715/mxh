@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4412945629",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HyPER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we introduce HyPER, a Hybrid Preference routER that defers an annotation to either humans or LMs, achieving better annotation quality while reducing the cost of human-only annotation."
+   }
+  },
+  {
+   "surface": "MultiPref",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We train the PPM on MultiPref, a new preference dataset with 10K instances paired with human and LM labels."
+   }
+  },
+  {
+   "surface": "RewardBench",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We show that the selected hybrid mixture of synthetic and direct human preferences using HyPER achieves better RM performance compared to using either one exclusively by 7-13% on RewardBench and generalizes across unseen preference datasets and other base models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "RewardBench",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We show that the selected hybrid mixture of synthetic and direct human preferences using HyPER achieves better RM performance compared to using either one exclusively by 7-13% on RewardBench and generalizes across unseen preference datasets and other base models.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MultiPref"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "RewardBench"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38221,
+ "eval_count": 314,
+ "ts": "2026-11-21T20:54:22Z"
+}

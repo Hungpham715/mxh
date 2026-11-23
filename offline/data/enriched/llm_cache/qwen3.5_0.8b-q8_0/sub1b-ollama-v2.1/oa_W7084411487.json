@@ -1,0 +1,56 @@
+{
+ "paper_id": "oa:W7084411487",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TokMem",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce TokMem, a procedural memory framework that compiles each reusable task procedure into a single trainable memory token."
+   }
+  },
+  {
+   "surface": "Super-Natural Instructions tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  },
+  {
+   "surface": "Multi-step function-calling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Multi-step function-calling",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate TokMem on two settings: atomic recall over 1,000 Super-Natural Instructions tasks and compositional recall on multi-step function-calling.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Super-Natural Instructions tasks"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Multi-step function-calling"
+ ],
+ "duration_ms": 42391,
+ "eval_count": 217,
+ "ts": "2026-11-21T22:33:29Z"
+}

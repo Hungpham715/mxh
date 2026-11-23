@@ -1,0 +1,1095 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "evaluation/enrichment/semantic_holdout_nonhuman_v5.jsonl",
+    "processed_papers": "data/processed/papers.jsonl",
+    "data_dir": "/tmp/graphrag-canonicalization-v4-20261122",
+    "papers_evaluated": 12,
+    "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 71,
+      "predicted": 68,
+      "tp": 26,
+      "fp": 42,
+      "fn": 45,
+      "precision": 0.3824,
+      "recall": 0.3662,
+      "f1": 0.3741
+    },
+    "macro_f1": 0.3934,
+    "per_type": {
+      "dataset": {
+        "support": 13,
+        "predicted": 20,
+        "tp": 11,
+        "fp": 9,
+        "fn": 2,
+        "precision": 0.55,
+        "recall": 0.8462,
+        "f1": 0.6667
+      },
+      "method": {
+        "support": 41,
+        "predicted": 34,
+        "tp": 12,
+        "fp": 22,
+        "fn": 29,
+        "precision": 0.3529,
+        "recall": 0.2927,
+        "f1": 0.32
+      },
+      "task": {
+        "support": 17,
+        "predicted": 14,
+        "tp": 3,
+        "fp": 11,
+        "fn": 14,
+        "precision": 0.2143,
+        "recall": 0.1765,
+        "f1": 0.1935
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2439,
+        0.5333
+      ],
+      "recall": [
+        0.2615,
+        0.4423
+      ],
+      "f1": [
+        0.259,
+        0.4687
+      ]
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 71,
+      "predicted": 70,
+      "tp": 25,
+      "fp": 45,
+      "fn": 46,
+      "precision": 0.3571,
+      "recall": 0.3521,
+      "f1": 0.3546
+    },
+    "macro_f1": 0.2874,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 17,
+        "predicted": 14,
+        "tp": 3,
+        "fp": 11,
+        "fn": 14,
+        "precision": 0.2143,
+        "recall": 0.1765,
+        "f1": 0.1935
+      },
+      "EVALUATED_ON": {
+        "support": 13,
+        "predicted": 20,
+        "tp": 11,
+        "fp": 9,
+        "fn": 2,
+        "precision": 0.55,
+        "recall": 0.8462,
+        "f1": 0.6667
+      },
+      "METHOD_EVALUATED_ON": {
+        "support": 0,
+        "predicted": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "USES_METHOD": {
+        "support": 41,
+        "predicted": 35,
+        "tp": 11,
+        "fp": 24,
+        "fn": 30,
+        "precision": 0.3143,
+        "recall": 0.2683,
+        "f1": 0.2895
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2424,
+        0.5208
+      ],
+      "recall": [
+        0.2615,
+        0.4423
+      ],
+      "f1": [
+        0.2581,
+        0.4628
+      ]
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4389519477",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:enes"
+        ],
+        [
+          "dataset",
+          "dataset:enfr"
+        ],
+        [
+          "dataset",
+          "dataset:must-c-ende"
+        ],
+        [
+          "method",
+          "method:distillation"
+        ],
+        [
+          "method",
+          "method:embedding"
+        ],
+        [
+          "method",
+          "method:fad"
+        ],
+        [
+          "method",
+          "method:fai"
+        ],
+        [
+          "task",
+          "task:speech-translation"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:future-aware-distillation"
+        ],
+        [
+          "method",
+          "method:future-aware-inference"
+        ],
+        [
+          "method",
+          "method:trainable-masked-embedding"
+        ],
+        [
+          "method",
+          "method:wait-k-policy"
+        ],
+        [
+          "task",
+          "task:streaming-speech-translation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389519477",
+          "task:speech-translation"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389519477",
+          "dataset:enes"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389519477",
+          "dataset:enfr"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4389519477",
+          "dataset:must-c-ende"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:distillation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:embedding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:fad"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:fai"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389519477",
+          "task:streaming-speech-translation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:future-aware-distillation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:future-aware-inference"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:trainable-masked-embedding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519477",
+          "method:wait-k-policy"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389524164",
+      "entity_fp": [
+        [
+          "method",
+          "method:annotators"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:multimodal-misleading-headline-detection"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4389524164",
+          "method:annotators"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389524164",
+          "task:multimodal-misleading-headline-detection"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385570095",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:language-understanding"
+        ],
+        [
+          "task",
+          "task:nlp-benchmark-evaluation"
+        ],
+        [
+          "task",
+          "task:reasoning"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570095",
+          "task:language-understanding"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570095",
+          "task:nlp-benchmark-evaluation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570095",
+          "task:reasoning"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385571076",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:nlp"
+        ],
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "method",
+          "method:ranking"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:in-context-example-organization"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "EVALUATED_ON",
+          "oa:W4385571076",
+          "dataset:nlp"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:in-context-learning",
+          "dataset:nlp"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571076",
+          "method:fine-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385571076",
+          "method:ranking"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385571076",
+          "task:in-context-example-organization"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402672093",
+      "entity_fp": [
+        [
+          "method",
+          "method:large-scale"
+        ],
+        [
+          "method",
+          "method:mixed-scale"
+        ],
+        [
+          "method",
+          "method:smaller"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "method",
+          "method:logits-based-cogenesis"
+        ],
+        [
+          "method",
+          "method:sketch-based-cogenesis"
+        ],
+        [
+          "task",
+          "task:privacy-preserving-collaborative-generation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:large-scale"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:mixed-scale"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:smaller"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402672093",
+          "task:privacy-preserving-collaborative-generation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:fine-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:logits-based-cogenesis"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402672093",
+          "method:sketch-based-cogenesis"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402670740",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:word-in-context-wic"
+        ],
+        [
+          "method",
+          "method:scd"
+        ],
+        [
+          "task",
+          "task:scd"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:sense-aware-distance-metric"
+        ],
+        [
+          "method",
+          "method:sense-aware-encoder"
+        ],
+        [
+          "method",
+          "method:two-stage-scd"
+        ],
+        [
+          "task",
+          "task:lexical-semantic-change-detection"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402670740",
+          "task:scd"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402670740",
+          "dataset:word-in-context-wic"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402670740",
+          "method:scd"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402670740",
+          "task:lexical-semantic-change-detection"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402670740",
+          "method:sense-aware-distance-metric"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402670740",
+          "method:sense-aware-encoder"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402670740",
+          "method:two-stage-scd"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404782789",
+      "entity_fp": [
+        [
+          "method",
+          "method:attention-mechanism"
+        ],
+        [
+          "method",
+          "method:interest-augmented"
+        ],
+        [
+          "task",
+          "task:retrieve"
+        ],
+        [
+          "task",
+          "task:rewrite"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:image-to-image-retriever"
+        ],
+        [
+          "method",
+          "method:rewrite-and-retrieve"
+        ],
+        [
+          "method",
+          "method:text-to-text-retriever"
+        ],
+        [
+          "method",
+          "method:user-interest-attention"
+        ],
+        [
+          "task",
+          "task:personalized-multimodal-generation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782789",
+          "task:retrieve"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782789",
+          "task:rewrite"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:attention-mechanism"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:interest-augmented"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782789",
+          "task:personalized-multimodal-generation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:image-to-image-retriever"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:rewrite-and-retrieve"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:text-to-text-retriever"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782789",
+          "method:user-interest-attention"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402953810",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:penn-treebank"
+        ],
+        [
+          "dataset",
+          "dataset:sentence-sentiment-analysis"
+        ],
+        [
+          "method",
+          "method:attention"
+        ],
+        [
+          "method",
+          "method:attention-mechanism"
+        ],
+        [
+          "method",
+          "method:biaffine"
+        ],
+        [
+          "method",
+          "method:entity-aware"
+        ],
+        [
+          "method",
+          "method:metric"
+        ],
+        [
+          "task",
+          "task:constituency"
+        ],
+        [
+          "task",
+          "task:constituent"
+        ],
+        [
+          "task",
+          "task:entity"
+        ],
+        [
+          "task",
+          "task:entity-violating"
+        ],
+        [
+          "task",
+          "task:sub-tree"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:ptb"
+        ],
+        [
+          "method",
+          "method:biaffine-attention"
+        ],
+        [
+          "method",
+          "method:entity-aware-biaffine-attention"
+        ],
+        [
+          "method",
+          "method:entity-role-vectors"
+        ],
+        [
+          "method",
+          "method:entity-violating-rate"
+        ],
+        [
+          "task",
+          "task:constituency-parsing"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:constituency"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:constituent"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:entity"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:entity-violating"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:sub-tree"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402953810",
+          "dataset:penn-treebank"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402953810",
+          "dataset:sentence-sentiment-analysis"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:attention"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:attention-mechanism"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:biaffine"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:entity-aware"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:metric"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402953810",
+          "task:constituency-parsing"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402953810",
+          "dataset:ptb"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:biaffine-attention"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:entity-aware-biaffine-attention"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:entity-role-vectors"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402953810",
+          "method:entity-violating-rate"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412886652",
+      "entity_fp": [
+        [
+          "method",
+          "method:llms-based"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:adversarial-self-play"
+        ],
+        [
+          "method",
+          "method:chain-of-mind"
+        ],
+        [
+          "method",
+          "method:epsilon-ne-verification"
+        ],
+        [
+          "method",
+          "method:reinforcement-learning"
+        ],
+        [
+          "method",
+          "method:zero-sum-game"
+        ],
+        [
+          "task",
+          "task:non-collaborative-dialogue-strategy-planning"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:llms-based"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412886652",
+          "task:non-collaborative-dialogue-strategy-planning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:adversarial-self-play"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:chain-of-mind"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:epsilon-ne-verification"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:reinforcement-learning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412886652",
+          "method:zero-sum-game"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889813",
+      "entity_fp": [
+        [
+          "method",
+          "method:subword"
+        ],
+        [
+          "method",
+          "method:tokenisation"
+        ],
+        [
+          "method",
+          "method:tokeniser"
+        ],
+        [
+          "method",
+          "method:vocabulary"
+        ],
+        [
+          "task",
+          "task:language-modeling"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:regression-discontinuity-design"
+        ],
+        [
+          "task",
+          "task:tokenization-bias-estimation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889813",
+          "task:language-modeling"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889813",
+          "method:subword"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889813",
+          "method:tokenisation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889813",
+          "method:tokeniser"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889813",
+          "method:vocabulary"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889813",
+          "task:tokenization-bias-estimation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889813",
+          "method:regression-discontinuity-design"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412945014",
+      "entity_fp": [
+        [
+          "method",
+          "method:multi-attribute-targeted-steering-mat-steer"
+        ],
+        [
+          "task",
+          "task:generative-tasks"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:inference-time-intervention"
+        ],
+        [
+          "method",
+          "method:mat-steer"
+        ],
+        [
+          "method",
+          "method:steering-vectors"
+        ],
+        [
+          "task",
+          "task:multi-attribute-model-steering"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412945014",
+          "task:generative-tasks"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945014",
+          "method:multi-attribute-targeted-steering-mat-steer"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412945014",
+          "task:multi-attribute-model-steering"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945014",
+          "method:inference-time-intervention"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945014",
+          "method:mat-steer"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412945014",
+          "method:steering-vectors"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416037142",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:llms-condensed"
+        ],
+        [
+          "dataset",
+          "dataset:sst"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:sst-2"
+        ],
+        [
+          "method",
+          "method:coreset-selection"
+        ],
+        [
+          "method",
+          "method:dataset-condensation"
+        ],
+        [
+          "method",
+          "method:llm-driven-condensation"
+        ],
+        [
+          "task",
+          "task:text-level-dataset-condensation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "EVALUATED_ON",
+          "oa:W4416037142",
+          "dataset:llms-condensed"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4416037142",
+          "dataset:sst"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416037142",
+          "task:text-level-dataset-condensation"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4416037142",
+          "dataset:sst-2"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416037142",
+          "method:coreset-selection"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416037142",
+          "method:dataset-condensation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416037142",
+          "method:llm-driven-condensation"
+        ]
+      ]
+    }
+  ]
+}

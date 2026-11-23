@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4416036491",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TACT",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this gap, we introduce TACT (TOD-And-Chitchat Transition), a dataset designed for transition-aware dialogue modeling that incorporates structurally diverse and integrated mode flows."
+   }
+  },
+  {
+   "surface": "Switch",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "TACT supports both user- and agent-driven mode switches, enabling robust modeling of complex conversational dynamics.To evaluate an agent’s ability to initiate and recover from mode transitions, we propose two new metrics—Switch and Recovery.Models trained on TACT outperform baselines in both intent detection and mode transition handling."
+   }
+  },
+  {
+   "surface": "Recovery",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "TACT supports both user- and agent-driven mode switches, enabling robust modeling of complex conversational dynamics.To evaluate an agent’s ability to initiate and recover from mode transitions, we propose two new metrics—Switch and Recovery.Models trained on TACT outperform baselines in both intent detection and mode transition handling."
+   }
+  },
+  {
+   "surface": "DPO",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Moreover, applying Direct Preference Optimization (DPO) to TACT-trained models yields additionalgains, achieving 75.74% joint mode-intent accuracy and a 70.1% win rate against GPT-4o in human evaluation.These results demonstrate that pairing structurally diverse data with DPO enhances response quality and transition control, paving the way for more proactive and transition-aware conversational agents."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Switch"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Recovery"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DPO"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45921,
+ "eval_count": 308,
+ "ts": "2026-11-21T21:46:15Z"
+}

@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404782745",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "text-guided inpainting models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Using text-guided inpainting models, our approach ensures protected group independence from all attributes and mitigates inpainting biases through data filtering."
+   }
+  },
+  {
+   "surface": "multi-label image classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluations on multi-label image classification and image captioning tasks show our method effectively reduces bias without compromising performance across various models."
+   }
+  },
+  {
+   "surface": "image captioning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Evaluations on multi-label image classification and image captioning tasks show our method effectively reduces bias without compromising performance across various models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-label image classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "image captioning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15616,
+ "eval_count": 211,
+ "ts": "2026-11-21T19:14:23Z"
+}

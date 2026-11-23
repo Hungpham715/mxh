@@ -1,0 +1,179 @@
+{
+ "paper_id": "oa:W4389523773",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "conditional STS (C-STS)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this ambiguity by proposing a novel task called conditional STS (C-STS) which measures similarity conditioned on an aspect elucidated in natural language (hereon, condition)."
+   }
+  },
+  {
+   "surface": "semantic textual similarity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods."
+   }
+  },
+  {
+   "surface": "NLP",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods."
+   }
+  },
+  {
+   "surface": "sentence similarity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, it is an inherently ambiguous task, with the sentence similarity depending on the specific aspect of interest."
+   }
+  },
+  {
+   "surface": "aspect elucidated in natural language",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this ambiguity by proposing a novel task called conditional STS (C-STS) which measures similarity conditioned on an aspect elucidated in natural language (hereon, condition)."
+   }
+  },
+  {
+   "surface": "condition",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We resolve this ambiguity by proposing a novel task called conditional STS (C-STS) which measures similarity conditioned on an aspect elucidated in natural language (hereon, condition)."
+   }
+  },
+  {
+   "surface": "NBA player shoots a three-pointer.",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As an example, the similarity between the sentences “The NBA player shoots a three-pointer.” and “A man throws a tennis ball into the air to serve.” is higher for the condition “The motion of the ball.” (both upward) and lower for “The size of the ball.” (one large and one small)."
+   }
+  },
+  {
+   "surface": "A man throws a tennis ball into the air to serve.",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As an example, the similarity between the sentences “The NBA player shoots a three-pointer.” and “A man throws a tennis ball into the air to serve.” is higher for the condition “The motion of the ball.” (both upward) and lower for “The size of the ball.” (one large and one small)."
+   }
+  },
+  {
+   "surface": "The motion of the ball.",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As an example, the similarity between the sentences “The NBA player shoots a three-pointer.” and “A man throws a tennis ball into the air to serve.” is higher for the condition “The motion of the ball.” (both upward) and lower for “The size of the ball.” (one large and one small)."
+   }
+  },
+  {
+   "surface": "The size of the ball.",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "As an example, the similarity between the sentences “The NBA player shoots a three-pointer.” and “A man throws a tennis ball into the air to serve.” is higher for the condition “The motion of the ball.” (both upward) and lower for “The size of the ball.” (one large and one small)."
+   }
+  },
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "C-STS contains almost 20,000 instances from diverse domains and we evaluate several state-of-the-art models to demonstrate that even the most performant fine-tuning and in-context learning models (GPT-4, Flan, SimCSE) find it challenging, with Spearman correlation scores of <50."
+   }
+  },
+  {
+   "surface": "Flan",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "C-STS contains almost 20,000 instances from diverse domains and we evaluate several state-of-the-art models to demonstrate that even the most performant fine-tuning and in-context learning models (GPT-4, Flan, SimCSE) find it challenging, with Spearman correlation scores of <50."
+   }
+  },
+  {
+   "surface": "SimCSE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "C-STS contains almost 20,000 instances from diverse domains and we evaluate several state-of-the-art models to demonstrate that even the most performant fine-tuning and in-context learning models (GPT-4, Flan, SimCSE) find it challenging, with Spearman correlation scores of <50."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "conditional STS (C-STS)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic textual similarity",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic textual similarity",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic textual similarity",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic textual similarity",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "C-STS contains almost 20,000 instances from diverse domains and we evaluate several state-of-the-art models to demonstrate that even the most performant fine-tuning and in-context learning models (GPT-4, Flan, SimCSE) find it challenging, with Spearman correlation scores of <50.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic textual similarity",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We encourage the community to evaluate their models on C-STS to provide a more holistic view of semantic similarity and natural language understanding.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 50780,
+ "eval_count": 907,
+ "ts": "2026-11-21T16:48:23Z"
+}

@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W6910438939",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) have shown remarkable advancements in tackling agent-oriented tasks."
+   }
+  },
+  {
+   "surface": "agent-based environments",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite their potential, existing work faces challenges when deploying LLMs in agent-based environments."
+   }
+  },
+  {
+   "surface": "ReAct",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "The widely adopted agent paradigm ReAct centers on integrating single-step reasoning with immediate action execution, which limits its effectiveness in complex tasks requiring long-term strategic planning."
+   }
+  },
+  {
+   "surface": "global plan",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address these challenges, we introduce an adaptive global plan-based agent paradigm AdaPlan, aiming to synergize high-level explicit guidance with execution to support effective long-horizon decision-making."
+   }
+  },
+  {
+   "surface": "adaptive global plan-based agent paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address these challenges, we introduce an adaptive global plan-based agent paradigm AdaPlan, aiming to synergize high-level explicit guidance with execution to support effective long-horizon decision-making."
+   }
+  },
+  {
+   "surface": "PilotRL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on the proposed paradigm, we further put forward PilotRL, a global planning-guided training framework for LLM agents driven by progressive reinforcement learning."
+   }
+  },
+  {
+   "surface": "progressive reinforcement learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on the proposed paradigm, we further put forward PilotRL, a global planning-guided training framework for LLM agents driven by progressive reinforcement learning."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ReAct",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite their potential, existing work faces challenges when deploying LLMs in agent-based environments.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adaptive global plan-based agent paradigm",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To address these challenges, we introduce an adaptive global plan-based agent paradigm AdaPlan, aiming to synergize high-level explicit guidance with execution to support effective long-horizon decision-making.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PilotRL",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Based on the proposed paradigm, we further put forward PilotRL, a global planning-guided training framework for LLM agents driven by progressive reinforcement learning.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PilotRL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22199,
+ "eval_count": 453,
+ "ts": "2026-11-21T22:26:58Z"
+}

@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4389524112",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DaSLaM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce DaSLaM, which uses a decomposition generator to decompose complex problems into subproblems that require fewer reasoning steps."
+   }
+  },
+  {
+   "surface": "policy gradient optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We use a relatively small (13B parameters) LM as the decomposition generator, which we train using policy gradient optimization to interact with a solver LM (regarded as black-box) and guide it through subproblems, thereby rendering our method solver-agnostic."
+   }
+  },
+  {
+   "surface": "solver LM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We use a relatively small (13B parameters) LM as the decomposition generator, which we train using policy gradient optimization to interact with a solver LM (regarded as black-box) and guide it through subproblems, thereby rendering our method solver-agnostic."
+   }
+  },
+  {
+   "surface": "text-davinci-003",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Evaluation on multiple different reasoning datasets reveal that with our method, a 175 billion parameter LM (text-davinci-003) can produce competitive or even better performance, compared to its orders-of-magnitude larger successor, GPT-4."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "policy gradient optimization",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce DaSLaM, which uses a decomposition generator to decompose complex problems into subproblems that require fewer reasoning steps.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "solver LM",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce DaSLaM, which uses a decomposition generator to decompose complex problems into subproblems that require fewer reasoning steps.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "text-davinci-003",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Evaluation on multiple different reasoning datasets reveal that with our method, a 175 billion parameter LM (text-davinci-003) can produce competitive or even better performance, compared to its orders-of-magnitude larger successor, GPT-4.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "text-davinci-003",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Evaluation on multiple different reasoning datasets reveal that with our method, a 175 billion parameter LM (text-davinci-003) can produce competitive or even better performance, compared to its orders-of-magnitude larger successor, GPT-4.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "text-davinci-003"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42507,
+ "eval_count": 575,
+ "ts": "2026-11-21T16:59:29Z"
+}

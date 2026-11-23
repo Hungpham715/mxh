@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4412945447",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ARise",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Meanwhile, knowledge-augmented reasoning (KAR) methods fails to address two core challenges: 1) error propagation, where errors in early steps cascade through the chain, and 2) verification bottleneck, where the explore–exploit trade-off arises in multi-branch decision processes."
+   }
+  },
+  {
+   "surface": "RAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these limitations, we introduce ARise, a novel framework that integrates risk assessment of intermediate reasoning states with dynamic retrieval-augmented generation (RAG) within a Monte Carlo tree search paradigm."
+   }
+  },
+  {
+   "surface": "Monte Carlo tree search paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these limitations, we introduce ARise, a novel framework that integrates risk assessment of intermediate reasoning states with dynamic retrieval-augmented generation (RAG) within a Monte Carlo tree search paradigm."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RAG",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To overcome these limitations, we introduce ARise, a novel framework that integrates risk assessment of intermediate reasoning states with dynamic retrieval-augmented generation (RAG) within a Monte Carlo tree search paradigm.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Monte Carlo tree search paradigm",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "This approach enables effective construction and optimization of reasoning plans across multiple maintained hypothesis branches.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 30000,
+ "eval_count": 234,
+ "ts": "2026-11-21T20:49:03Z"
+}

@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4391505424",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "IndiVec",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to prior work that primarily relies on training specific models tailored to particular datasets, resulting in limited adaptability and subpar performance on out-of-domain data, we introduce a general bias detection framework, IndiVec, built upon large language models."
+   }
+  },
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to prior work that primarily relies on training specific models tailored to particular datasets, resulting in limited adaptability and subpar performance on out-of-domain data, we introduce a general bias detection framework, IndiVec, built upon large language models."
+   }
+  },
+  {
+   "surface": "vector database techniques",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "IndiVec begins by constructing a fine-grained media bias database, leveraging the robust instruction-following capabilities of large language models and vector database techniques."
+   }
+  },
+  {
+   "surface": "media bias detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study focuses on media bias detection, crucial in today's era of influential social media platforms shaping individual attitudes and opinions."
+   }
+  },
+  {
+   "surface": "political bias datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results on four political bias datasets highlight IndiVec's significant superiority over baselines."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "large language models",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to prior work that primarily relies on training specific models tailored to particular datasets, resulting in limited adaptability and subpar performance on out-of-domain data, we introduce a general bias detection framework, IndiVec, built upon large language models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "vector database techniques",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "IndiVec begins by constructing a fine-grained media bias database, leveraging the robust instruction-following capabilities of large language models and vector database techniques.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "media bias detection",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study focuses on media bias detection, crucial in today's era of influential social media platforms shaping individual attitudes and opinions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "political bias datasets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results on four political bias datasets highlight IndiVec's significant superiority over baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 22637,
+ "eval_count": 407,
+ "ts": "2026-11-21T17:13:36Z"
+}

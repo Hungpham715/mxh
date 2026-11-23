@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4412944830",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "submodule computation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using deterministic execution via XLA compiler and our proposed synchronization mechanisms, we isolate and analyze the impact of SDC errors on these nodes at three levels: at each submodule computation, at a single optimizer step, and at a training period."
+   }
+  },
+  {
+   "surface": "optimizer step",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using deterministic execution via XLA compiler and our proposed synchronization mechanisms, we isolate and analyze the impact of SDC errors on these nodes at three levels: at each submodule computation, at a single optimizer step, and at a training period."
+   }
+  },
+  {
+   "surface": "training period",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using deterministic execution via XLA compiler and our proposed synchronization mechanisms, we isolate and analyze the impact of SDC errors on these nodes at three levels: at each submodule computation, at a single optimizer step, and at a training period."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "optimizer step"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "training period"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42571,
+ "eval_count": 189,
+ "ts": "2026-11-21T20:30:05Z"
+}

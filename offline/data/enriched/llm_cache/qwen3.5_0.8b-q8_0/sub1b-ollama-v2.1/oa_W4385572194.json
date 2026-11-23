@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4385572194",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "binary sentence-level sentiment classification task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent studies have demonstrated that natural-language prompts can help to leverage the knowledge learned by pre-trained language models for the binary sentence-level sentiment classification task."
+   }
+  },
+  {
+   "surface": "few-shot learning settings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Specifically, these methods utilize few-shot learning settings to fine-tune the sentiment classification model using manual or automatically generated prompts."
+   }
+  },
+  {
+   "surface": "positional, reasoning, and paraphrasing techniques",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Given a base prompt, our proposed approach automatically generates multiple prompts similar to the base prompt employing positional, reasoning, and paraphrasing techniques and then ranks the prompts using a novel metric."
+   }
+  },
+  {
+   "surface": "novel metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Given a base prompt, our proposed approach automatically generates multiple prompts similar to the base prompt employing positional, reasoning, and paraphrasing techniques and then ranks the prompts using a novel metric."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "few-shot learning settings",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Given a base prompt, our proposed approach automatically generates multiple prompts similar to the base prompt employing positional, reasoning, and paraphrasing techniques and then ranks the prompts using a novel metric.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "few-shot learning settings",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Specifically, these methods utilize few-shot learning settings to fine-tune the sentiment classification model using manual or automatically generated prompts.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "few-shot learning settings"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34230,
+ "eval_count": 311,
+ "ts": "2026-11-21T15:54:07Z"
+}

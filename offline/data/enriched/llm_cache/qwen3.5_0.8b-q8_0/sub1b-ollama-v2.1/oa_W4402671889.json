@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4402671889",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, they usually encounter translation errors, including errors from synthetic data and from auxiliary language pairs with linguistic biases.We argue that large language models (LLMs) mitigate UNMT’s translation errors by dynamically organizing auxiliary languages in prompts to improve LRL translations."
+   }
+  },
+  {
+   "surface": "POMP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose \\textbf{P}r\\textbf{O}bability-driven \\textbf{M}eta-graph \\textbf{P}rompter (POMP), an approach employing a dynamic graph to organize multiple auxiliary languages, to prompt LLMs in LRL translations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "POMP",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose \\textbf{P}r\\textbf{O}bability-driven \\textbf{M}eta-graph \\textbf{P}rompter (POMP), an approach employing a dynamic graph to organize multiple auxiliary languages, to prompt LLMs in LRL translations.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "LRLs' translation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41845,
+ "eval_count": 269,
+ "ts": "2026-11-21T18:16:46Z"
+}

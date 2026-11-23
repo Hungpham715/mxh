@@ -1,0 +1,119 @@
+{
+ "paper_id": "oa:W7133207755",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Aligning language models (LMs) with preferences",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Aligning language models (LMs) with preferences is an important problem in natural language generation."
+   }
+  },
+  {
+   "surface": "sequence level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "A key challenge is that preferences are typically provided at the sequence level while LM training and generation both occur at the token level."
+   }
+  },
+  {
+   "surface": "token level",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "A key challenge is that preferences are typically provided at the sequence level while LM training and generation both occur at the token level."
+   }
+  },
+  {
+   "surface": "pairwise-preference learning in imitation learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For guidance learning, we design a framework that extends the pairwise-preference learning in imitation learning to both variable-length LM generation and the utilization of the preference among multiple generations."
+   }
+  },
+  {
+   "surface": "variable-length LM generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For guidance learning, we design a framework that extends the pairwise-preference learning in imitation learning to both variable-length LM generation and the utilization of the preference among multiple generations."
+   }
+  },
+  {
+   "surface": "utilization of the preference among multiple generations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For guidance learning, we design a framework that extends the pairwise-preference learning in imitation learning to both variable-length LM generation and the utilization of the preference among multiple generations."
+   }
+  },
+  {
+   "surface": "grounding the sequence-level preference into token-level training guidance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we address this issue by developing an alternate training process, where we iterate between grounding the sequence-level preference into token-level training guidance, and improving the LM with the learned guidance."
+   }
+  },
+  {
+   "surface": "improving the LM with the learned guidance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we address this issue by developing an alternate training process, where we iterate between grounding the sequence-level preference into token-level training guidance, and improving the LM with the learned guidance."
+   }
+  },
+  {
+   "surface": "two minimalist learning objectives",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "For LM training, based on the amount of supervised data, we present two minimalist learning objectives that utilize the learned guidance."
+   }
+  },
+  {
+   "surface": "discrete-prompt generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In experiments, our method performs competitively on two distinct representative LM tasks -- discrete-prompt generation and text summarization."
+   }
+  },
+  {
+   "surface": "text summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In experiments, our method performs competitively on two distinct representative LM tasks -- discrete-prompt generation and text summarization."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sequence level"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "token level"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "discrete-prompt generation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "text summarization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48258,
+ "eval_count": 607,
+ "ts": "2026-11-21T22:37:07Z"
+}

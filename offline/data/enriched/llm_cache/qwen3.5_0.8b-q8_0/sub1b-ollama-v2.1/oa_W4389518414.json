@@ -1,0 +1,27 @@
+{
+ "paper_id": "oa:W4389518414",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "QA-SRL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "After laying some conceptual groundwork, I describe several investigations into data-driven theories of shallow semantic structure using Question-Answer driven Semantic Role Labeling (QA-SRL), a schema for annotating verbal predicate-argument relations using highly constrained question-answer pairs."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "QA-SRL"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19784,
+ "eval_count": 129,
+ "ts": "2026-11-21T16:11:03Z"
+}

@@ -1,0 +1,112 @@
+{
+ "paper_id": "oa:W4399355313",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NLP pipelines",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose utilizing readily available curricular texts used in institutes specializing in mental health for pre-training the NLP pipelines."
+   }
+  },
+  {
+   "surface": "Natural Language Processing (NLP)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study explores the use of Natural Language Processing (NLP) pipelines to analyze text data from online mental health forums used for consultations."
+   }
+  },
+  {
+   "surface": "online mental health forums",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study explores the use of Natural Language Processing (NLP) pipelines to analyze text data from online mental health forums used for consultations."
+   }
+  },
+  {
+   "surface": "curricular texts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose utilizing readily available curricular texts used in institutes specializing in mental health for pre-training the NLP pipelines."
+   }
+  },
+  {
+   "surface": "psychologists",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The limited availability of psychologists necessitates efficient identification of individuals requiring urgent mental healthcare."
+   }
+  },
+  {
+   "surface": "CASE-BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our work presents CASE-BERT that flags potential mental health disorders based on forum text."
+   }
+  },
+  {
+   "surface": "depression",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "CASE-BERT demonstrates superior performance compared to existing methods, achieving an f1 score of 0.91 for Depression and 0.88 for Anxiety, two of the most commonly reported mental health disorders."
+   }
+  },
+  {
+   "surface": "anxiety",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "CASE-BERT demonstrates superior performance compared to existing methods, achieving an f1 score of 0.91 for Depression and 0.88 for Anxiety, two of the most commonly reported mental health disorders."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Natural Language Processing (NLP)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This study explores the use of Natural Language Processing (NLP) pipelines to analyze text data from online mental health forums used for consultations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CASE-BERT",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this, we propose utilizing readily available curricular texts used in institutes specializing in mental health for pre-training the NLP pipelines.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NLP pipelines"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CASE-BERT"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CASE-BERT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37409,
+ "eval_count": 592,
+ "ts": "2026-11-21T17:24:03Z"
+}

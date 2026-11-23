@@ -92,12 +92,34 @@ Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy 
 
 ### Đánh giá ngữ nghĩa NER/RE của enrichment
 
-Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ của holdout v4 gồm 12 abstract; nhãn đã được freeze trước lần dự đoán đầu tiên. Đây là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài. Hybrid Qwen3.5 0.8B chạy CPU-only, không dùng GPU.
 
 | Bài toán | Precision | Recall | F1 | Support |
 |---|---|---|---|---|
-| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
-| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+| Entity (micro) | 0.4118 | 0.5 | 0.4516 | 56 |
+| Relation (micro) | 0.4 | 0.5 | 0.4444 | 56 |
+
+So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE 41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được vì dùng development slice và evaluator cũ làm mất provenance membership.
+
+Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check/v3/v4/v5) đo cùng cấu hình retained nói trên bằng protocol gán nhãn surface-first: nhãn freeze dạng surface verbatim trong abstract, rồi ID chuẩn hóa được suy ra bằng chính hàm canonicalization đã freeze (_canonicalize_llm + gazetteer v1.2) trước khi mở bất kỳ dự đoán nào. Audit contract của v4 cho thấy 18/56 thực thể gold của v4 có ID không tái lập được từ surface verbatim theo contract freeze (paraphrase hoặc lệch policy acronym), nên v4 lẫn v5 đều lẫn nhiễu gán nhãn; v6 là phép đo sạch hơn của cùng hệ thống, không phải thay đổi model. Không so v6 với v4 như một cải tiến model vì protocol gán nhãn khác nhau; đây vẫn là reference nonhuman một annotator.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v6 Entity (micro) | 0.4154 | 0.5094 | 0.4576 | 53 |
+| v6 Relation (micro) | 0.4028 | 0.5179 | 0.4531 | 56 |
+| v6 Rules-only Entity | 0.7647 | 0.2453 | 0.3714 | 53 |
+| v6 Rules-only Relation | 0.625 | 0.2679 | 0.375 | 56 |
+
+Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh protocol gán nhãn sạch hơn, không phải cải tiến model.
+
+Holdout v7 (12 bài mới, loại trừ 72 bài đã tiêu) là gate one-shot cho candidate mở rộng stoplist generic-surface: candidate đạt NER 43,24% / RE 41,38%, dưới ngưỡng khai báo trước 0,50 và trùng khớp retained trên chính v7, nên bị loại và schema đã revert về đúng hash committed. v7 đồng thời là phép đo untouched thứ ba của cấu hình retained; slice nhiều tên mới khiến rules-only chỉ đạt 18,46%/17,14% và hybrid tăng +24,78/+24,24 điểm — khoảng cách hybrid lớn nhất đo được. Ba phép đo untouched (v4, v6, v7) nhất quán về độ lớn; khác biệt phản ánh độ khó slice, không phải drift cấu hình.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v7 Entity (micro) | 0.381 | 0.5 | 0.4324 | 48 |
+| v7 Relation (micro) | 0.3636 | 0.48 | 0.4138 | 50 |
+| v7 Rules-only Entity | 0.3529 | 0.125 | 0.1846 | 48 |
+| v7 Rules-only Relation | 0.3 | 0.12 | 0.1714 | 50 |
 
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
@@ -156,7 +178,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 | 9 | RESEARCHES | Author→Topic | Tác giả có ≥ 2 bài khác nhau mang nhãn topic đó trong corpus. | 105 | 112 |
 | 10 | ACTIVE_IN | Institution→Topic | Tổ chức có ≥ 2 bài khác nhau (có tác giả khai báo tổ chức) mang topic đó. | 139 | 252 |
 
-Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
+Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (0 bài).
 
 ![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](../output/analysis/relationship_types.png)
 
@@ -387,6 +409,23 @@ L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC 970 nút. T
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
+### Đối chiếu small-world trên toàn knowledge graph
+
+Để đối chiếu công bằng với các đồ án phân tích toàn heterogeneous KG, pipeline đo thêm một projection vô hướng đơn gồm đủ 5 nhãn nút và 10 loại quan hệ. Phép đo này **không thay thế** kết luận của mạng xã hội đồng tác giả ở trên.
+
+| Đại lượng toàn KG | Giá trị |
+|---|---|
+| Nút / cạnh đơn | 7.134 / 30.970 |
+| Tỷ lệ node trong LCC | 1 |
+| Tỷ lệ cặp có đường đi | 1 |
+| C_obs / C_rand | 0.7373 / 0.0066 |
+| L_obs / L_rand | 4.448 / 3.8256 = 1.1627 |
+| σ | 95.38 |
+| Monte Carlo p(C_rand ≥ C_obs) | 0.0323 |
+| Kết luận | small-world indication (sigma>1, C>>C_rand, L close to L_rand) |
+
+Toàn KG liên thông nhờ các node Paper/Venue/Topic/Institution làm cầu nối. Vì membership theo paper tạo motif dày và làm clustering tăng, kết quả này chỉ chứng minh topology small-world của KG; không được diễn giải thành bằng chứng rằng mạng tác giả toàn cầu là small-world.
+
 ## 7. Kiểm tra chất lượng và tiêu chí 90%
 
 Chất lượng cạnh đo bằng **precision** = cạnh đúng / cạnh được kiểm. Quy trình: (1) kiểm tra cấu trúc **mọi** cạnh (đúng kiểu nút hai đầu, có evidence, không trùng, cặp vô hướng chuẩn hóa, ngưỡng ≥ 2 bài, chiều trích dẫn); (2) lấy mẫu phân tầng tối đa 20 cạnh mỗi loại với seed 20261107; (3) kiểm chứng lại từng cạnh mẫu với bản ghi nguồn gốc (XML ACL, feed arXiv, JSON work OpenAlex được lưu cache) – độc lập với tệp JSONL đã xử lý.
@@ -482,7 +521,7 @@ Phương pháp khoảng tin cậy: reliable-kg-estimation: stratified Wilson / A
 Đạt được: pipeline tái hiện được từ nguồn thật tới graph, 10 loại quan hệ có dữ liệu và chứng cứ theo bài, phân tích mạng tác giả với baseline ngẫu nhiên, đánh giá chất lượng có khoảng tin cậy và lưu vết.
 
 - Phép chiếu tác giả bị phân mảnh do lấy mẫu ~1.100 bài trên hàng chục nghìn bài; mạng thật dày hơn nhiều.
-- Small-world chỉ được kiểm trên LCC: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần; harmonic path/global efficiency toàn mạng được báo riêng và không dùng để khẳng định small-world.
+- Author-only: LCC chiếm 17,86%, L_obs dài hơn random khoảng 3,32 lần nên chưa có chỉ dấu small-world rõ. Toàn heterogeneous KG được báo riêng và có small-world indication; hai scope không được đánh tráo.
 - Tác giả không khớp OpenAlex được giữ ở mức một bài (source_only), làm giảm số cạnh xuyên bài nhưng tránh gộp nhầm.
 - Citation chỉ là trích dẫn nội bộ corpus, không đo toàn bộ ảnh hưởng học thuật.
 - Phân loại chủ đề bằng luật có độ bao phủ hạn chế (nhiều bài UNKNOWN) – chấp nhận để giữ precision.

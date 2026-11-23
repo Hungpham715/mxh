@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4402671005",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HiRoPE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by how human programmers navigate code, we introduce Hierarchical Rotary Position Embedding (HiRoPE), a novel approach that enhances the traditional rotary position embedding into a hierarchical format based on the hierarchical structure of source code."
+   }
+  },
+  {
+   "surface": "Hierarchical Rotary Position Embedding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by how human programmers navigate code, we introduce Hierarchical Rotary Position Embedding (HiRoPE), a novel approach that enhances the traditional rotary position embedding into a hierarchical format based on the hierarchical structure of source code."
+   }
+  },
+  {
+   "surface": "Long Code Understanding Task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also introduce a new long code understanding task with real-world code projects, in hopes of promoting further development in this code-related field."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Hierarchical Rotary Position Embedding",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by how human programmers navigate code, we introduce Hierarchical Rotary Position Embedding (HiRoPE), a novel approach that enhances the traditional rotary position embedding into a hierarchical format based on the hierarchical structure of source code.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Long Code Understanding Task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Long Code Understanding Task"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Long Code Understanding Task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31139,
+ "eval_count": 405,
+ "ts": "2026-11-21T17:38:36Z"
+}

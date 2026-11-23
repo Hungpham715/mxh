@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4412945551",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have achieved significant success in reasoning tasks, including mathematical reasoning and logical deduction."
+   }
+  },
+  {
+   "surface": "graph problems",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Among these reasoning tasks, graph problems stand out due to their complexity and unique structural characteristics, attracting considerable attention from researchers."
+   }
+  },
+  {
+   "surface": "prompt sequential order",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, a critical factor has been mostly overlooked: the prompt sequential order in which graph descriptions are presented to the models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt sequential order",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this study, we present the first comprehensive analysis of how the order of graph descriptions impacts LLM performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "graph problems"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "graph problems"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19785,
+ "eval_count": 310,
+ "ts": "2026-11-21T20:53:07Z"
+}

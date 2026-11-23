@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W7131893699",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PSYDIAL",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce PSYDIAL, the first Korean dialogue dataset focused on personality-based dialogues, curated using our proposed pipeline."
+   }
+  },
+  {
+   "surface": "extraversion",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Notably, we focus on the Extraversion dimension of the Big Five personality model in our research."
+   }
+  },
+  {
+   "surface": "personality-based synthetic dialogue data generation pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present a novel end-to-end personality-based synthetic dialogue data generation pipeline, specifically designed to elicit responses from large language models via prompting."
+   }
+  },
+  {
+   "surface": "prompting",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We present a novel end-to-end personality-based synthetic dialogue data generation pipeline, specifically designed to elicit responses from large language models via prompting."
+   }
+  },
+  {
+   "surface": "chatbots",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We design the prompts to generate more human-like dialogues considering real-world scenarios when users engage with chatbots."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "chatbots",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We design the prompts to generate more human-like dialogues considering real-world scenarios when users engage with chatbots.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "PSYDIAL",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results indicate that while pre-trained models and those fine-tuned with a chit-chat dataset struggle to generate responses reflecting personality, models trained with PSYDIAL show significant improvements.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "personality-based synthetic dialogue data generation pipeline",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We design the prompts to generate more human-like dialogues considering real-world scenarios when users engage with chatbots.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "PSYDIAL",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results indicate that while pre-trained models and those fine-tuned with a chit-chat dataset struggle to generate responses reflecting personality, models trained with PSYDIAL show significant improvements.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "big-five"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "big-five"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45727,
+ "eval_count": 534,
+ "ts": "2026-11-21T22:35:16Z"
+}

@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4416686893",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "perfective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this paper, we document a paradigm gap in the combinatorial possibilities of verbs and aspect in Urdu: the perfective form of the -ya: kar construction (e.g."
+   }
+  },
+  {
+   "surface": "subject",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We investigate this diachronic shift through historical text analysis, a large-scale corpus study which confirms the stark absence of perfective forms and subjective evaluation tasks with native speakers, who judge perfective examples as highly unnatural."
+   }
+  },
+  {
+   "surface": "participle",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We argue that this gap arose from a fundamental morphosyntactic conflict: the construction's requirement for a nominative subject and an invariant participle clashes with the core grammatical rule that transitive perfective assign ergative case."
+   }
+  },
+  {
+   "surface": "ergative case",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We argue that this gap arose from a fundamental morphosyntactic conflict: the construction's requirement for a nominative subject and an invariant participle clashes with the core grammatical rule that transitive perfective assign ergative case."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "participle",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this paper, we document a paradigm gap in the combinatorial possibilities of verbs and aspect in Urdu: the perfective form of the -ya: kar construction (e.g.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "subject"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "perfective"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "perfective"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "perfective"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 28203,
+ "eval_count": 501,
+ "ts": "2026-11-21T22:18:28Z"
+}

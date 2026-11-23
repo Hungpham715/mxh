@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4389520691",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Turing complete",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Siegelmann and Sontag (1992) famously showed that RNNs with rational weights and hidden states and unbounded computation time are Turing complete."
+   }
+  },
+  {
+   "surface": "RNNs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This work investigates the computational expressivity of language models (LMs) based on recurrent neural networks (RNNs)."
+   }
+  },
+  {
+   "surface": "PTM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We extend the Turing completeness result to the probabilistic case, showing how a rationally weighted RLM with unbounded computation time can simulate any deterministic probabilistic Turing machine (PTM) with rationally weighted transitions."
+   }
+  },
+  {
+   "surface": "computational expressivity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This work investigates the computational expressivity of language models (LMs) based on recurrent neural networks (RNNs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "RNNs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Siegelmann and Sontag (1992) famously showed that RNNs with rational weights and hidden states and unbounded computation time are Turing complete.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PTM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We extend the Turing completeness result to the probabilistic case, showing how a rationally weighted RLM with unbounded computation time can simulate any deterministic probabilistic Turing machine (PTM) with rationally weighted transitions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "computational expressivity",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This work investigates the computational expressivity of language models (LMs) based on recurrent neural networks (RNNs).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PTM"
+  }
+ ],
+ "auto_added_endpoints": [
+  "computational expressivity"
+ ],
+ "duration_ms": 24723,
+ "eval_count": 398,
+ "ts": "2026-11-21T16:40:42Z"
+}

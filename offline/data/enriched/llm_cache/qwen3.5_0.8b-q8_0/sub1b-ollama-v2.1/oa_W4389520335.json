@@ -1,0 +1,83 @@
+{
+ "paper_id": "oa:W4389520335",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Denoised Neighborhood Aggregation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose \\textit{Denoised Neighborhood Aggregation} (DNA), a self-supervised framework that encodes semantic structures of data into the embedding space."
+   }
+  },
+  {
+   "surface": "fine-grained categories",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Discovering fine-grained categories from coarsely labeled data is a practical and challenging task, which can bridge the gap between the demand for fine-grained analysis and the high annotation cost."
+   }
+  },
+  {
+   "surface": "three benchmark datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments on three benchmark datasets show that our method can retrieve more accurate neighbors (21.31% accuracy improvement) and outperform state-of-the-art models by a large margin (average 9.96% improvement on three metrics)."
+   }
+  },
+  {
+   "surface": "three metrics",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments on three benchmark datasets show that our method can retrieve more accurate neighbors (21.31% accuracy improvement) and outperform state-of-the-art models by a large margin (average 9.96% improvement on three metrics)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "three benchmark datasets",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments on three benchmark datasets show that our method can retrieve more accurate neighbors (21.31% accuracy improvement) and outperform state-of-the-art models by a large margin (average 9.96% improvement on three metrics).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "three metrics",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments on three benchmark datasets show that our method can retrieve more accurate neighbors (21.31% accuracy improvement) and outperform state-of-the-art models by a large margin (average 9.96% improvement on three metrics).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "k-nearest neighbors"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "k-nearest neighbors"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fine-grained categories"
+  }
+ ],
+ "auto_added_endpoints": [
+  "three benchmark datasets",
+  "three metrics"
+ ],
+ "duration_ms": 37750,
+ "eval_count": 461,
+ "ts": "2026-11-21T16:34:15Z"
+}

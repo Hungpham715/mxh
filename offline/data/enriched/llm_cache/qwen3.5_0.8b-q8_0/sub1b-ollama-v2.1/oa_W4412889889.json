@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4412889889",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Direct Preference Optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Post-training of Large Language Models often involves a pipeline of Supervised Finetuning (SFT) followed by Preference Finetuning (PFT) using methods like Direct Preference Optimization."
+   }
+  },
+  {
+   "surface": "Preference Finetuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Post-training of Large Language Models often involves a pipeline of Supervised Finetuning (SFT) followed by Preference Finetuning (PFT) using methods like Direct Preference Optimization."
+   }
+  },
+  {
+   "surface": "Supervised Finetuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Post-training of Large Language Models often involves a pipeline of Supervised Finetuning (SFT) followed by Preference Finetuning (PFT) using methods like Direct Preference Optimization."
+   }
+  },
+  {
+   "surface": "GSM8k",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "This limitation can be effectively addressed by allocating even a small portion (<10%) of the budget to SFT first, resulting in performance improvements of 15-20% on analytical benchmarks like GSM8k."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Preference Finetuning",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We study how to optimally allocate a fixed training data budget between the two stages, through extensive experiments spanning four diverse tasks, multiple model sizes and various data annotation costs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Direct Preference Optimization",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Both stages require annotated data that are very different in structure and costs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Preference Finetuning",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Post-training of Large Language Models often involves a pipeline of Supervised Finetuning (SFT) followed by Preference Finetuning (PFT) using methods like Direct Preference Optimization.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GSM8k"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Preference Finetuning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45286,
+ "eval_count": 507,
+ "ts": "2026-11-21T20:20:55Z"
+}

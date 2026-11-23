@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4404782680",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DiffusionCLS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Therefore, contrary to rephrasing less important context, we propose DiffusionCLS to leverage a diffusion LM to capture in-domain knowledge and generate pseudo samples by reconstructing strong label-related tokens."
+   }
+  },
+  {
+   "surface": "Diffusion Language Model (LM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The potential of the diffusion language model (LM) for textual data augmentation (DA) remains unexplored, moreover, textual DA methods struggle to balance the diversity and consistency of new samples."
+   }
+  },
+  {
+   "surface": "Textual Data Augmentation (DA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The potential of the diffusion language model (LM) for textual data augmentation (DA) remains unexplored, moreover, textual DA methods struggle to balance the diversity and consistency of new samples."
+   }
+  },
+  {
+   "surface": "Noise-Resistant Training objective",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "DiffusionCLS also comprises a Noise-Resistant Training objective to help the model generalize."
+   }
+  },
+  {
+   "surface": "Diffusion Language Model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The potential of the diffusion language model (LM) for textual data augmentation (DA) remains unexplored, moreover, textual DA methods struggle to balance the diversity and consistency of new samples."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Diffusion Language Model (LM)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Therefore, contrary to rephrasing less important context, we propose DiffusionCLS to leverage a diffusion LM to capture in-domain knowledge and generate pseudo samples by reconstructing strong label-related tokens.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Textual Data Augmentation (DA)",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The potential of the diffusion language model (LM) for textual data augmentation (DA) remains unexplored, moreover, textual DA methods struggle to balance the diversity and consistency of new samples.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Noise-Resistant Training objective",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "DiffusionCLS also comprises a Noise-Resistant Training objective to help the model generalize.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21535,
+ "eval_count": 343,
+ "ts": "2026-11-21T19:12:37Z"
+}

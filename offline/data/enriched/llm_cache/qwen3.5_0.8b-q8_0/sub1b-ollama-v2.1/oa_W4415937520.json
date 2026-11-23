@@ -1,0 +1,116 @@
+{
+ "paper_id": "oa:W4415937520",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Reasoning Trajectory",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this context, Socratic debugging can be formulated as a guided Reasoning Trajectory (RT) leading to a statement about the program behavior that contradicts the bug-causing misconception."
+   }
+  },
+  {
+   "surface": "Socratic debugging",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In Socratic debugging, instructors guide students towards identifying and fixing a bug on their own, instead of providing the bug fix directly."
+   }
+  },
+  {
+   "surface": "programming misconceptions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Most novice programmer bugs are caused by programming misconceptions, namely false beliefs about a programming concept."
+   }
+  },
+  {
+   "surface": "false beliefs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Most novice programmer bugs are caused by programming misconceptions, namely false beliefs about a programming concept."
+   }
+  },
+  {
+   "surface": "guided Reasoning Trajectory (RT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this context, Socratic debugging can be formulated as a guided Reasoning Trajectory (RT) leading to a statement about the program behavior that contradicts the bug-causing misconception."
+   }
+  },
+  {
+   "surface": "Reasoning Trajectory Generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we introduce the task of reasoning trajectory generation, together with a dataset of debugging problems annotated with RTs that are manually created or LLM-generated."
+   }
+  },
+  {
+   "surface": "LLM-based solutions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then describe LLM-based solutions for generating RTs and Socratic conversations that are anchored on them."
+   }
+  },
+  {
+   "surface": "Socratic conversations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then describe LLM-based solutions for generating RTs and Socratic conversations that are anchored on them."
+   }
+  },
+  {
+   "surface": "Large-scale LLM-as-judge evaluation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "A large-scale LLM-as-judge evaluation shows that large language and reasoning models can generate up to 91% correct reasoning trajectories and 98.7% valid conversation turns."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Socratic debugging",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In Socratic debugging, instructors guide students towards identifying and fixing a bug on their own, instead of providing the bug fix directly.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Socratic conversations",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We then describe LLM-based solutions for generating RTs and Socratic conversations that are anchored on them.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Socratic debugging"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large-scale LLM-as-judge evaluation"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29628,
+ "eval_count": 547,
+ "ts": "2026-11-21T21:05:15Z"
+}

@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4387323696",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "coherence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Coherence is an essential property of well-written texts, that refers to the way textual units relate to one another."
+   }
+  },
+  {
+   "surface": "generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In the era of generative AI, coherence assessment is essential for many NLP tasks; summarization, generation, long-form question-answering, and more."
+   }
+  },
+  {
+   "surface": "long-form question-answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In the era of generative AI, coherence assessment is essential for many NLP tasks; summarization, generation, long-form question-answering, and more."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "summation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "coherence"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32591,
+ "eval_count": 536,
+ "ts": "2026-11-21T16:05:31Z"
+}

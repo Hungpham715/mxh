@@ -1,0 +1,776 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "evaluation/enrichment/semantic_holdout_nonhuman_v7.jsonl",
+    "processed_papers": "/tmp/graphrag-v7-20261123/processed/papers.jsonl",
+    "data_dir": "/tmp/graphrag-v7-20261123/rules",
+    "papers_evaluated": 12,
+    "annotation_protocol": "surface_first_frozen_contract_v2",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 48,
+      "predicted": 17,
+      "tp": 6,
+      "fp": 11,
+      "fn": 42,
+      "precision": 0.3529,
+      "recall": 0.125,
+      "f1": 0.1846
+    },
+    "macro_f1": 0.2356,
+    "per_type": {
+      "dataset": {
+        "support": 4,
+        "predicted": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "method": {
+        "support": 32,
+        "predicted": 12,
+        "tp": 4,
+        "fp": 8,
+        "fn": 28,
+        "precision": 0.3333,
+        "recall": 0.125,
+        "f1": 0.1818
+      },
+      "task": {
+        "support": 12,
+        "predicted": 4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 11,
+        "precision": 0.25,
+        "recall": 0.0833,
+        "f1": 0.125
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.0,
+        0.5652
+      ],
+      "recall": [
+        0.0,
+        0.2292
+      ],
+      "f1": [
+        0.0,
+        0.3214
+      ]
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 50,
+      "predicted": 20,
+      "tp": 6,
+      "fp": 14,
+      "fn": 44,
+      "precision": 0.3,
+      "recall": 0.12,
+      "f1": 0.1714
+    },
+    "macro_f1": 0.1767,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 12,
+        "predicted": 4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 11,
+        "precision": 0.25,
+        "recall": 0.0833,
+        "f1": 0.125
+      },
+      "EVALUATED_ON": {
+        "support": 4,
+        "predicted": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "METHOD_EVALUATED_ON": {
+        "support": 2,
+        "predicted": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "USES_METHOD": {
+        "support": 32,
+        "predicted": 12,
+        "tp": 4,
+        "fp": 8,
+        "fn": 28,
+        "precision": 0.3333,
+        "recall": 0.125,
+        "f1": 0.1818
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.0,
+        0.48
+      ],
+      "recall": [
+        0.0,
+        0.2188
+      ],
+      "f1": [
+        0.0,
+        0.2941
+      ]
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4389519195",
+      "entity_fp": [
+        [
+          "task",
+          "task:information-extraction"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:layoutlm"
+        ],
+        [
+          "method",
+          "method:vancl"
+        ],
+        [
+          "task",
+          "task:multimodal-information-extraction"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389519195",
+          "task:information-extraction"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389519195",
+          "task:multimodal-information-extraction"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519195",
+          "method:layoutlm"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389519195",
+          "method:vancl"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389520691",
+      "entity_fp": [
+        [
+          "method",
+          "method:rnn"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:ptm"
+        ],
+        [
+          "method",
+          "method:recurrent-neural-networks-rnns"
+        ],
+        [
+          "method",
+          "method:rnn-lms-rlms"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4389520691",
+          "method:rnn"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4389520691",
+          "method:ptm"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520691",
+          "method:recurrent-neural-networks-rnns"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520691",
+          "method:rnn-lms-rlms"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389520382",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:llm-embeddings"
+        ],
+        [
+          "method",
+          "method:non-contextual-word-embeddings"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4389520382",
+          "method:llm-embeddings"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4389520382",
+          "method:non-contextual-word-embeddings"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385572221",
+      "entity_fp": [
+        [
+          "method",
+          "method:contrastive-learning"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:contrastive-learning-regularization-method-using-adversarial-examples-for-alleviating-the-pathology-conaap"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4385572221",
+          "method:contrastive-learning"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4385572221",
+          "method:contrastive-learning-regularization-method-using-adversarial-examples-for-alleviating-the-pathology-conaap"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671771",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:banid-bench"
+        ],
+        [
+          "method",
+          "method:imbanid"
+        ],
+        [
+          "task",
+          "task:imbalanced-new-intent-discovery-i-nid"
+        ],
+        [
+          "task",
+          "task:nid"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671771",
+          "task:imbalanced-new-intent-discovery-i-nid"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671771",
+          "task:nid"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4402671771",
+          "dataset:banid-bench"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671771",
+          "method:imbanid"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671904",
+      "entity_fp": [
+        [
+          "task",
+          "task:text-classification"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:adm"
+        ],
+        [
+          "task",
+          "task:ostc"
+        ],
+        [
+          "task",
+          "task:outlier-detection"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671904",
+          "task:text-classification"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671904",
+          "task:ostc"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671904",
+          "task:outlier-detection"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671904",
+          "method:adm"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671628",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "method",
+          "method:care"
+        ],
+        [
+          "method",
+          "method:self-supervised-strategy"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4402671628",
+          "method:care"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671628",
+          "method:self-supervised-strategy"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4393726285",
+      "entity_fp": [
+        [
+          "method",
+          "method:embedding"
+        ],
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "method",
+          "method:llama"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:bailong-bench"
+        ],
+        [
+          "method",
+          "method:bailong"
+        ],
+        [
+          "method",
+          "method:bailong-instruct-7b"
+        ],
+        [
+          "method",
+          "method:full-parameter-fine-tuning"
+        ],
+        [
+          "method",
+          "method:llama-2-7b"
+        ],
+        [
+          "method",
+          "method:parameter-efficient-tuning"
+        ],
+        [
+          "method",
+          "method:zip-tie-embedding-initialization"
+        ],
+        [
+          "task",
+          "task:multi-turn-dialogue"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:embedding"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:fine-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:llama"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4393726285",
+          "task:multi-turn-dialogue"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4393726285",
+          "dataset:bailong-bench"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:bailong-instruct-7b",
+          "dataset:bailong-bench"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:bailong"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:bailong-instruct-7b"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:full-parameter-fine-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:llama-2-7b"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:parameter-efficient-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4393726285",
+          "method:zip-tie-embedding-initialization"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416035814",
+      "entity_fp": [],
+      "entity_fn": [
+        [
+          "task",
+          "task:hateful-meme-detection"
+        ]
+      ],
+      "relation_fp": [],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035814",
+          "task:hateful-meme-detection"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889980",
+      "entity_fp": [
+        [
+          "method",
+          "method:rl-based"
+        ],
+        [
+          "method",
+          "method:sota"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:ar"
+        ],
+        [
+          "method",
+          "method:chain-of-reasoning-cor"
+        ],
+        [
+          "method",
+          "method:cor-math-7b"
+        ],
+        [
+          "method",
+          "method:nlr"
+        ],
+        [
+          "method",
+          "method:ppt"
+        ],
+        [
+          "method",
+          "method:sr"
+        ],
+        [
+          "task",
+          "task:theorem-proving"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "METHOD_EVALUATED_ON",
+          "method:gpt-4o",
+          "dataset:math"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:rl-based",
+          "dataset:math"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:sota",
+          "dataset:math"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:rl-based"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:sota"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889980",
+          "task:theorem-proving"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:cor-math-7b",
+          "dataset:math"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:ar"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:chain-of-reasoning-cor"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:cor-math-7b"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:nlr"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:ppt"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889980",
+          "method:sr"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889913",
+      "entity_fp": [
+        [
+          "method",
+          "method:quantization"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:quantization-aware-training"
+        ],
+        [
+          "method",
+          "method:ternary-language-models-trilms"
+        ],
+        [
+          "method",
+          "method:trirun"
+        ],
+        [
+          "method",
+          "method:tritera"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4412889913",
+          "method:quantization"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4412889913",
+          "method:quantization-aware-training"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889913",
+          "method:ternary-language-models-trilms"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889913",
+          "method:trirun"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4412889913",
+          "method:tritera"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416036058",
+      "entity_fp": [
+        [
+          "task",
+          "task:machine-translation"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "dataset",
+          "dataset:midas"
+        ],
+        [
+          "task",
+          "task:idiom-containing-sentence-generation"
+        ],
+        [
+          "task",
+          "task:idiom-understanding"
+        ],
+        [
+          "task",
+          "task:idiomatic-machine-translation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416036058",
+          "task:machine-translation"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416036058",
+          "task:idiom-containing-sentence-generation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416036058",
+          "task:idiom-understanding"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416036058",
+          "task:idiomatic-machine-translation"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4416036058",
+          "dataset:midas"
+        ]
+      ]
+    }
+  ]
+}

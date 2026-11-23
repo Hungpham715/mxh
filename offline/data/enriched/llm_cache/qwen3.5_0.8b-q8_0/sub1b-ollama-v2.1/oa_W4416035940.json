@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4416035940",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Counterspeech",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Researchers have explored methods for automatically generating counterspeech to health misinformation as a mitigation strategy."
+   }
+  },
+  {
+   "surface": "Health Literacy Level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing approaches often produce uniform responses, ignoring that the health literacy level of the audience could affect the accessibility and effectiveness of counterspeech."
+   }
+  },
+  {
+   "surface": "Reinforcement Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Controlled-Literacy framework using retrieval-augmented generation (RAG) with reinforcement learning (RL) to generate tailored counterspeech adapted to different health literacy levels."
+   }
+  },
+  {
+   "surface": "Retrieval-Augmented Generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Controlled-Literacy framework using retrieval-augmented generation (RAG) with reinforcement learning (RL) to generate tailored counterspeech adapted to different health literacy levels."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Reinforcement Learning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Controlled-Literacy framework using retrieval-augmented generation (RAG) with reinforcement learning (RL) to generate tailored counterspeech adapted to different health literacy levels.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Retrieval-Augmented Generation",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a Controlled-Literacy framework using retrieval-augmented generation (RAG) with reinforcement learning (RL) to generate tailored counterspeech adapted to different health literacy levels.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Health Literacy Level"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Health Literacy Level"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31136,
+ "eval_count": 404,
+ "ts": "2026-11-21T21:24:03Z"
+}

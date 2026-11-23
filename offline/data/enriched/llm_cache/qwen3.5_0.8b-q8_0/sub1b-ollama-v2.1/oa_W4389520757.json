@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4389520757",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RNN",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous work has investigated the expressive power of recurrent neural network (RNN) LMs in terms of their capacity to recognize unweighted formal languages."
+   }
+  },
+  {
+   "surface": "finite-state model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show that simple RNNs are equivalent to a subclass of probabilistic finite-state automata, and can thus model a strict subset of probability distributions expressible by finite-state models."
+   }
+  },
+  {
+   "surface": "probability distribution",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, LMs do not describe unweighted formal languages—rather, they define probability distributions over strings."
+   }
+  },
+  {
+   "surface": "RNN LMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we study what classes of such probability distributions RNN LMs can represent, which allows us to make more direct statements about their capabilities."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "finite-state model",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We show that simple RNNs are equivalent to a subclass of probabilistic finite-state automata, and can thus model a strict subset of probability distributions expressible by finite-state models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "probability distribution"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27071,
+ "eval_count": 243,
+ "ts": "2026-11-21T16:42:23Z"
+}

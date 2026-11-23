@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4416036824",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Large Audio-Language Models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Audio-Language Models (LALMs) are augmented with the ability to perceive audio, demonstrating impressive capabilities in processing combined audio and text signals."
+   }
+  },
+  {
+   "surface": "audio understanding tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Through extensive evaluation across diverse audio understanding tasks, we reveal a concerning phenomenon: when inconsistencies exist between modalities, LALMs display a significant bias toward textual input, often disregarding audio evidence."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "audio understanding tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39245,
+ "eval_count": 133,
+ "ts": "2026-11-21T22:00:20Z"
+}

@@ -1,0 +1,85 @@
+{
+ "paper_id": "oa:W4385571873",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DataFinder",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries)."
+   }
+  },
+  {
+   "surface": "17.5K queries",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries)."
+   }
+  },
+  {
+   "surface": "392 queries",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries)."
+   }
+  },
+  {
+   "surface": "DataFinder Dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries)."
+   }
+  },
+  {
+   "surface": "bi-encoder retriever",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using this data, we compare various information retrieval algorithms on our test set and present a superior bi-encoder retriever for text-based dataset recommendation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "17.5K queries",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries).",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "392 queries",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To facilitate this task, we build the DataFinder Dataset which consists of a larger automatically-constructed training set (17.5K queries) and a smaller expert-annotated evaluation set (392 queries).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "bi-encoder retriever",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using this data, we compare various information retrieval algorithms on our test set and present a superior bi-encoder retriever for text-based dataset recommendation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26747,
+ "eval_count": 375,
+ "ts": "2026-11-21T15:49:33Z"
+}

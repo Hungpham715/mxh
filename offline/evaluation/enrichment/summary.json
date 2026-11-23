@@ -2,8 +2,8 @@
   "schema_version": "enrichment-source-audit-v1",
   "audit_kind": "deterministic_nonhuman_source_grounding",
   "provenance": {
-    "edge_source": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/enriched",
-    "paper_source": "/home/hung/YEAR_4/MXH/GraphRAG/offline/data/processed/papers.jsonl",
+    "edge_source": "data/enriched",
+    "paper_source": "data/processed/papers.jsonl",
     "seed": 20261120,
     "sample_per_relation_type": 30,
     "reviewer": "offline/src/enrichment/audit.py",
@@ -21,13 +21,13 @@
   },
   "verdicts_by_source_kind": {
     "agreement": {
-      "pass": 4
+      "pass": 8
     },
     "llm": {
-      "pass": 47
+      "pass": 63
     },
     "rules": {
-      "pass": 69
+      "pass": 49
     }
   },
   "claims_not_supported": [

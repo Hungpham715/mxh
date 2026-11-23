@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4389519104",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "IBADR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this paper, we propose IBADR, an Iterative Bias-Aware Dataset Refinement framework, which debiases NLU models without predefining biased features."
+   }
+  },
+  {
+   "surface": "shallow model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, at each iteration, we first train a shallow model to quantify the bias degree of samples in the pool."
+   }
+  },
+  {
+   "surface": "bias indicator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we pair each sample with a bias indicator representing its bias degree, and use these extended samples to train a sample generator."
+   }
+  },
+  {
+   "surface": "sample generator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we pair each sample with a bias indicator representing its bias degree, and use these extended samples to train a sample generator."
+   }
+  },
+  {
+   "surface": "pseudo samples",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we employ the generator to produce pseudo samples with fewer biased features by feeding specific bias indicators."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "shallow model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, at each iteration, we first train a shallow model to quantify the bias degree of samples in the pool.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "bias indicator",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we pair each sample with a bias indicator representing its bias degree, and use these extended samples to train a sample generator.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "sample generator",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, at each iteration, we first train a shallow model to quantify the bias degree of samples in the pool.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "pseudo samples",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we employ the generator to produce pseudo samples with fewer biased features by feeding specific bias indicators.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 24119,
+ "eval_count": 453,
+ "ts": "2026-11-21T16:20:57Z"
+}

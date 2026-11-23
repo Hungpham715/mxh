@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4322832067",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "question-answer pairs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose representing factual changes between paired documents as question-answer pairs, where the answer to the same question differs between two versions."
+   }
+  },
+  {
+   "surface": "DIFFQG",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We release DIFFQG which consists of 759 QA pairs and 1153 examples of paired passages with no factual change."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DIFFQG"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13380,
+ "eval_count": 126,
+ "ts": "2026-11-21T15:11:40Z"
+}

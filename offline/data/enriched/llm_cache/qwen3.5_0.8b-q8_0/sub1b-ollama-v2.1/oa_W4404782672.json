@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4404782672",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RLHF-LMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method has shown good calibration performance by conducting experiments with 6 RLHF-LMs on four MCQA datasets."
+   }
+  },
+  {
+   "surface": "MCQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method has shown good calibration performance by conducting experiments with 6 RLHF-LMs on four MCQA datasets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MCQA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method has shown good calibration performance by conducting experiments with 6 RLHF-LMs on four MCQA datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 13651,
+ "eval_count": 131,
+ "ts": "2026-11-21T19:11:48Z"
+}

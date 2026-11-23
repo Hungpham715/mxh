@@ -1,0 +1,135 @@
+{
+ "paper_id": "oa:W4416548607",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Etiology-Aware Attention Supervision framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Method: We propose an Etiology-Aware Attention Supervision framework that introduces structured etiological information as an external supervisory signal for training large language models."
+   }
+  },
+  {
+   "surface": "Clinical Etiology Schema (CES)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we construct Clinical Etiology Schema (CES) derived from authoritative clinical guidelines for three acute abdominal conditions: acute appendicitis, acute pancreatitis, and acute cholecystitis."
+   }
+  },
+  {
+   "surface": "acute appendicitis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we construct Clinical Etiology Schema (CES) derived from authoritative clinical guidelines for three acute abdominal conditions: acute appendicitis, acute pancreatitis, and acute cholecystitis."
+   }
+  },
+  {
+   "surface": "acute pancreatitis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we construct Clinical Etiology Schema (CES) derived from authoritative clinical guidelines for three acute abdominal conditions: acute appendicitis, acute pancreatitis, and acute cholecystitis."
+   }
+  },
+  {
+   "surface": "acute cholecystitis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we construct Clinical Etiology Schema (CES) derived from authoritative clinical guidelines for three acute abdominal conditions: acute appendicitis, acute pancreatitis, and acute cholecystitis."
+   }
+  },
+  {
+   "surface": "Consistent Diagnosis Cohort",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Result: Experiments conducted on a Consistent Diagnosis Cohort demonstrate that the proposed framework improves average diagnostic accuracy by 15.65% compared with baseline models."
+   }
+  },
+  {
+   "surface": "Discrepant Diagnosis Cohort",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "External evaluation on a Discrepant Diagnosis Cohort further confirms the robustness of diagnostic performance improvements under real-world clinical inconsistencies."
+   }
+  },
+  {
+   "surface": "Etiology-Aware Head Identification strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on CES annotations, we develop an Etiology-Aware Head Identification strategy to identify attention heads that consistently align with etiological evidence."
+   }
+  },
+  {
+   "surface": "structure-guided parameter-efficient fine-tuning approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Building on this analysis, we design a structure-guided parameter-efficient fine-tuning approach that steers attention distributions toward clinically relevant evidence through an additional supervision loss, without modifying the base model architecture."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Etiology-Aware Head Identification strategy",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on CES annotations, we develop an Etiology-Aware Head Identification strategy to identify attention heads that consistently align with etiological evidence.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "structure-guided parameter-efficient fine-tuning approach",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Building on this analysis, we design a structure-guided parameter-efficient fine-tuning approach that steers attention distributions toward clinically relevant evidence through an additional supervision loss, without modifying the base model architecture.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Consistent Diagnosis Cohort",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Result: Experiments conducted on a Consistent Diagnosis Cohort demonstrate that the proposed framework improves average diagnostic accuracy by 15.65% compared with baseline models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Discrepant Diagnosis Cohort",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "External evaluation on a Discrepant Diagnosis Cohort further confirms the robustness of diagnostic performance improvements under real-world clinical inconsistencies.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Clinical Etiology Schema (CES)"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Etiology-Aware Head Identification strategy",
+  "structure-guided parameter-efficient fine-tuning approach"
+ ],
+ "duration_ms": 26564,
+ "eval_count": 640,
+ "ts": "2026-11-21T22:15:59Z"
+}

@@ -1,0 +1,173 @@
+{
+ "paper_id": "oa:W4402672000",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "mCoT-MATH",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, we compile the first large-scale multilingual math reasoning dataset, mCoT-MATH, covering eleven diverse languages."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks."
+   }
+  },
+  {
+   "surface": "Chain-of-thought (CoT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks."
+   }
+  },
+  {
+   "surface": "English",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As most research mainly focuses on English, with few explorations in a multilingual context, the question of how reliable this reasoning capability is in different languages is still open."
+   }
+  },
+  {
+   "surface": "multilingual context",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As most research mainly focuses on English, with few explorations in a multilingual context, the question of how reliable this reasoning capability is in different languages is still open."
+   }
+  },
+  {
+   "surface": "reasoning consistency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address it directly, we study multilingual reasoning consistency across multiple languages, using popular open-source LLMs."
+   }
+  },
+  {
+   "surface": "multiple languages",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address it directly, we study multilingual reasoning consistency across multiple languages, using popular open-source LLMs."
+   }
+  },
+  {
+   "surface": "multilingual CoT instruction tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we introduce multilingual CoT instruction tuning to boost reasoning capability across languages, thereby improving model consistency."
+   }
+  },
+  {
+   "surface": "reasoning capability",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As most research mainly focuses on English, with few explorations in a multilingual context, the question of how reliable this reasoning capability is in different languages is still open."
+   }
+  },
+  {
+   "surface": "model consistency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Then, we introduce multilingual CoT instruction tuning to boost reasoning capability across languages, thereby improving model consistency."
+   }
+  },
+  {
+   "surface": "7B parameter model mCoT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "While existing LLMs show substantial variation across the languages we consider, and especially low performance for lesser resourced languages, our 7B parameter model mCoT achieves impressive consistency across languages, and superior or comparable performance to close- and open-source models even of much larger sizes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "English",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As most research mainly focuses on English, with few explorations in a multilingual context, the question of how reliable this reasoning capability is in different languages is still open.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "reasoning consistency",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address it directly, we study multilingual reasoning consistency across multiple languages, using popular open-source LLMs.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multilingual context",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As most research mainly focuses on English, with few explorations in a multilingual context, the question of how reliable this reasoning capability is in different languages is still open.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLMs",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) with Chain-of-thought (CoT) have recently emerged as a powerful technique for eliciting reasoning to improve various downstream tasks.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 42815,
+ "eval_count": 707,
+ "ts": "2026-11-21T18:27:50Z"
+}

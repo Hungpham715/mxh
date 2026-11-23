@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4385570881",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Contrastive Novelty-Augmented Learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To remedy this overconfidence, we introduce Contrastive Novelty-Augmented Learning (CoNAL), a two-step method that generates OOD examples representative of novel classes, then trains to decrease confidence on them."
+   }
+  },
+  {
+   "surface": "large language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, we generate OOD examples by prompting a large language model twice: we prompt it to enumerate relevant novel classes, then generate examples from each novel class matching the task format."
+   }
+  },
+  {
+   "surface": "OOD examples",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To remedy this overconfidence, we introduce Contrastive Novelty-Augmented Learning (CoNAL), a two-step method that generates OOD examples representative of novel classes, then trains to decrease confidence on them."
+   }
+  },
+  {
+   "surface": "novel classes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In many task settings, text classification models are likely to encounter examples from novel classes on which they cannot predict correctly."
+   }
+  },
+  {
+   "surface": "classifier",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Second, we train a classifier with a novel contrastive objective that encourages lower confidence on generated OOD examples than training examples."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Contrastive Novelty-Augmented Learning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, we generate OOD examples by prompting a large language model twice: we prompt it to enumerate relevant novel classes, then generate examples from each novel class matching the task format.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "novel classes",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In many task settings, text classification models are likely to encounter examples from novel classes on which they cannot predict correctly.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "OOD examples",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To remedy this overconfidence, we introduce Contrastive Novelty-Augmented Learning (CoNAL), a two-step method that generates OOD examples representative of novel classes, then trains to decrease confidence on them.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "novel classes"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21587,
+ "eval_count": 531,
+ "ts": "2026-11-21T15:34:59Z"
+}

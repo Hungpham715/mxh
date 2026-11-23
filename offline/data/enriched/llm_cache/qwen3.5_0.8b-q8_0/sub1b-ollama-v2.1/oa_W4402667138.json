@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4402667138",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "metaphor",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively."
+   }
+  },
+  {
+   "surface": "idiom",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively."
+   }
+  },
+  {
+   "surface": "hyperbole",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively."
+   }
+  },
+  {
+   "surface": "empathy detection models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "empathy detection models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "empathy detection models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "empathy detection models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our extensive experiments reveal that incorporating features regarding the use of metaphor, idiom, and hyperbole into empathy detection models improves their performance, resulting in impressive maximum F1 scores of 0.942 and 0.809 for identifying posts without and with empathy, respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 38836,
+ "eval_count": 317,
+ "ts": "2026-11-21T17:35:53Z"
+}

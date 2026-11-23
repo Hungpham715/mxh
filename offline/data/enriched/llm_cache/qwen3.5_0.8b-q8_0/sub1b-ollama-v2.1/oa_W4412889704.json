@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4412889704",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Transformers",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we provide constructive proof that Transformers can recognize and generate hierarchical language efficiently with respect to model size, even without the need for a specific positional encoding.Specifically, we show that causal masking and a starting token enable Transformers to compute positional information and depth within hierarchical structures.We demonstrate that Transformers without positional encoding can generate hierarchical languages."
+   }
+  },
+  {
+   "surface": "causal masking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we provide constructive proof that Transformers can recognize and generate hierarchical language efficiently with respect to model size, even without the need for a specific positional encoding.Specifically, we show that causal masking and a starting token enable Transformers to compute positional information and depth within hierarchical structures.We demonstrate that Transformers without positional encoding can generate hierarchical languages."
+   }
+  },
+  {
+   "surface": "starting token",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we provide constructive proof that Transformers can recognize and generate hierarchical language efficiently with respect to model size, even without the need for a specific positional encoding.Specifically, we show that causal masking and a starting token enable Transformers to compute positional information and depth within hierarchical structures.We demonstrate that Transformers without positional encoding can generate hierarchical languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "causal masking",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we provide constructive proof that Transformers can recognize and generate hierarchical language efficiently with respect to model size, even without the need for a specific positional encoding.Specifically, we show that causal masking and a starting token enable Transformers to compute positional information and depth within hierarchical structures.We demonstrate that Transformers without positional encoding can generate hierarchical languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "starting token",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this study, we provide constructive proof that Transformers can recognize and generate hierarchical language efficiently with respect to model size, even without the need for a specific positional encoding.Specifically, we show that causal masking and a starting token enable Transformers to compute positional information and depth within hierarchical structures.We demonstrate that Transformers without positional encoding can generate hierarchical languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46578,
+ "eval_count": 291,
+ "ts": "2026-11-21T20:12:17Z"
+}

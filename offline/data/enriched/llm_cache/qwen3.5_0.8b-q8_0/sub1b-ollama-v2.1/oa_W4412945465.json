@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4412945465",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GainRAG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To solve this, we propose GainRAG, a novel approach that aligns the retriever’s and LLM’s preferences by defining a new metric, “gain’’, which measure how well an input passage contributes to correct outputs.We then propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data.In addition, we introduce a pseudo-passage strategy to mitigate degradation.The experimental results on 6 datasets verify the effectiveness of GainRAG."
+   }
+  },
+  {
+   "surface": "metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To solve this, we propose GainRAG, a novel approach that aligns the retriever’s and LLM’s preferences by defining a new metric, “gain’’, which measure how well an input passage contributes to correct outputs.We then propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data.In addition, we introduce a pseudo-passage strategy to mitigate degradation.The experimental results on 6 datasets verify the effectiveness of GainRAG."
+   }
+  },
+  {
+   "surface": "pseudo-passage strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To solve this, we propose GainRAG, a novel approach that aligns the retriever’s and LLM’s preferences by defining a new metric, “gain’’, which measure how well an input passage contributes to correct outputs.We then propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data.In addition, we introduce a pseudo-passage strategy to mitigate degradation.The experimental results on 6 datasets verify the effectiveness of GainRAG."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "metric",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To solve this, we propose GainRAG, a novel approach that aligns the retriever’s and LLM’s preferences by defining a new metric, “gain’’, which measure how well an input passage contributes to correct outputs.We then propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data.In addition, we introduce a pseudo-passage strategy to mitigate degradation.The experimental results on 6 datasets verify the effectiveness of GainRAG.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "pseudo-passage strategy",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To solve this, we propose GainRAG, a novel approach that aligns the retriever’s and LLM’s preferences by defining a new metric, “gain’’, which measure how well an input passage contributes to correct outputs.We then propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data.In addition, we introduce a pseudo-passage strategy to mitigate degradation.The experimental results on 6 datasets verify the effectiveness of GainRAG.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16603,
+ "eval_count": 222,
+ "ts": "2026-11-21T20:49:11Z"
+}

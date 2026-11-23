@@ -1,0 +1,98 @@
+{
+ "paper_id": "oa:W4385569785",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PICL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose PICL (Pre-training for In-Context Learning), a framework to enhance the language models’ in-context learning ability by pre-training the model on a large collection of “intrinsic tasks” in the general plain-text corpus using the simple language modeling objective."
+   }
+  },
+  {
+   "surface": "in-context learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning, where pre-trained language models learn to perform tasks from task examples and instructions in their contexts, has attracted much attention in the NLP community."
+   }
+  },
+  {
+   "surface": "pre-trained language models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In-context learning, where pre-trained language models learn to perform tasks from task examples and instructions in their contexts, has attracted much attention in the NLP community."
+   }
+  },
+  {
+   "surface": "general plain-text corpus",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, we propose PICL (Pre-training for In-Context Learning), a framework to enhance the language models’ in-context learning ability by pre-training the model on a large collection of “intrinsic tasks” in the general plain-text corpus using the simple language modeling objective."
+   }
+  },
+  {
+   "surface": "Super-NaturalInstrctions benchmark",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate the in-context learning performance of the model trained with PICL on seven widely-used text classification datasets and the Super-NaturalInstrctions benchmark, which contains 100+ NLP tasks formulated to text generation."
+   }
+  },
+  {
+   "surface": "100+ NLP tasks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate the in-context learning performance of the model trained with PICL on seven widely-used text classification datasets and the Super-NaturalInstrctions benchmark, which contains 100+ NLP tasks formulated to text generation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "100+ NLP tasks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We evaluate the in-context learning performance of the model trained with PICL on seven widely-used text classification datasets and the Super-NaturalInstrctions benchmark, which contains 100+ NLP tasks formulated to text generation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "large collection of intrinsic tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "in-context learning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "pre-trained language models"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "large collection of intrinsic tasks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "general plain-text corpus"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Super-NaturalInstrctions benchmark"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45510,
+ "eval_count": 691,
+ "ts": "2026-11-21T15:21:42Z"
+}

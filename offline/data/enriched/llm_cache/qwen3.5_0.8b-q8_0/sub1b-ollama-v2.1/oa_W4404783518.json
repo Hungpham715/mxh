@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404783518",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Collaborative Prompting (ColPro)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we propose Collaborative Prompting (ColPro), which integrates specific question constraint prompting, knowledge acquisition prompting, and visual temporal awareness prompting."
+   }
+  },
+  {
+   "surface": "NExT-QA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results on the NExT-QA and DramaQA datasets show that ColPro achieves superior performance compared to existing approaches, achieving 55.14% accuracy on NExT-QA and 71.24% accuracy on DramaQA, highlighting its practical relevance and effectiveness."
+   }
+  },
+  {
+   "surface": "DramaQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experimental results on the NExT-QA and DramaQA datasets show that ColPro achieves superior performance compared to existing approaches, achieving 55.14% accuracy on NExT-QA and 71.24% accuracy on DramaQA, highlighting its practical relevance and effectiveness."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NExT-QA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DramaQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36232,
+ "eval_count": 242,
+ "ts": "2026-11-21T19:30:55Z"
+}

@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4407392849",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "unsupervised visual-audio-text grammar induction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With such intuition, this work introduces a novel \\emph{unsupervised visual-audio-text grammar induction} task (named \\textbf{VAT-GI}), to induce the constituent grammar trees from parallel images, text, and speech inputs."
+   }
+  },
+  {
+   "surface": "VAT-GI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "With such intuition, this work introduces a novel \\emph{unsupervised visual-audio-text grammar induction} task (named \\textbf{VAT-GI}), to induce the constituent grammar trees from parallel images, text, and speech inputs."
+   }
+  },
+  {
+   "surface": "VaTiora",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To approach the task, we propose a visual-audio-text inside-outside recursive autoencoder (\\textbf{VaTiora}) framework, which leverages rich modal-specific and complementary features for effective grammar parsing."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VAT-GI"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VaTiora"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "VAT-GI"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34717,
+ "eval_count": 395,
+ "ts": "2026-11-21T19:51:49Z"
+}

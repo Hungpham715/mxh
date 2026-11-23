@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4385571433",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "OpenIE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Information Extraction (OpenIE) has been used in the pipelines of various NLP tasks."
+   }
+  },
+  {
+   "surface": "Neural OpenIE models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present an application-focused empirical survey of neural OpenIE models, training sets, and benchmarks in an effort to help users choose the most suitable OpenIE systems for their applications."
+   }
+  },
+  {
+   "surface": "Training sets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Muddying things further is the lack of comparisons that take differing training sets into account."
+   }
+  },
+  {
+   "surface": "Benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present an application-focused empirical survey of neural OpenIE models, training sets, and benchmarks in an effort to help users choose the most suitable OpenIE systems for their applications."
+   }
+  },
+  {
+   "surface": "Complex QA application",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We demonstrate the applicability of our recommendations on a downstream Complex QA application."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Neural OpenIE models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we present an application-focused empirical survey of neural OpenIE models, training sets, and benchmarks in an effort to help users choose the most suitable OpenIE systems for their applications.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Complex QA application",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We demonstrate the applicability of our recommendations on a downstream Complex QA application.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Benchmarks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We demonstrate the applicability of our recommendations on a downstream Complex QA application.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Neural OpenIE models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36647,
+ "eval_count": 384,
+ "ts": "2026-11-21T15:45:30Z"
+}

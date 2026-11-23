@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4416035380",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT-EV",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Accordingly, we developed a transformer-based emotional valence scoring model fit for crisis conversations, BERT-EV, that assigns numerical emotional valence scores to rate the intensity of expressed negative versus positive emotion."
+   }
+  },
+  {
+   "surface": "crisis conversations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The science of crisis intervention has been impeded, however, by a lack of quantitative approaches that allow for detailed analysis of emotion in crisis conversations."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "crisis conversations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 15219,
+ "eval_count": 134,
+ "ts": "2026-11-21T21:09:15Z"
+}

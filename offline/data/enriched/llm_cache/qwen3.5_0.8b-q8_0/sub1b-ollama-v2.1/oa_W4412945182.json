@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4412945182",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Continual Learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose GORP (\\underline{\\textbf{G}}radient L\\underline{\\textbf{O}}w \\underline{\\textbf{R}}ank \\underline{\\textbf{P}}rojection) for Continual Learning, a novel training strategy that overcomes these limitations by synergistically combining full and low-rank parameters and jointly updating within a unified low-rank gradient subspace."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Continual fine-tuning of Large Language Models (LLMs) is hampered by the trade-off between efficiency and expressiveness."
+   }
+  },
+  {
+   "surface": "Low-Rank Adaptation (LoRA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Low-Rank Adaptation (LoRA) offers efficiency but constrains the model’s ability to learn new tasks and transfer knowledge due to its low-rank nature and reliance on explicit parameter constraints."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Gradient Löw Rânk Pösjion"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large Language Models (LLMs)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Gradient Löw Rânk Pösjion"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Continual Learning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large Language Models (LLMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46674,
+ "eval_count": 534,
+ "ts": "2026-11-21T20:38:38Z"
+}

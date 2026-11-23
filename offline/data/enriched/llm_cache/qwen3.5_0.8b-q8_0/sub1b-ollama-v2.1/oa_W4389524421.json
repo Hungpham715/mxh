@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4389524421",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "soft-infonce",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "In this paper, we tackle the above problems by proposing a simple yet effective Soft-InfoNCE loss that inserts weight terms into InfoNCE."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "bubble-sorting-algorithm"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "file-saving-function"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "quick-sorting-algorithm"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "code-corpora"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "large-scale-public-dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "code-corpora"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "quick-sorting-algorithm"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "file-saving-function"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "quick-sorting-algorithm"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "file-saving-function"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "quick-sorting-algorithm"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32075,
+ "eval_count": 598,
+ "ts": "2026-11-21T17:03:30Z"
+}

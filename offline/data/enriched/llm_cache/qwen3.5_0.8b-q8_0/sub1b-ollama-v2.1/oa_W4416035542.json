@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4416035542",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "decentralized LLM training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the first comprehensive exploration of this emerging field, we present decentralized LLM training as a resource-driven paradigm and categorize existing efforts into community-driven and organizational approaches."
+   }
+  },
+  {
+   "surface": "resource-driven paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the first comprehensive exploration of this emerging field, we present decentralized LLM training as a resource-driven paradigm and categorize existing efforts into community-driven and organizational approaches."
+   }
+  },
+  {
+   "surface": "organizational approaches",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the first comprehensive exploration of this emerging field, we present decentralized LLM training as a resource-driven paradigm and categorize existing efforts into community-driven and organizational approaches."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "organizational approaches",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the first comprehensive exploration of this emerging field, we present decentralized LLM training as a resource-driven paradigm and categorize existing efforts into community-driven and organizational approaches.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "community-driven approaches"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "community-driven approaches"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "community-driven approaches"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "organizational approaches"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24639,
+ "eval_count": 427,
+ "ts": "2026-11-21T21:14:43Z"
+}

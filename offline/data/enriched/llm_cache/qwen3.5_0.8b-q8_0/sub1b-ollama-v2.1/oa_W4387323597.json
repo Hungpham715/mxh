@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4387323597",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SELF",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To further advance LLMs, we propose 'SELF' (Self-Evolution with Language Feedback), a novel approach that enables LLMs to self-improve through self-reflection, akin to human learning processes."
+   }
+  },
+  {
+   "surface": "meta-skill learning process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "SELF initiates with a meta-skill learning process that equips the LLMs with capabilities for self-feedback and self-refinement."
+   }
+  },
+  {
+   "surface": "unlabeled dataset of instructions",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In each iteration, it utilizes an unlabeled dataset of instructions to generate initial responses."
+   }
+  },
+  {
+   "surface": "mathematics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments in mathematics and general tasks demonstrate that SELF can enhance the capabilities of LLMs without human intervention."
+   }
+  },
+  {
+   "surface": "general tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Our experiments in mathematics and general tasks demonstrate that SELF can enhance the capabilities of LLMs without human intervention."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "meta-skill learning process",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "SELF initiates with a meta-skill learning process that equips the LLMs with capabilities for self-feedback and self-refinement.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "unlabeled dataset of instructions"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "mathematics"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "general tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36560,
+ "eval_count": 404,
+ "ts": "2026-11-21T16:04:07Z"
+}

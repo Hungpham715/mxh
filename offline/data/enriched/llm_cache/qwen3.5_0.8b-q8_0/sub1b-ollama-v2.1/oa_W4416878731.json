@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4416878731",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HELM",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "BIG-Bench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Open Large Language Model (LLM) benchmarks, such as HELM and BIG-Bench, provide standardized and transparent evaluation protocols that support comparative analysis, reproducibility, and systematic progress tracking in Language Model (LM) research."
+   }
+  },
+  {
+   "surface": "BART",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "GPT-2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  },
+  {
+   "surface": "fine-tuned directly on publicly available test-sets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BART",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "T5",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPT-2",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "HELM",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We illustrate the severity of this issue by intentionally constructing cheating models: smaller variants of BART, T5, and GPT-2, fine-tuned directly on publicly available test-sets.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 43940,
+ "eval_count": 506,
+ "ts": "2026-11-21T22:19:50Z"
+}

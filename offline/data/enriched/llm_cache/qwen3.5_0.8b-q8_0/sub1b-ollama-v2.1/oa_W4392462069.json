@@ -1,0 +1,107 @@
+{
+ "paper_id": "oa:W4392462069",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Arabic suicidal tweets dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "Naïve Bayes",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "Support Vector Machine",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "K-Nearest Neighbor",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "Random Forest",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "XGBoost",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "AraBert",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "AraELECTRA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  },
+  {
+   "surface": "AraGPT2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the ability to detect suicidal thoughts in Arabic tweets automatically, we developed a novel Arabic suicidal tweets dataset, examined several machine learning models, including Naïve Bayes, Support Vector Machine, K-Nearest Neighbor, Random Forest, and XGBoost, trained on word frequency and word embedding features, and investigated the ability of pre-trained deep learning models, AraBert, AraELECTRA, and AraGPT2, to identify suicidal thoughts in Arabic tweets."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Naïve Bayes"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Support Vector Machine"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "AraBert"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "AraELECTRA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "AraGPT2"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33627,
+ "eval_count": 626,
+ "ts": "2026-11-21T17:18:36Z"
+}

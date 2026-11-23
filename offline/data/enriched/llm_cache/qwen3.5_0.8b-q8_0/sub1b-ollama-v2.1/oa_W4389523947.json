@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4389523947",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have shown incredible performance on many tasks such as dialogue generation, commonsense reasoning and question answering."
+   }
+  },
+  {
+   "surface": "In-context learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In-context learning (ICL) is an important paradigm for adapting LLMs to the downstream tasks by prompting few demonstrations."
+   }
+  },
+  {
+   "surface": "Task-level thinking steps",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose the concept of task-level thinking steps that can eliminate bias introduced by demonstrations."
+   }
+  },
+  {
+   "surface": "Progressive revision framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Further, to help LLMs distinguish confusing classes, we design a progressive revision framework, which can improve the thinking steps by correcting hard demonstrations."
+   }
+  },
+  {
+   "surface": "Chain-of-thoughts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Besides, with task-level thinking steps, automatically generated chain-of-thoughts (CoTs) bring more competitive performance."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "In-context learning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In-context learning (ICL) is an important paradigm for adapting LLMs to the downstream tasks by prompting few demonstrations.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Task-level thinking steps",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose the concept of task-level thinking steps that can eliminate bias introduced by demonstrations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Progressive revision framework",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Further, to help LLMs distinguish confusing classes, we design a progressive revision framework, which can improve the thinking steps by correcting hard demonstrations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Chain-of-thoughts",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Besides, with task-level thinking steps, automatically generated chain-of-thoughts (CoTs) bring more competitive performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 22916,
+ "eval_count": 446,
+ "ts": "2026-11-21T16:55:03Z"
+}

@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4385565419",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NeuroStructural Decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We address this gap by introducing NeuroStructural Decoding, a new decoding algorithm that incorporates syntactic constraints to further improve the quality of the generated text."
+   }
+  },
+  {
+   "surface": "NeuroLogic Decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We build NeuroStructural Decoding on the NeuroLogic Decoding (Lu etal."
+   }
+  },
+  {
+   "surface": "dependency parser",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To this end, we adapt a dependency parser to generate parses for incomplete sentences."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "NeuroLogic Decoding",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We build NeuroStructural Decoding on the NeuroLogic Decoding (Lu etal.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dependency parser",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our approach is evaluated on three different language generation tasks, and the results show improved performance in both lexical and syntactic metrics compared to previous methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NeuroLogic Decoding"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "dependency parser"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37964,
+ "eval_count": 416,
+ "ts": "2026-11-21T15:18:59Z"
+}

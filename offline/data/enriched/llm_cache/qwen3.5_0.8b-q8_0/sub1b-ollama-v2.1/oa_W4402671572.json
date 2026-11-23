@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4402671572",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Araida",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To tackle this challenge, we propose Araida, an analogical reasoning-based approach that enhances automatic annotation accuracy in the interactive data annotation setting and reduces the need for human corrections."
+   }
+  },
+  {
+   "surface": "KNN",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Araida involves an error-aware integration strategy that dynamically coordinates an annotation model and a k-nearest neighbors (KNN) model, giving more importance to KNN’s predictions when predictions from the annotation model are deemed inaccurate."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "KNN",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Araida involves an error-aware integration strategy that dynamically coordinates an annotation model and a k-nearest neighbors (KNN) model, giving more importance to KNN’s predictions when predictions from the annotation model are deemed inaccurate.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 31830,
+ "eval_count": 139,
+ "ts": "2026-11-21T17:52:49Z"
+}

@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4385570311",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TAGPRIME",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose to take a unified view of all these tasks and introduce TAGPRIME to address relational structure extraction problems."
+   }
+  },
+  {
+   "surface": "condition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Many tasks in natural language processing require the extraction of relationship information for a given condition, such as event argument extraction, relation extraction, and task-oriented semantic parsing."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "condition",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Many tasks in natural language processing require the extraction of relationship information for a given condition, such as event argument extraction, relation extraction, and task-oriented semantic parsing.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 11688,
+ "eval_count": 142,
+ "ts": "2026-11-21T15:28:46Z"
+}

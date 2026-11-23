@@ -1,0 +1,144 @@
+{
+ "paper_id": "oa:W4385572453",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "masked language modeling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we explore different masked language modeling (MLM) pretraining techniques for code-switched text that are cognizant of language boundaries prior to masking."
+   }
+  },
+  {
+   "surface": "pretrained models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pretrained models are a mainstay in modern NLP applications."
+   }
+  },
+  {
+   "surface": "language boundaries",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this paper, we explore different masked language modeling (MLM) pretraining techniques for code-switched text that are cognizant of language boundaries prior to masking."
+   }
+  },
+  {
+   "surface": "code-switched text",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "While monolingual text is readily available for many of the world’s languages, access to large quantities of code-switched text (i.e., text with tokens of multiple languages interspersed within a sentence) is much more scarce."
+   }
+  },
+  {
+   "surface": "relative frequency-based estimates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The language identity of the tokens can either come from human annotators, trained language classifiers, or simple relative frequency-based estimates."
+   }
+  },
+  {
+   "surface": "question answering",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  },
+  {
+   "surface": "sentiment analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  },
+  {
+   "surface": "Hindi-English",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  },
+  {
+   "surface": "Spanish-English",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  },
+  {
+   "surface": "Tamil-English",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  },
+  {
+   "surface": "Malayalam-English",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiments on two downstream tasks, Question Answering (QA) and Sentiment Analysis (SA), involving four code-switched language pairs (Hindi-English, Spanish-English, Tamil-English, Malayalam-English) yield relative improvements of up to 5.8 and 2.7 F1 scores on QA (Hindi-English) and SA (Tamil-English), respectively, compared to standard pretraining techniques."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "pretrained models",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Pretraining requires access to large volumes of unlabeled text.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "masked language modeling",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "The language identity of the tokens can either come from human annotators, trained language classifiers, or simple relative frequency-based estimates.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "code-switched text"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "pretrained models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "pretrained models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "question answering"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sentiment analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37729,
+ "eval_count": 780,
+ "ts": "2026-11-21T15:57:54Z"
+}

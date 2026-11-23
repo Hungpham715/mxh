@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4389500603",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We describe a method, based on Jennifer Nado's proposal for classification procedures as targets of conceptual engineering, that implements such procedures by prompting a large language model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We describe a method, based on Jennifer Nado's proposal for classification procedures as targets of conceptual engineering, that implements such procedures by prompting a large language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "dataset"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42710,
+ "eval_count": 336,
+ "ts": "2026-11-21T16:10:44Z"
+}

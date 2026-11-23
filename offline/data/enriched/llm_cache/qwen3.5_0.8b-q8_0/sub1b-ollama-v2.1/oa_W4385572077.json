@@ -1,0 +1,122 @@
+{
+ "paper_id": "oa:W4385572077",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CMN",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "CVAEs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "NSP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "MI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "Open-domain dialogues",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The long-standing one-to-many issue of the open-domain dialogues poses significant challenges for automatic evaluation methods, i.e., there may be multiple suitable responses which differ in semantics for a given conversational context."
+   }
+  },
+  {
+   "surface": "Conditional Variational Autoencoders",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "Next Sentence Prediction",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "Mutual Information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space."
+   }
+  },
+  {
+   "surface": "Open-domain dialogue datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Experimental results on two open-domain dialogue datasets demonstrate the superiority of our method compared with a wide range of baselines, especially in handling responses which are distant to the “golden” reference responses in semantics."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "CVAEs",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "NSP",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MI",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To tackle this challenge, we propose a novel learning-based automatic evaluation metric (CMN), which can robustly evaluate open-domain dialogues by augmenting Conditional Variational Autoencoders (CVAEs) with a Next Sentence Prediction (NSP) objective and employing Mutual Information (MI) to model the semantic similarity of text in the latent space.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Open-domain dialogue datasets"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39467,
+ "eval_count": 471,
+ "ts": "2026-11-21T15:51:52Z"
+}

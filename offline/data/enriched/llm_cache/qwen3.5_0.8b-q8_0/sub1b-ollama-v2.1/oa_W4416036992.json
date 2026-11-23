@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4416036992",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ADCL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "First, Adaptive Difficulty Curriculum Learning (ADCL) is a novel curriculum learning strategy that tackles the Difficulty Shift phenomenon (i.e., a model’s perception of problem difficulty dynamically changes during training) by periodically re-estimating difficulty within upcoming data batches to maintain alignment with the model’s evolving capabilities."
+   }
+  },
+  {
+   "surface": "EGSR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Second, Expert-Guided Self-Reformulation (EGSR) is a novel reinforcement learning strategy that bridges the gap between imitation learning and pure exploration by guiding models to reformulate expert solutions within their own conceptual framework, rather than relying on direct imitation, fostering deeper understanding and knowledge assimilation."
+   }
+  },
+  {
+   "surface": "Zero-RL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25."
+   }
+  },
+  {
+   "surface": "AIME24",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25."
+   }
+  },
+  {
+   "surface": "AIME25",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "AIME24",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments on challenging mathematical reasoning benchmarks, using Qwen2.5-7B as the base model, demonstrate that these human-inspired strategies synergistically and significantly enhance performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "AIME24",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments on challenging mathematical reasoning benchmarks, using Qwen2.5-7B as the base model, demonstrate that these human-inspired strategies synergistically and significantly enhance performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "AIME24",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments on challenging mathematical reasoning benchmarks, using Qwen2.5-7B as the base model, demonstrate that these human-inspired strategies synergistically and significantly enhance performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Zero-RL",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Zero-RL",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "AIME25",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "AIME25",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Notably, their combined application improves performance over the standard Zero-RL baseline by 10% on the AIME24 benchmark and 16.6% on AIME25.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "AIME24"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "AIME24"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46558,
+ "eval_count": 869,
+ "ts": "2026-11-21T22:04:48Z"
+}

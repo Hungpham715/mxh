@@ -1,0 +1,99 @@
+{
+ "paper_id": "oa:W4388820628",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large Language Models (LLMs) and Instruction-Following variants, such as InstructGPT and Alpaca, have shown remarkable performance in various natural language processing tasks."
+   }
+  },
+  {
+   "surface": "InstructGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large Language Models (LLMs) and Instruction-Following variants, such as InstructGPT and Alpaca, have shown remarkable performance in various natural language processing tasks."
+   }
+  },
+  {
+   "surface": "Alpaca",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Large Language Models (LLMs) and Instruction-Following variants, such as InstructGPT and Alpaca, have shown remarkable performance in various natural language processing tasks."
+   }
+  },
+  {
+   "surface": "LLaMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Then, we instruct-tune an open-sourced language model, called LLaMA, using this evidence, enabling it to predict the veracity of the input claim more accurately."
+   }
+  },
+  {
+   "surface": "fact-checking",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic fact-checking plays a crucial role in combating the spread of misinformation."
+   }
+  },
+  {
+   "surface": "RAWFC",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To evaluate our method, we conducted experiments on two widely used fact-checking datasets: RAWFC and LIAR."
+   }
+  },
+  {
+   "surface": "LIAR",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "To evaluate our method, we conducted experiments on two widely used fact-checking datasets: RAWFC and LIAR."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "fact-checking",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Automatic fact-checking plays a crucial role in combating the spread of misinformation.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fact-checking"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fact-checking"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "LLM",
+   "to": "fact-checking"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "fact-checking"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 49183,
+ "eval_count": 568,
+ "ts": "2026-11-21T16:08:47Z"
+}

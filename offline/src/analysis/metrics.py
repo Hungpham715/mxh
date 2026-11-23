@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 import csv
-import math
 import random
+import statistics
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -140,8 +140,16 @@ def whole_network_distance(g: nx.Graph) -> dict[str, Any]:
     }
 
 
-def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int = 3000,
-                n_sources: int = 400) -> dict[str, Any]:
+def small_world(
+    g: nx.Graph,
+    n_random: int = 5,
+    seed: int = SEED,
+    max_exact: int = 3000,
+    n_sources: int = 400,
+    *,
+    graph_description: str = "LCC of author-only co-authorship projection (unweighted)",
+    limitations: list[str] | None = None,
+) -> dict[str, Any]:
     whole_distance = whole_network_distance(g)
     comps = sorted(nx.connected_components(g), key=len, reverse=True)
     if not comps or len(comps[0]) < 10:
@@ -205,25 +213,34 @@ def small_world(g: nx.Graph, n_random: int = 5, seed: int = SEED, max_exact: int
         }
     c_rand = sum(x["C"] for x in rand) / len(rand)
     l_rand = sum(x["L"] for x in rand) / len(rand)
+    c_rand_std = statistics.pstdev(x["C"] for x in rand)
+    l_rand_std = statistics.pstdev(x["L"] for x in rand)
+    # Add-one smoothing keeps a finite Monte Carlo null ensemble from reporting p=0.
+    c_empirical_p_ge_obs = (1 + sum(x["C"] >= c_obs for x in rand)) / (len(rand) + 1)
     sigma = (c_obs / c_rand) / (l_obs / l_rand) if c_rand > 0 and l_rand > 0 else None
     verdict = "undetermined"
     if sigma is not None:
         verdict = ("small-world indication (sigma>1, C>>C_rand, L close to L_rand)"
                    if sigma > 1 and c_obs > 2 * c_rand and l_obs <= 1.5 * l_rand else "no clear small-world indication")
     _ = rng
-    return {"status": "computed", "graph": "LCC of author-only co-authorship projection (unweighted)",
+    default_limitations = [
+        "Multi-author papers create cliques that mechanically raise clustering.",
+        "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
+        "The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.",
+        "No significance test performed; sigma is descriptive only.",
+    ]
+    return {"status": "computed", "graph": graph_description,
             "lcc_nodes": lcc.number_of_nodes(), "lcc_edges": m,
             "C_obs": round(c_obs, 4), "L_obs": round(l_obs, 4), "L_method": l_method,
             "random_model": "degree-preserving double-edge swap (10*m swaps), LCC kept if disconnected",
             "n_random": len(rand), "random_graphs": [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in rand],
             "C_rand": round(c_rand, 4), "L_rand": round(l_rand, 4),
+            "C_rand_std": round(c_rand_std, 4), "L_rand_std": round(l_rand_std, 4),
+            "C_empirical_p_ge_obs": round(c_empirical_p_ge_obs, 4),
             "L_obs_over_L_rand": round(l_obs / l_rand, 4) if l_rand else None,
             "sigma": round(sigma, 3) if sigma is not None else None, "verdict": verdict,
             "whole_network_distance": whole_distance,
-            "limitations": ["Multi-author papers create cliques that mechanically raise clustering.",
-                            "Sampled corpus (~1k papers) under-represents real collaboration; LCC is fragmented.",
-                            "The whole-network descriptors include disconnected pairs; the LCC null comparison is not a global-network proof.",
-                            "No significance test performed; sigma is descriptive only."]}
+            "limitations": limitations if limitations is not None else default_limitations}
 
 
 def core_decomposition(g: nx.Graph, top_communities: list[list[str]] | None = None) -> dict[str, Any]:

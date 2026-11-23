@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4385570780",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Table Filling BERT (TF-BERT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In contrast to conventional ABSA models that focus on modeling the word-level dependencies between an aspect and its corresponding opinion expressions, in this paper, we propose Table Filling BERT (TF-BERT), which considers the consistency of multi-word opinion expressions at the span-level."
+   }
+  },
+  {
+   "surface": "Aspect-Based Sentiment Analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this paper, we propose a novel span-level model for Aspect-Based Sentiment Analysis (ABSA), which aims at identifying the sentiment polarity of the given aspect."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Aspect-Based Sentiment Analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Aspect-Based Sentiment Analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20795,
+ "eval_count": 226,
+ "ts": "2026-11-21T15:34:14Z"
+}

@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4392426139",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Cross-lingual Self-supervised Representations (XLSR) Wav2Vec2 model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Subsequently, a Cross-lingual Self-supervised Representations (XLSR) Wav2Vec2 model is fine-tuned on this dataset."
+   }
+  },
+  {
+   "surface": "Retrieval-Based Voice Conversion (RVC)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Utilizing just 14 minutes of custom audio from a YouTube video, we employ Retrieval-Based Voice Conversion (RVC) to create a custom Common Voice 16.0 corpus."
+   }
+  },
+  {
+   "surface": "mBART",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "By integrating XLSR Wav2Vec2 and mBART, the system aligns the translated text with the video timeline, delivering an accessible solution for multilingual video content transcription and translation for personalized voice."
+   }
+  },
+  {
+   "surface": "YouTube video",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Utilizing just 14 minutes of custom audio from a YouTube video, we employ Retrieval-Based Voice Conversion (RVC) to create a custom Common Voice 16.0 corpus."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "YouTube video",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Utilizing just 14 minutes of custom audio from a YouTube video, we employ Retrieval-Based Voice Conversion (RVC) to create a custom Common Voice 16.0 corpus.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Cross-lingual Self-supervised Representations (XLSR) Wav2Vec2 model",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Utilizing just 14 minutes of custom audio from a YouTube video, we employ Retrieval-Based Voice Conversion (RVC) to create a custom Common Voice 16.0 corpus.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Cross-lingual Self-supervised Representations (XLSR) Wav2Vec2 model",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Subsequently, a Cross-lingual Self-supervised Representations (XLSR) Wav2Vec2 model is fine-tuned on this dataset.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 37567,
+ "eval_count": 451,
+ "ts": "2026-11-21T17:16:27Z"
+}

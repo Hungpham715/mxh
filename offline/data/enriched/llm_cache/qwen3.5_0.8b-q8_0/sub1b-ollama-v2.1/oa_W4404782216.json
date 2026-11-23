@@ -1,0 +1,131 @@
+{
+ "paper_id": "oa:W4404782216",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "synthetic knowledge ingestion method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources."
+   }
+  },
+  {
+   "surface": "fine-grained synthesis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources."
+   }
+  },
+  {
+   "surface": "interleaved generation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources."
+   }
+  },
+  {
+   "surface": "assemble augmentation strategies",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources."
+   }
+  },
+  {
+   "surface": "Retrieval Augmented Generation (RAG)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models."
+   }
+  },
+  {
+   "surface": "Supervised Fine-tuning (SFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models."
+   }
+  },
+  {
+   "surface": "Continual Pre-training (CPT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-grained synthesis",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "interleaved generation",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "assemble augmentation strategies",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a novel synthetic knowledge ingestion method called , which leverages fine-grained synthesis, interleaved generation, and assemble augmentation strategies to construct high-quality data representations from raw knowledge sources.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Retrieval Augmented Generation (RAG)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Supervised Fine-tuning (SFT)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Continual Pre-training (CPT)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We then integrate and its variations with three knowledge injection techniques: Retrieval Augmented Generation (RAG), Supervised Fine-tuning (SFT), and Continual Pre-training (CPT) to inject and refine knowledge in language models.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 46080,
+ "eval_count": 580,
+ "ts": "2026-11-21T18:58:59Z"
+}

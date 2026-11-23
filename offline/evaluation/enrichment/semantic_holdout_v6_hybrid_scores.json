@@ -1,0 +1,900 @@
+{
+  "schema_version": "enrichment-semantic-eval-v1",
+  "evaluation_kind": "exact_canonical_id_semantic_ner_re",
+  "provenance": {
+    "gold_file": "evaluation/enrichment/semantic_holdout_nonhuman_v6.jsonl",
+    "processed_papers": "/tmp/graphrag-v6-20261122/processed/papers.jsonl",
+    "data_dir": "/tmp/graphrag-v6-20261122/hybrid",
+    "papers_evaluated": 12,
+    "annotation_protocol": "surface_first_frozen_contract_v2",
+    "annotators": 1,
+    "independent_human_gold": false,
+    "status": "nonhuman_reference_slice; do not generalize to the full corpus"
+  },
+  "entity": {
+    "micro": {
+      "support": 53,
+      "predicted": 65,
+      "tp": 27,
+      "fp": 38,
+      "fn": 26,
+      "precision": 0.4154,
+      "recall": 0.5094,
+      "f1": 0.4576
+    },
+    "macro_f1": 0.5233,
+    "per_type": {
+      "dataset": {
+        "support": 5,
+        "predicted": 7,
+        "tp": 5,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.7143,
+        "recall": 1.0,
+        "f1": 0.8333
+      },
+      "method": {
+        "support": 32,
+        "predicted": 38,
+        "tp": 18,
+        "fp": 20,
+        "fn": 14,
+        "precision": 0.4737,
+        "recall": 0.5625,
+        "f1": 0.5143
+      },
+      "task": {
+        "support": 16,
+        "predicted": 20,
+        "tp": 4,
+        "fp": 16,
+        "fn": 12,
+        "precision": 0.2,
+        "recall": 0.25,
+        "f1": 0.2222
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2703,
+        0.6038
+      ],
+      "recall": [
+        0.42,
+        0.65
+      ],
+      "f1": [
+        0.3419,
+        0.592
+      ]
+    }
+  },
+  "relation": {
+    "micro": {
+      "support": 56,
+      "predicted": 72,
+      "tp": 29,
+      "fp": 43,
+      "fn": 27,
+      "precision": 0.4028,
+      "recall": 0.5179,
+      "f1": 0.4531
+    },
+    "macro_f1": 0.3925,
+    "per_type": {
+      "ADDRESSES_TASK": {
+        "support": 16,
+        "predicted": 22,
+        "tp": 4,
+        "fp": 18,
+        "fn": 12,
+        "precision": 0.1818,
+        "recall": 0.25,
+        "f1": 0.2105
+      },
+      "EVALUATED_ON": {
+        "support": 5,
+        "predicted": 7,
+        "tp": 5,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.7143,
+        "recall": 1.0,
+        "f1": 0.8333
+      },
+      "METHOD_EVALUATED_ON": {
+        "support": 1,
+        "predicted": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "USES_METHOD": {
+        "support": 34,
+        "predicted": 42,
+        "tp": 20,
+        "fp": 22,
+        "fn": 14,
+        "precision": 0.4762,
+        "recall": 0.5882,
+        "f1": 0.5263
+      }
+    },
+    "bootstrap_95_ci": {
+      "unit": "paper",
+      "replicates": 10000,
+      "seed": 20261121,
+      "precision": [
+        0.2637,
+        0.6038
+      ],
+      "recall": [
+        0.4154,
+        0.6383
+      ],
+      "f1": [
+        0.3357,
+        0.5873
+      ]
+    }
+  },
+  "errors": [
+    {
+      "paper_id": "oa:W4385570184",
+      "entity_fp": [
+        [
+          "method",
+          "method:fine-tuning-based"
+        ],
+        [
+          "task",
+          "task:ood-detection"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:ood"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570184",
+          "task:ood-detection"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385570184",
+          "method:fine-tuning-based"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385570184",
+          "task:ood"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4385572455",
+      "entity_fp": [
+        [
+          "method",
+          "method:learnable-relevance-function"
+        ],
+        [
+          "method",
+          "method:signature-phrases"
+        ],
+        [
+          "task",
+          "task:human-evaluation"
+        ],
+        [
+          "task",
+          "task:news-article-headlines"
+        ],
+        [
+          "task",
+          "task:personalized-headlines"
+        ],
+        [
+          "task",
+          "task:user-profiling"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:user-profiling"
+        ],
+        [
+          "task",
+          "task:headline-generation"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385572455",
+          "task:human-evaluation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385572455",
+          "task:news-article-headlines"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385572455",
+          "task:personalized-headlines"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385572455",
+          "task:user-profiling"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385572455",
+          "method:learnable-relevance-function"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385572455",
+          "method:signature-phrases"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4385572455",
+          "task:headline-generation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4385572455",
+          "method:user-profiling"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404782475",
+      "entity_fp": [
+        [
+          "method",
+          "method:demonstration-examples"
+        ],
+        [
+          "task",
+          "task:bias"
+        ],
+        [
+          "task",
+          "task:proficiency"
+        ],
+        [
+          "task",
+          "task:toxicity"
+        ],
+        [
+          "task",
+          "task:truthfulness"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:mechanistic-interpretability"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782475",
+          "task:bias"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782475",
+          "task:proficiency"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782475",
+          "task:toxicity"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782475",
+          "task:truthfulness"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782475",
+          "method:demonstration-examples"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4404782475",
+          "method:mechanistic-interpretability"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4389518414",
+      "entity_fp": [
+        [
+          "task",
+          "task:question-answering"
+        ]
+      ],
+      "entity_fn": [],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4389518414",
+          "task:question-answering"
+        ]
+      ],
+      "relation_fn": []
+    },
+    {
+      "paper_id": "oa:W4403322150",
+      "entity_fp": [
+        [
+          "task",
+          "task:question-answering"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:eye-llama"
+        ],
+        [
+          "method",
+          "method:leme"
+        ],
+        [
+          "method",
+          "method:reinforcement-learning"
+        ],
+        [
+          "task",
+          "task:knowledge-based-qa"
+        ],
+        [
+          "task",
+          "task:patient-qa"
+        ],
+        [
+          "task",
+          "task:treatment-planning"
+        ],
+        [
+          "task",
+          "task:visual-acuity-extraction"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4403322150",
+          "task:question-answering"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4403322150",
+          "task:knowledge-based-qa"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4403322150",
+          "task:patient-qa"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4403322150",
+          "task:treatment-planning"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4403322150",
+          "task:visual-acuity-extraction"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4403322150",
+          "method:eye-llama"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4403322150",
+          "method:leme"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4403322150",
+          "method:reinforcement-learning"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4402671297",
+      "entity_fp": [
+        [
+          "method",
+          "method:critique-generation"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:multi-path-prompting"
+        ],
+        [
+          "task",
+          "task:critique-generation"
+        ],
+        [
+          "task",
+          "task:pairwise-comparison"
+        ],
+        [
+          "task",
+          "task:pointwise-grading"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4402671297",
+          "method:critique-generation"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671297",
+          "task:critique-generation"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671297",
+          "task:pairwise-comparison"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4402671297",
+          "task:pointwise-grading"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4402671297",
+          "method:multi-path-prompting"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404782072",
+      "entity_fp": [
+        [
+          "task",
+          "task:query-likelihood-models-qlms"
+        ],
+        [
+          "task",
+          "task:question-answering"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:query-likelihood-models-qlms"
+        ],
+        [
+          "task",
+          "task:re-ranking"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782072",
+          "task:query-likelihood-models-qlms"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782072",
+          "task:question-answering"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404782072",
+          "task:re-ranking"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404782072",
+          "method:query-likelihood-models-qlms"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4404783577",
+      "entity_fp": [
+        [
+          "method",
+          "method:bilingual-dictionary"
+        ],
+        [
+          "method",
+          "method:cod"
+        ],
+        [
+          "method",
+          "method:in-context-learning"
+        ],
+        [
+          "method",
+          "method:nllb"
+        ],
+        [
+          "task",
+          "task:english-to-serbian-written-in-cyrillic-script"
+        ],
+        [
+          "task",
+          "task:machine-translation"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:chain-of-dictionary-prompting"
+        ],
+        [
+          "method",
+          "method:few-shot-in-context-learning"
+        ],
+        [
+          "method",
+          "method:nllb-3-3b"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404783577",
+          "task:english-to-serbian-written-in-cyrillic-script"
+        ],
+        [
+          "ADDRESSES_TASK",
+          "oa:W4404783577",
+          "task:machine-translation"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:bilingual-dictionary"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:cod"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:in-context-learning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:nllb"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "METHOD_EVALUATED_ON",
+          "method:chain-of-dictionary-prompting",
+          "dataset:flores"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:chain-of-dictionary-prompting"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:few-shot-in-context-learning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4404783577",
+          "method:nllb-3-3b"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4407123425",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:embeddings"
+        ],
+        [
+          "task",
+          "task:perplexity"
+        ]
+      ],
+      "entity_fn": [],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4407123425",
+          "task:perplexity"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4407123425",
+          "dataset:embeddings"
+        ]
+      ],
+      "relation_fn": []
+    },
+    {
+      "paper_id": "oa:W4412886800",
+      "entity_fp": [
+        [
+          "method",
+          "method:llm-based-agents"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:financial-decision-making"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "USES_METHOD",
+          "oa:W4412886800",
+          "method:llm-based-agents"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412886800",
+          "task:financial-decision-making"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4416035449",
+      "entity_fp": [
+        [
+          "dataset",
+          "dataset:qwen2-5-7b"
+        ],
+        [
+          "method",
+          "method:code-based-reasoning"
+        ],
+        [
+          "method",
+          "method:fine-tuning"
+        ],
+        [
+          "method",
+          "method:ipe"
+        ],
+        [
+          "method",
+          "method:knowledge-recall"
+        ],
+        [
+          "method",
+          "method:null-example-utilization"
+        ],
+        [
+          "method",
+          "method:planning"
+        ],
+        [
+          "method",
+          "method:ppe"
+        ],
+        [
+          "method",
+          "method:prior-prompt"
+        ],
+        [
+          "method",
+          "method:prompt"
+        ],
+        [
+          "method",
+          "method:qwen"
+        ],
+        [
+          "method",
+          "method:reasoning"
+        ],
+        [
+          "method",
+          "method:reward-shaping"
+        ],
+        [
+          "task",
+          "task:rft"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "method",
+          "method:inference-time-prompt-engineering-ipe"
+        ],
+        [
+          "method",
+          "method:prior-prompt-engineering-ppe"
+        ],
+        [
+          "method",
+          "method:qwen2-5-7b"
+        ],
+        [
+          "method",
+          "method:rft"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4416035449",
+          "task:rft"
+        ],
+        [
+          "EVALUATED_ON",
+          "oa:W4416035449",
+          "dataset:qwen2-5-7b"
+        ],
+        [
+          "METHOD_EVALUATED_ON",
+          "method:qwen",
+          "dataset:humaneval"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:code-based-reasoning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:fine-tuning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:ipe"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:knowledge-recall"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:null-example-utilization"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:planning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:ppe"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:prior-prompt"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:prompt"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:qwen"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:reasoning"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:reward-shaping"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:inference-time-prompt-engineering-ipe"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:prior-prompt-engineering-ppe"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:qwen2-5-7b"
+        ],
+        [
+          "USES_METHOD",
+          "oa:W4416035449",
+          "method:rft"
+        ]
+      ]
+    },
+    {
+      "paper_id": "oa:W4412889882",
+      "entity_fp": [
+        [
+          "task",
+          "task:da-classification"
+        ]
+      ],
+      "entity_fn": [
+        [
+          "task",
+          "task:da"
+        ]
+      ],
+      "relation_fp": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889882",
+          "task:da-classification"
+        ]
+      ],
+      "relation_fn": [
+        [
+          "ADDRESSES_TASK",
+          "oa:W4412889882",
+          "task:da"
+        ]
+      ]
+    }
+  ]
+}

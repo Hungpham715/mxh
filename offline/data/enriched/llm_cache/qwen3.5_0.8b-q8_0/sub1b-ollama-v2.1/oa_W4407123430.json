@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4407123430",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ChunkKV",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce ChunkKV, which fundamentally reimagines KV cache compression by treating semantic chunks - rather than isolated tokens - as basic compression units."
+   }
+  },
+  {
+   "surface": "LongBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "Needle-In-A-HayStack",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "GSM8K",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  },
+  {
+   "surface": "JailbreakV",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comprehensive evaluations on challenging benchmarks: LongBench, Needle-In-A-HayStack, GSM8K, and JailbreakV demonstrate that ChunkKV outperforms state-of-the-art methods by up to 8.7\\% in precision while maintaining the same compression ratio."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LongBench"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Needle-In-A-HayStack"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GSM8K"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "JailbreakV"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 27722,
+ "eval_count": 513,
+ "ts": "2026-11-21T19:50:38Z"
+}

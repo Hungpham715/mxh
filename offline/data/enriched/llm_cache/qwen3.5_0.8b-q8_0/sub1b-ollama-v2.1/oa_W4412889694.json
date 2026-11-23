@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4412889694",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "INDIC-BIAS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this gap, we introduce INDIC-BIAS, a comprehensive India-centric benchmark designed to evaluate fairness of LLMs across 85 identity groups encompassing diverse castes, religions, regions, and tribes."
+   }
+  },
+  {
+   "surface": "85 identity groups",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address this gap, we introduce INDIC-BIAS, a comprehensive India-centric benchmark designed to evaluate fairness of LLMs across 85 identity groups encompassing diverse castes, religions, regions, and tribes."
+   }
+  },
+  {
+   "surface": "1,800 socio-cultural topics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We first consult domain experts to curate over 1,800 socio-cultural topics spanning behaviors and situations, where biases and stereotypes are likely to emerge."
+   }
+  },
+  {
+   "surface": "20,000 real-world scenario templates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Grounded in these topics, we generate and manually validate 20,000 real-world scenario templates to probe LLMs for fairness."
+   }
+  },
+  {
+   "surface": "14 popular LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our evaluation of 14 popular LLMs on these tasks reveals strong negative biases against marginalized identities, with models frequently reinforcing common stereotypes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "14 popular LLMs",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our evaluation of 14 popular LLMs on these tasks reveals strong negative biases against marginalized identities, with models frequently reinforcing common stereotypes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "plausibility task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "judgment task"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "generation task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "plausibility task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "judgment task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "generation task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45138,
+ "eval_count": 539,
+ "ts": "2026-11-21T23:22:12Z"
+}

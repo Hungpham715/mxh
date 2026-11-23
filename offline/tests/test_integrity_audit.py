@@ -47,7 +47,10 @@ def _fixture_graph():
         props["scope_id"] = SCOPE_ID
         node_rows.append({"id": topic["id"], "labels": ["Topic"], "props": props})
 
-    edges = derive_edges(rows)
+    # The integrity audit does not need rejection artifacts. This module-scoped fixture is
+    # set up before the function-scoped isolation fixture in conftest.py, so opt out here
+    # explicitly instead of relying on the redirected REJECTED path.
+    edges = derive_edges(rows, write_rejections=False)
     edge_rows = []
     for rel_type, edge_list in edges.items():
         for edge in edge_list:

@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4404782964",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "large language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new paradigm for natural language processing (NLP), where LLMs make predictions based on contexts augmented with a few examples."
+   }
+  },
+  {
+   "surface": "in-context learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new paradigm for natural language processing (NLP), where LLMs make predictions based on contexts augmented with a few examples."
+   }
+  },
+  {
+   "surface": "natural language processing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new paradigm for natural language processing (NLP), where LLMs make predictions based on contexts augmented with a few examples."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "in-context learning",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new paradigm for natural language processing (NLP), where LLMs make predictions based on contexts augmented with a few examples.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "in-context learning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "in-context learning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25768,
+ "eval_count": 297,
+ "ts": "2026-11-21T19:21:10Z"
+}

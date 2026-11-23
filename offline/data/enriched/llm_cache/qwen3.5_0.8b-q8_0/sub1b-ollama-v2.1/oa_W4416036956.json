@@ -1,0 +1,136 @@
+{
+ "paper_id": "oa:W4416036956",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Tree-of-Quote",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose Tree-of-Quote (ToQ) prompting, a structured framework that decomposes complex questions into subquestions, generates quotes to support each step without retrieval, and selectively advances reasoning based on quote quality."
+   }
+  },
+  {
+   "surface": "FQ-Score",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We also introduce FQ-Score, a unified metric that captures answer correctness, attribution fidelity, and reasoning quality."
+   }
+  },
+  {
+   "surface": "StrategyQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines."
+   }
+  },
+  {
+   "surface": "2WikiMultiHopQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines."
+   }
+  },
+  {
+   "surface": "MuSiQue",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines."
+   }
+  },
+  {
+   "surface": "MoreHopQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines."
+   }
+  },
+  {
+   "surface": "MedQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "FQ-Score",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose Tree-of-Quote (ToQ) prompting, a structured framework that decomposes complex questions into subquestions, generates quotes to support each step without retrieval, and selectively advances reasoning based on quote quality.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "StrategyQA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "2WikiMultiHopQA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MuSiQue",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MoreHopQA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MedQA",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Experiments on StrategyQA, 2WikiMultiHopQA, MuSiQue, MoreHopQA, and MedQA demonstrate that ToQ improves factuality and attribution over standard prompting baselines.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "StrategyQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44904,
+ "eval_count": 811,
+ "ts": "2026-11-21T22:03:20Z"
+}

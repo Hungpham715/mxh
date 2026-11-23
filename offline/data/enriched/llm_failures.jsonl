@@ -1,7 +1,2 @@
-{"paper_id": "oa:W4389524529", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4402671293", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4406032250", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4412889429", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4412889694", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4416036460", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
-{"paper_id": "oa:W4416037066", "extractor": "llm", "extractor_version": "qwen3-0.6b-ollama-v1.6", "model": "qwen3:0.6b", "error": "invalid_json"}
+{"paper_id": "oa:W4402667118", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}
+{"paper_id": "oa:W4416036544", "extractor": "llm", "extractor_version": "sub1b-ollama-v2.1", "model": "qwen3.5:0.8b-q8_0", "error": "invalid_json"}

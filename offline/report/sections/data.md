@@ -70,12 +70,34 @@ Pilot luật: 50 bài đầu tiên theo ID đã được xem trước khi lấy 
 
 ### Đánh giá ngữ nghĩa NER/RE của enrichment
 
-Đây là exact-match trên ID chuẩn hóa và triple quan hệ của một slice 12 abstract được developer đọc và gán nhãn. Slice này là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài.
+Kết quả chính là exact-match trên ID chuẩn hóa và triple quan hệ của holdout v4 gồm 12 abstract; nhãn đã được freeze trước lần dự đoán đầu tiên. Đây là reference nonhuman (một annotator), không phải independent human gold và không được ngoại suy cho 1.091 bài. Hybrid Qwen3.5 0.8B chạy CPU-only, không dùng GPU.
 
 | Bài toán | Precision | Recall | F1 | Support |
 |---|---|---|---|---|
-| Entity (micro) | 0.8462 | 0.2292 | 0.3607 | 48 |
-| Relation (micro) | 0.7667 | 0.4423 | 0.561 | 52 |
+| Entity (micro) | 0.4118 | 0.5 | 0.4516 | 56 |
+| Relation (micro) | 0.4 | 0.5 | 0.4444 | 56 |
+
+So với rules-only trên cùng holdout, hybrid tăng F1 NER 42,35% → 45,16% và F1 RE 41,38% → 44,44% nhờ recall tăng. Các số lịch sử NER 36,07% / RE 56,10% không so trực tiếp được vì dùng development slice và evaluator cũ làm mất provenance membership.
+
+Holdout v6 (12 bài mới, loại trừ toàn bộ 60 bài của dev/cross-check/v3/v4/v5) đo cùng cấu hình retained nói trên bằng protocol gán nhãn surface-first: nhãn freeze dạng surface verbatim trong abstract, rồi ID chuẩn hóa được suy ra bằng chính hàm canonicalization đã freeze (_canonicalize_llm + gazetteer v1.2) trước khi mở bất kỳ dự đoán nào. Audit contract của v4 cho thấy 18/56 thực thể gold của v4 có ID không tái lập được từ surface verbatim theo contract freeze (paraphrase hoặc lệch policy acronym), nên v4 lẫn v5 đều lẫn nhiễu gán nhãn; v6 là phép đo sạch hơn của cùng hệ thống, không phải thay đổi model. Không so v6 với v4 như một cải tiến model vì protocol gán nhãn khác nhau; đây vẫn là reference nonhuman một annotator.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v6 Entity (micro) | 0.4154 | 0.5094 | 0.4576 | 53 |
+| v6 Relation (micro) | 0.4028 | 0.5179 | 0.4531 | 56 |
+| v6 Rules-only Entity | 0.7647 | 0.2453 | 0.3714 | 53 |
+| v6 Rules-only Relation | 0.625 | 0.2679 | 0.375 | 56 |
+
+Trên v6, hybrid tăng F1 NER 37,14% → 45,76% và F1 RE 37,50% → 45,31% so với rules-only; task vẫn là loại yếu nhất (F1 22,22%). Khoảng cách v6 so với v4 (45,16%/44,44%) phản ánh protocol gán nhãn sạch hơn, không phải cải tiến model.
+
+Holdout v7 (12 bài mới, loại trừ 72 bài đã tiêu) là gate one-shot cho candidate mở rộng stoplist generic-surface: candidate đạt NER 43,24% / RE 41,38%, dưới ngưỡng khai báo trước 0,50 và trùng khớp retained trên chính v7, nên bị loại và schema đã revert về đúng hash committed. v7 đồng thời là phép đo untouched thứ ba của cấu hình retained; slice nhiều tên mới khiến rules-only chỉ đạt 18,46%/17,14% và hybrid tăng +24,78/+24,24 điểm — khoảng cách hybrid lớn nhất đo được. Ba phép đo untouched (v4, v6, v7) nhất quán về độ lớn; khác biệt phản ánh độ khó slice, không phải drift cấu hình.
+
+| Bài toán | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| v7 Entity (micro) | 0.381 | 0.5 | 0.4324 | 48 |
+| v7 Relation (micro) | 0.3636 | 0.48 | 0.4138 | 50 |
+| v7 Rules-only Entity | 0.3529 | 0.125 | 0.1846 | 48 |
+| v7 Rules-only Relation | 0.3 | 0.12 | 0.1714 | 50 |
 
 ## 4. Hợp đồng dữ liệu JSONL v1 và schema Neo4j
 
@@ -134,7 +156,7 @@ Ví dụ một dòng papers.jsonl thật (abstract rút gọn):
 | 9 | RESEARCHES | Author→Topic | Tác giả có ≥ 2 bài khác nhau mang nhãn topic đó trong corpus. | 105 | 112 |
 | 10 | ACTIVE_IN | Institution→Topic | Tổ chức có ≥ 2 bài khác nhau (có tác giả khai báo tổ chức) mang topic đó. | 139 | 252 |
 
-Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (4 bài).
+Mọi quan hệ lưu source_kind, source_url, evidence_paper_ids, evidence_count, first_year/last_year và build_version. Số quan hệ và số paper làm bằng chứng được báo riêng, không cộng lẫn. Bài có hơn 20 tác giả không sinh clique đồng tác giả mà được đưa vào danh sách rà tay (0 bài).
 
 ![Hình 1. Số cạnh duy nhất theo loại quan hệ (snapshot thật).](../output/analysis/relationship_types.png)
 

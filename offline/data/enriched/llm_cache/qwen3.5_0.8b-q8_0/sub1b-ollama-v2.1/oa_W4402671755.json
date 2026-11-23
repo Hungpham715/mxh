@@ -1,0 +1,127 @@
+{
+ "paper_id": "oa:W4402671755",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large Language Models (LLMs) show strong instruction understanding ability across multiple languages."
+   }
+  },
+  {
+   "surface": "English",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, they are easily biased towards English in instruction tuning, and generate English responses even given non-English instructions."
+   }
+  },
+  {
+   "surface": "instruction tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, they are easily biased towards English in instruction tuning, and generate English responses even given non-English instructions."
+   }
+  },
+  {
+   "surface": "monolingual instruction tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we investigate the language inconsistent generation problem in monolingual instruction tuning."
+   }
+  },
+  {
+   "surface": "English responses",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, they are easily biased towards English in instruction tuning, and generate English responses even given non-English instructions."
+   }
+  },
+  {
+   "surface": "non-English language prompts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model."
+   }
+  },
+  {
+   "surface": "Pseudo-Inconsistent Penalization (PIP)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model."
+   }
+  },
+  {
+   "surface": "Prior Enhanced Decoding (PED)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model."
+   }
+  },
+  {
+   "surface": "PIP",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model."
+   }
+  },
+  {
+   "surface": "PED",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PIP",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PED",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we propose Pseudo-Inconsistent Penalization (PIP) which prevents the model from generating English responses when given non-English language prompts during training, and Prior Enhanced Decoding (PED) which improves the language-consistent prior by leveraging the untuned base language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PIP"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PED"
+  }
+ ],
+ "auto_added_endpoints": [
+  "PIP",
+  "PED"
+ ],
+ "duration_ms": 53924,
+ "eval_count": 519,
+ "ts": "2026-11-21T18:08:41Z"
+}

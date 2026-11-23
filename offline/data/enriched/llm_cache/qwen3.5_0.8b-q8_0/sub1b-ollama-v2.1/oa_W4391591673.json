@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4391591673",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HiQA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce HiQA, a practical hierarchical contextual augmentation framework for multi-document question answering (MDQA)."
+   }
+  },
+  {
+   "surface": "MasQA",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We further introduce MasQA, a benchmark designed to evaluate MDQA systems in realistic similar-document settings."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MasQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13286,
+ "eval_count": 130,
+ "ts": "2026-11-21T17:13:54Z"
+}

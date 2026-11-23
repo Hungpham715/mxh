@@ -1,0 +1,90 @@
+{
+ "paper_id": "oa:W4385570131",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "probabilistic framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, starting from the intuition that discovering intents could be beneficial for identifying known intents, we propose a probabilistic framework for discovering intents where intent assignments are treated as latent variables."
+   }
+  },
+  {
+   "surface": "Expectation Maximization framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We adopt the Expectation Maximization framework for optimization."
+   }
+  },
+  {
+   "surface": "latent variables",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, starting from the intuition that discovering intents could be beneficial for identifying known intents, we propose a probabilistic framework for discovering intents where intent assignments are treated as latent variables."
+   }
+  },
+  {
+   "surface": "posterior of intent assignments",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Specifically, In the E-step, we conduct intent discovery and explore the intrinsic structure of unlabeled data by the posterior of intent assignments."
+   }
+  },
+  {
+   "surface": "discrimination",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In the M-step, we alleviate the forgetting of prior knowledge transferred from known intents by optimizing the discrimination of labeled data."
+   }
+  },
+  {
+   "surface": "three challenging real-world datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments conducted on three challenging real-world datasets demonstrate the generality and effectiveness of the proposed framework and implementation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Expectation Maximization framework",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We adopt the Expectation Maximization framework for optimization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "three challenging real-world datasets",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Extensive experiments conducted on three challenging real-world datasets demonstrate the generality and effectiveness of the proposed framework and implementation.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "probabilistic framework"
+  }
+ ],
+ "auto_added_endpoints": [
+  "three challenging real-world datasets"
+ ],
+ "duration_ms": 24757,
+ "eval_count": 327,
+ "ts": "2026-11-21T15:25:20Z"
+}

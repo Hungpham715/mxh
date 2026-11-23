@@ -1,0 +1,130 @@
+{
+ "paper_id": "oa:W4389524541",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Wasserstein distance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Wasserstein distance, which can be computed by solving the optimal transport problem, is a powerful method for measuring the dissimilarity between documents."
+   }
+  },
+  {
+   "surface": "Sinkhorn algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Although the Sinkhorn algorithm is a powerful tool to speed up to compute the Wasserstein distance, it still requires square time."
+   }
+  },
+  {
+   "surface": "linear time approximation of the Wasserstein distance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recently, a linear time approximation of the Wasserstein distance including the sliced Wasserstein and the tree-Wasserstein distance (TWD) has been proposed."
+   }
+  },
+  {
+   "surface": "tree-Wasserstein distance (TWD)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recently, a linear time approximation of the Wasserstein distance including the sliced Wasserstein and the tree-Wasserstein distance (TWD) has been proposed."
+   }
+  },
+  {
+   "surface": "feature selection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this study, we propose a method to combine feature selection and tree approximation of Wasserstein distance to handle high-dimensional problems."
+   }
+  },
+  {
+   "surface": "tree approximation of Wasserstein distance",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this study, we propose a method to combine feature selection and tree approximation of Wasserstein distance to handle high-dimensional problems."
+   }
+  },
+  {
+   "surface": "discriminative (i.e., large Wasserstein distance) word embeddings",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "To this end, we approximate Wasserstein distance for each word vector by tree approximation technique, and select the discriminative (i.e., large Wasserstein distance) word embeddings by solving an entropic regularized maximization problem."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sinkhorn algorithm",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Although the Sinkhorn algorithm is a powerful tool to speed up to compute the Wasserstein distance, it still requires square time.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "linear time approximation of the Wasserstein distance",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Recently, a linear time approximation of the Wasserstein distance including the sliced Wasserstein and the tree-Wasserstein distance (TWD) has been proposed.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "feature selection",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this study, we propose a method to combine feature selection and tree approximation of Wasserstein distance to handle high-dimensional problems.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "tree approximation of Wasserstein distance",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "More specifically, we use multiple word embeddings and automatically select useful word embeddings in a tree approximation of Wasserstein distance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "discriminative (i.e., large Wasserstein distance) word embeddings",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "To this end, we approximate Wasserstein distance for each word vector by tree approximation technique, and select the discriminative (i.e., large Wasserstein distance) word embeddings by solving an entropic regularized maximization problem.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "word mover's distance (WMD)"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "sliced Wasserstein distance"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39759,
+ "eval_count": 665,
+ "ts": "2026-11-21T17:05:49Z"
+}

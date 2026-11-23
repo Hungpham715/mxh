@@ -1,0 +1,91 @@
+{
+ "paper_id": "oa:W4415164160",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in large language models (LLMs) have sparked growing interest in building fully autonomous agents."
+   }
+  },
+  {
+   "surface": "agent",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in large language models (LLMs) have sparked growing interest in building fully autonomous agents."
+   }
+  },
+  {
+   "surface": "human-agent systems",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety."
+   }
+  },
+  {
+   "surface": "LLM-HAS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety."
+   }
+  },
+  {
+   "surface": "human-provided information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety."
+   }
+  },
+  {
+   "surface": "feedback",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety."
+   }
+  },
+  {
+   "surface": "control",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To overcome these limitations, LLM-based human-agent systems (LLM-HAS) incorporate human-provided information, feedback, or control into the agent system to enhance system performance, reliability, and safety."
+   }
+  },
+  {
+   "surface": "human-AI collaboration",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "It clarifies fundamental concepts, systematically presents core components shaping these systems, including environment and profiling, human feedback, interaction types, orchestration, and communication, explores emerging applications, and discusses unique challenges and opportunities arising from human-AI collaboration."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "human-agent systems"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM-HAS"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38448,
+ "eval_count": 418,
+ "ts": "2026-11-21T21:04:30Z"
+}

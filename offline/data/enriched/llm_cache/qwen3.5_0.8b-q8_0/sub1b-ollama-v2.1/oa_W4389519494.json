@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4389519494",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GPT-4",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We first use GPT-4 to generate new test items following a list of expert-developed rules and then apply a fine-tuned LLM to filter the items based on criteria from psychological measurements."
+   }
+  },
+  {
+   "surface": "fine-tuned LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We first use GPT-4 to generate new test items following a list of expert-developed rules and then apply a fine-tuned LLM to filter the items based on criteria from psychological measurements."
+   }
+  },
+  {
+   "surface": "parallel tests",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Moreover, many tests require multiple distinct sets of questions administered throughout the school year to closely monitor students’ progress, known as parallel tests."
+   }
+  },
+  {
+   "surface": "K-12 students",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our evaluation of a generated test with 234 students from grades 2 to 8 produces test scores highly correlated (r=0.93) to those of a standard test form written by human experts and evaluated across thousands of K-12 students."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fine-tuned LLM",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We first use GPT-4 to generate new test items following a list of expert-developed rules and then apply a fine-tuned LLM to filter the items based on criteria from psychological measurements.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "K-12 students",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Our evaluation of a generated test with 234 students from grades 2 to 8 produces test scores highly correlated (r=0.93) to those of a standard test form written by human experts and evaluated across thousands of K-12 students.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "parallel tests"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20173,
+ "eval_count": 381,
+ "ts": "2026-11-21T16:26:10Z"
+}

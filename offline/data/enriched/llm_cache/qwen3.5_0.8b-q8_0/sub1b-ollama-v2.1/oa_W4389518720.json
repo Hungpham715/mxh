@@ -1,0 +1,164 @@
+{
+ "paper_id": "oa:W4389518720",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce BiasX, a framework that enhances content moderation setups with free-text explanations of statements’ implied social biases, and explore its effectiveness through a large-scale crowdsourced user study."
+   }
+  },
+  {
+   "surface": "annotators",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions."
+   }
+  },
+  {
+   "surface": "content moderators",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions."
+   }
+  },
+  {
+   "surface": "mental shortcuts",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions."
+   }
+  },
+  {
+   "surface": "subtle toxicity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This can lead to subtle toxicity being missed, and seemingly toxic but harmless content being over-detected."
+   }
+  },
+  {
+   "surface": "content",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions."
+   }
+  },
+  {
+   "surface": "free-text explanations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce BiasX, a framework that enhances content moderation setups with free-text explanations of statements’ implied social biases, and explore its effectiveness through a large-scale crowdsourced user study."
+   }
+  },
+  {
+   "surface": "social biases",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce BiasX, a framework that enhances content moderation setups with free-text explanations of statements’ implied social biases, and explore its effectiveness through a large-scale crowdsourced user study."
+   }
+  },
+  {
+   "surface": "imperfect machine-generated explanations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The quality of explanations is critical: imperfect machine-generated explanations (+2.4% on hard toxic examples) help less compared to expert-written human explanations (+7.2%)."
+   }
+  },
+  {
+   "surface": "expert-written human explanations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "The quality of explanations is critical: imperfect machine-generated explanations (+2.4% on hard toxic examples) help less compared to expert-written human explanations (+7.2%)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "content moderators",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This can lead to subtle toxicity being missed, and seemingly toxic but harmless content being over-detected.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "annotators",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "framework",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This can lead to subtle toxicity being missed, and seemingly toxic but harmless content being over-detected.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "framework",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce BiasX, a framework that enhances content moderation setups with free-text explanations of statements’ implied social biases, and explore its effectiveness through a large-scale crowdsourced user study.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "annotators",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Toxicity annotators and content moderators often default to mental shortcuts when making decisions.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 60810,
+ "eval_count": 757,
+ "ts": "2026-11-21T23:52:07Z"
+}

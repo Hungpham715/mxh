@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4402671602",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Extracting Excelsior and Expanding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a method named Extracting Excelsior and Expanding."
+   }
+  },
+  {
+   "surface": "Ex3",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Ex3 initially extract structural information by learning from raw novel data."
+   }
+  },
+  {
+   "surface": "tree-like expansion method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "In the final stage, a tree-like expansion method is deployed to facilitate the generation of arbitrarily long novels.Evaluation against previous methods showcases Ex3’s ability to produce higher-quality long-form novels."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Ex3",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose a method named Extracting Excelsior and Expanding.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "tree-like expansion method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "In the final stage, a tree-like expansion method is deployed to facilitate the generation of arbitrarily long novels.Evaluation against previous methods showcases Ex3’s ability to produce higher-quality long-form novels.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Ex3"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 46397,
+ "eval_count": 324,
+ "ts": "2026-11-22T00:00:45Z"
+}

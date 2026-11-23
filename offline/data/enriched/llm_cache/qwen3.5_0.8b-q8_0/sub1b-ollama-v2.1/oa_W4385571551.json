@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4385571551",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a novel method to improve the generalization of dense retrieval via capturing matching signal called BERM."
+   }
+  },
+  {
+   "surface": "vanilla",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "hard negatives mining",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  },
+  {
+   "surface": "knowledge distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "vanilla",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "hard negatives mining",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge distillation",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Experiments on BEIR show that our method can be effectively combined with different dense retrieval training methods (vanilla, hard negatives mining and knowledge distillation) to improve its generalization ability without any additional inference overhead and target domain data.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 29239,
+ "eval_count": 352,
+ "ts": "2026-11-21T15:46:26Z"
+}

@@ -1,0 +1,112 @@
+{
+ "paper_id": "oa:W4402672093",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CoGenesis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose CoGenesis, a collaborative generation framework integrating large (hosted on cloud infrastructure) and small models (deployed on local devices) to address privacy concerns logically."
+   }
+  },
+  {
+   "surface": "personalized writing instruction datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Initially, we design a pipeline to create personalized writing instruction datasets enriched with extensive context details as the testbed of this research issue."
+   }
+  },
+  {
+   "surface": "large-scale models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experimental findings, based on our synthesized dataset and two additional open-source datasets, indicate that: 1) Large-scale models perform well when provided with user context but struggle in the absence of such context."
+   }
+  },
+  {
+   "surface": "smaller models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "2) While specialized smaller models fine-tuned on the synthetic dataset show promise, they still lag behind their larger counterparts."
+   }
+  },
+  {
+   "surface": "CoGenesis framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "3) Our CoGenesis framework, utilizing mixed-scale models, showcases competitive performance, providing a feasible solution to privacy issues."
+   }
+  },
+  {
+   "surface": "mixed-scale models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "3) Our CoGenesis framework, utilizing mixed-scale models, showcases competitive performance, providing a feasible solution to privacy issues."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "large-scale models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Initially, we design a pipeline to create personalized writing instruction datasets enriched with extensive context details as the testbed of this research issue.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "smaller models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Subsequently, we introduce two variants of CoGenesis based on sketch and logits respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "mixed-scale models",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experimental findings, based on our synthesized dataset and two additional open-source datasets, indicate that: 1) Large-scale models perform well when provided with user context but struggle in the absence of such context.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "personalized writing instruction datasets",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experimental findings, based on our synthesized dataset and two additional open-source datasets, indicate that: 1) Large-scale models perform well when provided with user context but struggle in the absence of such context.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "personalized writing instruction datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "mixed-scale models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48440,
+ "eval_count": 698,
+ "ts": "2026-11-21T18:33:37Z"
+}

@@ -1,0 +1,101 @@
+{
+ "paper_id": "oa:W4402671155",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Jailbreak attack",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a novel ASCII art-based jailbreak attack and introduce a comprehensive benchmark Vision-in-Text Challenge (ViTC) to evaluate the capabilities of LLMs in recognizing prompts that cannot be solely interpreted by semantics."
+   }
+  },
+  {
+   "surface": "ASCII art",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "For example, users of forums often use ASCII art, a form of text-based art, to convey image information."
+   }
+  },
+  {
+   "surface": "Vision-in-Text Challenge (ViTC)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a novel ASCII art-based jailbreak attack and introduce a comprehensive benchmark Vision-in-Text Challenge (ViTC) to evaluate the capabilities of LLMs in recognizing prompts that cannot be solely interpreted by semantics."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Safety is critical to the usage of large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "ViTC",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a novel ASCII art-based jailbreak attack and introduce a comprehensive benchmark Vision-in-Text Challenge (ViTC) to evaluate the capabilities of LLMs in recognizing prompts that cannot be solely interpreted by semantics."
+   }
+  },
+  {
+   "surface": "Five SOTA LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We show that five SOTA LLMs (GPT-3.5, GPT-4, Gemini, Claude, and Llama2) struggle to recognize prompts provided in the form of ASCII art."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "ViTC",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a novel ASCII art-based jailbreak attack and introduce a comprehensive benchmark Vision-in-Text Challenge (ViTC) to evaluate the capabilities of LLMs in recognizing prompts that cannot be solely interpreted by semantics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Vision-in-Text Challenge (ViTC)",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We evaluate ArtPrompt on five SOTA LLMs, and show that ArtPrompt can effectively and efficiently induce undesired behaviors from all five LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Five SOTA LLMs",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "We evaluate ArtPrompt on five SOTA LLMs, and show that ArtPrompt can effectively and efficiently induce undesired behaviors from all five LLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Jailbreak attack"
+  }
+ ],
+ "auto_added_endpoints": [
+  "ViTC",
+  "Five SOTA LLMs"
+ ],
+ "duration_ms": 24023,
+ "eval_count": 446,
+ "ts": "2026-11-21T17:42:37Z"
+}

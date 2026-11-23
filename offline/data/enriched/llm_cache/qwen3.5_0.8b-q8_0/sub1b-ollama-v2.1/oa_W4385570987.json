@@ -1,0 +1,141 @@
+{
+ "paper_id": "oa:W4385570987",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "question",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected."
+   }
+  },
+  {
+   "surface": "knowledge source",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing XQA methods focus on reasoning on a single knowledge source, e.g., structured knowledge bases, unstructured corpora, etc."
+   }
+  },
+  {
+   "surface": "heterogeneous knowledge sources",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, integrating information from heterogeneous knowledge sources is essential to answer complex questions."
+   }
+  },
+  {
+   "surface": "question decomposing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose to leverage question decomposing for heterogeneous knowledge integration, by breaking down a complex question into simpler ones, and selecting the appropriate knowledge source for each sub-question."
+   }
+  },
+  {
+   "surface": "Hierarchical Question Decomposition Tree (HQDT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we build the Hierarchical Question Decomposition Tree (HQDT) to understand the semantics of a complex question; then, we conduct probabilistic reasoning over HQDT from root to leaves recursively, to aggregate heterogeneous knowledge at different tree levels and search for a best solution considering the decomposing and answering probabilities."
+   }
+  },
+  {
+   "surface": "Probabilistic reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "First, we build the Hierarchical Question Decomposition Tree (HQDT) to understand the semantics of a complex question; then, we conduct probabilistic reasoning over HQDT from root to leaves recursively, to aggregate heterogeneous knowledge at different tree levels and search for a best solution considering the decomposing and answering probabilities."
+   }
+  },
+  {
+   "surface": "Reasoning over Hierarchical Question Decomposition Tree (RoHT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To facilitate reasoning, we propose a novel two-stage XQA framework, Reasoning over Hierarchical Question Decomposition Tree (RoHT)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing XQA methods focus on reasoning on a single knowledge source, e.g., structured knowledge bases, unstructured corpora, etc.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, integrating information from heterogeneous knowledge sources is essential to answer complex questions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "question",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Explainable question answering (XQA) aims to answer a given question and provide an explanation why the answer is selected.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 29408,
+ "eval_count": 702,
+ "ts": "2026-11-21T15:36:52Z"
+}

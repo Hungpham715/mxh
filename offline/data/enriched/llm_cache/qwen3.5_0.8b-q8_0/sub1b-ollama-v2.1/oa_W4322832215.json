@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4322832215",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Hidden Markov Transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose a Hidden Markov Transformer (HMT), which treats the moments of starting translating as hidden events and the target sequence as the corresponding observed events, thereby organizing them as a hidden Markov model."
+   }
+  },
+  {
+   "surface": "Simultaneous Machine Translation (SiMT)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Simultaneous machine translation (SiMT) outputs the target sequence while receiving the source sequence, and hence learning when to start translating each target token is the core challenge for SiMT task."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Simultaneous Machine Translation (SiMT)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Simultaneous Machine Translation (SiMT)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13935,
+ "eval_count": 237,
+ "ts": "2026-11-21T15:11:49Z"
+}

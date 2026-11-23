@@ -1,0 +1,180 @@
+{
+ "paper_id": "oa:W4416035811",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SPARK",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present stance and topic evolution reasoning framework (SPARK), the first LLM-based multi-agent simulation framework for jointly modeling the co-evolution of topics and stances through natural language interactions."
+   }
+  },
+  {
+   "surface": "LLM-based multi-agent simulation framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present stance and topic evolution reasoning framework (SPARK), the first LLM-based multi-agent simulation framework for jointly modeling the co-evolution of topics and stances through natural language interactions."
+   }
+  },
+  {
+   "surface": "stance and topic evolution reasoning framework (SPARK)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We present stance and topic evolution reasoning framework (SPARK), the first LLM-based multi-agent simulation framework for jointly modeling the co-evolution of topics and stances through natural language interactions."
+   }
+  },
+  {
+   "surface": "agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet existing dynamic topic models and stance analysis approaches usually consider these processes in isolation, relying on abstractions that lack interpretability and agent-level behavioral fidelity."
+   }
+  },
+  {
+   "surface": "LLM persona",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In SPARK, each agent is instantiated as an LLM persona with unique demographic and psychological traits, equipped with memory and reflective reasoning."
+   }
+  },
+  {
+   "surface": "memory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In SPARK, each agent is instantiated as an LLM persona with unique demographic and psychological traits, equipped with memory and reflective reasoning."
+   }
+  },
+  {
+   "surface": "reflective reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In SPARK, each agent is instantiated as an LLM persona with unique demographic and psychological traits, equipped with memory and reflective reasoning."
+   }
+  },
+  {
+   "surface": "daily conversations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Agents engage in daily conversations, adapt their stances, and organically introduce emergent subtopics, enabling interpretable, fine-grained simulation of discourse dynamics at scale."
+   }
+  },
+  {
+   "surface": "emergent subtopics",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Agents engage in daily conversations, adapt their stances, and organically introduce emergent subtopics, enabling interpretable, fine-grained simulation of discourse dynamics at scale."
+   }
+  },
+  {
+   "surface": "online social media",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Topic evolution and stance dynamics are deeply intertwined in online social media, shaping the fragmentation and polarization of public discourse."
+   }
+  },
+  {
+   "surface": "five real-world domains",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments across five real-world domains show that SPARK captures key empirical patterns—such as rapid topic innovation in technology, domain-specific stance polarization, and the influence of personality on stance shifts and topic emergence."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "agent",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Yet existing dynamic topic models and stance analysis approaches usually consider these processes in isolation, relying on abstractions that lack interpretability and agent-level behavioral fidelity.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "memory",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In SPARK, each agent is instantiated as an LLM persona with unique demographic and psychological traits, equipped with memory and reflective reasoning.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "reflective reasoning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In SPARK, each agent is instantiated as an LLM persona with unique demographic and psychological traits, equipped with memory and reflective reasoning.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "daily conversations",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Agents engage in daily conversations, adapt their stances, and organically introduce emergent subtopics, enabling interpretable, fine-grained simulation of discourse dynamics at scale.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "emergent subtopics",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Agents engage in daily conversations, adapt their stances, and organically introduce emergent subtopics, enabling interpretable, fine-grained simulation of discourse dynamics at scale.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "online social media",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Topic evolution and stance dynamics are deeply intertwined in online social media, shaping the fragmentation and polarization of public discourse.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "five real-world domains",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experiments across five real-world domains show that SPARK captures key empirical patterns—such as rapid topic innovation in technology, domain-specific stance polarization, and the influence of personality on stance shifts and topic emergence.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "online social media"
+  }
+ ],
+ "auto_added_endpoints": [
+  "five real-world domains"
+ ],
+ "duration_ms": 38874,
+ "eval_count": 778,
+ "ts": "2026-11-21T21:22:01Z"
+}

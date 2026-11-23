@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4405033489",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ALAMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To this end, this paper proposes \\textbf{A}daptive \\textbf{L}anguage \\textbf{A}gent \\textbf{M}echanism \\textbf{A}ctivation Learning with Self-Exploration (\\textbf{ALAMA}), which focuses on optimizing mechanism activation adaptability without reliance on expert models."
+   }
+  },
+  {
+   "surface": "UniAct",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Initially, it builds a harmonized agent framework (\\textbf{UniAct}) to \\textbf{Uni}fy different mechanisms via \\textbf{Act}ions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "UniAct",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Initially, it builds a harmonized agent framework (\\textbf{UniAct}) to \\textbf{Uni}fy different mechanisms via \\textbf{Act}ions.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 10609,
+ "eval_count": 130,
+ "ts": "2026-11-21T19:40:02Z"
+}

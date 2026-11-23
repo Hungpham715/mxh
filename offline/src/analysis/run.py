@@ -8,7 +8,7 @@ from typing import Any
 
 import networkx as nx
 
-from src.analysis import metrics, subnetworks, visualize
+from src.analysis import knowledge_graph, metrics, subnetworks, visualize
 from src.common import DERIVED, log, read_jsonl, write_json
 from src.data.contracts import load_dataset
 from src.graph.derive import REL_TYPES, derive_edges, write_derived
@@ -101,6 +101,7 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
             h["evidence_urls"] = [papers[p]["source_url"] for p in h["evidence_paper_ids"]]
 
     sw = metrics.small_world(g)
+    kg_sw = knowledge_graph.analyze(rows, edges)
     sw_sensitivity = subnetworks.analyze_subnetworks(
         rows, g, whole_distance=sw.get("whole_network_distance")
     )
@@ -118,6 +119,7 @@ def run_analysis(data_dir: Path, out: Path, source: str = "local") -> int:
     }
     write_json(out / "author_network.json", result)
     write_json(out / "small_world.json", sw)
+    write_json(out / "knowledge_graph_small_world.json", kg_sw)
     subnetworks.write_subnetwork_outputs(
         sw_sensitivity,
         out / "small_world_subnetworks.json",

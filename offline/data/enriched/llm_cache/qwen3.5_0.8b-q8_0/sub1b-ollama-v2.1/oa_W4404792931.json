@@ -1,0 +1,103 @@
+{
+ "paper_id": "oa:W4404792931",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Learning-to-Rank (LTR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "Query-focused Summarization (QFS)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization."
+   }
+  },
+  {
+   "surface": "shared secondary decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level."
+   }
+  },
+  {
+   "surface": "summarization decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level."
+   }
+  },
+  {
+   "surface": "QMSum benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead."
+   }
+  },
+  {
+   "surface": "SQuALITY benchmark",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Query-focused Summarization (QFS)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This study examines the potential of integrating Learning-to-Rank (LTR) with Query-focused Summarization (QFS) to enhance the summary relevance via content prioritization.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "summarization decoder",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Using a shared secondary decoder with the summarization decoder, we carry out the LTR task at the segment level.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "QMSum benchmark",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SQuALITY benchmark",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Compared to the state-of-the-art, our model outperforms on QMSum benchmark (all metrics) and matches on SQuALITY benchmark (2 metrics) as measured by Rouge and BertScore while offering a lower training overhead.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 28573,
+ "eval_count": 436,
+ "ts": "2026-11-21T19:37:05Z"
+}

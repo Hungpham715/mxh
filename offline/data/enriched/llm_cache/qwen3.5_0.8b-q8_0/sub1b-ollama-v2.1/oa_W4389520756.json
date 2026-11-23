@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4389520756",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Prompt Optimization with Textual Gradients (ProTeGi)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We propose a simple and nonparametric solution to this problem, Prompt Optimization with Textual Gradients (ProTeGi), which is inspired by numerical gradient descent to automatically improve prompts, assuming access to training data and an LLM API."
+   }
+  },
+  {
+   "surface": "beam search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These gradient descent steps are guided by a beam search and bandit selection procedure which significantly improves algorithmic efficiency."
+   }
+  },
+  {
+   "surface": "bandit selection procedure",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These gradient descent steps are guided by a beam search and bandit selection procedure which significantly improves algorithmic efficiency."
+   }
+  },
+  {
+   "surface": "LLM jailbreak detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Preliminary results across three benchmark NLP tasks and the novel problem of LLM jailbreak detection suggest that Automatic Prompt Optimization can outperform prior prompt editing techniques and improve an initial prompt’s performance by up to 31%, by using data to rewrite vague task descriptions into more precise annotation instructions."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "beam search",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These gradient descent steps are guided by a beam search and bandit selection procedure which significantly improves algorithmic efficiency.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "bandit selection procedure",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "These gradient descent steps are guided by a beam search and bandit selection procedure which significantly improves algorithmic efficiency.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM jailbreak detection"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36531,
+ "eval_count": 391,
+ "ts": "2026-11-21T16:41:56Z"
+}

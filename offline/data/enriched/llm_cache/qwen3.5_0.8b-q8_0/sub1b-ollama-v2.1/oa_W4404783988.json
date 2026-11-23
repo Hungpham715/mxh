@@ -1,0 +1,74 @@
+{
+ "paper_id": "oa:W4404783988",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RSA-Control",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce RSA-Control, a training-free controllable text generation framework grounded in pragmatics."
+   }
+  },
+  {
+   "surface": "pragmatics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In this work, we introduce RSA-Control, a training-free controllable text generation framework grounded in pragmatics."
+   }
+  },
+  {
+   "surface": "self-adjustable rationality parameter",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Additionally, we introduce a self-adjustable rationality parameter, which allows for automatic adjustment of control strength based on context."
+   }
+  },
+  {
+   "surface": "language fluency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments, conducted with two task types and two types of language models, demonstrate that RSA-Control achieves strong attribute control while maintaining language fluency and content consistency."
+   }
+  },
+  {
+   "surface": "content consistency",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments, conducted with two task types and two types of language models, demonstrate that RSA-Control achieves strong attribute control while maintaining language fluency and content consistency."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "language fluency",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Additionally, we introduce a self-adjustable rationality parameter, which allows for automatic adjustment of control strength based on context.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "pragmatics"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "content consistency"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32731,
+ "eval_count": 314,
+ "ts": "2026-11-21T19:33:18Z"
+}

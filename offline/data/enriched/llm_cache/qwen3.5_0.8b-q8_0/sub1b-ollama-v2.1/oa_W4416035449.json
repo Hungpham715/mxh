@@ -1,0 +1,178 @@
+{
+ "paper_id": "oa:W4416035449",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper investigates prior prompt engineering (pPE) in the context of reinforcement fine-tuning (RFT), where language models (LMs) are incentivized to exhibit behaviors that maximize performance through reward signals."
+   }
+  },
+  {
+   "surface": "reinforcement fine-tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper investigates prior prompt engineering (pPE) in the context of reinforcement fine-tuning (RFT), where language models (LMs) are incentivized to exhibit behaviors that maximize performance through reward signals."
+   }
+  },
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper investigates prior prompt engineering (pPE) in the context of reinforcement fine-tuning (RFT), where language models (LMs) are incentivized to exhibit behaviors that maximize performance through reward signals."
+   }
+  },
+  {
+   "surface": "reward shaping",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While existing RFT research has primarily focused on algorithms, reward shaping, and data curation, the design of the prior prompt–the instructions prepended to queries during training to elicit behaviors such as step-by-step reasoning–remains underexplored."
+   }
+  },
+  {
+   "surface": "prior prompt",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper investigates prior prompt engineering (pPE) in the context of reinforcement fine-tuning (RFT), where language models (LMs) are incentivized to exhibit behaviors that maximize performance through reward signals."
+   }
+  },
+  {
+   "surface": "prompt engineering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper investigates prior prompt engineering (pPE) in the context of reinforcement fine-tuning (RFT), where language models (LMs) are incentivized to exhibit behaviors that maximize performance through reward signals."
+   }
+  },
+  {
+   "surface": "inference-time prompt engineering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches."
+   }
+  },
+  {
+   "surface": "reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While existing RFT research has primarily focused on algorithms, reward shaping, and data curation, the design of the prior prompt–the instructions prepended to queries during training to elicit behaviors such as step-by-step reasoning–remains underexplored."
+   }
+  },
+  {
+   "surface": "planning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches."
+   }
+  },
+  {
+   "surface": "code-based reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches."
+   }
+  },
+  {
+   "surface": "knowledge recall",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches."
+   }
+  },
+  {
+   "surface": "null-example utilization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches."
+   }
+  },
+  {
+   "surface": "Qwen2.5-7B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We experiment with Qwen2.5-7B using each of the pPE approaches, then evaluate performance on in-domain and out-of-domain benchmarks (e.g., AIME2024, HumanEval+, and GPQA-Diamond)."
+   }
+  },
+  {
+   "surface": "AIME2024",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We experiment with Qwen2.5-7B using each of the pPE approaches, then evaluate performance on in-domain and out-of-domain benchmarks (e.g., AIME2024, HumanEval+, and GPQA-Diamond)."
+   }
+  },
+  {
+   "surface": "HumanEval+",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We experiment with Qwen2.5-7B using each of the pPE approaches, then evaluate performance on in-domain and out-of-domain benchmarks (e.g., AIME2024, HumanEval+, and GPQA-Diamond)."
+   }
+  },
+  {
+   "surface": "GPQA-Diamond",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We experiment with Qwen2.5-7B using each of the pPE approaches, then evaluate performance on in-domain and out-of-domain benchmarks (e.g., AIME2024, HumanEval+, and GPQA-Diamond)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prior prompt",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Inspired by inference-time prompt engineering (iPE), we translate five representative iPE strategies–reasoning, planning, code-based reasoning, knowledge recall, and null-example utilization–into corresponding pPE approaches.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reinforcement fine-tuning"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 58851,
+ "eval_count": 961,
+ "ts": "2026-11-22T00:27:09Z"
+}

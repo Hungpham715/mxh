@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416548812",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Small language models (SLMs) are inherently limited in knowledge-intensive tasks due to their constrained capacity."
+   }
+  },
+  {
+   "surface": "task vector machine",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a new paradigm: viewing the model's internal reasoning, delimited by <think> and </think> tags, as a dynamic task vector machine."
+   }
+  },
+  {
+   "surface": "RLVR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We developed a method to optimize this dynamic task vector machine through RLVR and successfully trained an agentic web-search model."
+   }
+  },
+  {
+   "surface": "Lucy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We present Lucy, a 1.7B-parameter SLM that leverages this dynamic reasoning mechanism with MCP integration to achieve 78.3% accuracy on the SimpleQA benchmark, performing on par with much larger models such as DeepSeek-V3."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "task vector machine",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we propose a new paradigm: viewing the model's internal reasoning, delimited by <think> and </think> tags, as a dynamic task vector machine.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "task vector machine",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We developed a method to optimize this dynamic task vector machine through RLVR and successfully trained an agentic web-search model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "task vector machine",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We present Lucy, a 1.7B-parameter SLM that leverages this dynamic reasoning mechanism with MCP integration to achieve 78.3% accuracy on the SimpleQA benchmark, performing on par with much larger models such as DeepSeek-V3.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 47362,
+ "eval_count": 321,
+ "ts": "2026-11-21T22:17:25Z"
+}

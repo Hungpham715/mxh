@@ -1,0 +1,144 @@
+{
+ "paper_id": "oa:W4407123355",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle with multi-step reasoning, where inference-time scaling has emerged as a promising strategy for performance improvement."
+   }
+  },
+  {
+   "surface": "multi-step reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle with multi-step reasoning, where inference-time scaling has emerged as a promising strategy for performance improvement."
+   }
+  },
+  {
+   "surface": "inference-time scaling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle with multi-step reasoning, where inference-time scaling has emerged as a promising strategy for performance improvement."
+   }
+  },
+  {
+   "surface": "Verifier-guided search",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Verifier-guided search outperforms repeated sampling when sample size is limited by selecting and prioritizing valid reasoning paths."
+   }
+  },
+  {
+   "surface": "repeated sampling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Verifier-guided search outperforms repeated sampling when sample size is limited by selecting and prioritizing valid reasoning paths."
+   }
+  },
+  {
+   "surface": "GSM8K",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, we identify a critical limitation: scaling flaws, prevalent across different models (Mistral 7B and DeepSeekMath 7B), benchmarks (GSM8K and MATH), and verifiers (outcome value models and process reward models)."
+   }
+  },
+  {
+   "surface": "MATH",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, we identify a critical limitation: scaling flaws, prevalent across different models (Mistral 7B and DeepSeekMath 7B), benchmarks (GSM8K and MATH), and verifiers (outcome value models and process reward models)."
+   }
+  },
+  {
+   "surface": "outcome value models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, we identify a critical limitation: scaling flaws, prevalent across different models (Mistral 7B and DeepSeekMath 7B), benchmarks (GSM8K and MATH), and verifiers (outcome value models and process reward models)."
+   }
+  },
+  {
+   "surface": "process reward models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "However, we identify a critical limitation: scaling flaws, prevalent across different models (Mistral 7B and DeepSeekMath 7B), benchmarks (GSM8K and MATH), and verifiers (outcome value models and process reward models)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-step reasoning",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle with multi-step reasoning, where inference-time scaling has emerged as a promising strategy for performance improvement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Verifier-guided search",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle with multi-step reasoning, where inference-time scaling has emerged as a promising strategy for performance improvement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multi-step reasoning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Verifier-guided search outperforms repeated sampling when sample size is limited by selecting and prioritizing valid reasoning paths.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Verifier-guided search",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Verifier-guided search outperforms repeated sampling when sample size is limited by selecting and prioritizing valid reasoning paths.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Verifier-guided search"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Verifier-guided search"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Verifier-guided search"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Verifier-guided search"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 41321,
+ "eval_count": 835,
+ "ts": "2026-11-21T19:50:10Z"
+}

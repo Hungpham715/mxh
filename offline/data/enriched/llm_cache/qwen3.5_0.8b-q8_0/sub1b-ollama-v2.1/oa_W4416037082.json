@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4416037082",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TaarofBench",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce TaarofBench, the first benchmark for evaluating LLM understanding of taarof, comprising 450 role-play scenarios covering 12 common social interaction topics, validated by native speakers."
+   }
+  },
+  {
+   "surface": "Persian taarof",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We focus on Persian taarof, a social norm in Iranian interactions, which is a sophisticated system of ritual politeness that emphasizes deference, modesty, and indirectness, yet remains absent from existing cultural benchmarks."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) struggle to navigate culturally specific communication norms, limiting their effectiveness in global contexts."
+   }
+  },
+  {
+   "surface": "Persian-language prompts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Performance varies between interaction topics, improves with Persian-language prompts, and exhibits gender-based asymmetries."
+   }
+  },
+  {
+   "surface": "model alignment",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through supervised fine-tuning and Direct Preference Optimization, we achieve 21.8% and 42.3% improvement in model alignment with cultural expectations."
+   }
+  },
+  {
+   "surface": "Direct Preference Optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Through supervised fine-tuning and Direct Preference Optimization, we achieve 21.8% and 42.3% improvement in model alignment with cultural expectations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Persian taarof",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We focus on Persian taarof, a social norm in Iranian interactions, which is a sophisticated system of ritual politeness that emphasizes deference, modesty, and indirectness, yet remains absent from existing cultural benchmarks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "TaarofBench",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce TaarofBench, the first benchmark for evaluating LLM understanding of taarof, comprising 450 role-play scenarios covering 12 common social interaction topics, validated by native speakers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "TaarofBench",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "This work lays the foundation for developing diverse and culturally aware LLMs, enabling applications that better navigate complex social interactions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLMs"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Persian-language prompts"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model alignment"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 47685,
+ "eval_count": 602,
+ "ts": "2026-11-21T23:41:53Z"
+}

@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4385571647",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "mBART",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this research, we investigate the use of state-of-the-art multilingual models such as mBART and T5 to facilitate zero-shot and few-shot transfer of code-switched responses."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this research, we investigate the use of state-of-the-art multilingual models such as mBART and T5 to facilitate zero-shot and few-shot transfer of code-switched responses."
+   }
+  },
+  {
+   "surface": "adapter-based framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose a new adapter-based framework that allows for efficient transfer by learning task-specific representations and encapsulating source and target language representations."
+   }
+  },
+  {
+   "surface": "code-switched responses",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this research, we investigate the use of state-of-the-art multilingual models such as mBART and T5 to facilitate zero-shot and few-shot transfer of code-switched responses."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adapter-based framework",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We present both quantitative and qualitative analyses to evaluate the effectiveness of our approach.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adapter-based framework",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent task-oriented dialog systems have had great success in building English-based personal assistants, but extending these systems to a global audience is challenging due to the need for annotated data in the target language.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "adapter-based framework"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "adapter-based framework"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21275,
+ "eval_count": 428,
+ "ts": "2026-11-21T15:46:47Z"
+}

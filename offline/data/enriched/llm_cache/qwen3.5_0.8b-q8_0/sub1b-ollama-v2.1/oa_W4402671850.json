@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4402671850",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Context-Aware MultiModal Learner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this work, we introduce Context-Aware MultiModal Learner (CaMML), for tuning large multimodal models (LMMs)."
+   }
+  },
+  {
+   "surface": "large multimodal models (LMMs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this work, we introduce Context-Aware MultiModal Learner (CaMML), for tuning large multimodal models (LMMs)."
+   }
+  },
+  {
+   "surface": "multimodal contextual samples",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "CaMML, a lightweight module, is crafted to seamlessly integrate multimodal contextual samples into large models, thereby empowering the model to derive knowledge from analogous, domain-specific, up-to-date information and make grounded inferences."
+   }
+  },
+  {
+   "surface": "large models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "CaMML, a lightweight module, is crafted to seamlessly integrate multimodal contextual samples into large models, thereby empowering the model to derive knowledge from analogous, domain-specific, up-to-date information and make grounded inferences."
+   }
+  },
+  {
+   "surface": "multimodal benchmark datasets",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Remarkably, CaMML-13B achieves the state-of-the-art performance on over ten widely recognized multimodal benchmark datasets, surpassing LLaVA-1.5 (13B) with a noticeable margin, without integration of any external resources."
+   }
+  },
+  {
+   "surface": "LLaVA-1.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Remarkably, CaMML-13B achieves the state-of-the-art performance on over ten widely recognized multimodal benchmark datasets, surpassing LLaVA-1.5 (13B) with a noticeable margin, without integration of any external resources."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "large multimodal models (LMMs)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In this work, we introduce Context-Aware MultiModal Learner (CaMML), for tuning large multimodal models (LMMs).",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large multimodal models (LMMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLaVA-1.5"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multimodal benchmark datasets"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 57114,
+ "eval_count": 986,
+ "ts": "2026-11-22T00:03:45Z"
+}

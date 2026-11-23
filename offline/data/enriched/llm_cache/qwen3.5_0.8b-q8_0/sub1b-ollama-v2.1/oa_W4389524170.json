@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4389524170",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "QuRe",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To explore this, we introduce QuRe, a crowd-sourced dataset of human-annotated generalized quantifiers in Wikipedia sentences featuring percentage-equipped predicates."
+   }
+  },
+  {
+   "surface": "PRESQUE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We explore quantifier comprehension using PRESQUE, a framework that combines natural language inference and the Rational Speech Acts framework."
+   }
+  },
+  {
+   "surface": "HVD dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on the HVD dataset (Herbelot and Vecchi, 2015) and QuRe demonstrate PRESQUE’s superiority over a literal listener baseline, showing a 20% relative improvement in F1 in predicting percentage scopes for quantifiers, even with no additional training."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "QuRe",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To explore this, we introduce QuRe, a crowd-sourced dataset of human-annotated generalized quantifiers in Wikipedia sentences featuring percentage-equipped predicates.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "HVD dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on the HVD dataset (Herbelot and Vecchi, 2015) and QuRe demonstrate PRESQUE’s superiority over a literal listener baseline, showing a 20% relative improvement in F1 in predicting percentage scopes for quantifiers, even with no additional training.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "QUANTIFIER_COMPREHENSION"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 13100,
+ "eval_count": 251,
+ "ts": "2026-11-21T17:00:07Z"
+}

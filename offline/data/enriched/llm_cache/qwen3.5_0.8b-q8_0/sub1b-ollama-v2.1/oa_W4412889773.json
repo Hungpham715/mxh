@@ -1,0 +1,124 @@
+{
+ "paper_id": "oa:W4412889773",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SHuBERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce SHuBERT (Sign Hidden-Unit BERT), a self-supervised contextual representation model learned from approximately 1,000 hours of American Sign Language video."
+   }
+  },
+  {
+   "surface": "masked token prediction objectives",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "SHuBERT adapts masked token prediction objectives to multi-stream visual sign language input, learning to predict multiple targets corresponding to clustered hand, face, and body pose streams."
+   }
+  },
+  {
+   "surface": "multi-stream visual sign language input",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "SHuBERT adapts masked token prediction objectives to multi-stream visual sign language input, learning to predict multiple targets corresponding to clustered hand, face, and body pose streams."
+   }
+  },
+  {
+   "surface": "clustered hand, face, and body pose streams",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "SHuBERT adapts masked token prediction objectives to multi-stream visual sign language input, learning to predict multiple targets corresponding to clustered hand, face, and body pose streams."
+   }
+  },
+  {
+   "surface": "sign language translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  },
+  {
+   "surface": "isolated sign language recognition",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  },
+  {
+   "surface": "fingerspelling detection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "masked token prediction objectives",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce SHuBERT (Sign Hidden-Unit BERT), a self-supervised contextual representation model learned from approximately 1,000 hours of American Sign Language video.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "sign language translation",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "isolated sign language recognition",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "fingerspelling detection",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "SHuBERT achieves state-of-the-art performance across multiple tasks including sign language translation, isolated sign language recognition, and fingerspelling detection.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-stream visual sign language input"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "clustered hand, face, and body pose streams"
+  }
+ ],
+ "auto_added_endpoints": [
+  "sign language translation",
+  "isolated sign language recognition",
+  "fingerspelling detection"
+ ],
+ "duration_ms": 29011,
+ "eval_count": 589,
+ "ts": "2026-11-21T20:15:52Z"
+}

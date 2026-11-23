@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4402671217",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "transformer-based",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Efforts to apply transformer-based language models (TLMs) to the problem of reasoning in natural language have enjoyed ever-increasing success in recent years."
+   }
+  },
+  {
+   "surface": "natural language",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Efforts to apply transformer-based language models (TLMs) to the problem of reasoning in natural language have enjoyed ever-increasing success in recent years."
+   }
+  },
+  {
+   "surface": "reasoning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Efforts to apply transformer-based language models (TLMs) to the problem of reasoning in natural language have enjoyed ever-increasing success in recent years."
+   }
+  },
+  {
+   "surface": "satisfiability",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The most fundamental task in this area to which nearly all others can be reduced is that of determining satisfiability."
+   }
+  },
+  {
+   "surface": "computational complexity classes",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The problem instances of satisfiability in natural language can belong to different computational complexity classes depending on the language fragment in which they are expressed."
+   }
+  },
+  {
+   "surface": "different grammatical constructs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Hence, we investigate how problem instances from varying computational complexity classes and having different grammatical constructs impact TLMs’ ability to learn rules of inference."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "satisfiability",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The most fundamental task in this area to which nearly all others can be reduced is that of determining satisfiability.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "reasoning",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The problem instances of satisfiability in natural language can belong to different computational complexity classes depending on the language fragment in which they are expressed.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "satisfiability"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "satisfiability"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 52508,
+ "eval_count": 436,
+ "ts": "2026-11-21T17:44:53Z"
+}

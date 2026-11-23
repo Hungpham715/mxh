@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4416036820",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LRMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advances in large reasoning models (LRMs) have enabled strong multi-step reasoning capabilities."
+   }
+  },
+  {
+   "surface": "Reasoning-aware Representation Misdirection for Unlearning (R^2MU)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this, we propose Reasoning-aware Representation Misdirection for Unlearning (R^2MU), a method that suppresses sensitive reasoning traces while preserving the model’s general reasoning ability."
+   }
+  },
+  {
+   "surface": "DeepSeek-R1-Distill-LLaMA-8B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments demonstrate that R^2MU significantly reduces reasoning trace leakage and achieves strong performance across both reasoning and safety benchmarks, including WMDP, StrongReject, JBB-Behaviors and WildJailbreak, under state-of-the-art models such as DeepSeek-R1-Distill-LLaMA-8B and DeepSeek-R1-Distill-Qwen-14B."
+   }
+  },
+  {
+   "surface": "DeepSeek-R1-Distill-Qwen-14B",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments demonstrate that R^2MU significantly reduces reasoning trace leakage and achieves strong performance across both reasoning and safety benchmarks, including WMDP, StrongReject, JBB-Behaviors and WildJailbreak, under state-of-the-art models such as DeepSeek-R1-Distill-LLaMA-8B and DeepSeek-R1-Distill-Qwen-14B."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DeepSeek-R1-Distill-LLaMA-8B",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments demonstrate that R^2MU significantly reduces reasoning trace leakage and achieves strong performance across both reasoning and safety benchmarks, including WMDP, StrongReject, JBB-Behaviors and WildJailbreak, under state-of-the-art models such as DeepSeek-R1-Distill-LLaMA-8B and DeepSeek-R1-Distill-Qwen-14B.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DeepSeek-R1-Distill-Qwen-14B",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our experiments demonstrate that R^2MU significantly reduces reasoning trace leakage and achieves strong performance across both reasoning and safety benchmarks, including WMDP, StrongReject, JBB-Behaviors and WildJailbreak, under state-of-the-art models such as DeepSeek-R1-Distill-LLaMA-8B and DeepSeek-R1-Distill-Qwen-14B.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Reasoning-aware Representation Misdirection for Unlearning (R^2MU)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Reasoning-aware Representation Misdirection for Unlearning (R^2MU)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45374,
+ "eval_count": 511,
+ "ts": "2026-11-21T21:58:40Z"
+}

@@ -1,0 +1,119 @@
+{
+ "paper_id": "oa:W4385572370",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "dialogue",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue, the most fundamental and specially privileged arena of language, gains increasing ubiquity across the Web in recent years."
+   }
+  },
+  {
+   "surface": "web",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Dialogue, the most fundamental and specially privileged arena of language, gains increasing ubiquity across the Web in recent years."
+   }
+  },
+  {
+   "surface": "email thread summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Quickly going through the long dialogue context and capturing salient information scattered over the whole dialogue session benefit users in many real-world Web applications such as email thread summarization and meeting minutes draft."
+   }
+  },
+  {
+   "surface": "meeting minutes draft",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Quickly going through the long dialogue context and capturing salient information scattered over the whole dialogue session benefit users in many real-world Web applications such as email thread summarization and meeting minutes draft."
+   }
+  },
+  {
+   "surface": "dialogue summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Dialogue summarization is a challenging task in that dialogue has dynamic interaction nature and presumably inconsistent information flow among various speakers."
+   }
+  },
+  {
+   "surface": "SAMSum",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS."
+   }
+  },
+  {
+   "surface": "MediaSum",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS."
+   }
+  },
+  {
+   "surface": "DialogSum",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "dialogue summarization",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Dialogue summarization is a challenging task in that dialogue has dynamic interaction nature and presumably inconsistent information flow among various speakers.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SAMSum",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "MediaSum",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DialogSum",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "To verify the effectiveness of SDDS, we conduct experiments on three benchmark datasets (SAMSum, MediaSum, and DialogSum) and the results verify the superiority of SDDS.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 22391,
+ "eval_count": 451,
+ "ts": "2026-11-21T15:56:11Z"
+}

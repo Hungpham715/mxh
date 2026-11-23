@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4389520684",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ReSee",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we provide a new paradigm of constructing multimodal dialogues as well as two datasets extended from text-only dialogues under such paradigm (ReSee-\\texttt{WoW}, ReSee-\\texttt{DD})."
+   }
+  },
+  {
+   "surface": "WoW",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we provide a new paradigm of constructing multimodal dialogues as well as two datasets extended from text-only dialogues under such paradigm (ReSee-\\texttt{WoW}, ReSee-\\texttt{DD})."
+   }
+  },
+  {
+   "surface": "DD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we provide a new paradigm of constructing multimodal dialogues as well as two datasets extended from text-only dialogues under such paradigm (ReSee-\\texttt{WoW}, ReSee-\\texttt{DD})."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "WoW",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also conduct extensive experiments and ablations w.r.t.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "DD",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also conduct extensive experiments and ablations w.r.t.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "WoW"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DD"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26220,
+ "eval_count": 370,
+ "ts": "2026-11-21T16:40:29Z"
+}

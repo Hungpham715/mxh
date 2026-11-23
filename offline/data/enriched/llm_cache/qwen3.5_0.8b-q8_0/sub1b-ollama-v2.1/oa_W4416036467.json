@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4416036467",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "scenario-based dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we introduce a novel scenario-based dataset comprising diverse textual descriptions of fictional facts, annotated with scenario elements."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Driven by vast and diverse textual data, large language models (LLMs) have demonstrated impressive performance across numerous natural language processing (NLP) tasks."
+   }
+  },
+  {
+   "surface": "semantic scenario cognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our experiments reveal that current LLMs predominantly rely on superficial memorization, failing to achieve robust semantic scenario cognition, even in simple cases."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "semantic scenario cognition",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we introduce a novel scenario-based dataset comprising diverse textual descriptions of fictional facts, annotated with scenario elements.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "scenario-based dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Specifically, we introduce a novel scenario-based dataset comprising diverse textual descriptions of fictional facts, annotated with scenario elements.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "semantic scenario cognition"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37820,
+ "eval_count": 294,
+ "ts": "2026-11-21T21:40:17Z"
+}

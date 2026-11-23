@@ -1,0 +1,71 @@
+{
+ "paper_id": "oa:W4389518617",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Implicit Discourse Relation Recognition (IDRR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Implicit Discourse Relation Recognition (IDRR), which infers discourse relations without the help of explicit connectives, is still a crucial and challenging task for discourse parsing."
+   }
+  },
+  {
+   "surface": "PDTB 2.0",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results on PDTB 2.0 and CoNLL16 datasets demonstrate that our method achieves outstanding and consistent performance against the current state-of-the-art models."
+   }
+  },
+  {
+   "surface": "CoNLL16",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results on PDTB 2.0 and CoNLL16 datasets demonstrate that our method achieves outstanding and consistent performance against the current state-of-the-art models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "PDTB 2.0",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results on PDTB 2.0 and CoNLL16 datasets demonstrate that our method achieves outstanding and consistent performance against the current state-of-the-art models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "CoNLL16",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experimental results on PDTB 2.0 and CoNLL16 datasets demonstrate that our method achieves outstanding and consistent performance against the current state-of-the-art models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Prompt-based Logical Semantics Enhancement (PLSE)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Prompt-based Logical Semantics Enhancement (PLSE)"
+  }
+ ],
+ "auto_added_endpoints": [
+  "PDTB 2.0",
+  "CoNLL16"
+ ],
+ "duration_ms": 30621,
+ "eval_count": 335,
+ "ts": "2026-11-21T16:11:34Z"
+}

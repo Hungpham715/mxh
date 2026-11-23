@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4391591669",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have become incredibly popular, with ChatGPT for example being used by over a billion users."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have become incredibly popular, with ChatGPT for example being used by over a billion users."
+   }
+  },
+  {
+   "surface": "hallucinations",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While these models exhibit remarkable language understanding and logical prowess, a notable challenge surfaces in the form of \"hallucinations.\" This phenomenon results in LLMs outputting misinformation in a confident manner, which can lead to devastating consequences with such a large user base."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have become incredibly popular, with ChatGPT for example being used by over a billion users.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "hallucinations",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "While these models exhibit remarkable language understanding and logical prowess, a notable challenge surfaces in the form of \"hallucinations.\" This phenomenon results in LLMs outputting misinformation in a confident manner, which can lead to devastating consequences with such a large user base.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 12643,
+ "eval_count": 210,
+ "ts": "2026-11-21T17:13:48Z"
+}

@@ -1,0 +1,141 @@
+{
+ "paper_id": "oa:W4416035575",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GPT-4o",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In the pre-processing stage, we classify and deduplicate images, extract visual information using expert tools, and leverage GPT-4o with structured prompts to generate initial captions."
+   }
+  },
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To enhance comprehensiveness, we introduce an expansion strategy based on Large Language Models (LLMs), defining eight descriptive dimensions to refine and extend captions, which serve as seed data for training a proprietary captioner model."
+   }
+  },
+  {
+   "surface": "Direct Preference Optimization (DPO)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using high-quality corrected data, we apply Direct Preference Optimization (DPO) and develop a critic-rewrite pipeline, training a sentence-level critic model to mitigate hallucinations."
+   }
+  },
+  {
+   "surface": "critic-rewrite pipeline",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using high-quality corrected data, we apply Direct Preference Optimization (DPO) and develop a critic-rewrite pipeline, training a sentence-level critic model to mitigate hallucinations."
+   }
+  },
+  {
+   "surface": "sentence-level critic model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using high-quality corrected data, we apply Direct Preference Optimization (DPO) and develop a critic-rewrite pipeline, training a sentence-level critic model to mitigate hallucinations."
+   }
+  },
+  {
+   "surface": "UltraCaption",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "The code and dataset are available at https://github.com/yuzeng0-0/UltraCaption."
+   }
+  },
+  {
+   "surface": "expansion strategy based on Large Language Models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To enhance comprehensiveness, we introduce an expansion strategy based on Large Language Models (LLMs), defining eight descriptive dimensions to refine and extend captions, which serve as seed data for training a proprietary captioner model."
+   }
+  },
+  {
+   "surface": "pre-processing stage",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In the pre-processing stage, we classify and deduplicate images, extract visual information using expert tools, and leverage GPT-4o with structured prompts to generate initial captions."
+   }
+  },
+  {
+   "surface": "post-processing stage",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a systematic pipeline for generating high-quality, ultra-detailed image captions, encompassing both pre-processing and post-processing stages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "sentence-level critic model",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Using high-quality corrected data, we apply Direct Preference Optimization (DPO) and develop a critic-rewrite pipeline, training a sentence-level critic model to mitigate hallucinations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "expansion strategy based on Large Language Models (LLMs)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To enhance comprehensiveness, we introduce an expansion strategy based on Large Language Models (LLMs), defining eight descriptive dimensions to refine and extend captions, which serve as seed data for training a proprietary captioner model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "pre-processing stage",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In the pre-processing stage, we classify and deduplicate images, extract visual information using expert tools, and leverage GPT-4o with structured prompts to generate initial captions.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "post-processing stage",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In the post-processing stage, we incorporate human error-correction annotations and an active learning-inspired approach to refine low-quality samples.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "UltraCaption",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "The code and dataset are available at https://github.com/yuzeng0-0/UltraCaption.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "expansion strategy based on Large Language Models (LLMs)",
+  "pre-processing stage",
+  "post-processing stage"
+ ],
+ "duration_ms": 28219,
+ "eval_count": 567,
+ "ts": "2026-11-21T21:15:11Z"
+}

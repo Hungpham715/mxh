@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4401307157",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Bailing-TTS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Toaddress this, we propose Bailing-TTS, a family of large-scale TTS models capable of generating high-quality Chinese dialectal speech."
+   }
+  },
+  {
+   "surface": "Chinese dialectal speech",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large-scale text-to-speech (TTS) models have made significant progress recently.However, they still fall short in the generation of Chinese dialectal speech."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Chinese dialectal speech",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Toaddress this, we propose Bailing-TTS, a family of large-scale TTS models capable of generating high-quality Chinese dialectal speech.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27762,
+ "eval_count": 147,
+ "ts": "2026-11-21T17:30:06Z"
+}

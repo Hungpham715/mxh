@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412945012",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "OASIS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address this issue, we propose a novel order-augmented strategy for improved code search (OASIS)."
+   }
+  },
+  {
+   "surface": "InfoNCE loss",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous training primarily relies on optimizing the InfoNCE loss by comparing positive natural language (NL)-code pairs with in-batch negatives."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "InfoNCE loss",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Previous training primarily relies on optimizing the InfoNCE loss by comparing positive natural language (NL)-code pairs with in-batch negatives.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "InfoNCE loss"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43151,
+ "eval_count": 218,
+ "ts": "2026-11-21T20:34:00Z"
+}

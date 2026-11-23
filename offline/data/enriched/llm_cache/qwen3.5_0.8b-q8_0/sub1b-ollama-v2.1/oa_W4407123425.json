@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4407123425",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "tokenization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Token representations influence the efficiency and adaptability of language models, yet conventional tokenization strategies impose rigid segmentation boundaries that do not adjust dynamically to evolving contextual relationships."
+   }
+  },
+  {
+   "surface": "contextual morphogenesis",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The introduction of contextual morphogenesis establishes a self-organizing mechanism that restructures token boundaries based on learned contextual dependencies, allowing embeddings to evolve progressively across iterative processing steps."
+   }
+  },
+  {
+   "surface": "embeddings",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The introduction of contextual morphogenesis establishes a self-organizing mechanism that restructures token boundaries based on learned contextual dependencies, allowing embeddings to evolve progressively across iterative processing steps."
+   }
+  },
+  {
+   "surface": "perplexity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Empirical evaluations demonstrate that dynamically adjusted tokenization contributes to reductions in perplexity while maintaining representational stability, particularly in linguistically complex domains where static segmentation fails to capture nuanced dependencies."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "contextual morphogenesis",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The introduction of contextual morphogenesis establishes a self-organizing mechanism that restructures token boundaries based on learned contextual dependencies, allowing embeddings to evolve progressively across iterative processing steps.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "tokenization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38523,
+ "eval_count": 249,
+ "ts": "2026-11-21T19:50:20Z"
+}

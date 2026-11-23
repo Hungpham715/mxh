@@ -1,0 +1,68 @@
+{
+ "paper_id": "oa:W4416037144",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Pos2Distill",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address PB effectively, we introduce Pos2Distill, a position to position knowledge distillation framework."
+   }
+  },
+  {
+   "surface": "Pos2Distill-R1",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We identify distinct manifestations of PB under retrieval and reasoning paradigms, thereby designing two specialized instantiations: Pos2Distill-R1 and Pos2Distill-R2 respectively, both grounded in this core principle."
+   }
+  },
+  {
+   "surface": "Pos2Distill-R2",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We identify distinct manifestations of PB under retrieval and reasoning paradigms, thereby designing two specialized instantiations: Pos2Distill-R1 and Pos2Distill-R2 respectively, both grounded in this core principle."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Pos2Distill-R1",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address PB effectively, we introduce Pos2Distill, a position to position knowledge distillation framework.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Pos2Distill-R2",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We identify distinct manifestations of PB under retrieval and reasoning paradigms, thereby designing two specialized instantiations: Pos2Distill-R1 and Pos2Distill-R2 respectively, both grounded in this core principle.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Long-context retrieval tasks"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Long-context reasoning tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32039,
+ "eval_count": 401,
+ "ts": "2026-11-21T22:11:32Z"
+}

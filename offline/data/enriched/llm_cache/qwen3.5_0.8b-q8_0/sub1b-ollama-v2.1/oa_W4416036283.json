@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4416036283",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "In-Context Examples",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our method enhances smaller models by integrating In-Context Examples (ICE) from retrieval, enabling the model to better capture contextual information and align with user-level preferences."
+   }
+  },
+  {
+   "surface": "Supervised Fine Tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results demonstrate that our approach outperforms existing methods, such as Supervised Fine Tuning (SFT), Direct Preference Optimization (DPO), and Contrastive Preference Optimization (CPO), across both MT and TST tasks, providing a more efficient solution for resource-constrained environments."
+   }
+  },
+  {
+   "surface": "Direct Preference Optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results demonstrate that our approach outperforms existing methods, such as Supervised Fine Tuning (SFT), Direct Preference Optimization (DPO), and Contrastive Preference Optimization (CPO), across both MT and TST tasks, providing a more efficient solution for resource-constrained environments."
+   }
+  },
+  {
+   "surface": "Contrastive Preference Optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results demonstrate that our approach outperforms existing methods, such as Supervised Fine Tuning (SFT), Direct Preference Optimization (DPO), and Contrastive Preference Optimization (CPO), across both MT and TST tasks, providing a more efficient solution for resource-constrained environments."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Supervised Fine Tuning",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Experimental results demonstrate that our approach outperforms existing methods, such as Supervised Fine Tuning (SFT), Direct Preference Optimization (DPO), and Contrastive Preference Optimization (CPO), across both MT and TST tasks, providing a more efficient solution for resource-constrained environments.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Direct Preference Optimization",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We further improve performance through hierarchical contrastive learning and dynamic preference inference mechanisms.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "In-Context Examples"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "In-Context Examples"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "In-Context Examples"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29958,
+ "eval_count": 510,
+ "ts": "2026-11-21T21:32:05Z"
+}

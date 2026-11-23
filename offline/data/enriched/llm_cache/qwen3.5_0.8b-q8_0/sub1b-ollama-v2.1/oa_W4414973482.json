@@ -1,0 +1,122 @@
+{
+ "paper_id": "oa:W4414973482",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Head Start programs utilizing GoEngage face significant challenges when new or rotating staff attempt to locate appropriate Tasks (modules) on the platform homepage."
+   }
+  },
+  {
+   "surface": "GoEngage",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Head Start programs utilizing GoEngage face significant challenges when new or rotating staff attempt to locate appropriate Tasks (modules) on the platform homepage."
+   }
+  },
+  {
+   "surface": "Hybrid Semantic Search System",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking."
+   }
+  },
+  {
+   "surface": "Typo-tolerant lexical retrieval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking."
+   }
+  },
+  {
+   "surface": "embedding-based vector similarity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking."
+   }
+  },
+  {
+   "surface": "constrained large language model (LLM) re-ranking",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking."
+   }
+  },
+  {
+   "surface": "Organization's existing Task Repository and Knowledge Base infrastructure",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our approach leverages the organization's existing Task Repository and Knowledge Base infrastructure while ensuring trustworthiness through low false-positive rates, evolvability to accommodate terminological changes, and economic efficiency via intelligent caching, shortlist generation, and graceful degradation mechanisms."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Typo-tolerant lexical retrieval",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "embedding-based vector similarity",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "constrained large language model (LLM) re-ranking",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We propose a pragmatic hybrid semantic search system that synergistically combines lightweight typo-tolerant lexical retrieval, embedding-based vector similarity, and constrained large language model (LLM) re-ranking.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GoEngage"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GoEngage"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Organization's existing Task Repository and Knowledge Base infrastructure"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Organization's existing Task Repository and Knowledge Base infrastructure"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Organization's existing Task Repository and Knowledge Base infrastructure"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 58857,
+ "eval_count": 938,
+ "ts": "2026-11-21T21:01:38Z"
+}

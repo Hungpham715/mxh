@@ -1,0 +1,131 @@
+{
+ "paper_id": "oa:W4404782811",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VIMI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "After this two-stage training process, VIMI demonstrates multimodal understanding capabilities, producing contextually rich and personalized videos grounded in the provided inputs, as shown in Figure1."
+   }
+  },
+  {
+   "surface": "text-to-video diffusion models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Existing text-to-video diffusion models rely solely on text-only encoders for their pretraining."
+   }
+  },
+  {
+   "surface": "large-scale multimodal prompt dataset",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model."
+   }
+  },
+  {
+   "surface": "retrieval methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model."
+   }
+  },
+  {
+   "surface": "two-stage training strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model."
+   }
+  },
+  {
+   "surface": "multimodal conditional video generation framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In the first stage, we propose a multimodal conditional video generation framework for pretraining on these augmented datasets, establishing a foundational model for grounded video generation."
+   }
+  },
+  {
+   "surface": "text-to-video generation results",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our generator also achieves state-of-the-art text-to-video generation results on UCF101 benchmark."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "text-to-video diffusion models",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Existing text-to-video diffusion models rely solely on text-only encoders for their pretraining.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "text-to-video generation results",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our generator also achieves state-of-the-art text-to-video generation results on UCF101 benchmark.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large-scale multimodal prompt dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large-scale multimodal prompt dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we construct a large-scale multimodal prompt dataset by employing retrieval methods to pair in-context examples with the given text prompts and then utilize a two-stage training strategy to enable diverse video generation tasks within a model.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large-scale multimodal prompt dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Existing text-to-video diffusion models rely solely on text-only encoders for their pretraining.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "large-scale multimodal prompt dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Our generator also achieves state-of-the-art text-to-video generation results on UCF101 benchmark.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 35082,
+ "eval_count": 633,
+ "ts": "2026-11-21T19:17:03Z"
+}

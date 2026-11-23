@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4402671910",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CEPE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce Context Expansion with Parallel Encoding (CEPE), a framework that can be applied to any existing decoder-only LLMs to extend their context window."
+   }
+  },
+  {
+   "surface": "LLAMA-2",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory."
+   }
+  },
+  {
+   "surface": "128K tokens",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "128K tokens",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLAMA-2"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35903,
+ "eval_count": 256,
+ "ts": "2026-11-21T18:18:42Z"
+}

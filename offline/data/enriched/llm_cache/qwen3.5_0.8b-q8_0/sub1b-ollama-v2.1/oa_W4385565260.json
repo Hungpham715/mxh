@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4385565260",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "general-domain neural machine translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The development of general-domain neural machine translation (NMT) methods has advanced significantly in recent years, but the lack of naturalness and musical constraints in the outputs makes them unable to produce singable lyric translations."
+   }
+  },
+  {
+   "surface": "prompt-driven NMT approaches",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper bridges the singability quality gap by formalizing lyric translation into a constrained translation problem, converting theoretical guidance and practical techniques from translatology literature to prompt-driven NMT approaches, exploring better adaptation methods, and instantiating them to an English-Chinese lyric translation system."
+   }
+  },
+  {
+   "surface": "English-Chinese lyric translation system",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper bridges the singability quality gap by formalizing lyric translation into a constrained translation problem, converting theoretical guidance and practical techniques from translatology literature to prompt-driven NMT approaches, exploring better adaptation methods, and instantiating them to an English-Chinese lyric translation system."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "prompt-driven NMT approaches",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper bridges the singability quality gap by formalizing lyric translation into a constrained translation problem, converting theoretical guidance and practical techniques from translatology literature to prompt-driven NMT approaches, exploring better adaptation methods, and instantiating them to an English-Chinese lyric translation system.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "English-Chinese lyric translation system"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "English-Chinese lyric translation system"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19923,
+ "eval_count": 393,
+ "ts": "2026-11-21T15:18:10Z"
+}

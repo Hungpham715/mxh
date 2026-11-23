@@ -1,0 +1,87 @@
+{
+ "paper_id": "oa:W4416035837",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MNMT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms."
+   }
+  },
+  {
+   "surface": "multimodal neural machine translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms."
+   }
+  },
+  {
+   "surface": "cross-border e-commerce",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms."
+   }
+  },
+  {
+   "surface": "cross-border social media platforms",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multimodal neural machine translation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multimodal neural machine translation",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The task aims to integrate other modalities, such as the visual modality, with textual data to enhance translation performance.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multimodal neural machine translation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "multimodal neural machine translation",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal neural machine translation (MNMT) has received increasing attention due to its widespread applications in various fields such as cross-border e-commerce and cross-border social media platforms.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 41638,
+ "eval_count": 408,
+ "ts": "2026-11-21T21:23:32Z"
+}

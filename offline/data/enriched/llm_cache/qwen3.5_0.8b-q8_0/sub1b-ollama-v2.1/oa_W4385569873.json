@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4385569873",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BERT-like",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore the design space of such models, comparing architectural innovations (Clark et al., 2022, Jaegle et al., 2022, Tay et al., 2021) and a variety of different pretraining objectives on a suite of evaluation tasks with a fixed training procedure in order to find the currently optimal way to build and train character-level BERT-like models."
+   }
+  },
+  {
+   "surface": "character-level",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore the design space of such models, comparing architectural innovations (Clark et al., 2022, Jaegle et al., 2022, Tay et al., 2021) and a variety of different pretraining objectives on a suite of evaluation tasks with a fixed training procedure in order to find the currently optimal way to build and train character-level BERT-like models."
+   }
+  },
+  {
+   "surface": "token-based model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We find that our best performing character-level model exceeds the performance of a token-based model trained with the same settings on the same data, suggesting that character-level models are ready for more widespread adoption."
+   }
+  },
+  {
+   "surface": "subword-level tokeniser",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Unfortunately, the best method to train character-level models still relies on a subword-level tokeniser during pretraining, and final model performance is highly dependent on tokeniser quality."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "character-level"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "token-based model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "character-level"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 38375,
+ "eval_count": 406,
+ "ts": "2026-11-21T15:23:00Z"
+}

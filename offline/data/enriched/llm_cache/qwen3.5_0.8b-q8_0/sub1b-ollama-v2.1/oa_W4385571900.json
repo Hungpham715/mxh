@@ -1,0 +1,139 @@
+{
+ "paper_id": "oa:W4385571900",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "NMT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability of commonsense reasoning (CR) decides whether a neural machine translation (NMT) model can move beyond pattern recognition."
+   }
+  },
+  {
+   "surface": "CR",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability of commonsense reasoning (CR) decides whether a neural machine translation (NMT) model can move beyond pattern recognition."
+   }
+  },
+  {
+   "surface": "pretrained knowledge",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a comprehensive study aimed at expanding the understanding of CR in NMT.For the training, we confirm the effectiveness of incorporating pretrained knowledge into NMT models and subsequently utilizing these models as robust testbeds for investigating CR in NMT."
+   }
+  },
+  {
+   "surface": "NMT models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite the rapid advancement of NMT and the use of pretraining to enhance NMT models, research on CR in NMT is still in its infancy, leaving much to be explored in terms of effectively training NMT models with high CR abilities and devising accurate automatic evaluation metrics."
+   }
+  },
+  {
+   "surface": "CR abilities",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite the rapid advancement of NMT and the use of pretraining to enhance NMT models, research on CR in NMT is still in its infancy, leaving much to be explored in terms of effectively training NMT models with high CR abilities and devising accurate automatic evaluation metrics."
+   }
+  },
+  {
+   "surface": "automatic evaluation metrics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite the rapid advancement of NMT and the use of pretraining to enhance NMT models, research on CR in NMT is still in its infancy, leaving much to be explored in terms of effectively training NMT models with high CR abilities and devising accurate automatic evaluation metrics."
+   }
+  },
+  {
+   "surface": "NMT candidate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For the evaluation, we propose a novel entity-aware evaluation method that takes into account both the NMT candidate and important entities in the candidate, which is more aligned with human judgement."
+   }
+  },
+  {
+   "surface": "important entities in the candidate",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "For the evaluation, we propose a novel entity-aware evaluation method that takes into account both the NMT candidate and important entities in the candidate, which is more aligned with human judgement."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "NMT",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a comprehensive study aimed at expanding the understanding of CR in NMT.For the training, we confirm the effectiveness of incorporating pretrained knowledge into NMT models and subsequently utilizing these models as robust testbeds for investigating CR in NMT.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "NMT models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper presents a comprehensive study aimed at expanding the understanding of CR in NMT.For the training, we confirm the effectiveness of incorporating pretrained knowledge into NMT models and subsequently utilizing these models as robust testbeds for investigating CR in NMT.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CR",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability of commonsense reasoning (CR) decides whether a neural machine translation (NMT) model can move beyond pattern recognition.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CR",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Despite the rapid advancement of NMT and the use of pretraining to enhance NMT models, research on CR in NMT is still in its infancy, leaving much to be explored in terms of effectively training NMT models with high CR abilities and devising accurate automatic evaluation metrics.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CR",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability of commonsense reasoning (CR) decides whether a neural machine translation (NMT) model can move beyond pattern recognition.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "CR",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The ability of commonsense reasoning (CR) decides whether a neural machine translation (NMT) model can move beyond pattern recognition.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 27515,
+ "eval_count": 656,
+ "ts": "2026-11-21T15:50:01Z"
+}

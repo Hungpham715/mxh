@@ -1,0 +1,146 @@
+{
+ "paper_id": "oa:W4389520798",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Natural Language Processing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The scientific innovation in Natural Language Processing (NLP) and more broadly in artificial intelligence (AI) is at its fastest pace to date."
+   }
+  },
+  {
+   "surface": "artificial intelligence (AI)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The scientific innovation in Natural Language Processing (NLP) and more broadly in artificial intelligence (AI) is at its fastest pace to date."
+   }
+  },
+  {
+   "surface": "large language models (LLMs)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As large language models (LLMs) unleash a new era of automation, important debates emerge regarding the benefits and risks of their development, deployment and use."
+   }
+  },
+  {
+   "surface": "automation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As large language models (LLMs) unleash a new era of automation, important debates emerge regarding the benefits and risks of their development, deployment and use."
+   }
+  },
+  {
+   "surface": "NLP research on these topics",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields."
+   }
+  },
+  {
+   "surface": "regulatory studies",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields."
+   }
+  },
+  {
+   "surface": "risk and uncertainty",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Regulation studies are a rich source of knowledge on how to systematically deal with risk and uncertainty, as well as with scientific evidence, to evaluate and compare regulatory options."
+   }
+  },
+  {
+   "surface": "scientific integrity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "This often happens without systematic methodologies or sufficient rooting in the disciplines that inspire an extended scope of NLP research, jeopardizing the scientific integrity of these endeavors."
+   }
+  },
+  {
+   "surface": "regulatory processes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "Finally, we advocate for the development of a new multidisciplinary research space on regulation and NLP (RegNLP), focused on connecting scientific knowledge to regulatory processes based on systematic methodologies."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Natural Language Processing",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "artificial intelligence (AI)",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "scientific integrity",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "regulatory processes",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "In this paper, we argue how NLP research on these topics can benefit from proximity to regulatory studies and adjacent fields.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "large language models (LLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "automation"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "regulatory studies"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "risk and uncertainty"
+  }
+ ],
+ "auto_added_endpoints": [
+  "regulatory processes"
+ ],
+ "duration_ms": 54446,
+ "eval_count": 781,
+ "ts": "2026-11-21T16:45:21Z"
+}

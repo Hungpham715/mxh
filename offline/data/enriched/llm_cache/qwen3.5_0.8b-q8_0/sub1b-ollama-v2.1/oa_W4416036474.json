@@ -1,0 +1,106 @@
+{
+ "paper_id": "oa:W4416036474",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advancements in Large Language Models (LLMs) have driven growing interest in LLM-based agents for complex planning tasks."
+   }
+  },
+  {
+   "surface": "agent",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advancements in Large Language Models (LLMs) have driven growing interest in LLM-based agents for complex planning tasks."
+   }
+  },
+  {
+   "surface": "memory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To avoid costly agent training, many studies adopted memory mechanism that enhances LLM with offline experiences or online trajectory analysis."
+   }
+  },
+  {
+   "surface": "fine-grained key information",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "When facing environmental anomalies, the LLM grounds the current situation into fine-grained key information, enabling flexible self-QA reflection and plan correction."
+   }
+  },
+  {
+   "surface": "Coarse-to-Fine Grounded Memory (CFGM)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose Coarse-to-Fine Grounded Memory (CFGM), a novel framework that grounds coarse-to-fine memories with LLM, thereby fully leverage them for flexible adaptation to diverse scenarios."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "agent",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To avoid costly agent training, many studies adopted memory mechanism that enhances LLM with offline experiences or online trajectory analysis.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "When facing environmental anomalies, the LLM grounds the current situation into fine-grained key information, enabling flexible self-QA reflection and plan correction.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose Coarse-to-Fine Grounded Memory (CFGM), a novel framework that grounds coarse-to-fine memories with LLM, thereby fully leverage them for flexible adaptation to diverse scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "agent"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 61539,
+ "eval_count": 746,
+ "ts": "2026-11-21T21:41:19Z"
+}

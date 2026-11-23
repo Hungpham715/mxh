@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4416036697",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "RAGferee",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To address the lack of publicly available RAG-centric preference datasets and specialised RMs, we introduce RAGferee, a methodology that repurposes question-answering (QA) datasets into preference pairs that prioritise groundedness over stylistic features, enabling the training of contextual RMs better suited to judging RAG responses."
+   }
+  },
+  {
+   "surface": "ContextualJudgeBench",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our RAG-centric RMs achieve state-of-the-art performance on ContextualJudgeBench, surpassing existing 70B+ RMs trained on much larger (up to 2.4M samples) general corpora, with an absolute improvement of +15.5%."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "QA datasets"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "QA datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ContextualJudgeBench"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "ContextualJudgeBench"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24742,
+ "eval_count": 299,
+ "ts": "2026-11-21T21:55:51Z"
+}

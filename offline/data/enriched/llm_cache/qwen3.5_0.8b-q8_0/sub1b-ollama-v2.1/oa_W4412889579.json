@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4412889579",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "What makes a difference in the post-training of LLMs?"
+   }
+  },
+  {
+   "surface": "gradient",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We investigate the training patterns of different layers in large language models (LLMs) through the lens of the gradient."
+   }
+  },
+  {
+   "surface": "chain-of-thoughts",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "slow thinking affects the layer-wise gradients, given the recent popularity of training LLMs on reasoning paths such as chain-of-thoughts (CoT) and process rewards."
+   }
+  },
+  {
+   "surface": "process rewards",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "slow thinking affects the layer-wise gradients, given the recent popularity of training LLMs on reasoning paths such as chain-of-thoughts (CoT) and process rewards."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "gradient",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "slow thinking affects the layer-wise gradients, given the recent popularity of training LLMs on reasoning paths such as chain-of-thoughts (CoT) and process rewards.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "gradient",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "slow thinking affects the layer-wise gradients, given the recent popularity of training LLMs on reasoning paths such as chain-of-thoughts (CoT) and process rewards.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "gradient"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37420,
+ "eval_count": 316,
+ "ts": "2026-11-21T20:09:03Z"
+}

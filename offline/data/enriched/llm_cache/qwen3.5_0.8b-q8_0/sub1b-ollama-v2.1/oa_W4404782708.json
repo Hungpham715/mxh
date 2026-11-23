@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4404782708",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "EMBER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Instead, we propose an approach called EMBER which enables streaming named entity recognition in decoder-only language models without fine-tuning them and while incurring minimal additional computational cost at inference time."
+   }
+  },
+  {
+   "surface": "named entity recognition",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Instead, we propose an approach called EMBER which enables streaming named entity recognition in decoder-only language models without fine-tuning them and while incurring minimal additional computational cost at inference time."
+   }
+  },
+  {
+   "surface": "decoder-only language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Instead, we propose an approach called EMBER which enables streaming named entity recognition in decoder-only language models without fine-tuning them and while incurring minimal additional computational cost at inference time."
+   }
+  },
+  {
+   "surface": "streaming text generation",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Streaming text generation, has become a common way of increasing the responsiveness of language model powered applications such as chat assistants."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "named entity recognition"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "named entity recognition"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "named entity recognition"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32509,
+ "eval_count": 379,
+ "ts": "2026-11-21T19:13:46Z"
+}

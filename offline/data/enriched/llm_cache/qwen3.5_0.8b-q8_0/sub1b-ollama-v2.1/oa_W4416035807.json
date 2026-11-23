@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4416035807",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Navigation-Aware Pruning (NAP)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Thus, the inability to identify uninformative tokens undermines the supposed efficiency gains from pruning.To address this, we propose Navigation-Aware Pruning (NAP), which uses navigation-specific traits to simplify the pruning process by pre-filtering tokens into foreground and background."
+   }
+  },
+  {
+   "surface": "Large Language Model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also extract navigation-relevant instructions using a Large Language Model."
+   }
+  },
+  {
+   "surface": "Vision-and-Language Navigation (VLN)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large models achieve strong performance on Vision-and-Language Navigation (VLN) tasks, but are costly to run in resource-limited environments."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Large Language Model",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We also extract navigation-relevant instructions using a Large Language Model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Vision-and-Language Navigation (VLN)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Vision-and-Language Navigation (VLN)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23628,
+ "eval_count": 304,
+ "ts": "2026-11-21T21:20:43Z"
+}

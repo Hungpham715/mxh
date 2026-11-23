@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4385572507",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HardPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "HardPT) to solve the non-differentiable problem in hard sample identification with reinforcement learning, and to strengthen the discrimination of the feature space without changing the original data distribution via an adaptive contrastive learning method."
+   }
+  },
+  {
+   "surface": "NLP tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To achieve the best performance for NLP tasks with just a few samples, it is vital to include as many informative samples as possible and to avoid misleading ones."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "NLP tasks",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "An extensive empirical study on a series of NLP tasks demonstrates the capability of HardPT in few-shot scenarios.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "NLP tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23479,
+ "eval_count": 192,
+ "ts": "2026-11-21T15:58:51Z"
+}

@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4391505342",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "γ",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "$f \\propto r^{-α} \\cdot (r+γ)^{-β}$ has been empirically shown more precise than a naïve power law $f\\propto r^{-α}$ to model the rank-frequency ($r$-$f$) relation of words in natural languages."
+   }
+  },
+  {
+   "surface": "zeroth word",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A method of parameter estimation by searching an optimal $γ$ is proposed, where a ``zeroth word'' is introduced technically for the calculation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "γ",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "$f \\propto r^{-α} \\cdot (r+γ)^{-β}$ has been empirically shown more precise than a naïve power law $f\\propto r^{-α}$ to model the rank-frequency ($r$-$f$) relation of words in natural languages.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "zeroth word",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "A method of parameter estimation by searching an optimal $γ$ is proposed, where a ``zeroth word'' is introduced technically for the calculation.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 43768,
+ "eval_count": 200,
+ "ts": "2026-11-21T17:13:13Z"
+}

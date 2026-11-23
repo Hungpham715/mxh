@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4389524213",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "In-Context Learning (ICL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This is called In-Context Learning (ICL)."
+   }
+  },
+  {
+   "surface": "Guideline Learning (GL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we propose a Guideline Learning (GL) framework for In-context IE which reflectively learns and follows guidelines."
+   }
+  },
+  {
+   "surface": "Self-consistency-based active learning method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Moreover, we propose a self-consistency-based active learning method to enhance the efficiency of GL."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Guideline Learning (GL)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Guideline Learning (GL)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Self-consistency-based active learning method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 18876,
+ "eval_count": 328,
+ "ts": "2026-11-21T17:00:31Z"
+}

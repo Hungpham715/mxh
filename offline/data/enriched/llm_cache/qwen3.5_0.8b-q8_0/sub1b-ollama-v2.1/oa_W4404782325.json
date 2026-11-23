@@ -1,0 +1,129 @@
+{
+ "paper_id": "oa:W4404782325",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Full-parameter fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Full-parameter fine-tuning (FPFT) has become the go-to choice for adapting language models (LMs) to downstream tasks due to its excellent performance."
+   }
+  },
+  {
+   "surface": "Zeroth-order optimizer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing approaches utilize zeroth-order optimizer to conserve GPU memory, which potentially compromises the performance of LMs as non-zero order optimizers tend to converge more readily on most downstream tasks."
+   }
+  },
+  {
+   "surface": "Hierarchical fine-tuning strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a novel, memory-efficient, optimizer-independent, end-to-end hierarchical fine-tuning strategy, HiFT, which only updates a subset of parameters at each training step."
+   }
+  },
+  {
+   "surface": "HiFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a novel, memory-efficient, optimizer-independent, end-to-end hierarchical fine-tuning strategy, HiFT, which only updates a subset of parameters at each training step."
+   }
+  },
+  {
+   "surface": "GPU memory",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "As LMs grow in size, fine-tuning the full parameters of LMs requires a prohibitively large amount of GPU memory."
+   }
+  },
+  {
+   "surface": "AdamW",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc."
+   }
+  },
+  {
+   "surface": "AdaGrad",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc."
+   }
+  },
+  {
+   "surface": "SGD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Zeroth-order optimizer",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Existing approaches utilize zeroth-order optimizer to conserve GPU memory, which potentially compromises the performance of LMs as non-zero order optimizers tend to converge more readily on most downstream tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Hierarchical fine-tuning strategy",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose a novel, memory-efficient, optimizer-independent, end-to-end hierarchical fine-tuning strategy, HiFT, which only updates a subset of parameters at each training step.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "AdamW",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "AdaGrad",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SGD",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "(4) HiFT supports various optimizers including AdamW, AdaGrad, SGD, etc.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 39052,
+ "eval_count": 532,
+ "ts": "2026-11-21T19:02:33Z"
+}

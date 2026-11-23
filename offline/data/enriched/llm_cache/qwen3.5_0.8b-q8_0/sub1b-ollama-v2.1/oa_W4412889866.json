@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4412889866",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "PersonalTravelSolver",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Our data and code are available at PersonalTravelSolver."
+   }
+  },
+  {
+   "surface": "TravelPlanner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce RealTravel, an augmented version of the TravelPlanner by incorporating real user reviews and point-of-interest metadata from Google Local."
+   }
+  },
+  {
+   "surface": "RealTravel",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce RealTravel, an augmented version of the TravelPlanner by incorporating real user reviews and point-of-interest metadata from Google Local."
+   }
+  },
+  {
+   "surface": "PTS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on RealTravel, we propose Personal Travel Solver (PTS), an integrated system that combines LLMs with numerical solvers to generate travel plans that satisfy both explicit constraints and implicit user preferences."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "TravelPlanner",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We introduce RealTravel, an augmented version of the TravelPlanner by incorporating real user reviews and point-of-interest metadata from Google Local.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "PTS",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Based on RealTravel, we propose Personal Travel Solver (PTS), an integrated system that combines LLMs with numerical solvers to generate travel plans that satisfy both explicit constraints and implicit user preferences.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "RealTravel"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PTS"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "PTS"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 44197,
+ "eval_count": 502,
+ "ts": "2026-11-21T20:19:06Z"
+}

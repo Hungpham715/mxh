@@ -1,0 +1,118 @@
+{
+ "paper_id": "oa:W4412889913",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ternary language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements."
+   }
+  },
+  {
+   "surface": "quantization-aware training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements."
+   }
+  },
+  {
+   "surface": "scaling law analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first analyze the scalability of TriLMs by conducting a scaling law analysis, revealing that TriLMs benefit more from increasing training data than from scaling model parameters."
+   }
+  },
+  {
+   "surface": "TriLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements."
+   }
+  },
+  {
+   "surface": "triTera",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on this observation, we introduce TriTera, an open suite of TriLMs trained on up to 1.2 trillion tokens, demonstrating sustained performance gains at scale."
+   }
+  },
+  {
+   "surface": "GPU kernel",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 \\times compared to floating-point baselines."
+   }
+  },
+  {
+   "surface": "floating-point baselines",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 \\times compared to floating-point baselines."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "quantization-aware training",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GPU kernel",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 \\times compared to floating-point baselines.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "floating-point baselines",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Overall, our work lays the foundation for building and deploying efficient LLMs, providing a valuable resource for the research community.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "2-bit packing schemes"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "scaling law analysis"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "triTera"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "2-bit packing schemes"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30237,
+ "eval_count": 683,
+ "ts": "2026-11-21T20:21:39Z"
+}

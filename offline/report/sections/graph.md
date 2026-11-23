@@ -223,6 +223,23 @@ L_obs, L_rand và σ ở bảng trên chỉ được tính trên LCC 970 nút. T
 
 *Hình 4. C và L của LCC so với đồ thị ngẫu nhiên giữ bậc.*
 
+### Đối chiếu small-world trên toàn knowledge graph
+
+Để đối chiếu công bằng với các đồ án phân tích toàn heterogeneous KG, pipeline đo thêm một projection vô hướng đơn gồm đủ 5 nhãn nút và 10 loại quan hệ. Phép đo này **không thay thế** kết luận của mạng xã hội đồng tác giả ở trên.
+
+| Đại lượng toàn KG | Giá trị |
+|---|---|
+| Nút / cạnh đơn | 7.134 / 30.970 |
+| Tỷ lệ node trong LCC | 1 |
+| Tỷ lệ cặp có đường đi | 1 |
+| C_obs / C_rand | 0.7373 / 0.0066 |
+| L_obs / L_rand | 4.448 / 3.8256 = 1.1627 |
+| σ | 95.38 |
+| Monte Carlo p(C_rand ≥ C_obs) | 0.0323 |
+| Kết luận | small-world indication (sigma>1, C>>C_rand, L close to L_rand) |
+
+Toàn KG liên thông nhờ các node Paper/Venue/Topic/Institution làm cầu nối. Vì membership theo paper tạo motif dày và làm clustering tăng, kết quả này chỉ chứng minh topology small-world của KG; không được diễn giải thành bằng chứng rằng mạng tác giả toàn cầu là small-world.
+
 ## 7. Kiểm tra chất lượng và tiêu chí 90%
 
 Chất lượng cạnh đo bằng **precision** = cạnh đúng / cạnh được kiểm. Quy trình: (1) kiểm tra cấu trúc **mọi** cạnh (đúng kiểu nút hai đầu, có evidence, không trùng, cặp vô hướng chuẩn hóa, ngưỡng ≥ 2 bài, chiều trích dẫn); (2) lấy mẫu phân tầng tối đa 20 cạnh mỗi loại với seed 20261107; (3) kiểm chứng lại từng cạnh mẫu với bản ghi nguồn gốc (XML ACL, feed arXiv, JSON work OpenAlex được lưu cache) – độc lập với tệp JSONL đã xử lý.

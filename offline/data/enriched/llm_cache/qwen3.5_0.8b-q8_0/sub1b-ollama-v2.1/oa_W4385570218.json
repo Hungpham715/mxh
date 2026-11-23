@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4385570218",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Flan-T5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Given a collection of usage examples for a target word, and the corresponding data-driven usage clusters (i.e., word senses), a definition is generated for each usage with a specialised Flan-T5 language model, and the most prototypical definition in a usage cluster is chosen as the sense label."
+   }
+  },
+  {
+   "surface": "semantic change analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We demonstrate how the resulting sense labels can make existing approaches to semantic change analysis more interpretable, and how they can allow users — historical linguists, lexicographers, or social scientists — to explore and intuitively explain diachronic trajectories of word meaning."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "semantic change analysis"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19051,
+ "eval_count": 181,
+ "ts": "2026-11-21T15:26:34Z"
+}

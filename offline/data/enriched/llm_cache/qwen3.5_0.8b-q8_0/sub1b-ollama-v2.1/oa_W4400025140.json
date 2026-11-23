@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4400025140",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Twitter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, we evaluate the generalization of benchmark datasets to build AI models on cross-cultural Twitter data."
+   }
+  },
+  {
+   "surface": "depressed users",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We gather a custom geo-located Twitter dataset of depressed users from seven countries as a test dataset."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Twitter",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We gather a custom geo-located Twitter dataset of depressed users from seven countries as a test dataset.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 31866,
+ "eval_count": 129,
+ "ts": "2026-11-21T17:24:35Z"
+}

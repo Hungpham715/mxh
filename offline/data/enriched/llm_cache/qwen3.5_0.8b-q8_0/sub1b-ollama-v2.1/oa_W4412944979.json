@@ -1,0 +1,132 @@
+{
+ "paper_id": "oa:W4412944979",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "multilingual arbitration",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we propose multilingual arbitration, which exploits performance variations among multiple models for each language."
+   }
+  },
+  {
+   "surface": "oracle teacher model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Synthetic data has driven recent state-of-the-art advancements, but reliance on a single oracle teacher model can lead to model collapse and bias propagation."
+   }
+  },
+  {
+   "surface": "multilingual settings",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These issues are particularly severe in multilingual settings, where no single model excels across all languages."
+   }
+  },
+  {
+   "surface": "model collapse",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Synthetic data has driven recent state-of-the-art advancements, but reliance on a single oracle teacher model can lead to model collapse and bias propagation."
+   }
+  },
+  {
+   "surface": "bias propagation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Synthetic data has driven recent state-of-the-art advancements, but reliance on a single oracle teacher model can lead to model collapse and bias propagation."
+   }
+  },
+  {
+   "surface": "state-of-the-art models",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages."
+   }
+  },
+  {
+   "surface": "Gemma 2",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages."
+   }
+  },
+  {
+   "surface": "Llama 3.1",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages."
+   }
+  },
+  {
+   "surface": "Mistral v0.3",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "state-of-the-art models",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Gemma 2",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Llama 3.1",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Mistral v0.3",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Extensive experiments with state-of-the-art models demonstrate that our approach significantly surpasses single-teacher distillation, achieving up to 80% win rates over proprietary and open-weight models like Gemma 2, Llama 3.1, and Mistral v0.3, with the largest improvements in low-resource languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "model collapse"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33452,
+ "eval_count": 731,
+ "ts": "2026-11-21T20:34:26Z"
+}

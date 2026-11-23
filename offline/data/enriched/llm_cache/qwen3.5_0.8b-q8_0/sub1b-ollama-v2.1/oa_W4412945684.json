@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4412945684",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DALTA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Guided by these insights, we propose DALTA (Domain-Aligned Latent Topic Adaptation), a new framework that employs a shared encoder for domain-invariant features, specialized decoders for domain-specific nuances, and adversarial alignment to selectively transfer relevant information."
+   }
+  },
+  {
+   "surface": "topic modeling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Topic modeling plays a vital role in uncovering hidden semantic structures within text corpora, but existing models struggle in low-resource settings where limited target-domain data leads to unstable and incoherent topic inference."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "topic modeling",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by formally introducing domain adaptation for low-resource topic modeling, where a high-resource source domain informs a low-resource target domain without overwhelming it with irrelevant content.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "topic modeling"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22308,
+ "eval_count": 187,
+ "ts": "2026-11-21T20:56:01Z"
+}

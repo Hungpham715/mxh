@@ -1,0 +1,66 @@
+{
+ "paper_id": "oa:W4416036746",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Conditional Step-level Self-refinement",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first design Conditional Step-level Self-refinement, a fine-grained sequential scaling method guided by process verification."
+   }
+  },
+  {
+   "surface": "Hybrid Test-Time Scaling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "On top of its effectiveness, we further combine it with other classical parallel scaling methods at the step level, to introduce a novel inference paradigm called Hybrid Test-Time Scaling."
+   }
+  },
+  {
+   "surface": "Test-Time Scaling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Test-Time Scaling (TTS) is a promising approach to progressively elicit the model’s intelligence during inference."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Hybrid Test-Time Scaling",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We first design Conditional Step-level Self-refinement, a fine-grained sequential scaling method guided by process verification.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Test-Time Scaling"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Test-Time Scaling"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Test-Time Scaling"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Test-Time Scaling"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17427,
+ "eval_count": 481,
+ "ts": "2026-11-21T21:57:21Z"
+}

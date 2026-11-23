@@ -50,7 +50,7 @@ def _before_after(stats: dict[str, Any]) -> dict[str, Any]:
 def run_enrichment(data_dir: Path = PROCESSED, out: Path | None = None,
                    extractors: tuple[str, ...] = ("rules", "llm"), limit: int | None = None,
                    workers: int = 4, ollama_url: str = DEFAULT_BASE_URL,
-                   model: str = DEFAULT_MODEL) -> int:
+                   model: str = DEFAULT_MODEL, num_gpu: int = 0) -> int:
     out = out or (DATA / "enriched")
     out.mkdir(parents=True, exist_ok=True)
 
@@ -77,7 +77,15 @@ def run_enrichment(data_dir: Path = PROCESSED, out: Path | None = None,
         started = time.perf_counter()
         done = 0
         with ThreadPoolExecutor(max_workers=workers) as pool:
-            futures = {pool.submit(extract_paper_llm, paper, cache_dir, ollama_url, model): paper["id"]
+            futures = {
+                pool.submit(
+                    extract_paper_llm,
+                    paper,
+                    cache_dir,
+                    base_url=ollama_url,
+                    model=model,
+                    num_gpu=num_gpu,
+                ): paper["id"]
                        for paper in papers}
             for future in as_completed(futures):
                 llm_results.append(future.result())

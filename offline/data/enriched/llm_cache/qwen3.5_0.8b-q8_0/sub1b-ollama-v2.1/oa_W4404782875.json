@@ -1,0 +1,72 @@
+{
+ "paper_id": "oa:W4404782875",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Due to the continuous emergence of new data, version updates have become an indispensable requirement for Large Language Models (LLMs)."
+   }
+  },
+  {
+   "surface": "learning rate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the underlying reasons for this phenomenon, we analyze the effect of learning rate adjustments during the two stages of CPT: preparing an initialization checkpoint and continual pre-training based on this checkpoint."
+   }
+  },
+  {
+   "surface": "checkpoint",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the underlying reasons for this phenomenon, we analyze the effect of learning rate adjustments during the two stages of CPT: preparing an initialization checkpoint and continual pre-training based on this checkpoint."
+   }
+  },
+  {
+   "surface": "training paradigm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The training paradigms for version updates of LLMs include pre-training from scratch (PTFS) and continual pre-training (CPT)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "learning rate",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the underlying reasons for this phenomenon, we analyze the effect of learning rate adjustments during the two stages of CPT: preparing an initialization checkpoint and continual pre-training based on this checkpoint.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "checkpoint",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To investigate the underlying reasons for this phenomenon, we analyze the effect of learning rate adjustments during the two stages of CPT: preparing an initialization checkpoint and continual pre-training based on this checkpoint.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "training paradigm"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24686,
+ "eval_count": 282,
+ "ts": "2026-11-21T19:18:14Z"
+}

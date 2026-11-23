@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4415081407",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "HART",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present HART, a hierarchical framework of AI risk levels, each corresponding to a detection task."
+   }
+  },
+  {
+   "surface": "2D Detection Method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these tasks, we propose a novel 2D Detection Method, decoupling a text into content and language expression."
+   }
+  },
+  {
+   "surface": "content",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these tasks, we propose a novel 2D Detection Method, decoupling a text into content and language expression."
+   }
+  },
+  {
+   "surface": "language expression",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these tasks, we propose a novel 2D Detection Method, decoupling a text into content and language expression."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "content",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our findings show that content is resistant to surface-level changes, which can serve as a key feature for detection.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "language expression",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these tasks, we propose a novel 2D Detection Method, decoupling a text into content and language expression.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "HART",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we present HART, a hierarchical framework of AI risk levels, each corresponding to a detection task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HART"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48648,
+ "eval_count": 416,
+ "ts": "2026-11-21T21:03:28Z"
+}

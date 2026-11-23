@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4402671255",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We are the first to study how languages can exert influence on the cultural values encoded for different test languages, by studying how such values are revised during fine-tuning."
+   }
+  },
+  {
+   "surface": "training data attribution method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Lastly, we use a training data attribution method to find patterns in the fine-tuning examples, and the languages that they come from, that tend to instigate value shifts."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "training data attribution method"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32194,
+ "eval_count": 136,
+ "ts": "2026-11-21T17:45:25Z"
+}

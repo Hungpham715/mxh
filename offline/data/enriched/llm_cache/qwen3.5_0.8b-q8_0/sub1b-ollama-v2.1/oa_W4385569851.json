@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4385569851",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-View Calibration Network",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this paper, we propose a novel Multi-View Calibration Network (MVCN) to alleviate the above issues systematically."
+   }
+  },
+  {
+   "surface": "Sparse-Attention",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We first propose a text-guided fusion module with novel Sparse-Attention to reduce the negative impacts of redundant visual elements."
+   }
+  },
+  {
+   "surface": "sentiment-based congruity constraint task",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We then devise a sentiment-based congruity constraint task to calibrate the feature shift in the representation space."
+   }
+  },
+  {
+   "surface": "adaptive loss calibration strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Finally, we introduce an adaptive loss calibration strategy to tackle inconsistent annotated labels."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Sparse-Attention",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We first propose a text-guided fusion module with novel Sparse-Attention to reduce the negative impacts of redundant visual elements.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "adaptive loss calibration strategy",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Finally, we introduce an adaptive loss calibration strategy to tackle inconsistent annotated labels.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 39216,
+ "eval_count": 257,
+ "ts": "2026-11-21T15:22:22Z"
+}

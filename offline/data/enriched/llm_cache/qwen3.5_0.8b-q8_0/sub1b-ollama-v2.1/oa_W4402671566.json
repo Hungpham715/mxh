@@ -1,0 +1,86 @@
+{
+ "paper_id": "oa:W4402671566",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "StorySeeker toolkit",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by building and releasing the StorySeeker toolkit, including a richly annotated dataset of 502 Reddit posts and comments, a detailed codebook adapted to the social media context, and models to predict storytelling at the document and span levels."
+   }
+  },
+  {
+   "surface": "Reddit posts and comments",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by building and releasing the StorySeeker toolkit, including a richly annotated dataset of 502 Reddit posts and comments, a detailed codebook adapted to the social media context, and models to predict storytelling at the document and span levels."
+   }
+  },
+  {
+   "surface": "502",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by building and releasing the StorySeeker toolkit, including a richly annotated dataset of 502 Reddit posts and comments, a detailed codebook adapted to the social media context, and models to predict storytelling at the document and span levels."
+   }
+  },
+  {
+   "surface": "Reddit",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We address this challenge by building and releasing the StorySeeker toolkit, including a richly annotated dataset of 502 Reddit posts and comments, a detailed codebook adapted to the social media context, and models to predict storytelling at the document and span levels."
+   }
+  },
+  {
+   "surface": "33 topic categories",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our dataset is sampled from hundreds of popular English-language Reddit communities ranging across 33 topic categories, and it contains fine-grained expert annotations, including binary story labels, story spans, and event spans."
+   }
+  },
+  {
+   "surface": "binary story labels",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our dataset is sampled from hundreds of popular English-language Reddit communities ranging across 33 topic categories, and it contains fine-grained expert annotations, including binary story labels, story spans, and event spans."
+   }
+  },
+  {
+   "surface": "story spans",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our dataset is sampled from hundreds of popular English-language Reddit communities ranging across 33 topic categories, and it contains fine-grained expert annotations, including binary story labels, story spans, and event spans."
+   }
+  },
+  {
+   "surface": "event spans",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Our dataset is sampled from hundreds of popular English-language Reddit communities ranging across 33 topic categories, and it contains fine-grained expert annotations, including binary story labels, story spans, and event spans."
+   }
+  },
+  {
+   "surface": "stories",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Story detection in online communities is a challenging task as stories are scattered across communities and interwoven with non-storytelling spans within a single text."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 53258,
+ "eval_count": 523,
+ "ts": "2026-11-21T23:58:30Z"
+}

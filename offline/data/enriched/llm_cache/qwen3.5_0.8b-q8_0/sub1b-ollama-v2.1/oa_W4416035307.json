@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4416035307",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "QUIDS",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose QUIDS, a method that leverages dual-space contrastive learning to isolate intent-relevant information while suppressing irrelevant content."
+   }
+  },
+  {
+   "surface": "dual-encoder representation space",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "QUIDS combines a dual-encoder representation space with a disentangling decoder that works together to produce concise and accurate intent descriptions."
+   }
+  },
+  {
+   "surface": "disentangling decoder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "QUIDS combines a dual-encoder representation space with a disentangling decoder that works together to produce concise and accurate intent descriptions."
+   }
+  },
+  {
+   "surface": "hard negative sampling",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Enhanced by intent-driven hard negative sampling, the model significantly outperforms state-of-the-art baselines across ROUGE, BERTScore, and human/LLM evaluations."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dual-encoder representation space",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "QUIDS combines a dual-encoder representation space with a disentangling decoder that works together to produce concise and accurate intent descriptions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "disentangling decoder",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "QUIDS combines a dual-encoder representation space with a disentangling decoder that works together to produce concise and accurate intent descriptions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "hard negative sampling",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Enhanced by intent-driven hard negative sampling, the model significantly outperforms state-of-the-art baselines across ROUGE, BERTScore, and human/LLM evaluations.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19128,
+ "eval_count": 308,
+ "ts": "2026-11-21T21:07:50Z"
+}

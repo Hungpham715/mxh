@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4416035516",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LPG",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This paper introduces two novel approaches that frame lemmatization as classification into a Lemma-POS-Gloss (LPG) tagset, leveraging machine translation and semantic clustering."
+   }
+  },
+  {
+   "surface": "Arabic",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Lemmatization is crucial for NLP tasks in morphologically rich languages with ambiguous orthography like Arabic, but existing tools face challenges due to inconsistent standards and limited genre coverage."
+   }
+  },
+  {
+   "surface": "sequence-to-sequence models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We evaluate character-level sequence-to-sequence models, which perform competitively and offer complementary value, but are limited to lemma prediction (not LPG) and prone to hallucinating implausible forms."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "sequence-to-sequence models",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We evaluate character-level sequence-to-sequence models, which perform competitively and offer complementary value, but are limited to lemma prediction (not LPG) and prone to hallucinating implausible forms.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LPG"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "sequence-to-sequence models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32449,
+ "eval_count": 293,
+ "ts": "2026-11-21T21:14:28Z"
+}

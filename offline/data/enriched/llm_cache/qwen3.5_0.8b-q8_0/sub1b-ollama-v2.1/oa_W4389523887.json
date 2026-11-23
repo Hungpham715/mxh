@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4389523887",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GATE",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We propose \\tt{GATE}, a generator-agnostic knowledge selection method, to prepare knowledge for subsequent response generation models by selecting context-related knowledge among different knowledge structures and variable knowledge requirements."
+   }
+  },
+  {
+   "surface": "knowledge selection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Accurate knowledge selection is critical in knowledge-grounded dialogue systems."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge selection",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Accurate knowledge selection is critical in knowledge-grounded dialogue systems.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GATE"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37260,
+ "eval_count": 175,
+ "ts": "2026-11-21T16:53:28Z"
+}

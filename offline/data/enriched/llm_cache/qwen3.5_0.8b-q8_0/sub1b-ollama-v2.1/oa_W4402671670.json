@@ -1,0 +1,95 @@
+{
+ "paper_id": "oa:W4402671670",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "MAGIC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose MAGIC, a new multi-aspect controllable text generation method with disentangled counterfactual augmentation."
+   }
+  },
+  {
+   "surface": "disentanglement",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We alleviate the issue of imbalanced attribute correlations during training using counterfactual feature vectors in the attribute latent space by disentanglement."
+   }
+  },
+  {
+   "surface": "counterfactual feature vectors",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We alleviate the issue of imbalanced attribute correlations during training using counterfactual feature vectors in the attribute latent space by disentanglement."
+   }
+  },
+  {
+   "surface": "attribute latent space",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We alleviate the issue of imbalanced attribute correlations during training using counterfactual feature vectors in the attribute latent space by disentanglement."
+   }
+  },
+  {
+   "surface": "target-guided counterfactual augmentation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "During inference, we enhance attribute correlations by target-guided counterfactual augmentation to further improve multi-aspect control."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "disentanglement",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this paper, we propose MAGIC, a new multi-aspect controllable text generation method with disentangled counterfactual augmentation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "counterfactual feature vectors",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We alleviate the issue of imbalanced attribute correlations during training using counterfactual feature vectors in the attribute latent space by disentanglement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "attribute latent space",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We alleviate the issue of imbalanced attribute correlations during training using counterfactual feature vectors in the attribute latent space by disentanglement.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "target-guided counterfactual augmentation",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "During inference, we enhance attribute correlations by target-guided counterfactual augmentation to further improve multi-aspect control.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 21924,
+ "eval_count": 424,
+ "ts": "2026-11-21T17:59:16Z"
+}

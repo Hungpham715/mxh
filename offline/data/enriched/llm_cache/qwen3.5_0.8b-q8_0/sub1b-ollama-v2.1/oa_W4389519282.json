@@ -1,0 +1,58 @@
+{
+ "paper_id": "oa:W4389519282",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "GROOViST",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given their observed shortcomings, we propose a novel evaluation tool, GROOViST, that accounts for cross-modal dependencies, temporal misalignments (the fact that the order in which entities appear in the story and the image sequence may not match), and human intuitions on visual grounding."
+   }
+  },
+  {
+   "surface": "visual storytelling",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A proper evaluation of stories generated for a sequence of images—the task commonly referred to as visual storytelling—must consider multiple aspects, such as coherence, grammatical correctness, and visual grounding."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GROOViST",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Given their observed shortcomings, we propose a novel evaluation tool, GROOViST, that accounts for cross-modal dependencies, temporal misalignments (the fact that the order in which entities appear in the story and the image sequence may not match), and human intuitions on visual grounding.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "visual storytelling",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "A proper evaluation of stories generated for a sequence of images—the task commonly referred to as visual storytelling—must consider multiple aspects, such as coherence, grammatical correctness, and visual grounding.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GROOViST"
+  }
+ ],
+ "auto_added_endpoints": [
+  "visual storytelling"
+ ],
+ "duration_ms": 31724,
+ "eval_count": 230,
+ "ts": "2026-11-21T16:23:14Z"
+}

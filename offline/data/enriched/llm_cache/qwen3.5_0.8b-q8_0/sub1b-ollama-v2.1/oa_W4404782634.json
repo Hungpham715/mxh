@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4404782634",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "VisTEL",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We revisit knowledge-aware text-based visual question answering, also known as Text-KVQA in the light of modern advancements in large multimodal models (LMMs), and make the following contributions: (i) We propose VisTEL – a principled approach to perform visual text entity linking."
+   }
+  },
+  {
+   "surface": "KaLMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "(ii) We present KaLMA – knowledge-aware large multimodal assistant that augments an LMM with knowledge associated with visual text entity in the image to arrive at an accurate answer."
+   }
+  },
+  {
+   "surface": "Text-KVQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We revisit knowledge-aware text-based visual question answering, also known as Text-KVQA in the light of modern advancements in large multimodal models (LMMs), and make the following contributions: (i) We propose VisTEL – a principled approach to perform visual text entity linking."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "KaLMA",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "(ii) We present KaLMA – knowledge-aware large multimodal assistant that augments an LMM with knowledge associated with visual text entity in the image to arrive at an accurate answer.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-KVQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-KVQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Text-KVQA"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25465,
+ "eval_count": 442,
+ "ts": "2026-11-21T19:10:43Z"
+}

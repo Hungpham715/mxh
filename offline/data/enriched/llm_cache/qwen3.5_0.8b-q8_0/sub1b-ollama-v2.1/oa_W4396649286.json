@@ -1,0 +1,67 @@
+{
+ "paper_id": "oa:W4396649286",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "feedback-ladder",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we explore using LLMs to generate a \"feedback-ladder\", i.e., multiple levels of feedback for the same problem-submission pair."
+   }
+  },
+  {
+   "surface": "student's (buggy) submission",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These methods ask the LLM to generate feedback given the problem statement and a student's (buggy) submission."
+   }
+  },
+  {
+   "surface": "problem statement",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These methods ask the LLM to generate feedback given the problem statement and a student's (buggy) submission."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "feedback-ladder",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In this paper, we explore using LLMs to generate a \"feedback-ladder\", i.e., multiple levels of feedback for the same problem-submission pair.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "LLM-based methods"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "feedback-ladder"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "feedback-ladder"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "student's (buggy) submission",
+   "to": "feedback-ladder"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25459,
+ "eval_count": 419,
+ "ts": "2026-11-21T17:22:36Z"
+}

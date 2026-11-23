@@ -1,0 +1,110 @@
+{
+ "paper_id": "oa:W4404782991",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "linear regressor",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "surprisal estimates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "alignment technique",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "phonemes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "morphemes",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  },
+  {
+   "surface": "words",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "linear regressor",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language model",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "language model",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Numerous previous studies have sought to determine to what extent language models, pretrained on natural language text, can serve as useful models of human cognition.In this paper, we are interested in the opposite question: whether we can directly optimize a language model to be a useful cognitive model by aligning it to human psychometric data.To achieve this, we introduce a novel alignment technique in which we fine-tune a language model to implicitly optimize the parameters of a linear regressor that directly predicts humans’ reading times of in-context linguistic units, e.g., phonemes, morphemes, or words, using surprisal estimates derived from the language model.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "fine-tuning"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "dataset"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 23903,
+ "eval_count": 437,
+ "ts": "2026-11-21T19:22:26Z"
+}

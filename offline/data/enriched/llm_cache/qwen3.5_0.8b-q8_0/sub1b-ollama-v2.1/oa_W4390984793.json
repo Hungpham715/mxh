@@ -1,0 +1,80 @@
+{
+ "paper_id": "oa:W4390984793",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "subculture",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Nowadays, the omnipresence of the Internet has fostered a subculture that congregates around the contemporary milieu."
+   }
+  },
+  {
+   "surface": "sentiment analysis",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The subculture artfully articulates the intricacies of human feelings by ardently pursuing the allure of novelty, a fact that cannot be disregarded in the sentiment analysis."
+   }
+  },
+  {
+   "surface": "training text",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, a new approach of subculture-based data augmentation (SCDA) is proposed, which engenders enhanced texts for each training text by leveraging the creation of specific subcultural expression generators."
+   }
+  },
+  {
+   "surface": "subculture-based data augmentation (SCDA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, a new approach of subculture-based data augmentation (SCDA) is proposed, which engenders enhanced texts for each training text by leveraging the creation of specific subcultural expression generators."
+   }
+  },
+  {
+   "surface": "specific subcultural expression generators",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, a new approach of subculture-based data augmentation (SCDA) is proposed, which engenders enhanced texts for each training text by leveraging the creation of specific subcultural expression generators."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "sentiment analysis",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The subculture artfully articulates the intricacies of human feelings by ardently pursuing the allure of novelty, a fact that cannot be disregarded in the sentiment analysis.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "subculture-based data augmentation (SCDA)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, a new approach of subculture-based data augmentation (SCDA) is proposed, which engenders enhanced texts for each training text by leveraging the creation of specific subcultural expression generators.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "subculture-based data augmentation (SCDA)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 50092,
+ "eval_count": 387,
+ "ts": "2026-11-21T17:12:29Z"
+}

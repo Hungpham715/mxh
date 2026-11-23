@@ -1,0 +1,138 @@
+{
+ "paper_id": "oa:W4415081426",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Large language models (LLMs) have achieved remarkable performance on various natural language tasks."
+   }
+  },
+  {
+   "surface": "knowledge editing methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This motivates the development of knowledge editing methods designed to update certain knowledge in LLMs without changing unrelated others."
+   }
+  },
+  {
+   "surface": "parameter-based updates",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In this work, we question if the trade-offs are caused by the fact that parameter-based updates have a global effect, i.e., edited parameters affect all inputs indiscriminately."
+   }
+  },
+  {
+   "surface": "representation fine-tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In light of this, we explore the feasibility of representation fine-tuning, which applied some linear update to a few representations in a learned subspace, for knowledge editing."
+   }
+  },
+  {
+   "surface": "linear update",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In light of this, we explore the feasibility of representation fine-tuning, which applied some linear update to a few representations in a learned subspace, for knowledge editing."
+   }
+  },
+  {
+   "surface": "BaFT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Subsequently, BaFT is proposed to break the linearity."
+   }
+  },
+  {
+   "surface": "three LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "Experiments on three LLMs with five editing benchmarks in diverse scenarios show the superiority of our method."
+   }
+  },
+  {
+   "surface": "five editing benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "Experiments on three LLMs with five editing benchmarks in diverse scenarios show the superiority of our method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "three LLMs",
+   "evidence": {
+    "sentence_index": 11,
+    "evidence_text": "Experiments on three LLMs with five editing benchmarks in diverse scenarios show the superiority of our method.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge editing methods",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To make selective edits, previous efforts often sought to update a small amount of parameters in some specific layer(s) of a LLM.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge editing methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This motivates the development of knowledge editing methods designed to update certain knowledge in LLMs without changing unrelated others.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "representation fine-tuning",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "In light of this, we explore the feasibility of representation fine-tuning, which applied some linear update to a few representations in a learned subspace, for knowledge editing.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "knowledge editing methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This motivates the development of knowledge editing methods designed to update certain knowledge in LLMs without changing unrelated others.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "BaFT"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37099,
+ "eval_count": 643,
+ "ts": "2026-11-21T21:03:51Z"
+}

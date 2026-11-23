@@ -1,0 +1,92 @@
+{
+ "paper_id": "oa:W4415230726",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "These changes are widely attributed to the growing influence of Large Language Models (LLMs), which frequently rely on a distinct lexical style."
+   }
+  },
+  {
+   "surface": "ChatGPT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We analyzed lexical trends before and after ChatGPT's release in 2022, focusing on commonly LLM-associated words."
+   }
+  },
+  {
+   "surface": "spoken language",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To explore this question, we constructed a dataset of 22.1 million words from unscripted spoken language drawn from conversational science and technology podcasts."
+   }
+  },
+  {
+   "surface": "conversational science and technology podcasts",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To explore this question, we constructed a dataset of 22.1 million words from unscripted spoken language drawn from conversational science and technology podcasts."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "ChatGPT",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We analyzed lexical trends before and after ChatGPT's release in 2022, focusing on commonly LLM-associated words.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "spoken language",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We analyzed lexical trends before and after ChatGPT's release in 2022, focusing on commonly LLM-associated words.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "spoken language",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We analyzed lexical trends before and after ChatGPT's release in 2022, focusing on commonly LLM-associated words.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "spoken language",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We analyzed lexical trends before and after ChatGPT's release in 2022, focusing on commonly LLM-associated words.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conversational science and technology podcasts"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31177,
+ "eval_count": 461,
+ "ts": "2026-11-21T21:04:46Z"
+}

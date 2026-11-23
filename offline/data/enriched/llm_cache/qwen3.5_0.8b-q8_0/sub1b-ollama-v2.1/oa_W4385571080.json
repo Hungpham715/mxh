@@ -1,0 +1,82 @@
+{
+ "paper_id": "oa:W4385571080",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Twitter",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To tackle the GMNER task, we construct a Twitter dataset based on two existing MNER datasets."
+   }
+  },
+  {
+   "surface": "MNER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, Multimodal Named Entity Recognition (MNER) on social media has attracted considerable attention."
+   }
+  },
+  {
+   "surface": "GMNER",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To solve these issues, in this work, we introduce a Grounded Multimodal Named Entity Recognition (GMNER) task."
+   }
+  },
+  {
+   "surface": "H-Index",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Moreover, we extend four well-known MNER methods to establish a number of baseline systems and further propose a Hierarchical Index generation framework named H-Index, which generates the entity-type-region triples in a hierarchical manner with a sequence-to-sequence model."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "GMNER",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "To tackle the GMNER task, we construct a Twitter dataset based on two existing MNER datasets.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "MNER",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, Multimodal Named Entity Recognition (MNER) on social media has attracted considerable attention.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Twitter",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Experiment results on our annotated dataset demonstrate the superiority of our H-Index framework over baseline systems on the GMNER task.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "GMNER"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21246,
+ "eval_count": 371,
+ "ts": "2026-11-21T15:38:17Z"
+}

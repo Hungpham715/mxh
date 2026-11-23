@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4402671120",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The latest generative large language models (LLMs) have found their application in data augmentation tasks, where small numbers of text samples are LLM-paraphrased and then used to fine-tune downstream models."
+   }
+  },
+  {
+   "surface": "prompt",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, more research is needed to assess how different prompts, seed data selection strategies, filtering methods, or model settings affect the quality of paraphrased data (and downstream models)."
+   }
+  },
+  {
+   "surface": "seed data selection strategies",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, more research is needed to assess how different prompts, seed data selection strategies, filtering methods, or model settings affect the quality of paraphrased data (and downstream models)."
+   }
+  },
+  {
+   "surface": "filtering methods",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, more research is needed to assess how different prompts, seed data selection strategies, filtering methods, or model settings affect the quality of paraphrased data (and downstream models)."
+   }
+  },
+  {
+   "surface": "model settings",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, more research is needed to assess how different prompts, seed data selection strategies, filtering methods, or model settings affect the quality of paraphrased data (and downstream models)."
+   }
+  },
+  {
+   "surface": "taboo words",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we investigate three text diversity incentive methods well established in crowdsourcing: taboo words, hints by previous outlier solutions, and chaining on previous outlier solutions."
+   }
+  },
+  {
+   "surface": "hints by previous outlier solutions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we investigate three text diversity incentive methods well established in crowdsourcing: taboo words, hints by previous outlier solutions, and chaining on previous outlier solutions."
+   }
+  },
+  {
+   "surface": "chaining on previous outlier solutions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we investigate three text diversity incentive methods well established in crowdsourcing: taboo words, hints by previous outlier solutions, and chaining on previous outlier solutions."
+   }
+  },
+  {
+   "surface": "text datasets",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Using these incentive methods as part of instructions to LLMs augmenting text datasets, we measure their effects on generated texts’ lexical diversity and downstream model performance."
+   }
+  },
+  {
+   "surface": "downstream models",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The latest generative large language models (LLMs) have found their application in data augmentation tasks, where small numbers of text samples are LLM-paraphrased and then used to fine-tune downstream models."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "taboo words",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we investigate three text diversity incentive methods well established in crowdsourcing: taboo words, hints by previous outlier solutions, and chaining on previous outlier solutions.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "hints by previous outlier solutions",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, more research is needed to assess how different prompts, seed data selection strategies, filtering methods, or model settings affect the quality of paraphrased data (and downstream models).",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "chaining on previous outlier solutions",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this study, we investigate three text diversity incentive methods well established in crowdsourcing: taboo words, hints by previous outlier solutions, and chaining on previous outlier solutions.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "text datasets"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "downstream models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 37614,
+ "eval_count": 625,
+ "ts": "2026-11-21T17:41:30Z"
+}

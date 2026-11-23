@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4402671624",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Benchmark for Indian Legal Text Understanding and Reasoning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "This paper addresses this challenge by proposing : Benchmark for Indian Legal Text Understanding and Reasoning."
+   }
+  },
+  {
+   "surface": "LLM-based",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We present baseline models (including LLM-based) for each task, outlining the gap between models and the ground truth."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "LLM-based",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We present baseline models (including LLM-based) for each task, outlining the gap between models and the ground truth.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 17343,
+ "eval_count": 140,
+ "ts": "2026-11-21T17:56:59Z"
+}

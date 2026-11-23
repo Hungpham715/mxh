@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import random
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -32,6 +33,46 @@ def _f1(tp: int, fp: int, fn: int) -> dict[str, Any]:
     }
 
 
+def _bootstrap_micro_ci(
+    gold_by_paper: dict[str, set[tuple[Any, ...]]],
+    pred_by_paper: dict[str, set[tuple[Any, ...]]],
+    *,
+    seed: int = 20261121,
+    replicates: int = 10_000,
+) -> dict[str, Any]:
+    """Paper-level percentile bootstrap intervals for micro precision/recall/F1."""
+    paper_ids = sorted(gold_by_paper)
+    if not paper_ids:
+        return {"unit": "paper", "replicates": replicates, "seed": seed}
+    rng = random.Random(seed)
+    values = {"precision": [], "recall": [], "f1": []}
+    for _ in range(replicates):
+        tp = fp = fn = 0
+        for paper_id in rng.choices(paper_ids, k=len(paper_ids)):
+            gold = gold_by_paper[paper_id]
+            predicted = pred_by_paper.get(paper_id, set())
+            tp += len(gold & predicted)
+            fp += len(predicted - gold)
+            fn += len(gold - predicted)
+        metrics = _f1(tp, fp, fn)
+        for name in values:
+            values[name].append(float(metrics[name]))
+
+    def percentile(rows: list[float], probability: float) -> float:
+        ordered = sorted(rows)
+        index = round((len(ordered) - 1) * probability)
+        return round(ordered[index], 4)
+
+    return {
+        "unit": "paper",
+        "replicates": replicates,
+        "seed": seed,
+        "precision": [percentile(values["precision"], 0.025), percentile(values["precision"], 0.975)],
+        "recall": [percentile(values["recall"], 0.025), percentile(values["recall"], 0.975)],
+        "f1": [percentile(values["f1"], 0.025), percentile(values["f1"], 0.975)],
+    }
+
+
 def _abstract_sha256(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
@@ -40,17 +81,36 @@ def _load_predictions(data_dir: Path) -> tuple[dict[str, set[tuple[str, str]]], 
     entities: dict[str, set[tuple[str, str]]] = defaultdict(set)
     for row in read_jsonl(data_dir / "entities.jsonl"):
         entity_type = str(row["entity_type"]).lower()
-        for evidence in row.get("evidence", []):
-            paper_id = evidence.get("paper_id")
-            if paper_id:
-                entities[paper_id].add((entity_type, row["id"]))
+        # New snapshots carry the complete paper-membership contract. Fall back to bounded
+        # evidence only for legacy fixtures/snapshots, where recall may be underestimated.
+        paper_ids = row.get("evidence_paper_ids")
+        if paper_ids is None:
+            paper_ids = [
+                evidence.get("paper_id")
+                for evidence in row.get("evidence", [])
+                if evidence.get("paper_id")
+            ]
+        for paper_id in paper_ids:
+            entities[str(paper_id)].add((entity_type, row["id"]))
 
     relations: dict[str, set[tuple[str, str, str]]] = defaultdict(set)
+    paper_relation_entity_type = {
+        "USES_METHOD": "method",
+        "EVALUATED_ON": "dataset",
+        "ADDRESSES_TASK": "task",
+    }
     for path in sorted(data_dir.glob("edges_*.jsonl")):
         for row in read_jsonl(path):
             triple = (str(row["type"]), str(row["from"]), str(row["to"]))
             for paper_id in row.get("evidence_paper_ids", []):
                 relations[paper_id].add(triple)
+                # Paper-anchored edges are emitted only after entity extraction and retain the
+                # complete paper set even in legacy snapshots whose entity evidence preview was
+                # truncated. Unioning this proof repairs legacy NER membership without changing
+                # any predicted canonical ID.
+                entity_type = paper_relation_entity_type.get(str(row["type"]))
+                if entity_type and str(row["from"]) == str(paper_id):
+                    entities[str(paper_id)].add((entity_type, str(row["to"])))
     return entities, relations
 
 
@@ -80,7 +140,8 @@ def _score_by_type(
 
 
 def evaluate_semantic(
-    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path
+    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path,
+    *, annotation_protocol: str = "developer_manual_review_of_abstract_text_v1",
 ) -> dict[str, Any]:
     papers = {row["id"]: row for row in read_jsonl(processed_dir / "papers.jsonl")}
     gold_rows = read_jsonl(gold_path)
@@ -118,6 +179,8 @@ def evaluate_semantic(
     all_pred_r = [item for paper_id in gold_relations for item in pred_relations.get(paper_id, set())]
     entity_scores, _ = _score_by_type(all_gold_e, all_pred_e, 0)
     relation_scores, _ = _score_by_type(all_gold_r, all_pred_r, 0)
+    entity_scores["bootstrap_95_ci"] = _bootstrap_micro_ci(gold_entities, pred_entities)
+    relation_scores["bootstrap_95_ci"] = _bootstrap_micro_ci(gold_relations, pred_relations)
     result = {
         "schema_version": "enrichment-semantic-eval-v1",
         "evaluation_kind": "exact_canonical_id_semantic_ner_re",
@@ -126,7 +189,7 @@ def evaluate_semantic(
             "processed_papers": str(processed_dir / "papers.jsonl"),
             "data_dir": str(data_dir),
             "papers_evaluated": len(gold_rows),
-            "annotation_protocol": "developer_manual_review_of_abstract_text_v1",
+            "annotation_protocol": annotation_protocol,
             "annotators": 1,
             "independent_human_gold": False,
             "status": "nonhuman_reference_slice; do not generalize to the full corpus",
@@ -139,7 +202,12 @@ def evaluate_semantic(
     return result
 
 
-def run_semantic_eval(data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path) -> int:
-    result = evaluate_semantic(data_dir, processed_dir, gold_path, out_path)
+def run_semantic_eval(
+    data_dir: Path, processed_dir: Path, gold_path: Path, out_path: Path,
+    *, annotation_protocol: str = "developer_manual_review_of_abstract_text_v1",
+) -> int:
+    result = evaluate_semantic(
+        data_dir, processed_dir, gold_path, out_path, annotation_protocol=annotation_protocol
+    )
     print(json.dumps({"entity_micro": result["entity"]["micro"], "relation_micro": result["relation"]["micro"]}, ensure_ascii=False))
     return 0

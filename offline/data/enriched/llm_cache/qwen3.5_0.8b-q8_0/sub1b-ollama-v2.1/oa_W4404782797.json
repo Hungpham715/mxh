@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4404782797",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multimodal Large Language Models (MLLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal Large Language Models (MLLMs) demonstrate remarkable performance across a wide range of domains, with increasing emphasis on enhancing their zero-shot generalization capabilities for unseen tasks across various modalities."
+   }
+  },
+  {
+   "surface": "Instruction tuning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Instruction tuning has emerged as an effective strategy for achieving zero-shot generalization by finetuning pretrained models on diverse multimodal tasks."
+   }
+  },
+  {
+   "surface": "Parameter-efficient finetuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the scale of MLLMs continues to grow, parameter-efficient finetuning becomes increasingly critical."
+   }
+  },
+  {
+   "surface": "Multimodal Prompt Tuning (M^2PT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we introduce a novel Multimodal Prompt Tuning (M^2PT) approach for efficient instruction tuning of MLLMs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Multimodal Large Language Models (MLLMs)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "As the scale of MLLMs continues to grow, parameter-efficient finetuning becomes increasingly critical.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Parameter-efficient finetuning",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In this work, we introduce a novel Multimodal Prompt Tuning (M^2PT) approach for efficient instruction tuning of MLLMs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multimodal Large Language Models (MLLMs)"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Multimodal Prompt Tuning (M^2PT)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 20408,
+ "eval_count": 442,
+ "ts": "2026-11-21T19:15:34Z"
+}

@@ -1,0 +1,134 @@
+{
+ "paper_id": "oa:W4405033527",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multimodal Sarcasm Detection",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Multimodal sarcasm detection (MSD) is essential for various downstream tasks."
+   }
+  },
+  {
+   "surface": "Spurious Correlations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Existing MSD methods tend to rely on spurious correlations."
+   }
+  },
+  {
+   "surface": "Non-essential Features",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "These methods often mistakenly prioritize non-essential features yet still make correct predictions, demonstrating poor generalizability beyond training environments."
+   }
+  },
+  {
+   "surface": "Multimodal Incongruities via Contrastive Learning (MICL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Secondly, we address these challenges by proposing a novel method that integrate Multimodal Incongruities via Contrastive Learning (MICL) for multimodal sarcasm detection."
+   }
+  },
+  {
+   "surface": "Token-Patch",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment."
+   }
+  },
+  {
+   "surface": "Entity-Object",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment."
+   }
+  },
+  {
+   "surface": "Sentiment",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment."
+   }
+  },
+  {
+   "surface": "SPMSD",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 8,
+    "evidence_text": "Additionally, we construct a test set, SPMSD, which consists potential spurious correlations to evaluate the the model's generalizability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SPMSD",
+   "evidence": {
+    "sentence_index": 9,
+    "evidence_text": "Experimental results demonstrate the superiority of MICL on benchmark datasets, along with the analyses showcasing MICL's advancement in mitigating the effect of spurious correlation.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Token-Patch",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Entity-Object",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Sentiment",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "SPMSD",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Specifically, we first leverage incongruity to drive multi-view learning from three views: token-patch, entity-object, and sentiment.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Spurious Correlations"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 48812,
+ "eval_count": 678,
+ "ts": "2026-11-22T00:04:59Z"
+}

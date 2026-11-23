@@ -1,0 +1,120 @@
+{
+ "paper_id": "oa:W4389523967",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Active learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Active learning (AL), a set of algorithms designed to decrease labeling costs by minimizing label complexity, has shown promise in confronting the labeling bottleneck."
+   }
+  },
+  {
+   "surface": "Adapter modules",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "Parameter-efficient fine-tuning (PEFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "Full-fine tuning (FFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Our findings affirm the superiority of PEFT over full-fine tuning (FFT) in low-resource settings and demonstrate that this advantage persists in AL setups."
+   }
+  },
+  {
+   "surface": "Low-resource settings",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings."
+   }
+  },
+  {
+   "surface": "Text classification tasks",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present an empirical study of PEFT behavior with AL in low-resource settings for text classification tasks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Adapter modules",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In parallel, adapter modules designed for parameter-efficient fine-tuning (PEFT) have demonstrated notable potential in low-resource settings.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Parameter-efficient fine-tuning (PEFT)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, the interplay between AL and adapter-based PEFT remains unexplored.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Full-fine tuning (FFT)",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Pre-trained language models (PLMs) have ignited a surge in demand for effective fine-tuning techniques, particularly in low-resource domains and languages.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Parameter-efficient fine-tuning (PEFT)",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present an empirical study of PEFT behavior with AL in low-resource settings for text classification tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Text classification tasks",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We present an empirical study of PEFT behavior with AL in low-resource settings for text classification tasks.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Low-resource settings"
+  }
+ ],
+ "auto_added_endpoints": [
+  "Text classification tasks"
+ ],
+ "duration_ms": 31444,
+ "eval_count": 554,
+ "ts": "2026-11-21T16:55:20Z"
+}

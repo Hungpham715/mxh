@@ -1,0 +1,47 @@
+{
+ "paper_id": "oa:W4404782700",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "AMR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the ten years since the development of the Abstract Meaning Representation (AMR) formalism, substantial progress has been made on AMR-related tasks such as parsing and alignment."
+   }
+  },
+  {
+   "surface": "parsing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the ten years since the development of the Abstract Meaning Representation (AMR) formalism, substantial progress has been made on AMR-related tasks such as parsing and alignment."
+   }
+  },
+  {
+   "surface": "alignment",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In the ten years since the development of the Abstract Meaning Representation (AMR) formalism, substantial progress has been made on AMR-related tasks such as parsing and alignment."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "parsing"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "alignment"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 35934,
+ "eval_count": 241,
+ "ts": "2026-11-21T19:13:13Z"
+}

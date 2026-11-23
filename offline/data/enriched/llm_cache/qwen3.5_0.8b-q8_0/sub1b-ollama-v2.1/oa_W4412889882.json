@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4412889882",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLM",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent advancements in NLP, largely driven by Large Language Models (LLMs), have significantly improved performance on an array of tasks."
+   }
+  },
+  {
+   "surface": "DA classification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper investigates the root causes of LLMs’ poor performance in DA classification through a linguistically motivated analysis."
+   }
+  },
+  {
+   "surface": "Turn Management",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We identify three key pre-tasks essential for accurate DA prediction: Turn Management, Communicative Function Identification, and Dialogue Structure Prediction."
+   }
+  },
+  {
+   "surface": "Communicative Function Identification",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We identify three key pre-tasks essential for accurate DA prediction: Turn Management, Communicative Function Identification, and Dialogue Structure Prediction."
+   }
+  },
+  {
+   "surface": "Dialogue Structure Prediction",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We identify three key pre-tasks essential for accurate DA prediction: Turn Management, Communicative Function Identification, and Dialogue Structure Prediction."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "DA classification",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We identify three key pre-tasks essential for accurate DA prediction: Turn Management, Communicative Function Identification, and Dialogue Structure Prediction.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DA classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DA classification"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "DA classification"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 31800,
+ "eval_count": 403,
+ "ts": "2026-11-21T20:21:09Z"
+}

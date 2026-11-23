@@ -1,0 +1,98 @@
+{
+ "paper_id": "oa:W4402671845",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "ARIES",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce the task of automatically revising scientific papers based on peer feedback and release ARIES, a dataset of review comments and their corresponding paper edits."
+   }
+  },
+  {
+   "surface": "reviewer-author interactions",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The data is drawn from real reviewer-author interactions from computer science, and we provide labels linking each reviewer comment to the specific paper edits made by the author in response."
+   }
+  },
+  {
+   "surface": "scientific papers",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce the task of automatically revising scientific papers based on peer feedback and release ARIES, a dataset of review comments and their corresponding paper edits."
+   }
+  },
+  {
+   "surface": "peer feedback",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce the task of automatically revising scientific papers based on peer feedback and release ARIES, a dataset of review comments and their corresponding paper edits."
+   }
+  },
+  {
+   "surface": "computer science",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The data is drawn from real reviewer-author interactions from computer science, and we provide labels linking each reviewer comment to the specific paper edits made by the author in response."
+   }
+  },
+  {
+   "surface": "real reviewer-author interactions",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The data is drawn from real reviewer-author interactions from computer science, and we provide labels linking each reviewer comment to the specific paper edits made by the author in response."
+   }
+  },
+  {
+   "surface": "paper edits",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce the task of automatically revising scientific papers based on peer feedback and release ARIES, a dataset of review comments and their corresponding paper edits."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "reviewer-author interactions",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "We introduce the task of automatically revising scientific papers based on peer feedback and release ARIES, a dataset of review comments and their corresponding paper edits.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "reviewer comments"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "reviewer-author interactions"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "reviewer comments"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "paper edits"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 43237,
+ "eval_count": 465,
+ "ts": "2026-11-21T18:13:33Z"
+}

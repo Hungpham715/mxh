@@ -1,0 +1,107 @@
+{
+ "paper_id": "oa:W4391937063",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "textual",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper explores a novel application of textual semantic similarity to user-preference representation for rating prediction."
+   }
+  },
+  {
+   "surface": "graph",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The approach represents a user's preferences as a graph of textual snippets from review text, where the edges are defined by semantic similarity."
+   }
+  },
+  {
+   "surface": "edges",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The approach represents a user's preferences as a graph of textual snippets from review text, where the edges are defined by semantic similarity."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "semantic_similarity"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "user-preference_representation"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "rating_prediction"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "textual_snippets"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "review_text"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "semantic_similarity"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "user's_preferences"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "graph_of_textual_snippets"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "textual_snippets_from_review_text"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "defined_by_semantic_similarity"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "memory-based_approach"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "collaborative_filtering_baselines"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "semantic_similarity"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "user-preference_representation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "rating_prediction"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "rating_prediction"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "rating_prediction"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 34120,
+ "eval_count": 770,
+ "ts": "2026-11-21T17:14:54Z"
+}

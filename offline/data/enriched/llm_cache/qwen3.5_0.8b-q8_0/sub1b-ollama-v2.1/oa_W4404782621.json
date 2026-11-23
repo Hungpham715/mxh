@@ -1,0 +1,51 @@
+{
+ "paper_id": "oa:W4404782621",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Chain-of-Personality-Evidence",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose an explainable personality recognition framework called Chain-of-Personality-Evidence (CoPE), which involves a reasoning process from specific contexts to short-term personality states to long-term personality traits."
+   }
+  },
+  {
+   "surface": "PersonalityEvd",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, based on the CoPE framework, we construct an explainable personality recognition dataset from dialogues, PersonalityEvd."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Chain-of-Personality-Evidence",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We propose an explainable personality recognition framework called Chain-of-Personality-Evidence (CoPE), which involves a reasoning process from specific contexts to short-term personality states to long-term personality traits.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Chain-of-Personality-Evidence",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We introduce two explainable personality state recognition and explainable personality trait recognition tasks, which require models to recognize the personality state and trait labels and their corresponding support evidence.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 25627,
+ "eval_count": 229,
+ "ts": "2026-11-21T19:10:18Z"
+}

@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4389524418",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "adaptive gating",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "This paper introduces adaptive gating in MoE, a flexible training strategy that allows tokens to be processed by a variable number of experts based on expert probability distribution."
+   }
+  },
+  {
+   "surface": "curriculum learning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further draw upon curriculum learning to better align the order of training samples and maximize the training time savings."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "curriculum learning",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "We further draw upon curriculum learning to better align the order of training samples and maximize the training time savings.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19142,
+ "eval_count": 133,
+ "ts": "2026-11-21T17:01:38Z"
+}

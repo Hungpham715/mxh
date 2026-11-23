@@ -1,0 +1,46 @@
+{
+ "paper_id": "oa:W4385571993",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "language models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "In the context of natural language inference (NLI), we examine how language models (LMs) reason with respective readings (Gawron and Kehler, 2004) from two perspectives: syntactic-semantic and commonsense-world knowledge."
+   }
+  },
+  {
+   "surface": "respectively",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can effortlessly understand the coordinate structure of sentences such as “Niels Bohr and Kurt Cobain were born in Copenhagen and Seattle, respectively”."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "respectively",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Humans can effortlessly understand the coordinate structure of sentences such as “Niels Bohr and Kurt Cobain were born in Copenhagen and Seattle, respectively”.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "respectively"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16928,
+ "eval_count": 179,
+ "ts": "2026-11-21T15:50:29Z"
+}

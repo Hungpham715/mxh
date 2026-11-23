@@ -1,0 +1,54 @@
+{
+ "paper_id": "oa:W4412945559",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Hallucination Detection-Neural Differential Equations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we propose Hallucination Detection-Neural Differential Equations (HD-NDEs), a novel method that systematically assesses the truthfulness of statements by capturing the full dynamics of LLMs within their latent space."
+   }
+  },
+  {
+   "surface": "Large Language Models (LLMs)",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "In recent years, large language models (LLMs) have made remarkable advancements, yet hallucination, where models produce inaccurate or non-factual statements, remains a significant challenge for real-world deployment."
+   }
+  },
+  {
+   "surface": "SAPLMA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although current classification-based methods, such as SAPLMA, are highly efficient in mitigating hallucinations, they struggle when non-factual information arises in the early or mid-sequence of outputs, reducing their reliability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "SAPLMA",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Although current classification-based methods, such as SAPLMA, are highly efficient in mitigating hallucinations, they struggle when non-factual information arises in the early or mid-sequence of outputs, reducing their reliability.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Large Language Models (LLMs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 21604,
+ "eval_count": 229,
+ "ts": "2026-11-21T20:53:28Z"
+}

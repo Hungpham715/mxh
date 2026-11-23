@@ -1,0 +1,87 @@
+{
+ "paper_id": "oa:W4390035079",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "human-feedback",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We also discuss existing datasets for human-feedback data collection, and concerns surrounding feedback collection."
+   }
+  },
+  {
+   "surface": "toxic",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, this paradigm can lead to models that generate toxic, inaccurate, and unhelpful content, and automatic evaluation metrics often fail to identify these behaviors."
+   }
+  },
+  {
+   "surface": "inaccurate",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, this paradigm can lead to models that generate toxic, inaccurate, and unhelpful content, and automatic evaluation metrics often fail to identify these behaviors."
+   }
+  },
+  {
+   "surface": "unhelpful",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "However, this paradigm can lead to models that generate toxic, inaccurate, and unhelpful content, and automatic evaluation metrics often fail to identify these behaviors."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "natural-language-generation"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "large-language-models"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "internet-scale-data"
+  },
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "automatic-evaluation-metrics"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "natural-language-generation"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "large-language-models"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "internet-scale-data"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "toxic"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "automatic-evaluation-metrics"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "large-language-models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 29060,
+ "eval_count": 642,
+ "ts": "2026-11-21T17:06:18Z"
+}

@@ -1,0 +1,119 @@
+{
+ "paper_id": "oa:W4416036454",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "score tables",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes."
+   }
+  },
+  {
+   "surface": "lexical expressions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes."
+   }
+  },
+  {
+   "surface": "subreddits",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Effective content moderation systems require explicit classification criteria, yet online communities like subreddits often operate with diverse, implicit standards."
+   }
+  },
+  {
+   "surface": "historical moderation data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work introduces a novel approach to identify and extract these implicit criteria from historical moderation data using an interpretable architecture."
+   }
+  },
+  {
+   "surface": "interpretable architecture",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work introduces a novel approach to identify and extract these implicit criteria from historical moderation data using an interpretable architecture."
+   }
+  },
+  {
+   "surface": "moderation criteria",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "lexical expressions",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "moderation criteria",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "This work introduces a novel approach to identify and extract these implicit criteria from historical moderation data using an interpretable architecture.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "historical moderation data",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Effective content moderation systems require explicit classification criteria, yet online communities like subreddits often operate with diverse, implicit standards.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "historical moderation data",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "historical moderation data",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We represent moderation criteria as score tables of lexical expressions associated with content removal, enabling systematic comparison across different communities.Our experiments demonstrate that these extracted lexical patterns effectively replicate the performance of neural moderation models while providing transparent insights into decision-making processes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "from": "moderation criteria",
+   "to": "score tables"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 33323,
+ "eval_count": 552,
+ "ts": "2026-11-21T21:39:39Z"
+}

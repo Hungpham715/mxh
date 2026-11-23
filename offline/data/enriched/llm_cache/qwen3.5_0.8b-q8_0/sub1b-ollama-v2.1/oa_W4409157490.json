@@ -1,0 +1,52 @@
+{
+ "paper_id": "oa:W4409157490",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "foundation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Based on the foundation of Large Language Models (LLMs), Multilingual LLMs (MLLMs) have been developed to address the challenges faced in multilingual natural language processing, hoping to achieve knowledge transfer from high-resource languages to low-resource languages."
+   }
+  },
+  {
+   "surface": "multilingual natural language processing",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Based on the foundation of Large Language Models (LLMs), Multilingual LLMs (MLLMs) have been developed to address the challenges faced in multilingual natural language processing, hoping to achieve knowledge transfer from high-resource languages to low-resource languages."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "multilingual natural language processing",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Based on the foundation of Large Language Models (LLMs), Multilingual LLMs (MLLMs) have been developed to address the challenges faced in multilingual natural language processing, hoping to achieve knowledge transfer from high-resource languages to low-resource languages.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "multilingual language models (MLLMs)"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "multilingual language models (MLLMs)"
+  }
+ ],
+ "auto_added_endpoints": [
+  "multilingual natural language processing"
+ ],
+ "duration_ms": 42492,
+ "eval_count": 220,
+ "ts": "2026-11-22T00:06:43Z"
+}

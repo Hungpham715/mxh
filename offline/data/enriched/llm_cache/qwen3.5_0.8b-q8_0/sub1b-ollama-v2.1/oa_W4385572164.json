@@ -1,0 +1,79 @@
+{
+ "paper_id": "oa:W4385572164",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Visually-Augmented fine-tuning approach",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we propose a novel Visually-Augmented fine-tuning approach that can be generally applied to various PLMs or NLP tasks, Without using any retrieved or generated Images, namely VAWI."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experimental results show that our approach can consistently improve the performance of BERT, RoBERTa, BART, and T5 at different scales, and outperform several competitive baselines on ten tasks."
+   }
+  },
+  {
+   "surface": "RoBERTa",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experimental results show that our approach can consistently improve the performance of BERT, RoBERTa, BART, and T5 at different scales, and outperform several competitive baselines on ten tasks."
+   }
+  },
+  {
+   "surface": "BART",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experimental results show that our approach can consistently improve the performance of BERT, RoBERTa, BART, and T5 at different scales, and outperform several competitive baselines on ten tasks."
+   }
+  },
+  {
+   "surface": "T5",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experimental results show that our approach can consistently improve the performance of BERT, RoBERTa, BART, and T5 at different scales, and outperform several competitive baselines on ten tasks."
+   }
+  },
+  {
+   "surface": "VAWI",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these issues, we propose a novel Visually-Augmented fine-tuning approach that can be generally applied to various PLMs or NLP tasks, Without using any retrieved or generated Images, namely VAWI."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Visually-Augmented fine-tuning approach"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Visually-Augmented fine-tuning approach"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Visually-Augmented fine-tuning approach"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Visually-Augmented fine-tuning approach"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39332,
+ "eval_count": 478,
+ "ts": "2026-11-21T15:53:32Z"
+}

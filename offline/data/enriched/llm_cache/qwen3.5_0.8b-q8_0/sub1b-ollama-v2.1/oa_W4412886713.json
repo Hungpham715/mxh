@@ -1,0 +1,91 @@
+{
+ "paper_id": "oa:W4412886713",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "Studying this bias in large language models (LLMs) is crucial, as LLMs are increasingly used in various information-seeking and decision-making tasks as conversation partners to improve productivity."
+   }
+  },
+  {
+   "surface": "conformity",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The conformity effect describes the tendency of individuals to align their responses with the majority."
+   }
+  },
+  {
+   "surface": "majority",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The conformity effect describes the tendency of individuals to align their responses with the majority."
+   }
+  },
+  {
+   "surface": "instruction-tuned models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We further explore factors that influence conformity, such as training paradigms and input characteristics, finding that instruction-tuned models are less susceptible to conformity, while increasing the naturalness of majority tones amplifies conformity."
+   }
+  },
+  {
+   "surface": "naturalness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "We further explore factors that influence conformity, such as training paradigms and input characteristics, finding that instruction-tuned models are less susceptible to conformity, while increasing the naturalness of majority tones amplifies conformity."
+   }
+  },
+  {
+   "surface": "Question Distillation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "Finally, we propose two interventions—Devil’s Advocate and Question Distillation—to mitigate conformity, providing insights into building more robust language models."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Devil's Advocate"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "conformity"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42117,
+ "eval_count": 651,
+ "ts": "2026-11-21T20:00:15Z"
+}

@@ -1,0 +1,39 @@
+{
+ "paper_id": "oa:W4396601321",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Sage Agent",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "In particular, we expanded the Human-AI interaction to a Human-AI-AI collaboration by including a Sage Agent, who acts as a bystander, providing users with some perspectives and guidance on their choices and conversations in terms of non-cognitive skills to promote reflection."
+   }
+  },
+  {
+   "surface": "Simulife++",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, we introduced Simulife++, an interactive platform enabled by a large language model (LLM)."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "task"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16131,
+ "eval_count": 220,
+ "ts": "2026-11-21T17:21:18Z"
+}

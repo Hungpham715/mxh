@@ -1,0 +1,62 @@
+{
+ "paper_id": "oa:W4385572024",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Without modifying model architectures, we improve the capability of Transformer on compositional generalization through consistency regularization training, which promotes representation consistency across samples and prediction consistency for a single sample."
+   }
+  },
+  {
+   "surface": "consistency regularization training",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Without modifying model architectures, we improve the capability of Transformer on compositional generalization through consistency regularization training, which promotes representation consistency across samples and prediction consistency for a single sample."
+   }
+  },
+  {
+   "surface": "machine translation benchmarks",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Experimental results on semantic parsing and machine translation benchmarks empirically demonstrate the effectiveness and generality of our method."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "consistency regularization training",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Without modifying model architectures, we improve the capability of Transformer on compositional generalization through consistency regularization training, which promotes representation consistency across samples and prediction consistency for a single sample.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "semantic parsing benchmarks"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 16972,
+ "eval_count": 304,
+ "ts": "2026-11-21T15:50:46Z"
+}

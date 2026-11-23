@@ -1,0 +1,78 @@
+{
+ "paper_id": "oa:W4383468645",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "analysis method",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The difficulties of automatic extraction of definitions and methods from scientific documents lie in two aspects: (1) the complexity and diversity of natural language texts, which requests an analysis method to support the discovery of pattern; and, (2) a complete definition or method represented by a scientific paper is usually distributed within text, therefore an effective approach should not only extract single sentence definitions and methods but also integrate the sentences to obtain a complete definition or method."
+   }
+  },
+  {
+   "surface": "semantic relations",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Completeness of the patterns at the semantic level is guaranteed by a complete set of semantic relations that identify definitions and methods respectively."
+   }
+  },
+  {
+   "surface": "lexical constraints",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The completeness of the patterns at the syntactic and lexical levels is guaranteed by syntactic and lexical constraints."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "semantic relations",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Completeness of the patterns at the semantic level is guaranteed by a complete set of semantic relations that identify definitions and methods respectively.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "lexical constraints",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Completeness of the patterns at the semantic level is guaranteed by a complete set of semantic relations that identify definitions and methods respectively.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "lexical constraints",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "The completeness of the patterns at the syntactic and lexical levels is guaranteed by syntactic and lexical constraints.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "syntactic constraints"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "syntactic constraints"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 25323,
+ "eval_count": 367,
+ "ts": "2026-11-21T15:17:07Z"
+}

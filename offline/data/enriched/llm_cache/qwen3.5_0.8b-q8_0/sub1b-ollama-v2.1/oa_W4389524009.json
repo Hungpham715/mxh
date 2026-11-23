@@ -1,0 +1,50 @@
+{
+ "paper_id": "oa:W4389524009",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Retrieval-Augmented Machine Translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Retrieval-Augmented Machine Translation (RAMT) is attracting growing attention."
+   }
+  },
+  {
+   "surface": "Levenshtein Transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This model adapts a retrieval-augmented version of the Levenshtein Transformer and makes it amenable to simultaneously edit multiple fuzzy matches found in memory."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Levenshtein Transformer",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This model adapts a retrieval-augmented version of the Levenshtein Transformer and makes it amenable to simultaneously edit multiple fuzzy matches found in memory.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "editors"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "editors"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 17618,
+ "eval_count": 271,
+ "ts": "2026-11-21T16:55:38Z"
+}

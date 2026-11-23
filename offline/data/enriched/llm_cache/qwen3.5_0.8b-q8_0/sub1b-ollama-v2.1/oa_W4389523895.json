@@ -1,0 +1,84 @@
+{
+ "paper_id": "oa:W4389523895",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "SCAN",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent diagnostic datasets on compositional generalization, such as SCAN (Lake and Baroni, 2018) and COGS (Kim and Linzen, 2020), expose severe problems in models trained from scratch on these datasets."
+   }
+  },
+  {
+   "surface": "COGS",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent diagnostic datasets on compositional generalization, such as SCAN (Lake and Baroni, 2018) and COGS (Kim and Linzen, 2020), expose severe problems in models trained from scratch on these datasets."
+   }
+  },
+  {
+   "surface": "Transformer models",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, to reconcile this inconsistency, we conduct an empirical analysis by training Transformer models on a variety of training sets with different data factors, including dataset scale, pattern complexity, example difficulty, etc."
+   }
+  },
+  {
+   "surface": "training sets",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, to reconcile this inconsistency, we conduct an empirical analysis by training Transformer models on a variety of training sets with different data factors, including dataset scale, pattern complexity, example difficulty, etc."
+   }
+  },
+  {
+   "surface": "generalization challenges",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "First, we show that increased dataset complexity can lead to better generalization behavior on multiple different generalization challenges."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, to reconcile this inconsistency, we conduct an empirical analysis by training Transformer models on a variety of training sets with different data factors, including dataset scale, pattern complexity, example difficulty, etc.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Transformer models",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this work, to reconcile this inconsistency, we conduct an empirical analysis by training Transformer models on a variety of training sets with different data factors, including dataset scale, pattern complexity, example difficulty, etc.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer models"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Transformer models"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19381,
+ "eval_count": 413,
+ "ts": "2026-11-21T16:53:42Z"
+}

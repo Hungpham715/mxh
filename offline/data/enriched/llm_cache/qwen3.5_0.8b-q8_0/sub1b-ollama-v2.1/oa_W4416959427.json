@@ -1,0 +1,87 @@
+{
+ "paper_id": "oa:W4416959427",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "OpenEvidence",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "UpToDate Expert AI",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "GPT-5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "Gemini 3 Pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "Claude Sonnet 4.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "MedQA",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  },
+  {
+   "surface": "HealthBench",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MedQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HealthBench"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "MedQA"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "HealthBench"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 45347,
+ "eval_count": 498,
+ "ts": "2026-11-21T22:22:43Z"
+}

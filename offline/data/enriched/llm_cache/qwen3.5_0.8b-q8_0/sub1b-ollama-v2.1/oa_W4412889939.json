@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4412889939",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Multi-Turn Safety Alignment (MTSA) framework",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "In this paper, we propose the Multi-Turn Safety Alignment (MTSA) framework, to address the challenge of securing LLMs in multi-round interactions."
+   }
+  },
+  {
+   "surface": "red-team model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "It consists of two stages: In the thought-guided attack learning stage, the red-team model learns about thought-guided multi-round jailbreak attacks to generate adversarial prompts."
+   }
+  },
+  {
+   "surface": "target model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "In the adversarial iterative optimization stage, the red-team model and the target model continuously improve their respective capabilities in interaction."
+   }
+  },
+  {
+   "surface": "multi-turn reinforcement learning algorithm",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, we introduce a multi-turn reinforcement learning algorithm based on future rewards to enhance the robustness of safety alignment."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "red-team model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "target model"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "multi-turn reinforcement learning algorithm"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 24921,
+ "eval_count": 357,
+ "ts": "2026-11-21T20:22:04Z"
+}

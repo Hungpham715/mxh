@@ -1,0 +1,64 @@
+{
+ "paper_id": "oa:W4402671709",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "DetermLR",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To this end, we propose DetermLR, a novel perspective that rethinks the reasoning process as an evolution from indeterminacy to determinacy."
+   }
+  },
+  {
+   "surface": "Reasoning Memory",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we automate the storage and extraction of available premises and reasoning paths with reasoning memory, preserving historical reasoning details for subsequent reasoning steps."
+   }
+  },
+  {
+   "surface": "Reasoning Steps",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance the capabilities of LLMs to emulate human reasoning, prior studies have focused on modeling reasoning steps using various thought structures like chains, trees, or graphs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Reasoning Memory",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Furthermore, we automate the storage and extraction of available premises and reasoning paths with reasoning memory, preserving historical reasoning details for subsequent reasoning steps.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "Reasoning Steps",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To enhance the capabilities of LLMs to emulate human reasoning, prior studies have focused on modeling reasoning steps using various thought structures like chains, trees, or graphs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Reasoning Steps"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 40596,
+ "eval_count": 284,
+ "ts": "2026-11-21T18:01:13Z"
+}

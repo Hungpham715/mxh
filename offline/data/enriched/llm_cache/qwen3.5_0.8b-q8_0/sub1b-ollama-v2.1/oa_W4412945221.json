@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4412945221",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "CrossCred",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Furthermore, we introduce CrossCred, a new benchmark of real-world fraudulent images with fine-grained manual annotations."
+   }
+  },
+  {
+   "surface": "CSIAD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "This paper proposes CSIAD (Cross-Sample Image Anomaly Detection) by leveraging LLMs to identify logical inconsistencies in similar images."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "CSIAD"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 32633,
+ "eval_count": 146,
+ "ts": "2026-11-21T20:41:16Z"
+}

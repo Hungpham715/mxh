@@ -1,0 +1,104 @@
+{
+ "paper_id": "oa:W4404784305",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Recent research has focused on examining Large Language Models’ (LLMs) characteristics from a psychological standpoint, acknowledging the necessity of understanding their behavioral characteristics."
+   }
+  },
+  {
+   "surface": "Big Five Inventory",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis of 2,500 settings per model, including GPT-3.5, GPT-4, Gemini-Pro, and LLaMA-3.1, reveals that various LLMs show consistency in responses to the Big Five Inventory, indicating a satisfactory level of reliability."
+   }
+  },
+  {
+   "surface": "GPT-3.5",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis of 2,500 settings per model, including GPT-3.5, GPT-4, Gemini-Pro, and LLaMA-3.1, reveals that various LLMs show consistency in responses to the Big Five Inventory, indicating a satisfactory level of reliability."
+   }
+  },
+  {
+   "surface": "Gemini-Pro",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis of 2,500 settings per model, including GPT-3.5, GPT-4, Gemini-Pro, and LLaMA-3.1, reveals that various LLMs show consistency in responses to the Big Five Inventory, indicating a satisfactory level of reliability."
+   }
+  },
+  {
+   "surface": "LLaMA-3.1",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis of 2,500 settings per model, including GPT-3.5, GPT-4, Gemini-Pro, and LLaMA-3.1, reveals that various LLMs show consistency in responses to the Big Five Inventory, indicating a satisfactory level of reliability."
+   }
+  },
+  {
+   "surface": "personality tests",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The administration of personality tests to LLMs has emerged as a noteworthy area in this context."
+   }
+  },
+  {
+   "surface": "social sciences",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Furthermore, our research explores the potential of GPT-3.5 to emulate diverse personalities and represent various groups—a capability increasingly sought after in social sciences for substituting human participants with LLMs to reduce costs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "personality tests",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "The administration of personality tests to LLMs has emerged as a noteworthy area in this context.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "Big Five Inventory",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Analysis of 2,500 settings per model, including GPT-3.5, GPT-4, Gemini-Pro, and LLaMA-3.1, reveals that various LLMs show consistency in responses to the Big Five Inventory, indicating a satisfactory level of reliability.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Personas"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Personas"
+  },
+  {
+   "reason": "endpoint_not_extracted",
+   "to": "Personas"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 39859,
+ "eval_count": 554,
+ "ts": "2026-11-21T19:35:39Z"
+}

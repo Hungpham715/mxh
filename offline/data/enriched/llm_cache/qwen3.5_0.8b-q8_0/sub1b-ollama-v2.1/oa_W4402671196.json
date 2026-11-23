@@ -1,0 +1,59 @@
+{
+ "paper_id": "oa:W4402671196",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "COSMIC",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "We introduce COSMIC, a practical implementation of this metric, and demonstrate its strong correlation with human judgment-based metrics, as well as its effectiveness in predicting downstream task performance."
+   }
+  },
+  {
+   "surface": "BERTScore",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comparative analyses against established metrics like BERTScore and ROUGE highlight the competitive performance of COSMIC."
+   }
+  },
+  {
+   "surface": "ROUGE",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comparative analyses against established metrics like BERTScore and ROUGE highlight the competitive performance of COSMIC."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "BERTScore",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comparative analyses against established metrics like BERTScore and ROUGE highlight the competitive performance of COSMIC.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "ROUGE",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Comparative analyses against established metrics like BERTScore and ROUGE highlight the competitive performance of COSMIC.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 43900,
+ "eval_count": 219,
+ "ts": "2026-11-21T17:44:00Z"
+}

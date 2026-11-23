@@ -1,0 +1,76 @@
+{
+ "paper_id": "oa:W4389518794",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "pegasus-x",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on our findings, we introduce PEGASUS-X, an extension of the PEGASUS model with additional long input pretraining to handle inputs of up to 16K tokens, which achieves strong performance on long input summarization tasks comparable with much larger models."
+   }
+  },
+  {
+   "surface": "pegasus",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on our findings, we introduce PEGASUS-X, an extension of the PEGASUS model with additional long input pretraining to handle inputs of up to 16K tokens, which achieves strong performance on long input summarization tasks comparable with much larger models."
+   }
+  },
+  {
+   "surface": "long input summarization",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "One such task is long input summarization, where inputs are longer than the maximum input context of most models."
+   }
+  },
+  {
+   "surface": "transformer",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "While large pretrained Transformer models have proven highly capable at tackling natural language tasks, handling long sequence inputs still poses a significant challenge."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "pegasus",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Based on our findings, we introduce PEGASUS-X, an extension of the PEGASUS model with additional long input pretraining to handle inputs of up to 16K tokens, which achieves strong performance on long input summarization tasks comparable with much larger models.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "transformer",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Through an extensive set of experiments, we investigate what model architectural changes and pretraining paradigms most efficiently adapt a pretrained Transformer for long input summarization.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long input summarization"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "long input summarization"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 19658,
+ "eval_count": 385,
+ "ts": "2026-11-21T16:18:20Z"
+}

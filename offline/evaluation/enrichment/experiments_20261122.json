@@ -1,0 +1,77 @@
+{
+  "schema_version": "enrichment-experiment-ledger-v1",
+  "date": "2026-11-22",
+  "constraint": "local CPU inference and no model above 1,000,000,000 parameters",
+  "retained": {
+    "model": "qwen3.5:0.8b-q8_0",
+    "parameters": 752393024,
+    "extractor_version": "sub1b-ollama-v2.1",
+    "gazetteer_version": "gazetteer-v1.2",
+    "validation_slice": "semantic_holdout_nonhuman_v4.jsonl",
+    "entity_micro_f1": 0.4516,
+    "relation_micro_f1": 0.4444,
+    "full_corpus": {
+      "papers": 1091,
+      "llm_successes": 1089,
+      "llm_failures": 2,
+      "entities": 4181,
+      "edges": 6092,
+      "source_grounding_audit": "120/120 passed; deterministic nonhuman audit"
+    }
+  },
+  "rejected": [
+    {
+      "name": "qwen_prompt_v2.2_high_recall",
+      "reason": "degraded all three consumed development slices relative to v2.1",
+      "runtime_seconds": 753.4,
+      "papers": 36
+    },
+    {
+      "name": "urchade/gliner_small-v2.1_three_way_merge",
+      "parameters": 152648704,
+      "environment": "isolated temporary CPU venv; no repository dependency change",
+      "papers": 36,
+      "best_entity_micro_f1": 0.3582,
+      "best_relation_micro_f1": 0.3521,
+      "reason": "small gain on one consumed slice but degraded development and cross-check slices"
+    },
+    {
+      "name": "gazetteer-v1.3",
+      "validation_slice": "semantic_holdout_nonhuman_v5.jsonl",
+      "entity_micro_f1": 0.3741,
+      "relation_micro_f1": 0.3546,
+      "decision_threshold": "both metrics >= 0.50",
+      "reason": "failed predeclared untouched-slice gate; v1.3 changes were rolled back"
+    },
+    {
+      "name": "gemma3:1b",
+      "parameters": 999890000,
+      "quantization": "Q4_K_M",
+      "cpu_only_verified_size_vram": 0,
+      "validation_use": "consumed v5 model-selection diagnostic",
+      "papers": 12,
+      "runtime_seconds": 290.4,
+      "failures": 1,
+      "entity_micro_f1": 0.3636,
+      "relation_micro_f1": 0.3425,
+      "reason": "worse than Qwen on both exact metrics"
+    }
+  ],
+  "protocol_corrected_measurement": {
+    "slice": "semantic_holdout_nonhuman_v6.jsonl",
+    "protocol": "surface_first_frozen_contract_v2",
+    "configuration": "retained sub1b-ollama-v2.1 + gazetteer-v1.2 (unchanged)",
+    "entity_micro_f1": 0.4576,
+    "relation_micro_f1": 0.4531,
+    "rules_only_entity_micro_f1": 0.3714,
+    "rules_only_relation_micro_f1": 0.375,
+    "hybrid_gain_over_rules": {
+      "entity_f1": 0.0862,
+      "relation_f1": 0.0781
+    },
+    "v4_gold_contract_audit": "18/56 v4 gold IDs not reproducible from verbatim surfaces under the frozen contract; 17/28 v4 FNs affected; 1 provably recoverable",
+    "slice_cross_check": "current code + retained cache reproduces data/enriched predictions identically for all 12 v6 papers",
+    "interpretation": "confirms the v4 F1 magnitude under a cleaner annotation protocol; not a model improvement; v4 and v6 are not comparable as a delta",
+    "next_lever": "generic/descriptive LLM surface FPs (~27/38 v6 entity FPs) and mixed-case acronym normalization; any extractor/gazetteer change must gate on a NEW untouched v7 slice with the surface-first protocol"
+  }
+}

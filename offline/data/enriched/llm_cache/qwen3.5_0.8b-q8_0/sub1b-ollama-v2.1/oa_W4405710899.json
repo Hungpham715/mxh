@@ -1,0 +1,75 @@
+{
+ "paper_id": "oa:W4405710899",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Cold-start active learning",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Cold-start active learning (CSAL) selects valuable instances from an unlabeled dataset for manual annotation."
+   }
+  },
+  {
+   "surface": "Dual-Neighbor Graph",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "Then, it constructs a Dual-Neighbor Graph (DNG) to combine information on both textual diversity and class diversity, ensuring a balanced data distribution."
+   }
+  },
+  {
+   "surface": "Pretrained language model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Specifically, DEUCE leverages a pretrained language model (PLM) to efficiently extract textual representations, class predictions, and predictive uncertainty."
+   }
+  },
+  {
+   "surface": "Density-based clustering",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "It further propagates uncertainty information via density-based clustering to select hard representative instances."
+   }
+  },
+  {
+   "surface": "Dual-diversity",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To address these issues, this paper proposes a novel dual-diversity enhancing and uncertainty-aware (DEUCE) framework for CSAL."
+   }
+  },
+  {
+   "surface": "Informativeness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 7,
+    "evidence_text": "DEUCE performs well in selecting class-balanced and hard representative data by dual-diversity and informativeness."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Dual-Neighbor Graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Dual-Neighbor Graph"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Dual-Neighbor Graph"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 42475,
+ "eval_count": 435,
+ "ts": "2026-11-21T19:44:47Z"
+}

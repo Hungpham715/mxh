@@ -1,0 +1,112 @@
+{
+ "paper_id": "oa:W4412886786",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Maximum a posteriori decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Maximum a posteriori decoding, a commonly used method for neural machine translation (NMT), aims to maximize the estimated posterior probability."
+   }
+  },
+  {
+   "surface": "Minimum Bayes Risk (MBR) decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "Quality Estimation (QE)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "source-based MBR (sMBR) decoding",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "quasi-sources",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "back-translation",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "paraphrasing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  },
+  {
+   "surface": "reference-free quality estimation metric",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Minimum Bayes Risk (MBR) decoding",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Maximum a posteriori decoding, a commonly used method for neural machine translation (NMT), aims to maximize the estimated posterior probability.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Quality Estimation (QE)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Minimum Bayes Risk (MBR) decoding offers an alternative by seeking hypotheses with the highest expected utility.Inspired by Quality Estimation (QE) reranking which uses the QE model as a ranker, we propose source-based MBR (sMBR) decoding, a novel approach that utilizes quasi-sources (generated via paraphrasing or back-translation) as “support hypotheses” and a reference-free quality estimation metric as the utility function, marking the first work to solely use sources in MBR decoding.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Minimum Bayes Risk (MBR) decoding"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Minimum Bayes Risk (MBR) decoding"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Minimum Bayes Risk (MBR) decoding"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 36950,
+ "eval_count": 631,
+ "ts": "2026-11-21T20:01:27Z"
+}

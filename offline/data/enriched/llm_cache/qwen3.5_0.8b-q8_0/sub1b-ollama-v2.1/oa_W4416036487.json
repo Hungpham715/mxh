@@ -1,0 +1,116 @@
+{
+ "paper_id": "oa:W4416036487",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Decomposed Difficulty-based Data Selection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To tackle this, we propose Decomposed Difficulty-based Data Selection (3DS), a two-stage model-centric data selection framework that aligns data selection with the model’s distribution."
+   }
+  },
+  {
+   "surface": "Prompt-Driven Data Selection",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "Instruction Understanding",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "Response Confidence",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "Response Correctness",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "Attention-based importance weighting mechanism",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "Healthcare domain",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  },
+  {
+   "surface": "General domains",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Prompt-Driven Data Selection",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Decomposed Difficulty-based Data Selection",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "3DS employs Prompt-Driven Data Selection to filter out noise based on the model’s knowledge via explicit alignment in Stage#1, then adopts Decomposed Difficulty-based Data Selection to guide selection via three novel data difficulty metrics, including Instruction Understanding, Response Confidence, and Response Correctness in Stage#2, enhanced by an attention-based importance weighting mechanism for accurate calibration.Extensive experiments in the healthcare domain show 3DS outperforms existing methods by up to 2.97% accuracy, with additional validation in law and general domains, confirming its generalization ability.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "surface_not_in_abstract",
+   "surface": "Law domain"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Instruction Understanding"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Response Confidence"
+  },
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "Response Correctness"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 55577,
+ "eval_count": 593,
+ "ts": "2026-11-21T21:43:44Z"
+}

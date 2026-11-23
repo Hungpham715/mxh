@@ -13,6 +13,7 @@ Merge policy (deterministic, documented):
 from __future__ import annotations
 
 from collections import Counter
+import re
 from typing import Any
 
 from src.enrichment.gazetteer import Gazetteer, slugify
@@ -38,6 +39,116 @@ def canonicalize(surface: str, entity_type: str, gazetteer: Gazetteer) -> tuple[
     if gazetteer_id is not None:
         return gazetteer_id, "gazetteer"
     return f"{entity_type}:{slugify(surface)}", "slug"
+
+
+_PAREN_ACRONYM = re.compile(r"\(([A-Z][A-Z0-9-]{1,15})\)")
+# A bare trailing acronym is less explicit than a parenthesized one. Require at least four
+# characters so ordinary final tokens such as "IRC" in "Ubuntu IRC" are not collapsed.
+_TRAILING_ACRONYM = re.compile(r"(?:^|\s)([A-Z][A-Z0-9-]{3,15})$")
+_ACRONYM_KIND = re.compile(
+    r"^([A-Z][A-Z0-9-]{1,15})\s+"
+    r"(?:framework|method|model|algorithm|approach|system|optimization)$",
+    re.IGNORECASE,
+)
+_TYPE_SUFFIX = re.compile(
+    r"\s+(?:datasets?|benchmarks?|corpora|corpus|frameworks?|methods?|models?|"
+    r"algorithms?|approaches?|systems?)\s*$",
+    re.IGNORECASE,
+)
+
+
+def _clean_llm_surface(surface: str) -> str:
+    return re.sub(r"\s+", " ", surface).strip(" \t\r\n,;:.")
+
+
+def _explicit_acronym(surface: str, context: str = "") -> tuple[str, str] | None:
+    """Return ``(expanded surface, acronym)`` when the copied text states that mapping."""
+    parenthesized = _PAREN_ACRONYM.search(surface)
+    if parenthesized:
+        expanded = _clean_llm_surface(surface[:parenthesized.start()])
+        expanded = _TYPE_SUFFIX.sub("", expanded).strip()
+        if expanded:
+            return expanded, parenthesized.group(1)
+
+    # The model may copy only the expansion while its evidence still contains the explicit
+    # ``expansion (ACRONYM)`` construction. Keep this strictly extractive and adjacency based.
+    cleaned_context = _clean_llm_surface(context)
+    if surface and cleaned_context:
+        pattern = re.compile(
+            re.escape(surface) + r"\s*\(([A-Z][A-Z0-9-]{1,15})\)",
+            re.IGNORECASE,
+        )
+        match = pattern.search(cleaned_context)
+        if match:
+            return _clean_llm_surface(surface), match.group(1)
+    return None
+
+
+def _canonical_llm_surface(surface: str, context: str = "") -> str:
+    """Reduce an extractive LLM span to its reusable scientific name.
+
+    Small models often copy a descriptive span instead of the name itself, for example
+    ``Ubuntu IRC dataset`` or ``Multi-Turn Safety Alignment (MTSA) framework``.  This
+    normalization is deliberately domain-general: it strips only an explicit entity-kind
+    suffix and prefers an acronym that is literally present in the copied span.  Evidence
+    continues to retain the original verbatim surface.
+    """
+    cleaned = _clean_llm_surface(surface)
+    acronym_pair = _explicit_acronym(cleaned, context)
+    if acronym_pair:
+        return acronym_pair[1]
+    acronym_kind = _ACRONYM_KIND.fullmatch(cleaned)
+    if acronym_kind:
+        return acronym_kind.group(1)
+    cleaned = _TYPE_SUFFIX.sub("", cleaned).strip()
+    trailing = _TRAILING_ACRONYM.search(cleaned)
+    if trailing and len(cleaned.split()) > 1:
+        return trailing.group(1)
+    return cleaned
+
+
+def _canonicalize_llm(
+    surface: str,
+    claimed_type: str,
+    gazetteer: Gazetteer,
+    context: str = "",
+) -> tuple[str, str, str, str]:
+    """Canonicalize an LLM surface and repair a type contradicted by an exact gazetteer hit.
+
+    Returns ``(entity_id, entity_type, resolved_by, display_surface)``.  The claimed type is
+    preferred.  Cross-type repair is allowed only when the entire normalized surface matches
+    one curated alias, preventing a long descriptive phrase from being relabelled merely
+    because it happens to contain a known name.
+    """
+    cleaned = _clean_llm_surface(surface)
+    acronym_pair = _explicit_acronym(cleaned, context)
+    # Prefer a curated full expansion over its acronym. This keeps established terms such as
+    # "supervised fine-tuning (SFT)" stable while still using the explicit acronym for a newly
+    # introduced name that the gazetteer cannot know.
+    candidates = [cleaned]
+    if acronym_pair:
+        candidates.extend(acronym_pair)
+    normalized = _canonical_llm_surface(cleaned, context)
+    candidates.append(normalized)
+    candidates = list(dict.fromkeys(candidate for candidate in candidates if candidate))
+
+    for candidate in candidates:
+        entity_id = gazetteer.resolve_surface(candidate, claimed_type)
+        if entity_id is not None:
+            return entity_id, claimed_type, "gazetteer", candidate
+
+    exact_other = []
+    for candidate in candidates:
+        for entity_type in ENTITY_TYPE_TO_LABEL:
+            if entity_type == claimed_type:
+                continue
+            entity_id = gazetteer.resolve_surface(candidate, entity_type)
+            if entity_id is not None:
+                exact_other.append((entity_id, entity_type, candidate))
+    if len(exact_other) == 1:
+        entity_id, entity_type, candidate = exact_other[0]
+        return entity_id, entity_type, "gazetteer", candidate
+    return f"{claimed_type}:{slugify(normalized)}", claimed_type, "slug", normalized
 
 
 class _EntityAcc:
@@ -70,6 +181,10 @@ class _EntityAcc:
             "name": self.name, "resolved_by": self.resolved_by,
             "extractors": sorted(self.extractors), "mention_count": self.mention_count,
             "n_papers": len(self.papers),
+            # Keep the complete membership set separate from the bounded display evidence.
+            # Semantic evaluation and downstream provenance must not infer paper coverage from
+            # the three-example evidence preview.
+            "evidence_paper_ids": sorted(self.papers),
             "aliases": [s for s, _ in self.surfaces.most_common(8)],
             "evidence": sorted(self.evidence, key=lambda e: (e["paper_id"], str(e.get("sentence_index"))))[:MAX_EVIDENCE_PER_EDGE],
         }
@@ -175,16 +290,18 @@ def merge_all(papers: list[dict[str, Any]], rules_results: list[dict[str, Any]],
         surface_ids: dict[str, tuple[str, str]] = {}
         for entity in result.get("entities") or []:
             surface = entity["surface"]
-            entity_type = entity["type"]
-            entity_id, resolved_by = canonicalize(surface, entity_type, gazetteer)
-            if resolved_by == "slug" and is_generic_surface(surface):
+            claimed_type = entity["type"]
+            evidence = entity.get("evidence") or {}
+            entity_id, entity_type, resolved_by, display_surface = _canonicalize_llm(
+                surface, claimed_type, gazetteer, str(evidence.get("evidence_text") or "")
+            )
+            if resolved_by == "slug" and is_generic_surface(display_surface):
                 # Generic noun from the small model ("paper", "model", ...): not an entity.
                 drop_reasons["generic_surface"] += 1
                 continue
             known = gazetteer.entries.get(entity_id)
-            name = known.canonical_name if known else surface.strip()
+            name = known.canonical_name if known else display_surface
             acc = ensure_entity(entity_id, entity_type, name, resolved_by)
-            evidence = entity.get("evidence") or {}
             acc.add("llm", paper_id, surface,
                     {"sentence_index": evidence.get("sentence_index"),
                      "evidence_text": evidence.get("evidence_text", "")})
@@ -220,14 +337,13 @@ def merge_all(papers: list[dict[str, Any]], rules_results: list[dict[str, Any]],
         # entity also produces its paper-anchored edge, unless an explicit relation above
         # already recorded the LLM for that exact edge.
         for entity in result.get("entities") or []:
-            entity_type = entity["type"]
-            rel_type = _ENTITY_TYPE_TO_PAPER_REL.get(entity_type)
-            if rel_type is None:
-                continue
             info = surface_ids.get(entity["surface"].strip().lower())
             if info is None:
                 continue  # entity was dropped (generic surface); no edge either
-            entity_id = info[1]
+            entity_type, entity_id = info
+            rel_type = _ENTITY_TYPE_TO_PAPER_REL.get(entity_type)
+            if rel_type is None:
+                continue
             existing = edges.get((rel_type, paper_id, entity_id))
             if existing is not None and "llm" in existing.extractors:
                 continue

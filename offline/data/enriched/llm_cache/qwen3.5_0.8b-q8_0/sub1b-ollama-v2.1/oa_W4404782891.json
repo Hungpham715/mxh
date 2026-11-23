@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4404782891",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Activation Editing",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Activation Editing, which involves directly editting the internal representations of large language models (LLMs) to alter their behavior and achieve desired properties, has emerged as a promising area of research."
+   }
+  },
+  {
+   "surface": "Householder Pseudo-Rotation (HPR)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our method, which we name Householder Pseudo-Rotation (HPR), mimics the rotation transformation, thus preserving activation norm and resulting in an improved performance on various safety benchmarks."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Householder Pseudo-Rotation (HPR)",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "To overcome this shortcoming, we propose a novel editing method that views activations in terms of their directions and magnitudes.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 16938,
+ "eval_count": 164,
+ "ts": "2026-11-21T19:18:20Z"
+}

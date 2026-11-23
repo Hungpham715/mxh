@@ -1,0 +1,100 @@
+{
+ "paper_id": "oa:W4402671893",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "quantization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Quantization and pruning form the foundation of compression for neural networks, enabling efficient inference for large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "pruning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Quantization and pruning form the foundation of compression for neural networks, enabling efficient inference for large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "LLM",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "Quantization and pruning form the foundation of compression for neural networks, enabling efficient inference for large language models (LLMs)."
+   }
+  },
+  {
+   "surface": "calibration data",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "They rely upon calibration data, a small set of unlabeled examples that are used to generate layer activations."
+   }
+  },
+  {
+   "surface": "model compression methods",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, no prior work has systematically investigated how the calibration data impacts the effectiveness of model compression methods."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model compression methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "They rely upon calibration data, a small set of unlabeled examples that are used to generate layer activations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "model compression methods",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "They rely upon calibration data, a small set of unlabeled examples that are used to generate layer activations.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "ADDRESSES_TASK",
+   "from_surface": "PAPER",
+   "to_surface": "LLM",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "However, no prior work has systematically investigated how the calibration data impacts the effectiveness of model compression methods.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "EVALUATED_ON",
+   "from_surface": "PAPER",
+   "to_surface": "calibration data",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "We trial a variety of quantization and pruning methods, datasets, tasks, and models.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "LLM"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26439,
+ "eval_count": 459,
+ "ts": "2026-11-21T18:17:02Z"
+}

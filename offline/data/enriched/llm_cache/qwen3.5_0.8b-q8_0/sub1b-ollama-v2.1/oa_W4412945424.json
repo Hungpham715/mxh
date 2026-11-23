@@ -1,0 +1,88 @@
+{
+ "paper_id": "oa:W4412945424",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Divide-Then-Align (DTA)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "To address this issue, we propose Divide-Then-Align (DTA), a post-training approach designed to endow RAG systems with the ability to respond with “I don’t know” when the query is out of the knowledge boundary of both the retrieved passages and the model’s internal knowledge."
+   }
+  },
+  {
+   "surface": "Retrieval-Augmented Fine-Tuning (RAFT)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To improve the robustness of such systems against noisy retrievals, Retrieval-Augmented Fine-Tuning (RAFT) has emerged as a widely adopted method."
+   }
+  },
+  {
+   "surface": "Direct Preference Optimization (DPO)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DTA divides data samples into four knowledge quadrants and constructs tailored preference data for each quadrant, resulting in a curated dataset for Direct Preference Optimization (DPO)."
+   }
+  },
+  {
+   "surface": "Retrieval-Augmented Fine-Tuning",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To improve the robustness of such systems against noisy retrievals, Retrieval-Augmented Fine-Tuning (RAFT) has emerged as a widely adopted method."
+   }
+  },
+  {
+   "surface": "Direct Preference Optimization",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DTA divides data samples into four knowledge quadrants and constructs tailored preference data for each quadrant, resulting in a curated dataset for Direct Preference Optimization (DPO)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Retrieval-Augmented Fine-Tuning",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "To improve the robustness of such systems against noisy retrievals, Retrieval-Augmented Fine-Tuning (RAFT) has emerged as a widely adopted method.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Direct Preference Optimization",
+   "evidence": {
+    "sentence_index": 5,
+    "evidence_text": "DTA divides data samples into four knowledge quadrants and constructs tailored preference data for each quadrant, resulting in a curated dataset for Direct Preference Optimization (DPO).",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Direct Preference Optimization",
+   "evidence": {
+    "sentence_index": 6,
+    "evidence_text": "Experimental results on three benchmark datasets demonstrate that effectively balances accuracy with appropriate abstention, enhancing the reliability and trustworthiness of retrieval-augmented systems.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [
+  "Retrieval-Augmented Fine-Tuning",
+  "Direct Preference Optimization"
+ ],
+ "duration_ms": 30029,
+ "eval_count": 366,
+ "ts": "2026-11-21T20:48:33Z"
+}

@@ -1,0 +1,98 @@
+{
+ "paper_id": "oa:W4402684023",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BatchEval",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the fact that humans treat both criterion definition and inter sample comparison as references for evaluation, we propose BatchEval, a paradigm that conducts batch-wise evaluation iteratively to alleviate the above problems."
+   }
+  },
+  {
+   "surface": "two stage procedure",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format."
+   }
+  },
+  {
+   "surface": "heterogeneous batch composition strategy",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format."
+   }
+  },
+  {
+   "surface": "decimal scoring format",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format."
+   }
+  },
+  {
+   "surface": "3 LLMs",
+   "type": "dataset",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Comprehensive experiments across 3 LLMs on 4 text evaluation tasks demonstrate that BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations with only 64% API cost on average."
+   }
+  },
+  {
+   "surface": "4 text evaluation tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Comprehensive experiments across 3 LLMs on 4 text evaluation tasks demonstrate that BatchEval outperforms state-of-the-art methods by 10.5% on Pearson correlations with only 64% API cost on average."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "two stage procedure",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "Inspired by the fact that humans treat both criterion definition and inter sample comparison as references for evaluation, we propose BatchEval, a paradigm that conducts batch-wise evaluation iteratively to alleviate the above problems.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "heterogeneous batch composition strategy",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "decimal scoring format",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We explore variants under this paradigm and confirm the optimal settings are two stage procedure with heterogeneous batch composition strategy and decimal scoring format.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "4 text evaluation tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 26776,
+ "eval_count": 461,
+ "ts": "2026-11-21T18:36:48Z"
+}

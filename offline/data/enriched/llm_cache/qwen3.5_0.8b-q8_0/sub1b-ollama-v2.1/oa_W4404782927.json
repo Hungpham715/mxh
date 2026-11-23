@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4404782927",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "Second-Order UnLearning (SOUL)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process."
+   }
+  },
+  {
+   "surface": "influence functions",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "In this work, we shed light on the significance of optimizer selection in LLM unlearning for the first time, establishing a clear connection between second-order optimization and influence unlearning (a classical approach using influence functions to update the model for data influence removal)."
+   }
+  },
+  {
+   "surface": "static, one-shot model update",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process."
+   }
+  },
+  {
+   "surface": "dynamic, iterative unlearning process",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "influence functions",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "static, one-shot model update",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "dynamic, iterative unlearning process",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "This insight propels us to develop a second-order optimization-based LLM unlearning framework, termed Second-Order UnLearning (SOUL), which extends the static, one-shot model update using influence unlearning to a dynamic, iterative unlearning process.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 25842,
+ "eval_count": 430,
+ "ts": "2026-11-21T19:20:28Z"
+}

@@ -1,0 +1,41 @@
+{
+ "paper_id": "oa:W4416035990",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "BIRD",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 1,
+    "evidence_text": "We introduce BIRD (Bronze Inscription Restoration and Dating), a fully encoded dataset grounded in standard scholarly transcriptions and chronological labels."
+   }
+  },
+  {
+   "surface": "Glyph Net (GN)",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further propose an allograph-aware masked language modeling framework that integrates domain- and task-adaptive pretraining with a Glyph Net (GN), which links graphemes and allographs."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Glyph Net (GN)",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "We further propose an allograph-aware masked language modeling framework that integrates domain- and task-adaptive pretraining with a Glyph Net (GN), which links graphemes and allographs.",
+    "evidence_source": "llm_verbatim"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 19735,
+ "eval_count": 142,
+ "ts": "2026-11-21T21:24:08Z"
+}

@@ -1,0 +1,77 @@
+{
+ "paper_id": "oa:W4402671027",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "TaPERA",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To tackle this issue, we propose a new LLM-based framework, TaPERA, for LFTQA tasks."
+   }
+  },
+  {
+   "surface": "QA-based Content Planner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output."
+   }
+  },
+  {
+   "surface": "Execution-based Table Reasoner",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output."
+   }
+  },
+  {
+   "surface": "Answer Generator",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "QA-based Content Planner",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Execution-based Table Reasoner",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output.",
+    "evidence_source": "surface_sentence"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "Answer Generator",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "Our framework uses a modular approach that decomposes the whole process into three sub-modules: 1) QA-based Content Planner that iteratively decomposes the input question into sub-questions; 2) Execution-based Table Reasoner that produces executable Python program for each sub-question; and 3) Answer Generator that generates long-form answer grounded on the program output.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [],
+ "auto_added_endpoints": [],
+ "duration_ms": 26506,
+ "eval_count": 329,
+ "ts": "2026-11-21T17:38:48Z"
+}

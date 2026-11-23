@@ -1,0 +1,35 @@
+{
+ "paper_id": "oa:W4389325826",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "This paper examines the capacity of LLMs to reason with knowledge graphs using their internal knowledge graph, i.e., the knowledge graph they learned during pre-training."
+   }
+  },
+  {
+   "surface": "knowledge graph reasoning tasks",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To address these questions, we employ LLMs to perform four distinct knowledge graph reasoning tasks."
+   }
+  }
+ ],
+ "relations": [],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "knowledge graph reasoning tasks"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 30026,
+ "eval_count": 133,
+ "ts": "2026-11-21T16:09:17Z"
+}

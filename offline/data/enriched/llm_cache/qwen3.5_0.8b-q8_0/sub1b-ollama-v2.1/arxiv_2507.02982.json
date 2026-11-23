@@ -1,0 +1,80 @@
+{
+ "paper_id": "arxiv:2507.02982",
+ "extractor": "llm",
+ "extractor_version": "sub1b-ollama-v2.1",
+ "model": "qwen3.5:0.8b-q8_0",
+ "entities": [
+  {
+   "surface": "LLMs",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 0,
+    "evidence_text": "The enhancement of mathematical capabilities in large language models (LLMs) fosters new developments in mathematics education within primary and secondary schools, particularly as they relate to intelligent tutoring systems."
+   }
+  },
+  {
+   "surface": "BERT",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compress the embedded vectors encoded by BERT and distill a considerably smaller student model."
+   }
+  },
+  {
+   "surface": "student model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compress the embedded vectors encoded by BERT and distill a considerably smaller student model."
+   }
+  },
+  {
+   "surface": "teacher model",
+   "type": "method",
+   "evidence": {
+    "sentence_index": 4,
+    "evidence_text": "Our findings indicate that the student model can maintain nearly 90% of the performance of the teacher model while utilizing only 1/12 of its parameters."
+   }
+  },
+  {
+   "surface": "math word problems (MWPs)",
+   "type": "task",
+   "evidence": {
+    "sentence_index": 2,
+    "evidence_text": "To mitigate this drawback, this paper investigates the feasibility of compressing LLMs for solving math word problems (MWPs)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "BERT",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compress the embedded vectors encoded by BERT and distill a considerably smaller student model.",
+    "evidence_source": "llm_verbatim"
+   }
+  },
+  {
+   "rel": "USES_METHOD",
+   "from_surface": "PAPER",
+   "to_surface": "student model",
+   "evidence": {
+    "sentence_index": 3,
+    "evidence_text": "We compress the embedded vectors encoded by BERT and distill a considerably smaller student model.",
+    "evidence_source": "surface_sentence"
+   }
+  }
+ ],
+ "drops": [
+  {
+   "reason": "endpoint_type_mismatch",
+   "to": "math word problems (MWPs)"
+  }
+ ],
+ "auto_added_endpoints": [],
+ "duration_ms": 22651,
+ "eval_count": 309,
+ "ts": "2026-11-21T15:09:00Z"
+}
